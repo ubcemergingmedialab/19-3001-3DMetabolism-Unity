@@ -25,7 +25,7 @@ public class MouseOrbit : MonoBehaviour
     private bool isLines = false;
 
     private Rigidbody rigidbody;
-
+    private bool needsUpdate = false;
 
     float x = 0.0f;
     float y = 0.0f;
@@ -50,7 +50,7 @@ public class MouseOrbit : MonoBehaviour
     void LateUpdate()
     {
 
-        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0))
+        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
         {
             x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
@@ -87,6 +87,7 @@ public class MouseOrbit : MonoBehaviour
                 isLines = false;
                 Debug.Log("rendering as shapes");
             }
+            needsUpdate = false;
         }
     }
 
@@ -97,5 +98,11 @@ public class MouseOrbit : MonoBehaviour
         if (angle > 360F)
             angle -= 360F;
         return Mathf.Clamp(angle, min, max);
+    }
+
+    public void ChangeFocus(Transform newTarget)
+    {
+        target = newTarget;
+        needsUpdate = true;
     }
 }
