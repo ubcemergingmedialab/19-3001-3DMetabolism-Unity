@@ -6,6 +6,9 @@ Shader "Custom/WigglingSurfaceShader" {
 	_MainTex("Albedo (RGB)", 2D) = "white" {}
 	_Glossiness("Smoothness", Range(0,1)) = 0.5
 	_Metallic("Metallic", Range(0,1)) = 0.0
+	_TimeDirection("TimeDirection", Range(0, 1)) = 1.0
+	_TimeSpeed("TimeSpeed", Range(0, 30)) = 10.0
+	_Amplitude("Amplitude", Range(0, 1)) = 0.02
 	}
 		SubShader{
 		Tags { "RenderType" = "Opaque" }
@@ -19,6 +22,9 @@ Shader "Custom/WigglingSurfaceShader" {
 		#pragma target 3.0
 
 		sampler2D _MainTex;
+		float _TimeDirection;
+		float _TimeSpeed;
+		float _Amplitude;
 
 		struct Input {
 		float2 uv_MainTex;
@@ -28,7 +34,6 @@ Shader "Custom/WigglingSurfaceShader" {
 		half _Metallic;
 		fixed4 _Color;
 		static half _Frequency = 10;
-		static half _Amplitude = 0.1;
 
 		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
 		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -38,7 +43,7 @@ Shader "Custom/WigglingSurfaceShader" {
 			UNITY_INSTANCING_BUFFER_END(Props)
 
 			void vert(inout appdata_base v) {
-			v.vertex.xyz += v.normal * sin(v.vertex.y * _Frequency + _Time.y) * _Amplitude;
+				v.vertex.xyz += v.normal * (sin(v.vertex.z * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Amplitude + 0.01);
 			}
 
 			void surf(Input IN, inout SurfaceOutputStandard o) {

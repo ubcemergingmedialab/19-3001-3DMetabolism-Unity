@@ -331,6 +331,15 @@ ModelImporter:
     100650: succinyl-CoA.008
     100652: succinyl-CoA.009
     100654: succinyl-CoA.010
+    100656: Aspartate.001
+    100658: Aspartate.002
+    100660: Edge27
+    100662: Edge28
+    100664: Edge29
+    100666: Edge30
+    100668: Edge31
+    100670: Edge32
+    100672: Glutamate.001
     400000: //RootNode
     400002: 1,3-biphosphoglycerate
     400004: 1,3-biphosphoglycerate.002
@@ -659,6 +668,15 @@ ModelImporter:
     400650: succinyl-CoA.008
     400652: succinyl-CoA.009
     400654: succinyl-CoA.010
+    400656: Aspartate.001
+    400658: Aspartate.002
+    400660: Edge27
+    400662: Edge28
+    400664: Edge29
+    400666: Edge30
+    400668: Edge31
+    400670: Edge32
+    400672: Glutamate.001
     2000000: Camera
     2100000: Material.001
     2100002: Material.003
@@ -716,6 +734,14 @@ ModelImporter:
     2100106: Material.106
     2100108: Material.107
     2100110: Material.105
+    2100112: lambert6.136
+    2100114: lambert6.138
+    2100116: lambert6.139
+    2100118: lambert6.140
+    2100120: lambert6.141
+    2100122: Material.013
+    2100124: Material.108
+    2100126: Material.109
     2300000: 1,3-biphosphoglycerate
     2300002: 1,3-biphosphoglycerate.002
     2300004: 1,3-biphosphoglycerate.006
@@ -1042,6 +1068,15 @@ ModelImporter:
     2300646: succinyl-CoA.008
     2300648: succinyl-CoA.009
     2300650: succinyl-CoA.010
+    2300652: Aspartate.001
+    2300654: Aspartate.002
+    2300656: Edge27
+    2300658: Edge28
+    2300660: Edge29
+    2300662: Edge30
+    2300664: Edge31
+    2300666: Edge32
+    2300668: Glutamate.001
     3300000: 1,3-biphosphoglycerate
     3300002: 1,3-biphosphoglycerate.002
     3300004: 1,3-biphosphoglycerate.006
@@ -1368,6 +1403,15 @@ ModelImporter:
     3300646: succinyl-CoA.008
     3300648: succinyl-CoA.009
     3300650: succinyl-CoA.010
+    3300652: Aspartate.001
+    3300654: Aspartate.002
+    3300656: Edge27
+    3300658: Edge28
+    3300660: Edge29
+    3300662: Edge30
+    3300664: Edge31
+    3300666: Edge32
+    3300668: Glutamate.001
     4300000: Comfort Zone
     4300002: No-No Zone 0.5m
     4300004: Edges
@@ -1694,6 +1738,15 @@ ModelImporter:
     4300646: Edge8
     4300648: Edge9
     4300650: Mitochondria_FBX2013_VertexPaint12.002
+    4300652: Glutamate.001
+    4300654: Aspartate.001
+    4300656: Aspartate.002
+    4300658: Edge27
+    4300660: Edge28
+    4300662: Edge29
+    4300664: Edge30
+    4300666: Edge31
+    4300668: Edge32
     7400000: Comfort Zone|SphereAction
     9500000: //RootNode
     2186277476908879412: ImportLogs
