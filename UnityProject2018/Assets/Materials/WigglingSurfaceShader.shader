@@ -11,7 +11,7 @@ Shader "Custom/WigglingSurfaceShader" {
 	_Amplitude("Amplitude", Range(0, 1)) = 0.02
 	}
 		SubShader{
-		Tags { "RenderType" = "Opaque" }
+		Tags { "RenderType" = "Opaque" "DisableBatching" = "True"}
 		LOD 200
 
 		CGPROGRAM
@@ -34,6 +34,12 @@ Shader "Custom/WigglingSurfaceShader" {
 		half _Metallic;
 		fixed4 _Color;
 		static half _Frequency = 10;
+		
+		struct v2f
+		{
+			float4 vertex: SV_POSITION;
+			float3 normal: SV_POSITION;
+		};
 
 		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
 		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -43,6 +49,8 @@ Shader "Custom/WigglingSurfaceShader" {
 			UNITY_INSTANCING_BUFFER_END(Props)
 
 			void vert(inout appdata_base v) {
+			v2f o;
+			o.vertex = mul(unity_WorldToObject, v.vertex);
 				v.vertex.xyz += v.normal * (sin(v.vertex.z * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Amplitude + 0.01);
 			}
 
