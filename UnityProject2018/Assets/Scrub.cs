@@ -18,7 +18,7 @@ public class Scrub : MonoBehaviour
     {
         Animator anim = getCurrentAnimator();
 
-        GameObject.Find(CURRENT_PATH + "/Canvas/Slider").GetComponent<Slider>().value = 1 - anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        GameObject.Find(CURRENT_PATH + "/Canvas/Slider").GetComponent<Slider>().value = 1 - (anim.GetCurrentAnimatorStateInfo(0).normalizedTime % 1);
     }
     
     Animator getCurrentAnimator()

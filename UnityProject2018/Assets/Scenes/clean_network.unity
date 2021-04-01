@@ -1544,6 +1544,7 @@ GameObject:
   - component: {fileID: 98800194}
   - component: {fileID: 98800193}
   - component: {fileID: 98800192}
+  - component: {fileID: 98800191}
   m_Layer: 0
   m_Name: PauseButton
   m_TagString: Untagged
@@ -1571,6 +1572,18 @@ RectTransform:
   m_AnchoredPosition: {x: -25, y: -80}
   m_SizeDelta: {x: 45, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &98800191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98800189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970a04b9da2d1b94b81d2edb06039f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &98800192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,7 +1624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 988872253906165189}
+      - m_Target: {fileID: 98800191}
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -13657,6 +13670,7 @@ GameObject:
   - component: {fileID: 1126841767}
   - component: {fileID: 1126841766}
   - component: {fileID: 1126841765}
+  - component: {fileID: 1126841764}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -13684,6 +13698,18 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: -80}
   m_SizeDelta: {x: 45, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1126841764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126841762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970a04b9da2d1b94b81d2edb06039f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1126841765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13724,7 +13750,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 988872253906165189}
+      - m_Target: {fileID: 1126841764}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -24435,7 +24461,6 @@ GameObject:
   - component: {fileID: 988872253906165175}
   - component: {fileID: 988872253906165177}
   - component: {fileID: 988872253906165179}
-  - component: {fileID: 988872253906165189}
   m_Layer: 0
   m_Name: DefaultPathway
   m_TagString: Untagged
@@ -24668,18 +24693,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &988872253906165189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988872253906165174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 970a04b9da2d1b94b81d2edb06039f1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &988872253906165190
 GameObject:
   m_ObjectHideFlags: 0
