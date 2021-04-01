@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AnimationControl : MonoBehaviour
+public class Scrub : MonoBehaviour
 {
     string CURRENT_PATH = "/Center/Network/DefaultPathway";
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Animator anim = getCurrentAnimator();
 
+        GameObject.Find(CURRENT_PATH + "/Canvas/Slider").GetComponent<Slider>().value = 1 - anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
     }
-
+    
     Animator getCurrentAnimator()
     {
         GameObject anim1 = GameObject.Find(CURRENT_PATH + "/Animation1Container");
@@ -29,19 +31,5 @@ public class AnimationControl : MonoBehaviour
         }
 
         return GameObject.Find(CURRENT_PATH + "/Animation1Container/animation_1").GetComponent<Animator>();
-    }
-
-    public void Pause()
-    {
-        Animator anim = getCurrentAnimator();
-
-        anim.enabled = false;
-    }
-
-    public void Resume()
-    {
-        Animator anim = getCurrentAnimator();
-
-        anim.enabled = true;
     }
 }
