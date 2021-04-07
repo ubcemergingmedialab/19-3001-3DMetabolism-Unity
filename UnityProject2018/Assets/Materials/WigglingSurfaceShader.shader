@@ -6,6 +6,7 @@ Shader "Custom/WigglingSurfaceShader" {
 	_MainTex("Albedo (RGB)", 2D) = "white" {}
 	_Glossiness("Smoothness", Range(0,1)) = 0.5
 	_Metallic("Metallic", Range(0,1)) = 0.0
+	_Size("Size", float) = 1.0
 	_TimeDirection("TimeDirection", Range(0, 1)) = 1.0
 	_TimeSpeed("TimeSpeed", Range(0, 30)) = 10.0
 	_Amplitude("Amplitude", Range(0, 1)) = 0.02
@@ -25,6 +26,7 @@ Shader "Custom/WigglingSurfaceShader" {
 		float _TimeDirection;
 		float _TimeSpeed;
 		float _Amplitude;
+		float _Size;
 
 		struct Input {
 		float2 uv_MainTex;
@@ -50,8 +52,8 @@ Shader "Custom/WigglingSurfaceShader" {
 
 			void vert(inout appdata_base v) {
 			v2f o;
-			o.vertex = mul(unity_WorldToObject, v.vertex);
-				v.vertex.xyz += v.normal * (sin(v.vertex.z * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Amplitude + 0.01);
+			o.vertex = mul(unity_WorldToObject, v.vertex); 
+				v.vertex.xyz += v.normal * (sin((v.vertex.z * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Size) * _Amplitude + 0.02);
 			}
 
 			void surf(Input IN, inout SurfaceOutputStandard o) {
