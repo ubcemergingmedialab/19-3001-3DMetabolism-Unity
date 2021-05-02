@@ -5,7 +5,14 @@ using UnityEngine.UI;
 
 public class AnimationControl : MonoBehaviour
 {
-    string CURRENT_PATH = "/Center/Network/DefaultPathway";
+    private AnimationMediator mediator;
+
+    
+    void Awake()
+    {
+        this.mediator = AnimationMediator.Instance;
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,29 +26,13 @@ public class AnimationControl : MonoBehaviour
 
     }
 
-    Animator getCurrentAnimator()
-    {
-        GameObject anim1 = GameObject.Find(CURRENT_PATH + "/Animation1Container");
-        if (!anim1.gameObject.activeSelf) {
-            GameObject anim2 = GameObject.Find(CURRENT_PATH + "/Animation2Container");
-            return anim2.gameObject.activeSelf ? GameObject.Find(CURRENT_PATH + "/Animation2Container/animation_2").GetComponent<Animator>()
-            : GameObject.Find(CURRENT_PATH).GetComponent<Animator>();
-        }
-
-        return GameObject.Find(CURRENT_PATH + "/Animation1Container/animation_1").GetComponent<Animator>();
-    }
-
     public void Pause()
     {
-        Animator anim = getCurrentAnimator();
-
-        anim.enabled = false;
+        this.mediator.OnPause();
     }
 
     public void Resume()
     {
-        Animator anim = getCurrentAnimator();
-
-        anim.enabled = true;
+        this.mediator.OnPlay();
     }
 }
