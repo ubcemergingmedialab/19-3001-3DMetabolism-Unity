@@ -18,10 +18,6 @@ public class GuidedTourManager : MonoBehaviour {
         get { return _instance; }
     }
 
-    public GameObject head, headContainer, cameraRig, mainCamera; 
-    public Animator animator;
-    private Animator oldAnimator;
-    public Animator cameraAnimator;
     public SceneData[] sceneDataArray;
 
     /// APP STATE EVENTS
@@ -92,7 +88,6 @@ public class GuidedTourManager : MonoBehaviour {
         currentTransitionType = TransitionType.None;
         distanceFromAdjustedCameraPositionThreshold = 0.2f;
         afterAnimationCoroutineIsRunning = false;
-        oldAnimator = animator;
 
         InitializeEvent?.Invoke();
     }
