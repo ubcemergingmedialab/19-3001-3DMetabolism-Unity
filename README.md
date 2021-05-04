@@ -35,9 +35,19 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 
 ### Current EML Student Team:
 
-- (Name) - (Position)
+- Nikko - Developer/Lead
+- Rayyan - Developer
+- Joshua - Designer
+- Dante - Developer
+
+### Spring 2021 Team:
+- Dante - Lead
+- Nikko - Developer
+- Hai Lin - Developer
+- Jenn - Designer
+- Kim - Designer
 
 ## Documentation
-For documentation, please visit the UBC Wiki for this repository: 
-https://wiki.ubc.ca/Documentation:Project_Name
+For documentation, please visit the UBC Wiki for this repository (this wiki talks about a past Aframe version): 
+https://wiki.ubc.ca/Documentation:Metabolism
 (Create either an external wiki or gh pages site for the script documentation. A template doxyfile is included for generating doxygen based documentation.)
