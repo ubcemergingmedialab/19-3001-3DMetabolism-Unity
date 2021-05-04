@@ -1,6 +1,6 @@
 # Project name
 ## Project Information
-(Brief summary here)
+A visualization of the Metabolic that leverages the third dimension and Unity animations to make the network easier to understand
 
 ## External Assets
 
@@ -9,25 +9,11 @@
 
 | Asset | Purpose |
 | ------ | ------ |
-| [VRTK](https://github.com/ExtendRealityLtd/VRTK) | Tool kit used for implementing VR functionality into a scene. Allows easy interchangeability between different VR hardware. |
-| [SteamVR](https://github.com/ValveSoftware/steamvr_unity_plugin) | Gives Unity access to SteamVR. | 
-| [Oculus Plugin](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) | Allows Oculus functionality within Unity. |
-| [Name here](Link here) | Summary here |
-
-### Excluded
-The following assets are either necessary or recommended for the project to work as intended, and may be included in the project's final release. However, we cannot distribute them, and they must be acquired elsewhere.
-
-(Inlude list of assets needed for the project but not included in the repo.)
-
-| Asset | Purpose | Optional? |
-| ------ | ------ | ------ |
-| [Optional asset](Link here) | Summary here | :heavy_check_mark: |
-| [Necessary asset](Link here) | Summary here | :x: |
+| CleanNetwork.fbx | A static implementation of our network on Glycolysis and Gluconeogenesis |
 
 ## Versioning
 
-- Unity (version number here)
-- Include required plugin versions here
+- Unity 2018.4.31f
 
 ## Getting Started
 
