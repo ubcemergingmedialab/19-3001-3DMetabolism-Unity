@@ -129,8 +129,8 @@ public class GuidedTourManager : MonoBehaviour {
             currentSceneNumber -= 1;
             isDuringTransition = true;
             currentTransitionType = TransitionType.Backward;
-            string[] startingnodes = sceneDataArray[currentSceneNumber - 1].startingNodes;
-            string[] endingNodes = sceneDataArray[currentSceneNumber - 1].endingNodes;
+            //string[] startingnodes = sceneDataArray[currentSceneNumber - 1].startingNodes;
+            //string[] endingNodes = sceneDataArray[currentSceneNumber - 1].endingNodes;
             //call animateInactive on starting nodes, call animateActive on ending nodes
             VisitPreviousEvent?.Invoke(sceneDataArray[currentSceneNumber -1]);
 
@@ -149,8 +149,8 @@ public class GuidedTourManager : MonoBehaviour {
             currentTransitionType = TransitionType.Forward;
             Debug.Log(sceneDataArray[currentSceneNumber-1].name);
 
-            string[] startingnodes = sceneDataArray[currentSceneNumber - 1].startingNodes;
-            string[] endingNodes = sceneDataArray[currentSceneNumber - 1].endingNodes;
+            //string[] startingnodes = sceneDataArray[currentSceneNumber - 1].startingNodes;
+            //string[] endingNodes = sceneDataArray[currentSceneNumber - 1].endingNodes;
             // call animateInactive on starting nodes, call animateInactive on ending nodes 
 
             VisitNextEvent?.Invoke(sceneDataArray[currentSceneNumber - 1]);
@@ -194,7 +194,7 @@ public class GuidedTourManager : MonoBehaviour {
 
         if (!string.IsNullOrEmpty(currentAnimationClipName))
         {
-            animator.Play(currentAnimationClipName, 0, 0f);
+            //animator.Play(currentAnimationClipName, 0, 0f);
             DuringTransitionEvent?.Invoke();   
         }
 
@@ -203,13 +203,13 @@ public class GuidedTourManager : MonoBehaviour {
 
     void AdjustSkullPositionIfPastThreshold()
     {
-        Vector3 currentCameraPosition = mainCamera.transform.position;
+        /*Vector3 currentCameraPosition = mainCamera.transform.position;
         if (Vector3.Distance(currentCameraPosition, adjustedCameraPosition) > distanceFromAdjustedCameraPositionThreshold)
         {
             Vector3 offset = new Vector3(currentCameraPosition.x - adjustedCameraPosition.x, currentCameraPosition.y - adjustedCameraPosition.y, currentCameraPosition.z - adjustedCameraPosition.z);
-            headContainer.transform.position += offset;
+            //headContainer.transform.position += offset;
             adjustedCameraPosition = mainCamera.transform.position;
-        }
+        }*/
     }
 
     IEnumerator AfterAnimation()
@@ -247,7 +247,7 @@ public class GuidedTourManager : MonoBehaviour {
             StopCoroutine(afterAnimationCoroutine); /// you need this because you don't want this effect to take place unintentionally
             afterAnimationCoroutineIsRunning = false;
         }
-        animator.Play(currentAnimationClipName, -1, 1);
+        //animator.Play(currentAnimationClipName, -1, 1);
         isDuringTransition = false;
         currentTransitionType = TransitionType.None;
         currentAnimationClipName = "";

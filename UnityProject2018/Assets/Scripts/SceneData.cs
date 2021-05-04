@@ -5,7 +5,5 @@ using UnityEngine;
 public class SceneData : ScriptableObject {
     public HashSet<Animator> nodes;
     public HashSet<Animator> edges;
-    public string[] nodeAnimations;
-    public string[] edgeAnimations;
 
 }
