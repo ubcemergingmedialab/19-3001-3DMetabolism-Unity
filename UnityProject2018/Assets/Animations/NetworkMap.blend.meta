@@ -1,0 +1,1838 @@
+fileFormatVersion: 2
+guid: 92c1701fe6b89e24586a423ae574b052
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: 1,3-biphosphoglycerate
+    100004: 1,3-biphosphoglycerate.002
+    100006: 1,3-biphosphoglycerate.006
+    100008: 1,3-biphosphoglycerate.008
+    100010: 1,3-biphosphoglycerate.009
+    100012: 1,3-biphosphoglycerate.010
+    100014: 1,3-biphosphoglycerate.011
+    100016: 2-phosphoglycerate
+    100018: 2-phosphoglycerate.002
+    100020: 2-phosphoglycerate.006
+    100022: 2-phosphoglycerate.008
+    100024: 2-phosphoglycerate.009
+    100026: 2-phosphoglycerate.010
+    100028: 2-phosphoglycerate.011
+    100030: 3-phosphoglycerate
+    100032: 3-phosphoglycerate.002
+    100034: 3-phosphoglycerate.006
+    100036: 3-phosphoglycerate.008
+    100038: 3-phosphoglycerate.009
+    100040: 3-phosphoglycerate.010
+    100042: 3-phosphoglycerate.011
+    100044: a-ketoglutarate.002
+    100046: a-ketoglutarate.007
+    100048: a-ketoglutarate.008
+    100050: a-ketoglutarate.009
+    100052: a-ketoglutarate.010
+    100054: Camera
+    100056: Citrate.003
+    100058: Citrate.004
+    100060: Citrate.005
+    100062: Citrate.006
+    100064: Comfort Zone
+    100066: Dihydroxyacetone phosphate
+    100068: Dihydroxyacetone phosphate.002
+    100070: Dihydroxyacetone phosphate.006
+    100072: Dihydroxyacetone phosphate.007
+    100074: Dihydroxyacetone phosphate.009
+    100076: Dihydroxyacetone phosphate.010
+    100078: Dihydroxyacetone phosphate.011
+    100080: Dihydroxyacetone phosphate.012
+    100082: Edge.053
+    100084: Edge.054
+    100086: Edge.055
+    100088: Edge.057
+    100090: Edge.058
+    100092: Edge.059
+    100094: Edge.060
+    100096: Edge.061
+    100098: Edge.062
+    100100: Edge.065
+    100102: Edge.067
+    100104: Edge.073
+    100106: Edge.074
+    100108: Edge.075
+    100110: Edge.076
+    100112: Edge.077
+    100114: Edge.117
+    100116: Edge.118
+    100118: Edge.119
+    100120: Edge.120
+    100122: Edge.121
+    100124: Edge.122
+    100126: Edge.123
+    100128: Edge.125
+    100130: Edge.126
+    100132: Edge.127
+    100134: Edge.128
+    100136: Edge.129
+    100138: Edge.130
+    100140: Edge.132
+    100142: Edge.133
+    100144: Edge.137
+    100146: Edge.138
+    100148: Edge.139
+    100150: Edge.140
+    100152: Edge1
+    100154: Edge1.001
+    100156: Edge1.002
+    100158: Edge1.003
+    100160: Edge1.004
+    100162: Edge10
+    100164: Edge10.001
+    100166: Edge10.002
+    100168: Edge10.003
+    100170: Edge10.004
+    100172: Edge11
+    100174: Edge11.001
+    100176: Edge11.002
+    100178: Edge11.003
+    100180: Edge11.004
+    100182: Edge12
+    100184: Edge12.001
+    100186: Edge12.002
+    100188: Edge12.003
+    100190: Edge13
+    100192: Edge13.001
+    100194: Edge13.002
+    100196: Edge13.003
+    100198: Edge14
+    100200: Edge14.001
+    100202: Edge14.002
+    100204: Edge14.003
+    100206: Edge15
+    100208: Edge15.001
+    100210: Edge15.002
+    100212: Edge15.003
+    100214: Edge16
+    100216: Edge16.001
+    100218: Edge16.002
+    100220: Edge16.003
+    100222: Edge17
+    100224: Edge17.001
+    100226: Edge17.002
+    100228: Edge17.003
+    100230: Edge18
+    100232: Edge18.001
+    100234: Edge18.002
+    100236: Edge18.003
+    100238: Edge19
+    100240: Edge19.001
+    100242: Edge19.002
+    100244: Edge19.003
+    100246: Edge2
+    100248: Edge2.001
+    100250: Edge2.002
+    100252: Edge2.003
+    100254: Edge2.004
+    100256: Edge20
+    100258: Edge20.001
+    100260: Edge20.002
+    100262: Edge20.003
+    100264: Edge21
+    100266: Edge21.001
+    100268: Edge21.002
+    100270: Edge21.003
+    100272: Edge22
+    100274: Edge22.001
+    100276: Edge22.002
+    100278: Edge22.003
+    100280: Edge23
+    100282: Edge23.001
+    100284: Edge23.002
+    100286: Edge23.003
+    100288: Edge24
+    100290: Edge24.001
+    100292: Edge24.002
+    100294: Edge24.003
+    100296: Edge25
+    100298: Edge25.001
+    100300: Edge25.002
+    100302: Edge25.003
+    100304: Edge26
+    100306: Edge26.001
+    100308: Edge26.002
+    100310: Edge26.003
+    100312: Edge3
+    100314: Edge3.001
+    100316: Edge3.002
+    100318: Edge3.003
+    100320: Edge3.004
+    100322: Edge4
+    100324: Edge4.001
+    100326: Edge4.002
+    100328: Edge4.003
+    100330: Edge4.004
+    100332: Edge5
+    100334: Edge5.001
+    100336: Edge5.002
+    100338: Edge5.003
+    100340: Edge5.004
+    100342: Edge6
+    100344: Edge6.001
+    100346: Edge6.002
+    100348: Edge6.003
+    100350: Edge6.004
+    100352: Edge7
+    100354: Edge7.001
+    100356: Edge7.002
+    100358: Edge7.003
+    100360: Edge7.004
+    100362: Edge8
+    100364: Edge8.001
+    100366: Edge8.002
+    100368: Edge8.003
+    100370: Edge8.004
+    100372: Edge9
+    100374: Edge9.001
+    100376: Edge9.002
+    100378: Edge9.003
+    100380: Edge9.004
+    100382: Edges
+    100384: Edges.001
+    100386: Fructose 1,6-biphosphate
+    100388: Fructose 1,6-biphosphate.002
+    100390: Fructose 1,6-biphosphate.006
+    100392: Fructose 1,6-biphosphate.007
+    100394: Fructose 1,6-biphosphate.009
+    100396: Fructose 1,6-biphosphate.010
+    100398: Fructose 1,6-biphosphate.011
+    100400: Fructose 1,6-biphosphate.012
+    100402: Fructose 6-phosphate
+    100404: Fructose 6-phosphate.002
+    100406: Fructose 6-phosphate.006
+    100408: Fructose 6-phosphate.007
+    100410: Fructose 6-phosphate.009
+    100412: Fructose 6-phosphate.010
+    100414: Fructose 6-phosphate.011
+    100416: Fructose 6-phosphate.012
+    100418: fumarate.002
+    100420: fumarate.007
+    100422: fumarate.008
+    100424: fumarate.009
+    100426: fumarate.010
+    100428: Glucose
+    100430: Glucose 6-phosphate
+    100432: Glucose 6-phosphate.002
+    100434: Glucose 6-phosphate.006
+    100436: Glucose 6-phosphate.007
+    100438: Glucose 6-phosphate.009
+    100440: Glucose 6-phosphate.010
+    100442: Glucose 6-phosphate.011
+    100444: Glucose 6-phosphate.012
+    100446: Glucose.002
+    100448: Glucose.006
+    100450: Glucose.007
+    100452: Glucose.009
+    100454: Glucose.010
+    100456: Glucose.011
+    100458: Glucose.012
+    100460: Glutamate.002
+    100462: Glutamate.007
+    100464: Glutamate.008
+    100466: Glutamate.009
+    100468: Glutamate.010
+    100470: Glyceraldehyde 3-phosphate
+    100472: Glyceraldehyde 3-phosphate.002
+    100474: Glyceraldehyde 3-phosphate.006
+    100476: Glyceraldehyde 3-phosphate.007
+    100478: Glyceraldehyde 3-phosphate.009
+    100480: Glyceraldehyde 3-phosphate.010
+    100482: Glyceraldehyde 3-phosphate.011
+    100484: Glyceraldehyde 3-phosphate.012
+    100486: Glycerol 3-phosphate.002
+    100488: Glycerol 3-phosphate.004
+    100490: Glycerol 3-phosphate.005
+    100492: Glycerol 3-phosphate.006
+    100494: Glycerol 3-phosphate.007
+    100496: Glycerol.002
+    100498: Glycerol.004
+    100500: Glycerol.005
+    100502: Glycerol.006
+    100504: Glycerol.007
+    100506: Isocitrate.003
+    100508: Isocitrate.004
+    100510: Isocitrate.005
+    100512: Isocitrate.006
+    100514: Lactate.002
+    100516: Lactate.004
+    100518: Lactate.005
+    100520: Lactate.006
+    100522: Lactate.007
+    100524: Malate.002
+    100526: malate.002
+    100528: Malate.007
+    100530: malate.007
+    100532: Malate.008
+    100534: malate.008
+    100536: Malate.009
+    100538: malate.009
+    100540: Malate.010
+    100542: malate.010
+    100544: Mitochondria_FBX2013_VertexPaint12
+    100546: Mitochondria_FBX2013_VertexPaint12.001
+    100548: Mitochondria_FBX2013_VertexPaint12.002
+    100550: Mitochondria_FBX2013_VertexPaint12.004
+    100552: Mitochondria_FBX2013_VertexPaint12.008
+    100554: Mitochondria_FBX2013_VertexPaint12.009
+    100556: Mitochondria_FBX2013_VertexPaint12.011
+    100558: Mitochondria_FBX2013_VertexPaint12.012
+    100560: Mitochondria_FBX2013_VertexPaint12.013
+    100562: Mitochondria_FBX2013_VertexPaint12.014
+    100564: No-No Zone 0.5m
+    100566: Nodes
+    100568: Nodes.001
+    100570: Oxaloacetate.001
+    100572: Oxaloacetate.004
+    100574: Oxaloacetate.009
+    100576: Oxaloacetate.011
+    100578: Oxaloacetate.012
+    100580: Oxaloacetate.013
+    100582: Oxaloacetate.014
+    100584: Oxaloacetate.015
+    100586: Oxaloacetate.016
+    100588: Oxaloacetate.017
+    100590: Phosphoenolpyruvate.001
+    100592: Phosphoenolpyruvate.004
+    100594: Phosphoenolpyruvate.008
+    100596: Phosphoenolpyruvate.009
+    100598: Phosphoenolpyruvate.012
+    100600: Phosphoenolpyruvate.013
+    100602: Phosphoenolpyruvate.014
+    100604: Phosphoenolpyruvate.015
+    100606: Phosphoenolpyruvate.016
+    100608: Phosphoenolpyruvate.017
+    100610: Phosphoenolpyruvate.018
+    100612: Phosphoenolpyruvate.019
+    100614: Pyruvate.001
+    100616: Pyruvate.004
+    100618: Pyruvate.005
+    100620: Pyruvate.008
+    100622: Pyruvate.009
+    100624: Pyruvate.010
+    100626: Pyruvate.011
+    100628: Pyruvate.012
+    100630: Pyruvate.013
+    100632: Pyruvate.014
+    100634: Pyruvate.015
+    100636: succinate.002
+    100638: succinate.007
+    100640: succinate.008
+    100642: succinate.009
+    100644: succinate.010
+    100646: succinyl-CoA.002
+    100648: succinyl-CoA.007
+    100650: succinyl-CoA.008
+    100652: succinyl-CoA.009
+    100654: succinyl-CoA.010
+    100656: Aspartate.001
+    100658: Aspartate.002
+    100660: Edge27
+    100662: Edge28
+    100664: Edge29
+    100666: Edge30
+    100668: Edge31
+    100670: Edge32
+    100672: Glutamate.001
+    400000: //RootNode
+    400002: 1,3-biphosphoglycerate
+    400004: 1,3-biphosphoglycerate.002
+    400006: 1,3-biphosphoglycerate.006
+    400008: 1,3-biphosphoglycerate.008
+    400010: 1,3-biphosphoglycerate.009
+    400012: 1,3-biphosphoglycerate.010
+    400014: 1,3-biphosphoglycerate.011
+    400016: 2-phosphoglycerate
+    400018: 2-phosphoglycerate.002
+    400020: 2-phosphoglycerate.006
+    400022: 2-phosphoglycerate.008
+    400024: 2-phosphoglycerate.009
+    400026: 2-phosphoglycerate.010
+    400028: 2-phosphoglycerate.011
+    400030: 3-phosphoglycerate
+    400032: 3-phosphoglycerate.002
+    400034: 3-phosphoglycerate.006
+    400036: 3-phosphoglycerate.008
+    400038: 3-phosphoglycerate.009
+    400040: 3-phosphoglycerate.010
+    400042: 3-phosphoglycerate.011
+    400044: a-ketoglutarate.002
+    400046: a-ketoglutarate.007
+    400048: a-ketoglutarate.008
+    400050: a-ketoglutarate.009
+    400052: a-ketoglutarate.010
+    400054: Camera
+    400056: Citrate.003
+    400058: Citrate.004
+    400060: Citrate.005
+    400062: Citrate.006
+    400064: Comfort Zone
+    400066: Dihydroxyacetone phosphate
+    400068: Dihydroxyacetone phosphate.002
+    400070: Dihydroxyacetone phosphate.006
+    400072: Dihydroxyacetone phosphate.007
+    400074: Dihydroxyacetone phosphate.009
+    400076: Dihydroxyacetone phosphate.010
+    400078: Dihydroxyacetone phosphate.011
+    400080: Dihydroxyacetone phosphate.012
+    400082: Edge.053
+    400084: Edge.054
+    400086: Edge.055
+    400088: Edge.057
+    400090: Edge.058
+    400092: Edge.059
+    400094: Edge.060
+    400096: Edge.061
+    400098: Edge.062
+    400100: Edge.065
+    400102: Edge.067
+    400104: Edge.073
+    400106: Edge.074
+    400108: Edge.075
+    400110: Edge.076
+    400112: Edge.077
+    400114: Edge.117
+    400116: Edge.118
+    400118: Edge.119
+    400120: Edge.120
+    400122: Edge.121
+    400124: Edge.122
+    400126: Edge.123
+    400128: Edge.125
+    400130: Edge.126
+    400132: Edge.127
+    400134: Edge.128
+    400136: Edge.129
+    400138: Edge.130
+    400140: Edge.132
+    400142: Edge.133
+    400144: Edge.137
+    400146: Edge.138
+    400148: Edge.139
+    400150: Edge.140
+    400152: Edge1
+    400154: Edge1.001
+    400156: Edge1.002
+    400158: Edge1.003
+    400160: Edge1.004
+    400162: Edge10
+    400164: Edge10.001
+    400166: Edge10.002
+    400168: Edge10.003
+    400170: Edge10.004
+    400172: Edge11
+    400174: Edge11.001
+    400176: Edge11.002
+    400178: Edge11.003
+    400180: Edge11.004
+    400182: Edge12
+    400184: Edge12.001
+    400186: Edge12.002
+    400188: Edge12.003
+    400190: Edge13
+    400192: Edge13.001
+    400194: Edge13.002
+    400196: Edge13.003
+    400198: Edge14
+    400200: Edge14.001
+    400202: Edge14.002
+    400204: Edge14.003
+    400206: Edge15
+    400208: Edge15.001
+    400210: Edge15.002
+    400212: Edge15.003
+    400214: Edge16
+    400216: Edge16.001
+    400218: Edge16.002
+    400220: Edge16.003
+    400222: Edge17
+    400224: Edge17.001
+    400226: Edge17.002
+    400228: Edge17.003
+    400230: Edge18
+    400232: Edge18.001
+    400234: Edge18.002
+    400236: Edge18.003
+    400238: Edge19
+    400240: Edge19.001
+    400242: Edge19.002
+    400244: Edge19.003
+    400246: Edge2
+    400248: Edge2.001
+    400250: Edge2.002
+    400252: Edge2.003
+    400254: Edge2.004
+    400256: Edge20
+    400258: Edge20.001
+    400260: Edge20.002
+    400262: Edge20.003
+    400264: Edge21
+    400266: Edge21.001
+    400268: Edge21.002
+    400270: Edge21.003
+    400272: Edge22
+    400274: Edge22.001
+    400276: Edge22.002
+    400278: Edge22.003
+    400280: Edge23
+    400282: Edge23.001
+    400284: Edge23.002
+    400286: Edge23.003
+    400288: Edge24
+    400290: Edge24.001
+    400292: Edge24.002
+    400294: Edge24.003
+    400296: Edge25
+    400298: Edge25.001
+    400300: Edge25.002
+    400302: Edge25.003
+    400304: Edge26
+    400306: Edge26.001
+    400308: Edge26.002
+    400310: Edge26.003
+    400312: Edge3
+    400314: Edge3.001
+    400316: Edge3.002
+    400318: Edge3.003
+    400320: Edge3.004
+    400322: Edge4
+    400324: Edge4.001
+    400326: Edge4.002
+    400328: Edge4.003
+    400330: Edge4.004
+    400332: Edge5
+    400334: Edge5.001
+    400336: Edge5.002
+    400338: Edge5.003
+    400340: Edge5.004
+    400342: Edge6
+    400344: Edge6.001
+    400346: Edge6.002
+    400348: Edge6.003
+    400350: Edge6.004
+    400352: Edge7
+    400354: Edge7.001
+    400356: Edge7.002
+    400358: Edge7.003
+    400360: Edge7.004
+    400362: Edge8
+    400364: Edge8.001
+    400366: Edge8.002
+    400368: Edge8.003
+    400370: Edge8.004
+    400372: Edge9
+    400374: Edge9.001
+    400376: Edge9.002
+    400378: Edge9.003
+    400380: Edge9.004
+    400382: Edges
+    400384: Edges.001
+    400386: Fructose 1,6-biphosphate
+    400388: Fructose 1,6-biphosphate.002
+    400390: Fructose 1,6-biphosphate.006
+    400392: Fructose 1,6-biphosphate.007
+    400394: Fructose 1,6-biphosphate.009
+    400396: Fructose 1,6-biphosphate.010
+    400398: Fructose 1,6-biphosphate.011
+    400400: Fructose 1,6-biphosphate.012
+    400402: Fructose 6-phosphate
+    400404: Fructose 6-phosphate.002
+    400406: Fructose 6-phosphate.006
+    400408: Fructose 6-phosphate.007
+    400410: Fructose 6-phosphate.009
+    400412: Fructose 6-phosphate.010
+    400414: Fructose 6-phosphate.011
+    400416: Fructose 6-phosphate.012
+    400418: fumarate.002
+    400420: fumarate.007
+    400422: fumarate.008
+    400424: fumarate.009
+    400426: fumarate.010
+    400428: Glucose
+    400430: Glucose 6-phosphate
+    400432: Glucose 6-phosphate.002
+    400434: Glucose 6-phosphate.006
+    400436: Glucose 6-phosphate.007
+    400438: Glucose 6-phosphate.009
+    400440: Glucose 6-phosphate.010
+    400442: Glucose 6-phosphate.011
+    400444: Glucose 6-phosphate.012
+    400446: Glucose.002
+    400448: Glucose.006
+    400450: Glucose.007
+    400452: Glucose.009
+    400454: Glucose.010
+    400456: Glucose.011
+    400458: Glucose.012
+    400460: Glutamate.002
+    400462: Glutamate.007
+    400464: Glutamate.008
+    400466: Glutamate.009
+    400468: Glutamate.010
+    400470: Glyceraldehyde 3-phosphate
+    400472: Glyceraldehyde 3-phosphate.002
+    400474: Glyceraldehyde 3-phosphate.006
+    400476: Glyceraldehyde 3-phosphate.007
+    400478: Glyceraldehyde 3-phosphate.009
+    400480: Glyceraldehyde 3-phosphate.010
+    400482: Glyceraldehyde 3-phosphate.011
+    400484: Glyceraldehyde 3-phosphate.012
+    400486: Glycerol 3-phosphate.002
+    400488: Glycerol 3-phosphate.004
+    400490: Glycerol 3-phosphate.005
+    400492: Glycerol 3-phosphate.006
+    400494: Glycerol 3-phosphate.007
+    400496: Glycerol.002
+    400498: Glycerol.004
+    400500: Glycerol.005
+    400502: Glycerol.006
+    400504: Glycerol.007
+    400506: Isocitrate.003
+    400508: Isocitrate.004
+    400510: Isocitrate.005
+    400512: Isocitrate.006
+    400514: Lactate.002
+    400516: Lactate.004
+    400518: Lactate.005
+    400520: Lactate.006
+    400522: Lactate.007
+    400524: Malate.002
+    400526: malate.002
+    400528: Malate.007
+    400530: malate.007
+    400532: Malate.008
+    400534: malate.008
+    400536: Malate.009
+    400538: malate.009
+    400540: Malate.010
+    400542: malate.010
+    400544: Mitochondria_FBX2013_VertexPaint12
+    400546: Mitochondria_FBX2013_VertexPaint12.001
+    400548: Mitochondria_FBX2013_VertexPaint12.002
+    400550: Mitochondria_FBX2013_VertexPaint12.004
+    400552: Mitochondria_FBX2013_VertexPaint12.008
+    400554: Mitochondria_FBX2013_VertexPaint12.009
+    400556: Mitochondria_FBX2013_VertexPaint12.011
+    400558: Mitochondria_FBX2013_VertexPaint12.012
+    400560: Mitochondria_FBX2013_VertexPaint12.013
+    400562: Mitochondria_FBX2013_VertexPaint12.014
+    400564: No-No Zone 0.5m
+    400566: Nodes
+    400568: Nodes.001
+    400570: Oxaloacetate.001
+    400572: Oxaloacetate.004
+    400574: Oxaloacetate.009
+    400576: Oxaloacetate.011
+    400578: Oxaloacetate.012
+    400580: Oxaloacetate.013
+    400582: Oxaloacetate.014
+    400584: Oxaloacetate.015
+    400586: Oxaloacetate.016
+    400588: Oxaloacetate.017
+    400590: Phosphoenolpyruvate.001
+    400592: Phosphoenolpyruvate.004
+    400594: Phosphoenolpyruvate.008
+    400596: Phosphoenolpyruvate.009
+    400598: Phosphoenolpyruvate.012
+    400600: Phosphoenolpyruvate.013
+    400602: Phosphoenolpyruvate.014
+    400604: Phosphoenolpyruvate.015
+    400606: Phosphoenolpyruvate.016
+    400608: Phosphoenolpyruvate.017
+    400610: Phosphoenolpyruvate.018
+    400612: Phosphoenolpyruvate.019
+    400614: Pyruvate.001
+    400616: Pyruvate.004
+    400618: Pyruvate.005
+    400620: Pyruvate.008
+    400622: Pyruvate.009
+    400624: Pyruvate.010
+    400626: Pyruvate.011
+    400628: Pyruvate.012
+    400630: Pyruvate.013
+    400632: Pyruvate.014
+    400634: Pyruvate.015
+    400636: succinate.002
+    400638: succinate.007
+    400640: succinate.008
+    400642: succinate.009
+    400644: succinate.010
+    400646: succinyl-CoA.002
+    400648: succinyl-CoA.007
+    400650: succinyl-CoA.008
+    400652: succinyl-CoA.009
+    400654: succinyl-CoA.010
+    400656: Aspartate.001
+    400658: Aspartate.002
+    400660: Edge27
+    400662: Edge28
+    400664: Edge29
+    400666: Edge30
+    400668: Edge31
+    400670: Edge32
+    400672: Glutamate.001
+    2000000: Camera
+    2100000: Material.001
+    2100002: Material.003
+    2100004: Material
+    2100006: lambert6.001
+    2100008: lambert1.003
+    2100010: lambert6.014
+    2100012: lambert6.005
+    2100014: lambert6.011
+    2100016: lambert6.010
+    2100018: lambert6.004
+    2100020: lambert6.006
+    2100022: lambert6.003
+    2100024: lambert6.002
+    2100026: lambert6.009
+    2100028: lambert6.008
+    2100030: lambert6.007
+    2100032: lambert6.013
+    2100034: lambert6.015
+    2100036: lambert6.012
+    2100038: lambert6.016
+    2100040: lambert6.022
+    2100042: lambert6.019
+    2100044: lambert6.026
+    2100046: lambert6.023
+    2100048: lambert6.021
+    2100050: lambert6.027
+    2100052: lambert6.020
+    2100054: lambert6.018
+    2100056: lambert6.017
+    2100058: lambert6.025
+    2100060: lambert6.024
+    2100062: Material.002
+    2100064: Material.004
+    2100066: Material.005
+    2100068: Material.006
+    2100070: Material.007
+    2100072: Material.008
+    2100074: Material.009
+    2100076: Material.010
+    2100078: Material.011
+    2100080: Material.012
+    2100082: No Name
+    2100084: Material.014
+    2100086: Material.016
+    2100088: Material.015
+    2100090: Material.017
+    2100092: Material.019
+    2100094: Material.018
+    2100096: Material.020
+    2100098: Material.021
+    2100100: Material.022
+    2100102: Material.023
+    2100104: lambert1.001
+    2100106: Material.106
+    2100108: Material.107
+    2100110: Material.105
+    2100112: lambert6.136
+    2100114: lambert6.138
+    2100116: lambert6.139
+    2100118: lambert6.140
+    2100120: lambert6.141
+    2100122: Material.013
+    2100124: Material.108
+    2100126: Material.109
+    2300000: 1,3-biphosphoglycerate
+    2300002: 1,3-biphosphoglycerate.002
+    2300004: 1,3-biphosphoglycerate.006
+    2300006: 1,3-biphosphoglycerate.008
+    2300008: 1,3-biphosphoglycerate.009
+    2300010: 1,3-biphosphoglycerate.010
+    2300012: 1,3-biphosphoglycerate.011
+    2300014: 2-phosphoglycerate
+    2300016: 2-phosphoglycerate.002
+    2300018: 2-phosphoglycerate.006
+    2300020: 2-phosphoglycerate.008
+    2300022: 2-phosphoglycerate.009
+    2300024: 2-phosphoglycerate.010
+    2300026: 2-phosphoglycerate.011
+    2300028: 3-phosphoglycerate
+    2300030: 3-phosphoglycerate.002
+    2300032: 3-phosphoglycerate.006
+    2300034: 3-phosphoglycerate.008
+    2300036: 3-phosphoglycerate.009
+    2300038: 3-phosphoglycerate.010
+    2300040: 3-phosphoglycerate.011
+    2300042: a-ketoglutarate.002
+    2300044: a-ketoglutarate.007
+    2300046: a-ketoglutarate.008
+    2300048: a-ketoglutarate.009
+    2300050: a-ketoglutarate.010
+    2300052: Citrate.003
+    2300054: Citrate.004
+    2300056: Citrate.005
+    2300058: Citrate.006
+    2300060: Comfort Zone
+    2300062: Dihydroxyacetone phosphate
+    2300064: Dihydroxyacetone phosphate.002
+    2300066: Dihydroxyacetone phosphate.006
+    2300068: Dihydroxyacetone phosphate.007
+    2300070: Dihydroxyacetone phosphate.009
+    2300072: Dihydroxyacetone phosphate.010
+    2300074: Dihydroxyacetone phosphate.011
+    2300076: Dihydroxyacetone phosphate.012
+    2300078: Edge.053
+    2300080: Edge.054
+    2300082: Edge.055
+    2300084: Edge.057
+    2300086: Edge.058
+    2300088: Edge.059
+    2300090: Edge.060
+    2300092: Edge.061
+    2300094: Edge.062
+    2300096: Edge.065
+    2300098: Edge.067
+    2300100: Edge.073
+    2300102: Edge.074
+    2300104: Edge.075
+    2300106: Edge.076
+    2300108: Edge.077
+    2300110: Edge.117
+    2300112: Edge.118
+    2300114: Edge.119
+    2300116: Edge.120
+    2300118: Edge.121
+    2300120: Edge.122
+    2300122: Edge.123
+    2300124: Edge.125
+    2300126: Edge.126
+    2300128: Edge.127
+    2300130: Edge.128
+    2300132: Edge.129
+    2300134: Edge.130
+    2300136: Edge.132
+    2300138: Edge.133
+    2300140: Edge.137
+    2300142: Edge.138
+    2300144: Edge.139
+    2300146: Edge.140
+    2300148: Edge1
+    2300150: Edge1.001
+    2300152: Edge1.002
+    2300154: Edge1.003
+    2300156: Edge1.004
+    2300158: Edge10
+    2300160: Edge10.001
+    2300162: Edge10.002
+    2300164: Edge10.003
+    2300166: Edge10.004
+    2300168: Edge11
+    2300170: Edge11.001
+    2300172: Edge11.002
+    2300174: Edge11.003
+    2300176: Edge11.004
+    2300178: Edge12
+    2300180: Edge12.001
+    2300182: Edge12.002
+    2300184: Edge12.003
+    2300186: Edge13
+    2300188: Edge13.001
+    2300190: Edge13.002
+    2300192: Edge13.003
+    2300194: Edge14
+    2300196: Edge14.001
+    2300198: Edge14.002
+    2300200: Edge14.003
+    2300202: Edge15
+    2300204: Edge15.001
+    2300206: Edge15.002
+    2300208: Edge15.003
+    2300210: Edge16
+    2300212: Edge16.001
+    2300214: Edge16.002
+    2300216: Edge16.003
+    2300218: Edge17
+    2300220: Edge17.001
+    2300222: Edge17.002
+    2300224: Edge17.003
+    2300226: Edge18
+    2300228: Edge18.001
+    2300230: Edge18.002
+    2300232: Edge18.003
+    2300234: Edge19
+    2300236: Edge19.001
+    2300238: Edge19.002
+    2300240: Edge19.003
+    2300242: Edge2
+    2300244: Edge2.001
+    2300246: Edge2.002
+    2300248: Edge2.003
+    2300250: Edge2.004
+    2300252: Edge20
+    2300254: Edge20.001
+    2300256: Edge20.002
+    2300258: Edge20.003
+    2300260: Edge21
+    2300262: Edge21.001
+    2300264: Edge21.002
+    2300266: Edge21.003
+    2300268: Edge22
+    2300270: Edge22.001
+    2300272: Edge22.002
+    2300274: Edge22.003
+    2300276: Edge23
+    2300278: Edge23.001
+    2300280: Edge23.002
+    2300282: Edge23.003
+    2300284: Edge24
+    2300286: Edge24.001
+    2300288: Edge24.002
+    2300290: Edge24.003
+    2300292: Edge25
+    2300294: Edge25.001
+    2300296: Edge25.002
+    2300298: Edge25.003
+    2300300: Edge26
+    2300302: Edge26.001
+    2300304: Edge26.002
+    2300306: Edge26.003
+    2300308: Edge3
+    2300310: Edge3.001
+    2300312: Edge3.002
+    2300314: Edge3.003
+    2300316: Edge3.004
+    2300318: Edge4
+    2300320: Edge4.001
+    2300322: Edge4.002
+    2300324: Edge4.003
+    2300326: Edge4.004
+    2300328: Edge5
+    2300330: Edge5.001
+    2300332: Edge5.002
+    2300334: Edge5.003
+    2300336: Edge5.004
+    2300338: Edge6
+    2300340: Edge6.001
+    2300342: Edge6.002
+    2300344: Edge6.003
+    2300346: Edge6.004
+    2300348: Edge7
+    2300350: Edge7.001
+    2300352: Edge7.002
+    2300354: Edge7.003
+    2300356: Edge7.004
+    2300358: Edge8
+    2300360: Edge8.001
+    2300362: Edge8.002
+    2300364: Edge8.003
+    2300366: Edge8.004
+    2300368: Edge9
+    2300370: Edge9.001
+    2300372: Edge9.002
+    2300374: Edge9.003
+    2300376: Edge9.004
+    2300378: Edges
+    2300380: Edges.001
+    2300382: Fructose 1,6-biphosphate
+    2300384: Fructose 1,6-biphosphate.002
+    2300386: Fructose 1,6-biphosphate.006
+    2300388: Fructose 1,6-biphosphate.007
+    2300390: Fructose 1,6-biphosphate.009
+    2300392: Fructose 1,6-biphosphate.010
+    2300394: Fructose 1,6-biphosphate.011
+    2300396: Fructose 1,6-biphosphate.012
+    2300398: Fructose 6-phosphate
+    2300400: Fructose 6-phosphate.002
+    2300402: Fructose 6-phosphate.006
+    2300404: Fructose 6-phosphate.007
+    2300406: Fructose 6-phosphate.009
+    2300408: Fructose 6-phosphate.010
+    2300410: Fructose 6-phosphate.011
+    2300412: Fructose 6-phosphate.012
+    2300414: fumarate.002
+    2300416: fumarate.007
+    2300418: fumarate.008
+    2300420: fumarate.009
+    2300422: fumarate.010
+    2300424: Glucose
+    2300426: Glucose 6-phosphate
+    2300428: Glucose 6-phosphate.002
+    2300430: Glucose 6-phosphate.006
+    2300432: Glucose 6-phosphate.007
+    2300434: Glucose 6-phosphate.009
+    2300436: Glucose 6-phosphate.010
+    2300438: Glucose 6-phosphate.011
+    2300440: Glucose 6-phosphate.012
+    2300442: Glucose.002
+    2300444: Glucose.006
+    2300446: Glucose.007
+    2300448: Glucose.009
+    2300450: Glucose.010
+    2300452: Glucose.011
+    2300454: Glucose.012
+    2300456: Glutamate.002
+    2300458: Glutamate.007
+    2300460: Glutamate.008
+    2300462: Glutamate.009
+    2300464: Glutamate.010
+    2300466: Glyceraldehyde 3-phosphate
+    2300468: Glyceraldehyde 3-phosphate.002
+    2300470: Glyceraldehyde 3-phosphate.006
+    2300472: Glyceraldehyde 3-phosphate.007
+    2300474: Glyceraldehyde 3-phosphate.009
+    2300476: Glyceraldehyde 3-phosphate.010
+    2300478: Glyceraldehyde 3-phosphate.011
+    2300480: Glyceraldehyde 3-phosphate.012
+    2300482: Glycerol 3-phosphate.002
+    2300484: Glycerol 3-phosphate.004
+    2300486: Glycerol 3-phosphate.005
+    2300488: Glycerol 3-phosphate.006
+    2300490: Glycerol 3-phosphate.007
+    2300492: Glycerol.002
+    2300494: Glycerol.004
+    2300496: Glycerol.005
+    2300498: Glycerol.006
+    2300500: Glycerol.007
+    2300502: Isocitrate.003
+    2300504: Isocitrate.004
+    2300506: Isocitrate.005
+    2300508: Isocitrate.006
+    2300510: Lactate.002
+    2300512: Lactate.004
+    2300514: Lactate.005
+    2300516: Lactate.006
+    2300518: Lactate.007
+    2300520: Malate.002
+    2300522: malate.002
+    2300524: Malate.007
+    2300526: malate.007
+    2300528: Malate.008
+    2300530: malate.008
+    2300532: Malate.009
+    2300534: malate.009
+    2300536: Malate.010
+    2300538: malate.010
+    2300540: Mitochondria_FBX2013_VertexPaint12
+    2300542: Mitochondria_FBX2013_VertexPaint12.001
+    2300544: Mitochondria_FBX2013_VertexPaint12.002
+    2300546: Mitochondria_FBX2013_VertexPaint12.004
+    2300548: Mitochondria_FBX2013_VertexPaint12.008
+    2300550: Mitochondria_FBX2013_VertexPaint12.009
+    2300552: Mitochondria_FBX2013_VertexPaint12.011
+    2300554: Mitochondria_FBX2013_VertexPaint12.012
+    2300556: Mitochondria_FBX2013_VertexPaint12.013
+    2300558: Mitochondria_FBX2013_VertexPaint12.014
+    2300560: No-No Zone 0.5m
+    2300562: Nodes
+    2300564: Nodes.001
+    2300566: Oxaloacetate.001
+    2300568: Oxaloacetate.004
+    2300570: Oxaloacetate.009
+    2300572: Oxaloacetate.011
+    2300574: Oxaloacetate.012
+    2300576: Oxaloacetate.013
+    2300578: Oxaloacetate.014
+    2300580: Oxaloacetate.015
+    2300582: Oxaloacetate.016
+    2300584: Oxaloacetate.017
+    2300586: Phosphoenolpyruvate.001
+    2300588: Phosphoenolpyruvate.004
+    2300590: Phosphoenolpyruvate.008
+    2300592: Phosphoenolpyruvate.009
+    2300594: Phosphoenolpyruvate.012
+    2300596: Phosphoenolpyruvate.013
+    2300598: Phosphoenolpyruvate.014
+    2300600: Phosphoenolpyruvate.015
+    2300602: Phosphoenolpyruvate.016
+    2300604: Phosphoenolpyruvate.017
+    2300606: Phosphoenolpyruvate.018
+    2300608: Phosphoenolpyruvate.019
+    2300610: Pyruvate.001
+    2300612: Pyruvate.004
+    2300614: Pyruvate.005
+    2300616: Pyruvate.008
+    2300618: Pyruvate.009
+    2300620: Pyruvate.010
+    2300622: Pyruvate.011
+    2300624: Pyruvate.012
+    2300626: Pyruvate.013
+    2300628: Pyruvate.014
+    2300630: Pyruvate.015
+    2300632: succinate.002
+    2300634: succinate.007
+    2300636: succinate.008
+    2300638: succinate.009
+    2300640: succinate.010
+    2300642: succinyl-CoA.002
+    2300644: succinyl-CoA.007
+    2300646: succinyl-CoA.008
+    2300648: succinyl-CoA.009
+    2300650: succinyl-CoA.010
+    2300652: Aspartate.001
+    2300654: Aspartate.002
+    2300656: Edge27
+    2300658: Edge28
+    2300660: Edge29
+    2300662: Edge30
+    2300664: Edge31
+    2300666: Edge32
+    2300668: Glutamate.001
+    3300000: 1,3-biphosphoglycerate
+    3300002: 1,3-biphosphoglycerate.002
+    3300004: 1,3-biphosphoglycerate.006
+    3300006: 1,3-biphosphoglycerate.008
+    3300008: 1,3-biphosphoglycerate.009
+    3300010: 1,3-biphosphoglycerate.010
+    3300012: 1,3-biphosphoglycerate.011
+    3300014: 2-phosphoglycerate
+    3300016: 2-phosphoglycerate.002
+    3300018: 2-phosphoglycerate.006
+    3300020: 2-phosphoglycerate.008
+    3300022: 2-phosphoglycerate.009
+    3300024: 2-phosphoglycerate.010
+    3300026: 2-phosphoglycerate.011
+    3300028: 3-phosphoglycerate
+    3300030: 3-phosphoglycerate.002
+    3300032: 3-phosphoglycerate.006
+    3300034: 3-phosphoglycerate.008
+    3300036: 3-phosphoglycerate.009
+    3300038: 3-phosphoglycerate.010
+    3300040: 3-phosphoglycerate.011
+    3300042: a-ketoglutarate.002
+    3300044: a-ketoglutarate.007
+    3300046: a-ketoglutarate.008
+    3300048: a-ketoglutarate.009
+    3300050: a-ketoglutarate.010
+    3300052: Citrate.003
+    3300054: Citrate.004
+    3300056: Citrate.005
+    3300058: Citrate.006
+    3300060: Comfort Zone
+    3300062: Dihydroxyacetone phosphate
+    3300064: Dihydroxyacetone phosphate.002
+    3300066: Dihydroxyacetone phosphate.006
+    3300068: Dihydroxyacetone phosphate.007
+    3300070: Dihydroxyacetone phosphate.009
+    3300072: Dihydroxyacetone phosphate.010
+    3300074: Dihydroxyacetone phosphate.011
+    3300076: Dihydroxyacetone phosphate.012
+    3300078: Edge.053
+    3300080: Edge.054
+    3300082: Edge.055
+    3300084: Edge.057
+    3300086: Edge.058
+    3300088: Edge.059
+    3300090: Edge.060
+    3300092: Edge.061
+    3300094: Edge.062
+    3300096: Edge.065
+    3300098: Edge.067
+    3300100: Edge.073
+    3300102: Edge.074
+    3300104: Edge.075
+    3300106: Edge.076
+    3300108: Edge.077
+    3300110: Edge.117
+    3300112: Edge.118
+    3300114: Edge.119
+    3300116: Edge.120
+    3300118: Edge.121
+    3300120: Edge.122
+    3300122: Edge.123
+    3300124: Edge.125
+    3300126: Edge.126
+    3300128: Edge.127
+    3300130: Edge.128
+    3300132: Edge.129
+    3300134: Edge.130
+    3300136: Edge.132
+    3300138: Edge.133
+    3300140: Edge.137
+    3300142: Edge.138
+    3300144: Edge.139
+    3300146: Edge.140
+    3300148: Edge1
+    3300150: Edge1.001
+    3300152: Edge1.002
+    3300154: Edge1.003
+    3300156: Edge1.004
+    3300158: Edge10
+    3300160: Edge10.001
+    3300162: Edge10.002
+    3300164: Edge10.003
+    3300166: Edge10.004
+    3300168: Edge11
+    3300170: Edge11.001
+    3300172: Edge11.002
+    3300174: Edge11.003
+    3300176: Edge11.004
+    3300178: Edge12
+    3300180: Edge12.001
+    3300182: Edge12.002
+    3300184: Edge12.003
+    3300186: Edge13
+    3300188: Edge13.001
+    3300190: Edge13.002
+    3300192: Edge13.003
+    3300194: Edge14
+    3300196: Edge14.001
+    3300198: Edge14.002
+    3300200: Edge14.003
+    3300202: Edge15
+    3300204: Edge15.001
+    3300206: Edge15.002
+    3300208: Edge15.003
+    3300210: Edge16
+    3300212: Edge16.001
+    3300214: Edge16.002
+    3300216: Edge16.003
+    3300218: Edge17
+    3300220: Edge17.001
+    3300222: Edge17.002
+    3300224: Edge17.003
+    3300226: Edge18
+    3300228: Edge18.001
+    3300230: Edge18.002
+    3300232: Edge18.003
+    3300234: Edge19
+    3300236: Edge19.001
+    3300238: Edge19.002
+    3300240: Edge19.003
+    3300242: Edge2
+    3300244: Edge2.001
+    3300246: Edge2.002
+    3300248: Edge2.003
+    3300250: Edge2.004
+    3300252: Edge20
+    3300254: Edge20.001
+    3300256: Edge20.002
+    3300258: Edge20.003
+    3300260: Edge21
+    3300262: Edge21.001
+    3300264: Edge21.002
+    3300266: Edge21.003
+    3300268: Edge22
+    3300270: Edge22.001
+    3300272: Edge22.002
+    3300274: Edge22.003
+    3300276: Edge23
+    3300278: Edge23.001
+    3300280: Edge23.002
+    3300282: Edge23.003
+    3300284: Edge24
+    3300286: Edge24.001
+    3300288: Edge24.002
+    3300290: Edge24.003
+    3300292: Edge25
+    3300294: Edge25.001
+    3300296: Edge25.002
+    3300298: Edge25.003
+    3300300: Edge26
+    3300302: Edge26.001
+    3300304: Edge26.002
+    3300306: Edge26.003
+    3300308: Edge3
+    3300310: Edge3.001
+    3300312: Edge3.002
+    3300314: Edge3.003
+    3300316: Edge3.004
+    3300318: Edge4
+    3300320: Edge4.001
+    3300322: Edge4.002
+    3300324: Edge4.003
+    3300326: Edge4.004
+    3300328: Edge5
+    3300330: Edge5.001
+    3300332: Edge5.002
+    3300334: Edge5.003
+    3300336: Edge5.004
+    3300338: Edge6
+    3300340: Edge6.001
+    3300342: Edge6.002
+    3300344: Edge6.003
+    3300346: Edge6.004
+    3300348: Edge7
+    3300350: Edge7.001
+    3300352: Edge7.002
+    3300354: Edge7.003
+    3300356: Edge7.004
+    3300358: Edge8
+    3300360: Edge8.001
+    3300362: Edge8.002
+    3300364: Edge8.003
+    3300366: Edge8.004
+    3300368: Edge9
+    3300370: Edge9.001
+    3300372: Edge9.002
+    3300374: Edge9.003
+    3300376: Edge9.004
+    3300378: Edges
+    3300380: Edges.001
+    3300382: Fructose 1,6-biphosphate
+    3300384: Fructose 1,6-biphosphate.002
+    3300386: Fructose 1,6-biphosphate.006
+    3300388: Fructose 1,6-biphosphate.007
+    3300390: Fructose 1,6-biphosphate.009
+    3300392: Fructose 1,6-biphosphate.010
+    3300394: Fructose 1,6-biphosphate.011
+    3300396: Fructose 1,6-biphosphate.012
+    3300398: Fructose 6-phosphate
+    3300400: Fructose 6-phosphate.002
+    3300402: Fructose 6-phosphate.006
+    3300404: Fructose 6-phosphate.007
+    3300406: Fructose 6-phosphate.009
+    3300408: Fructose 6-phosphate.010
+    3300410: Fructose 6-phosphate.011
+    3300412: Fructose 6-phosphate.012
+    3300414: fumarate.002
+    3300416: fumarate.007
+    3300418: fumarate.008
+    3300420: fumarate.009
+    3300422: fumarate.010
+    3300424: Glucose
+    3300426: Glucose 6-phosphate
+    3300428: Glucose 6-phosphate.002
+    3300430: Glucose 6-phosphate.006
+    3300432: Glucose 6-phosphate.007
+    3300434: Glucose 6-phosphate.009
+    3300436: Glucose 6-phosphate.010
+    3300438: Glucose 6-phosphate.011
+    3300440: Glucose 6-phosphate.012
+    3300442: Glucose.002
+    3300444: Glucose.006
+    3300446: Glucose.007
+    3300448: Glucose.009
+    3300450: Glucose.010
+    3300452: Glucose.011
+    3300454: Glucose.012
+    3300456: Glutamate.002
+    3300458: Glutamate.007
+    3300460: Glutamate.008
+    3300462: Glutamate.009
+    3300464: Glutamate.010
+    3300466: Glyceraldehyde 3-phosphate
+    3300468: Glyceraldehyde 3-phosphate.002
+    3300470: Glyceraldehyde 3-phosphate.006
+    3300472: Glyceraldehyde 3-phosphate.007
+    3300474: Glyceraldehyde 3-phosphate.009
+    3300476: Glyceraldehyde 3-phosphate.010
+    3300478: Glyceraldehyde 3-phosphate.011
+    3300480: Glyceraldehyde 3-phosphate.012
+    3300482: Glycerol 3-phosphate.002
+    3300484: Glycerol 3-phosphate.004
+    3300486: Glycerol 3-phosphate.005
+    3300488: Glycerol 3-phosphate.006
+    3300490: Glycerol 3-phosphate.007
+    3300492: Glycerol.002
+    3300494: Glycerol.004
+    3300496: Glycerol.005
+    3300498: Glycerol.006
+    3300500: Glycerol.007
+    3300502: Isocitrate.003
+    3300504: Isocitrate.004
+    3300506: Isocitrate.005
+    3300508: Isocitrate.006
+    3300510: Lactate.002
+    3300512: Lactate.004
+    3300514: Lactate.005
+    3300516: Lactate.006
+    3300518: Lactate.007
+    3300520: Malate.002
+    3300522: malate.002
+    3300524: Malate.007
+    3300526: malate.007
+    3300528: Malate.008
+    3300530: malate.008
+    3300532: Malate.009
+    3300534: malate.009
+    3300536: Malate.010
+    3300538: malate.010
+    3300540: Mitochondria_FBX2013_VertexPaint12
+    3300542: Mitochondria_FBX2013_VertexPaint12.001
+    3300544: Mitochondria_FBX2013_VertexPaint12.002
+    3300546: Mitochondria_FBX2013_VertexPaint12.004
+    3300548: Mitochondria_FBX2013_VertexPaint12.008
+    3300550: Mitochondria_FBX2013_VertexPaint12.009
+    3300552: Mitochondria_FBX2013_VertexPaint12.011
+    3300554: Mitochondria_FBX2013_VertexPaint12.012
+    3300556: Mitochondria_FBX2013_VertexPaint12.013
+    3300558: Mitochondria_FBX2013_VertexPaint12.014
+    3300560: No-No Zone 0.5m
+    3300562: Nodes
+    3300564: Nodes.001
+    3300566: Oxaloacetate.001
+    3300568: Oxaloacetate.004
+    3300570: Oxaloacetate.009
+    3300572: Oxaloacetate.011
+    3300574: Oxaloacetate.012
+    3300576: Oxaloacetate.013
+    3300578: Oxaloacetate.014
+    3300580: Oxaloacetate.015
+    3300582: Oxaloacetate.016
+    3300584: Oxaloacetate.017
+    3300586: Phosphoenolpyruvate.001
+    3300588: Phosphoenolpyruvate.004
+    3300590: Phosphoenolpyruvate.008
+    3300592: Phosphoenolpyruvate.009
+    3300594: Phosphoenolpyruvate.012
+    3300596: Phosphoenolpyruvate.013
+    3300598: Phosphoenolpyruvate.014
+    3300600: Phosphoenolpyruvate.015
+    3300602: Phosphoenolpyruvate.016
+    3300604: Phosphoenolpyruvate.017
+    3300606: Phosphoenolpyruvate.018
+    3300608: Phosphoenolpyruvate.019
+    3300610: Pyruvate.001
+    3300612: Pyruvate.004
+    3300614: Pyruvate.005
+    3300616: Pyruvate.008
+    3300618: Pyruvate.009
+    3300620: Pyruvate.010
+    3300622: Pyruvate.011
+    3300624: Pyruvate.012
+    3300626: Pyruvate.013
+    3300628: Pyruvate.014
+    3300630: Pyruvate.015
+    3300632: succinate.002
+    3300634: succinate.007
+    3300636: succinate.008
+    3300638: succinate.009
+    3300640: succinate.010
+    3300642: succinyl-CoA.002
+    3300644: succinyl-CoA.007
+    3300646: succinyl-CoA.008
+    3300648: succinyl-CoA.009
+    3300650: succinyl-CoA.010
+    3300652: Aspartate.001
+    3300654: Aspartate.002
+    3300656: Edge27
+    3300658: Edge28
+    3300660: Edge29
+    3300662: Edge30
+    3300664: Edge31
+    3300666: Edge32
+    3300668: Glutamate.001
+    4300000: Comfort Zone
+    4300002: No-No Zone 0.5m
+    4300004: Edges
+    4300006: Nodes
+    4300008: Mitochondria_FBX2013_VertexPaint12
+    4300010: Edges.001
+    4300012: Nodes.001
+    4300014: Mitochondria_FBX2013_VertexPaint12.001
+    4300016: Pyruvate.008
+    4300018: 1,3-biphosphoglycerate.008
+    4300020: 2-phosphoglycerate.008
+    4300022: 3-phosphoglycerate.008
+    4300024: Dihydroxyacetone phosphate.009
+    4300026: Fructose 1,6-biphosphate.009
+    4300028: Fructose 6-phosphate.009
+    4300030: Glucose.009
+    4300032: Glucose 6-phosphate.009
+    4300034: Glyceraldehyde 3-phosphate.009
+    4300036: Glycerol.004
+    4300038: Glycerol 3-phosphate.004
+    4300040: Lactate.004
+    4300042: Oxaloacetate.011
+    4300044: Phosphoenolpyruvate.012
+    4300046: Malate.007
+    4300048: a-ketoglutarate.007
+    4300050: Citrate.003
+    4300052: fumarate.007
+    4300054: Glutamate.007
+    4300056: Isocitrate.003
+    4300058: malate.007
+    4300060: Oxaloacetate.012
+    4300062: Phosphoenolpyruvate.013
+    4300064: Pyruvate.009
+    4300066: succinate.007
+    4300068: succinyl-CoA.007
+    4300070: Edge2.001
+    4300072: Edge1.001
+    4300074: Edge3.001
+    4300076: Edge4.001
+    4300078: Edge5.001
+    4300080: Edge6.001
+    4300082: Edge7.001
+    4300084: Edge8.001
+    4300086: Edge9.001
+    4300088: Edge10.001
+    4300090: Edge11.001
+    4300092: Edge12
+    4300094: Edge13
+    4300096: Edge14
+    4300098: Edge15
+    4300100: Edge16
+    4300102: Edge17
+    4300104: Edge18
+    4300106: Edge19
+    4300108: Edge20
+    4300110: Edge21
+    4300112: Edge22
+    4300114: Edge23
+    4300116: Edge24
+    4300118: Edge25
+    4300120: Edge26
+    4300122: Mitochondria_FBX2013_VertexPaint12.011
+    4300124: Dihydroxyacetone phosphate.006
+    4300126: Fructose 1,6-biphosphate.006
+    4300128: Fructose 6-phosphate.006
+    4300130: Glucose.006
+    4300132: Glucose 6-phosphate.006
+    4300134: Glyceraldehyde 3-phosphate.006
+    4300136: Glycerol.002
+    4300138: Glycerol 3-phosphate.002
+    4300140: Edge.117
+    4300142: Edge.118
+    4300144: Edge.119
+    4300146: Edge.120
+    4300148: Edge.126
+    4300150: Edge.127
+    4300152: Edge.128
+    4300154: Mitochondria_FBX2013_VertexPaint12.008
+    4300156: Pyruvate.010
+    4300158: 1,3-biphosphoglycerate.009
+    4300160: 2-phosphoglycerate.009
+    4300162: 3-phosphoglycerate.009
+    4300164: Dihydroxyacetone phosphate.010
+    4300166: Fructose 1,6-biphosphate.010
+    4300168: Fructose 6-phosphate.010
+    4300170: Glucose.010
+    4300172: Glucose 6-phosphate.010
+    4300174: Glyceraldehyde 3-phosphate.010
+    4300176: Glycerol.005
+    4300178: Glycerol 3-phosphate.005
+    4300180: Lactate.005
+    4300182: Oxaloacetate.001
+    4300184: Phosphoenolpyruvate.014
+    4300186: Malate.008
+    4300188: a-ketoglutarate.008
+    4300190: Citrate.004
+    4300192: fumarate.008
+    4300194: Glutamate.008
+    4300196: Isocitrate.004
+    4300198: malate.008
+    4300200: Oxaloacetate.013
+    4300202: Phosphoenolpyruvate.015
+    4300204: Pyruvate.011
+    4300206: succinate.008
+    4300208: succinyl-CoA.008
+    4300210: Edge2.002
+    4300212: Edge1.002
+    4300214: Edge3.002
+    4300216: Edge4.002
+    4300218: Edge5.002
+    4300220: Edge6.002
+    4300222: Edge7.002
+    4300224: Edge8.002
+    4300226: Edge9.002
+    4300228: Edge10.002
+    4300230: Edge11.002
+    4300232: Edge12.001
+    4300234: Edge13.001
+    4300236: Edge14.001
+    4300238: Edge15.001
+    4300240: Edge16.001
+    4300242: Edge17.001
+    4300244: Edge18.001
+    4300246: Edge19.001
+    4300248: Edge20.001
+    4300250: Edge21.001
+    4300252: Edge22.001
+    4300254: Edge23.001
+    4300256: Edge24.001
+    4300258: Edge25.001
+    4300260: Edge26.001
+    4300262: Mitochondria_FBX2013_VertexPaint12.012
+    4300264: Pyruvate.004
+    4300266: 1,3-biphosphoglycerate.006
+    4300268: 2-phosphoglycerate.006
+    4300270: 3-phosphoglycerate.006
+    4300272: Dihydroxyacetone phosphate.007
+    4300274: Fructose 1,6-biphosphate.007
+    4300276: Fructose 6-phosphate.007
+    4300278: Glucose.007
+    4300280: Glucose 6-phosphate.007
+    4300282: Glyceraldehyde 3-phosphate.007
+    4300284: Lactate.002
+    4300286: Phosphoenolpyruvate.008
+    4300288: Oxaloacetate.009
+    4300290: Phosphoenolpyruvate.009
+    4300292: Pyruvate.005
+    4300294: Edge.121
+    4300296: Edge.122
+    4300298: Edge.123
+    4300300: Edge.125
+    4300302: Edge.129
+    4300304: Edge.130
+    4300306: Edge.132
+    4300308: Edge.133
+    4300310: Edge.137
+    4300312: Edge.138
+    4300314: Edge.139
+    4300316: Edge.140
+    4300318: Mitochondria_FBX2013_VertexPaint12.009
+    4300320: Pyruvate.012
+    4300322: 1,3-biphosphoglycerate.010
+    4300324: 2-phosphoglycerate.010
+    4300326: 3-phosphoglycerate.010
+    4300328: Dihydroxyacetone phosphate.011
+    4300330: Fructose 1,6-biphosphate.011
+    4300332: Fructose 6-phosphate.011
+    4300334: Glucose.011
+    4300336: Glucose 6-phosphate.011
+    4300338: Glyceraldehyde 3-phosphate.011
+    4300340: Glycerol.006
+    4300342: Glycerol 3-phosphate.006
+    4300344: Lactate.006
+    4300346: Oxaloacetate.014
+    4300348: Phosphoenolpyruvate.016
+    4300350: Malate.009
+    4300352: a-ketoglutarate.009
+    4300354: Citrate.005
+    4300356: fumarate.009
+    4300358: Glutamate.009
+    4300360: Isocitrate.005
+    4300362: malate.009
+    4300364: Oxaloacetate.015
+    4300366: Phosphoenolpyruvate.017
+    4300368: Pyruvate.013
+    4300370: succinate.009
+    4300372: succinyl-CoA.009
+    4300374: Edge2.003
+    4300376: Edge1.003
+    4300378: Edge3.003
+    4300380: Edge4.003
+    4300382: Edge5.003
+    4300384: Edge6.003
+    4300386: Edge7.003
+    4300388: Edge8.003
+    4300390: Edge9.003
+    4300392: Edge10.003
+    4300394: Edge11.003
+    4300396: Edge12.002
+    4300398: Edge13.002
+    4300400: Edge14.002
+    4300402: Edge15.002
+    4300404: Edge16.002
+    4300406: Edge17.002
+    4300408: Edge18.002
+    4300410: Edge19.002
+    4300412: Edge20.002
+    4300414: Edge21.002
+    4300416: Edge22.002
+    4300418: Edge23.002
+    4300420: Edge24.002
+    4300422: Edge25.002
+    4300424: Edge26.002
+    4300426: Mitochondria_FBX2013_VertexPaint12.013
+    4300428: 1,3-biphosphoglycerate.002
+    4300430: 2-phosphoglycerate.002
+    4300432: 3-phosphoglycerate.002
+    4300434: Dihydroxyacetone phosphate.002
+    4300436: Fructose 1,6-biphosphate.002
+    4300438: Fructose 6-phosphate.002
+    4300440: Glucose.002
+    4300442: Glucose 6-phosphate.002
+    4300444: Glyceraldehyde 3-phosphate.002
+    4300446: Oxaloacetate.004
+    4300448: Phosphoenolpyruvate.004
+    4300450: Malate.002
+    4300452: a-ketoglutarate.002
+    4300454: fumarate.002
+    4300456: Glutamate.002
+    4300458: malate.002
+    4300460: succinate.002
+    4300462: succinyl-CoA.002
+    4300464: Edge.053
+    4300466: Edge.054
+    4300468: Edge.055
+    4300470: Edge.057
+    4300472: Edge.058
+    4300474: Edge.059
+    4300476: Edge.060
+    4300478: Edge.061
+    4300480: Edge.062
+    4300482: Edge.065
+    4300484: Edge.067
+    4300486: Edge.073
+    4300488: Edge.074
+    4300490: Edge.075
+    4300492: Edge.076
+    4300494: Edge.077
+    4300496: Mitochondria_FBX2013_VertexPaint12.004
+    4300498: Pyruvate.014
+    4300500: 1,3-biphosphoglycerate.011
+    4300502: 2-phosphoglycerate.011
+    4300504: 3-phosphoglycerate.011
+    4300506: Dihydroxyacetone phosphate.012
+    4300508: Fructose 1,6-biphosphate.012
+    4300510: Fructose 6-phosphate.012
+    4300512: Glucose.012
+    4300514: Glucose 6-phosphate.012
+    4300516: Glyceraldehyde 3-phosphate.012
+    4300518: Glycerol.007
+    4300520: Glycerol 3-phosphate.007
+    4300522: Lactate.007
+    4300524: Oxaloacetate.016
+    4300526: Phosphoenolpyruvate.018
+    4300528: Malate.010
+    4300530: a-ketoglutarate.010
+    4300532: Citrate.006
+    4300534: fumarate.010
+    4300536: Glutamate.010
+    4300538: Isocitrate.006
+    4300540: malate.010
+    4300542: Oxaloacetate.017
+    4300544: Phosphoenolpyruvate.019
+    4300546: Pyruvate.015
+    4300548: succinate.010
+    4300550: succinyl-CoA.010
+    4300552: Edge2.004
+    4300554: Edge1.004
+    4300556: Edge3.004
+    4300558: Edge4.004
+    4300560: Edge5.004
+    4300562: Edge6.004
+    4300564: Edge7.004
+    4300566: Edge8.004
+    4300568: Edge9.004
+    4300570: Edge10.004
+    4300572: Edge11.004
+    4300574: Edge12.003
+    4300576: Edge13.003
+    4300578: Edge14.003
+    4300580: Edge15.003
+    4300582: Edge16.003
+    4300584: Edge17.003
+    4300586: Edge18.003
+    4300588: Edge19.003
+    4300590: Edge20.003
+    4300592: Edge21.003
+    4300594: Edge22.003
+    4300596: Edge23.003
+    4300598: Edge24.003
+    4300600: Edge25.003
+    4300602: Edge26.003
+    4300604: Mitochondria_FBX2013_VertexPaint12.014
+    4300606: 1,3-biphosphoglycerate
+    4300608: 2-phosphoglycerate
+    4300610: 3-phosphoglycerate
+    4300612: Dihydroxyacetone phosphate
+    4300614: Fructose 1,6-biphosphate
+    4300616: Fructose 6-phosphate
+    4300618: Glucose
+    4300620: Glucose 6-phosphate
+    4300622: Glyceraldehyde 3-phosphate
+    4300624: Phosphoenolpyruvate.001
+    4300626: Pyruvate.001
+    4300628: Edge2
+    4300630: Edge1
+    4300632: Edge3
+    4300634: Edge4
+    4300636: Edge5
+    4300638: Edge6
+    4300640: Edge7
+    4300642: Edge10
+    4300644: Edge11
+    4300646: Edge8
+    4300648: Edge9
+    4300650: Mitochondria_FBX2013_VertexPaint12.002
+    4300652: Glutamate.001
+    4300654: Aspartate.001
+    4300656: Aspartate.002
+    4300658: Edge27
+    4300660: Edge28
+    4300662: Edge29
+    4300664: Edge30
+    4300666: Edge31
+    4300668: Edge32
+    7400000: Comfort Zone|SphereAction
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

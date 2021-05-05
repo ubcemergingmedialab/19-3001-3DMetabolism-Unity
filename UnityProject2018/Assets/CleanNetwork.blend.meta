@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 08bcca721adf57449a6ce8dafb006d53
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 1,3-biphosphoglycerate.008
+    100002: 2-phosphoglycerate.008
+    100004: 3-phosphoglycerate.008
+    100006: a-ketoglutarate.007
+    100008: Citrate.003
+    100010: //RootNode
+    100012: Dihydroxyacetone phosphate.009
+    100014: Edge1.001
+    100016: Edge10.001
+    100018: Edge11.001
+    100020: Edge12
+    100022: Edge13
+    100024: Edge14
+    100026: Edge15
+    100028: Edge16
+    100030: Edge17
+    100032: Edge18
+    100034: Edge19
+    100036: Edge2.001
+    100038: Edge20
+    100040: Edge21
+    100042: Edge22
+    100044: Edge23
+    100046: Edge24
+    100048: Edge25
+    100050: Edge26
+    100052: Edge3.001
+    100054: Edge4.001
+    100056: Edge5.001
+    100058: Edge6.001
+    100060: Edge7.001
+    100062: Edge8.001
+    100064: Edge9.001
+    100066: Fructose 1,6-biphosphate.009
+    100068: Fructose 6-phosphate.009
+    100070: fumarate.007
+    100072: Glucose 6-phosphate.009
+    100074: Glucose.009
+    100076: Glutamate.007
+    100078: Glyceraldehyde 3-phosphate.009
+    100080: Glycerol 3-phosphate.004
+    100082: Glycerol.004
+    100084: Isocitrate.003
+    100086: Lactate.004
+    100088: Malate.007
+    100090: malate.007
+    100092: Mitochondria_FBX2013_VertexPaint12.011
+    100094: Oxaloacetate.011
+    100096: Oxaloacetate.012
+    100098: Phosphoenolpyruvate.012
+    100100: Phosphoenolpyruvate.013
+    100102: Pyruvate.008
+    100104: Pyruvate.009
+    100106: succinate.007
+    100108: succinyl-CoA.007
+    400000: 1,3-biphosphoglycerate.008
+    400002: 2-phosphoglycerate.008
+    400004: 3-phosphoglycerate.008
+    400006: a-ketoglutarate.007
+    400008: Citrate.003
+    400010: //RootNode
+    400012: Dihydroxyacetone phosphate.009
+    400014: Edge1.001
+    400016: Edge10.001
+    400018: Edge11.001
+    400020: Edge12
+    400022: Edge13
+    400024: Edge14
+    400026: Edge15
+    400028: Edge16
+    400030: Edge17
+    400032: Edge18
+    400034: Edge19
+    400036: Edge2.001
+    400038: Edge20
+    400040: Edge21
+    400042: Edge22
+    400044: Edge23
+    400046: Edge24
+    400048: Edge25
+    400050: Edge26
+    400052: Edge3.001
+    400054: Edge4.001
+    400056: Edge5.001
+    400058: Edge6.001
+    400060: Edge7.001
+    400062: Edge8.001
+    400064: Edge9.001
+    400066: Fructose 1,6-biphosphate.009
+    400068: Fructose 6-phosphate.009
+    400070: fumarate.007
+    400072: Glucose 6-phosphate.009
+    400074: Glucose.009
+    400076: Glutamate.007
+    400078: Glyceraldehyde 3-phosphate.009
+    400080: Glycerol 3-phosphate.004
+    400082: Glycerol.004
+    400084: Isocitrate.003
+    400086: Lactate.004
+    400088: Malate.007
+    400090: malate.007
+    400092: Mitochondria_FBX2013_VertexPaint12.011
+    400094: Oxaloacetate.011
+    400096: Oxaloacetate.012
+    400098: Phosphoenolpyruvate.012
+    400100: Phosphoenolpyruvate.013
+    400102: Pyruvate.008
+    400104: Pyruvate.009
+    400106: succinate.007
+    400108: succinyl-CoA.007
+    2100000: lambert6.014
+    2100002: lambert6.005
+    2100004: lambert6.011
+    2100006: lambert6.010
+    2100008: lambert6.004
+    2100010: lambert6.006
+    2100012: lambert6.003
+    2100014: lambert6.001
+    2100016: lambert6.002
+    2100018: lambert6.009
+    2100020: lambert6.008
+    2100022: lambert6.007
+    2100024: lambert6.013
+    2100026: lambert6.015
+    2100028: lambert6.012
+    2100030: lambert6.016
+    2100032: lambert6.022
+    2100034: lambert6.019
+    2100036: lambert6.026
+    2100038: lambert6.023
+    2100040: lambert6.021
+    2100042: lambert6.027
+    2100044: lambert6.020
+    2100046: lambert6.018
+    2100048: lambert6.017
+    2100050: lambert6.025
+    2100052: lambert6.024
+    2100054: Material
+    2100056: Material.002
+    2100058: Material.004
+    2100060: Material.005
+    2100062: Material.006
+    2100064: Material.007
+    2100066: Material.008
+    2100068: Material.009
+    2100070: Material.010
+    2100072: Material.011
+    2100074: Material.012
+    2100076: No Name
+    2100078: Material.014
+    2100080: Material.016
+    2100082: Material.015
+    2100084: Material.017
+    2100086: Material.019
+    2100088: Material.018
+    2100090: Material.020
+    2100092: Material.021
+    2100094: Material.022
+    2100096: Material.023
+    2100098: lambert1.001
+    2300000: 1,3-biphosphoglycerate.008
+    2300002: 2-phosphoglycerate.008
+    2300004: 3-phosphoglycerate.008
+    2300006: a-ketoglutarate.007
+    2300008: Citrate.003
+    2300010: Dihydroxyacetone phosphate.009
+    2300012: Edge1.001
+    2300014: Edge10.001
+    2300016: Edge11.001
+    2300018: Edge12
+    2300020: Edge13
+    2300022: Edge14
+    2300024: Edge15
+    2300026: Edge16
+    2300028: Edge17
+    2300030: Edge18
+    2300032: Edge19
+    2300034: Edge2.001
+    2300036: Edge20
+    2300038: Edge21
+    2300040: Edge22
+    2300042: Edge23
+    2300044: Edge24
+    2300046: Edge25
+    2300048: Edge26
+    2300050: Edge3.001
+    2300052: Edge4.001
+    2300054: Edge5.001
+    2300056: Edge6.001
+    2300058: Edge7.001
+    2300060: Edge8.001
+    2300062: Edge9.001
+    2300064: Fructose 1,6-biphosphate.009
+    2300066: Fructose 6-phosphate.009
+    2300068: fumarate.007
+    2300070: Glucose 6-phosphate.009
+    2300072: Glucose.009
+    2300074: Glutamate.007
+    2300076: Glyceraldehyde 3-phosphate.009
+    2300078: Glycerol 3-phosphate.004
+    2300080: Glycerol.004
+    2300082: Isocitrate.003
+    2300084: Lactate.004
+    2300086: Malate.007
+    2300088: malate.007
+    2300090: Mitochondria_FBX2013_VertexPaint12.011
+    2300092: Oxaloacetate.011
+    2300094: Oxaloacetate.012
+    2300096: Phosphoenolpyruvate.012
+    2300098: Phosphoenolpyruvate.013
+    2300100: Pyruvate.008
+    2300102: Pyruvate.009
+    2300104: succinate.007
+    2300106: succinyl-CoA.007
+    3300000: 1,3-biphosphoglycerate.008
+    3300002: 2-phosphoglycerate.008
+    3300004: 3-phosphoglycerate.008
+    3300006: a-ketoglutarate.007
+    3300008: Citrate.003
+    3300010: Dihydroxyacetone phosphate.009
+    3300012: Edge1.001
+    3300014: Edge10.001
+    3300016: Edge11.001
+    3300018: Edge12
+    3300020: Edge13
+    3300022: Edge14
+    3300024: Edge15
+    3300026: Edge16
+    3300028: Edge17
+    3300030: Edge18
+    3300032: Edge19
+    3300034: Edge2.001
+    3300036: Edge20
+    3300038: Edge21
+    3300040: Edge22
+    3300042: Edge23
+    3300044: Edge24
+    3300046: Edge25
+    3300048: Edge26
+    3300050: Edge3.001
+    3300052: Edge4.001
+    3300054: Edge5.001
+    3300056: Edge6.001
+    3300058: Edge7.001
+    3300060: Edge8.001
+    3300062: Edge9.001
+    3300064: Fructose 1,6-biphosphate.009
+    3300066: Fructose 6-phosphate.009
+    3300068: fumarate.007
+    3300070: Glucose 6-phosphate.009
+    3300072: Glucose.009
+    3300074: Glutamate.007
+    3300076: Glyceraldehyde 3-phosphate.009
+    3300078: Glycerol 3-phosphate.004
+    3300080: Glycerol.004
+    3300082: Isocitrate.003
+    3300084: Lactate.004
+    3300086: Malate.007
+    3300088: malate.007
+    3300090: Mitochondria_FBX2013_VertexPaint12.011
+    3300092: Oxaloacetate.011
+    3300094: Oxaloacetate.012
+    3300096: Phosphoenolpyruvate.012
+    3300098: Phosphoenolpyruvate.013
+    3300100: Pyruvate.008
+    3300102: Pyruvate.009
+    3300104: succinate.007
+    3300106: succinyl-CoA.007
+    4300000: Pyruvate.008
+    4300002: 1,3-biphosphoglycerate.008
+    4300004: 2-phosphoglycerate.008
+    4300006: 3-phosphoglycerate.008
+    4300008: Dihydroxyacetone phosphate.009
+    4300010: Fructose 1,6-biphosphate.009
+    4300012: Fructose 6-phosphate.009
+    4300014: Glucose.009
+    4300016: Glucose 6-phosphate.009
+    4300018: Glyceraldehyde 3-phosphate.009
+    4300020: Glycerol.004
+    4300022: Glycerol 3-phosphate.004
+    4300024: Lactate.004
+    4300026: Oxaloacetate.011
+    4300028: Phosphoenolpyruvate.012
+    4300030: Malate.007
+    4300032: a-ketoglutarate.007
+    4300034: Citrate.003
+    4300036: fumarate.007
+    4300038: Glutamate.007
+    4300040: Isocitrate.003
+    4300042: malate.007
+    4300044: Oxaloacetate.012
+    4300046: Phosphoenolpyruvate.013
+    4300048: Pyruvate.009
+    4300050: succinate.007
+    4300052: succinyl-CoA.007
+    4300054: Edge2.001
+    4300056: Edge1.001
+    4300058: Edge3.001
+    4300060: Edge4.001
+    4300062: Edge5.001
+    4300064: Edge6.001
+    4300066: Edge7.001
+    4300068: Edge8.001
+    4300070: Edge9.001
+    4300072: Edge10.001
+    4300074: Edge11.001
+    4300076: Edge12
+    4300078: Edge13
+    4300080: Edge14
+    4300082: Edge15
+    4300084: Edge16
+    4300086: Edge17
+    4300088: Edge18
+    4300090: Edge19
+    4300092: Edge20
+    4300094: Edge21
+    4300096: Edge22
+    4300098: Edge23
+    4300100: Edge24
+    4300102: Edge25
+    4300104: Edge26
+    4300106: Mitochondria_FBX2013_VertexPaint12.011
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
