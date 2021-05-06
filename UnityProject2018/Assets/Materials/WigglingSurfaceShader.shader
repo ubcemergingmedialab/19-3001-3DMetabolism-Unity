@@ -53,7 +53,7 @@ Shader "Custom/WigglingSurfaceShader" {
 			void vert(inout appdata_base v) {
 			v2f o;
 			o.vertex = mul(unity_WorldToObject, v.vertex); 
-				v.vertex.xyz += v.normal * (sin((v.vertex.z * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Size) * _Amplitude + 0.02);
+				v.vertex.xyz += v.normal * (sin((v.vertex.y * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Size) * _Amplitude + 0.02);
 			}
 
 			void surf(Input IN, inout SurfaceOutputStandard o) {

@@ -22,16 +22,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.02
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 0
+        value: 0.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -51,7 +42,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Amplitude
-    path: Edge1.001
+    path: 
     classID: 23
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -63,7 +54,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1188727367
+      path: 0
       attribute: 2227223471
       script: {fileID: 0}
       typeID: 23
@@ -96,16 +87,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.02
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 0
+        value: 0.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -125,7 +107,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Amplitude
-    path: Edge1.001
+    path: 
     classID: 23
     script: {fileID: 0}
   m_EulerEditorCurves: []
