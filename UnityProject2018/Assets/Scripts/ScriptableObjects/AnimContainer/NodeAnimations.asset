@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NodeAnimations
   m_EditorClassIdentifier: 
   Animations:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7400000, guid: bafa9e7d279c5c04b86e706327023f54, type: 2}
+  - {fileID: 7400000, guid: 1b1467cc1355b1d44af428ab933eb2e5, type: 2}
