@@ -7,11 +7,11 @@ public class AnimationControllerComponent : MonoBehaviour
 {
     public List<AnimationDescription> animations;
 
-    private float waitTime = 0.1f;
+    private float waitTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("AnimationRoutine");
+        //StartCoroutine("AnimationRoutine");
         // Inside Coroutine:
         //      read next animation from list
         //      fetch corresponding gameobject
@@ -34,20 +34,32 @@ public class AnimationControllerComponent : MonoBehaviour
 
             foreach(KeyValuePair<string, string> gameObjectTrigger in dic)
             {
-                Debug.Log(string.Join(", ", gameObjectTrigger.Key));
-                Debug.Log(string.Join(", ", gameObjectTrigger.Value));
-                Debug.Log("-------------------");
-                GameObject gameObject = GameObject.Find(gameObjectTrigger.Key);
-                (gameObject.GetComponent<Animator>()).SetTrigger(gameObjectTrigger.Key);
+                //Debug.Log("-------------------");
+                //Debug.Log(string.Join(", ", gameObjectTrigger.Key));
+                //Debug.Log(string.Join(", ", gameObjectTrigger.Value));
+                //Debug.Log("-------------------");
+                GameObject gameObject = GameObject.FindGameObjectWithTag(gameObjectTrigger.Key);
+                Debug.Log(string.Join("",gameObject.name));
+                Animator animator = gameObject.GetComponent<Animator>();
+                animator.SetTrigger(gameObjectTrigger.Value);
+                //WaitForAnimation(animator.GetCurrentAnimatorClipInfo(0));
             }
+        yield return new WaitForSeconds(waitTime);
        
         }
-        yield return new WaitForSeconds(waitTime);
+    }
+
+    private IEnumerator WaitForAnimation ( Animation animation)
+    {
+        do
+        {
+            yield return null;
+        } while ( animation.isPlaying);
     }
     // Update is called once per frame
     void Update()
     {
-        
+       // StartCoroutine("AnimationRoutine");
     }
 
     //Define Coroutine that lasts as long as an animation (or decide what the interval should be)
