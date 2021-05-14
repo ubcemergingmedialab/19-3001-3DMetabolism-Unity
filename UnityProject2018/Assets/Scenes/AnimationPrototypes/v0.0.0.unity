@@ -188,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360335677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -1.22, y: -0.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43330e48b63782247bc6fe81ccabcefb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation:
+  animations:
   - {fileID: 11400000, guid: d4b998acc326864439bd87b7436487b3, type: 2}
   - {fileID: 11400000, guid: 5e1cf84240490b44585fef657fc05af8, type: 2}
   - {fileID: 11400000, guid: 81212e0e3a748684bb740ad25a2ec298, type: 2}
@@ -319,14 +319,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1351222095, guid: 6aa9892020bd00141b46ad417248a1bf, type: 3}
+      propertyPath: m_TagString
+      value: Node1
+      objectReference: {fileID: 0}
     - target: {fileID: 1351222097, guid: 6aa9892020bd00141b46ad417248a1bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 64b263df2a390fb42bf33c2c64437818, type: 2}
+    - target: {fileID: 1574338072, guid: 6aa9892020bd00141b46ad417248a1bf, type: 3}
+      propertyPath: m_TagString
+      value: Node2
+      objectReference: {fileID: 0}
     - target: {fileID: 1574338074, guid: 6aa9892020bd00141b46ad417248a1bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 64b263df2a390fb42bf33c2c64437818, type: 2}
+    - target: {fileID: 2092641922, guid: 6aa9892020bd00141b46ad417248a1bf, type: 3}
+      propertyPath: m_TagString
+      value: Edge
+      objectReference: {fileID: 0}
     - target: {fileID: 3597177205062005155, guid: 6aa9892020bd00141b46ad417248a1bf,
         type: 3}
       propertyPath: m_LocalPosition.x

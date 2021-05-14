@@ -11,7 +11,7 @@ public class AnimationControllerComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine("AnimationRoutine");
+        StartCoroutine("AnimationRoutine");
         // Inside Coroutine:
         //      read next animation from list
         //      fetch corresponding gameobject
@@ -41,10 +41,11 @@ public class AnimationControllerComponent : MonoBehaviour
                 GameObject gameObject = GameObject.FindGameObjectWithTag(gameObjectTrigger.Key);
                 Debug.Log(string.Join("",gameObject.name));
                 Animator animator = gameObject.GetComponent<Animator>();
+                Debug.Log(gameObjectTrigger.Value);
                 animator.SetTrigger(gameObjectTrigger.Value);
                 //WaitForAnimation(animator.GetCurrentAnimatorClipInfo(0));
             }
-        yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(waitTime);
        
         }
     }
