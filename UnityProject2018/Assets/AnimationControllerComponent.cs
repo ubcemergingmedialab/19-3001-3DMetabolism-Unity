@@ -28,10 +28,10 @@ public class AnimationControllerComponent : MonoBehaviour
     {
         Dictionary<string, string> animationDefinition;
         List<string> objectsToAnimate;
-        List<string> triggerToSet;
+        List<string> triggersToSet;
         objectsToAnimate = animation.AnimatedObjects;
-        triggerToSet = animation.TriggerToSet;
-        animationDefinition = objectsToAnimate.Zip(triggerToSet, (k, v) => new { k, v })
+        triggersToSet = animation.TriggerToSet;
+        animationDefinition = objectsToAnimate.Zip(triggersToSet, (k, v) => new { k, v })
             .ToDictionary(x => x.k, x => x.v);
         return animationDefinition;
     }
