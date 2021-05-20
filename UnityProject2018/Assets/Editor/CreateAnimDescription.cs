@@ -71,14 +71,14 @@ public class CreateAnimDescription : EditorWindow
 
 
 
-        // Import UXML
+        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/CreateAnimDescription.uss");
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/CreateAnimDescription.uxml");
         VisualElement labelFromUXML = visualTree.Instantiate();
-        // root.Add(labelFromUXML);
+
+        root.Add(labelFromUXML);
 
         // A stylesheet can be added to a VisualElement.
         // The style will be applied to the VisualElement and all of its children.
-        var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/CreateAnimDescription.uss");
         VisualElement labelWithStyle = new Label("Hello World! With Style");
         labelWithStyle.styleSheets.Add(styleSheet);
         // root.Add(labelWithStyle);
