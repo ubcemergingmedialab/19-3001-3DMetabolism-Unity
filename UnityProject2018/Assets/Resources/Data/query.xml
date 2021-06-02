@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='item'/>
+		<variable name='itemLabel'/>
+	</head>
+	<results>
+		<result>
+			<binding name='item'>
+				<uri>http://www.wikidata.org/entity/Q27124826</uri>
+			</binding>
+			<binding name='itemLabel'>
+				<literal xml:lang='en'>beta-D-fructofuranose 6-phosphate(2-)</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='item'>
+				<uri>http://www.wikidata.org/entity/Q27125625</uri>
+			</binding>
+			<binding name='itemLabel'>
+				<literal xml:lang='en'>alpha-D-glucose 6-phosphate(2-) ion</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='item'>
+				<uri>http://www.wikidata.org/entity/Q50257965</uri>
+			</binding>
+			<binding name='itemLabel'>
+				<literal xml:lang='en'>GPI dimer [cytosol]</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>
