@@ -12,7 +12,7 @@ public class DistributeDataHandler : MonoBehaviour
     void Start()
     {
         LoadXML();       
-    }
+    } 
 
     private void LoadXML ()
     {

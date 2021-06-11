@@ -8,4 +8,8 @@ public class NodeSO : ScriptableObject
     public string Label;
     public Vector3 Position;
     public string QID;
+    public Quaternion Rotation;
+    [TextArea(10, 100)]
+    public string Description;
+    public string Mass;
 }

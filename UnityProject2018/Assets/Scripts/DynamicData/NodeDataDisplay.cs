@@ -10,7 +10,25 @@ public class NodeDataDisplay : MonoBehaviour
 
     void Start()
     {
-        labelText.text = nodeData.Label;
-        Debug.Log(this.gameObject.name);
+        InitializeLabelText();
     }
+
+    void Update()
+    {
+        MaintainLabelText();
+    }
+
+    void InitializeLabelText()
+    {
+        Vector3 localPosition = labelText.transform.localPosition;
+        labelText.text = nodeData.Label;
+        labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
+    }
+
+    void MaintainLabelText()
+    {
+        labelText.text = nodeData.Label;
+    }
+
 }
+
