@@ -35,7 +35,7 @@ Shader "Custom/WigglingSurfaceShader" {
 		half _Glossiness;
 		half _Metallic;
 		fixed4 _Color;
-		static half _Frequency = 10;
+		static half _Frequency = 2;
 		
 		struct v2f
 		{
@@ -51,9 +51,9 @@ Shader "Custom/WigglingSurfaceShader" {
 			UNITY_INSTANCING_BUFFER_END(Props)
 
 			void vert(inout appdata_base v) {
-			v2f o;
-			o.vertex = mul(unity_WorldToObject, v.vertex); 
-				v.vertex.xyz += v.normal * (sin((v.vertex.y * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Size) * _Amplitude + 0.02);
+				v2f o;
+				o.vertex = mul(unity_WorldToObject, v.vertex); 
+				v.vertex.xyz += v.normal * sin((v.vertex.y / _Size) * _Frequency + (_Time.y * _TimeSpeed)) * _Amplitude;
 			}
 
 			void surf(Input IN, inout SurfaceOutputStandard o) {
@@ -64,8 +64,8 @@ Shader "Custom/WigglingSurfaceShader" {
 				o.Metallic = _Metallic;
 				o.Smoothness = _Glossiness;
 				o.Alpha = c.a;
-				}
-				ENDCG
+			}
+		ENDCG
 	}
 		FallBack "Diffuse"
 }
