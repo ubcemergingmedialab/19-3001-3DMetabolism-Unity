@@ -18,17 +18,27 @@ public class NodeDataDisplay : MonoBehaviour
         MaintainLabelText();
     }
 
-    void InitializeLabelText()
+    private void InitializeLabelText()
     {
         Vector3 localPosition = labelText.transform.localPosition;
         labelText.text = nodeData.Label;
         labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
     }
 
-    void MaintainLabelText()
+    private void MaintainLabelText()
     {
         labelText.text = nodeData.Label;
     }
 
+    /*
+    public void UpdateScriptableObject(NodeSO newData)
+    {
+        nodeData.Label = newData.Label;
+        nodeData.Position = newData.Position;
+        nodeData.QID = newData.QID;
+        nodeData.Rotation = newData.Rotation;
+        nodeData.Description = newData.Description;
+    }
+    */
 }
 

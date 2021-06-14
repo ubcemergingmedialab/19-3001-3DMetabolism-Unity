@@ -1,21 +1,35 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Xml;
 
-public class DistributeDataHandler : MonoBehaviour
+public class SyncDataHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     public static string path = "Assets/Resources/Data/query.xml";
-    public List<NodeSO> nodes;
+    public List<PathwaySO> pathways;
     void Start()
     {
-        LoadXML();       
-    } 
+        
+        LoadXML();
+    }
 
-    private void LoadXML ()
+    void QueryData()
     {
+        string WQS = "http://query.wikidata.org/sparql?query=";
+        string queryRaw = "SELECT ?item ?itemLabel " +
+            "WHERE {wd:Q50293158 wdt:P527 ?item. " +
+            "SERVICE wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". " +
+            "} " +
+            "}";
+        string queryReady = UnityWebRequest.EscapeURL(queryRaw);
+        StartCoroutine(GetRequest(WQS + queryReady));
+    }
+
+    private void LoadXML()
+    {
+        /*
         XmlDocument doc = new XmlDocument();
         doc.Load(path);
 
@@ -29,5 +43,7 @@ public class DistributeDataHandler : MonoBehaviour
         {
             nodes[i].Label = node_names[i];
         }
+        */
+
     }
 }

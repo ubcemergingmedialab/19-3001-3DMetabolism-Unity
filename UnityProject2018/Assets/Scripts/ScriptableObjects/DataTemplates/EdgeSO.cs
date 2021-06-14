@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Edge", menuName = "Edge")]
-public class EdgesSO : ScriptableObject
+public class EdgeSO : ScriptableObject
 {
     public string Label;
     public Vector3 Position;
