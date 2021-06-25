@@ -66,23 +66,18 @@ public class MouseOrbit : MonoBehaviour
             {
                 distance -= hit.distance;
             }
+            distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
             Vector3 position = rotation * negDistance + target.position;
 
             transform.rotation = rotation;
             transform.position = position;
 
-            Vector3 newScale = target.localScale;
-            newScale.x = Mathf.Clamp(newScale.x + (Input.GetAxis("Mouse ScrollWheel") * scaleSpeed), scaleMin, scaleMax);
-            newScale.y = newScale.x;
-            newScale.z = newScale.x;
-            target.localScale = newScale;
-
-            if(newScale.x <= scaleThreshhold && isLines == false)
+            if(distance >= scaleThreshhold && isLines == false)
             {
                 isLines = true;
                 Debug.Log("rendering as lines");
-            } else if(newScale.x > scaleThreshhold && isLines == true)
+            } else if(distance > scaleThreshhold && isLines == true)
             {
                 isLines = false;
                 Debug.Log("rendering as shapes");

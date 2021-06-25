@@ -32,12 +32,10 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FumarateSuccinateComplexI
+  m_Name: FumarateSuccinateComplexII
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 248291567601387960}
-  - {fileID: 4517980160787400059}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -113,9 +111,7 @@ AnimatorState:
   m_Name: MalateToOxaloacetateActive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -7779537707106334024}
-  - {fileID: 5292825987774164699}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -313,10 +309,7 @@ AnimatorState:
   m_Name: A-KetoglutarateSuccinyl-CoAActive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -1824243871041531576}
-  - {fileID: 989286373874879719}
-  - {fileID: -1482454489152903218}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -392,9 +385,7 @@ AnimatorState:
   m_Name: OxaloacetateToMalateInactive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 6839768101978086557}
-  - {fileID: -3714975710149593164}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -545,10 +536,7 @@ AnimatorState:
   m_Name: FumarateSuccinateActive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -1911103393411051215}
-  - {fileID: -3930269966018945114}
-  - {fileID: 9221396961868723910}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -564,6 +552,25 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1107 &-1612044387535935480
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Layer
+  m_ChildStates: []
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 0}
 --- !u!1101 &-1482454489152903218
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -683,6 +690,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
+    m_Name: New Layer
+    m_StateMachine: {fileID: -1612044387535935480}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
 --- !u!1101 &248291567601387960
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -718,8 +737,7 @@ AnimatorState:
   m_Name: MalateToOxaloacetateInactive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 7070932200820364947}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -745,9 +763,7 @@ AnimatorState:
   m_Name: FumarateSuccinateInactive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 5277710943735702325}
-  - {fileID: 2564372150155655785}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -773,9 +789,7 @@ AnimatorState:
   m_Name: OxaloacetateToMalateActive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 7311985140863715066}
-  - {fileID: -6297360543559032511}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -948,9 +962,7 @@ AnimatorState:
   m_Name: MalateOxaloacetateToComplexI
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 2790237808518422254}
-  - {fileID: -4828128257311975995}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -976,15 +988,7 @@ AnimatorState:
   m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -4777101241742146443}
-  - {fileID: -2202317101089700368}
-  - {fileID: -8893040165320141157}
-  - {fileID: 8654414484240102007}
-  - {fileID: 6781778397000873140}
-  - {fileID: 1117972211333054594}
-  - {fileID: -7048610397718847586}
-  - {fileID: -2689885445403015226}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1010,9 +1014,7 @@ AnimatorState:
   m_Name: A-KetoglutarateSuccinyl-CoAComplexI
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -4436912361444315284}
-  - {fileID: -2647015836192360873}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1114,7 +1116,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3959638572018857523}
-    m_Position: {x: 410, y: -60, z: 0}
+    m_Position: {x: 280, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3900905546452364108}
     m_Position: {x: 900, y: 390, z: 0}
@@ -1126,28 +1128,28 @@ AnimatorStateMachine:
     m_Position: {x: -280, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7400801758308028055}
-    m_Position: {x: 930, y: 290, z: 0}
+    m_Position: {x: 960, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 339147407661704623}
     m_Position: {x: 760, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4473863705925730223}
-    m_Position: {x: 530, y: 760, z: 0}
+    m_Position: {x: 570, y: 680, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8292506993028928825}
-    m_Position: {x: 430, y: 640, z: 0}
+    m_Position: {x: 450, y: 630, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4115681372061145791}
-    m_Position: {x: 660, y: 570, z: 0}
+    m_Position: {x: 690, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1637307788298951434}
-    m_Position: {x: 210, y: 700, z: 0}
+    m_Position: {x: 190, y: 700, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 575489142633444445}
-    m_Position: {x: -20, y: 630, z: 0}
+    m_Position: {x: 20, y: 640, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8811441895216313162}
-    m_Position: {x: 30, y: 770, z: 0}
+    m_Position: {x: 40, y: 760, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -1155,7 +1157,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 30, y: -50, z: 0}
   m_EntryPosition: {x: -80, y: 90, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ExitPosition: {x: 920, y: 10, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3959638572018857523}
 --- !u!1101 &6781778397000873140
@@ -1318,9 +1320,7 @@ AnimatorState:
   m_Name: A-KetoglutarateSuccinyl-CoAInactive
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 7709230998360195286}
-  - {fileID: -4287415009334418687}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0

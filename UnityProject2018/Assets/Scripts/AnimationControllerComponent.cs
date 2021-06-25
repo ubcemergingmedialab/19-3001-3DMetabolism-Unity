@@ -9,12 +9,14 @@ public class AnimationControllerComponent : MonoBehaviour
     public float waitTime = 1f;
     public float resetTime = 0.1f;
     public AnimationDescription resetAnimation;
+    public AnimationDescriptionPresenter presenter;
 
     private Coroutine animationRoutine;
 
     void Start()
     {
         //animationRoutine = StartCoroutine("PlayAnimations");
+        presenter = GameObject.Find("UI").GetComponent<AnimationDescriptionPresenter>();
     }
 
     private IEnumerator PlayAnimations()
@@ -24,6 +26,10 @@ public class AnimationControllerComponent : MonoBehaviour
             Dictionary<string, string> animationDefinition;
             animationDefinition = DefineAnimation(animation);
             AnimateGameObject(animationDefinition);
+            if(presenter != null)
+            {
+                presenter.HighlightStep(int.Parse(animation.name));
+            }
             yield return new WaitForSeconds(waitTime);
             ResetGameObject(animationDefinition);
         }
@@ -33,7 +39,6 @@ public class AnimationControllerComponent : MonoBehaviour
 
     private Dictionary<string, string> DefineAnimation(AnimationDescription animation) 
     {
-        Debug.Log("Animation for :" + animation.name);
         Dictionary<string, string> animationDefinition;
         List<string> objectsToAnimate;
         List<string> triggersToSet;
@@ -46,12 +51,25 @@ public class AnimationControllerComponent : MonoBehaviour
 
     private void AnimateGameObject(Dictionary<string, string> animationDefinition)
     {
+        Animator gameObjectAnimator;
         foreach (KeyValuePair<string, string> animationStep in animationDefinition)
         {
-            GameObject gameObject = GameObject.Find(animationStep.Key);
-            Debug.Log("Animating: " + gameObject.name + " " + animationStep.Value);
-            Animator gameObjectAnimator = gameObject.GetComponent<Animator>();
-            gameObjectAnimator.SetTrigger(animationStep.Value);
+            GameObject curGO = GameObject.Find(animationStep.Key);
+            if(curGO != null)
+            {
+                gameObjectAnimator = curGO.GetComponent<Animator>();
+                if(gameObjectAnimator != null)
+                {
+                    Debug.Log(curGO.name + " " + animationStep.Value);
+                    gameObjectAnimator.Play(animationStep.Value);
+                } else
+                {
+                    Debug.Log("didnt find animator in " + curGO.name);
+                }
+            } else
+            {
+                Debug.Log("gameobject not found");
+            }
         }
     }
 
@@ -59,18 +77,19 @@ public class AnimationControllerComponent : MonoBehaviour
     {
         foreach (KeyValuePair<string, string> animationStep in animationDefinition)
         {
-            GameObject gameObject = GameObject.Find(animationStep.Key);
-            if(gameObject != null)
+            GameObject curGO = GameObject.Find(animationStep.Key);
+            if(curGO != null)
             {
-                Animator gameObjectAnimator = gameObject.GetComponent<Animator>();
-                foreach (var param in gameObjectAnimator.parameters)
+                Animator gameObjectAnimator = curGO.GetComponent<Animator>();
+                if(gameObjectAnimator != null)
                 {
-                    if (param.type == AnimatorControllerParameterType.Trigger)
-                    {
-                        gameObjectAnimator.ResetTrigger(param.name);
-                    }
+                    gameObjectAnimator.Play("Idle");
                 }
             }
+        }
+        foreach(Animator anim in transform.GetComponentsInChildren<Animator>(true))
+        {
+            anim.Play("Idle");
         }
     }
 
