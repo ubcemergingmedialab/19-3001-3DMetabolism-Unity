@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01bd3af8dc2bcaa4fa25cb8c3480a615, type: 3}
-  m_Name: glucose
+  m_Name: Node1
   m_EditorClassIdentifier: 
-  Label: glucose
+  Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: Q87
+  QID: 27125625
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: 
+  Description: desc_1
