@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7e34c0d53c5fa468fe0969f194c20e, type: 3}
+  m_Name: PathwayQueries
+  m_EditorClassIdentifier: 
+  Label: "SELECT DISTINCT ?label\r\nWHERE {\r\n  wd:Q69 rdfs:label ?label.\r\n  SERVICE
+    wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". }\r\n}"
+  Description: "SELECT DISTINCT ?description\r\nWHERE {\r\n  wd:QID schema:description
+    ?description.\r\n  SERVICE wikibase:label { bd:serviceParam wikibase:language
+    \"[AUTO_LANGUAGE],en\". }\r\n}"
+  pathwayEdges: "SELECT DISTINCT ?edges ?edgesLabel ?description\r\nWHERE {\r\n 
+    wd:QID wdt:P4 ?edges. \r\n  ?edges schema:description ?description.\r\n  SERVICE
+    wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". }\r\n}"
+  pathwayEdgesDescription: "SELECT ?edges ?description\r\nWHERE {\r\n  wd:QID wdt:P4
+    ?edges. \r\n  ?edges schema:description ?description.\r\n  SERVICE wikibase:label
+    { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". }\r\n}"
+  pathwayNodes: "SELECT DISTINCT ?nodes ?nodesLabel ?description\r\nWHERE {\r\n 
+    wd:QID wdt:P4 ?edges. \r\n  ?edges wdt:P4 ?nodes.\r\n  ?nodes schema:description
+    ?description.\r\n  SERVICE wikibase:label { bd:serviceParam wikibase:language
+    \"[AUTO_LANGUAGE],en\". }\r\n}"
+  pathwayNodesDescription: 
+  nodeData: "SELECT DISTINCT ?label ?description ?what_molecule ?part_of ?chemical_structure
+    ?kegg ?charge\r\nWHERE {\r\n  wd:QID rdfs:label ?label.\r\n  wd:QID schema:description
+    ?description.\r\n  wd:QID wdt:P12 ?what_molecule.\r\n  wd:QID wdt:P5 ?part_of.\r\n 
+    wd:QID wdt:P11 ?chemical_structure.\r\n  wd:QID wdt:P23 ?kegg.\r\n  wd:QID wdt:P27
+    ?charge.\r\n  \r\n  SERVICE wikibase:label { bd:serviceParam wikibase:language
+    \"[AUTO_LANGUAGE],en\". }\r\n}"
+  testOnWikiData: "SELECT DISTINCT ?label ?description\r\nWHERE {\r\n  wd:QID rdfs:label
+    ?label.\n  wd:QID schema:description ?description.\n  FILTER (langMatches( lang(?label),
+    \"en\" ) ).\r\n  FILTER (langMatches( lang(?description), \"en\" ) ).\r\n  SERVICE
+    wikibase:label { bd:serviceParam wikibase:language \" en\". }\r\n}\nLIMIT 2"
