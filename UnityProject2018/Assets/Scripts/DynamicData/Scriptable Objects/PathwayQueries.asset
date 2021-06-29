@@ -34,7 +34,7 @@ MonoBehaviour:
     wd:QID wdt:P11 ?chemical_structure.\r\n  wd:QID wdt:P23 ?kegg.\r\n  wd:QID wdt:P27
     ?charge.\r\n  \r\n  SERVICE wikibase:label { bd:serviceParam wikibase:language
     \"[AUTO_LANGUAGE],en\". }\r\n}"
-  testOnWikiData: "SELECT DISTINCT ?label ?description ?what_molecule ?part_of ?chemical_structure
-    ?kegg ?charge\r\nWHERE {\r\n  wd:QID rdfs:label ?label.\r\n  wd:QID schema:description
-    ?description.\r\n  \r\n  SERVICE wikibase:label { bd:serviceParam wikibase:language
-    \"en\". }\r\n}"
+  testOnWikiData: "SELECT DISTINCT ?label ?description\r\nWHERE {\r\n  wd:QID rdfs:label
+    ?label.\n  wd:QID schema:description ?description.\n  FILTER (langMatches( lang(?label),
+    \"en\" ) ).\r\n  FILTER (langMatches( lang(?description), \"en\" ) ).\r\n  SERVICE
+    wikibase:label { bd:serviceParam wikibase:language \" en\". }\r\n}\nLIMIT 2"

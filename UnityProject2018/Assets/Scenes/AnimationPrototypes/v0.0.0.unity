@@ -2904,6 +2904,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathways:
   - {fileID: 11400000, guid: 72a26152c47a4254a9fd7c8357fb1e5a, type: 2}
+  - {fileID: 11400000, guid: 98941e174a886f6419fc4c0c20e39aae, type: 2}
+  - {fileID: 11400000, guid: a6d262d999194dc4f80e06c07a26fac7, type: 2}
   queries: {fileID: 11400000, guid: 8c93c65dc3d04704d803d66617eca807, type: 2}
 --- !u!4 &1419010276
 Transform:
