@@ -60,8 +60,7 @@ AnimatorState:
   m_Name: AnimateIn
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 8678592989526045270}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -87,8 +86,7 @@ AnimatorState:
   m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -7703081446863240518}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0

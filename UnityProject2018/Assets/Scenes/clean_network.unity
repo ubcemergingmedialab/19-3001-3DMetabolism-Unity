@@ -990,7 +990,7 @@ Transform:
   m_Children:
   - {fileID: 442206288}
   m_Father: {fileID: 1343847567}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &47348545
 BoxCollider:
@@ -11693,7 +11693,7 @@ Transform:
   m_Children:
   - {fileID: 279075831}
   m_Father: {fileID: 1343847567}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &766976943
 BoxCollider:
@@ -14429,7 +14429,7 @@ Transform:
   m_Children:
   - {fileID: 1908250681}
   m_Father: {fileID: 1343847567}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &987069815
 BoxCollider:
@@ -18097,7 +18097,7 @@ Transform:
   m_Children:
   - {fileID: 120670135}
   m_Father: {fileID: 1343847567}
-  m_RootOrder: 36
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1264812988
 MeshRenderer:
@@ -19525,11 +19525,11 @@ Transform:
   - {fileID: 1050726157}
   - {fileID: 2073074743}
   - {fileID: 595384717}
+  - {fileID: 1264812987}
   - {fileID: 766976942}
   - {fileID: 47348544}
   - {fileID: 1971904225}
   - {fileID: 987069814}
-  - {fileID: 1264812987}
   - {fileID: 376274433}
   - {fileID: 423594647}
   - {fileID: 270264108}
@@ -27155,7 +27155,7 @@ Transform:
   m_Children:
   - {fileID: 1490985447}
   m_Father: {fileID: 1343847567}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1971904226
 BoxCollider:
@@ -30167,7 +30167,7 @@ GameObject:
   - component: {fileID: 988872253907321270}
   - component: {fileID: 988872253908419446}
   - component: {fileID: 988872253906165169}
-  - component: {fileID: 988872253906165290}
+  - component: {fileID: 988872253906165179}
   m_Layer: 0
   m_Name: dihydroxyacetone phosphate
   m_TagString: Untagged
@@ -30233,7 +30233,7 @@ GameObject:
   - component: {fileID: 988872253907321268}
   - component: {fileID: 988872253908419444}
   - component: {fileID: 988872253906165173}
-  - component: {fileID: 988872253906165291}
+  - component: {fileID: 988872253906165181}
   m_Layer: 0
   m_Name: citrate
   m_TagString: Untagged
@@ -30299,7 +30299,7 @@ GameObject:
   - component: {fileID: 988872253907321272}
   - component: {fileID: 988872253908419448}
   - component: {fileID: 988872253906165183}
-  - component: {fileID: 988872253906165293}
+  - component: {fileID: 988872253906165290}
   m_Layer: 0
   m_Name: 3-phosphoglycerate
   m_TagString: Untagged
@@ -30333,6 +30333,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afa1374f333825488be6c8dc56f2bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &988872253906165179
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988872253906165168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 961ff9b43cfda8c4485905c612eddec4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &988872253906165180
 GameObject:
   m_ObjectHideFlags: 0
@@ -30345,7 +30364,7 @@ GameObject:
   - component: {fileID: 988872253907321276}
   - component: {fileID: 988872253908419452}
   - component: {fileID: 988872253906165187}
-  - component: {fileID: 988872253906165295}
+  - component: {fileID: 988872253906165292}
   m_Layer: 0
   m_Name: 1,3-biphosphoglycerate
   m_TagString: Untagged
@@ -30353,6 +30372,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!95 &988872253906165181
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988872253906165172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 961ff9b43cfda8c4485905c612eddec4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &988872253906165182
 GameObject:
   m_ObjectHideFlags: 0
@@ -30365,7 +30403,7 @@ GameObject:
   - component: {fileID: 988872253907321278}
   - component: {fileID: 988872253908419454}
   - component: {fileID: 988872253906165185}
-  - component: {fileID: 988872253906165294}
+  - component: {fileID: 988872253906165291}
   m_Layer: 0
   m_Name: 2-phosphoglycerate
   m_TagString: Untagged
@@ -32215,7 +32253,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988872253906165168}
+  m_GameObject: {fileID: 988872253906165176}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 961ff9b43cfda8c4485905c612eddec4, type: 2}
@@ -32234,44 +32272,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988872253906165172}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 961ff9b43cfda8c4485905c612eddec4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &988872253906165293
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988872253906165176}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 961ff9b43cfda8c4485905c612eddec4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &988872253906165294
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988872253906165182}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -32284,7 +32284,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &988872253906165295
+--- !u!95 &988872253906165292
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
