@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 9
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - malate1
-  - Edge26
+  - malate (mitochondrion)
+  - malate dehydrogenase (mitochondrion)
   - CofactorContainer
   TriggerToSet:
   - WhiteToGrey

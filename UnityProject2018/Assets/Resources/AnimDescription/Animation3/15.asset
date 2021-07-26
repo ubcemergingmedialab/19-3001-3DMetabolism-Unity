@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: 15
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - Edge29
-  - Edge36
+  - aspartate aminotransferase (mitochondrion) C2
+  - aspartate aminotransferase (mitochondrion) C1
   - movingAKetoglutarate
   - movingAspartate
-  - aspartate1
-  - aspartate2
-  - a-ketoglutarate
-  - a-ketoglutarate1
+  - aspartate (mitochondrion)
+  - aspartate (cytosol)
+  - a-ketoglutarate (mitochondrion)
+  - a-ketoglutarate (cytosol)
   - CofactorContainer
   TriggerToSet:
   - StopWiggling

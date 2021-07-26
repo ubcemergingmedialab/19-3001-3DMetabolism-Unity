@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimatedObjects:
   - movingMalate
-  - malate
-  - malate1
+  - malate (cytosol)
+  - malate (mitochondrion)
   - OxaloacetateToMalate
   TriggerToSet:
   - AnimateIn

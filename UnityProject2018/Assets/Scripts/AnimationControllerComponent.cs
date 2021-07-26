@@ -87,10 +87,14 @@ public class AnimationControllerComponent : MonoBehaviour
                 }
             }
         }
+        /*
         foreach(Animator anim in transform.GetComponentsInChildren<Animator>(true))
         {
-            anim.Play("Idle");
-        }
+            if(anim.gameObject.activeSelf)
+            {
+                anim.Play("Idle");
+            }
+        }*/
     }
 
     public IEnumerator ChangeAnimation(List<AnimationDescription> newAnimation)

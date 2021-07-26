@@ -12,15 +12,19 @@ Shader "Custom/WigglingSurfaceShader" {
 	_Amplitude("Amplitude", Range(0, 1)) = 0.02
 	}
 		SubShader{
-		Tags { "RenderType" = "Opaque" "DisableBatching" = "True"}
+		Tags { "Queue" = "Transparent" "RenderType" = "Transparent" "DisableBatching" = "True"}
+		ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
+		Cull front
 		LOD 200
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma surface surf Standard fullforwardshadows addshadow vertex:vert
-
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
+
+		#include "UnityCG.cginc"
 
 		sampler2D _MainTex;
 		float _TimeDirection;
@@ -65,6 +69,12 @@ Shader "Custom/WigglingSurfaceShader" {
 				o.Smoothness = _Glossiness;
 				o.Alpha = c.a;
 			}
+
+			//fixed4 frag(v2f i) : SV_Target
+			//{
+			//	fixed4 col = tex2D(_MainTex, i.texcoord) * _Color; // multiply by _Color
+			//	return col;
+			//}
 		ENDCG
 	}
 		FallBack "Diffuse"

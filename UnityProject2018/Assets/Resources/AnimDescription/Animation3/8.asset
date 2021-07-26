@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 8
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - glutamate2
+  - glutamate (cytosol)
   - movingGlutamate
-  - glutamate1
+  - glutamate (mitochondrion)
   - CofactorContainer
   TriggerToSet:
   - WhiteToGrey

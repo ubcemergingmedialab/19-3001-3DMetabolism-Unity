@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - Edge30
-  - Edge33
-  - a-ketoglutarate1
-  - aspartate2
-  - Edge32
+  - aspartate aminotransferase (cytosol) C2
+  - aspartate aminotransferase (cytosol) C1
+  - alpha-ketoglutarate (cytosol)
+  - aspartate (cytosol)
+  - aspartate aminotransferase (cytosol) B
   TriggerToSet:
   - StopWiggling
   - StopWiggling

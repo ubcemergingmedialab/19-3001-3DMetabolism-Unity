@@ -7,6 +7,7 @@ public class MouseOrbit : MonoBehaviour
 
     public Transform target;
     public float distance = 5.0f;
+    public float defaultDistance = 13.0f;
     public float xSpeed = 120.0f;
     public float ySpeed = 120.0f;
 
@@ -62,9 +63,12 @@ public class MouseOrbit : MonoBehaviour
             distance = Mathf.Clamp(distance, distanceMin, distanceMax);
 
             RaycastHit hit;
-            if (Physics.Linecast(target.position, transform.position, out hit))
+            if(target.gameObject.activeSelf)
             {
-                distance -= hit.distance;
+                if (Physics.Linecast(target.position, transform.position, out hit))
+                {
+                    distance -= hit.distance;
+                }
             }
             distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
@@ -76,11 +80,9 @@ public class MouseOrbit : MonoBehaviour
             if(distance >= scaleThreshhold && isLines == false)
             {
                 isLines = true;
-                Debug.Log("rendering as lines");
             } else if(distance > scaleThreshhold && isLines == true)
             {
                 isLines = false;
-                Debug.Log("rendering as shapes");
             }
             needsUpdate = false;
         }
@@ -98,6 +100,12 @@ public class MouseOrbit : MonoBehaviour
     public void ChangeFocus(Transform newTarget)
     {
         target = newTarget;
+        distance = defaultDistance;
         needsUpdate = true;
+    }
+
+    public void ChangeDistance(float dist)
+    {
+        distance = dist;
     }
 }

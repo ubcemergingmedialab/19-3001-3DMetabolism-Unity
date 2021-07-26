@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 13
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - Edge27
-  - Edge29
-  - Edge36
-  - aspartate1
-  - a-ketoglutarate
+  - aspartate aminotransferase (mitochondrion) B
+  - aspartate aminotransferase (mitochondrion) C1
+  - aspartate aminotransferase (mitochondrion) C2
+  - aspartate (mitochondrion)
+  - alpha-ketoglutarate (mitochondrion)
   - MalateToOxaloacetate
   TriggerToSet:
   - StopWiggling

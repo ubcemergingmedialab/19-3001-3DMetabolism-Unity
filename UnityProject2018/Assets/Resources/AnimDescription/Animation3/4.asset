@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - oxaloacetate
-  - Edge8
+  - oxaloacetate (cytosol)
+  - malate dehydrogenase (cytosol)
   - CofactorContainer
   TriggerToSet:
   - GreyToWhite

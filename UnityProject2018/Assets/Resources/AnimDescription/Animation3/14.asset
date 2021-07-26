@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 14
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - Edge27
-  - Edge29
-  - Edge36
+  - aspartate aminotransferase (mitochondrion) B
+  - aspartate aminotransferase (mitochondrion) C2
+  - aspartate aminotransferase (mitochondrion) C1
   - MalateToOxaloacetate
   TriggerToSet:
   - StopWiggling

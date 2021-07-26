@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - glutamate2
+  - glutamate (cytosol)
   - CofactorContainer
   TriggerToSet:
   - GreyToWhite

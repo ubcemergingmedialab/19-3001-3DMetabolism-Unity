@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - Edge32
-  - Edge34
-  - Edge31
-  - glutamate2
-  - oxaloacetate
+  - aspartate aminotransferase (cytosol) B
+  - aspartate aminotransferase (cytosol) A2
+  - aspartate aminotransferase (cytosol) A1
+  - glutamate (cytosol)
+  - oxaloacetate (cytosol)
   TriggerToSet:
   - StopWiggling
   - StartWiggling

@@ -1,13 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[ExecuteAlways]
 public class LookAtCameraYOnly : MonoBehaviour
-
 {
 
     public Camera cameraToLookAt;
 
     void Start()
+    {
+        //transform.Rotate( 180,0,0 );
+        if (cameraToLookAt == null)
+        {
+            cameraToLookAt = Camera.main;
+        }
+    }
+
+    private void OnEnable()
     {
         //transform.Rotate( 180,0,0 );
         if (cameraToLookAt == null)

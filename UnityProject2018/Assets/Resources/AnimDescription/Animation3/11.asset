@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 11
   m_EditorClassIdentifier: 
   AnimatedObjects:
-  - glutamate1
-  - oxaloacetate1
-  - Edge35
-  - Edge28
+  - glutamate (mitochondrion)
+  - oxaloacetate (mitochondrion)
+  - aspartate aminotransferase (mitochondrion) A2
+  - aspartate aminotransferase (mitochondrion) A1
   - MalateToOxaloacetate
   TriggerToSet:
   - WhiteToGrey
