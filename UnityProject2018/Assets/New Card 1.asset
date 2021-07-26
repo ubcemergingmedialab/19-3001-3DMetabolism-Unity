@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01bd3af8dc2bcaa4fa25cb8c3480a615, type: 3}
-  m_Name: succinate
+  m_Script: {fileID: 11500000, guid: 241861ba5eacdac4c9b687d5126f9723, type: 3}
+  m_Name: New Card 1
   m_EditorClassIdentifier: 
-  Label: succinate
-  Position: {x: 0, y: 0, z: 0}
-  QID: 
-  Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: test
+  Label: Test
+  QID: Q24
+  Description: ERF
