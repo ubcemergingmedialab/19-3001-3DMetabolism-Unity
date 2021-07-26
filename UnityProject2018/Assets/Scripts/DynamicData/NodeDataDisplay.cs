@@ -7,6 +7,7 @@ public class NodeDataDisplay : MonoBehaviour
 {
     public NodeSO nodeData;
     public TextMesh labelText;
+    public Card DisplayData;
 
     void Start()
     {
@@ -62,15 +63,14 @@ public class NodeDataDisplay : MonoBehaviour
     {
 
     }
-    /*
-    public void UpdateScriptableObject(NodeSO newData)
+
+    public void UpdateScriptableObject()
     {
-        nodeData.Label = newData.Label;
-        nodeData.Position = newData.Position;
-        nodeData.QID = newData.QID;
-        nodeData.Rotation = newData.Rotation;
-        nodeData.Description = newData.Description;
+        DisplayData.Label = nodeData.Label;
+        DisplayData.QID = nodeData.QID;
+        DisplayData.Description = nodeData.Description;
+        UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI);
+
     }
-    */
 }
 
