@@ -13,7 +13,7 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 
 ## Versioning
 
-- Unity 2018.4.31f
+- Unity 2020.3.7f
 
 ## Getting Started
 
