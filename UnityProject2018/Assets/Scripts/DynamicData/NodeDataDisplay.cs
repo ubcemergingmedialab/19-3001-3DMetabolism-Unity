@@ -69,7 +69,9 @@ public class NodeDataDisplay : MonoBehaviour
         DisplayData.Label = nodeData.Label;
         DisplayData.QID = nodeData.QID;
         DisplayData.Description = nodeData.Description;
-        UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI);
+        if (UIPresenter.UIList.NodeUI != null)
+            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI);
+        else Debug.Log("Error in callin NodeUI list");
 
     }
 }
