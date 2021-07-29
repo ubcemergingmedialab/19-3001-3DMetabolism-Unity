@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 4513333668693948798}
   - component: {fileID: 3676586225569467412}
   - component: {fileID: 3908895448659527668}
+  - component: {fileID: 7241831300103750608}
+  - component: {fileID: 8235011463390896517}
   m_Layer: 0
   m_Name: NodeTemplate
   m_TagString: Untagged
@@ -121,6 +123,47 @@ MonoBehaviour:
   accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   highlightColor: {r: 0, g: 0, b: 1, a: 1}
   defaultColor: {r: 0.4352941, g: 0.4352941, b: 0.4352941, a: 1}
+--- !u!114 &7241831300103750608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428813303328792915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61630aec70570a645bae76d10b557d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9015246854331944165}
+        m_TargetAssemblyTypeName: NodeDataDisplay, Assembly-CSharp
+        m_MethodName: UpdateScriptableObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  button: {fileID: 0}
+--- !u!65 &8235011463390896517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428813303328792915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8530696984914683760
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 8530696984914683760}
   m_LocalRotation: {x: 0.019995198, y: -0, z: -0, w: 0.99980015}
   m_LocalPosition: {x: 0.0108, y: -0, z: 0.0243}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children: []
   m_Father: {fileID: 5017832887686948584}
   m_RootOrder: 1
