@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 586630631075282642}
   - component: {fileID: 5551214974539225720}
   - component: {fileID: 4780491277411635742}
+  - component: {fileID: 2461582242315158035}
+  - component: {fileID: 5151315444551485208}
   m_Layer: 0
   m_Name: EdgeTemplate
   m_TagString: Untagged
@@ -46,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   edgeData: {fileID: 0}
+  DisplayData: {fileID: 11400000, guid: e36f392e84671cc409441dfbc2295b25, type: 2}
 --- !u!114 &5551214974539225720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,3 +76,44 @@ MonoBehaviour:
   accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   highlightColor: {r: 0, g: 0, b: 1, a: 1}
   defaultColor: {r: 0.4352941, g: 0.4352941, b: 0.4352941, a: 1}
+--- !u!65 &2461582242315158035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035214683094356989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5151315444551485208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035214683094356989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61630aec70570a645bae76d10b557d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 586630631075282642}
+        m_TargetAssemblyTypeName: EdgeDataDisplay, Assembly-CSharp
+        m_MethodName: UpdateScriptableObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  button: {fileID: 0}

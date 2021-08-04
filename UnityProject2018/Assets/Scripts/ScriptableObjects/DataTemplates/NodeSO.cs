@@ -11,4 +11,7 @@ public class NodeSO : ScriptableObject
     public Quaternion Rotation;
     [TextArea(10, 100)]
     public string Description;
+    public string GibbsFreeEnergy;
+    [TextArea(10, 100)]
+    public string EnzymeRequired;
 }

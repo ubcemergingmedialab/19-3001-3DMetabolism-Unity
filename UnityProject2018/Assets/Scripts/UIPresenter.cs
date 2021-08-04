@@ -57,20 +57,22 @@ public class UIPresenter : MonoBehaviour
         if(AvailableElements.TryGetValue(el, out element))
         {
             element.UpdateUI();
-            OpenPanel();
+            OpenPanel(element);
         }
     }
 
-    public void OpenPanel()
+    public void OpenPanel(UIElement element)
     {
-        if (Panel != null)
-            Panel.SetActive(true);
+        if(element != null) {
+            element.gameObject.SetActive(true);
+        }
 
     }
     public void ClosePanel()
     {
-        if (Panel != null)
-            Panel.SetActive(false);
+        foreach(KeyValuePair<UIList, UIElement> entry in AvailableElements) {
+            entry.Value.gameObject.SetActive(false);
+        }
 
     }
 
