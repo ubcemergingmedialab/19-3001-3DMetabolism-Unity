@@ -8,4 +8,6 @@ public class EdgeSO : ScriptableObject
     public string Label;
     public Vector3 Position;
     public string QID;
+    public string Description;
+
 }
