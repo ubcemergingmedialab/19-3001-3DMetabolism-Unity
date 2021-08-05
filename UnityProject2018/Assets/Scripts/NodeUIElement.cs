@@ -8,7 +8,7 @@ public class NodeUIElement : UIElement
     public Text LabelText;
     public Text DescriptionText;
 
-    public Text QIDText;
+    public Text QIDText; 
 
     override public void UpdateUI()
     {
