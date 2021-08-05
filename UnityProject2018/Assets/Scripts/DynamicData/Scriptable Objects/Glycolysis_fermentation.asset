@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
-  m_Name: Glycolysis_Fermentation
+  m_Name: Glycolysis_fermentation
   m_EditorClassIdentifier: 
   QID: 83
   nodes:

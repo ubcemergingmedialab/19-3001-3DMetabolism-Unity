@@ -14,13 +14,24 @@ public class UIPresenter : MonoBehaviour
     public UIElement EdgeUIElement;
     public GameObject Panel;
 
+    private static Dictionary<UIList, UIElement> AvailableElements;
+
     private static UIPresenter _instance;
     public static UIPresenter Instance
     {
         get { return _instance; }
     }
 
-    private static Dictionary<UIList, UIElement> AvailableElements;
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()

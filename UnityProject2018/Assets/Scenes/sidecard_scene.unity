@@ -2004,6 +2004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeUIElement: {fileID: 590989311}
   EdgeUIElement: {fileID: 0}
+  Panel: {fileID: 590989304}
 --- !u!1001 &856992774
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -72,4 +72,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  defaultColor: {r: 0.4352941, g: 0.4352941, b: 0.4352941, a: 1}
+  defaultColor: {r: 0.4352941, g: 0.4352941, b: 0.4352941, a: 0.20784314}
