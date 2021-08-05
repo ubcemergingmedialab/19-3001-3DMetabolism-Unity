@@ -10,7 +10,8 @@ public class CardDisplay : MonoBehaviour {
     public Text LabelText;
     public Text DescriptionText;
 
-    public Text QIDText; 
+    public Text QIDText;
+    public Text GibbsFreeEnergyText;
 
     // Start is called before the first frame update
     void Start() {
