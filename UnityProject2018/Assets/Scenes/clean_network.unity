@@ -11120,7 +11120,7 @@ MonoBehaviour:
         m_MethodName: MoveToTarget
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7828215830038619536}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -16053,7 +16053,7 @@ MonoBehaviour:
         m_MethodName: MoveToTarget
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1281136568281044670}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -21167,6 +21167,541 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655747204}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1666858917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 988872253906518422}
+    m_Modifications:
+    - target: {fileID: 1210356332825926739, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356332929814326, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333006455681, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333249593940, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333359919099, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333364389954, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333402910995, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333430084265, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333446083085, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333473200631, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333489677830, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333514030304, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333531805087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333532036600, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333637762757, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333639122530, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333672445946, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333860326228, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333908421241, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334021276888, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334068338006, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334072813124, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334099221506, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334147963046, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334208520081, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334228884171, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334232990851, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334262420274, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334305623106, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334309539464, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334309903430, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334323621702, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334354881282, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334390237785, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334492106236, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334549748100, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334557808523, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334603557277, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334609051589, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334688649635, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334737566957, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334803662304, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334818492826, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1709431152431830528, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ribulose-5-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152437267526, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">aspartate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152490236130, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glutamine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152563376085, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glutamate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152575231175, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glycogen (n+1)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152587639439, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">alpha-ketoglutarate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152621208438, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">6-phosphogluconate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152643439622, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fumarate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152664362700, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">succinate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152664497154, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">6-phosphoglucono-delta-lactone</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152682639106, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glutamine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152751790864, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">xylulose-5-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152804309565, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrulline</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152895931548, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">acetyl CoA</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152947481874, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glutamate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152968101761, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">malate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153030627815, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">alanine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153075645609, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">succinyl CoA</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153145935268, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">urea</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153160765918, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glucose-1-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153233992518, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">aspartate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153265154589, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">NH4+</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153387765176, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">isocitrate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153432463311, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ribose-5-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153441180096, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrulline</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153478474201, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">phosphoenolpyruvate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153508533189, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">alpha-ketoglutarate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153735156240, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">erythrose-4-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153848065047, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">sedoheptulose-7-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153952247666, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154141462054, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">UDP-glucose</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154144001665, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ornithine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154174785470, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fumarate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154386251711, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">oxaloacetate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154391017478, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">oxaloacetate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154446020951, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">malate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154452255469, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glycogen (n residues)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154468254281, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">pyruvate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154516572595, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glycerol-3-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154532787778, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">carbamoyl phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154536168612, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">arginine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154558170587, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">argininosuccinate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154558401980, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ornithine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761072, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: Network
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653216366692094434, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 3875284608563089830, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">3-phosphoglycerate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942176167175578992, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6248109304798970618, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7912445721369622404, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7935859025707256585, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c8d71f1682391f4a99ca2aca8e32f92, type: 3}
+--- !u!4 &1666858918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    type: 3}
+  m_PrefabInstance: {fileID: 1666858917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680502631
 GameObject:
   m_ObjectHideFlags: 0
@@ -29502,7 +30037,7 @@ Transform:
   - {fileID: 181103885}
   - {fileID: 1764511430}
   - {fileID: 23750733}
-  - {fileID: 7463440894588532971}
+  - {fileID: 1666858918}
   m_Father: {fileID: 1542426135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32715,690 +33250,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1281136568281044670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6357513378152581034, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-    type: 3}
-  m_PrefabInstance: {fileID: 5331679561555087636}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5331679561555087636
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 988872253906518422}
-    m_Modifications:
-    - target: {fileID: 1210356332806621169, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356332817384946, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356332825926739, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356332897569173, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356332929814326, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333006455681, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333211405798, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333249593940, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333261849581, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333359919099, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333364389954, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333402910995, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333430084265, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333446083085, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333473200631, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333489677830, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333514030304, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333531805087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333532036600, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333586541300, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333637762757, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333639122530, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333672445946, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333860326228, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356333908421241, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334021276888, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334025708864, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334068338006, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334072813124, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334099221506, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334109389166, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334147963046, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334208520081, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334228884171, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334232990851, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334262420274, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334289597219, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334305623106, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334309539464, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334309903430, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334323621702, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334336468420, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334354881282, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334385330508, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334390237785, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334492106236, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334498091400, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334549748100, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334557808523, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334603557277, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334609051589, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334688649635, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334737566957, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334803662304, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1210356334818492826, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 3345780499860761072, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Name
-      value: Network
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852754865082, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">urea</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852804833216, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glucose-1-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852863295903, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">malate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852934774777, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">alanine</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852957209271, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">succinyl CoA</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852978565074, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">L-lactate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617852980437926, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">isocitrate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853063256030, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">citrulline</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853071841745, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">ribose-5-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853093201863, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">phosphoenolpyruvate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853136553304, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">aspartate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853172433923, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">NH4+</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853175129878, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">phosphoenolpyruvate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853245707409, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">alpha-ketoglutarate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853258459865, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glycogen (n+1)</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853268070859, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glutamate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853279247720, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">6-phosphogluconate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853321912856, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">fumarate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853340233081, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">fructose-1, 6-biphosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853350134044, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glutamine</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853350134044, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853354081182, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">3-phosphoglycerate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853368144412, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">6-phosphoglucono-delta-lactone</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853368557778, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">succinate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853394178648, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">aspartate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853399746590, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">ribulose-5-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853436587828, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">pyruvate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853475428092, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glutamine</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853587262234, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">dihydroxyacetone phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853608520322, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">acetyl CoA</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853622293260, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glutamate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853683504398, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">xylulose-5-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853765415971, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">citrulline</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853806258592, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">fumarate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617853955241134, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glucose-6-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854038171807, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">ornithine</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854040842296, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">UDP-glucose</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854065380595, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glycogen (n residues)</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854071762761, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">malate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854116506711, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">pyruvate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854117115996, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">carbamoyl phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854135494573, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glycerol-3-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854158711749, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">argininosuccinate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854160511906, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">ornithine</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854182875834, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">arginine</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854261048856, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">oxaloacetate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854263652769, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">oxaloacetate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854418441148, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glyceraldehyde-3-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854435073463, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">2-phosphoglycerate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854447197198, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">erythrose-4-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854472232411, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">alpha-ketoglutarate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854630728044, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">citrate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854630728044, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_isRightToLeft
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854630728044, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854630728044, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854642001871, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">glucose</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854795652008, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">1,3-bisphosphoglycerate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854803919369, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">sedoheptulose-7-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159617854818965931, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">fructose-6-phosphate</font></mark>
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942176167175578992, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 6012884518525223035, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248109304798970618, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7294034024737959373, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7912445721369622404, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7935859025707256585, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9c8d71f1682391f4a99ca2aca8e32f92, type: 3}
---- !u!4 &7463440894588532971 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-    type: 3}
-  m_PrefabInstance: {fileID: 5331679561555087636}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7828215830038619536 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2692737521396823172, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-    type: 3}
-  m_PrefabInstance: {fileID: 5331679561555087636}
-  m_PrefabAsset: {fileID: 0}
