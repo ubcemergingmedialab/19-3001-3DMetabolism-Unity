@@ -30,7 +30,7 @@ public class NodeDataDisplay : MonoBehaviour
         {
             Vector3 localPosition = labelText.transform.localPosition;
             labelText.SetText("<mark=#00000088><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
-            Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
+            //Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
             //labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
         }
     }

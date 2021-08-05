@@ -21174,7 +21174,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 988872253906518422}
     m_Modifications:
+    - target: {fileID: 1210356332806621169, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356332817384946, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1210356332825926739, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356332897569173, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
@@ -21189,7 +21204,17 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333211405798, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1210356333249593940, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333261849581, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
@@ -21244,6 +21269,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356333586541300, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1210356333637762757, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -21274,6 +21304,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334025708864, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1210356334068338006, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -21285,6 +21320,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 534669904}
     - target: {fileID: 1210356334099221506, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334109389166, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
@@ -21314,6 +21354,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334289597219, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1210356334305623106, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -21334,7 +21379,17 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334336468420, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1210356334354881282, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334385330508, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
@@ -21345,6 +21400,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 534669904}
     - target: {fileID: 1210356334492106236, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1210356334498091400, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
@@ -21399,6 +21459,11 @@ PrefabInstance:
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">aspartate</font></mark>
       objectReference: {fileID: 0}
+    - target: {fileID: 1709431152463950122, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">pyruvate</font></mark>
+      objectReference: {fileID: 0}
     - target: {fileID: 1709431152490236130, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
@@ -21424,6 +21489,11 @@ PrefabInstance:
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">6-phosphogluconate</font></mark>
       objectReference: {fileID: 0}
+    - target: {fileID: 1709431152627676007, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fructose-1, 6-biphosphate</font></mark>
+      objectReference: {fileID: 0}
     - target: {fileID: 1709431152643439622, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
@@ -21438,6 +21508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">6-phosphoglucono-delta-lactone</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152678708608, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">3-phosphoglycerate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431152682639106, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -21458,6 +21533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">acetyl CoA</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431152917173508, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">dihydroxyacetone phosphate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431152947481874, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -21494,6 +21574,11 @@ PrefabInstance:
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">aspartate</font></mark>
       objectReference: {fileID: 0}
+    - target: {fileID: 1709431153259985160, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">phosphoenolpyruvate</font></mark>
+      objectReference: {fileID: 0}
     - target: {fileID: 1709431153265154589, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
@@ -21503,6 +21588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">isocitrate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153389556172, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">L-lactate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431153432463311, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -21524,20 +21614,50 @@ PrefabInstance:
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">alpha-ketoglutarate</font></mark>
       objectReference: {fileID: 0}
+    - target: {fileID: 1709431153696935330, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glyceraldehyde-3-phosphate</font></mark>
+      objectReference: {fileID: 0}
     - target: {fileID: 1709431153735156240, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">erythrose-4-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153747149737, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">2-phosphoglycerate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153833215925, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fructose-6-phosphate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431153848065047, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">sedoheptulose-7-phosphate</font></mark>
       objectReference: {fileID: 0}
+    - target: {fileID: 1709431153856595382, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">1,3-bisphosphoglycerate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431153940974033, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glucose</font></mark>
+      objectReference: {fileID: 0}
     - target: {fileID: 1709431153952247666, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
       value: <mark=#00000088><font="LiberationSans SDF">citrate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709431154093042352, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glucose-6-phosphate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431154141462054, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
