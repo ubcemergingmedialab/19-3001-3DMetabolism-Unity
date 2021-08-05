@@ -33,7 +33,7 @@ public class UIPresenter : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     void Start()
     {
         AvailableElements = new Dictionary<UIList, UIElement>();
@@ -44,6 +44,10 @@ public class UIPresenter : MonoBehaviour
         if(EdgeUIElement != null)
         {
             AvailableElements.Add(UIList.EdgeUI, EdgeUIElement);
+        }
+        if(Panel != null)
+        {
+            ClosePanel();
         }
     }
 
