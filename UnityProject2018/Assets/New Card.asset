@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241861ba5eacdac4c9b687d5126f9723, type: 3}
   m_Name: New Card
   m_EditorClassIdentifier: 
-  Label: Gluconeogenesis
-  QID: Q23
-  Description: Hello
+  Label: erythrose-4-phosphate
+  QID: 
+  Description: Sample Description
+  Charge: 

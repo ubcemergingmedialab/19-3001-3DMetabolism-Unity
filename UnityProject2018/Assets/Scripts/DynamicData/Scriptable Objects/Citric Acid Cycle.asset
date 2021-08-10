@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: Citric Acid Cycle
   m_EditorClassIdentifier: 
-  QID: 
+  QID: Citric Acid Cycle
   nodes:
   - {fileID: 11400000, guid: 30c65614851a65e4d939168a6471b0ba, type: 2}
   - {fileID: 11400000, guid: fa9c124ea84845547b60bf1006d70072, type: 2}
@@ -35,3 +35,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 333f1fd4b01b0d04b8855f83d93950d8, type: 2}
   - {fileID: 11400000, guid: e91d05edd072b21448b4fc30cc60fac9, type: 2}
   - {fileID: 11400000, guid: 15437f33efd2a724b9839cc1a1935842, type: 2}
+  Label: Citric Acid Cycle
+  Description: Test1

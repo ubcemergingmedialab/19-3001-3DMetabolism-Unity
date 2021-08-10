@@ -9,6 +9,7 @@ public class NodeUIElement : UIElement
     public Text DescriptionText;
 
     public Text QIDText; 
+    public Text ChargeText;
 
     override public void UpdateUI()
     {
@@ -18,5 +19,6 @@ public class NodeUIElement : UIElement
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
+        ChargeText.text = ((Card)DataReference).Charge;
     }
 }

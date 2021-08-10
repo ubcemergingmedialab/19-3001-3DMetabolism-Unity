@@ -11,13 +11,14 @@ public class CardDisplay : MonoBehaviour {
     public Text DescriptionText;
 
     public Text QIDText;
-    public Text GibbsFreeEnergyText;
+    public Text ChargeText;
 
     // Start is called before the first frame update
     void Start() {
         LabelText.text = card.Label;
         DescriptionText.text = card.Description;
         QIDText.text = card.QID;
+        ChargeText.text = card.Charge;
     }
 
 }

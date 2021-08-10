@@ -8,4 +8,6 @@ public class PathwaySO : ScriptableObject
     public string QID;
     public List<NodeSO> nodes;
     public List<EdgeSO> edges;
+    public string Label;
+    public string Description;
 }

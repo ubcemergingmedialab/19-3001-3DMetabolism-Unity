@@ -8,7 +8,8 @@ public class Card: ScriptableObject {
     public string Label;
     public string QID;
     public string Description;
-    public string GibbsFreeEnergy;
+    public string Charge;
+
 
 }
 
