@@ -8,11 +8,13 @@ public class ClickListen : MonoBehaviour
     private float timeCounter;
     public float moveSplit = 100f;
     private IEnumerator moveRoutine;
+    private GameObject network;
     private bool isMoving = false;
     // Start is called before the first frame update
     void Start()
     {
         timeCounter = totalTime;
+        network = GameObject.Find("Center/Network");
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class ClickListen : MonoBehaviour
         while(isMoving)
         {
             yield return new WaitForSeconds(totalTime / moveSplit);
-            transform.parent.position += chunk;
+            network.transform.position += chunk;
             timeCounter -= totalTime / moveSplit;
             if(timeCounter <= 0)
             {
