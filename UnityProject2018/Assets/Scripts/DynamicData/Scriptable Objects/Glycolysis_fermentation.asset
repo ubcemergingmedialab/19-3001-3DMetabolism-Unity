@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: Glycolysis_fermentation
   m_EditorClassIdentifier: 
-  QID: 83
+  QID: Q83
   nodes:
   - {fileID: 11400000, guid: 75c2b64492ba72243b05ff4d85746e7c, type: 2}
   - {fileID: 11400000, guid: 09646f28890776246a273845236fdf8b, type: 2}
@@ -37,4 +37,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3cbf73544b84022408f31116371dac63, type: 2}
   - {fileID: 11400000, guid: 37556205b1c09754a9cf8382cd67d9f6, type: 2}
   Label: Glycolysis/Fermentation
-  Description: 
+  Description: Glycolysis stands for glykys (sweet) and lysis (splitting). In other
+    words, this pathway is involved in the breakdown of glucose into pyruvate which
+    can be further used to create energy for the cell

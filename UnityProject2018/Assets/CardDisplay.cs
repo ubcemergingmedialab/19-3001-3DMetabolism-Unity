@@ -12,6 +12,11 @@ public class CardDisplay : MonoBehaviour {
 
     public Text QIDText;
     public Text ChargeText;
+    public Text EnergyConsumedText;
+    public Text EnergyProducedText;
+    public Text GibbsFreeEnergyText;
+    public Text MolecularFormulaText;
+    public Text IUPACNamesText;
 
     // Start is called before the first frame update
     void Start() {
@@ -19,6 +24,11 @@ public class CardDisplay : MonoBehaviour {
         DescriptionText.text = card.Description;
         QIDText.text = card.QID;
         ChargeText.text = card.Charge;
+        EnergyConsumedText.text = card.EnergyConsumed;
+        EnergyProducedText.text = card.EnergyProduced;
+        GibbsFreeEnergyText.text = card.GibbsFreeEnergy;
+        MolecularFormulaText.text = card.MolecularFormula;
+        IUPACNamesText.text = card.IUPACNames;
     }
 
 }

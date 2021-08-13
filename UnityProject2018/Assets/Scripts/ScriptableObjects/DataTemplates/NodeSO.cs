@@ -14,4 +14,7 @@ public class NodeSO : ScriptableObject
     public string Charge;
     [TextArea(10, 100)]
     public string EnzymeRequired;
+    public string MolecularFormula;
+    [TextArea(10, 100)]
+    public string IUPACNames;
 }

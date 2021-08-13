@@ -10,6 +10,9 @@ public class EdgeUIElement : UIElement
     public Text DescriptionText;
 
     public Text QIDText;
+    public Text EnergyConsumedText;
+    public Text EnergyProducedText;
+    public Text GibbsFreeEnergyText;
 
     override public void UpdateUI()
     {
@@ -20,6 +23,9 @@ public class EdgeUIElement : UIElement
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
+        EnergyConsumedText.text = ((Card)DataReference).EnergyConsumed;
+        EnergyProducedText.text = ((Card)DataReference).EnergyProduced;
+        GibbsFreeEnergyText.text = ((Card)DataReference).GibbsFreeEnergy;
   
     }
 }

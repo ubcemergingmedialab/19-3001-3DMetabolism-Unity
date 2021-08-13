@@ -16,4 +16,11 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   QID: Q87
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: 'Glucose is a simple sugar that is involved in the first step of glycolysis
+    to break it down into energy that will be used by the cell. '
+  Charge: 0
+  EnzymeRequired: 
+  MolecularFormula: C6H12O6
+  IUPACNames: 'D-glucose
+
+    D-gluco-Hexose'

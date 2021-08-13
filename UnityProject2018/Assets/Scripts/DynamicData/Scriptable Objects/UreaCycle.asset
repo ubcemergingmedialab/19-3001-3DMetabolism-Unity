@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: UreaCycle
   m_EditorClassIdentifier: 
-  QID: 
+  QID: Q235
   nodes:
   - {fileID: 11400000, guid: 65a3e4494978ed644b86279eeabf74ef, type: 2}
   - {fileID: 11400000, guid: ebb5f43c8c659984dac92abf73784fc9, type: 2}
@@ -38,4 +38,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0618dd19c4023e940abecb3b99468119, type: 2}
   - {fileID: 11400000, guid: 82a3f9bfc43a63541a1d23e5761bb586, type: 2}
   Label: Urea Cycle
-  Description: 
+  Description: Cycle of biochemical reactions producing urea

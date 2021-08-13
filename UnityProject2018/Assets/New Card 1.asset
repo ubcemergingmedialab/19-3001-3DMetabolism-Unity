@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241861ba5eacdac4c9b687d5126f9723, type: 3}
   m_Name: New Card 1
   m_EditorClassIdentifier: 
-  Label: HGHGH
-  QID: h
-  Description: h
-  Charge: Sample Edge
+  Label: 
+  QID: 
+  Description: 
+  Charge: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  MolecularFormula: 
+  IUPACNames: 

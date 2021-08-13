@@ -9,5 +9,8 @@ public class EdgeSO : ScriptableObject
     public Vector3 Position;
     public string QID;
     public string Description;
+    public string EnergyConsumed;
+    public string EnergyProduced;
+    public string GibbsFreeEnergy;
 
 }

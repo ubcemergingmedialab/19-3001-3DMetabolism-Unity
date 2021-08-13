@@ -9,6 +9,13 @@ public class Card: ScriptableObject {
     public string QID;
     public string Description;
     public string Charge;
+    public string EnergyConsumed;
+    public string EnergyProduced;
+    public string GibbsFreeEnergy;
+    public string MolecularFormula;
+    public string IUPACNames;
+    
+
 
 
 }
