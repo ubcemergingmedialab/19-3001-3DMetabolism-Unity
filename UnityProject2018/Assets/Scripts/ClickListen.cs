@@ -14,7 +14,10 @@ public class ClickListen : MonoBehaviour
     void Start()
     {
         timeCounter = totalTime;
-        network = GameObject.Find("Center/Network");
+        if(!GameObject.Find("Center/Network"))
+            Debug.Log("Network Parent could not be found");
+        else
+            network = GameObject.Find("Center/Network");
     }
 
     // Update is called once per frame
