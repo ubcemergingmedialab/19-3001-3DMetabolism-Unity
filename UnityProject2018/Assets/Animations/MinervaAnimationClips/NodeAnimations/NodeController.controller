@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd55d21fd7a74014a90abcf5814427c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartColor: {r: 1, g: 1, b: 1, a: 0}
-  EndColor: {r: 0.35849, g: 0.35849, b: 0.35849, a: 0}
+  StartColor: {r: 1, g: 1, b: 1, a: 1}
+  EndColor: {r: 0.35849, g: 0.35849, b: 0.35849, a: 1}
   animationLength: 2
 --- !u!91 &9100000
 AnimatorController:
@@ -401,6 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd55d21fd7a74014a90abcf5814427c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartColor: {r: 0.35849, g: 0.35849, b: 0.35849, a: 0}
-  EndColor: {r: 1, g: 1, b: 1, a: 0}
+  StartColor: {r: 0.35849, g: 0.35849, b: 0.35849, a: 1}
+  EndColor: {r: 1, g: 1, b: 1, a: 1}
   animationLength: 2

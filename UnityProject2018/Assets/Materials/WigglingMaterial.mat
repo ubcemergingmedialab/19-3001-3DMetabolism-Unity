@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WigglingMaterial
-  m_Shader: {fileID: 4800000, guid: 3457ab57b41b5c34c9704666fd5b7c33, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7615e8a03ebde72429fd2494bc90bf61,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -59,7 +60,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_18b684a653a84c928edd50552a666f54: 2
+    - Vector1_32eaef483ef24026bebd5f0aec2b3ec5: 0
+    - Vector1_72e2dd0f98584928b22b20964c15dbed: 1
+    - Vector1_8cb0d3c525e74f8485adfc54acd72fa2: 1
     - _Amplitude: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -81,6 +98,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_0fe5d5d80f7146da8cebccddcb56db88: {r: 0.46, g: 0.46, b: 0.46, a: 1}
     - _Color: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}

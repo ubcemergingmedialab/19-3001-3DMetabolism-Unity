@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimateMaterial : StateMachineBehaviour
+public class AnimateMaterialEdge : StateMachineBehaviour
 {
-    public Color StartColor;
-    public Color EndColor;
+    public float StartValue;
+    public float EndValue;
     public float animationLength = 2;
     private float currentTime;
     private float endTime;
@@ -20,13 +20,13 @@ public class AnimateMaterial : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         currentTime = Time.time;
-        animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", Color.Lerp(StartColor, EndColor, (endTime - currentTime) / animationLength));
+        animator.GetComponent<Renderer>().material.SetFloat("_Amplitude", Mathf.Lerp(StartValue, EndValue, (endTime - currentTime) / animationLength));
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", EndColor);
+        animator.GetComponent<Renderer>().material.SetFloat("_Amplitude", EndValue);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
