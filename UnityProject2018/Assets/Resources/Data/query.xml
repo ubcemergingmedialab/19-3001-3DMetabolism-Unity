@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='item'/>
+		<variable name='itemLabel'/>
+		<variable name='itemDescription'/>
+	</head>
+	<results>
+		<result>
+			<binding name='item'>
+				<uri>27124826</uri>
+			</binding>
+			<binding name='itemLabel'>
+				<literal xml:lang='en'>beta-D-fructofuranose 6-phosphate(2-)</literal>
+			</binding>
+			<binding name='itemDescription'>
+				<literal xml:lang='en'>chemical compound</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='item'>
+				<uri>27125625</uri>
+			</binding>
+			<binding name='itemLabel'>
+				<literal xml:lang='en'>alpha-D-glucose 6-phosphate(2-) ion</literal>
+			</binding>
+			<binding name='itemDescription'>
+				<literal xml:lang='en'>anion</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='item'>
+				<uri>50257965</uri>
+			</binding>
+			<binding name='itemLabel'>
+				<literal xml:lang='en'>GPI dimer [cytosol]</literal>
+			</binding>
+			<binding name='itemDescription'>
+				<literal xml:lang='en'>An instance of macromolecular complex in Homo sapiens with Reactome ID (R-HSA-70469)</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>

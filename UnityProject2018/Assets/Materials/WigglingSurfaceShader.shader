@@ -12,15 +12,19 @@ Shader "Custom/WigglingSurfaceShader" {
 	_Amplitude("Amplitude", Range(0, 1)) = 0.02
 	}
 		SubShader{
-		Tags { "RenderType" = "Opaque" "DisableBatching" = "True"}
+		Tags { "Queue" = "Transparent" "RenderType" = "Opaque" "DisableBatching" = "True"}
+		ZWrite On
+		Blend SrcAlpha OneMinusSrcAlpha
+		Cull back
 		LOD 200
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows addshadow vertex:vert
-
+		#pragma surface surf Standard fullforwardshadows addshadow vertex:vert Lambert alpha
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
+
+		#include "UnityCG.cginc"
 
 		sampler2D _MainTex;
 		float _TimeDirection;
@@ -35,7 +39,7 @@ Shader "Custom/WigglingSurfaceShader" {
 		half _Glossiness;
 		half _Metallic;
 		fixed4 _Color;
-		static half _Frequency = 10;
+		static half _Frequency = 2;
 		
 		struct v2f
 		{
@@ -51,9 +55,9 @@ Shader "Custom/WigglingSurfaceShader" {
 			UNITY_INSTANCING_BUFFER_END(Props)
 
 			void vert(inout appdata_base v) {
-			v2f o;
-			o.vertex = mul(unity_WorldToObject, v.vertex); 
-				v.vertex.xyz += v.normal * (sin((v.vertex.y * _Frequency + _Time.y * _TimeDirection * _TimeSpeed) * _Size) * _Amplitude + 0.02);
+				v2f o;
+				o.vertex = mul(unity_WorldToObject, v.vertex); 
+				v.vertex.xyz += v.normal * sin((v.vertex.y / _Size) * _Frequency + (_Time.y * _TimeSpeed)) * _Amplitude;
 			}
 
 			void surf(Input IN, inout SurfaceOutputStandard o) {
@@ -64,8 +68,14 @@ Shader "Custom/WigglingSurfaceShader" {
 				o.Metallic = _Metallic;
 				o.Smoothness = _Glossiness;
 				o.Alpha = c.a;
-				}
-				ENDCG
+			}
+
+			//fixed4 frag(v2f i) : SV_Target
+			//{
+			//	fixed4 col = tex2D(_MainTex, i.texcoord) * _Color; // multiply by _Color
+			//	return col;
+			//}
+		ENDCG
 	}
 		FallBack "Diffuse"
 }

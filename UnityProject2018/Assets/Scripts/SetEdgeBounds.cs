@@ -14,7 +14,7 @@ public class SetEdgeBounds : MonoBehaviour
         }
         if(bounds != null)
         {
-            Debug.Log("setting float to " + bounds.extents.z);
+            //Debug.Log("setting float to " + bounds.extents.z);
             GetComponent<MeshRenderer>().material.SetFloat("_Size", bounds.extents.z);
         }
     }

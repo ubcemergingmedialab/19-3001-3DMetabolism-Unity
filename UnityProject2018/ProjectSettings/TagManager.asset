@@ -7,6 +7,112 @@ TagManager:
   - Node2
   - Edge
   - Node1
+  - UI
+  - phosphoglycerate kinase
+  - alanine aminotransferase
+  - glutaminase
+  - debranching enzyme (specifically, alpha-1,6-glucosidase)
+  - glucose-6-phosphate dehydrogenase
+  - arginine
+  - transaldolase
+  - glucose-6-phosphatase
+  - phosphopentose epimerase
+  - phosphoglucose mutase
+  - ribulose-5-phosphate
+  - ribose-5-phosphate
+  - oxaloacetate (mitochondrion)
+  - citrate
+  - transketolase
+  - argininosuccinate synthetase
+  - carbamoyl phosphate
+  - glycogen synthase
+  - aspartate aminotransferase (mitochondrion)
+  - ornithine (cytosol)
+  - phosphoenolpyruvate (cytosol)
+  - aspartate aminotransferase (cytosol)
+  - ornithine (mitochondrion)
+  - isocitrate dehydrogenase
+  - aconitase
+  - glutamate dehydrogenase
+  - ornithine transcarbamoylase
+  - arginase
+  - L-lactate dehydrogenase
+  - glycogen phosphorylase
+  - argininosuccinase
+  - phosphoglycerate mutase
+  - 6-phosphogluconate dehydrogenase
+  - fumarase (cytosol)
+  - aspartate (cytosol)
+  - sedoheptulose-7-phosphate
+  - succinate
+  - phosphoenolpyruvate carboxykinase (mitochondrion)
+  - pyruvate kinase
+  - enolase
+  - oxaloacetate (cytosol)
+  - malate dehydrogenase (mitochondrion)
+  - alpha-ketoglutarate (cytosol)
+  - glutamine (mitochondrion)
+  - glyceraldehyde-3-phosphate
+  - fumarate (mitochondrion)
+  - glycogen (n+1)
+  - isocitrate
+  - glycerol-3-phosphate dehydrogenase
+  - xylulose-5-phosphate
+  - alpha-ketoglutarate dehydrogenase complex
+  - alpha-ketoglutarate (mitochondrion)
+  - glucose
+  - succinate dehydrogenase
+  - L-lactate
+  - phosphofructosekinase-1 (PFK-1)
+  - acetyl CoA
+  - fumarase (mitochodrion)
+  - 6-phosphoglucono-delta-lactone
+  - aspartate (mitochondrion)
+  - 1,3-bisphosphoglycerate
+  - malate (mitrochondrion)
+  - glyceraldehyde-3-phosphate dehydrogenase
+  - fructose-6-phosphate
+  - fumarate (cytosol)
+  - gluconolactonase
+  - 6-phosphogluconate
+  - dihydroxyacetone phosphate
+  - 3-phosphoglycerate
+  - aldolase
+  - citrulline (cytosol)
+  - glutamate (cytosol)
+  - fructose-1, 6-bisphosphate
+  - pyruvate carboxylase
+  - citrulline (mitochondrion)
+  - phosphopentose isomerase
+  - triose phosphate isomerase OR aldolase
+  - carbamoyl phosphate synthetase I
+  - fructose-1,6-bisphosphatase
+  - glutamate (mitochondrion)
+  - phosphohexose isomerase
+  - citrate synthase
+  - succinyl CoA
+  - pyruvate (mitochondrion)
+  - glutamine (cytosol)
+  - glycogen (n residues)
+  - alanine (mitochondrion)
+  - hexokinase (glucokinase in hepatocytes)
+  - urea
+  - UDP-glucose
+  - glycerol-3-phosphate
+  - glucose-6-phosphate
+  - pyruvate (cytosol)
+  - erythrose-4-phosphate
+  - phosphoenolpyruvate (mitochondrion)
+  - malate (cytosol)
+  - pyruvate dehydrogenase complex
+  - UDP-glucose pyrophosphorylase
+  - glucose-1-phosphate
+  - succinyl CoA synthetase
+  - NH4+
+  - argininosuccinate
+  - phosphoenolpyruvate carboxykinase (cytosol)
+  - 2-phosphoglycerate
+  - malate dehydrogenase (cytosol)
   layers:
   - Default
   - TransparentFX
@@ -17,7 +123,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - MyInitialLayerName
   - 
   - 
   - 

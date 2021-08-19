@@ -17,8 +17,8 @@ public class FocusCamera : MonoBehaviour
         
     }
 
-    public void MoveToTarget()
+    public void MoveToTarget(GameObject focus)
     {
-        GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeFocus(targetPosition);
+        GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeFocus(focus.transform);
     }
 }
