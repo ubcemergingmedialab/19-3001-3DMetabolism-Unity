@@ -1,5 +1,5 @@
-# Project name
-## Project Information
+# 3D Metabolism
+## Project Description
 A visualization of the Metabolic that leverages the third dimension and Unity animations to make the network easier to understand
 
 ## External Assets
