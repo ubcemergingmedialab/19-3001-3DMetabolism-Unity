@@ -47,6 +47,13 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 - Jenn - Designer
 - Kim - Designer
 
+### Fall 2020 Team:
+- Courtney - Lead/Designer
+- Kim - Designer
+- Dante - Developer
+- Nikko - Developer
+- Hai Lin - Developer
+
 ## Documentation
 For documentation, please visit the UBC Wiki for this repository (this wiki talks about a past Aframe version): 
 https://wiki.ubc.ca/Documentation:Metabolism
