@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: succinyl CoA synthetase
   m_EditorClassIdentifier: 
-  Label: 
+  Label: "Succinyl-CoA + GDP + P\u1D62 \u21CC Succinate + CoA-SH + GTP"
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q225
+  Description: 
+  EnergyConsumed: "ADP \u2192 ATP"
+  EnergyProduced: 
+  GibbsFreeEnergy: -2.9 kJ/mol
