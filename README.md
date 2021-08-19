@@ -31,7 +31,7 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 ## Team
 
 ### Faculty:
-(Faculty team here)
+Dr. Lindsay Rogers
 
 ### Current EML Student Team:
 
