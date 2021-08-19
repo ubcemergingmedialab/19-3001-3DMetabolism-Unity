@@ -17,4 +17,5 @@ public class NodeSO : ScriptableObject
     public string MolecularFormula;
     [TextArea(10, 100)]
     public string IUPACNames;
+    public string link;
 }

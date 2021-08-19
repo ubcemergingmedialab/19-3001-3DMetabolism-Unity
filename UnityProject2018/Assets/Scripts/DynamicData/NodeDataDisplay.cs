@@ -75,7 +75,7 @@ public class NodeDataDisplay : MonoBehaviour
         if (UIPresenter.UIList.NodeUI != null)
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI);
         else Debug.Log("Error in callin NodeUI list");
-
-    }
+        DisplayData.link = nodeData.link;
+    }   
 }
 

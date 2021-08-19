@@ -14,7 +14,7 @@ public class Card: ScriptableObject {
     public string GibbsFreeEnergy;
     public string MolecularFormula;
     public string IUPACNames;
-    
+    public string link;
 
 
 
