@@ -15,25 +15,17 @@ public class ClickListen : MonoBehaviour
     {
         timeCounter = totalTime;
         if(!GameObject.Find("Center/Network"))
-            Debug.Log("Network Parent could not be found");
+            Debug.Log("ClickListen.cs Error: Network Parent could not be found.");
         else
             network = GameObject.Find("Center/Network");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseOver()
     {
-        
-    }
-
-    private void OnMouseDown()
-    {
-        Debug.Log("clicked on " + transform.name);
-        if(!isMoving)
+        bool hasLShiftClicked = Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.Mouse0);
+        if(!isMoving && hasLShiftClicked)
         {
-            Debug.Log("calling coroutine");
             Vector3 moveChunk = (-1 * transform.position) * totalTime/moveSplit;
-            Debug.Log(moveChunk);
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);
         }
