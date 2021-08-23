@@ -16,7 +16,7 @@ MonoBehaviour:
     + NADH + H+
   Position: {x: 0, y: 0, z: 0}
   QID: Q74
-  Description: 
-  EnergyConsumed: hhhh
-  EnergyProduced: h
-  GibbsFreeEnergy: hhhhhhh
+  Description: Part of Glycolysis
+  EnergyConsumed: "NAD\u207A -> NADH"
+  EnergyProduced: 
+  GibbsFreeEnergy: 6.3 kJ/mol

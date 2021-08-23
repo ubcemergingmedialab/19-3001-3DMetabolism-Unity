@@ -15,7 +15,7 @@ MonoBehaviour:
   Label: 1,3-bisphosphoglycerate + ADP <=> 3-phosphoglycerate + ATP
   Position: {x: 0, y: 0, z: 0}
   QID: Q77
-  Description: Reaction in the glycolysis pathway
-  EnergyConsumed: ADP
-  EnergyProduced: ATP
+  Description: Part of Glycolysis
+  EnergyConsumed: ADP -> ATP
+  EnergyProduced: 
   GibbsFreeEnergy: -18.8 kJ/mol

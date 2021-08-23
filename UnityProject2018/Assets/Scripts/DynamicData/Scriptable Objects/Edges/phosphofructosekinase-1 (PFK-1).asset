@@ -15,4 +15,7 @@ MonoBehaviour:
   Label: fructose 6-phosphate + ATP => fructose 1,6-bisphosphate + ADP
   Position: {x: 0, y: 0, z: 0}
   QID: Q71
-  Description: 
+  Description: Part of Glycolysis
+  EnergyConsumed: ATP -> ADP
+  EnergyProduced: 
+  GibbsFreeEnergy: 14.2 kJ/mol

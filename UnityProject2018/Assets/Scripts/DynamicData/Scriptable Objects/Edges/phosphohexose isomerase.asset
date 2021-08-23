@@ -15,4 +15,7 @@ MonoBehaviour:
   Label: glucose 6-phosphate <=> fructose 6-phosphate
   Position: {x: 0, y: 0, z: 0}
   QID: Q69
-  Description: 
+  Description: Part of Glycolysis
+  EnergyConsumed: None
+  EnergyProduced: 
+  GibbsFreeEnergy: 1.7 kJ/mol

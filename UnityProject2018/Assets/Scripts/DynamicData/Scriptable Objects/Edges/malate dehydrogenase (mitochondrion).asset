@@ -16,6 +16,6 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   QID: Q228
   Description: 
-  EnergyConsumed: NAD+ -> NADH
+  EnergyConsumed: "NAD\u207A -> NADH"
   EnergyProduced: 
   GibbsFreeEnergy: 29.7 kJ/mol

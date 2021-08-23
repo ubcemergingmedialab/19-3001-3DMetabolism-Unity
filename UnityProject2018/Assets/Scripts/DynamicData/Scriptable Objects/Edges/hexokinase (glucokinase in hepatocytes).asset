@@ -16,3 +16,6 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   QID: Q319
   Description: catalyzed by hexokinase (glucokinase in hepatocytes)
+  EnergyConsumed: ATP -> ADP
+  EnergyProduced: 
+  GibbsFreeEnergy: -16.7 kJ/mol

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: enolase
   m_EditorClassIdentifier: 
-  Label: HGHGH
+  Label: 2-phosphoglycerate <=> phosphoenolpyruvate + H2O
   Position: {x: 0, y: 0, z: 0}
-  QID: h
-  Description: h
+  QID: Q80
+  Description: Part of Glycolysis
+  EnergyConsumed: None
+  EnergyProduced: 
+  GibbsFreeEnergy: 7.5 kJ/mol

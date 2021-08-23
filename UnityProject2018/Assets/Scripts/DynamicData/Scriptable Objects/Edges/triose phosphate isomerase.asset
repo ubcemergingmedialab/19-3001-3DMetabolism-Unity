@@ -15,4 +15,7 @@ MonoBehaviour:
   Label: dihydroxyacetone phosphate <=> glyceraldehyde 3-phosphate
   Position: {x: 0, y: 0, z: 0}
   QID: Q73
-  Description: 
+  Description: Part of Glycolysis
+  EnergyConsumed: None
+  EnergyProduced: 
+  GibbsFreeEnergy: 7.5 kJ/mol

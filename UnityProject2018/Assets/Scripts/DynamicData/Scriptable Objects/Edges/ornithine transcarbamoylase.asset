@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: ornithine transcarbamoylase
   m_EditorClassIdentifier: 
-  Label: 
+  Label: carbamoyl phosphate + ornithine => citrulline + orthophosphate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q635
+  Description: 
+  EnergyConsumed: None
+  EnergyProduced: 
+  GibbsFreeEnergy: 
