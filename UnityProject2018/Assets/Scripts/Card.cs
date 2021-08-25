@@ -17,6 +17,16 @@ public class Card: ScriptableObject {
     public string link;
 
 
+    public string AuxLabel;
+    public string AuxQID;
+    public string AuxDescription;
+    public string AuxCharge;
+    public string AuxEnergyConsumed;
+    public string AuxEnergyProduced;
+    public string AuxGibbsFreeEnergy;
+    public string AuxMolecularFormula;
+    public string AuxIUPACNames;
+    public string Auxlink;
 
 }
 

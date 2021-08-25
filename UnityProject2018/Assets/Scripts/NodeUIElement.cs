@@ -31,4 +31,10 @@ public class NodeUIElement : UIElement
             LinkButton.GetComponent<OpenLink>().url = ((Card)DataReference).link;
         }
     }
+
+    override public void UpdateUI(bool hasPartner)
+    {
+        //Update Node UI
+        Debug.Log("Tried to call NodeUI UpdateUI function with boolean, not implemented");
+    }
 }

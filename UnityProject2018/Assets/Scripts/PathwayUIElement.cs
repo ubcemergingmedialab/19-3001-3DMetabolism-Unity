@@ -21,4 +21,9 @@ public class PathwayUIElement : UIElement
        QIDText.text = ((Card)DataReference).QID;
   
     }
+
+    override public void UpdateUI(bool hasPartner) {
+        // not implemented, follow pattern if second metabolite card needed
+        Debug.Log("Update UI called with boolean on PathwayUIElement, not implemented");
+    }
 }

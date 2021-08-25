@@ -73,7 +73,7 @@ public class NodeDataDisplay : MonoBehaviour
         DisplayData.MolecularFormula = nodeData.MolecularFormula;
         DisplayData.IUPACNames = nodeData.IUPACNames;
         if (UIPresenter.UIList.NodeUI != null)
-            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI);
+            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI, false);
         else Debug.Log("Error in callin NodeUI list");
         DisplayData.link = nodeData.link;
     }   

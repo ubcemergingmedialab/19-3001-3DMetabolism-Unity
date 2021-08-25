@@ -23,7 +23,7 @@ public class PathwayUIOnClick : MonoBehaviour
         dataSO.QID = so.QID;
         dataSO.Description = so.Description;
         if (UIPresenter.UIList.PathwayUI != null)
-            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.PathwayUI);
+            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.PathwayUI, false);
         else Debug.Log("Error in callin PathwayUI list");
     }
 }

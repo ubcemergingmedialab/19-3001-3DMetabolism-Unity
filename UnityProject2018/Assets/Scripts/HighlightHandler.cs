@@ -33,6 +33,10 @@ public class HighlightHandler : MonoBehaviour
         UpdateHighlight();
     }
 
+    public bool IsDoubleHighlighted() {
+        return highlightCounter >= 2;
+    }
+
 
     private void UpdateHighlight()
     {
