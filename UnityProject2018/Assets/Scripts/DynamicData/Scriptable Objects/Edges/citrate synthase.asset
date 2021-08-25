@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: citrate synthase
   m_EditorClassIdentifier: 
-  Label: "Oxaloacetate + Acetyl CoA + H\u2082O \u2192 Citrate + CoA-SH"
+  Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: Q219
-  Description: Part of Citric Acid Cycle
-  EnergyConsumed: None
-  EnergyProduced: 
-  GibbsFreeEnergy: -32.2 kJ/mol
+  QID: 

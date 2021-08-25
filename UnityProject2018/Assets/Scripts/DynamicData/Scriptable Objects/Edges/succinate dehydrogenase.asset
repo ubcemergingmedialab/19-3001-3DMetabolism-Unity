@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: succinate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: "Succinate \u21CC Fumarate"
+  Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: Q226
-  Description: 
-  EnergyConsumed: None
-  EnergyProduced: 
-  GibbsFreeEnergy: 0
+  QID: 

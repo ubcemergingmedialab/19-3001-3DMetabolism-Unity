@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: pyruvate kinase
   m_EditorClassIdentifier: 
-  Label: phosphoenolpyruvate + ADP => pyruvate + ATP
+  Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: Q81
-  Description: Reaction involved the production of pyruvate. The last step of Glycolysis
-  EnergyConsumed: ADP -> ATP
-  EnergyProduced: 
-  GibbsFreeEnergy: -31.4 kJ/mol
+  QID: 
