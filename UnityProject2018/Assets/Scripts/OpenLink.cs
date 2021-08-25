@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenLink : MonoBehaviour
 {
 
-    public string url = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6167041/";
+    public string url = "https://www.genome.jp/kegg/";
    public void OpenChannel() {
        Application.OpenURL(url);
    }

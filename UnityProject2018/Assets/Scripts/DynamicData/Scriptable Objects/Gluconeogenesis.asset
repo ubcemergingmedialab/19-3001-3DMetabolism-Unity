@@ -52,4 +52,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37556205b1c09754a9cf8382cd67d9f6, type: 2}
   - {fileID: 11400000, guid: 5add180661fda574bb61c57e192fadd9, type: 2}
   Label: Gluconeogenesis
-  Description: 
+  Description: Gluconeogenesis is a process in the body that converts non-carbohydrate
+    substrates to glucose. This pathway is essentially the reverse pathway of glycolysis
+    resulting in the production of glucose.
