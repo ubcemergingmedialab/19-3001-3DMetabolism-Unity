@@ -30,4 +30,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f65573058aff7be4e99405eeaf0badc1, type: 2}
   - {fileID: 11400000, guid: 8c9902c9e5881c447b91e1ee4c062e6f, type: 2}
   Label: Malate-Aspartate Shuttle
-  Description: 
+  Description: The malate-aspartate shuttle is involved in the translocation of electrons
+    across the mitochondrial membrane for use in the electron transport chain. The
+    electrons are produced in glycolysis which happens outside the mitochondria.

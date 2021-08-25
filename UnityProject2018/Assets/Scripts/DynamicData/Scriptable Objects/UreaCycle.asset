@@ -38,4 +38,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0618dd19c4023e940abecb3b99468119, type: 2}
   - {fileID: 11400000, guid: 82a3f9bfc43a63541a1d23e5761bb586, type: 2}
   Label: Urea Cycle
-  Description: Cycle of biochemical reactions producing urea
+  Description: Urea cycle is a cycle in the human body also known as the krebs bicycle
+    which produces urea from ammonia to be excreted. Many metabolites involved in
+    the Urea Cycle are also found in the Citric Acid Cycle and these cycle work together
+    to produce the different metabolites.

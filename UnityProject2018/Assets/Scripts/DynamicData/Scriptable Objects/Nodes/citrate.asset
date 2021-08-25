@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bd3af8dc2bcaa4fa25cb8c3480a615, type: 3}
   m_Name: citrate
   m_EditorClassIdentifier: 
-  Label: citrate
+  Label: Citric Acid
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q30
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of The Citric Acid Cycle
+  Charge: -3
+  EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: http://www.genome.jp/dbget-bin/www_bget?cpd:C00158
