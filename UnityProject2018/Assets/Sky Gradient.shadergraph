@@ -204,7 +204,7 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 288.99981689453127,
+            "x": 288.9999694824219,
             "y": 456.0
         },
         "m_Blocks": [
@@ -268,10 +268,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -781.0000610351563,
-            "y": -63.000003814697269,
-            "width": 208.00001525878907,
-            "height": 127.00000762939453
+            "x": -404.0,
+            "y": 205.0,
+            "width": 99.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -327,10 +327,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
+            "x": 288.0000305175781,
+            "y": 392.0,
+            "width": 200.00001525878907,
+            "height": 41.000003814697269
         }
     },
     "m_Slots": [
@@ -771,7 +771,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "89e0511d718a440da2954ac4fc8c5835",
     "m_Id": 0,
-    "m_DisplayName": "Top",
+    "m_DisplayName": "Bottom",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -813,7 +813,7 @@
     "m_Guid": {
         "m_GuidSerialized": "a7937d13-6039-4202-b270-5b5089ff1cd9"
     },
-    "m_Name": "Bottom",
+    "m_Name": "Top",
     "m_DefaultReferenceName": "Color_8d957a6566fa45a498a04bd0fcad8921",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
@@ -857,9 +857,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -797.0,
-            "y": -16.99999237060547,
-            "width": 123.00000762939453,
+            "x": -422.0,
+            "y": 239.0,
+            "width": 117.0,
             "height": 34.0
         }
     },
@@ -1075,7 +1075,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "babcb9e294464146860f5780506493d9",
     "m_Id": 0,
-    "m_DisplayName": "Bottom",
+    "m_DisplayName": "Top",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1143,7 +1143,7 @@
     "m_Guid": {
         "m_GuidSerialized": "d0cf82ce-c7fe-4622-96af-6918e0423a14"
     },
-    "m_Name": "Top",
+    "m_Name": "Bottom",
     "m_DefaultReferenceName": "Color_c314c16adbdc4bf3846c4f1062dc2c09",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
