@@ -36172,6 +36172,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 934510250166981537, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 22.74
+      objectReference: {fileID: 0}
     - target: {fileID: 934510251426454037, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_SizeDelta.x
