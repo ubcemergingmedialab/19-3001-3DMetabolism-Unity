@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bd3af8dc2bcaa4fa25cb8c3480a615, type: 3}
   m_Name: fructose-1, 6-bisphosphate
   m_EditorClassIdentifier: 
-  Label: fructose-1, 6-biphosphate
+  Label: fructose-1, 6-bisphosphate
   Position: {x: 0, y: 0, z: 0}
   QID: 
   Rotation: {x: 0.8, y: 0, z: 0, w: 0.46}
   Description: Sample Description
+  GibbsFreeEnergy: 
+  EnzymeRequired: 

@@ -65,7 +65,11 @@ public class UIPresenter : MonoBehaviour
         if(AvailableElements.TryGetValue(el, out element))
         {
             ClosePanel();
-            element.UpdateUI();
+            if(displayPartner) {
+                element.UpdateUI(true);
+            } else {
+                element.UpdateUI();
+            }
             OpenPanel(element);
         }
     }

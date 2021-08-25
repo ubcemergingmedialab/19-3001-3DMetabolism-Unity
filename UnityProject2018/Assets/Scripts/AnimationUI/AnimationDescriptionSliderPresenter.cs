@@ -52,7 +52,7 @@ public class AnimationDescriptionSliderPresenter : AnimationDescriptionPresenter
                 Material tempMat = el.GetComponent<Renderer>().material;
                 if (tempMat != null)
                 {
-                    tempMat.SetColor("_Color", defaultColor);
+                    tempMat.SetColor("_BaseColor", defaultColor);
                 }
             });
             Material mat = adList.Find(delegate (GameObject e)
@@ -61,7 +61,7 @@ public class AnimationDescriptionSliderPresenter : AnimationDescriptionPresenter
             }).transform.Find("Marker").gameObject.GetComponent<Renderer>().material;
             if (mat != null)
             {
-                mat.SetColor("_Color", highlightColor);
+                mat.SetColor("_BaseColor", highlightColor);
             }
             if (sliderComponent != null)
             {

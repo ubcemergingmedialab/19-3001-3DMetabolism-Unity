@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [ExecuteAlways]
 public class NodeDataDisplay : MonoBehaviour
 {
     public NodeSO nodeData;
-    public TextMesh labelText;
+    public TextMeshPro labelText;
     public Card DisplayData;
 
     void Start()
     {
-        InitializeLabelText();
     }
 
     private void OnEnable()
@@ -29,8 +29,9 @@ public class NodeDataDisplay : MonoBehaviour
         if(nodeData != null)
         {
             Vector3 localPosition = labelText.transform.localPosition;
-            labelText.text = nodeData.Label;
-            labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
+            labelText.SetText("<mark=#00000088><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            //Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
+            //labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
         }
     }
 
@@ -38,22 +39,22 @@ public class NodeDataDisplay : MonoBehaviour
     {
         if(nodeData != null)
         {
-            labelText.text = nodeData.Label;
+            labelText.SetText("<mark=#00000055><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
         }
     }
 
     public void TransparentText()
     {
-        TextMesh textMesh = transform.Find("Label").GetComponent<TextMesh>();
+        TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
         Color tempColor = textMesh.color;
-        tempColor.a = 0.2f;
+        tempColor.a = 0.1f;
         textMesh.color = tempColor;
     }
 
     public void OpaqueText()
     {
 
-        TextMesh textMesh = transform.Find("Label").GetComponent<TextMesh>();
+        TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
         Color tempColor = textMesh.color;
         tempColor.a = 1f;
         textMesh.color = tempColor;

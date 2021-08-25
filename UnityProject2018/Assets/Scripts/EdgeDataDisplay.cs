@@ -22,7 +22,7 @@ public class EdgeDataDisplay : MonoBehaviour
 
     public void UpdateScriptableObject()
     {
-        bool displayPartner = GetComponent<HighlightHandler>().IsDoubleHighlighted();
+        bool displayPartner = (!GetComponent<HighlightHandler>().IsDoubleHighlighted()) && (partnerData != null);
         DisplayData.Label = edgeData.Label;
         DisplayData.QID = edgeData.QID;
         DisplayData.Description = edgeData.Description;

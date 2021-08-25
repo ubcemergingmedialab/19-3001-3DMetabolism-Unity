@@ -12,15 +12,15 @@ Shader "Custom/WigglingSurfaceShader" {
 	_Amplitude("Amplitude", Range(0, 1)) = 0.02
 	}
 		SubShader{
-		Tags { "Queue" = "Transparent" "RenderType" = "Transparent" "DisableBatching" = "True"}
-		ZWrite Off
+		Tags { "Queue" = "Transparent" "RenderType" = "Opaque" "DisableBatching" = "True"}
+		ZWrite On
 		Blend SrcAlpha OneMinusSrcAlpha
-		Cull front
+		Cull back
 		LOD 200
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows addshadow vertex:vert
+		#pragma surface surf Standard fullforwardshadows addshadow vertex:vert Lambert alpha
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
