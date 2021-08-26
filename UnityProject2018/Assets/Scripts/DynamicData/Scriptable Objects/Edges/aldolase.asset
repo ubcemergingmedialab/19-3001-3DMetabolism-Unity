@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: aldolase
   m_EditorClassIdentifier: 
-  Label: fructose 1,6-bisphosphate <=> dihydroxyacetone phosphate + glyceraldehyde
-    3-phosphate
+  Label: aldolase
   Position: {x: 0, y: 0, z: 0}
-  QID: Q72
-  Description: Part of Glycolysis
-  EnergyConsumed: None
-  EnergyProduced: 
-  GibbsFreeEnergy: 23.8 kJ/mol
+  QID: 
+  Description: 

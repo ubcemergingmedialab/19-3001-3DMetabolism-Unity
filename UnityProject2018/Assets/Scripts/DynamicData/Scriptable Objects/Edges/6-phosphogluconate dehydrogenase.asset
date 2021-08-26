@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: 6-phosphogluconate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: D-glucono-1,5-lactone 6-phosphate + H2O => 6-phospho-D-gluconate
+  Label: 6-phosphogluconate dehydrogenase
   Position: {x: 0, y: 0, z: 0}
-  QID: Q632
-  Description: Part of Pentose Phosphate Pathway
-  EnergyConsumed: None
-  EnergyProduced: 
-  GibbsFreeEnergy: 
+  QID: 
+  Description: 

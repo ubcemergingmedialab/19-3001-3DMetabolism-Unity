@@ -5,6 +5,7 @@ using UnityEngine;
 public class EdgeDataDisplay : MonoBehaviour
 {
     public EdgeSO edgeData;
+    public EdgeSO partnerData;
     public Card DisplayData;
 
     // Start is called before the first frame update
@@ -21,14 +22,23 @@ public class EdgeDataDisplay : MonoBehaviour
 
     public void UpdateScriptableObject()
     {
+        bool displayPartner = (!GetComponent<HighlightHandler>().IsDoubleHighlighted()) && (partnerData != null);
         DisplayData.Label = edgeData.Label;
         DisplayData.QID = edgeData.QID;
         DisplayData.Description = edgeData.Description;
         DisplayData.EnergyConsumed = edgeData.EnergyConsumed;
         DisplayData.EnergyProduced = edgeData.EnergyProduced;
         DisplayData.GibbsFreeEnergy = edgeData.GibbsFreeEnergy;
+        if(displayPartner) {
+            DisplayData.AuxLabel = partnerData.Label;
+            DisplayData.AuxQID = partnerData.QID;
+            DisplayData.AuxDescription = partnerData.Description;
+            DisplayData.AuxEnergyConsumed = partnerData.EnergyConsumed;
+            DisplayData.AuxEnergyProduced = partnerData.EnergyProduced;
+            DisplayData.AuxGibbsFreeEnergy = partnerData.GibbsFreeEnergy;
+        }
         if (UIPresenter.UIList.EdgeUI != null)
-            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.EdgeUI);
+            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.EdgeUI, displayPartner);
         else Debug.Log("Error in callin EdgeUI list");
 
     }

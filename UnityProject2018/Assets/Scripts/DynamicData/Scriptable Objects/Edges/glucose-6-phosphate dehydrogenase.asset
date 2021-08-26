@@ -12,11 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: glucose-6-phosphate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: alpha-D-glucose 6-phosphate + NADP+ => D-glucono-1,5-lactone 6-phosphate
-    + NADPH + H+
+  Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: Q685
-  Description: Part of Pentose Phosphate Pathway
-  EnergyConsumed: NADP->NADPH
-  EnergyProduced: 
-  GibbsFreeEnergy: 
+  QID: 

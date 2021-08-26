@@ -7,4 +7,6 @@ public abstract class UIElement : MonoBehaviour
     public ScriptableObject DataReference;
 
     public abstract void UpdateUI();
+
+    public abstract void UpdateUI(bool hasPartner);
 }

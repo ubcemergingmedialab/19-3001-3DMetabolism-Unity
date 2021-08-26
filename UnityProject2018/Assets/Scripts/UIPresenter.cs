@@ -59,13 +59,17 @@ public class UIPresenter : MonoBehaviour
         }
     }
 
-    public void NotifyUIUpdate(UIList el)
+    public void NotifyUIUpdate(UIList el, bool displayPartner)
     {
         UIElement element;
         if(AvailableElements.TryGetValue(el, out element))
         {
             ClosePanel();
-            element.UpdateUI();
+            if(displayPartner) {
+                element.UpdateUI(true);
+            } else {
+                element.UpdateUI();
+            }
             OpenPanel(element);
         }
     }

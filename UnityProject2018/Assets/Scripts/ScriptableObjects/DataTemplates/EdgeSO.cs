@@ -13,4 +13,13 @@ public class EdgeSO : ScriptableObject
     public string EnergyProduced;
     public string GibbsFreeEnergy;
 
+    
+    public string AuxLabel;
+    public Vector3 AuxPosition;
+    public string AuxQID;
+    public string AuxDescription;
+    public string AuxEnergyConsumed;
+    public string AuxEnergyProduced;
+    public string AuxGibbsFreeEnergy;
+
 }

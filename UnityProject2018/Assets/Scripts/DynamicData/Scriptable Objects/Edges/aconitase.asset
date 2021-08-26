@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: aconitase
   m_EditorClassIdentifier: 
-  Label: "Citrate \u21CC Isocitrate"
+  Label: aconitase
   Position: {x: 0, y: 0, z: 0}
-  QID: Q221
-  Description: Part of Citric Acid Cycle
-  EnergyConsumed: None
-  EnergyProduced: 
-  GibbsFreeEnergy: 13.3 kJ/mol
+  QID: 
+  Description: 
