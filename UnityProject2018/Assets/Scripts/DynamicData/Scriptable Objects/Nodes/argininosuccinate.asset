@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: argininosuccinate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q667
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
-  Charge: 
+  Description: Part of The Urea Cycle
+  Charge: -1
   EnzymeRequired: 
   MolecularFormula: C10H18N4O6
   IUPACNames: 
+  link: http://www.genome.jp/dbget-bin/www_bget?cpd:C03406
