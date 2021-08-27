@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: MalateAspartateShuttle
   m_EditorClassIdentifier: 
-  QID: 
+  QID: N/A
   nodes:
   - {fileID: 11400000, guid: f96ec2bd371d0d44fb7326a10ce7fa0f, type: 2}
   - {fileID: 11400000, guid: fa9c124ea84845547b60bf1006d70072, type: 2}

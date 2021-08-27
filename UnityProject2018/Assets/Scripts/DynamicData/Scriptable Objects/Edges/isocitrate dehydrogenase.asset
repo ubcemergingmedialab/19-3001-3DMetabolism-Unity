@@ -14,4 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q324
+  Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 
