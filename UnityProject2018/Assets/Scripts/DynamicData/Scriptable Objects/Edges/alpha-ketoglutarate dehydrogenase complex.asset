@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: alpha-ketoglutarate dehydrogenase complex
   m_EditorClassIdentifier: 
-  Label: alpha-ketoglutarate dehydrogenase complex
+  Label: "\u03B1-Ketoglutarate + NAD\u207A + CoA-SH \u21CC Succinyl-CoA + NADH +
+    H\u207A + CO\u2082"
   Position: {x: 0, y: 0, z: 0}
-  QID: Q325
+  QID: Q224
   Description: 
-  EnergyConsumed: 
-  EnergyProduced: 
-  GibbsFreeEnergy: 
+  EnergyConsumed: "NAD\u207A \u21CC NADH"
+  EnergyProduced: "\u03B1-ketoglutarate dehydrogenase complex"
+  GibbsFreeEnergy: -33.5 kJ/mol
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 
