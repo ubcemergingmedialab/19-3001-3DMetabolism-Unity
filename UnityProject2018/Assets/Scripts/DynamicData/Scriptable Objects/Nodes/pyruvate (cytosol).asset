@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: pyruvate
   Position: {x: 0, y: 0, z: 0}
-  QID: 2021
+  QID: Q60
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: I am pyruv8
-  GibbsFreeEnergy: 
+  Description: Part of Glycolysis
+  Charge: 0
   EnzymeRequired: 90ok
+  MolecularFormula: 
+  IUPACNames: 
+  link: https://www.genome.jp/dbget-bin/www_bget?cpd:C00022

@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: fructose-1, 6-bisphosphate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q27
   Rotation: {x: 0.8, y: 0, z: 0, w: 0.46}
-  Description: Sample Description
-  GibbsFreeEnergy: 
+  Description: Part of Glycolysis
+  Charge: -4
   EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: https://www.genome.jp/dbget-bin/www_bget?cpd:C05378

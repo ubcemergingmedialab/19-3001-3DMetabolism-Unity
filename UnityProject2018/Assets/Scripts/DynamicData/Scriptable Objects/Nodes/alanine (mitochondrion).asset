@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bd3af8dc2bcaa4fa25cb8c3480a615, type: 3}
   m_Name: alanine (mitochondrion)
   m_EditorClassIdentifier: 
-  Label: alanine
+  Label: Alanine
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q642
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of Amino Acid Breakdown
+  Charge: 0
+  EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: 

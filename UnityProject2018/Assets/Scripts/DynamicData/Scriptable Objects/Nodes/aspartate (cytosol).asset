@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: aspartate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q117
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   Description: Part of The Urea Cycle
-  Charge: 
+  Charge: -1
   EnzymeRequired: 
   MolecularFormula: C4H6NO
   IUPACNames: 
-  link: 
+  link: http://www.genome.jp/dbget-bin/www_bget?cpd:C00049
