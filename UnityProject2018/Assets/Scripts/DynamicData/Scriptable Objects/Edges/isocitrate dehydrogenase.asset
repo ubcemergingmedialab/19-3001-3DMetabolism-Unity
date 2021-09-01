@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: isocitrate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: 
+  Label: "Isocitrate + NAD\u207A \u21CC Oxalosuccinate + NADH + H\u207A"
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q222
+  Description: Part of The Citric Acid Cycle
+  EnergyConsumed: "NAD\u207A \u21CC NADH"
+  EnergyProduced: Isocitrate Dehydrogenase
+  GibbsFreeEnergy: N/A
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

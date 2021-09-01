@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: PentosePhosphate
   m_EditorClassIdentifier: 
-  QID: 
+  QID: N/A
   nodes:
   - {fileID: 11400000, guid: 60826692e0e3d7f4ba4bef402f83febd, type: 2}
   - {fileID: 11400000, guid: 815cbdf6df65bf848ba729f8240c7105, type: 2}
@@ -32,3 +32,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a896291137f5d54e8511be9ca73ec59, type: 2}
   - {fileID: 11400000, guid: 369057dea2e94af4f9e0a65588dba76b, type: 2}
   - {fileID: 11400000, guid: 695130f91f6766447b5c0e3306bed747, type: 2}
+  Label: Pentose Phosphate Pathway
+  Description: 'The Pentose Phosphate Pathway is involved in the production of NADPH
+    and 5 carbon sugars (pentoses) from glucose 6 phosphate. '

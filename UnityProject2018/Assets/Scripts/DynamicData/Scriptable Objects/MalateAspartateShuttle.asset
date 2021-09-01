@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: MalateAspartateShuttle
   m_EditorClassIdentifier: 
-  QID: 
+  QID: N/A
   nodes:
   - {fileID: 11400000, guid: f96ec2bd371d0d44fb7326a10ce7fa0f, type: 2}
   - {fileID: 11400000, guid: fa9c124ea84845547b60bf1006d70072, type: 2}
@@ -27,3 +27,9 @@ MonoBehaviour:
   edges:
   - {fileID: 11400000, guid: e5fb62fdf65796543a2a905fae6ea936, type: 2}
   - {fileID: 11400000, guid: 2a99af06c670272439c4cecdc9294b88, type: 2}
+  - {fileID: 11400000, guid: f65573058aff7be4e99405eeaf0badc1, type: 2}
+  - {fileID: 11400000, guid: 8c9902c9e5881c447b91e1ee4c062e6f, type: 2}
+  Label: Malate-Aspartate Shuttle
+  Description: The malate-aspartate shuttle is involved in the translocation of electrons
+    across the mitochondrial membrane for use in the electron transport chain. The
+    electrons are produced in glycolysis which happens outside the mitochondria.

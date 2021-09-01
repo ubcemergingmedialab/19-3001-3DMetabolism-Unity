@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: glycogen (n+1)
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q627
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of Glycogen Synthesis/Breakdown
+  Charge: None
+  EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: http://www.genome.jp/dbget-bin/www_bget?cpd:C00718

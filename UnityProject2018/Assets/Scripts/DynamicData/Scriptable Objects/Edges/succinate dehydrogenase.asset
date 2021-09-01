@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: succinate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: 
+  Label: "Succinate + FADH \u21CC Fumarate + FADH2"
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q226
+  Description: Part of The Citric Acid Cycle
+  EnergyConsumed: "FADH \u21CC FADH2"
+  EnergyProduced: Succinate Dehydrogenase
+  GibbsFreeEnergy: 0 kJ/mol
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

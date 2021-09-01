@@ -82,6 +82,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Frequency: 2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -102,4 +103,5 @@ Material:
     - _Color: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
+    - _WiggleColor: {r: 0.46, g: 0.46, b: 0.46, a: 1}
   m_BuildTextureStacks: []

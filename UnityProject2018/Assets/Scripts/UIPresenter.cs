@@ -7,11 +7,15 @@ public class UIPresenter : MonoBehaviour
     public enum UIList
     {
         NodeUI,
-        EdgeUI
+        EdgeUI,
+
+        PathwayUI
     }
 
     public UIElement NodeUIElement;
     public UIElement EdgeUIElement;
+
+    public UIElement PathwayUIElement;
     public GameObject Panel;
 
     private static Dictionary<UIList, UIElement> AvailableElements;
@@ -45,18 +49,27 @@ public class UIPresenter : MonoBehaviour
         {
             AvailableElements.Add(UIList.EdgeUI, EdgeUIElement);
         }
+        if(PathwayUIElement != null)
+        {
+            AvailableElements.Add(UIList.PathwayUI, PathwayUIElement);
+        }
         if(Panel != null)
         {
             ClosePanel();
         }
     }
 
-    public void NotifyUIUpdate(UIList el)
+    public void NotifyUIUpdate(UIList el, bool displayPartner)
     {
         UIElement element;
         if(AvailableElements.TryGetValue(el, out element))
         {
-            element.UpdateUI();
+            ClosePanel();
+            if(displayPartner) {
+                element.UpdateUI(true);
+            } else {
+                element.UpdateUI();
+            }
             OpenPanel(element);
         }
     }

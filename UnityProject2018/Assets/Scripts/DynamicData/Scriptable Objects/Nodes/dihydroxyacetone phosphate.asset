@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: dihydroxyacetone phosphate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q44
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of Glycolysis
+  Charge: -2
+  EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: https://www.genome.jp/dbget-bin/www_bget?cpd:C00111

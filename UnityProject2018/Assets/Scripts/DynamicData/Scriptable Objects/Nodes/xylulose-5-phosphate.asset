@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: xylulose-5-phosphate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q355
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of The Pentose Phosphate Pathway
+  Charge: -2
+  EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: http://www.genome.jp/dbget-bin/www_bget?cpd:C00231

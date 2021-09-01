@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 2-phosphoglycerate
   Position: {x: 0, y: 0, z: 0}
-  QID: Q23
+  QID: Q15
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
-  GibbsFreeEnergy: 
+  Description: Part of Glycolysis
+  Charge: -3
   EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 
+  link: https://www.genome.jp/dbget-bin/www_bget?cpd:C00631

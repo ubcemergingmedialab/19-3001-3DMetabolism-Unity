@@ -69,7 +69,6 @@ public class HighlightPathway : MonoBehaviour
             {
                 node.GetComponent<HighlightHandler>().HighlightElement();
             }
-
         }
         foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
         {

@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: glyceraldehyde-3-phosphate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: 
+  Label: 'glyceraldehyde 3-phosphate + orthophosphate + NAD+ <=> 1,3-bisphosphoglycerate
+    + NADH + H+ '
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q74
+  Description: Fifth Step of Glycolysis
+  EnergyConsumed: NAD+ -> NADH
+  EnergyProduced: Glyceraldehyde 3-phosphate dehydrogenase
+  GibbsFreeEnergy: 6.3 kJ/mol
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

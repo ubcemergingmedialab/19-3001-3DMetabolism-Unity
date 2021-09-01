@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04b5ad3582eaf4398979147be77a81, type: 3}
   m_Name: Gluconeogenesis
   m_EditorClassIdentifier: 
-  QID: 
+  QID: Q88
   nodes:
   - {fileID: 11400000, guid: 18990bf152f589a4887619d71edd1167, type: 2}
   - {fileID: 11400000, guid: 6bd55ee4b2ce2c94f8aeba7b7b4cd16b, type: 2}
@@ -51,3 +51,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 966224a23da6357438a0bb49dd092350, type: 2}
   - {fileID: 11400000, guid: 37556205b1c09754a9cf8382cd67d9f6, type: 2}
   - {fileID: 11400000, guid: 5add180661fda574bb61c57e192fadd9, type: 2}
+  Label: Gluconeogenesis
+  Description: Gluconeogenesis is a process in the body that converts non-carbohydrate
+    substrates to glucose. This pathway is essentially the reverse pathway of glycolysis
+    resulting in the production of glucose.

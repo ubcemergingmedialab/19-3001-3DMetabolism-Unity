@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: carbamoyl phosphate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q665
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of The Urea Cycle
+  Charge: -2
+  EnzymeRequired: 
+  MolecularFormula: CH2NO5P
+  IUPACNames: 
+  link: http://www.kegg.jp/entry/C00169

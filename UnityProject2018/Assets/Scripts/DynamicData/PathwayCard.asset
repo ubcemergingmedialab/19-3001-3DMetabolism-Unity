@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 241861ba5eacdac4c9b687d5126f9723, type: 3}
-  m_Name: New Card 1
+  m_Name: PathwayCard
   m_EditorClassIdentifier: 
-  Label: Test
-  QID: Q24
-  Description: ERF
+  Label: 
+  QID: 
+  Description: 
+  Charge: 

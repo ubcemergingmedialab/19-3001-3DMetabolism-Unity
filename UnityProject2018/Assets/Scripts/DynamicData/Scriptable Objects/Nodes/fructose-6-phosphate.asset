@@ -16,4 +16,14 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   QID: Q28
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
+  Description: Part of Glycolysis
+  Charge: -2
+  EnzymeRequired: 
+  MolecularFormula: 
+  IUPACNames: 'beta-D-Fructose 6-phosphate
+
+    6-O-phosphonato-beta-D-fructofuranose
+
+    beta-D-fructofuranose
+    6-phosphate dianion'
+  link: https://www.genome.jp/dbget-bin/www_bget?cpd:C05345

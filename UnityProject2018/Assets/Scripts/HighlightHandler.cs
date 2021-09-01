@@ -52,6 +52,10 @@ public class HighlightHandler : MonoBehaviour
         UpdateHighlight();
     }
 
+    public bool IsDoubleHighlighted() {
+        return highlightCounter >= 2;
+    }
+    
     public void AccentElement()
     {
         highlightCounter = 2;
