@@ -14,6 +14,15 @@ public class EdgeUIElement : UIElement
     public Text EnergyProducedText;
     public Text GibbsFreeEnergyText;
 
+    public GameObject AuxUI;
+    public Text AuxLabelText;
+    public Text AuxDescriptionText;
+
+    public Text AuxQIDText;
+    public Text AuxEnergyConsumedText;
+    public Text AuxEnergyProducedText;
+    public Text AuxGibbsFreeEnergyText;
+
     override public void UpdateUI()
     {
         // Update Edge UI Element
@@ -25,10 +34,12 @@ public class EdgeUIElement : UIElement
         EnergyConsumedText.text = ((Card)DataReference).EnergyConsumed;
         EnergyProducedText.text = ((Card)DataReference).EnergyProduced;
         GibbsFreeEnergyText.text = ((Card)DataReference).GibbsFreeEnergy;
+        if(AuxUI != null) {
+            AuxUI.SetActive(false);
+        }
   
     }
 
-    // needs to be removed but some other components depend on it. We dont want partner cards anymore
     override public void UpdateUI(bool hasPartner)
     {
         // Update Edge UI Element
@@ -40,5 +51,15 @@ public class EdgeUIElement : UIElement
         EnergyConsumedText.text = ((Card)DataReference).EnergyConsumed;
         EnergyProducedText.text = ((Card)DataReference).EnergyProduced;
         GibbsFreeEnergyText.text = ((Card)DataReference).GibbsFreeEnergy;
+
+        if(AuxUI != null) {
+            AuxUI.SetActive(true);
+            AuxLabelText.text = ((Card)DataReference).AuxLabel;
+            AuxDescriptionText.text = ((Card)DataReference).AuxDescription;
+            AuxQIDText.text = ((Card)DataReference).AuxQID;
+            AuxEnergyConsumedText.text = ((Card)DataReference).AuxEnergyConsumed;
+            AuxEnergyProducedText.text = ((Card)DataReference).AuxEnergyProduced;
+            AuxGibbsFreeEnergyText.text = ((Card)DataReference).AuxGibbsFreeEnergy;
+        }
     }
 }
