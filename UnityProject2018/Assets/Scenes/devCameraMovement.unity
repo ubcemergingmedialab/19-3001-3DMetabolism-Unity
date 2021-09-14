@@ -443,25 +443,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 607151273}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: e045f788aed057b45a43911f9bcbd811,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 607151273}
-        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2813,18 +2801,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 607151273}
-        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -8350,18 +8326,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 607151273}
-        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -30138,18 +30102,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 607151273}
-        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
