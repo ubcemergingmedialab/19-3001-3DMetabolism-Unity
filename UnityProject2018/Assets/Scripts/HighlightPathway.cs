@@ -38,29 +38,7 @@ public class HighlightPathway : MonoBehaviour
     {
 
     }
-
-    public void Highlight()
-    {
-        if (pathwayToHighlight == null)
-        {
-            return;
-        }
-        switch (state)
-        {
-            case HighlightState.Default:
-                SetHighlighted();
-                break;
-            case HighlightState.Highlighted:
-                SetAccented();
-                break;
-            case HighlightState.Accented:
-                SetDefault();
-                break;
-            default:
-                break;
-        }
-    }
-
+    
     public void SetHighlighted()
     {
         foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
@@ -106,13 +84,6 @@ public class HighlightPathway : MonoBehaviour
 
     public void SetAccented()
     {
-        foreach (HighlightPathway pathway in transform.parent.GetComponentsInChildren<HighlightPathway>()) // need to make all other highlight buttons and their corresponding pathways un-accented
-        {
-            if (pathway.state == HighlightState.Accented)
-            {
-                pathway.SetHighlighted();
-            }
-        }
         foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
         {
             foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))

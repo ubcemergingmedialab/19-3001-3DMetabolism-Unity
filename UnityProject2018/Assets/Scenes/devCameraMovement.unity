@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 7162194}
   - component: {fileID: 7162193}
   - component: {fileID: 7162197}
+  - component: {fileID: 7162198}
   m_Layer: 5
   m_Name: UreaCycle
   m_TagString: UI
@@ -419,18 +420,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7162193}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7162197}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -450,6 +439,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1797131304}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7162198}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e045f788aed057b45a43911f9bcbd811,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -507,6 +509,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: e045f788aed057b45a43911f9bcbd811, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &7162198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7162191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 7162191}
 --- !u!1 &11549733
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!65 &20970562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2671,6 +2687,7 @@ GameObject:
   - component: {fileID: 116432104}
   - component: {fileID: 116432103}
   - component: {fileID: 116432107}
+  - component: {fileID: 116432108}
   m_Layer: 5
   m_Name: PentosePhosphateHighlight
   m_TagString: UI
@@ -2762,18 +2779,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 116432103}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 116432107}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -2807,6 +2812,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 7
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 116432108}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: c54909db73e41ae4584806ffdd908f28,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2862,6 +2880,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: c54909db73e41ae4584806ffdd908f28, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &116432108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116432101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 116432101}
 --- !u!1 &120670134
 GameObject:
   m_ObjectHideFlags: 0
@@ -8267,6 +8298,7 @@ GameObject:
   - component: {fileID: 433197123}
   - component: {fileID: 433197122}
   - component: {fileID: 433197126}
+  - component: {fileID: 433197127}
   m_Layer: 5
   m_Name: MalateAspartateShuttleHighlight
   m_TagString: UI
@@ -8358,18 +8390,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 433197122}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 433197126}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -8403,6 +8423,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 433197127}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f4278ed42d51da244b3e9a832183c275,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -8458,6 +8491,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: f4278ed42d51da244b3e9a832183c275, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &433197127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433197120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 433197120}
 --- !u!1 &457775554
 GameObject:
   m_ObjectHideFlags: 0
@@ -9153,6 +9199,7 @@ GameObject:
   - component: {fileID: 496334517}
   - component: {fileID: 496334516}
   - component: {fileID: 496334520}
+  - component: {fileID: 496334521}
   m_Layer: 5
   m_Name: GlycogenSynthesis_BreakdownHighlight
   m_TagString: UI
@@ -9244,18 +9291,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 496334516}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 496334520}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -9289,6 +9324,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 7
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 496334521}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 3640b2cb7b23b6c44bc8b33e351ea798,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -9344,6 +9392,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 3640b2cb7b23b6c44bc8b33e351ea798, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &496334521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496334514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 496334514}
 --- !u!1 &500988543
 GameObject:
   m_ObjectHideFlags: 0
@@ -9569,6 +9630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &510288439
 GameObject:
   m_ObjectHideFlags: 0
@@ -11238,7 +11300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -518, y: 412.6}
+  m_AnchoredPosition: {x: -518, y: 267}
   m_SizeDelta: {x: 155.983, y: -742.441}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &620456013
@@ -14234,6 +14296,7 @@ GameObject:
   - component: {fileID: 853471913}
   - component: {fileID: 853471912}
   - component: {fileID: 853471916}
+  - component: {fileID: 853471917}
   m_Layer: 5
   m_Name: GluconeogenesisHighlight
   m_TagString: UI
@@ -14325,18 +14388,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 853471912}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 853471916}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -14370,6 +14421,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 15
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 853471917}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 712ac25df59c8c14e94f95003135b931,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -14425,6 +14489,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 712ac25df59c8c14e94f95003135b931, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &853471917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853471910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 853471910}
 --- !u!1 &861455990
 GameObject:
   m_ObjectHideFlags: 0
@@ -15676,7 +15753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -444, y: 115.5}
+  m_AnchoredPosition: {x: -444, y: 11}
   m_SizeDelta: {x: 114.276, y: 62.466003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &929229687
@@ -22182,6 +22259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &1335912481
 GameObject:
   m_ObjectHideFlags: 0
@@ -23546,6 +23624,7 @@ GameObject:
   - component: {fileID: 1445723726}
   - component: {fileID: 1445723725}
   - component: {fileID: 1445723729}
+  - component: {fileID: 1445723730}
   m_Layer: 5
   m_Name: CitricAcidCycleHighlight
   m_TagString: UI
@@ -23637,18 +23716,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1445723725}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1445723729}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -23682,6 +23749,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 7
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1445723730}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 4ce94a0ae74c98b46ba8681fe6b3145c,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -23737,6 +23817,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 4ce94a0ae74c98b46ba8681fe6b3145c, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &1445723730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445723723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 1445723723}
 --- !u!1 &1461453637
 GameObject:
   m_ObjectHideFlags: 0
@@ -29963,6 +30056,7 @@ GameObject:
   - component: {fileID: 1898890013}
   - component: {fileID: 1898890012}
   - component: {fileID: 1898890016}
+  - component: {fileID: 1898890017}
   m_Layer: 5
   m_Name: Glycolysis_FermetationHighlight
   m_TagString: UI
@@ -30054,18 +30148,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898890012}
-        m_TargetAssemblyTypeName: HighlightPathway, Assembly-CSharp
-        m_MethodName: Highlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1898890016}
         m_TargetAssemblyTypeName: PathwayUIOnClick, Assembly-CSharp
         m_MethodName: UpdateUI
@@ -30099,6 +30181,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1898890017}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 98941e174a886f6419fc4c0c20e39aae,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -30154,6 +30249,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 98941e174a886f6419fc4c0c20e39aae, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!114 &1898890017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898890010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 1898890010}
 --- !u!1 &1898996695
 GameObject:
   m_ObjectHideFlags: 0
@@ -31569,6 +31677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &2034038299
 GameObject:
   m_ObjectHideFlags: 0
@@ -33919,6 +34028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &988872253906165176
 GameObject:
   m_ObjectHideFlags: 0
