@@ -14,11 +14,12 @@ public class HighlightHandler : MonoBehaviour
     private int highlightCounter = 0;
     private MaterialPropertyBlock _propBlock;
     private Animator animatorComponent;
-    // Start is called before the first frame update
+    // Awake is called before start
     private void Awake()
     {
         _propBlock = new MaterialPropertyBlock();
     }
+    // Start is called before the first frame update
     void Start()
     {
         UpdateHighlight();
@@ -40,27 +41,11 @@ public class HighlightHandler : MonoBehaviour
 
     }
 
-    public void HighlightElement()
-    {
-        highlightCounter = 1;
-        UpdateHighlight();
-    }
-
-    public void DeHighlightElement()
-    {
-        highlightCounter = 0;
-        UpdateHighlight();
-    }
-
     public bool IsDoubleHighlighted() {
-        return highlightCounter >= 2;
+        return (HighlightController.Instance.CheckState(this) == HighlightPathway.HighlightState.Accented);
     }
     
-    public void AccentElement()
-    {
-        highlightCounter = 2;
-        UpdateHighlight();
-    }
+   
     
     private void ActivateArrows()
     {
@@ -84,19 +69,21 @@ public class HighlightHandler : MonoBehaviour
     }
 
 
-    private void UpdateHighlight()
+    public void UpdateHighlight()
     {
         Debug.Log(transform.parent.name + " " + highlightCounter);
-        if (highlightCounter == 0)
+        HighlightPathway.HighlightState currentState = HighlightController.Instance.CheckState(this);   // finds the new highlight state and sets the visuals accordingly
+
+        if (currentState == HighlightPathway.HighlightState.Default)                                    // if Default state
         {
-            transform.parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", defaultColor);
+            transform.parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", defaultColor);  // change the color
             if (GetComponent<NodeDataDisplay>() != null)
             {
-                GetComponent<NodeDataDisplay>().TransparentText();
+                GetComponent<NodeDataDisplay>().TransparentText();                                      // change the text color
             }
             DeactivateArrows();
         }
-        else if (highlightCounter == 1)
+        else if (currentState == HighlightPathway.HighlightState.Highlighted)                           // if Highlight state
         {
             transform.parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", highlightColor);
             if (GetComponent<NodeDataDisplay>() != null)
@@ -105,13 +92,13 @@ public class HighlightHandler : MonoBehaviour
             }
             DeactivateArrows();
         }
-        else if (highlightCounter > 1)
+        else if (currentState == HighlightPathway.HighlightState.Accented)                              // if Accent state
         {
             transform.parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", accentColor);
-            if (GetComponent<NodeDataDisplay>() != null)
-            {
-                //GetComponent<NodeDataDisplay>().OpaqueText();
-            }
+            // if (GetComponent<NodeDataDisplay>() != null)                                             // text color is already set when highlighted
+            // {
+            //     //GetComponent<NodeDataDisplay>().OpaqueText();
+            // }
             ActivateArrows();
         }
         if(animatorComponent != null)

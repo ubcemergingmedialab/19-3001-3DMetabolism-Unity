@@ -41,54 +41,78 @@ public class HighlightPathway : MonoBehaviour
     
     public void SetHighlighted()
     {
-        foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
-        {
-            foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-            {
-                node.GetComponent<HighlightHandler>().HighlightElement();
-            }
-        }
-        foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
-        {
-            foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-            {
-                edge.GetComponent<HighlightHandler>().HighlightElement();
-            }
-        }
         GetComponent<Image>().color = highlightColor;
         GetComponentInChildren<Text>().color = highlightTextColor;
         state = HighlightState.Highlighted;
+        UpdateAllComponents();
+        // foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
+        // {
+        //     foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
+        //     {
+        //         node.GetComponent<HighlightHandler>().UpdateHighlight();
+        //     }
+        // }
+        // foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
+        // {
+        //     foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
+        //     {
+        //         edge.GetComponent<HighlightHandler>().UpdateHighlight();
+        //     }
+        // }
     }
 
     public void SetDefault()
     {
-        foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
-        {
-            foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-            {
-                node.GetComponent<HighlightHandler>().DeHighlightElement();
-            }
-
-        }
-        foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
-        {
-            foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-            {
-                edge.GetComponent<HighlightHandler>().DeHighlightElement();
-            }
-        }
         GetComponent<Image>().color = defaultColor;
         GetComponentInChildren<Text>().color = defaultTextColor;
         state = HighlightState.Default;
+        UpdateAllComponents();
+        // foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
+        // {
+        //     foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
+        //     {
+        //         node.GetComponent<HighlightHandler>().UpdateHighlight();
+        //     }
+
+        // }
+        // foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
+        // {
+        //     foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
+        //     {
+        //         edge.GetComponent<HighlightHandler>().UpdateHighlight();
+        //     }
+        // }
     }
 
     public void SetAccented()
+    {
+        GetComponent<Image>().color = accentColor;
+        GetComponentInChildren<Text>().color = accentTextColor;
+        state = HighlightState.Accented;
+        UpdateAllComponents();
+        // foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
+        // {
+        //     foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
+        //     {
+        //         node.GetComponent<HighlightHandler>().UpdateHighlight();
+        //     }
+
+        // }
+        // foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
+        // {
+        //     foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
+        //     {
+        //         edge.GetComponent<HighlightHandler>().UpdateHighlight();
+        //     }
+        // }
+    }
+    private void UpdateAllComponents() 
     {
         foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
         {
             foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
             {
-                node.GetComponent<HighlightHandler>().AccentElement();
+                node.GetComponent<HighlightHandler>().UpdateHighlight();
             }
 
         }
@@ -96,11 +120,9 @@ public class HighlightPathway : MonoBehaviour
         {
             foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
             {
-                edge.GetComponent<HighlightHandler>().AccentElement();
+                edge.GetComponent<HighlightHandler>().UpdateHighlight();
             }
         }
-        GetComponent<Image>().color = accentColor;
-        GetComponentInChildren<Text>().color = accentTextColor;
-        state = HighlightState.Accented;
+        
     }
 }
