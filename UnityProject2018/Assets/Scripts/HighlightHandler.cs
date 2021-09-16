@@ -45,8 +45,6 @@ public class HighlightHandler : MonoBehaviour
         return (HighlightController.Instance.CheckState(this) == HighlightPathway.HighlightState.Accented);
     }
     
-   
-    
     private void ActivateArrows()
     {
         if (activeArrows != null)
@@ -95,10 +93,10 @@ public class HighlightHandler : MonoBehaviour
         else if (currentState == HighlightPathway.HighlightState.Accented)                              // if Accent state
         {
             transform.parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", accentColor);
-            // if (GetComponent<NodeDataDisplay>() != null)                                             // text color is already set when highlighted
-            // {
-            //     //GetComponent<NodeDataDisplay>().OpaqueText();
-            // }
+            if (GetComponent<NodeDataDisplay>() != null)                                             // text color is already set when highlighted
+            {
+                //GetComponent<NodeDataDisplay>().OpaqueText();
+            }
             ActivateArrows();
         }
         if(animatorComponent != null)
