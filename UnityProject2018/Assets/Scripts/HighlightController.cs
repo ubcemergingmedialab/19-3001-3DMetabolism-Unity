@@ -123,5 +123,13 @@ public class HighlightController : MonoBehaviour
         }
         return tempState;
     }
+
+    public List<Renderer> GetHighlightedRenderers() {
+        //declare renderer accumulator
+        //iterate over status list
+        //  check if element highlighted
+        //  if highlighted HighlightHandler.transform.parent.GetComponent<Renderer>()
+        // return list
+    }
 }
 

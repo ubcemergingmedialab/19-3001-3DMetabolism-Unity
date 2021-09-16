@@ -51,7 +51,7 @@ public class ClickListen : MonoBehaviour
         }
     }
 
-    public void CenterCamera(Renderer[] targetRenderers) {
+    public void CenterCamera(List<Renderer> targetRenderers) {
         Bounds bounds = new Bounds();
         for(int index = 0; index < targetRenderers.Length; index++) {
             if(index == 0) {
@@ -63,7 +63,7 @@ public class ClickListen : MonoBehaviour
         if(bounds != null) {
             float margin = 1.1f;
             float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f);
-            //MouserOrbit.ChangeDistance(distance)
+            //GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
             Vector3 moveChunk = (-1 * bounds.center) * totalTime/moveSplit;
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);
