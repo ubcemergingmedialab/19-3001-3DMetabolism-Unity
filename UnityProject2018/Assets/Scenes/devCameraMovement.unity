@@ -443,7 +443,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 59655250}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -1560,6 +1560,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57586231}
   m_Mesh: {fileID: 4300018, guid: 08bcca721adf57449a6ce8dafb006d53, type: 3}
+--- !u!1 &59655248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59655249}
+  - component: {fileID: 59655250}
+  m_Layer: 0
+  m_Name: HighlightController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &59655249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59655248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 988872253906518422}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &59655250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59655248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 607151268}
 --- !u!1 &61637723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,19 +2832,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 534669906}
-        m_TargetAssemblyTypeName: MouseOrbit, Assembly-CSharp
-        m_MethodName: ChangeDistance
-        m_Mode: 4
+      - m_Target: {fileID: 59655250}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: c54909db73e41ae4584806ffdd908f28,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 7
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -8313,19 +8358,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 534669906}
-        m_TargetAssemblyTypeName: MouseOrbit, Assembly-CSharp
-        m_MethodName: ChangeDistance
-        m_Mode: 4
+      - m_Target: {fileID: 59655250}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: f4278ed42d51da244b3e9a832183c275,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -9317,19 +9363,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 534669906}
-        m_TargetAssemblyTypeName: MouseOrbit, Assembly-CSharp
-        m_MethodName: ChangeDistance
-        m_Mode: 4
+      - m_Target: {fileID: 59655250}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 3640b2cb7b23b6c44bc8b33e351ea798,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 7
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -11152,7 +11199,6 @@ GameObject:
   - component: {fileID: 607151272}
   - component: {fileID: 607151271}
   - component: {fileID: 607151270}
-  - component: {fileID: 607151273}
   m_Layer: 0
   m_Name: UIContainer
   m_TagString: UI
@@ -11253,19 +11299,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &607151273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607151268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIContainer: {fileID: 607151268}
 --- !u!1 &622063903
 GameObject:
   m_ObjectHideFlags: 0
@@ -14383,19 +14416,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 534669906}
-        m_TargetAssemblyTypeName: MouseOrbit, Assembly-CSharp
-        m_MethodName: ChangeDistance
-        m_Mode: 4
+      - m_Target: {fileID: 59655250}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 712ac25df59c8c14e94f95003135b931,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 15
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -19361,6 +19395,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198535355}
   m_CullTransparentMesh: 1
+--- !u!1 &1201941227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201941228}
+  - component: {fileID: 1201941230}
+  - component: {fileID: 1201941229}
+  m_Layer: 0
+  m_Name: FocusController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201941228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201941227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 988872253906518422}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1201941229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201941227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595f7d4dcca8dc64fa6f8f1a339ad078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 1
+  moveSplit: 100
+  objectIsTargetFocus: 0
+--- !u!114 &1201941230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201941227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac039cc284358174fbc8e1371109046d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1202353064
 GameObject:
   m_ObjectHideFlags: 0
@@ -23610,19 +23703,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 534669906}
-        m_TargetAssemblyTypeName: MouseOrbit, Assembly-CSharp
-        m_MethodName: ChangeDistance
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 7
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 59655250}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -23630,6 +23711,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 11400000, guid: 4ce94a0ae74c98b46ba8681fe6b3145c,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 7
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1201941230}
+        m_TargetAssemblyTypeName: FocusController, Assembly-CSharp
+        m_MethodName: UpdateFocus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30089,19 +30182,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 534669906}
-        m_TargetAssemblyTypeName: MouseOrbit, Assembly-CSharp
-        m_MethodName: ChangeDistance
-        m_Mode: 4
+      - m_Target: {fileID: 59655250}
+        m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
+        m_MethodName: Highlight
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 98941e174a886f6419fc4c0c20e39aae,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PathwaySO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607151273}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -36462,6 +36556,8 @@ Transform:
   - {fileID: 1764511430}
   - {fileID: 23750733}
   - {fileID: 7463440894588532971}
+  - {fileID: 59655249}
+  - {fileID: 1201941228}
   m_Father: {fileID: 1542426135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43412,6 +43508,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2447551814097274866, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fructose-1,6-bisphosphatase
+      objectReference: {fileID: 0}
     - target: {fileID: 2454161365136660097, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -44439,6 +44540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484543469408106162, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphofructosekinase-1 (PFK-1)
       objectReference: {fileID: 0}
     - target: {fileID: 5487916435516430316, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
