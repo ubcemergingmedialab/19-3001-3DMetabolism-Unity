@@ -45,20 +45,6 @@ public class HighlightPathway : MonoBehaviour
         GetComponentInChildren<Text>().color = highlightTextColor;
         state = HighlightState.Highlighted;
         UpdateAllComponents();
-        // foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
-        // {
-        //     foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-        //     {
-        //         node.GetComponent<HighlightHandler>().UpdateHighlight();
-        //     }
-        // }
-        // foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
-        // {
-        //     foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-        //     {
-        //         edge.GetComponent<HighlightHandler>().UpdateHighlight();
-        //     }
-        // }
     }
 
     public void SetDefault()
@@ -67,21 +53,6 @@ public class HighlightPathway : MonoBehaviour
         GetComponentInChildren<Text>().color = defaultTextColor;
         state = HighlightState.Default;
         UpdateAllComponents();
-        // foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
-        // {
-        //     foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-        //     {
-        //         node.GetComponent<HighlightHandler>().UpdateHighlight();
-        //     }
-
-        // }
-        // foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
-        // {
-        //     foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-        //     {
-        //         edge.GetComponent<HighlightHandler>().UpdateHighlight();
-        //     }
-        // }
     }
 
     public void SetAccented()
@@ -90,22 +61,10 @@ public class HighlightPathway : MonoBehaviour
         GetComponentInChildren<Text>().color = accentTextColor;
         state = HighlightState.Accented;
         UpdateAllComponents();
-        // foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
-        // {
-        //     foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-        //     {
-        //         node.GetComponent<HighlightHandler>().UpdateHighlight();
-        //     }
 
-        // }
-        // foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
-        // {
-        //     foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-        //     {
-        //         edge.GetComponent<HighlightHandler>().UpdateHighlight();
-        //     }
-        // }
     }
+    
+    // Updates the highlight status of each node and edge in a pathway
     private void UpdateAllComponents() 
     {
         foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
