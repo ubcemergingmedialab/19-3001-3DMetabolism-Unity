@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -124,12 +125,74 @@ public class HighlightController : MonoBehaviour
         return tempState;
     }
 
+    // returns a list of renders of the highlighted pathways
     public List<Renderer> GetHighlightedRenderers() {
         //declare renderer accumulator
+        List<Renderer> highlightedRenderers = new List<Renderer>();
         //iterate over status list
-        //  check if element highlighted
-        //  if highlighted HighlightHandler.transform.parent.GetComponent<Renderer>()
-        // return list
+        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in statusList) {
+       
+            List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
+            if ( currentList != null) {
+                foreach ( HighlightPathway hlpw in currentList) {                                       // iterate through the pathways 
+
+                    if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted , checks the next one
+                        continue;                                                                       // check the next one
+                    }
+                    Renderer currentRenderer = pairHH.Key.transform.parent.GetComponent<Renderer>();    // if highlgihted, fid Renderer of HighlightPathway
+                    highlightedRenderers.Add(currentRenderer);                                          // add Renderer to list 
+                }
+                    
+            } else {
+                Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
+                throw new ArgumentNullException(nameof(currentList));
+            }
+        }
+
+        return highlightedRenderers;
+    }
+
+    // returns the list of Bounds of highlighted Pathways 
+    public List<Bounds> GetHighlightedBounds() {
+        //declare Bounds accumulator
+        List<Bounds> highlightedBounds = new List<Bounds>();
+        //iterate over status list
+        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in statusList) {
+
+            List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
+
+            if (currentList == null) {                                                                  // NULL access gate
+                Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
+                throw new ArgumentNullException(nameof(currentList));
+            } else {
+
+                foreach (HighlightPathway hlpw in currentList) {                                        // iterate through the pathways                                        
+                    if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted                                                                                 
+                        continue;                                                                       // check the next one
+                    }
+                    Bounds currentBounds = pairHH.Key.transform.parent.GetComponent<Renderer>().bounds; // if highlgihted, find Renderer's Bounds of HighlightPathway
+                    highlightedBounds.Add(currentBounds);                                               // add Bounds to list 
+                }
+
+            }
+        }
+
+        return highlightedBounds;
+    }
+
+    // takes a List of Renders (from HighlightedRenderers()) and returns a list of Bounds corresponding to the renderers
+    public List<Bounds> getBounds(List<Renderer> renderers) {
+        // Null check
+        if (renderers == null) {
+            throw new ArgumentNullException(nameof(renderers));
+        }
+
+        List<Bounds> highlightedBounds = new List<Bounds>();
+        
+        foreach (Renderer renderer in renderers) {
+            highlightedBounds.Add(renderer.bounds);
+        }
+        return highlightedBounds;
     }
 }
 
