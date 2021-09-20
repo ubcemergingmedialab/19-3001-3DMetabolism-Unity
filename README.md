@@ -1,6 +1,6 @@
-# Project name
-## Project Information
-(Brief summary here)
+# 3D Metabolism
+## Project Description
+A visualization of the Metabolic that leverages the third dimension and Unity animations to make the network easier to understand
 
 ## External Assets
 
@@ -9,25 +9,11 @@
 
 | Asset | Purpose |
 | ------ | ------ |
-| [VRTK](https://github.com/ExtendRealityLtd/VRTK) | Tool kit used for implementing VR functionality into a scene. Allows easy interchangeability between different VR hardware. |
-| [SteamVR](https://github.com/ValveSoftware/steamvr_unity_plugin) | Gives Unity access to SteamVR. | 
-| [Oculus Plugin](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) | Allows Oculus functionality within Unity. |
-| [Name here](Link here) | Summary here |
-
-### Excluded
-The following assets are either necessary or recommended for the project to work as intended, and may be included in the project's final release. However, we cannot distribute them, and they must be acquired elsewhere.
-
-(Inlude list of assets needed for the project but not included in the repo.)
-
-| Asset | Purpose | Optional? |
-| ------ | ------ | ------ |
-| [Optional asset](Link here) | Summary here | :heavy_check_mark: |
-| [Necessary asset](Link here) | Summary here | :x: |
+| CleanNetwork.fbx | A static implementation of our network on Glycolysis and Gluconeogenesis |
 
 ## Versioning
 
-- Unity (version number here)
-- Include required plugin versions here
+- Unity 2020.3.7f
 
 ## Getting Started
 
@@ -45,13 +31,30 @@ The following assets are either necessary or recommended for the project to work
 ## Team
 
 ### Faculty:
-(Faculty team here)
+Dr. Lindsay Rogers
 
 ### Current EML Student Team:
 
-- (Name) - (Position)
+- Nikko - Developer/Lead
+- Rayyan - Developer
+- Joshua - Designer
+- Dante - Developer
+
+### Spring 2021 Team:
+- Dante - Lead
+- Nikko - Developer
+- Hai Lin - Developer
+- Jenn - Designer
+- Kim - Designer
+
+### Fall 2020 Team:
+- Courtney - Lead/Designer
+- Kim - Designer
+- Dante - Developer
+- Nikko - Developer
+- Hai Lin - Developer
 
 ## Documentation
-For documentation, please visit the UBC Wiki for this repository: 
-https://wiki.ubc.ca/Documentation:Project_Name
+For documentation, please visit the UBC Wiki for this repository (this wiki talks about a past Aframe version): 
+https://wiki.ubc.ca/Documentation:Metabolism
 (Create either an external wiki or gh pages site for the script documentation. A template doxyfile is included for generating doxygen based documentation.)

@@ -54,12 +54,12 @@ public class EdgeUIElement : UIElement
 
         if(AuxUI != null) {
             AuxUI.SetActive(true);
-            LabelText.text = ((Card)DataReference).AuxLabel;
-            DescriptionText.text = ((Card)DataReference).AuxDescription;
-            QIDText.text = ((Card)DataReference).AuxQID;
-            EnergyConsumedText.text = ((Card)DataReference).AuxEnergyConsumed;
-            EnergyProducedText.text = ((Card)DataReference).AuxEnergyProduced;
-            GibbsFreeEnergyText.text = ((Card)DataReference).AuxGibbsFreeEnergy;
+            AuxLabelText.text = ((Card)DataReference).AuxLabel;
+            AuxDescriptionText.text = ((Card)DataReference).AuxDescription;
+            AuxQIDText.text = ((Card)DataReference).AuxQID;
+            AuxEnergyConsumedText.text = ((Card)DataReference).AuxEnergyConsumed;
+            AuxEnergyProducedText.text = ((Card)DataReference).AuxEnergyProduced;
+            AuxGibbsFreeEnergyText.text = ((Card)DataReference).AuxGibbsFreeEnergy;
         }
     }
 }
