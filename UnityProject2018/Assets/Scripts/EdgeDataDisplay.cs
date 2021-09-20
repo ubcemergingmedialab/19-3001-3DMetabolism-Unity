@@ -30,6 +30,7 @@ public class EdgeDataDisplay : MonoBehaviour
         DisplayData.EnergyProduced = edgeData.EnergyProduced;
         DisplayData.GibbsFreeEnergy = edgeData.GibbsFreeEnergy;
         if(displayPartner) {
+            Debug.Log("edge has partner");
             DisplayData.AuxLabel = partnerData.Label;
             DisplayData.AuxQID = partnerData.QID;
             DisplayData.AuxDescription = partnerData.Description;
@@ -37,9 +38,6 @@ public class EdgeDataDisplay : MonoBehaviour
             DisplayData.AuxEnergyProduced = partnerData.EnergyProduced;
             DisplayData.AuxGibbsFreeEnergy = partnerData.GibbsFreeEnergy;
         }
-        if (UIPresenter.UIList.EdgeUI != null)
-            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.EdgeUI, displayPartner);
-        else Debug.Log("Error in callin EdgeUI list");
-
+        UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.EdgeUI, displayPartner);
     }
 }

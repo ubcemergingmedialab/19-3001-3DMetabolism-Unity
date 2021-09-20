@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 6-phosphoglucono-delta-lactone
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q338
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   Description: Part of The Pentose Phosphate Pathway
   Charge: -2
   EnzymeRequired: 
-  MolecularFormula: 
+  MolecularFormula: "C\u2086H\u2081\u2081O9P"
   IUPACNames: 
   link: http://www.genome.jp/dbget-bin/www_bget?cpd:C01236

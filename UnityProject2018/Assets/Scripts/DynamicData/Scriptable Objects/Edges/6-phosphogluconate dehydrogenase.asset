@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: 6-phosphogluconate dehydrogenase
   m_EditorClassIdentifier: 
-  Label: 6-phosphogluconate dehydrogenase
+  Label: 6-phospho-D-gluconate + NADP+ => D-ribulose 5-phosphate + CO2 + NADPH +
+    H+
   Position: {x: 0, y: 0, z: 0}
   QID: 
-  Description: 
+  Description: Part of the Pentose Phosphate Pathway
+  EnergyConsumed: NADP+ => NADPH
+  EnergyProduced: 6-phosphogluconate dehydrogenase
+  GibbsFreeEnergy: N/A
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

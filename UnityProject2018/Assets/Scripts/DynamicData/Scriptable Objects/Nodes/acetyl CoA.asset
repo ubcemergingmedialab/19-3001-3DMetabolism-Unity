@@ -16,9 +16,9 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   QID: Q18
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Part of The Citric Acid Cycle
-  Charge: 0
-  EnzymeRequired: 
-  MolecularFormula: 
+  Description: P&#8322;
+  Charge: H<sub>0</sub>
+  EnzymeRequired: "NAD\u207A -> NADH"
+  MolecularFormula: "C\u2082\u2083H\u2083\u2088N\u2087O\u2081\u2087P\u2083S"
   IUPACNames: 
   link: ' http://www.genome.jp/dbget-bin/www_bget?C00024'

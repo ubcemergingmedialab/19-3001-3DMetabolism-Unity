@@ -68,7 +68,7 @@ public class MouseOrbit : MonoBehaviour
                 if (Physics.Linecast(transform.position, target.position, out hit))
                 {
                     //distance -= Mathf.Clamp(distance - hit.distance, distanceMin, distanceMax);
-                    Debug.Log("new distance change " + hit.distance);
+                    //Debug.Log("new distance change " + hit.distance);
                 }
             }
             distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
