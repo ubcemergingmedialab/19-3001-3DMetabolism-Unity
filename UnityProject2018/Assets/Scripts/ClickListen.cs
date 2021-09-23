@@ -103,7 +103,7 @@ public class ClickListen : MonoBehaviour
 
             GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
 
-            Vector3 moveChunk = -(bounds.center + network.transform.position) * totalTime/moveSplit;
+            Vector3 moveChunk = -(bounds.center - network.transform.position) * totalTime/moveSplit;
             // starts moving on the new focus
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);
