@@ -13,8 +13,8 @@ public class ClickListen : MonoBehaviour
     private IEnumerator moveRoutine;
     private IEnumerator distanceRoutine;
     private GameObject network;
-    private bool isMoving = false;
-    private bool isZooming = false;
+    private bool isMoveCoroutineRunning = false;
+    private bool isDistanceCoroutineRunning = false;
     public bool objectIsTargetFocus = true;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class ClickListen : MonoBehaviour
     {
         if(objectIsTargetFocus) {
             bool hasLShiftClicked = Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.Mouse0);
-            if(!isMoving && hasLShiftClicked)
+            if(!isMoveCoroutineRunning && hasLShiftClicked)
             {
                 Vector3 moveChunk = (-1 * transform.position) * totalTime/moveSplit;
                 moveRoutine = MoveRoutine(moveChunk);
@@ -42,8 +42,8 @@ public class ClickListen : MonoBehaviour
 
     private IEnumerator MoveRoutine(Vector3 chunk)
     {
-        isMoving = true;
-        while(isMoving)
+        isMoveCoroutineRunning = true;
+        while(isMoveCoroutineRunning)
         {
             yield return new WaitForSeconds(totalTime / moveSplit);
             network.transform.position += chunk;
@@ -51,15 +51,15 @@ public class ClickListen : MonoBehaviour
             if(timeCounter <= 0)
             {
                 timeCounter = totalTime;
-                isMoving = false;
+                isMoveCoroutineRunning = false;
             }
         }
     }
 
-    public IEnumerator DistanceRoutine(float newDistance) {
-        isZooming = true;
+    private IEnumerator DistanceRoutine(float newDistance) {
+        isDistanceCoroutineRunning = true;
         
-        while (isZooming) {
+        while (isDistanceCoroutineRunning) {
 
             yield return new WaitForSeconds(totalTime / moveSplit);
             float currDistance = GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance;
@@ -72,7 +72,7 @@ public class ClickListen : MonoBehaviour
             {
                 time2Counter = totalTime; 
                 dynamicDistance = newDistance;
-                isZooming = false;
+                isDistanceCoroutineRunning = false;
             }
             //Debug.Log("looping in DistanceRoutine");
         }
@@ -81,6 +81,14 @@ public class ClickListen : MonoBehaviour
     }
    // takes a list of Bounds moves the center of world to the center of the aggregate view of highlighted Pathways 
     public void CenterCamera(List<Bounds> targetBoundsList) {
+
+        if(moveRoutine != null) {
+            StopCoroutine(moveRoutine);
+        }
+        if(distanceRoutine != null) {
+            StopCoroutine(distanceRoutine);
+        }
+
         Bounds bounds = new Bounds();
         for(int index = 0; index < targetBoundsList.Count; index++) {
             if(index == 0) {
@@ -93,14 +101,16 @@ public class ClickListen : MonoBehaviour
             float margin = 1.1f;
             float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
 
-            Vector3 moveChunk = (-1 * bounds.center) * totalTime/moveSplit;
+            GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
+
+            Vector3 moveChunk = -(bounds.center + network.transform.position) * totalTime/moveSplit;
             // starts moving on the new focus
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);
             // starts zooming on the subject
-            distanceRoutine = DistanceRoutine(distance);
-            StartCoroutine(distanceRoutine);
-        }
+        //     distanceRoutine = DistanceRoutine(distance);
+        //     StartCoroutine(distanceRoutine);
+        }// }
     }
 
         // Moves the camera Center on to the collider
@@ -111,12 +121,14 @@ public class ClickListen : MonoBehaviour
         if (collider.bounds != null) {
             float margin = 1.1f;
             float distance = (collider.bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f);
-            //GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
+
+            GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
+
             Vector3 moveChunk = (-1 * collider.bounds.center) * totalTime/moveSplit;
             moveRoutine = MoveRoutine(moveChunk);
-            distanceRoutine = DistanceRoutine(distance);
+            // distanceRoutine = DistanceRoutine(distance);
             StartCoroutine(moveRoutine);
-            StartCoroutine(distanceRoutine);
+            // StartCoroutine(distanceRoutine);
         }
     }
 
