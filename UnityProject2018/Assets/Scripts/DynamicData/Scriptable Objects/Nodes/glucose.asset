@@ -20,7 +20,8 @@ MonoBehaviour:
     to break it down into energy that will be used by the cell. '
   Charge: 0
   EnzymeRequired: 
-  MolecularFormula: C6H12O6
+  MolecularFormula: "C\u2086H\u2081\u2082O\u2086"
   IUPACNames: 'D-glucose
 
     D-gluco-Hexose'
+  link: 
