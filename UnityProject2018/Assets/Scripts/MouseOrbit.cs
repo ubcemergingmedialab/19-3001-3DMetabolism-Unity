@@ -108,6 +108,6 @@ public class MouseOrbit : MonoBehaviour
     public void ChangeDistance(float dist)
     {
         distance = dist;
-        needsUpdate = true;
+        ///needsUpdate = true;
     }
 }

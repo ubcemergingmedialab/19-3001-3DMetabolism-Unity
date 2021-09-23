@@ -7,16 +7,20 @@ public class ClickListen : MonoBehaviour
 {
     public float totalTime = 1f;
     private float timeCounter;
+    private float time2Counter;
     public float moveSplit = 100f;
+    private float dynamicDistance;
     private IEnumerator moveRoutine;
+    private IEnumerator distanceRoutine;
     private GameObject network;
     private bool isMoving = false;
-
+    private bool isZooming = false;
     public bool objectIsTargetFocus = true;
     // Start is called before the first frame update
     void Start()
     {
         timeCounter = totalTime;
+        time2Counter = totalTime;
         if(!GameObject.Find("Center/Network"))
             Debug.Log("ClickListen.cs Error: Network Parent could not be found.");
         else
@@ -52,7 +56,30 @@ public class ClickListen : MonoBehaviour
         }
     }
 
-   // takes a list of Bounds moves the center of to the center of the aggregate view of highlighted Pathways 
+    public IEnumerator DistanceRoutine(float newDistance) {
+        isZooming = true;
+        
+        while (isZooming) {
+
+            yield return new WaitForSeconds(totalTime / moveSplit);
+            float currDistance = GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance;
+            //currentTime = (time2Counter/moveSplit) * totalTime;
+            dynamicDistance = Mathf.Lerp(currDistance, newDistance, totalTime / moveSplit);
+            GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(dynamicDistance);
+
+            time2Counter -= totalTime / moveSplit;
+            if(time2Counter <= 0)
+            {
+                time2Counter = totalTime; 
+                dynamicDistance = newDistance;
+                isZooming = false;
+            }
+            //Debug.Log("looping in DistanceRoutine");
+        }
+        
+       
+    }
+   // takes a list of Bounds moves the center of world to the center of the aggregate view of highlighted Pathways 
     public void CenterCamera(List<Bounds> targetBoundsList) {
         Bounds bounds = new Bounds();
         for(int index = 0; index < targetBoundsList.Count; index++) {
@@ -64,11 +91,15 @@ public class ClickListen : MonoBehaviour
         }
         if(bounds != null) {
             float margin = 1.1f;
-            float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f);
-            GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
+            float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
+
             Vector3 moveChunk = (-1 * bounds.center) * totalTime/moveSplit;
+            // starts moving on the new focus
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);
+            // starts zooming on the subject
+            distanceRoutine = DistanceRoutine(distance);
+            StartCoroutine(distanceRoutine);
         }
     }
 
@@ -80,12 +111,15 @@ public class ClickListen : MonoBehaviour
         if (collider.bounds != null) {
             float margin = 1.1f;
             float distance = (collider.bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f);
-            GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
+            //GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(distance);
             Vector3 moveChunk = (-1 * collider.bounds.center) * totalTime/moveSplit;
             moveRoutine = MoveRoutine(moveChunk);
+            distanceRoutine = DistanceRoutine(distance);
             StartCoroutine(moveRoutine);
+            StartCoroutine(distanceRoutine);
         }
     }
+
 
     // RENDERERS VERSION OF CENTERCAMERA()
 
