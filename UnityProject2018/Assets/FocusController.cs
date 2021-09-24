@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FocusController : MonoBehaviour
 {
@@ -21,12 +22,14 @@ public class FocusController : MonoBehaviour
     public void UpdateFocus() {
         List<Bounds> boundsList = HighlightController.Instance.GetHighlightedBounds();
         if (boundsList.Count == 0){
-            Debug.Log(" RenderBounds List is EMPTY!");
+            //Debug.Log(" RenderBounds List is empty, going to defaultCenter");
             GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
             return;
             //boundsList.Add(defaultCenter.GetComponent<Renderer>().bounds);
        }
+        //Debug.Log("<MV> Bounds are being fed to CenterCamera");
         GetComponent<ClickListen>().CenterCamera(boundsList);
+        
 
 
     //  RENDER VERSION OF UPDATE FOCUS
