@@ -110,9 +110,11 @@ public class ClickListen : MonoBehaviour
                 bounds.Encapsulate(targetBoundsList[index]);                        // encaplsulate all the bounds into one bound
             }
         }
+
+        DebugUtility.Instance.DrawBounds(bounds, 20.0f);
             
         if(bounds != null) {
-            Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents.magnitude);
+            Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents.ToString("F3"));
 
             float margin = 1.1f;
             float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
@@ -157,6 +159,7 @@ public class ClickListen : MonoBehaviour
             StartCoroutine(distanceRoutine);
         }
     }
+
 
 
     // RENDERERS VERSION OF CENTERCAMERA()

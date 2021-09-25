@@ -171,7 +171,7 @@ public class HighlightController : MonoBehaviour
                         continue;                                                                       // check the next one
                     }
                     Bounds currentBounds = pairHH.Key.transform.parent.GetComponent<Renderer>().bounds; // if highlgihted, find Renderer's Bounds of HighlightPathway
-                    highlightedBounds.Add(currentBounds);                                               // add Bounds to list 
+                    highlightedBounds.Add(currentBounds);                                               // add Bounds to list   
                 }
 
             }
@@ -179,6 +179,7 @@ public class HighlightController : MonoBehaviour
 
         return highlightedBounds;
     }
+
 
     // takes a List of Renders (from HighlightedRenderers()) and returns a list of Bounds corresponding to the renderers
     public List<Bounds> getBounds(List<Renderer> renderers) {
