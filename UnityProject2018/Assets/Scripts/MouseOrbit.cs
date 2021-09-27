@@ -65,15 +65,6 @@ public class MouseOrbit : MonoBehaviour
 
             distance = Mathf.Clamp(distance, distanceMin, distanceMax);
 
-            RaycastHit hit;
-            if(target.gameObject.activeSelf)
-            {
-                if (Physics.Linecast(transform.position, target.position, out hit))
-                {
-                    // distance -= Mathf.Clamp(distance - hit.distance, distanceMin, distanceMax);
-                    // Debug.Log("new distance change " + hit.distance);
-                }
-            }
             distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
             negDistance = new Vector3(0.0f, 0.0f, -distance);
             position = rotation * negDistance + target.position;
@@ -88,7 +79,6 @@ public class MouseOrbit : MonoBehaviour
             {
                 isLines = false;
             }
-            //needsUpdate = false;
         }
 
         if (needsUpdate) {                                              // only when update is needed, update the distance                

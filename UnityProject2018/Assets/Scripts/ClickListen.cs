@@ -64,28 +64,35 @@ public class ClickListen : MonoBehaviour
         // Debug.Log( "<MV> tag : " + tag + "; Move Routine DONE!");
     }
 
+    // creates a coroutine for a smooth movement onto the new aggregated zoom value for highlighted path ways
     private IEnumerator DistanceRoutine(float newDistance) {
-        isZooming = true;
 
+        float startDistance = GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance;
+        float margin = 0.1f;
+        float lerpValue = totalTime / moveSplit;
+        isZooming = ((startDistance - margin) < newDistance && newDistance < (startDistance + margin))? false : true;
+
+        
+        
         while (isZooming) {
 
             yield return new WaitForSeconds(totalTime / moveSplit);
-            float currDistance = GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance;
-            dynamicDistance = Mathf.Lerp(currDistance, newDistance, totalTime / moveSplit);
-            //Debug.Log( "<D> lerping dynamicDistance : " + dynamicDistance);
+            
+
+            dynamicDistance = Mathf.Lerp(startDistance, newDistance, lerpValue);
             GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(dynamicDistance);
 
-            time2Counter -= totalTime / moveSplit;
-            if(time2Counter <= 0)
-            {
-                time2Counter = totalTime; 
-                dynamicDistance = newDistance;
-                isZooming = false;
-            }
+            //Debug.Log("<D> dynamic : " + dynamicDistance + "; new : " + newDistance);
 
+            time2Counter -= totalTime / moveSplit;                                                      // increment time
+            lerpValue += totalTime/moveSplit;                                                           // increment Lerp value
+            if(time2Counter <= 0)                                                                       
+            {
+                time2Counter = totalTime;
+                isZooming = false; 
+                GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(newDistance);
+            }
         }
-        Debug.Log("Bounds, camera distance: " + GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance);
-       
     }
    // takes a list of Bounds moves the center of world to the center of the aggregate view of highlighted Pathways 
     public void CenterCamera(List<Bounds> targetBoundsList) {
@@ -112,7 +119,7 @@ public class ClickListen : MonoBehaviour
         }
             
         if(bounds != null) {
-            Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents.magnitude);
+            //Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents);
 
             float margin = 1.1f;
             float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
@@ -129,7 +136,7 @@ public class ClickListen : MonoBehaviour
         }
     }
 
-    // Moves the camera Center on to the collider
+    // Moves the world's Center on to the collider
     public void ColliderCenterCamera(Collider collider) {
             
         if (collider == null) { throw new ArgumentNullException(nameof(collider));}
