@@ -71,8 +71,6 @@ public class ClickListen : MonoBehaviour
         float margin = 0.1f;
         float lerpValue = totalTime / moveSplit;
         isZooming = ((startDistance - margin) < newDistance && newDistance < (startDistance + margin))? false : true;
-
-        
         
         while (isZooming) {
 
@@ -117,6 +115,8 @@ public class ClickListen : MonoBehaviour
                 bounds.Encapsulate(targetBoundsList[index]);                        // encaplsulate all the bounds into one bound
             }
         }
+
+        DebugUtility.Instance.DrawBounds(bounds, 20.0f);
             
         if(bounds != null) {
             //Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents);
@@ -164,6 +164,7 @@ public class ClickListen : MonoBehaviour
             StartCoroutine(distanceRoutine);
         }
     }
+
 
 
     // RENDERERS VERSION OF CENTERCAMERA()
