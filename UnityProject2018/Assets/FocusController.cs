@@ -22,16 +22,14 @@ public class FocusController : MonoBehaviour
     public void UpdateFocus() {
         List<Bounds> boundsList = HighlightController.Instance.GetHighlightedBounds();
         if (boundsList.Count == 0){
-            //Debug.Log(" RenderBounds List is empty, going to defaultCenter");
+            Debug.Log(" no PW highlighted defaulting to defaultCenter");
             GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
             return;
-            //boundsList.Add(defaultCenter.GetComponent<Renderer>().bounds);
        }
-        //Debug.Log("<MV> Bounds are being fed to CenterCamera");
-        GetComponent<ClickListen>().CenterCamera(boundsList);
+        Bounds bounds = GetComponent<ClickListen>().BoundsEncapsulate(boundsList);
         
-
-
+        GetComponent<ClickListen>().CenterCamera(bounds);
+        
     //  RENDER VERSION OF UPDATE FOCUS
     //    List<Renderer> renderers  = HighlightController.Instance.GetHighlightedRenderers();
     //    if (renderers.Count == 0){
@@ -40,7 +38,5 @@ public class FocusController : MonoBehaviour
     //    } 
     
     //    GetComponent<ClickListen>().CenterCamera(renderers);
-
-
     }
 }

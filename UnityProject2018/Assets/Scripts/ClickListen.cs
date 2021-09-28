@@ -43,14 +43,10 @@ public class ClickListen : MonoBehaviour
     private IEnumerator MoveRoutine(Vector3 chunk)
     {
         isMoving = true;
-        // System.Random random = new System.Random();
-        // int tag = random.Next(0,50);
-        // Debug.Log( "<MV> tag : " + tag + "; Move Routine START!");
 
         while(isMoving)
         {
             yield return new WaitForSeconds(totalTime / moveSplit);
-            // Debug.Log( "<MV> tag : " + tag + "; time Counter: " + timeCounter);
             network.transform.position += chunk;
             timeCounter -= totalTime / moveSplit;
             if(timeCounter <= 0)
@@ -60,27 +56,22 @@ public class ClickListen : MonoBehaviour
             }
         
         }
-        //Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents.magnitude);
-        // Debug.Log( "<MV> tag : " + tag + "; Move Routine DONE!");
     }
 
     // creates a coroutine for a smooth movement onto the new aggregated zoom value for highlighted path ways
     private IEnumerator DistanceRoutine(float newDistance) {
 
         float startDistance = GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance;
-        float margin = 0.1f;
+        float distanceMargin = 0.1f;
         float lerpValue = totalTime / moveSplit;
-        isZooming = ((startDistance - margin) < newDistance && newDistance < (startDistance + margin))? false : true;
+        isZooming = ((startDistance - distanceMargin) < newDistance && newDistance < (startDistance + distanceMargin))? false : true;
         
         while (isZooming) {
 
             yield return new WaitForSeconds(totalTime / moveSplit);
-            
 
             dynamicDistance = Mathf.Lerp(startDistance, newDistance, lerpValue);
             GameObject.Find("MainCamera").GetComponent<MouseOrbit>().ChangeDistance(dynamicDistance);
-
-            //Debug.Log("<D> dynamic : " + dynamicDistance + "; new : " + newDistance);
 
             time2Counter -= totalTime / moveSplit;                                                      // increment time
             lerpValue += totalTime/moveSplit;                                                           // increment Lerp value
@@ -92,41 +83,24 @@ public class ClickListen : MonoBehaviour
             }
         }
     }
-   // takes a list of Bounds moves the center of world to the center of the aggregate view of highlighted Pathways 
-    public void CenterCamera(List<Bounds> targetBoundsList) {
+   // takes a bound and moves the center of world to the center of the aggregate view of highlighted Pathways 
+    public void CenterCamera(Bounds bounds) {
 
         if(moveRoutine != null) {                                                   // if a moveRoutine is still running 
-            //Debug.Log( "<MV> CenterCamera Stoping a Move Routine");
             StopCoroutine(moveRoutine);                                             // Stop the current moveRoutine (to avoid conflict)
-            //Debug.Log( "<MV> CenterCamera refreshed timeCounter");
             timeCounter = totalTime;                                                // reset timer for the next Routine
         }
         if(distanceRoutine != null) {                                               // if a DistanceRoutine is still running 
-            //Debug.Log( "<D> CenterCamera Stoping Distance Routine");
             StopCoroutine(distanceRoutine);                                         // Stop the current DistanceRoutine (to avoid conflict)
             time2Counter = totalTime;                                               // reset timer for the next Routine
         }
-
-        Bounds bounds = new Bounds();
-        for(int index = 0; index < targetBoundsList.Count; index++) {
-            if(index == 0) {
-                bounds = targetBoundsList[index];
-            } else {
-                bounds.Encapsulate(targetBoundsList[index]);                        // encaplsulate all the bounds into one bound
-            }
-        }
-
-        DebugUtility.Instance.DrawBounds(bounds, 20.0f);
-            
+   
         if(bounds != null) {
-            //Debug.Log( "Bounds, Center: " + bounds.center + " extents magnitude: " + bounds.extents);
 
             float margin = 1.1f;
             float distance = (bounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
-
             Vector3 moveChunk = -1 * bounds.center * totalTime/moveSplit;       
             
-            //Debug.Log( "<MV> CenterCamera Starting new MoveRoutine");
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);                                            // starts moving the network on to a new center
 
@@ -165,6 +139,19 @@ public class ClickListen : MonoBehaviour
         }
     }
 
+// takes a list of bounds and ecapsulates all of them into one bound
+    public Bounds BoundsEncapsulate(List<Bounds> targetBoundsList){
+        Bounds bounds = new Bounds();
+
+        for(int index = 0; index < targetBoundsList.Count; index++) {
+            if(index == 0) {
+                bounds = targetBoundsList[index];
+            } else {
+                bounds.Encapsulate(targetBoundsList[index]);                        // encaplsulate all the bounds into one bound
+            }
+        }
+        return bounds;
+    }
 
 
     // RENDERERS VERSION OF CENTERCAMERA()
