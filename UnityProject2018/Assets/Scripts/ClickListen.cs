@@ -54,7 +54,6 @@ public class ClickListen : MonoBehaviour
                 timeCounter = totalTime;
                 isMoving = false;
             }
-        
         }
     }
 
@@ -104,7 +103,6 @@ public class ClickListen : MonoBehaviour
             moveRoutine = MoveRoutine(moveChunk);
             StartCoroutine(moveRoutine);                                            // starts moving the network on to a new center
 
-            //Debug.Log( "<D> CenterCamera Starting new DistanceRoutine");
             distanceRoutine = DistanceRoutine(distance);                            // starts moving the camera on a new distance
             StartCoroutine(distanceRoutine);
         }
@@ -116,9 +114,7 @@ public class ClickListen : MonoBehaviour
         if (collider == null) { throw new ArgumentNullException(nameof(collider));}
 
         if(moveRoutine != null) {
-            //Debug.Log( "<MV> ColliderCenter Stoping a Move Routine");
             StopCoroutine(moveRoutine);
-            //Debug.Log( "<MV> ColliderCenter refreshed timeCounter");
             timeCounter = totalTime;
         }
         if(distanceRoutine != null) {

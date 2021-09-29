@@ -83,24 +83,26 @@ public class HighlightController : MonoBehaviour
         // change state of target pathway, in case of accented, unaccent all other accented pathways:
         if(UIContainer != null) {
             pathwayHighlights.TryGetValue(targetPathway, out HighlightPathway found);
-            switch (found.state)
-            {
-                case HighlightPathway.HighlightState.Default:
-                    found.SetHighlighted();
-                    break;
-                case HighlightPathway.HighlightState.Highlighted:
-                    found.SetAccented();
-                    foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in pathwayHighlights) {
-                        if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathway.name) {
-                            entry.Value.SetHighlighted(); //downgrade all other accented pathways
+            if (found != null){
+                switch (found.state)
+                {
+                    case HighlightPathway.HighlightState.Default:
+                        found.SetHighlighted();
+                        break;
+                    case HighlightPathway.HighlightState.Highlighted:
+                        found.SetAccented();
+                        foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in pathwayHighlights) {
+                            if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathway.name) {
+                                entry.Value.SetHighlighted(); //downgrade all other accented pathways
+                            }
                         }
-                    }
-                    break;
-                case HighlightPathway.HighlightState.Accented:
-                    found.SetDefault();
-                    break;
-                default:
-                    break;
+                        break;
+                    case HighlightPathway.HighlightState.Accented:
+                        found.SetDefault();
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
