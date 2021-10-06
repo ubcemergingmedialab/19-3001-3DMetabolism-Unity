@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// asks for active pathways and genrates the buttons for them at the start. also takes care of sending click triggeers to change the highlgiht states of PWSOs.
 public class ButtonFactory : MonoBehaviour
 {
     public List<PathwaySO> pathways;
@@ -11,7 +12,6 @@ public class ButtonFactory : MonoBehaviour
     // Start is called before the first frame update
     public float buttonSpacing;
     private int buttonCounter;
-
 
  
     void Start()

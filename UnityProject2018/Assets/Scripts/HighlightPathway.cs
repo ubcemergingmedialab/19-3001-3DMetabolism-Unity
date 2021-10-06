@@ -63,7 +63,7 @@ public class HighlightPathway : MonoBehaviour
         UpdateAllComponents();
 
     }
-    
+           
     // Updates the highlight status of each node and edge in a pathway
     private void UpdateAllComponents() 
     {

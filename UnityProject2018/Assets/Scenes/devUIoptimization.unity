@@ -896,7 +896,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 557695883}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -10319,7 +10319,7 @@ GameObject:
   - component: {fileID: 557695882}
   - component: {fileID: 557695883}
   m_Layer: 0
-  m_Name: HighlightController
+  m_Name: HighlightService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10348,10 +10348,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 557695881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
+  m_Script: {fileID: 11500000, guid: a756ab096d02ce842a291109573c6bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIContainer: {fileID: 1142586858}
+  UIContainer: {fileID: 557695881}
 --- !u!1 &575872009
 GameObject:
   m_ObjectHideFlags: 0
@@ -18963,7 +18963,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 557695883}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -19743,7 +19743,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 557695883}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -22814,7 +22814,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 557695883}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -24669,7 +24669,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 557695883}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -32267,7 +32267,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 557695883}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HighlightController, Assembly-CSharp
         m_MethodName: Highlight
         m_Mode: 2
@@ -39352,7 +39352,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 557695883}
+      objectReference: {fileID: 0}
     - target: {fileID: 3738166167895984144, guid: 32fa93b9c48c85c48bb48d784bfd724b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target

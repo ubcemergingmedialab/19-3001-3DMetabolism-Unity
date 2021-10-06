@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HighlightController : MonoBehaviour
+// old highlight controller.
+// 
+public class HighlightService : MonoBehaviour
 {
 
-    private static HighlightController _instance;
-    public static HighlightController Instance
+    private static HighlightService _instance;
+    public static HighlightService Instance
     {
         get { return _instance; }
     }
@@ -33,7 +35,7 @@ public class HighlightController : MonoBehaviour
     void Start()
     {
         if(UIContainer == null) {
-            Debug.Log("HighlightController needs UIContainer to find HighlightPathway Components");
+            Debug.Log("HighlightService needs UIContainer to find HighlightPathway Components");
         } else {
             foreach(HighlightPathway pathwayHL in UIContainer.GetComponentsInChildren<HighlightPathway>()){ 
                 pathwayHighlights.Add(pathwayHL.pathwayToHighlight, pathwayHL);                     // Adds all the highlighted to dictionary of pathwayHighlights

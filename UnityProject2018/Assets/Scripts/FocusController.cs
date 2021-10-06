@@ -20,7 +20,7 @@ public class FocusController : MonoBehaviour
 
 // changes the focus to the aggregate view of the highlighted Pathways using GetHighlightedRenderers and CenterCamera functions
     public void UpdateFocus() {
-        List<Bounds> boundsList = HighlightController.Instance.GetHighlightedBounds();
+        List<Bounds> boundsList = HighlightService.Instance.GetHighlightedBounds();
         if (boundsList.Count == 0){
             Debug.Log(" no PW highlighted defaulting to defaultCenter");
             GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
@@ -31,7 +31,7 @@ public class FocusController : MonoBehaviour
         GetComponent<ClickListen>().CenterCamera(bounds);
         
     //  RENDER VERSION OF UPDATE FOCUS
-    //    List<Renderer> renderers  = HighlightController.Instance.GetHighlightedRenderers();
+    //    List<Renderer> renderers  = HighlightService.Instance.GetHighlightedRenderers();
     //    if (renderers.Count == 0){
     //        Debug.Log(" Render List is EMPTY!");
     //        renderers.Add(defaultCenter.GetComponent<Renderer>());
