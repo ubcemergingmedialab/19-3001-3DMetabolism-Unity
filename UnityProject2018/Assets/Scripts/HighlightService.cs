@@ -18,6 +18,8 @@ public class HighlightService : MonoBehaviour
     private Dictionary<PathwaySO, HighlightPathway> pathwayHighlights;
     // Start is called before the first frame update
     private Dictionary<HighlightHandler, List<HighlightPathway>> statusList;
+    // list of active pathways 
+    public List<PathwaySO> activePathways;
 
     void Awake()  
     {   // Singleton
