@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonDisplay : MonoBehaviour
 {
-
+// takes care of the 5 states that buttons will have, including hover states. previously done in Highlight Pathway , now commented out in that class
 // <> hover color states need to be added
     public Color defaultColor = new Color(1f, 1f, 1f);
     public Color defaultTextColor = new Color(0.2196079f, 0.2196079f, 0.2196079f);
