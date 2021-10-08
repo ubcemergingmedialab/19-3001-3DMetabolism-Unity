@@ -26,8 +26,6 @@ public class HighlightService : MonoBehaviour
             return;
         }
         _instance = this;
-        pathwayHighlights = new Dictionary<PathwaySO, HighlightPathway>();         
-        statusList = new Dictionary<HighlightHandler, List<HighlightPathway>>(); // key = nodes/edges , entry = list of pathways connected to it 
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -108,8 +106,10 @@ public class HighlightService : MonoBehaviour
     public List<Bounds> GetHighlightedBounds() {
         //declare Bounds accumulator
         List<Bounds> highlightedBounds = new List<Bounds>();
+        Dictionary<HighlightHandler, List<HighlightPathway>> localElemPath;
+        localElemPath = UIContainer.GetComponent<StatusController>().Instance.GetElementToPathways(); //<>
         //iterate over status list
-        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in statusList) {
+        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in GetElementToPathways() ) {
 
             List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
 
@@ -202,6 +202,7 @@ public class HighlightService : MonoBehaviour
 
     // Checks the Highlight state of the node/edge of arg (HighlightHandler), and sets the state to be the one with utmost priority (Accent > Highlighted > Default)
     // Assumes that the highlight States of Pathways are already up to date
+
     // public HighlightPathway.HighlightState CheckState(HighlightHandler highlightHandler) {
         
     //     HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;

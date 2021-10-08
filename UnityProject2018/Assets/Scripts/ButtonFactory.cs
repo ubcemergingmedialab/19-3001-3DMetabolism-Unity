@@ -8,7 +8,7 @@ using UnityEngine.UI;
 */
 public class ButtonFactory : MonoBehaviour
 {
-    private List<PathwaySO> ActivePathways;
+    private List<PathwaySO> ActivePathways; // gets the pathway list from status controller 
     public GameObject buttonPrefab;
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class ButtonFactory : MonoBehaviour
 
     GameObject GenerateButton(PathwaySO pathway) {
         GameObject generated = Instantiate(buttonPrefab, transform);
-        generated.GetComponent<HighlightPathway>().pathwayToHighlight = pathway;
+        //generated.GetComponent<HighlightPathway>().pathwayToHighlight = pathway;
         generated.GetComponent<PathwayUIOnClick>().so = pathway;
         generated.GetComponent<Button>().onClick.AddListener(delegate {Debug.Log(pathway.name);});
         return generated;

@@ -22,27 +22,11 @@ public class HighlightPathway
     private PathwaySO pathwayToHighlight;
     public HighlightState state;
 
-    // Start is called before the first frame update
-
     public HighlightPathway(PathwaySO pathway){
         pathwayToHighlight = pathway;
         state = HighlightState.Default;
     }
-    // <> void Start()
-    // {
-    //     if (pathwayToHighlight == null)
-    //     {
-    //         Debug.LogError("Pathway to highlight is not set on GameObject " + gameObject.name);
-    //     }
-    //     //GetComponent<Image>().color = defaultColor;
-    //     state = HighlightState.Default;
-    // }
 
-    // Update is called once per frame
-    // void Update()
-    // {
-
-    // }
     
     public void SetHighlighted()
     {
@@ -90,3 +74,19 @@ public class HighlightPathway
         
     }
 }
+
+    // <> void Start()
+    // {
+    //     if (pathwayToHighlight == null)
+    //     {
+    //         Debug.LogError("Pathway to highlight is not set on GameObject " + gameObject.name);
+    //     }
+    //     //GetComponent<Image>().color = defaultColor;
+    //     state = HighlightState.Default;
+    // }
+
+    // Update is called once per frame
+    // void Update()
+    // {
+
+    // }
