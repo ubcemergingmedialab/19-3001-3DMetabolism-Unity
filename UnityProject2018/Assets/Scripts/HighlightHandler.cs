@@ -50,7 +50,7 @@ public class HighlightHandler : MonoBehaviour
     }
 
     public bool IsDoubleHighlighted() {
-        return (HighlightService.Instance.CheckState(this) == HighlightPathway.HighlightState.Accented);
+        return (StatusController.Instance.ElementCheckState(this) == HighlightPathway.HighlightState.Accented);
     }
     
     private void ActivateArrows()
@@ -78,7 +78,7 @@ public class HighlightHandler : MonoBehaviour
     public void UpdateHighlight()
     {
         Debug.Log(parent.name + " " + highlightCounter);
-        HighlightPathway.HighlightState currentState = HighlightService.Instance.CheckState(this);   // finds the new highlight state and sets the visuals accordingly
+        HighlightPathway.HighlightState currentState = StatusController.Instance.ElementCheckState(this);   // finds the new highlight state and sets the visuals accordingly
 
         if (currentState == HighlightPathway.HighlightState.Default)                                    // if Default state
         {

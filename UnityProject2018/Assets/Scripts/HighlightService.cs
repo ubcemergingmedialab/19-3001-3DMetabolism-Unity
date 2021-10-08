@@ -15,14 +15,11 @@ public class HighlightService : MonoBehaviour
     }
 
     public GameObject UIContainer;
-    private Dictionary<PathwaySO, HighlightPathway> pathwayHighlights;
-    // Start is called before the first frame update
-    private Dictionary<HighlightHandler, List<HighlightPathway>> statusList;
-    // list of active pathways 
-    public List<PathwaySO> activePathways;
+
 
     void Awake()  
-    {   // Singleton
+    {   
+        // Singleton
         if (_instance != null && _instance != this) 
         {
             Destroy(this.gameObject);
@@ -36,43 +33,7 @@ public class HighlightService : MonoBehaviour
 
     void Start()
     {
-        if(UIContainer == null) {
-            Debug.Log("HighlightService needs UIContainer to find HighlightPathway Components");
-        } else {
-            foreach(HighlightPathway pathwayHL in UIContainer.GetComponentsInChildren<HighlightPathway>()){ 
-                pathwayHighlights.Add(pathwayHL.pathwayToHighlight, pathwayHL);                     // Adds all the highlighted to dictionary of pathwayHighlights
-
-                foreach(NodeSO nodeSO in pathwayHL.pathwayToHighlight.nodes) {                      // For every node in this pathway
-                    GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
-                    foreach(GameObject node in nodes) {
-                        if(node != null) {
-                        HighlightHandler hl = node.GetComponent<HighlightHandler>();
-                        List<HighlightPathway> pwhls;                                               // PathwayHighlightlist
-                            if(statusList.TryGetValue(hl, out pwhls)) {                             // Find node in StatusList
-                                pwhls.Add(pathwayHL);
-                            } else {
-                                statusList.Add(hl, new List<HighlightPathway>{pathwayHL});          // Make a new list if node is not yet in the Dictionary 
-                            }
-                        }
-                    }
-                }
-
-                foreach(EdgeSO edgeSO in pathwayHL.pathwayToHighlight.edges) {                      // For every edge in this pathway
-                    GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
-                    foreach(GameObject edge in edges){
-                        if(edge != null) {
-                            HighlightHandler hl = edge.GetComponent<HighlightHandler>();
-                            List<HighlightPathway> pwhls;                                           // PathwayHighlightlist
-                                if(statusList.TryGetValue(hl, out pwhls)) {                         // Find edge in StatusList
-                                    pwhls.Add(pathwayHL);
-                                } else {
-                                    statusList.Add(hl, new List<HighlightPathway>{pathwayHL});      // Make a new list if edge is not yet in the Dictionary
-                                }
-                        }
-                    }
-                }
-            }
-        }
+        
     }
 
     // Update is called once per frame
@@ -81,6 +42,8 @@ public class HighlightService : MonoBehaviour
         
     }
     // takes care of all the highlights management, including keeping track of all 3 states and coordinating changes
+
+    // <> NOTE: it needs to change so that it access the HiglhightPAthways in Status Controller instead of pathwayhiglights in 52
     public void Highlight(PathwaySO targetPathway) {
         Debug.Log("calling highlight on " + targetPathway.name);
 
@@ -111,27 +74,9 @@ public class HighlightService : MonoBehaviour
         }
     }
 
-    // Checks the Highlight state of the node/edge of arg (HighlightHandler), and sets the state to be the one with utmost priority (Accent > Highlighted > Default)
-    // Assumes that the highlight States of Pathways are already up to date
-    public HighlightPathway.HighlightState CheckState(HighlightHandler highlightHandler) {
-        
-        HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
-        statusList.TryGetValue(highlightHandler, out List<HighlightPathway> currentList);
-
-        if ( currentList != null) {
-            foreach ( HighlightPathway hlpw in currentList) {
-                HighlightPathway.HighlightState newState = hlpw.state;
-                    if ( newState > tempState) {
-                        tempState = newState;
-                    }
-            }
-        } else {
-            Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
-        }
-        return tempState;
-    }
 
     // returns a list of renders of the highlighted pathways
+    // <> needs to access the new highlightpathway through statusController ir change the statuslist
     public List<Renderer> GetHighlightedRenderers() {
         //declare renderer accumulator
         List<Renderer> highlightedRenderers = new List<Renderer>();
@@ -159,6 +104,7 @@ public class HighlightService : MonoBehaviour
     }
 
     // returns the list of Bounds of highlighted Pathways 
+    // <> needs to access the new highlightpathway through statusController
     public List<Bounds> GetHighlightedBounds() {
         //declare Bounds accumulator
         List<Bounds> highlightedBounds = new List<Bounds>();
@@ -203,3 +149,73 @@ public class HighlightService : MonoBehaviour
     }
 }
 
+
+// HIGHLIGHT CONTROLLER"S OLD FUNCTIONS
+
+    // private Dictionary<PathwaySO, HighlightPathway> pathwayHighlights;
+
+    // private Dictionary<HighlightHandler, List<HighlightPathway>> statusList;
+
+    // public List<PathwaySO> activePathways;
+
+
+    //void Start()
+    //{
+        // if(UIContainer == null) {
+        //     Debug.LogError("HighlightService needs UIContainer to find HighlightPathway Components");
+        // } else {
+        //     foreach(HighlightPathway pathwayHL in UIContainer.GetComponentsInChildren<HighlightPathway>()){ 
+        //         pathwayHighlights.Add(pathwayHL.pathwayToHighlight, pathwayHL);                     // Adds all the highlighted to dictionary of pathwayHighlights
+
+        //         foreach(NodeSO nodeSO in pathwayHL.pathwayToHighlight.nodes) {                      // For every node in this pathway
+        //             GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
+        //             foreach(GameObject node in nodes) {
+        //                 if(node != null) {
+        //                 HighlightHandler hl = node.GetComponent<HighlightHandler>();
+        //                 List<HighlightPathway> pwhls;                                               // PathwayHighlightlist
+        //                     if(statusList.TryGetValue(hl, out pwhls)) {                             // Find node in StatusList
+        //                         pwhls.Add(pathwayHL);
+        //                     } else {
+        //                         statusList.Add(hl, new List<HighlightPathway>{pathwayHL});          // Make a new list if node is not yet in the Dictionary 
+        //                     }
+        //                 }
+        //             }
+        //         }
+
+        //         foreach(EdgeSO edgeSO in pathwayHL.pathwayToHighlight.edges) {                      // For every edge in this pathway
+        //             GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
+        //             foreach(GameObject edge in edges){
+        //                 if(edge != null) {
+        //                     HighlightHandler hl = edge.GetComponent<HighlightHandler>();
+        //                     List<HighlightPathway> pwhls;                                           // PathwayHighlightlist
+        //                         if(statusList.TryGetValue(hl, out pwhls)) {                         // Find edge in StatusList
+        //                             pwhls.Add(pathwayHL);
+        //                         } else {
+        //                             statusList.Add(hl, new List<HighlightPathway>{pathwayHL});      // Make a new list if edge is not yet in the Dictionary
+        //                         }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    //}
+
+    // Checks the Highlight state of the node/edge of arg (HighlightHandler), and sets the state to be the one with utmost priority (Accent > Highlighted > Default)
+    // Assumes that the highlight States of Pathways are already up to date
+    // public HighlightPathway.HighlightState CheckState(HighlightHandler highlightHandler) {
+        
+    //     HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
+    //     statusList.TryGetValue(highlightHandler, out List<HighlightPathway> currentList);
+
+    //     if ( currentList != null) {
+    //         foreach ( HighlightPathway hlpw in currentList) {
+    //             HighlightPathway.HighlightState newState = hlpw.state;
+    //                 if ( newState > tempState) {
+    //                     tempState = newState;
+    //                 }
+    //         }
+    //     } else {
+    //         Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
+    //     }
+    //     return tempState;
+    // }
