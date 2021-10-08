@@ -27,7 +27,7 @@ public class StatusController : MonoBehaviour
 
     //fields
     // GameObject UIContainer;
-    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways { get;} // <> key = nodes/edges , entry = list of pathways connected to it
+    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways; // <> key = nodes/edges , entry = list of pathways connected to it
     private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;            // <> Status controller intializes and connects each highlitpathway to the pathwaySOs
     private List<HighlightPathway> highlightPathways;                               // <> to keep track of all highlightPAthways initialized
 
@@ -134,8 +134,8 @@ public class StatusController : MonoBehaviour
         return tempState;
     }
 
-    // public Dictionary<HighlightHandler, List<HighlightPathway>> GetElementToPathways() {
-    //     return elementToPathways;
-    // }
+    public Dictionary<HighlightHandler, List<HighlightPathway>> GetElementToPathways() {
+        return elementToPathways;
+    }
 
 }
