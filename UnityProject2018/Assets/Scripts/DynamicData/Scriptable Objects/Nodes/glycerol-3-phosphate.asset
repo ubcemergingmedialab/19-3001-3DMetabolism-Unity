@@ -16,9 +16,9 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   QID: Q43
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Description: Sample Description
-  Charge: 
+  Description: Part of Metabolism
+  Charge: -4
   EnzymeRequired: 
-  MolecularFormula: 
-  IUPACNames: 
-  link: 
+  MolecularFormula: "C\u2083H\u2089O\u2086P"
+  IUPACNames: 2,3-dihydroxypropyl dihydrogen phosphate
+  link: https://www.kegg.jp/entry/C00093

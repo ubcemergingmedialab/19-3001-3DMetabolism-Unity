@@ -20,7 +20,5 @@ MonoBehaviour:
   Charge: 0
   EnzymeRequired: 
   MolecularFormula: "C\u2086H\u2081\u2083N\u2083O\u2083"
-  IUPACNames: 'N5-[Hydroxy(imino)methyl]-L-ornithine
-
-    N5-Carbamoyl-L-ornithine'
+  IUPACNames: (2S)-2-amino-5-(carbamoylamino)pentanoic acid
   link: ' http://www.kegg.jp/dbget-bin/www_bget?cpd:C00327'

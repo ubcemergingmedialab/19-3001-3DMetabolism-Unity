@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bd3af8dc2bcaa4fa25cb8c3480a615, type: 3}
   m_Name: fructose-1, 6-bisphosphate
   m_EditorClassIdentifier: 
-  Label: fructose-1, 6-bisphosphate
+  Label: fructose 1, 6-bisphosphate
   Position: {x: 0, y: 0, z: 0}
   QID: Q27
   Rotation: {x: 0.8, y: 0, z: 0, w: 0.46}
@@ -20,5 +20,6 @@ MonoBehaviour:
   Charge: -4
   EnzymeRequired: 
   MolecularFormula: "C\u2086H\u2081\u2084O\u2081\u2082P\u2082"
-  IUPACNames: "1,6-Di-O-phosphono-\u03B2-D-fructofuranose"
+  IUPACNames: '[(2S,3S,4S,5R)-2,3,4-trihydroxy-5-(phosphonooxymethyl)oxolan-2-yl]methyl
+    dihydrogen phosphate'
   link: https://www.genome.jp/dbget-bin/www_bget?cpd:C05378
