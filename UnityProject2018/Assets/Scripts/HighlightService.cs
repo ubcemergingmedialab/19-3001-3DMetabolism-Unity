@@ -39,51 +39,55 @@ public class HighlightService : MonoBehaviour
     {
         
     }
-    // takes care of all the highlights management, including keeping track of all 3 states and coordinating changes
 
-    // <> NOTE: it needs to change so that it access the HiglhightPAthways in Status Controller instead of pathwayhiglights in 52
+    // <>  calls SetPathwayState() from statusController ,by calculating the new state the service wants the pathway to be in
     public void Highlight(PathwaySO targetPathway) {
         Debug.Log("calling highlight on " + targetPathway.name);
-
-        // change state of target pathway, in case of accented, unaccent all other accented pathways:
+        
         if(UIContainer != null) {
-            pathwayHighlights.TryGetValue(targetPathway, out HighlightPathway found);
-            if (found != null){
-                switch (found.state)
+            HighlightPathway.HighlightState currentState = UIContainer.GetComponentInChildren<StatusController>().PathwayCheckState(targetPathway);
+            HighlightPathway.HighlightState newState = HighlightPathway.HighlightState.Default;
+
+            if (currentState != null){
+
+                switch (currentState)
                 {
                     case HighlightPathway.HighlightState.Default:
-                        found.SetHighlighted();
+                        newState = HighlightPathway.HighlightState.Highlighted;
                         break;
+
                     case HighlightPathway.HighlightState.Highlighted:
-                        found.SetAccented();
-                        foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in pathwayHighlights) {
-                            if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathway.name) {
-                                entry.Value.SetHighlighted(); //downgrade all other accented pathways
-                            }
-                        }
+                        newState = HighlightPathway.HighlightState.Accented;
                         break;
+
                     case HighlightPathway.HighlightState.Accented:
-                        found.SetDefault();
+                        newState = HighlightPathway.HighlightState.Default;
                         break;
                     default:
                         break;
                 }
+
+                UIContainer.GetComponentInChildren<StatusController>().SetPathwayState(targetPathway,newState);
             }
         }
     }
 
 
     // returns a list of renders of the highlighted pathways
-    // <> needs to access the new highlightpathway through statusController ir change the statuslist
+    // <!> !!! needs to access the new highlightpathway through statusController ir change the statuslist
     public List<Renderer> GetHighlightedRenderers() {
         //declare renderer accumulator
         List<Renderer> highlightedRenderers = new List<Renderer>();
+        int size = UIContainer.GetComponentInChildren<StatusController>().GetCountElementToPathways();
         //iterate over status list
-        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in statusList) {
+
+        // UIContainer.GetComponentInChildren<StatusController>().GetElementToPathways()
+
+        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in UIContainer.GetComponentInChildren<StatusController>().elementToPathways) {
        
             List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
             if ( currentList != null) {
-                foreach ( HighlightPathway hlpw in currentList) {                                       // iterate through the pathways 
+                foreach ( HighlightPathway hlpw in currentList) {                                       // iterate through the pathways
 
                     if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted , checks the next one
                         continue;                                                                       // check the next one
@@ -102,12 +106,12 @@ public class HighlightService : MonoBehaviour
     }
 
     // returns the list of Bounds of highlighted Pathways 
-    // <> needs to access the new highlightpathway through statusController
+    // <!>!!! needs to access the new highlightpathway through statusController
     public List<Bounds> GetHighlightedBounds() {
         //declare Bounds accumulator
         List<Bounds> highlightedBounds = new List<Bounds>();
-        Dictionary<HighlightHandler, List<HighlightPathway>> localElemPath;
-        localElemPath = UIContainer.GetComponent<StatusController>().Instance.GetElementToPathways(); //<>
+        Dictionary<HighlightHandler, List<HighlightPathway>> localElemPath; //!!!!!
+        localElemPath = UIContainer.GetComponent<StatusController>().GetElementToPathways(); //<!>
         //iterate over status list
         foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in GetElementToPathways() ) {
 
@@ -133,7 +137,7 @@ public class HighlightService : MonoBehaviour
     }
 
 
-    // takes a List of Renders (from HighlightedRenderers()) and returns a list of Bounds corresponding to the renderers
+    // takes a List of Renders (from HighlightedRenderers()) and returns a list of Bounds corresponding to the renderers !!!
     public List<Bounds> getBounds(List<Renderer> renderers) {
         // Null check
         if (renderers == null) {

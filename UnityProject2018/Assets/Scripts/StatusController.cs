@@ -7,8 +7,8 @@ using UnityEngine;
         This Script is a Centralized point of access for Any Status within the program. This includes:
         Active pathways, pathway Highlight states, favourite pathways etc.
         currently getting optimized for Handeling highlights. functions/fields related to highlighting to be added:
-            - Calc max/ min highlight state -> possibly in HighlightService
             done:
+            - Calc max/ min highlight state -> ElementCheckState 
             - node/edge Status lists
             - ElementCheckState
             - PAthwaySOCheckState
@@ -51,7 +51,7 @@ public class StatusController : MonoBehaviour
         foreach (PathwaySO pathwaySO in activePathways) {
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // <> initialize a highlightPathway per active pathway
-            highlightByPathwaySO.Add(pathwaySO,highlightPathway);    // link the pathwaySO to its highlightPathway
+            highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
 
             foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every node in this pathway
@@ -102,6 +102,37 @@ public class StatusController : MonoBehaviour
         
     }
 
+    // takes a pathway and state, calls set(dif) states functions in highlight pathway attached to the designated 
+    public void SetPathwayState(PathwaySO targetPathwaySO, HighlightPathway.HighlightState state){
+        HighlightPathway highlightPathway = GetHighlightByPathwaySO(targetPathwaySO);
+
+        switch(state)
+        {
+            case HighlightPathway.HighlightState.Default:
+                highlightPathway.SetDefault();
+                
+                break;
+            
+            case HighlightPathway.HighlightState.Highlighted:
+                highlightPathway.SetHighlighted();
+                break;
+
+            case HighlightPathway.HighlightState.Accented:
+                highlightPathway.SetAccented();
+                foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in highlightByPathwaySO) {
+                    if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathwaySO.name) {
+                        entry.Value.SetHighlighted(); //downgrade all other accented pathways
+                    }
+                }
+                break;
+                    default:
+                        break;
+        }
+
+    }
+
+
+    // <> returns the max state of an element (node/edge) based on the pathway its connected to. (Accent > Highlighted > Default)
     public HighlightPathway.HighlightState ElementCheckState(HighlightHandler highlightHandler) {
         
         HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
@@ -134,8 +165,30 @@ public class StatusController : MonoBehaviour
         return tempState;
     }
 
-    public Dictionary<HighlightHandler, List<HighlightPathway>> GetElementToPathways() {
-        return elementToPathways;
+    // returns the count of elementToPathways;
+    public int GetCountElementToPathways(){
+        return highlightByPathwaySO.Count;
+    }
+
+    // <> Getter for values in elementToPathways Dictionary
+    public List<HighlightPathway> GetElementToPathways(HighlightHandler highlightHandler) {
+        
+        elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> listOfHPW);
+
+        return listOfHPW;
+    }
+
+    public List<HighlightPathway> GetElementToPathways(int i) {
+        
+        elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> listOfHPW);
+
+        return listOfHPW;
+    }
+
+    // <> Getter for values in HighlightByPathwaySO Dictionary
+    public HighlightPathway GetHighlightByPathwaySO(PathwaySO pathwaySO){
+        highlightByPathwaySO.TryGetValue(pathwaySO, out HighlightPathway value);
+        return value;
     }
 
 }

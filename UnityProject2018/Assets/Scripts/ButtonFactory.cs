@@ -19,9 +19,9 @@ public class ButtonFactory : MonoBehaviour
  
     void Start()
     {
-        foreach(PathwaySO pathway in pathways) {
-            GenerateButton(pathway);
-        }
+        // foreach(PathwaySO pathway in pathways) {
+        //     GenerateButton(pathway);
+        // }
     }
 
     // Update is called once per frame
@@ -31,11 +31,11 @@ public class ButtonFactory : MonoBehaviour
     }
 
     GameObject GenerateButton(PathwaySO pathway) {
-        GameObject generated = Instantiate(buttonPrefab, transform);
+        // GameObject generated = Instantiate(buttonPrefab, transform);
         //generated.GetComponent<HighlightPathway>().pathwayToHighlight = pathway;
-        generated.GetComponent<PathwayUIOnClick>().so = pathway;
-        generated.GetComponent<Button>().onClick.AddListener(delegate {Debug.Log(pathway.name);});
-        return generated;
+        // generated.GetComponent<PathwayUIOnClick>().so = pathway;
+        // generated.GetComponent<Button>().onClick.AddListener(delegate {Debug.Log(pathway.name);});
+        return null; //return generated;
     }
 
 }

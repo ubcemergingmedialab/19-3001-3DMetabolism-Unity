@@ -19,7 +19,7 @@ public class HighlightPathway
         Accented
     }
 
-    private PathwaySO pathwayToHighlight;
+    public PathwaySO pathwayToHighlight;
     public HighlightState state;
 
     public HighlightPathway(PathwaySO pathway){
