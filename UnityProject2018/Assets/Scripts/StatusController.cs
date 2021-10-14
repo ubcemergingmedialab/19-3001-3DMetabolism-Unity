@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -165,6 +166,16 @@ public class StatusController : MonoBehaviour
         return tempState;
     }
 
+    // public void IteratorElementToPathways ( Func<KeyValuePair<HighlightHandler, List<HighlightPathway>>, bool> function){
+    //     foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in elementToPathways) {
+    //         return function(pairHH);
+    //     }
+    // } 
+
+    public IDictionaryEnumerator GetElementToPathwaysEnumerator(){
+        return elementToPathways.GetEnumerator();
+    }
+
     // returns the count of elementToPathways;
     public int GetCountElementToPathways(){
         return highlightByPathwaySO.Count;
@@ -172,13 +183,6 @@ public class StatusController : MonoBehaviour
 
     // <> Getter for values in elementToPathways Dictionary
     public List<HighlightPathway> GetElementToPathways(HighlightHandler highlightHandler) {
-        
-        elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> listOfHPW);
-
-        return listOfHPW;
-    }
-
-    public List<HighlightPathway> GetElementToPathways(int i) {
         
         elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> listOfHPW);
 

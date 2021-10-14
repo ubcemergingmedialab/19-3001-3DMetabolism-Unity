@@ -74,25 +74,26 @@ public class HighlightService : MonoBehaviour
 
 
     // returns a list of renders of the highlighted pathways
-    // <!> !!! needs to access the new highlightpathway through statusController ir change the statuslist
+    // <!> !!! needs to access the new highlightpathway through statusController ir change the statuslist/right now it is set to use the enumerator for dictionary access
     public List<Renderer> GetHighlightedRenderers() {
         //declare renderer accumulator
         List<Renderer> highlightedRenderers = new List<Renderer>();
-        int size = UIContainer.GetComponentInChildren<StatusController>().GetCountElementToPathways();
         //iterate over status list
 
-        // UIContainer.GetComponentInChildren<StatusController>().GetElementToPathways()
-
-        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in UIContainer.GetComponentInChildren<StatusController>().elementToPathways) {
+        IDictionaryEnumerator myEnumerator = UIContainer.GetComponentInChildren<StatusController>().GetElementToPathwaysEnumerator(); // grabs 
+        
+        while (myEnumerator.MoveNext()) {
        
-            List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
+            List<HighlightPathway> currentList = (List<HighlightPathway>) myEnumerator.Value;           // List of pathways shared with HighlightHandler
             if ( currentList != null) {
                 foreach ( HighlightPathway hlpw in currentList) {                                       // iterate through the pathways
 
                     if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted , checks the next one
                         continue;                                                                       // check the next one
                     }
-                    Renderer currentRenderer = pairHH.Key.transform.parent.GetComponent<Renderer>();    // if highlgihted, fid Renderer of HighlightPathway
+                    HighlightHandler HH = (HighlightHandler) myEnumerator.Key;
+
+                    Renderer currentRenderer = HH.transform.parent.GetComponent<Renderer>();    // if highlgihted, fid Renderer of HighlightPathway
                     highlightedRenderers.Add(currentRenderer);                                          // add Renderer to list 
                 }
                     
@@ -105,17 +106,19 @@ public class HighlightService : MonoBehaviour
         return highlightedRenderers;
     }
 
+
+
+// USES GETENUMERATOR NOW
     // returns the list of Bounds of highlighted Pathways 
-    // <!>!!! needs to access the new highlightpathway through statusController
+    // <> needs to access the new highlightpathway through statusController
     public List<Bounds> GetHighlightedBounds() {
         //declare Bounds accumulator
         List<Bounds> highlightedBounds = new List<Bounds>();
-        Dictionary<HighlightHandler, List<HighlightPathway>> localElemPath; //!!!!!
-        localElemPath = UIContainer.GetComponent<StatusController>().GetElementToPathways(); //<!>
+        IDictionaryEnumerator myEnumerator = UIContainer.GetComponentInChildren<StatusController>().GetElementToPathwaysEnumerator();
         //iterate over status list
-        foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in GetElementToPathways() ) {
+        while (myEnumerator.MoveNext()) {
 
-            List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
+            List<HighlightPathway> currentList = (List<HighlightPathway>) myEnumerator.Value;                                          // List of pathways shared with HighlightHandler
 
             if (currentList == null) {                                                                  // NULL access gate
                 Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
@@ -126,7 +129,8 @@ public class HighlightService : MonoBehaviour
                     if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted                                                                                 
                         continue;                                                                       // check the next one
                     }
-                    Bounds currentBounds = pairHH.Key.transform.parent.GetComponent<Renderer>().bounds; // if highlgihted, find Renderer's Bounds of HighlightPathway
+                    HighlightHandler HH = (HighlightHandler) myEnumerator.Key;
+                    Bounds currentBounds = HH.transform.parent.GetComponent<Renderer>().bounds; // if highlgihted, find Renderer's Bounds of HighlightPathway
                     highlightedBounds.Add(currentBounds);                                               // add Bounds to list   
                 }
 
@@ -224,3 +228,60 @@ public class HighlightService : MonoBehaviour
     //     }
     //     return tempState;
     // }
+
+
+
+    // private List<Renderer> helper(KeyValuePair<HighlightHandler, List<HighlightPathway>> pair) {
+
+    //     List<Renderer> highlightedRenderers = new List<Renderer>();
+    //     List<HighlightPathway> currentList = pair.Value;                                                // List of pathways shared with HighlightHandler
+    //         if ( currentList != null) {
+    //             foreach ( HighlightPathway hlpw in currentList) {                                       // iterate through the pathways
+
+    //                 if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted , checks the next one
+    //                     continue;                                                                       // check the next one
+    //                 }
+    //                 Renderer currentRenderer = pair.Key.transform.parent.GetComponent<Renderer>();    // if highlgihted, fid Renderer of HighlightPathway
+    //                 highlightedRenderers.Add(currentRenderer);                                          // add Renderer to list 
+    //             }
+                    
+    //         } else {
+    //             Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
+    //             throw new ArgumentNullException(nameof(currentList));
+    //         }
+
+    //         return highlightedRenderers; 
+    // }
+
+
+
+
+
+        // public List<Bounds> GetHighlightedBounds() {
+        // //declare Bounds accumulator
+        // List<Bounds> highlightedBounds = new List<Bounds>();
+        // Dictionary<HighlightHandler, List<HighlightPathway>> localElemPath; //!!!!!
+        // localElemPath = UIContainer.GetComponent<StatusController>().GetElementToPathways(); //<!>
+        // //iterate over status list
+        // foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in GetElementToPathways() ) {
+
+        //     List<HighlightPathway> currentList = pairHH.Value;                                          // List of pathways shared with HighlightHandler
+
+        //     if (currentList == null) {                                                                  // NULL access gate
+        //         Debug.Log("no pathwaylist are to be found on the stateList Dictionary (NULL access)");
+        //         throw new ArgumentNullException(nameof(currentList));
+        //     } else {
+
+        //         foreach (HighlightPathway hlpw in currentList) {                                        // iterate through the pathways                                        
+        //             if (hlpw.state == HighlightPathway.HighlightState.Default) {                        // if not highlighted                                                                                 
+        //                 continue;                                                                       // check the next one
+        //             }
+        //             Bounds currentBounds = pairHH.Key.transform.parent.GetComponent<Renderer>().bounds; // if highlgihted, find Renderer's Bounds of HighlightPathway
+        //             highlightedBounds.Add(currentBounds);                                               // add Bounds to list   
+        //         }
+
+        //     }
+        // }
+
+        // return highlightedBounds;
+    

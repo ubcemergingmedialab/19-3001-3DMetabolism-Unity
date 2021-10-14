@@ -16,7 +16,7 @@ public class ButtonDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Image>().color = defaultColor;
+        //GetComponent<Image>().color = defaultColor;
     }
 
     // Update is called once per frame
