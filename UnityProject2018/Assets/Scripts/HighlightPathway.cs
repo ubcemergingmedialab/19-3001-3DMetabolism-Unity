@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*
-NOTE:
-This class will have to be modified! it will not extend MonoBehaviour.
-it will be a class with contructor and attached to a pathwaySO. 
-this way the functionality we can access it directly without accessing the UIContainer.
+/*  
+    An Instance that keeps track of and updates highlight states of a pathway  and updates all of its elements
+
+    Note: Does not extend MonoBehaviour -> not a component 
 */
 
 public class HighlightPathway
@@ -22,16 +21,17 @@ public class HighlightPathway
     public PathwaySO pathwayToHighlight;
     public HighlightState state;
 
+    // constructor
     public HighlightPathway(PathwaySO pathway){
         pathwayToHighlight = pathway;
         state = HighlightState.Default;
     }
 
-    
+    // set the Stae to Single Highlighted and update all of its component/elements
     public void SetHighlighted()
     {
-        // GetComponent<Image>().color = highlightColor;                       // <> these will ahve to go to a new script callled button dispaly that will be added as a component to  the button in unity
-        // GetComponentInChildren<Text>().color = highlightTextColor;          //
+        // GetComponent<Image>().color = highlightColor;                // these will ahve to go to a new script callled button dispaly that will be added as a component to  the button in unity
+        // GetComponentInChildren<Text>().color = highlightTextColor;
         state = HighlightState.Highlighted;
         UpdateAllComponents();
     }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*  NOTE: UPDATE IF FUNCTIONALITY CHANGES
-    2021-10-07 
+    2021-10-14 
         This Script is a Centralized point of access for Any Status within the program. This includes:
         Active pathways, pathway Highlight states, favourite pathways etc.
         currently getting optimized for Handeling highlights. functions/fields related to highlighting to be added:
@@ -27,13 +27,21 @@ public class StatusController : MonoBehaviour
     }
 
     //fields
-    // GameObject UIContainer;
-    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways; // <> key = nodes/edges , entry = list of pathways connected to it
-    private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;            // <> Status controller intializes and connects each highlitpathway to the pathwaySOs
-    private List<HighlightPathway> highlightPathways;                               // <> to keep track of all highlightPAthways initialized
+    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways;     // key = nodes/edges , entry = list of pathways connected to it
+    private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;               // PathwaySO linked to its HighlightPathway Instance
+    private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
-    public List<PathwaySO> activePathways;                                      // <> to be filled manually in unity 
+    public List<PathwaySO> activePathways;                                              // Filled manually in unity 
 
+
+
+    /*
+    On Awake() StatusController does the following :
+        - Initialization of the fields
+        - instantiates a highlightPathway instance per a PathwaySO and links them in the highlightByPathwaySO Dictionary
+        - keeps a list of all HighlightPathway instances
+        - for every node/edge, it grabs the HighlightHandler component and the list of pathways it is apart of and links them in elementsToPathways dict
+    */
     void Awake() 
     {
         if (_instance != null && _instance != this) 
@@ -51,7 +59,7 @@ public class StatusController : MonoBehaviour
         // <> fill the elements network 
         foreach (PathwaySO pathwaySO in activePathways) {
             
-            HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // <> initialize a highlightPathway per active pathway
+            HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
 
@@ -103,7 +111,8 @@ public class StatusController : MonoBehaviour
         
     }
 
-    // takes a pathway and state, calls set(dif) states functions in highlight pathway attached to the designated 
+    // Given a PathwaySO and State, find the HighlightPathway Instance of the Pathway and calls Set<state>() for said pathway. 
+    // If accented, it sets all the others into single higlhighted
     public void SetPathwayState(PathwaySO targetPathwaySO, HighlightPathway.HighlightState state){
         HighlightPathway highlightPathway = GetHighlightByPathwaySO(targetPathwaySO);
 
@@ -133,7 +142,7 @@ public class StatusController : MonoBehaviour
     }
 
 
-    // <> returns the max state of an element (node/edge) based on the pathway its connected to. (Accent > Highlighted > Default)
+    // Returns the max state of an element (node/edge) based on the pathway its connected to. (Accent > Highlighted > Default)
     public HighlightPathway.HighlightState ElementCheckState(HighlightHandler highlightHandler) {
         
         HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
@@ -152,7 +161,7 @@ public class StatusController : MonoBehaviour
         return tempState;
     }
 
-// <> returns the current state of a given pathway through its SO
+    // Returns the current state of a pathway given a PathwaySO
     public HighlightPathway.HighlightState PathwayCheckState(PathwaySO pathway) {
         HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
         highlightByPathwaySO.TryGetValue(pathway, out HighlightPathway highlightpathway);
@@ -166,22 +175,17 @@ public class StatusController : MonoBehaviour
         return tempState;
     }
 
-    // public void IteratorElementToPathways ( Func<KeyValuePair<HighlightHandler, List<HighlightPathway>>, bool> function){
-    //     foreach (KeyValuePair<HighlightHandler, List<HighlightPathway>> pairHH in elementToPathways) {
-    //         return function(pairHH);
-    //     }
-    // } 
-
+    // Returns an Enumarator for the elementToPathways Dictionary, (for remote traversing)
     public IDictionaryEnumerator GetElementToPathwaysEnumerator(){
         return elementToPathways.GetEnumerator();
     }
 
-    // returns the count of elementToPathways;
+    // Returns the count of elementToPathways Dictionary;
     public int GetCountElementToPathways(){
         return highlightByPathwaySO.Count;
     }
 
-    // <> Getter for values in elementToPathways Dictionary
+    // Given a HighlightHandler (node/edge) , Returns the ListOf HighlightPathway the element is apart of
     public List<HighlightPathway> GetElementToPathways(HighlightHandler highlightHandler) {
         
         elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> listOfHPW);
@@ -189,7 +193,7 @@ public class StatusController : MonoBehaviour
         return listOfHPW;
     }
 
-    // <> Getter for values in HighlightByPathwaySO Dictionary
+    // Given a PathwaySO, Returns its linked HighlightPathway instance
     public HighlightPathway GetHighlightByPathwaySO(PathwaySO pathwaySO){
         highlightByPathwaySO.TryGetValue(pathwaySO, out HighlightPathway value);
         return value;
