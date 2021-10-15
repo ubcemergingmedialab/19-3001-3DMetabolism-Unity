@@ -33,8 +33,9 @@ public class StatusController : MonoBehaviour
 
     public List<PathwaySO> activePathways;                                              // Filled manually in unity 
 
-
-
+    public GameObject tempObjectHolder;                                                 // temporary, manually testing highlighting till buttons are developed
+    int num = 0; //temp
+    
     /*
     On Awake() StatusController does the following :
         - Initialization of the fields
@@ -52,12 +53,15 @@ public class StatusController : MonoBehaviour
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
 
-
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
+        highlightPathways = new List<HighlightPathway>();
+
 
         // <> fill the elements network 
+        //Debug.Log("count = " + activePathways.Count);
         foreach (PathwaySO pathwaySO in activePathways) {
+            //if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
@@ -97,17 +101,19 @@ public class StatusController : MonoBehaviour
                 }
             }
         }
+        
     }
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {   
+
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        PipelineTest();             // for manual testing of the highlight functionality
         
     }
 
@@ -156,7 +162,7 @@ public class StatusController : MonoBehaviour
                     }
             }
         } else {
-            Debug.LogError("no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            Debug.LogError("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }
@@ -169,7 +175,7 @@ public class StatusController : MonoBehaviour
         if (highlightpathway != null ){
             tempState = highlightpathway.state;
         } else{
-            Debug.LogError("no highlight pathway linked to this PathwaySO");
+            Debug.LogError(" StatusController.PathwayCheckState : no highlight pathway linked to this PathwaySO");
         }
 
         return tempState;
@@ -199,4 +205,43 @@ public class StatusController : MonoBehaviour
         return value;
     }
 
+// function for manually testing the higlhight pipeline with num keys activating pathways in the pathway list
+    private void PipelineTest(){
+        //0
+        if (Input.GetKeyDown(KeyCode.Alpha0)) {
+        num = 0;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+        //1
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        num = 1;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+        //2
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        num = 2;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+        //3
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+        num = 3;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+        //4
+        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+        num = 4;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+        //5
+        if (Input.GetKeyDown(KeyCode.Alpha5)) {
+        num = 5;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+        //6
+        if (Input.GetKeyDown(KeyCode.Alpha6)) {
+        num = 6;
+        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+        }
+
+    }
 }
