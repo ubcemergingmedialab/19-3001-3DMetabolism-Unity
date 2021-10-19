@@ -695,7 +695,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20970557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10309,6 +10309,7 @@ MonoBehaviour:
   scaleMin: 0.001
   scaleMax: 715.4
   scaleThreshhold: 0.47
+  mouseOverCard: 0
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12659,8 +12660,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1722168965}
   m_HandleRect: {fileID: 1722168964}
   m_Direction: 2
-  m_Value: 0.95427805
-  m_Size: 0.4344785
+  m_Value: 0.95427793
+  m_Size: 0.43447843
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

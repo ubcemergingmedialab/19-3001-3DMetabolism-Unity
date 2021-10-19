@@ -28,6 +28,8 @@ public class MouseOrbit : MonoBehaviour
     private Rigidbody rigidbody;
     private bool needsUpdate = false;
 
+    public bool mouseOverCard = false;
+
     float x = 0.0f;
     float y = 0.0f;
 
@@ -50,42 +52,44 @@ public class MouseOrbit : MonoBehaviour
 
     void LateUpdate()
     {
-
-        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
+        if(!mouseOverCard)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-
-            y = ClampAngle(y, yMinLimit, yMaxLimit);
-
-            Quaternion rotation = Quaternion.Euler(y, x, 0);
-
-            distance = Mathf.Clamp(distance, distanceMin, distanceMax);
-
-            RaycastHit hit;
-            if(target.gameObject.activeSelf)
+            if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
             {
-                if (Physics.Linecast(transform.position, target.position, out hit))
+                x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+                y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
+
+                Quaternion rotation = Quaternion.Euler(y, x, 0);
+
+                distance = Mathf.Clamp(distance, distanceMin, distanceMax);
+
+                RaycastHit hit;
+                if(target.gameObject.activeSelf)
                 {
-                    //distance -= Mathf.Clamp(distance - hit.distance, distanceMin, distanceMax);
-                    //Debug.Log("new distance change " + hit.distance);
+                    if (Physics.Linecast(transform.position, target.position, out hit))
+                    {
+                        //distance -= Mathf.Clamp(distance - hit.distance, distanceMin, distanceMax);
+                        //Debug.Log("new distance change " + hit.distance);
+                    }
                 }
-            }
-            distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + target.position;
+                distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
+                Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+                Vector3 position = rotation * negDistance + target.position;
 
-            transform.rotation = rotation;
-            transform.position = position;
+                transform.rotation = rotation;
+                transform.position = position;
 
-            if(distance >= scaleThreshhold && isLines == false)
-            {
-                isLines = true;
-            } else if(distance > scaleThreshhold && isLines == true)
-            {
-                isLines = false;
+                if(distance >= scaleThreshhold && isLines == false)
+                {
+                    isLines = true;
+                } else if(distance > scaleThreshhold && isLines == true)
+                {
+                    isLines = false;
+                }
+                needsUpdate = false;
             }
-            needsUpdate = false;
         }
     }
 
