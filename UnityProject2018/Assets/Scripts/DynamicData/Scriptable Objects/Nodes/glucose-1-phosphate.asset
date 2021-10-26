@@ -19,7 +19,7 @@ MonoBehaviour:
   Description: Part of Glycogen Synthesis/Breakdown
   Charge: -2
   EnzymeRequired: 
-  MolecularFormula: " C\u2086H\u2081\u2083O\u2089P"
+  MolecularFormula: ' C<sub>6</sub>H<sub>13</sub>O<sub>9</sub>P'
   IUPACNames: '[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl] dihydrogen
     phosphate'
   link: http://www.genome.jp/dbget-bin/www_bget?cpd:C00103
