@@ -50,30 +50,24 @@ public class MouseOrbit : MonoBehaviour
 
     void LateUpdate()
     {
+        Quaternion rotation;
+        Vector3 negDistance;
+        Vector3 position;
 
-        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
+        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0)) // in case a mouse event happens 
         {
             x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-            Quaternion rotation = Quaternion.Euler(y, x, 0);
+            rotation = Quaternion.Euler(y, x, 0);
 
             distance = Mathf.Clamp(distance, distanceMin, distanceMax);
 
-            RaycastHit hit;
-            if(target.gameObject.activeSelf)
-            {
-                if (Physics.Linecast(transform.position, target.position, out hit))
-                {
-                    //distance -= Mathf.Clamp(distance - hit.distance, distanceMin, distanceMax);
-                    //Debug.Log("new distance change " + hit.distance);
-                }
-            }
             distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + target.position;
+            negDistance = new Vector3(0.0f, 0.0f, -distance);
+            position = rotation * negDistance + target.position;
 
             transform.rotation = rotation;
             transform.position = position;
@@ -85,7 +79,27 @@ public class MouseOrbit : MonoBehaviour
             {
                 isLines = false;
             }
+        }
+
+        if (needsUpdate) {                                              // only when update is needed, update the distance                
             needsUpdate = false;
+            distance = Mathf.Clamp(distance, distanceMin, distanceMax);
+            rotation = Quaternion.Euler(y, x, 0);
+            negDistance = new Vector3(0.0f, 0.0f, -distance);
+            position = rotation * negDistance + target.position;
+
+            transform.rotation = rotation;
+            transform.position = position;
+
+            distance = Mathf.Clamp(distance, distanceMin, distanceMax);
+
+            if(distance >= scaleThreshhold && isLines == false)
+            {
+                isLines = true;
+            } else if(distance > scaleThreshhold && isLines == true)
+            {
+                isLines = false;
+            }
         }
     }
 
@@ -100,6 +114,7 @@ public class MouseOrbit : MonoBehaviour
 
     public void ChangeFocus(Transform newTarget)
     {
+        
         target = newTarget;
         distance = defaultDistance;
         needsUpdate = true;

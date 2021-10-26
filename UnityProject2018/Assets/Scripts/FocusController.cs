@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FocusController : MonoBehaviour
 {
@@ -19,25 +20,23 @@ public class FocusController : MonoBehaviour
 
 // changes the focus to the aggregate view of the highlighted Pathways using GetHighlightedRenderers and CenterCamera functions
     public void UpdateFocus() {
-        List<Bounds> boundsList = HighlightController.Instance.GetHighlightedBounds();
+        List<Bounds> boundsList = HighlightService.Instance.GetHighlightedBounds();
         if (boundsList.Count == 0){
-            Debug.Log(" RenderBounds List is EMPTY!");
+            Debug.Log(" no PW highlighted defaulting to defaultCenter");
             GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
             return;
-            //boundsList.Add(defaultCenter.GetComponent<Renderer>().bounds);
        }
-        GetComponent<ClickListen>().CenterCamera(boundsList);
-
-
+        Bounds bounds = GetComponent<ClickListen>().BoundsEncapsulate(boundsList);
+        
+        GetComponent<ClickListen>().CenterCamera(bounds);
+        
     //  RENDER VERSION OF UPDATE FOCUS
-    //    List<Renderer> renderers  = HighlightController.Instance.GetHighlightedRenderers();
+    //    List<Renderer> renderers  = HighlightService.Instance.GetHighlightedRenderers();
     //    if (renderers.Count == 0){
     //        Debug.Log(" Render List is EMPTY!");
     //        renderers.Add(defaultCenter.GetComponent<Renderer>());
     //    } 
     
     //    GetComponent<ClickListen>().CenterCamera(renderers);
-
-
     }
 }
