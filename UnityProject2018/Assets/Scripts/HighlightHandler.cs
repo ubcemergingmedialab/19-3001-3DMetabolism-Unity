@@ -50,7 +50,7 @@ public class HighlightHandler : MonoBehaviour
     }
 
     public bool IsDoubleHighlighted() {
-        return (HighlightController.Instance.CheckState(this) == HighlightPathway.HighlightState.Accented);
+        return (StatusController.Instance.ElementCheckState(this) == HighlightPathway.HighlightState.Accented);
     }
     
     private void ActivateArrows()
@@ -78,19 +78,19 @@ public class HighlightHandler : MonoBehaviour
     public void UpdateHighlight()
     {
         Debug.Log(parent.name + " " + highlightCounter);
-        HighlightPathway.HighlightState currentState = HighlightController.Instance.CheckState(this);   // finds the new highlight state and sets the visuals accordingly
+        HighlightPathway.HighlightState currentState = StatusController.Instance.ElementCheckState(this);   // finds the new highlight state and sets the visuals accordingly
 
-        if (currentState == HighlightPathway.HighlightState.Default)                                    // if Default state
+        if (currentState == HighlightPathway.HighlightState.Default)                                        // if Default state
         {
-            parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", defaultColor);  // change the color
+            parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", defaultColor);                // change the color
             if (GetComponent<NodeDataDisplay>() != null)
             {
-                GetComponent<NodeDataDisplay>().TransparentText();                                      // change the text color
+                GetComponent<NodeDataDisplay>().TransparentText();                                          // change the text color
             }
             parent.localScale = defaultScale;
             DeactivateArrows();
         }
-        else if (currentState == HighlightPathway.HighlightState.Highlighted)                           // if Highlight state
+        else if (currentState == HighlightPathway.HighlightState.Highlighted)                               // if Highlight state
         {
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", highlightColor);
             if (GetComponent<NodeDataDisplay>() != null)
@@ -100,10 +100,10 @@ public class HighlightHandler : MonoBehaviour
             parent.localScale = defaultScale;
             DeactivateArrows();
         }
-        else if (currentState == HighlightPathway.HighlightState.Accented)                              // if Accent state
+        else if (currentState == HighlightPathway.HighlightState.Accented)                                  // if Accent state
         {
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", accentColor);
-            if (GetComponent<NodeDataDisplay>() != null)                                             // text color is already set when highlighted
+            if (GetComponent<NodeDataDisplay>() != null)                                                    // text color is already set when highlighted
             {
                 //GetComponent<NodeDataDisplay>().OpaqueText();
             }
