@@ -85,7 +85,7 @@ public class HighlightHandler : MonoBehaviour
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", defaultColor);                // change the color
             if (GetComponent<NodeDataDisplay>() != null)
             {
-                GetComponent<NodeDataDisplay>().TransparentText();                                          // change the text color
+                NodeTextDisplay.Instance.UpdateTextDisplay();                                       // change the text color
             }
             parent.localScale = defaultScale;
             DeactivateArrows();
@@ -95,7 +95,7 @@ public class HighlightHandler : MonoBehaviour
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", highlightColor);
             if (GetComponent<NodeDataDisplay>() != null)
             {
-                GetComponent<NodeDataDisplay>().OpaqueText();
+                NodeTextDisplay.Instance.UpdateTextDisplay();
             }
             parent.localScale = defaultScale;
             DeactivateArrows();
@@ -105,7 +105,7 @@ public class HighlightHandler : MonoBehaviour
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", accentColor);
             if (GetComponent<NodeDataDisplay>() != null)                                                    // text color is already set when highlighted
             {
-                //GetComponent<NodeDataDisplay>().OpaqueText();
+                NodeTextDisplay.Instance.UpdateTextDisplay();
             }
             parent.localScale = accentScale;
             ActivateArrows();

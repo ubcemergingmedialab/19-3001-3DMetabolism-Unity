@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7241831300103750608}
   - component: {fileID: 8235011463390896517}
   - component: {fileID: 1091968301524605184}
+  - component: {fileID: -7135799318768907349}
   m_Layer: 0
   m_Name: NodeTemplate
   m_TagString: Untagged
@@ -182,6 +183,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
+--- !u!114 &-7135799318768907349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428813303328792915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af84c12707632e043aa5a51ef52c82de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8530696984914683760
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +296,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello World
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
