@@ -28,6 +28,8 @@ public class MouseOrbit : MonoBehaviour
     private Rigidbody rigidbody;
     private bool needsUpdate = false;
 
+    public bool mouseOverCard = false;
+
     float x = 0.0f;
     float y = 0.0f;
 
@@ -54,30 +56,34 @@ public class MouseOrbit : MonoBehaviour
         Vector3 negDistance;
         Vector3 position;
 
-        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0)) // in case a mouse event happens 
+        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0)) // in case a mouse event happens
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+            if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
+            {
+                x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+                y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
-            y = ClampAngle(y, yMinLimit, yMaxLimit);
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
 
             rotation = Quaternion.Euler(y, x, 0);
 
-            distance = Mathf.Clamp(distance, distanceMin, distanceMax);
+                distance = Mathf.Clamp(distance, distanceMin, distanceMax);
 
             distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
             negDistance = new Vector3(0.0f, 0.0f, -distance);
             position = rotation * negDistance + target.position;
 
-            transform.rotation = rotation;
-            transform.position = position;
+                transform.rotation = rotation;
+                transform.position = position;
 
-            if(distance >= scaleThreshhold && isLines == false)
-            {
-                isLines = true;
-            } else if(distance > scaleThreshhold && isLines == true)
-            {
-                isLines = false;
+                if(distance >= scaleThreshhold && isLines == false)
+                {
+                    isLines = true;
+                } else if(distance > scaleThreshhold && isLines == true)
+                {
+                    isLines = false;
+                }
+                needsUpdate = false;
             }
         }
 
