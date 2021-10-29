@@ -131,4 +131,7 @@ public class MouseOrbit : MonoBehaviour
         distance = dist;
         needsUpdate = true;
     }
+
+    public void TestDebugLog () {
+        Debug.Log("BUtton pressed!"); }
 }
