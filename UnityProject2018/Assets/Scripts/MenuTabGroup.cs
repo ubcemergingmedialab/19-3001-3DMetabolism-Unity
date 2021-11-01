@@ -9,9 +9,9 @@ public class MenuTabGroup : MonoBehaviour
     public MenuTabButton selectedTab;
     public List<GameObject> objectsToSwap;
 
-    public Sprite tabHover;
-    public Sprite tabActive;
-    public Sprite tabIdle;
+    // public Sprite tabHover;
+    // public Sprite tabActive;
+    // public Sprite tabIdle;
 
     
     public void Subcribe(MenuTabButton button) {
@@ -24,7 +24,7 @@ public class MenuTabGroup : MonoBehaviour
     public void OnTabEnter(MenuTabButton button){
         ResetTabs();
         if (selectedTab == null || button !=selectedTab){
-           button.background.sprite = tabHover; 
+           button.targetImage.sprite = button.tabHover; 
         }
     }
     public void OnTabExit(MenuTabButton button){
@@ -32,28 +32,36 @@ public class MenuTabGroup : MonoBehaviour
         
     }
     public void OnTabSelected(MenuTabButton button){
-
+        int index;
         if (selectedTab != null){
             selectedTab.Deselect();
+        }
+        
+        if (selectedTab == button) {
+            index = button.transform.GetSiblingIndex();
+            selectedTab = null;
+            ResetTabs();
+            objectsToSwap[index].SetActive(false);
+            return;
         }
         selectedTab = button;
         selectedTab.Select();
 
         ResetTabs();
-        button.background.sprite = tabActive;
+        button.targetImage.sprite = button.tabActive;
 
-        int index = button.transform.GetSiblingIndex();
+        index = button.transform.GetSiblingIndex();
         for (int i = 0; i < objectsToSwap.Count; i++){
             objectsToSwap[i].SetActive((i == index));
         }
     }
-
+    
     public void ResetTabs(){
         foreach(MenuTabButton button in tabButtons){
             if (selectedTab != null && button == selectedTab) {
                 continue;
             }
-            button.background.sprite = tabIdle;
+            button.targetImage.sprite = button.tabIdle;
         }
     }
         

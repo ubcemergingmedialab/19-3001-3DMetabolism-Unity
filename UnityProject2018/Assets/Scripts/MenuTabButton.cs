@@ -10,14 +10,20 @@ public class MenuTabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickH
 {
 
     public MenuTabGroup tabGroup;
-    public Image background;
+    public Image targetImage;
+    public Sprite tabHover;
+    public Sprite tabActive;
+    public Sprite tabIdle;
+
     public UnityEvent onTabSelected;
     public UnityEvent onTabDeselected;
+
+    
 
     // Start is called before the first frame update
     void Start()
     { 
-        background = GetComponent<Image>();
+        targetImage = GetComponent<Image>();
         tabGroup.Subcribe(this);
     }
 
