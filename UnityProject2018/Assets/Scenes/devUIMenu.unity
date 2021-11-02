@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 1334518}
   - component: {fileID: 1334521}
   - component: {fileID: 1334520}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InfoMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.0000231}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 676356282}
@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -942}
+  m_AnchoredPosition: {x: 0, y: -802.4}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1334518
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 9116253}
   - component: {fileID: 9116255}
   - component: {fileID: 9116254}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -199.79001, y: -93.96002}
+  m_AnchoredPosition: {x: -199.79004, y: -93.96002}
   m_SizeDelta: {x: 396.65002, y: 187.92001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57507566
@@ -2271,7 +2271,7 @@ GameObject:
   - component: {fileID: 70864150}
   - component: {fileID: 70864149}
   - component: {fileID: 70864148}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SettingMenuPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3013,7 +3013,7 @@ GameObject:
   - component: {fileID: 113998994}
   - component: {fileID: 113998996}
   - component: {fileID: 113998995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FaveImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3472,7 +3472,7 @@ GameObject:
   - component: {fileID: 136731612}
   - component: {fileID: 136731614}
   - component: {fileID: 136731613}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PathwaysImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5142,7 +5142,7 @@ GameObject:
   - component: {fileID: 255596179}
   - component: {fileID: 255596178}
   - component: {fileID: 255596177}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: UI
   m_Icon: {fileID: 0}
@@ -5219,9 +5219,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 534669904}
+  m_Camera: {fileID: 24679256}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -6130,7 +6130,7 @@ GameObject:
   - component: {fileID: 303351835}
   - component: {fileID: 303351834}
   - component: {fileID: 303351833}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CellMenuPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7036,7 +7036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350699128}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8643,7 +8643,7 @@ GameObject:
   - component: {fileID: 425484549}
   - component: {fileID: 425484550}
   - component: {fileID: 425484552}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9161,7 +9161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -197.59, y: -89.83099}
+  m_AnchoredPosition: {x: -197.58997, y: -89.83099}
   m_SizeDelta: {x: 395.18, y: 178.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468787678
@@ -9438,7 +9438,7 @@ GameObject:
   - component: {fileID: 491575403}
   - component: {fileID: 491575402}
   - component: {fileID: 491575406}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TabIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10704,7 +10704,7 @@ GameObject:
   - component: {fileID: 547856001}
   - component: {fileID: 547856000}
   - component: {fileID: 547855999}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InfoMenuPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10801,7 +10801,7 @@ GameObject:
   - component: {fileID: 549163347}
   - component: {fileID: 549163349}
   - component: {fileID: 549163348}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11900,10 +11900,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1800, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -11921,9 +11921,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 534669904}
+  m_Camera: {fileID: 24679256}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -12832,7 +12832,7 @@ GameObject:
   - component: {fileID: 676356283}
   - component: {fileID: 676356286}
   - component: {fileID: 676356288}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SideBarTabs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12897,7 +12897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0.5019608}
+  m_Color: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13306,7 +13306,7 @@ GameObject:
   - component: {fileID: 721081726}
   - component: {fileID: 721081725}
   - component: {fileID: 721081724}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AnimationMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13429,7 +13429,7 @@ GameObject:
   - component: {fileID: 722769725}
   - component: {fileID: 722769728}
   - component: {fileID: 722769727}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FaveMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13704,7 +13704,7 @@ GameObject:
   - component: {fileID: 753630749}
   - component: {fileID: 753630751}
   - component: {fileID: 753630750}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14248,7 +14248,7 @@ GameObject:
   - component: {fileID: 773784495}
   - component: {fileID: 773784497}
   - component: {fileID: 773784496}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14753,7 +14753,7 @@ GameObject:
   - component: {fileID: 809814900}
   - component: {fileID: 809814899}
   - component: {fileID: 809814902}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AnimationMenuPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16896,7 +16896,7 @@ GameObject:
   - component: {fileID: 908935194}
   - component: {fileID: 908935196}
   - component: {fileID: 908935195}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CellImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17641,7 +17641,7 @@ GameObject:
   - component: {fileID: 991529517}
   - component: {fileID: 991529516}
   - component: {fileID: 991529515}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17783,7 +17783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996409004}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19269,7 +19269,7 @@ GameObject:
   - component: {fileID: 1070051921}
   - component: {fileID: 1070051923}
   - component: {fileID: 1070051924}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CellMenubutton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20320,7 +20320,7 @@ GameObject:
   - component: {fileID: 1163144628}
   - component: {fileID: 1163144630}
   - component: {fileID: 1163144629}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23226,7 +23226,7 @@ GameObject:
   - component: {fileID: 1306714547}
   - component: {fileID: 1306714549}
   - component: {fileID: 1306714548}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24090,7 +24090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1332857973}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TabPages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24253,8 +24253,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 750302648}
   m_HandleRect: {fileID: 750302647}
   m_Direction: 2
-  m_Value: 0.95427805
-  m_Size: 0.4344785
+  m_Value: 0.95427763
+  m_Size: 0.4344784
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25252,7 +25252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398461799}
   - component: {fileID: 1398461800}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26550,7 +26550,7 @@ GameObject:
   - component: {fileID: 1481527597}
   - component: {fileID: 1481527600}
   - component: {fileID: 1481527599}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SettingMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26671,7 +26671,7 @@ GameObject:
   - component: {fileID: 1485897148}
   - component: {fileID: 1485897150}
   - component: {fileID: 1485897149}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SettingImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28484,7 +28484,7 @@ GameObject:
   - component: {fileID: 1621379284}
   - component: {fileID: 1621379286}
   - component: {fileID: 1621379285}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28618,7 +28618,7 @@ GameObject:
   - component: {fileID: 1626336465}
   - component: {fileID: 1626336467}
   - component: {fileID: 1626336466}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InfoImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30047,7 +30047,7 @@ GameObject:
   - component: {fileID: 1712411848}
   - component: {fileID: 1712411847}
   - component: {fileID: 1712411846}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PathwayMenuPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31759,7 +31759,7 @@ GameObject:
   - component: {fileID: 1857090998}
   - component: {fileID: 1857090999}
   - component: {fileID: 1857090997}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PathwayMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34335,7 +34335,7 @@ GameObject:
   - component: {fileID: 2007470259}
   - component: {fileID: 2007470261}
   - component: {fileID: 2007470260}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34846,7 +34846,7 @@ GameObject:
   - component: {fileID: 2031290277}
   - component: {fileID: 2031290278}
   - component: {fileID: 2031290279}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35385,7 +35385,7 @@ GameObject:
   - component: {fileID: 2081356355}
   - component: {fileID: 2081356354}
   - component: {fileID: 2081356353}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FaveMenuPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35896,7 +35896,7 @@ GameObject:
   - component: {fileID: 2098858818}
   - component: {fileID: 2098858820}
   - component: {fileID: 2098858819}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
