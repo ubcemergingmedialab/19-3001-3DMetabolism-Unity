@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 9116253}
   - component: {fileID: 9116255}
   - component: {fileID: 9116254}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4658,7 +4658,7 @@ GameObject:
   - component: {fileID: 234569476}
   - component: {fileID: 234569478}
   - component: {fileID: 234569477}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6599,7 +6599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350699128}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8205,7 +8205,7 @@ GameObject:
   - component: {fileID: 425484551}
   - component: {fileID: 425484549}
   - component: {fileID: 425484550}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8896,7 +8896,7 @@ GameObject:
   - component: {fileID: 485938200}
   - component: {fileID: 485938202}
   - component: {fileID: 485938201}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11185,7 +11185,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 24679256}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -12698,7 +12698,7 @@ GameObject:
   - component: {fileID: 753630749}
   - component: {fileID: 753630751}
   - component: {fileID: 753630750}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16733,7 +16733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996409004}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19228,7 +19228,7 @@ GameObject:
   - component: {fileID: 1191040205}
   - component: {fileID: 1191040204}
   - component: {fileID: 1191040203}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21695,7 +21695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303647941}
   - component: {fileID: 1303647942}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NodeTextDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22819,7 +22819,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 750302648}
   m_HandleRect: {fileID: 750302647}
   m_Direction: 2
-  m_Value: 0.9542781
+  m_Value: 0.95427793
   m_Size: 0.43447843
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -26522,6 +26522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PathwayButtonPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 413327639287738963, guid: c63bbe21836d06b4f973bab5e3b883f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6346571546704775820, guid: c63bbe21836d06b4f973bab5e3b883f6,
         type: 3}
       propertyPath: m_RootOrder
@@ -27185,7 +27190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1643183912}
   - component: {fileID: 1643183913}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StatusController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28059,7 +28064,7 @@ GameObject:
   - component: {fileID: 1708614049}
   - component: {fileID: 1708614051}
   - component: {fileID: 1708614050}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30268,7 +30273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1889571749}
   - component: {fileID: 1889571750}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30794,7 +30799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918122711}
   - component: {fileID: 1918122712}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HighlightService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31003,7 +31008,7 @@ GameObject:
   - component: {fileID: 1931392240}
   - component: {fileID: 1931392239}
   - component: {fileID: 1931392238}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31650,7 +31655,7 @@ GameObject:
   - component: {fileID: 1981314664}
   - component: {fileID: 1981314663}
   - component: {fileID: 1981314662}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32592,7 +32597,7 @@ GameObject:
   - component: {fileID: 2025938437}
   - component: {fileID: 2025938436}
   - component: {fileID: 2025938435}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UIContainer
   m_TagString: UI
   m_Icon: {fileID: 0}
@@ -32691,7 +32696,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 24679256}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -32713,7 +32718,7 @@ GameObject:
   - component: {fileID: 2031290277}
   - component: {fileID: 2031290278}
   - component: {fileID: 2031290279}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

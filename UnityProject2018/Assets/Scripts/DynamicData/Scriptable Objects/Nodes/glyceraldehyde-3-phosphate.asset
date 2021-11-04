@@ -19,6 +19,6 @@ MonoBehaviour:
   Description: Part of Glycolysis
   Charge: -2
   EnzymeRequired: 
-  MolecularFormula: C<sub>3</sub>H<sub>7</sub>O<sub>6</sub>P
+  MolecularFormula: "C\u2083H\u2087O\u2086P"
   IUPACNames: (2R)-2-Hydroxy-3-oxopropyl dihydrogen phosphate
   link: https://www.genome.jp/dbget-bin/www_bget?cpd:C00118

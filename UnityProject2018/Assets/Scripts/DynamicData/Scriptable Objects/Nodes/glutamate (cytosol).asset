@@ -19,6 +19,6 @@ MonoBehaviour:
   Description: Part of The Urea Cycle
   Charge: -1
   EnzymeRequired: 
-  MolecularFormula: C<sub>5</sub>H<sub>9</sub>NO<sub>4</sub>
+  MolecularFormula: "C\u2085H\u2089NO\u2084"
   IUPACNames: (2S)-2-Aminopentanedioate
   link: http://www.kegg.jp/dbget-bin/www_bget?cpd:C00025

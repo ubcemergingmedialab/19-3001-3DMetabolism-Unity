@@ -19,6 +19,6 @@ MonoBehaviour:
   Description: Part of The Citric Acid Cycle
   Charge: -2
   EnzymeRequired: 
-  MolecularFormula: C<sub>4</sub>H<sub>6</sub>O<sub>4</sub>
+  MolecularFormula: "C\u2084H\u2086O\u2084"
   IUPACNames: butanediate
   link: http://www.genome.jp/dbget-bin/www_bget?cpd:C00042

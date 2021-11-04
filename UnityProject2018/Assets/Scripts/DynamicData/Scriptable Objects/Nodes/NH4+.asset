@@ -19,6 +19,6 @@ MonoBehaviour:
   Description: Part of The Urea Cycle
   Charge: +1
   EnzymeRequired: 
-  MolecularFormula: NH<sub>4</sub>
+  MolecularFormula: "NH\u2084"
   IUPACNames: Ammonium
   link: https://www.genome.jp/entry/C01342

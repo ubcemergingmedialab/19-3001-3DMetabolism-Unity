@@ -47,7 +47,7 @@ public class NodeDataDisplay : MonoBehaviour
     {
         TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
         Color tempColor = textMesh.color;
-        tempColor.a = 0.1f;
+        tempColor.a = 0.0f;
         textMesh.color = tempColor;
     }
 

@@ -19,6 +19,6 @@ MonoBehaviour:
   Description: Part of The Urea Cycle
   Charge: -2
   EnzymeRequired: 
-  MolecularFormula: CH<sub>4</sub>NO<sub>5</sub>P
+  MolecularFormula: "CH\u2084NO\u2085P"
   IUPACNames: phosphono carbamate
   link: http://www.kegg.jp/entry/C00169
