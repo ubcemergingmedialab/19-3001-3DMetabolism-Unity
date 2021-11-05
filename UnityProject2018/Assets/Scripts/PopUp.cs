@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// activate/deactive a game object
 public class PopUp : MonoBehaviour
 {
 
-    public GameObject PopupPanel;
+    public GameObject PopupObject;
     private bool enable = false;
 
     public void PopUpEnable() {
         enable = (!enable);
-        PopupPanel.SetActive(enable);
+        PopupObject.SetActive(enable);
     }
 }
