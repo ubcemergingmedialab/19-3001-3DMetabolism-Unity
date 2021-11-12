@@ -58,6 +58,10 @@ public class StatusController : MonoBehaviour
         highlightPathways = new List<HighlightPathway>();
 
 
+        // Send the list of active pathways to the button factory singleton instance
+        //ButtonFactory.Instance.ActivePathways = activePathways;
+
+
         // <> fill the elements network 
         //Debug.Log("count = " + activePathways.Count);
         foreach (PathwaySO pathwaySO in activePathways) {
