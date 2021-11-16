@@ -22,11 +22,12 @@ public class PathwaySearch : MonoBehaviour
     public void PrintPathwaySearch() {
         List<PathwaySO> results = StatusController.Instance.activePathways;
         string input = SearchInput.GetComponent<TMP_InputField>().text;
+        if (input == "") {return;}
         foreach (PathwaySO pw in results){
 
-            if (pw.Label == input){
+            if (pw.Label.Contains(input)){
                 Debug.Log(""+ pw.Label);
-                break;
+                //break;
             } else{
                 continue;
             }
