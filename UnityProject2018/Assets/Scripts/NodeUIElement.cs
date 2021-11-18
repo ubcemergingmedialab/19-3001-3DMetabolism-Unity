@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NodeUIElement : UIElement
 {
@@ -10,7 +11,7 @@ public class NodeUIElement : UIElement
 
     public Text QIDText;
     public Text ChargeText;
-    public Text MolecularFormulaText;
+    public TextMeshProUGUI MolecularFormulaText;
     public Text IUPACNamesText;
     public GameObject LinkButton;
 
