@@ -71,6 +71,7 @@ public class HighlightService : MonoBehaviour
                 }
 
                 StatusController.Instance.SetPathwayState(targetPathway,newState);
+                FocusController.Instance.UpdateFocus();
             }
         }
     }

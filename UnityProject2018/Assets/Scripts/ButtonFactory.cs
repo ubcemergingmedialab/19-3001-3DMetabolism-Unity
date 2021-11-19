@@ -26,7 +26,7 @@ public class ButtonFactory : MonoBehaviour
     // Determines the placement of buttons.
     // X value should remain constant, Y value should differ by the offset
     // at every button generation
-    public static float buttonX = -550;
+    public static float buttonX = 0;
     public static float buttonYOffset = -75;
     public float buttonY = 400;
 

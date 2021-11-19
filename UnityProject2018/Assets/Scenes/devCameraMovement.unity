@@ -367,14 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: e045f788aed057b45a43911f9bcbd811, type: 2}
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 1, g: 1, b: 1, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &7162194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,7 +1581,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 988872253906518422}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &59655250
 MonoBehaviour:
@@ -1603,7 +1595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c145e50a42ac2874d9bd36d005d94b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIContainer: {fileID: 607151268}
 --- !u!1 &61637723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,14 +2747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: c54909db73e41ae4584806ffdd908f28, type: 2}
-  defaultColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &116432104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8269,14 +8252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: f4278ed42d51da244b3e9a832183c275, type: 2}
-  defaultColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &433197123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9261,14 +9236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: 3640b2cb7b23b6c44bc8b33e351ea798, type: 2}
-  defaultColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &496334517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13690,18 +13657,6 @@ MonoBehaviour:
           m_StringArgument: Animation2
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OnValueChangedSlider, Assembly-CSharp
-        m_MethodName: ChangeAnimationName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Animation2
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &776137720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14451,14 +14406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: 712ac25df59c8c14e94f95003135b931, type: 2}
-  defaultColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &853471913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17814,7 +17761,7 @@ MonoBehaviour:
   DescriptionText: {fileID: 1198535357}
   QIDText: {fileID: 929229689}
   ChargeText: {fileID: 1032467344}
-  MolecularFormulaText: {fileID: 666868416}
+  MolecularFormulaText: {fileID: 0}
   IUPACNamesText: {fileID: 789056963}
   LinkButton: {fileID: 93318057}
 --- !u!114 &1038469916
@@ -19523,7 +19470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 988872253906518422}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1201941229
 MonoBehaviour:
@@ -19552,7 +19499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac039cc284358174fbc8e1371109046d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCenter: {fileID: 988872253906165177}
 --- !u!1 &1202353064
 GameObject:
   m_ObjectHideFlags: 0
@@ -23805,14 +23751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: 4ce94a0ae74c98b46ba8681fe6b3145c, type: 2}
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 1, g: 1, b: 1, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &1445723726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23946,6 +23884,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 4ce94a0ae74c98b46ba8681fe6b3145c, type: 2}
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
+--- !u!1 &1456839273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456839274}
+  - component: {fileID: 1456839275}
+  m_Layer: 0
+  m_Name: NodeTextDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1456839274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456839273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 988872253906518422}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456839275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456839273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ba91b09f5d7864b8ed8f6ee3ce681c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461453637
 GameObject:
   m_ObjectHideFlags: 0
@@ -30272,14 +30253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400220f4c4825eb4e9efac393ffe380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathwayToHighlight: {fileID: 11400000, guid: 98941e174a886f6419fc4c0c20e39aae, type: 2}
-  defaultColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  defaultTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  highlightColor: {r: 0, g: 0, b: 1, a: 1}
-  highlightTextColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
-  accentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  accentTextColor: {r: 0.2196079, g: 0.2196079, b: 0.2196079, a: 1}
-  state: 0
 --- !u!114 &1898890013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32086,18 +32059,6 @@ MonoBehaviour:
       - m_Target: {fileID: 988872253906165178}
         m_TargetAssemblyTypeName: AnimationLoader, Assembly-CSharp
         m_MethodName: LoadAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Animation3
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OnValueChangedSlider, Assembly-CSharp
-        m_MethodName: ChangeAnimationName
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36708,9 +36669,10 @@ Transform:
   - {fileID: 181103885}
   - {fileID: 1764511430}
   - {fileID: 23750733}
-  - {fileID: 7463440894588532971}
   - {fileID: 59655249}
   - {fileID: 1201941228}
+  - {fileID: 1456839274}
+  - {fileID: 7463440894588532971}
   m_Father: {fileID: 1542426135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40111,6 +40073,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 988872253906518422}
     m_Modifications:
+    - target: {fileID: 1630704295, guid: 9c8d71f1682391f4a99ca2aca8e32f92, type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 11465378693281077, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -40891,6 +40857,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 1443898769521964626, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 1505768784042603834, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -41142,7 +41113,7 @@ PrefabInstance:
     - target: {fileID: 1709431152627676007, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">fructose-1, 6-bisphosphate</font></mark>
+      value: <mark=#00000088><font="LiberationSans SDF">fructose 1, 6-bisphosphate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431152627676007, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -43944,6 +43915,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 3250380432356351565, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 3258028826737550443, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
@@ -44012,7 +43988,7 @@ PrefabInstance:
     - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3345780499860761087, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -44114,6 +44090,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3353607731239411779, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 3359300818858489974, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -44284,6 +44265,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a69396fa118adca4ca8d11338f3e29ac, type: 2}
+    - target: {fileID: 3949661059304509150, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 3988200241458909037, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
@@ -48899,6 +48885,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 8632541634850476561, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.36248362
+      objectReference: {fileID: 0}
     - target: {fileID: 8633470591434022754, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString

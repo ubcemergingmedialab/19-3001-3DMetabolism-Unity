@@ -31,4 +31,5 @@ public class CardDisplay : MonoBehaviour {
         IUPACNamesText.text = card.IUPACNames;
     }
 
+
 }

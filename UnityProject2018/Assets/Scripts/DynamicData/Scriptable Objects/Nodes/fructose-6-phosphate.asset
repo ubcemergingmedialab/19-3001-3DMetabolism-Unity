@@ -19,11 +19,6 @@ MonoBehaviour:
   Description: Part of Glycolysis
   Charge: -2
   EnzymeRequired: 
-  MolecularFormula: 
-  IUPACNames: 'beta-D-Fructose 6-phosphate
-
-    6-O-phosphonato-beta-D-fructofuranose
-
-    beta-D-fructofuranose
-    6-phosphate dianion'
+  MolecularFormula: "C\u2086H\u2081\u2084O\u2081\u2082P\u2082"
+  IUPACNames: '[(2R,3R,4S)-2,3,4,6-tetrahydroxy-5-oxohexyl] dihydrogen phosphate'
   link: https://www.genome.jp/dbget-bin/www_bget?cpd:C05345

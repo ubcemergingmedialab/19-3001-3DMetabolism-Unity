@@ -166,7 +166,7 @@ public class StatusController : MonoBehaviour
                     }
             }
         } else {
-            Debug.LogError("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }
