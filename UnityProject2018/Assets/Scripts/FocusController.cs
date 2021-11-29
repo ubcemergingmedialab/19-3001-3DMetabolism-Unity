@@ -12,7 +12,7 @@ public class FocusController : MonoBehaviour
     }
 
     public Collider defaultCenter;
-    public bool AutoCameraLock = false; // TO BE MADE PRIVATE, public only for demo purposes
+    private bool AutoCameraLock = false; // TO BE MADE PRIVATE, public only for demo purposes
 
     void Awake(){
         if (_instance != null && _instance != this) 
@@ -51,8 +51,8 @@ public class FocusController : MonoBehaviour
 
     }
 
-    public void SetAutoLock(bool state){
-        AutoCameraLock = state;
+    public void SetAutoLock(){
+        AutoCameraLock = (!AutoCameraLock);
     }
 }
 
