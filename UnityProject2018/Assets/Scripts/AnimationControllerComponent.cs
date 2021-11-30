@@ -16,7 +16,9 @@ public class AnimationControllerComponent : MonoBehaviour
     void Start()
     {
         //animationRoutine = StartCoroutine("PlayAnimations");
-        presenter = FindObjectOfType<AnimationDescriptionPresenter>();
+        if(presenter == null) {
+            presenter = FindObjectOfType<AnimationDescriptionSliderPresenter>();
+        }
     }
 
     private IEnumerator PlayAnimations()
