@@ -3869,7 +3869,7 @@ RectTransform:
   m_Children:
   - {fileID: 1158101070}
   m_Father: {fileID: 2076444264}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5798,7 +5798,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 0.24212, z: 1}
   m_Children: []
   m_Father: {fileID: 2076444264}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
@@ -8499,8 +8499,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507814657}
   m_HandleRect: {fileID: 1507814656}
   m_Direction: 2
-  m_Value: 0.95427793
-  m_Size: 0.4344784
+  m_Value: 0.95427746
+  m_Size: 0.43447837
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -20800,7 +20800,7 @@ RectTransform:
   m_Children:
   - {fileID: 252697743}
   m_Father: {fileID: 2076444264}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
@@ -23909,6 +23909,7 @@ RectTransform:
   m_Children:
   - {fileID: 323437742}
   - {fileID: 2076444264}
+  - {fileID: 1889571749}
   m_Father: {fileID: 1178446666}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34053,15 +34054,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889571748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 45.226986}
-  m_LocalScale: {x: 108.36846, y: 1447.5061, z: 222.55287}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6204253}
+  m_LocalScale: {x: 39.607876, y: 37.49858, z: 37.498585}
   m_Children: []
-  m_Father: {fileID: 2076444264}
-  m_RootOrder: 0
+  m_Father: {fileID: 1250337985}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 243.18828, y: -29716.97}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889571750
@@ -34082,7 +34083,7 @@ MonoBehaviour:
     type: 3}
   adList: []
   sliderLength: 36
-  sliderComponent: {fileID: 0}
+  sliderComponent: {fileID: 2076444267}
 --- !u!1 &1889858383
 GameObject:
   m_ObjectHideFlags: 0
@@ -37303,7 +37304,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 0.36549258, y: 0.02590564, z: 0.16849288}
   m_Children:
-  - {fileID: 1889571749}
   - {fileID: 266238497}
   - {fileID: 1066156850}
   - {fileID: 158267426}
