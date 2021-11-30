@@ -37,7 +37,7 @@ public class AnimationLoader : MonoBehaviour
             swap = new List<AnimationDescription>(box);
             StartCoroutine(controller.ChangeAnimation(swap));
         }
-        AnimationDescriptionPresenter presenter = UIContainer.GetComponent<AnimationDescriptionPresenter>();
+        AnimationDescriptionPresenter presenter = FindObjectOfType<AnimationDescriptionPresenter>();
         if(presenter != null)
         {
             presenter.ClearAnimationDescriptions();
