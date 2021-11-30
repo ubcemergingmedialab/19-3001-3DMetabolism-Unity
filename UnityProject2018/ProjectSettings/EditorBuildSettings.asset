@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/scrollBar.unity
     guid: cd4c811c221cedf4c9ed8e3776ddcee5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/devUIMenu.unity
     guid: 5bebf6aaade0e4a88ae3a8c7bda962f8
+  - enabled: 1
+    path: Assets/Scenes/_Main.unity
+    guid: 9bf77c82321493d459b0e00eda5cb296
   m_configObjects: {}
