@@ -13,6 +13,9 @@ public class EdgeSOBeta : ScriptableObject
     public string EnergyProduced;
     public string GibbsFreeEnergy;
 
+    public List<NodeSOBeta> reactants;
+    public List<NodeSOBeta> products;
+
     
     public string AuxLabel;
     public Vector3 AuxPosition;
