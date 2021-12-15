@@ -26305,6 +26305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pathway: {fileID: 11400000, guid: 6335ad868d5bb6d4b8f913519161d283, type: 2}
+  edges: []
+  node: []
 --- !u!1 &1366209746
 GameObject:
   m_ObjectHideFlags: 0
@@ -45326,6 +45328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 988872253906518422}
     m_Modifications:
+    - target: {fileID: 1630704295, guid: 9c8d71f1682391f4a99ca2aca8e32f92, type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 11465378693281077, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -46322,7 +46328,7 @@ PrefabInstance:
     - target: {fileID: 1709431152627676007, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_text
-      value: <mark=#00000088><font="LiberationSans SDF">fructose-1, 6-bisphosphate</font></mark>
+      value: <mark=#00000088><font="LiberationSans SDF">fructose 1, 6-bisphosphate</font></mark>
       objectReference: {fileID: 0}
     - target: {fileID: 1709431152627676007, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -49484,6 +49490,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a69396fa118adca4ca8d11338f3e29ac, type: 2}
+    - target: {fileID: 3949661059304509150, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
     - target: {fileID: 3988200241458909037, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh

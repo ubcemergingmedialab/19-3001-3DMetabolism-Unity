@@ -9,6 +9,6 @@ public class PathwaySOBeta : ScriptableObject
     public string Label;
     public string Description;
     // Note: How to manage edges if there is the connections are dealt with in nodes? we need edges for highlighting 
-    public Dictionary<NodeSOBeta, LinkedList<EdgeSOBeta>> LocalNetwork;
+    public Dictionary<NodeSOBeta, List<EdgeSOBeta>> LocalNetwork;
     
 }
