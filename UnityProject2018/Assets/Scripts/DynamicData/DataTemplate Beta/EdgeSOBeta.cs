@@ -15,7 +15,7 @@ public class EdgeSOBeta : ScriptableObject
 
     public List<NodeSOBeta> reactants;
     public List<NodeSOBeta> products;
-    public bool bidrectional = false;
+    public bool bidirectional = false;
 
     
     public string AuxLabel;
