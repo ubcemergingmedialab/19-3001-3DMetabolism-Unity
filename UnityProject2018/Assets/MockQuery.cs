@@ -8,9 +8,10 @@ public class MockQuery : MonoBehaviour
     public List<NodeSOBeta> node;
     // Start is called before the first frame update
     void Start()
-    {   //Glycogen sythanse pathway
-        PathwaySOBeta Pathway = ScriptableObject.CreateInstance<PathwaySOBeta>();
-        Pathway.LocalNetwork = new Dictionary<NodeSOBeta, List<EdgeSOBeta>>();
+    {   
+        //Glycogen sythanse pathway
+        PathwaySOBeta glycogenSynthasePathway = ScriptableObject.CreateInstance<PathwaySOBeta>();
+        glycogenSynthasePathway.LocalNetwork = new Dictionary<NodeSOBeta, List<EdgeSOBeta>>();
         // hexokinase , glucose -> glucose6phospahate 
         EdgeSOBeta hexokinase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         hexokinase.Label = "hexokinase";
@@ -25,8 +26,8 @@ public class MockQuery : MonoBehaviour
         hexokinase.products = new List<NodeSOBeta>();
         hexokinase.products.Add(glucose6phosphate);
 
-        Pathway.LocalNetwork.Add(glucose, new List<EdgeSOBeta>{hexokinase});
-        Pathway.LocalNetwork.Add(glucose6phosphate, new List<EdgeSOBeta>{hexokinase});
+        glycogenSynthasePathway.LocalNetwork.Add(glucose, new List<EdgeSOBeta>{hexokinase});
+        glycogenSynthasePathway.LocalNetwork.Add(glucose6phosphate, new List<EdgeSOBeta>{hexokinase});
 
         // Phosphoglucose mutase , glucose 6-phosphate => glucose 1-phosphate
         EdgeSOBeta phosphoglucoseMutase = ScriptableObject.CreateInstance<EdgeSOBeta>();
@@ -40,8 +41,8 @@ public class MockQuery : MonoBehaviour
         phosphoglucoseMutase.products = new List<NodeSOBeta>();
         phosphoglucoseMutase.products.Add(glucose1phosphate);
 
-        Pathway.LocalNetwork[glucose6phosphate].Add(phosphoglucoseMutase);
-        Pathway.LocalNetwork.Add(glucose1phosphate, new List<EdgeSOBeta>{phosphoglucoseMutase});
+        glycogenSynthasePathway.LocalNetwork[glucose6phosphate].Add(phosphoglucoseMutase);
+        glycogenSynthasePathway.LocalNetwork.Add(glucose1phosphate, new List<EdgeSOBeta>{phosphoglucoseMutase});
 
         // UDP-glucose pyrophosphorylase , UTP + glucose 1-phosphate <=> UDP-glucose + PPi     --> bi directional!
         EdgeSOBeta UDPGlucosePyrophosphorylase = ScriptableObject.CreateInstance<EdgeSOBeta>();
@@ -56,8 +57,8 @@ public class MockQuery : MonoBehaviour
         UDPGlucosePyrophosphorylase.products.Add(UDPglucose);
         UDPGlucosePyrophosphorylase.bidirectional = true;
 
-        Pathway.LocalNetwork[glucose1phosphate].Add(UDPGlucosePyrophosphorylase);
-        Pathway.LocalNetwork.Add(UDPglucose, new List<EdgeSOBeta>{UDPGlucosePyrophosphorylase});
+        glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(UDPGlucosePyrophosphorylase);
+        glycogenSynthasePathway.LocalNetwork.Add(UDPglucose, new List<EdgeSOBeta>{UDPGlucosePyrophosphorylase});
 
 
         // glycogen synthase, glycogen (n residues) + UDP-glucose => UDP + glycogen (n+1 residues)
@@ -76,9 +77,9 @@ public class MockQuery : MonoBehaviour
         glycogenSynthase.products = new List<NodeSOBeta>();
         glycogenSynthase.products.Add(glycogen_n1);
 
-        Pathway.LocalNetwork.Add(glycogen_n1, new List<EdgeSOBeta>{glycogenSynthase});
-        Pathway.LocalNetwork.Add(glycogen_n, new List<EdgeSOBeta>{glycogenSynthase});
-        Pathway.LocalNetwork[UDPglucose].Add(glycogenSynthase);
+        glycogenSynthasePathway.LocalNetwork.Add(glycogen_n1, new List<EdgeSOBeta>{glycogenSynthase});
+        glycogenSynthasePathway.LocalNetwork.Add(glycogen_n, new List<EdgeSOBeta>{glycogenSynthase});
+        glycogenSynthasePathway.LocalNetwork[UDPglucose].Add(glycogenSynthase);
         // glycogen phosphorylase, glycogen (n+1 residues) + Pi => glycogen (n residues) + glucose 1-phosphate  --> not in wikibase!, needs to be checked with a theory
         EdgeSOBeta glycogenPhosphorylase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         glycogenPhosphorylase.Label = "glycogen Phosphorylase";
@@ -89,13 +90,18 @@ public class MockQuery : MonoBehaviour
         glycogenPhosphorylase.products.Add(glycogen_n);
         glycogenPhosphorylase.products.Add(glucose1phosphate);
 
-        Pathway.LocalNetwork[glycogen_n1].Add(glycogenPhosphorylase);
-        Pathway.LocalNetwork[glucose1phosphate].Add(glycogenPhosphorylase);        
-        Pathway.LocalNetwork[glycogen_n].Add(glycogenPhosphorylase);
+        glycogenSynthasePathway.LocalNetwork[glycogen_n1].Add(glycogenPhosphorylase);
+        glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(glycogenPhosphorylase);        
+        glycogenSynthasePathway.LocalNetwork[glycogen_n].Add(glycogenPhosphorylase);
 
         //find all edges that glucose interacts with
-        FindChildren(Pathway, UDPglucose);
+        FindChildren(glycogenSynthasePathway, UDPglucose);
 
+
+    }
+
+    void Search(PathwaySOBeta pathway, EdgeSOBeta edgeRoot) {
+       Queue<EdgeSOBeta> BFSQueue = new Queue<EdgeSOBeta>();
 
     }
 
