@@ -100,8 +100,11 @@ public class MockQuery : MonoBehaviour
 
     }
 
-    void Search(PathwaySOBeta pathway, EdgeSOBeta edgeRoot) {
+    
+
+    void Search(PathwaySOBeta pathway, NodeSOBeta nodeRoot) {
        Queue<EdgeSOBeta> BFSQueue = new Queue<EdgeSOBeta>();
+       
 
     }
 
