@@ -103,8 +103,11 @@ public class MockQuery : MonoBehaviour
     
 
     void Search(PathwaySOBeta pathway, NodeSOBeta nodeRoot) {
-       Queue<EdgeSOBeta> BFSQueue = new Queue<EdgeSOBeta>();
-       
+       Queue<List<ScriptableObject>> BFSQueue = new Queue<List<ScriptableObject>>();
+       List<ScriptableObject> visited = new List<ScriptableObject>();
+
+       BFSQueue.Enqueue(new list<ScriptableObject>(){nodeRoot});
+       visited.Add(nodeRoot);
 
     }
 

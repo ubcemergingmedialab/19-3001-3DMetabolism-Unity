@@ -13,6 +13,7 @@ public class EdgeSOBeta : ScriptableObject
     public string EnergyProduced;
     public string GibbsFreeEnergy;
 
+    public NodeSOBeta parent;
     public List<NodeSOBeta> reactants;
     public List<NodeSOBeta> products;
     public bool bidirectional = false;
