@@ -7,8 +7,13 @@ public class MockQuery : MonoBehaviour
     public List<EdgeSOBeta> edges;
     public List<NodeSOBeta> node;
     // Start is called before the first frame update
+
+    /* TODO:
+        - we check for visited in both search and find childern and I think thats an issue
+        - write assertion statements for the BFS
+    */
     void Start()
-    {   
+    {  
         //Glycogen sythanse pathway
         PathwaySOBeta glycogenSynthasePathway = ScriptableObject.CreateInstance<PathwaySOBeta>();
         glycogenSynthasePathway.LocalNetwork = new Dictionary<NodeSOBeta, List<EdgeSOBeta>>();
@@ -93,60 +98,169 @@ public class MockQuery : MonoBehaviour
         glycogenSynthasePathway.LocalNetwork[glycogen_n1].Add(glycogenPhosphorylase);
         glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(glycogenPhosphorylase);        
         glycogenSynthasePathway.LocalNetwork[glycogen_n].Add(glycogenPhosphorylase);
-
-        //find all edges that glucose interacts with
-        FindChildren(glycogenSynthasePathway, UDPglucose);
-
-
     }
 
-    
+      list<ScriptableObject> SearchForPath(PathwaySOBeta pathway, NodeSOBeta nodeRoot, NodeSOBeta nodeToFind) {
 
-    void Search(PathwaySOBeta pathway, NodeSOBeta nodeRoot) {
        Queue<List<ScriptableObject>> BFSQueue = new Queue<List<ScriptableObject>>();
-       List<ScriptableObject> visited = new List<ScriptableObject>();
+       Dictionary<string,bool> visited = new Dictionary<string, bool>();
 
        BFSQueue.Enqueue(new list<ScriptableObject>(){nodeRoot});
-       visited.Add(nodeRoot);
+       visited.Add(nodeRoot.Label,true);
+
+       while (BFSQueue.Count > 0) {
+           List<ScriptableObject> currentPath = BFSQueue.Dequeue();
+           NodeSOBeta currentNode = currentPath[currentPath.Count - 1];
+           if (currentNode.Label == nodeToFind.Label){
+               // print the path later
+               Debug.Log("found the node : " + currentNode.Label + " = " + nodeToFind.Label);
+               return currentPath;
+           }
+
+           Dictionary<EdgeSOBeta,List<NodeSOBeta>> children = FindChildren(pathway,visited,currentNode);
+            //iterate through the dictionary
+            // add the key and the each of the values to the current path list
+            // currentpath += Key + value of all dict elements
+            // if last elemetn of current path is in visited then ignore 
+            // else :
+            //
+            // BFSQueue.Enqueue(currentPath)
+
+            // in case this doesnt duplicate, create a new list per iteration and enqueue .
+            // new list of SO =of current path, enqueu this instead
+
+            List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
+            foreach(KeyValuePair <EdgeSOBeta, List<NodeSOBeta>> entry in children) {
+                newPath.Add(entry.Key);
+                newPath.AddRange(entry.Value);
+
+                if (visited.ContainsKey(newPath[newPath.Count - 1])){
+                    continue;
+                }
+                BFSQueue.Enqueue(newPath);
+            }
+            
+           
+       }
+       return null;
+
+       
 
     }
-
-    void FindChildren(PathwaySOBeta pathway, NodeSOBeta current)
+    /*
+        go through all edges
+        make a new keyvalue pair per edge
+        add all the nodes eligible connected to this edge as value
+        return the dictionarry
+    */
+    Dictionary<EdgeSOBeta,List<NodeSOBeta>> FindChildren(PathwaySOBeta pathway,Dictionary<string,bool> visited, NodeSOBeta current)
     {
-
+        
+        Dictionary<EdgeSOBeta,List<NodeSOBeta>> nodesByEdge = new Dictionary<EdgeSOBeta,List<NodeSOBeta>>();
         List<EdgeSOBeta> interactedEdges = pathway.LocalNetwork[current];
-        foreach (EdgeSOBeta currentEdge in interactedEdges)
-        {
-            if (currentEdge.bidirectional)
-            {
+        foreach (EdgeSOBeta currentEdge in interactedEdges){
+
+            nodesByEdge.Add(currentEdge, new List<NodeSOBeta>());
+            if (currentEdge.bidirectional){
                 Debug.Log("BFS found bidirectional edge");
-                //search both reactants and products, return the one where we dont find glucose (if found in the other one)
-                if (currentEdge.reactants.Contains(current))
-                {
-                    Debug.Log("BFS " + currentEdge.Label + " " + currentEdge.products[0].Label);
-                }
-                else
-                {
-                    if (currentEdge.products.Contains(current))
-                    {
-                        Debug.Log("BFS " + currentEdge.Label + " " + currentEdge.reactants[0].Label);
+                //search products and reactants, return the one where we dont find node in
+
+                if (currentEdge.products.Contains(current)){
+
+                    foreach (NodeSOBeta node in currentEdge.reactants){
+                        if(!visited.ContainsKey(node.Label)){
+                            nodesByEdge[currentEdge].Add(node);
+                            visited.Add(node.Label,true);
+                        }
+                    }
+                } else {
+                    if (currentEdge.reactants.Contains(current)){
+
+                        foreach (NodeSOBeta node in currentEdge.products){
+                            if(!visited.ContainsKey(node.Label)){
+                                nodesByEdge[currentEdge].Add(node);
+                                visited.Add(node.Label,true);
+                            }
+                        }
                     }
                 }
-                // result is null
-            }
-            else
-            {
-                if (currentEdge.reactants.Contains(current))
-                {
-                    Debug.Log("BFS " + currentEdge.Label + " " + currentEdge.products[0].Label);
+            } else {
+                if (currentEdge.reactants.Contains(current)){
+
+                    foreach (NodeSOBeta node in currentEdge.products){
+                        if(!visited.ContainsKey(node.Label)){
+                            nodesByEdge[currentEdge].Add(node);
+                            visited.Add(node.Label,true);
+                        }
+                    }
                 }
             }
         }
+        return nodesByEdge;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
+
+    // void FindChildren(PathwaySOBeta pathway,Dictionary<string,bool> visited, Queue<List<ScriptableObject>> queue, NodeSOBeta current)
+    // {
+
+    //     List<EdgeSOBeta> interactedEdges = pathway.LocalNetwork[current];
+    //     foreach (EdgeSOBeta currentEdge in interactedEdges)
+    //     {   
+            
+    //         Debug.Log("BFS on edge: " + currentEdge.Label);
+    //         if (currentEdge.bidirectional)
+    //         {
+    //             Debug.Log("BFS found bidirectional edge");
+    //             //search products, return the one where we dont find node in
+    //             if (currentEdge.products.Contains(current))
+    //             {
+    //                 foreach (NodeSOBeta node in currentEdge.reactants){
+    //                     if(!visited.ContainsKey(node.Label)){
+
+    //                         List<ScriptableObject> currentPath = new List<ScriptableObject>(){currentEdge};
+    //                         currentPath.Add(node);
+
+    //                         queue.Enqueue(currentPath);
+    //                         visited.Add(node.Label,true);
+    //                         Debug.Log("BFS added to queue: " + node.Label);
+    //                     }
+    //                 }
+    //             }
+    //             else{
+    //                 if (currentEdge.reactants.Contains(current))
+    //                 {
+    //                     foreach (NodeSOBeta node in currentEdge.products){
+    //                         if(!visited.ContainsKey(node.Label)){
+
+    //                             List<ScriptableObject> currentPath = new List<ScriptableObject>(){currentEdge};
+    //                             currentPath.Add(node);
+
+    //                             queue.Enqueue(node);
+    //                             visited.Add(node.Label,true);
+    //                             Debug.Log("BFS added to queue: " + node.Label);
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         } 
+    //         else
+    //         {          // always search reactants
+    //             if (currentEdge.reactants.Contains(current))
+    //             {
+    //                 foreach (NodeSOBeta node in currentEdge.products){
+    //                     if(!visited.ContainsKey(node.Label)){
+    //                         queue.Enqueue(node);
+    //                         visited.Add(node.Label,true);
+    //                         Debug.Log("BFS added to queue: " + node.Label);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
 }
