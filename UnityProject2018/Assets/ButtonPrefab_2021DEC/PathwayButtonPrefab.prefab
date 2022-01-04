@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 570, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3174346411905946120
 CanvasRenderer:
@@ -60,11 +60,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22778f27c694a6d9037446f53cae77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 21300000, guid: 484a2b46b54f348df8618bdac4fe2335, type: 3}
-  hoverBlue: {fileID: 21300000, guid: ea7de7522f50847458f8a3f76b41b078, type: 3}
-  clickBlue: {fileID: 21300000, guid: 6b66e667006ae466abc478e9b014ca97, type: 3}
-  hoverYellow: {fileID: 21300000, guid: c2e9cc73f2fcd44afa9c74d9824f15d6, type: 3}
-  clickYellow: {fileID: 21300000, guid: f62344d12a9b74254a96009be4a0c28d, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 66f0b5ff5885c4263a11642b9c20a2fe, type: 3}
+  defaultHover: {fileID: 21300000, guid: c84228c64ea77439fa61e9dd7f91eee7, type: 3}
+  hoverBlue: {fileID: 21300000, guid: 9019cc840977f485cad542a52e50925d, type: 3}
+  clickBlue: {fileID: 21300000, guid: dd70809676ddf40eea5af76ea487b6c0, type: 3}
+  hoverYellow: {fileID: 21300000, guid: ccb8ea8e2316546d59c4cce691f2c0ca, type: 3}
+  clickYellow: {fileID: 21300000, guid: 849921b1e39b84a81a3d3dc1b3847f59, type: 3}
   pathwaySO: {fileID: 0}
 --- !u!114 &4317930382072998586
 MonoBehaviour:
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 484a2b46b54f348df8618bdac4fe2335, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66f0b5ff5885c4263a11642b9c20a2fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -167,7 +168,7 @@ RectTransform:
   m_GameObject: {fileID: 7269384560545621076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 6944630078179952746}
   m_RootOrder: 0
@@ -175,7 +176,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 520, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1116357878988892524
 CanvasRenderer:
@@ -207,12 +208,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

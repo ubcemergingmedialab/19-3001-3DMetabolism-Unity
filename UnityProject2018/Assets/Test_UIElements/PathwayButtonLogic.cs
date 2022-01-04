@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Sprite defaultSprite;
+    public Sprite defaultHover;
     public Sprite hoverBlue;
     public Sprite clickBlue;
     public Sprite hoverYellow;
@@ -52,7 +53,7 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
                 break;
 
             case HighlightPathway.HighlightState.Accented:
-                image.sprite = defaultSprite;
+                image.sprite = defaultHover;
                 break;
             default:
                 break;
