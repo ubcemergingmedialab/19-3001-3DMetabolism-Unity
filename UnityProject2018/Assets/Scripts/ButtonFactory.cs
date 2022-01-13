@@ -27,7 +27,7 @@ public class ButtonFactory : MonoBehaviour
     // X value should remain constant, Y value should differ by the offset
     // at every button generation
     public static float buttonX = 0;
-    public static float buttonYOffset = -50;
+    public static float buttonYOffset = -100;
     public float buttonY = 400;
 
     Dictionary<GameObject, PathwaySO> buttons = new Dictionary<GameObject, PathwaySO>();
