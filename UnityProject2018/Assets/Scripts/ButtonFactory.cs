@@ -28,8 +28,7 @@ public class ButtonFactory : MonoBehaviour
     // at every button generation
     public static float buttonX = 0;
     public static float buttonYOffset = -75;
-    public float buttonY = 400;
-
+    public float buttonY = 0;
     Dictionary<GameObject, PathwaySO> buttons = new Dictionary<GameObject, PathwaySO>();
 
 
