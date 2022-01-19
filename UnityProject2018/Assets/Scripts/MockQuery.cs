@@ -15,112 +15,155 @@ public class MockQuery : MonoBehaviour
     void Start()
     {  
         //Glycogen sythanse pathway
+
         PathwaySOBeta glycogenSynthasePathway = ScriptableObject.CreateInstance<PathwaySOBeta>();
-        glycogenSynthasePathway.LocalNetwork = new Dictionary<NodeSOBeta, List<EdgeSOBeta>>();
+        glycogenSynthasePathway.init("glycogen Synthase pathway");
+        //glycogenSynthasePathway.LocalNetwork = new Dictionary<NodeSOBeta, List<EdgeSOBeta>>();
         // hexokinase , glucose -> glucose6phospahate 
         EdgeSOBeta hexokinase = ScriptableObject.CreateInstance<EdgeSOBeta>();
+        hexokinase.init("hexokinase");
+        // hexokinase.Label = "hexokinase";
+        // hexokinase.name = "hexokinase";
         edges.Add(hexokinase);
-        hexokinase.Label = "hexokinase";
-        hexokinase.name = "hexokinase";
+        
 
         NodeSOBeta glucose = ScriptableObject.CreateInstance<NodeSOBeta>();
         nodes.Add(glucose);
-        glucose.Label = "glucose";
-        glucose.name = "glucose";
+        glucose.init("Glucose");
+        // glucose.Label = "glucose";
+        // glucose.name = "glucose";
         NodeSOBeta glucose6phosphate = ScriptableObject.CreateInstance<NodeSOBeta>();
         nodes.Add(glucose6phosphate);
-        glucose6phosphate.Label = "glucose-6-phosphate";
-        glucose6phosphate.name = "glucose-6-phosphate";
-
-        hexokinase.reactants = new List<NodeSOBeta>();
-        hexokinase.reactants.Add(glucose);
-        hexokinase.products = new List<NodeSOBeta>();
-        hexokinase.products.Add(glucose6phosphate);
-
-        glycogenSynthasePathway.LocalNetwork.Add(glucose, new List<EdgeSOBeta>{hexokinase});
-        glycogenSynthasePathway.LocalNetwork.Add(glucose6phosphate, new List<EdgeSOBeta>{hexokinase});
+        glucose6phosphate.init("glucose-6-phosphate");
+        // glucose6phosphate.Label = "glucose-6-phosphate";
+        // glucose6phosphate.name = "glucose-6-phosphate";
+        hexokinase.AddReactant(glucose);
+        hexokinase.AddProduct(glucose6phosphate);
+        // hexokinase.reactants = new List<NodeSOBeta>();
+        // hexokinase.reactants.Add(glucose);
+        // hexokinase.products = new List<NodeSOBeta>();
+        // hexokinase.products.Add(glucose6phosphate);
+        glycogenSynthasePathway.AddNodeToPathway(glucose);
+        glycogenSynthasePathway.AddEdgeToPathway(glucose,hexokinase);
+        glycogenSynthasePathway.AddNodeToPathway(glucose6phosphate);
+        glycogenSynthasePathway.AddEdgeToPathway(glucose6phosphate,hexokinase);
+    
+        // glycogenSynthasePathway.LocalNetwork.Add(glucose, new List<EdgeSOBeta>{hexokinase});
+        // glycogenSynthasePathway.LocalNetwork.Add(glucose6phosphate, new List<EdgeSOBeta>{hexokinase});
 
         // Phosphoglucose mutase , glucose 6-phosphate => glucose 1-phosphate
         EdgeSOBeta phosphoglucoseMutase = ScriptableObject.CreateInstance<EdgeSOBeta>();        
         edges.Add(phosphoglucoseMutase);
-        phosphoglucoseMutase.Label = "phosphoglucose mutase";
-        phosphoglucoseMutase.name = "phosphoglucose mutase";
+        phosphoglucoseMutase.init("phosphoglucose mutase");
+        // phosphoglucoseMutase.Label = "phosphoglucose mutase";
+        // phosphoglucoseMutase.name = "phosphoglucose mutase";
 
 
         NodeSOBeta glucose1phosphate = ScriptableObject.CreateInstance<NodeSOBeta>();
         nodes.Add(glucose1phosphate);
-        glucose1phosphate.Label = "glucose-1-phosphate";
-        glucose1phosphate.name = "glucose-1-phosphate";
+        glucose1phosphate.init("glucose-1-phosphate");
+        // glucose1phosphate.Label = "glucose-1-phosphate";
+        // glucose1phosphate.name = "glucose-1-phosphate";
+        phosphoglucoseMutase.AddReactant(glucose6phosphate);
+        phosphoglucoseMutase.AddProduct(glucose1phosphate);
+        // phosphoglucoseMutase.reactants = new List<NodeSOBeta>();
+        // phosphoglucoseMutase.reactants.Add(glucose6phosphate);
+        // phosphoglucoseMutase.products = new List<NodeSOBeta>();
+        // phosphoglucoseMutase.products.Add(glucose1phosphate);
 
-        phosphoglucoseMutase.reactants = new List<NodeSOBeta>();
-        phosphoglucoseMutase.reactants.Add(glucose6phosphate);
-        phosphoglucoseMutase.products = new List<NodeSOBeta>();
-        phosphoglucoseMutase.products.Add(glucose1phosphate);
-
-        glycogenSynthasePathway.LocalNetwork[glucose6phosphate].Add(phosphoglucoseMutase);
-        glycogenSynthasePathway.LocalNetwork.Add(glucose1phosphate, new List<EdgeSOBeta>{phosphoglucoseMutase});
+        glycogenSynthasePathway.AddEdgeToPathway(glucose6phosphate,phosphoglucoseMutase);
+        //glycogenSynthasePathway.LocalNetwork[glucose6phosphate].Add(phosphoglucoseMutase);
+        glycogenSynthasePathway.AddNodeToPathway(glucose1phosphate);
+        glycogenSynthasePathway.AddEdgeToPathway(glucose1phosphate,phosphoglucoseMutase);
+        //glycogenSynthasePathway.LocalNetwork.Add(glucose1phosphate, new List<EdgeSOBeta>{phosphoglucoseMutase});
 
         // UDP-glucose pyrophosphorylase , UTP + glucose 1-phosphate <=> UDP-glucose + PPi     --> bi directional!
         EdgeSOBeta UDPGlucosePyrophosphorylase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         edges.Add(UDPGlucosePyrophosphorylase);
-        UDPGlucosePyrophosphorylase.Label = "UDP-glucose pyrophosphorylase";
-         UDPGlucosePyrophosphorylase.name = "UDP-glucose pyrophosphorylase";
+        UDPGlucosePyrophosphorylase.init("UDP-glucose pyrophosphorylase",true);
+        // UDPGlucosePyrophosphorylase.Label = "UDP-glucose pyrophosphorylase";
+        // UDPGlucosePyrophosphorylase.name = "UDP-glucose pyrophosphorylase";
 
         NodeSOBeta UDPglucose = ScriptableObject.CreateInstance<NodeSOBeta>();
         nodes.Add(UDPglucose);
-        UDPglucose.Label = "UDP-glucose";
-        UDPglucose.name = "UDP-glucose";
+        UDPglucose.init("UDP-glucose");
+        // UDPglucose.Label = "UDP-glucose";
+        // UDPglucose.name = "UDP-glucose";
+        UDPGlucosePyrophosphorylase.AddReactant(glucose1phosphate);
+        UDPGlucosePyrophosphorylase.AddProduct(UDPglucose);
+        // UDPGlucosePyrophosphorylase.reactants = new List<NodeSOBeta>();
+        // UDPGlucosePyrophosphorylase.reactants.Add(glucose1phosphate);
+        // UDPGlucosePyrophosphorylase.products = new List<NodeSOBeta>();
+        // UDPGlucosePyrophosphorylase.products.Add(UDPglucose);
+        // UDPGlucosePyrophosphorylase.bidirectional = true;
+        //glycogenSynthasePathway.AddNodeToPathway(glucose1phosphate);
+        glycogenSynthasePathway.AddEdgeToPathway(glucose1phosphate,UDPGlucosePyrophosphorylase);
+        glycogenSynthasePathway.AddNodeToPathway(UDPglucose);
+        glycogenSynthasePathway.AddEdgeToPathway(UDPglucose,UDPGlucosePyrophosphorylase);
 
-        UDPGlucosePyrophosphorylase.reactants = new List<NodeSOBeta>();
-        UDPGlucosePyrophosphorylase.reactants.Add(glucose1phosphate);
-        UDPGlucosePyrophosphorylase.products = new List<NodeSOBeta>();
-        UDPGlucosePyrophosphorylase.products.Add(UDPglucose);
-        UDPGlucosePyrophosphorylase.bidirectional = true;
-
-        glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(UDPGlucosePyrophosphorylase);
-        glycogenSynthasePathway.LocalNetwork.Add(UDPglucose, new List<EdgeSOBeta>{UDPGlucosePyrophosphorylase});
+        // glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(UDPGlucosePyrophosphorylase);
+        // glycogenSynthasePathway.LocalNetwork.Add(UDPglucose, new List<EdgeSOBeta>{UDPGlucosePyrophosphorylase});
 
 
         // glycogen synthase, glycogen (n residues) + UDP-glucose => UDP + glycogen (n+1 residues)
         EdgeSOBeta glycogenSynthase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         edges.Add(glycogenSynthase);
-        glycogenSynthase.Label = "glycogenSynthase";
-        glycogenSynthase.name = "glycogenSynthase";
+        glycogenSynthase.init("glycogenSynthase");
+        // glycogenSynthase.Label = "glycogenSynthase";
+        // glycogenSynthase.name = "glycogenSynthase";
 
         NodeSOBeta glycogen_n1 = ScriptableObject.CreateInstance<NodeSOBeta>();
         nodes.Add(glycogen_n1);
-        glycogen_n1.Label = "glycogen(n+1)";
-        glycogen_n1.name = "glycogen(n+1)";
+        glycogen_n1.init("glycogen(n+1)");
+        // glycogen_n1.Label = "glycogen(n+1)";
+        // glycogen_n1.name = "glycogen(n+1)";
         NodeSOBeta glycogen_n = ScriptableObject.CreateInstance<NodeSOBeta>();
         nodes.Add(glycogen_n);
-        glycogen_n.Label = "glycogen(n)";
-        glycogen_n.name = "glycogen(n)";
+        glycogen_n.init("glycogen(n)");
+        // glycogen_n.Label = "glycogen(n)";
+        // glycogen_n.name = "glycogen(n)";
 
+        glycogenSynthase.AddReactant(glycogen_n);
+        glycogenSynthase.AddReactant(UDPglucose);
+        // glycogenSynthase.reactants = new List<NodeSOBeta>();
+        // glycogenSynthase.reactants.Add(glycogen_n);
+        // glycogenSynthase.reactants.Add(UDPglucose);
+        glycogenSynthase.AddProduct(glycogen_n1);
+        // glycogenSynthase.products = new List<NodeSOBeta>();
+        // glycogenSynthase.products.Add(glycogen_n1);
 
-        glycogenSynthase.reactants = new List<NodeSOBeta>();
-        glycogenSynthase.reactants.Add(glycogen_n);
-        glycogenSynthase.reactants.Add(UDPglucose);
-        glycogenSynthase.products = new List<NodeSOBeta>();
-        glycogenSynthase.products.Add(glycogen_n1);
+        glycogenSynthasePathway.AddNodeToPathway(glycogen_n1);
+        glycogenSynthasePathway.AddNodeToPathway(glycogen_n);
+        glycogenSynthasePathway.AddEdgeToPathway(glycogen_n,glycogenSynthase);
+        glycogenSynthasePathway.AddEdgeToPathway(glycogen_n1,glycogenSynthase);
+        glycogenSynthasePathway.AddEdgeToPathway(UDPglucose,glycogenSynthase);
+        // glycogenSynthasePathway.LocalNetwork.Add(glycogen_n1, new List<EdgeSOBeta>{glycogenSynthase});
+        // glycogenSynthasePathway.LocalNetwork.Add(glycogen_n, new List<EdgeSOBeta>{glycogenSynthase});
+        // glycogenSynthasePathway.LocalNetwork[UDPglucose].Add(glycogenSynthase);
 
-        glycogenSynthasePathway.LocalNetwork.Add(glycogen_n1, new List<EdgeSOBeta>{glycogenSynthase});
-        glycogenSynthasePathway.LocalNetwork.Add(glycogen_n, new List<EdgeSOBeta>{glycogenSynthase});
-        glycogenSynthasePathway.LocalNetwork[UDPglucose].Add(glycogenSynthase);
         // glycogen phosphorylase, glycogen (n+1 residues) + Pi => glycogen (n residues) + glucose 1-phosphate  --> not in wikibase!, needs to be checked with a theory
         EdgeSOBeta glycogenPhosphorylase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         edges.Add(glycogenPhosphorylase);
-        glycogenPhosphorylase.Label = "glycogen Phosphorylase";
-        glycogenPhosphorylase.name = "glycogen Phosphorylase";
+        glycogenPhosphorylase.init("glycogen Phosphorylase");
 
-        glycogenPhosphorylase.reactants = new List<NodeSOBeta>();
-        glycogenPhosphorylase.reactants.Add(glycogen_n1);
-        glycogenPhosphorylase.products = new List<NodeSOBeta>();
-        glycogenPhosphorylase.products.Add(glycogen_n);
-        glycogenPhosphorylase.products.Add(glucose1phosphate);
+        // glycogenPhosphorylase.Label = "glycogen Phosphorylase";
+        // glycogenPhosphorylase.name = "glycogen Phosphorylase";
 
-        glycogenSynthasePathway.LocalNetwork[glycogen_n1].Add(glycogenPhosphorylase);
-        glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(glycogenPhosphorylase);        
-        glycogenSynthasePathway.LocalNetwork[glycogen_n].Add(glycogenPhosphorylase);
+        glycogenPhosphorylase.AddReactant(glycogen_n1);
+        glycogenPhosphorylase.AddProduct(glycogen_n);
+        glycogenPhosphorylase.AddProduct(glucose1phosphate);
+
+        // glycogenPhosphorylase.reactants = new List<NodeSOBeta>();
+        // glycogenPhosphorylase.reactants.Add(glycogen_n1);
+        // glycogenPhosphorylase.products = new List<NodeSOBeta>();
+        // glycogenPhosphorylase.products.Add(glycogen_n);
+        // glycogenPhosphorylase.products.Add(glucose1phosphate);
+        glycogenSynthasePathway.AddEdgeToPathway(glycogen_n,glycogenPhosphorylase);
+        glycogenSynthasePathway.AddEdgeToPathway(glycogen_n1,glycogenPhosphorylase);
+        glycogenSynthasePathway.AddEdgeToPathway(glucose1phosphate,glycogenPhosphorylase);
+        // glycogenSynthasePathway.LocalNetwork[glycogen_n1].Add(glycogenPhosphorylase);
+        // glycogenSynthasePathway.LocalNetwork[glucose1phosphate].Add(glycogenPhosphorylase);        
+        // glycogenSynthasePathway.LocalNetwork[glycogen_n].Add(glycogenPhosphorylase);
 
 
 
@@ -177,11 +220,10 @@ public class MockQuery : MonoBehaviour
             
            
        }
+       Debug.Log("No Path found and null is returned");
        return null;
-
-       
-
     }
+
     /*
         go through all edges
         make a new keyvalue pair per edge
@@ -234,6 +276,7 @@ public class MockQuery : MonoBehaviour
 
 
 
+
     public void BFSTest(PathwaySOBeta pathway, NodeSOBeta start, NodeSOBeta end) {
         List<ScriptableObject> result =  SearchForPath(pathway,start,end);
         string printResult = "search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
@@ -245,7 +288,55 @@ public class MockQuery : MonoBehaviour
         Debug.Log(printResult);
     }
 
+    // // add new pathwaySO
+    // public void AddPathwaySO(string name){
+    //     PathwaySOBeta pathway = ScriptableObject.CreateInstance<PathwaySOBeta>();
+    //     pathway.LocalNetwork = new Dictionary<NodeSOBeta, List<EdgeSOBeta>>();
 
+    //     pathway.name = name;
+    //     pathway.Label = name;
+    // }
+
+
+    // public void AddNodeToPathway(PathwaySOBeta pathway, NodeSOBeta node){
+    //     if (!(pathway.LocalNetwork.ContainsKey(node))){
+    //         pathway.LocalNetwork.Add(node, new List<EdgeSOBeta>());  
+    //     }
+    // }
+
+    // Add new node to a pathway
+    // public void AddNodeSO(string name, List<NodeSOBeta> trackerList, PathwaySOBeta pathway) {
+        
+    //     NodeSOBeta node = ScriptableObject.CreateInstance<NodeSOBeta>();
+    //     trackerList.Add(node);
+    //     node.Label = name;
+    //     node.name = name;
+
+    //     pathway.LocalNetwork.Add(node, new List<EdgeSOBeta>());
+    // }
+
+    // public void AddEdgeSO (string name, List<EdgeSOBeta> trackerList, PathwaySOBeta pathway, bool bidirectional, List<NodeSOBeta> reactantNodes, List<NodeSOBeta> productNodes) {
+
+    //     EdgeSOBeta edge = ScriptableObject.CreateInstance<EdgeSOBeta>();
+    //     edge.reactants = new List<NodeSOBeta>();
+    //     edge.products = new List<NodeSOBeta>();
+
+    //     trackerList.Add(edge);
+    //     edge.Label = name;
+    //     edge.name = name;
+    //     edge.bidirectional = bidirectional;
+    
+    //     edge.reactants.AddRange(reactantNodes);    
+    //     edge.products.AddRange(productNodes);
+        
+    //     // Link the edge ti the nodes it is connected to through the pathway dictionary  
+    //     foreach (NodeSOBeta node in reactantNodes) {
+    //         pathway.LocalNetwork[node].Add(edge);
+    //     }
+    //     foreach (NodeSOBeta node in productNodes) {
+    //         pathway.LocalNetwork[node].Add(edge);
+    //     }
+    // }
 
 
     // void FindChildren(PathwaySOBeta pathway,Dictionary<string,bool> visited, Queue<List<ScriptableObject>> queue, NodeSOBeta current)

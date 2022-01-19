@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Node Beta", menuName = "Node Beta")]
 public class NodeSOBeta : ScriptableObject
 {
-    public EdgeSOBeta parent;
+    //public EdgeSOBeta parent;
     public string Label;
     public Vector3 Position;
     public string QID;
@@ -19,4 +19,9 @@ public class NodeSOBeta : ScriptableObject
     [TextArea(10, 100)]
     public string IUPACNames;
     public string link;
+
+    public void init(string name) {
+        this.name = name;
+        this.Label = name;
+    }
 }
