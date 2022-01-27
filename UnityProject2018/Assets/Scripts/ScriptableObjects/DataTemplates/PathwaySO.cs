@@ -10,4 +10,28 @@ public class PathwaySO : ScriptableObject
     public List<EdgeSO> edges;
     public string Label;
     public string Description;
+    // Note: How to manage edges if there is the connections are dealt with in nodes? we need edges for highlighting 
+    public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork;
+
+    public void init(string name){
+
+        this.name = name;
+        this.Label = name;
+        
+        LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>();
+    }
+
+    // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
+    public void AddNodeToPathway(NodeSO node) {
+        if (!(LocalNetwork.ContainsKey(node))){
+            LocalNetwork.Add(node, new List<EdgeSO>());
+        } else {
+            Debug.Log("<pathwaySO> node is already in " + this.Label + " - pathway");
+        }
+    }
+
+    // add an edge to a node inside the Local network dictionary
+    public void AddEdgeToPathway(NodeSO parentNode, EdgeSO edge){
+        LocalNetwork[parentNode].Add(edge);
+    }
 }

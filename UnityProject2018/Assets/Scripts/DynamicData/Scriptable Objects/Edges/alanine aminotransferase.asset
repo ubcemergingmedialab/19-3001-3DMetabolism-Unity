@@ -19,6 +19,13 @@ MonoBehaviour:
   EnergyConsumed: None
   EnergyProduced: alanine aminotransferase
   GibbsFreeEnergy: N/A
+  reactants:
+  - {fileID: 11400000, guid: fa9c124ea84845547b60bf1006d70072, type: 2}
+  - {fileID: 11400000, guid: 1bc1ad4a68c82c3449259d603122ed4c, type: 2}
+  products:
+  - {fileID: 11400000, guid: d2c053a5029bb004ebdd31c4f10acca8, type: 2}
+  - {fileID: 11400000, guid: c57d79eadd9f26f49bf6271a234bb8fd, type: 2}
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

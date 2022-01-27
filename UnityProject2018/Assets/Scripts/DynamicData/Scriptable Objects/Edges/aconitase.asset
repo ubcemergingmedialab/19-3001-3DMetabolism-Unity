@@ -19,6 +19,11 @@ MonoBehaviour:
   EnergyConsumed: None
   EnergyProduced: Aconitase
   GibbsFreeEnergy: 13.3 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: 8d51f9bcd33efac4f94e21a62c9ed6e8, type: 2}
+  products:
+  - {fileID: 11400000, guid: 654f0428baca6b9458020457fff962b3, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

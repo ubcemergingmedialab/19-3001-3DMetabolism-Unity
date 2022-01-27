@@ -6,8 +6,6 @@ public class MockQuery : MonoBehaviour
 {
     public List<EdgeSOBeta> edges;
     public List<NodeSOBeta> nodes;
-    /* TODO:
-    */
     void Start()
     {  
         //Glycogen sythanse pathway
@@ -66,7 +64,7 @@ public class MockQuery : MonoBehaviour
         glycogenSynthasePathway.AddNodeToPathway(UDPglucose);
         glycogenSynthasePathway.AddEdgeToPathway(UDPglucose,UDPGlucosePyrophosphorylase);
 
-        // glycogen synthase, glycogen (n residues) + UDP-glucose => UDP + glycogen (n+1 residues)
+        // Glycogen synthase, glycogen (n residues) + UDP-glucose => UDP + glycogen (n+1 residues)
         EdgeSOBeta glycogenSynthase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         edges.Add(glycogenSynthase);
         glycogenSynthase.init("glycogenSynthase");
@@ -90,7 +88,7 @@ public class MockQuery : MonoBehaviour
         glycogenSynthasePathway.AddEdgeToPathway(glycogen_n1,glycogenSynthase);
         glycogenSynthasePathway.AddEdgeToPathway(UDPglucose,glycogenSynthase);
 
-        // glycogen phosphorylase, glycogen (n+1 residues) + Pi => glycogen (n residues) + glucose 1-phosphate  --> not in wikibase!, needs to be checked with a theory
+        //Glycogen phosphorylase, glycogen (n+1 residues) + Pi => glycogen (n residues) + glucose 1-phosphate  --> not in wikibase!, needs to be checked with a theory
         EdgeSOBeta glycogenPhosphorylase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         edges.Add(glycogenPhosphorylase);
         glycogenPhosphorylase.init("glycogen Phosphorylase");
@@ -162,7 +160,7 @@ public class MockQuery : MonoBehaviour
         go through all edges
         make a new keyvalue pair per edge
         add all the nodes eligible connected to this edge as value
-        return the dictionarry
+        return the dictionary
     */
     Dictionary<EdgeSOBeta,List<NodeSOBeta>> FindChildren(PathwaySOBeta pathway,Dictionary<string,bool> visited, NodeSOBeta current)
     {

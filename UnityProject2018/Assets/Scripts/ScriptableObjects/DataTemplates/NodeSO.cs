@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Node", menuName = "Node")]
 public class NodeSO : ScriptableObject
 {
-    public string Label;
+ public string Label;
     public Vector3 Position;
     public string QID;
     public Quaternion Rotation;
@@ -18,4 +18,9 @@ public class NodeSO : ScriptableObject
     [TextArea(10, 100)]
     public string IUPACNames;
     public string link;
+
+    public void init(string name) {
+        this.name = name;
+        this.Label = name;
+    }
 }
