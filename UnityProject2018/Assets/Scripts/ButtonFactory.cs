@@ -27,8 +27,9 @@ public class ButtonFactory : MonoBehaviour
     // X value should remain constant, Y value should differ by the offset
     // at every button generation
     public static float buttonX = 0;
-    public static float buttonYOffset = -75;
-    public float buttonY = 0;
+    public static float buttonYOffset = -50;
+    public float buttonY = 400;
+
     Dictionary<GameObject, PathwaySO> buttons = new Dictionary<GameObject, PathwaySO>();
 
 
@@ -46,10 +47,14 @@ public class ButtonFactory : MonoBehaviour
         void Start()
     {
         ActivePathways = StatusController.Instance.activePathways;
+        FavouriteButtonFactory ff = FavouriteButtonFactory.Instance;
+
         foreach (PathwaySO pathway in ActivePathways)
         {
             buttons.Add(GenerateButton(pathway), pathway);
-
+            GameObject favButton = ff.GenerateButtonAndSetPosition(buttonX, buttonY, pathway);
+            ff.favButtons.Add(favButton, pathway);
+            buttonY += buttonYOffset;
         }
     }
 
@@ -73,7 +78,6 @@ public class ButtonFactory : MonoBehaviour
         GameObject generated = Instantiate(buttonPrefab, transform);
         RectTransform rect = generated.GetComponent<RectTransform>();
         rect.anchoredPosition = new Vector3(buttonX, buttonY, 0);
-        buttonY += buttonYOffset;
         return generated;
     }
 
