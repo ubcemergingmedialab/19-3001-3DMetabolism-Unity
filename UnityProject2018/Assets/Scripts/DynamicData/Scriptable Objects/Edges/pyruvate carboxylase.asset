@@ -14,4 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q609
+  Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: c57d79eadd9f26f49bf6271a234bb8fd, type: 2}
+  products:
+  - {fileID: 11400000, guid: c54ae7e47866a504a9bafa11c78aafe3, type: 2}
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

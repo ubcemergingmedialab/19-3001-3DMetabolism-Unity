@@ -19,6 +19,11 @@ MonoBehaviour:
   EnergyConsumed: ADP -> ATP
   EnergyProduced: Phosphoglycerate Kinase
   GibbsFreeEnergy: -18.8 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: 18990bf152f589a4887619d71edd1167, type: 2}
+  products:
+  - {fileID: 11400000, guid: b338c8cdb83327e419fde883f4f813f5, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

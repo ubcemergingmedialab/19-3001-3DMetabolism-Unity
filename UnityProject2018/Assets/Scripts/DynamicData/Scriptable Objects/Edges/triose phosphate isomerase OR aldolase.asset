@@ -19,6 +19,11 @@ MonoBehaviour:
   EnergyConsumed: None
   EnergyProduced: Triose Phosphate Isomerase
   GibbsFreeEnergy: 7.5 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: e8eb7518eddb72a47a32ee68214b2ba5, type: 2}
+  products:
+  - {fileID: 11400000, guid: 5fa03321ff118b34bb6c5c9388fe98a0, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

@@ -20,6 +20,11 @@ MonoBehaviour:
   EnergyConsumed: NAD+ -> NADH
   EnergyProduced: Glyceraldehyde 3-phosphate dehydrogenase
   GibbsFreeEnergy: 6.3 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: 5fa03321ff118b34bb6c5c9388fe98a0, type: 2}
+  products:
+  - {fileID: 11400000, guid: 18990bf152f589a4887619d71edd1167, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

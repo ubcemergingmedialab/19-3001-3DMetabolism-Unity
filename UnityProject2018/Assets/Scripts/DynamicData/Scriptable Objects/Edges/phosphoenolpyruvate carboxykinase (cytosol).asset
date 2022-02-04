@@ -12,6 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: phosphoenolpyruvate carboxykinase (cytosol)
   m_EditorClassIdentifier: 
-  Label: 
+  Label: "\t oxaloacetate + GTP => phosphoenolpyruvate + GDP + CO2"
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q294
+  Description: An instance of the biological reaction in Homo sapiens with Reactome
+    ID (R-HSA-70241)
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: b8c1f16e12a54b54d8407454f261b511, type: 2}
+  products:
+  - {fileID: 11400000, guid: ad6444ff95a17344dbe95cabc1c9e56a, type: 2}
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 
