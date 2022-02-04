@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: "Oxaloacetate + Acetyl CoA + H\u2082O \u2192 Citrate + CoA-SH"
   Position: {x: 0, y: 0, z: 0}
-  QID: Q322
+  QID: Q219
   Description: Part of The Citric Acid Cycle
   EnergyConsumed: None
   EnergyProduced: 
   GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: c54ae7e47866a504a9bafa11c78aafe3, type: 2}
+  - {fileID: 11400000, guid: 30c65614851a65e4d939168a6471b0ba, type: 2}
+  products:
+  - {fileID: 11400000, guid: 8d51f9bcd33efac4f94e21a62c9ed6e8, type: 2}
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

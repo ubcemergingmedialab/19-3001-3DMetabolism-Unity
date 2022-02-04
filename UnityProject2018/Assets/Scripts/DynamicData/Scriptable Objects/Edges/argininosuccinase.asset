@@ -14,5 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: argininosuccinase
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q638
   Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: ebb5f43c8c659984dac92abf73784fc9, type: 2}
+  products:
+  - {fileID: 11400000, guid: 65a3e4494978ed644b86279eeabf74ef, type: 2}
+  - {fileID: 11400000, guid: 7b76255fca9e46141bcbfdb2bf715401, type: 2}
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

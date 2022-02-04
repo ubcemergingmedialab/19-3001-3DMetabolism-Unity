@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: phosphoglucose mutase
   m_EditorClassIdentifier: 
-  Label: 3-phosphoglycerate <=> 2-phosphoglycerate
+  Label: glucose 6-phosphate => glucose 1-phosphate
   Position: {x: 0, y: 0, z: 0}
-  QID: Q79
-  Description: Seventh Step of Glycolysis.
-  EnergyConsumed: None
-  EnergyProduced: Phosphoglycerate mutase
-  GibbsFreeEnergy: 4.4 kJ/mol
+  QID: Q679
+  Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
   reactants:
-  - {fileID: 11400000, guid: b338c8cdb83327e419fde883f4f813f5, type: 2}
+  - {fileID: 11400000, guid: 09646f28890776246a273845236fdf8b, type: 2}
   products:
-  - {fileID: 11400000, guid: 6bd55ee4b2ce2c94f8aeba7b7b4cd16b, type: 2}
+  - {fileID: 11400000, guid: 32215b5d2ec9c9740a49677732b7d159, type: 2}
   bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}

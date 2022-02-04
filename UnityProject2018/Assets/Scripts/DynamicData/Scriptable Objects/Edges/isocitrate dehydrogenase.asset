@@ -19,6 +19,10 @@ MonoBehaviour:
   EnergyConsumed: "NAD\u207A \u21CC NADH"
   EnergyProduced: Isocitrate Dehydrogenase
   GibbsFreeEnergy: N/A
+  reactants:
+  - {fileID: 11400000, guid: 654f0428baca6b9458020457fff962b3, type: 2}
+  products: []
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 
