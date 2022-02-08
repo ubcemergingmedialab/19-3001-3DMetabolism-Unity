@@ -112,48 +112,56 @@ public class MockQuery : MonoBehaviour
         glycogenSynthasePathway.AddEdgeToPathway(glycogen_n,glycogenDebranching);
         glycogenSynthasePathway.AddEdgeToPathway(glycogen_n1,glycogenDebranching);
 
-        BFSTest(glycogenSynthasePathway,glucose6phosphate,glycogen_n);
+        BFSTest(glycogenSynthasePathway,glycogen_n1,glycogen_n);
     }
 
-      List<ScriptableObject> SearchForPath(PathwaySOBeta pathway, NodeSOBeta nodeRoot, NodeSOBeta nodeToFind) {
+    Dictionary<int,List<ScriptableObject>> SearchForPath(PathwaySOBeta pathway, NodeSOBeta nodeRoot, NodeSOBeta nodeToFind) {
 
-       Queue<List<ScriptableObject>> BFSQueue = new Queue<List<ScriptableObject>>();
-       Dictionary<string,bool> visited = new Dictionary<string, bool>();
+        int pathNum = 1;
+        Dictionary<int,List<ScriptableObject>> CorrectPaths = new Dictionary<int,List<ScriptableObject>>();
 
-       BFSQueue.Enqueue(new List<ScriptableObject>(){nodeRoot});
-       visited.Add(nodeRoot.Label,true);
+        Queue<List<ScriptableObject>> BFSQueue = new Queue<List<ScriptableObject>>();
+        Dictionary<string,bool> visited = new Dictionary<string, bool>();
 
-       while (BFSQueue.Count > 0) {
-           List<ScriptableObject> currentPath = BFSQueue.Dequeue();
-           NodeSOBeta currentNode = (NodeSOBeta) currentPath[currentPath.Count - 1];
-           if (currentNode.Label == nodeToFind.Label){
-               // print the path later
-               Debug.Log("found the node : " + currentNode.Label + " = " + nodeToFind.Label);
-               return currentPath;
-           }
+        BFSQueue.Enqueue(new List<ScriptableObject>(){nodeRoot});
+        visited.Add(nodeRoot.Label,true);
 
-           Dictionary<EdgeSOBeta,List<NodeSOBeta>> children = FindChildren(pathway,visited,currentNode);
-            
-            foreach(KeyValuePair <EdgeSOBeta, List<NodeSOBeta>> entry in children) {
+        while (BFSQueue.Count > 0) {
+            List<ScriptableObject> currentPath = BFSQueue.Dequeue();
+            NodeSOBeta currentNode = (NodeSOBeta) currentPath[currentPath.Count - 1];
+            if (currentNode.Label == nodeToFind.Label){
                 
-
-                foreach (NodeSOBeta curr in entry.Value){
-                    List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
-                    newPath.Add(entry.Key);
-                    newPath.Add(curr);
-
-                    if (visited.ContainsKey(curr.Label)){
-                    continue;
-                    }
-                    visited.Add(curr.Label,true);
-                    BFSQueue.Enqueue(newPath);
-                }
-                
+                CorrectPaths.Add(pathNum,currentPath);
+                pathNum++;
+                //Debug.Log("found the node : " + currentNode.Label + " = " + nodeToFind.Label);
+                //return currentPath;
             }
 
+            Dictionary<EdgeSOBeta,List<NodeSOBeta>> children = FindChildren(pathway,visited,currentNode);
+                
+                foreach(KeyValuePair <EdgeSOBeta, List<NodeSOBeta>> entry in children) {
+                    
+
+                    foreach (NodeSOBeta curr in entry.Value){
+                        List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
+                        newPath.Add(entry.Key);
+                        newPath.Add(curr);
+
+                        if (visited.ContainsKey(curr.Label)){
+                        continue;
+                        }
+                        visited.Add(curr.Label,true);
+                        BFSQueue.Enqueue(newPath);
+                    }
+                    
+                }
+
        }
-       Debug.Log("No Path found and null is returned");
-       return null;
+       
+       if(CorrectPaths.Count == 0){
+           Debug.Log("no paths found !");
+       }
+       return CorrectPaths;
     }
 
     /*
@@ -204,14 +212,18 @@ public class MockQuery : MonoBehaviour
 
 
     public void BFSTest(PathwaySOBeta pathway, NodeSOBeta start, NodeSOBeta end) {
-        List<ScriptableObject> result =  SearchForPath(pathway,start,end);
-        string printResult = "search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
+        Dictionary<int,List<ScriptableObject>> result =  SearchForPath(pathway,start,end);
+        string printResult = "<BFS> search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
+        foreach(KeyValuePair<int,List<ScriptableObject>> path in result){
         int n = 1;
-        foreach (ScriptableObject step in result){
-            printResult += "\n" + n + " - " + step.name; //GetType().ToString();
-            n++;   
-        }
+        Debug.Log("<BFS> " + result.Count);
+        printResult += "\npath number : " + path.Key;
+            foreach (ScriptableObject step in path.Value){
+                printResult += "\n" + n + " - " + step.name; //GetType().ToString();
+                n++;   
+            }
         Debug.Log(printResult);
+        }
     }
 
 }

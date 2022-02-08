@@ -16,45 +16,54 @@ public class NetworkSearch : MonoBehaviour
         
     }
 
-    List<ScriptableObject> SearchForPath(PathwaySO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
+    
+    Dictionary<int,List<ScriptableObject>> SearchForPath(PathwaySO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
 
-       Queue<List<ScriptableObject>> BFSQueue = new Queue<List<ScriptableObject>>();
-       Dictionary<string,bool> visited = new Dictionary<string, bool>();
+        int pathNum = 1;
+        Dictionary<int,List<ScriptableObject>> CorrectPaths = new Dictionary<int,List<ScriptableObject>>();
 
-       BFSQueue.Enqueue(new List<ScriptableObject>(){nodeRoot});
-       visited.Add(nodeRoot.Label,true);
+        Queue<List<ScriptableObject>> BFSQueue = new Queue<List<ScriptableObject>>();
+        Dictionary<string,bool> visited = new Dictionary<string, bool>();
 
-       while (BFSQueue.Count > 0) {
-           List<ScriptableObject> currentPath = BFSQueue.Dequeue();
-           NodeSO currentNode = (NodeSO) currentPath[currentPath.Count - 1];
-           if (currentNode.Label == nodeToFind.Label){
-               // print the path later
-               Debug.Log("found the node : " + currentNode.Label + " = " + nodeToFind.Label);
-               return currentPath;
-           }
+        BFSQueue.Enqueue(new List<ScriptableObject>(){nodeRoot});
+        visited.Add(nodeRoot.Label,true);
 
-           Dictionary<EdgeSO,List<NodeSO>> children = FindChildren(pathway,visited,currentNode);
-            
-            foreach(KeyValuePair <EdgeSO, List<NodeSO>> entry in children) {
+        while (BFSQueue.Count > 0) {
+            List<ScriptableObject> currentPath = BFSQueue.Dequeue();
+            NodeSO currentNode = (NodeSO) currentPath[currentPath.Count - 1];
+            if (currentNode.Label == nodeToFind.Label){
                 
-
-                foreach (NodeSO curr in entry.Value){
-                    List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
-                    newPath.Add(entry.Key);
-                    newPath.Add(curr);
-
-                    if (visited.ContainsKey(curr.Label)){
-                    continue;
-                    }
-                    visited.Add(curr.Label,true);
-                    BFSQueue.Enqueue(newPath);
-                }
-                
+                CorrectPaths.Add(pathNum,currentPath);
+                pathNum++;
+                //Debug.Log("found the node : " + currentNode.Label + " = " + nodeToFind.Label);
+                //return currentPath;
             }
 
+            Dictionary<EdgeSO,List<NodeSO>> children = FindChildren(pathway,visited,currentNode);
+                
+                foreach(KeyValuePair <EdgeSO, List<NodeSO>> entry in children) {
+                    
+
+                    foreach (NodeSO curr in entry.Value){
+                        List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
+                        newPath.Add(entry.Key);
+                        newPath.Add(curr);
+
+                        if (visited.ContainsKey(curr.Label)){
+                        continue;
+                        }
+                        visited.Add(curr.Label,true);
+                        BFSQueue.Enqueue(newPath);
+                    }
+                    
+                }
+
        }
-       Debug.Log("No Path found and null is returned");
-       return null;
+
+       if(CorrectPaths.Count == 0){
+           Debug.Log("no paths found !");
+       }
+       return CorrectPaths;
     }
 
     Dictionary<EdgeSO,List<NodeSO>> FindChildren(PathwaySO pathway,Dictionary<string,bool> visited, NodeSO current)
@@ -96,14 +105,17 @@ public class NetworkSearch : MonoBehaviour
     }
 
     public void BFSTest(PathwaySO pathway, NodeSO start, NodeSO end) {
-        List<ScriptableObject> result =  SearchForPath(pathway,start,end);
+        Dictionary<int,List<ScriptableObject>> result =  SearchForPath(pathway,start,end);
         string printResult = "search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
+        foreach(KeyValuePair<int,List<ScriptableObject>> path in result){
         int n = 1;
-        foreach (ScriptableObject step in result){
-            printResult += "\n" + n + " - " + step.name; //GetType().ToString();
-            n++;   
-        }
+        printResult += "\npath number : " + path.Key;
+            foreach (ScriptableObject step in path.Value){
+                printResult += "\n" + n + " - " + step.name; //GetType().ToString();
+                n++;   
+            }
         Debug.Log(printResult);
+        }
     }
 
 
