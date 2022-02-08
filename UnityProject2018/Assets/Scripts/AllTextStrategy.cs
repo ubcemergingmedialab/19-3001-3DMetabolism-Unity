@@ -36,12 +36,12 @@ public class AllTextStrategy : TextDisplayStrategy
 
     public override void UpdateTextDisplay()
     {
-        Debug.Log("finding nodes");
+        //Debug.Log("finding nodes");
         NodeDataDisplay[] nodes = Object.FindObjectsOfType<NodeDataDisplay>();
         StatusController status = StatusController.Instance;
         foreach (NodeDataDisplay node in nodes)
         {
-            Debug.Log("Updateing text" + node.name);
+            //Debug.Log("Updateing text" + node.name);
             node.OpaqueText();
         }
     }
