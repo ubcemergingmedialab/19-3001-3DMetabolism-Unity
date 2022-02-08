@@ -52,7 +52,9 @@ public class NetworkSearch : MonoBehaviour
                         if (visited.ContainsKey(curr.Label)){
                         continue;
                         }
-                        visited.Add(curr.Label,true);
+                        if (curr.Label != nodeToFind.Label){
+                            visited.Add(curr.Label,true);
+                        }
                         BFSQueue.Enqueue(newPath);
                     }
                     
@@ -106,16 +108,19 @@ public class NetworkSearch : MonoBehaviour
 
     public void BFSTest(PathwaySO pathway, NodeSO start, NodeSO end) {
         Dictionary<int,List<ScriptableObject>> result =  SearchForPath(pathway,start,end);
-        string printResult = "search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
+
+        string printResult = "<BFS> search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
+
         foreach(KeyValuePair<int,List<ScriptableObject>> path in result){
         int n = 1;
+        Debug.Log("<BFS> count =" + result.Count);
         printResult += "\npath number : " + path.Key;
             foreach (ScriptableObject step in path.Value){
                 printResult += "\n" + n + " - " + step.name; //GetType().ToString();
                 n++;   
             }
-        Debug.Log(printResult);
         }
+        Debug.Log(printResult);
     }
 
 
