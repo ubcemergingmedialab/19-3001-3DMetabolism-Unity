@@ -11,14 +11,9 @@ public class WikiDataConnect : MonoBehaviour
     public static string fileDestination = "Assets/Resources/Data/query.xml";
     void Start()
     {
-        string WQS = "http://query.wikidata.org/sparql?query=";
-        string queryRaw = "SELECT ?item ?itemLabel " +
-            "WHERE {wd:Q50293158 wdt:P527 ?item. " +
-            "SERVICE wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". " +
-            "} " +
-            "}";
-        string queryReady = UnityWebRequest.EscapeURL(queryRaw);
-        StartCoroutine(GetRequest(WQS + queryReady));
+        string WQS = "http://wikibase-3dm.eml.ubc.ca:8282/proxy/wdqs/bigdata/namespace/wdq/sparql?query=" +
+            "select%20*%20where%20%7B%20%3Chttp%3A%2F%2Fwikibase-3dm.eml.ubc.ca%2Fentity%2FQ88%3E%20%3Chttp%3A%2F%2Fwikibase-3dm.eml.ubc.ca%2Fprop%2Fdirect%2FP4%3E%20%3Fc%7D";
+        StartCoroutine(GetRequest(WQS));
     }
 
     IEnumerator GetRequest(string uri)
@@ -35,7 +30,9 @@ public class WikiDataConnect : MonoBehaviour
             }
             else
             {
+                Debug.Log(webRequest.downloadHandler.text);
                 WriteString(webRequest.downloadHandler.text);
+                Application.LoadLevel("_Main");
             }
         }
     }

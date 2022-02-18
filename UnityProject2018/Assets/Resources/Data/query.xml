@@ -1,42 +1,62 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <sparql xmlns='http://www.w3.org/2005/sparql-results#'>
 	<head>
-		<variable name='item'/>
-		<variable name='itemLabel'/>
-		<variable name='itemDescription'/>
+		<variable name='c'/>
 	</head>
 	<results>
 		<result>
-			<binding name='item'>
-				<uri>27124826</uri>
-			</binding>
-			<binding name='itemLabel'>
-				<literal xml:lang='en'>beta-D-fructofuranose 6-phosphate(2-)</literal>
-			</binding>
-			<binding name='itemDescription'>
-				<literal xml:lang='en'>chemical compound</literal>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q290</uri>
 			</binding>
 		</result>
 		<result>
-			<binding name='item'>
-				<uri>27125625</uri>
-			</binding>
-			<binding name='itemLabel'>
-				<literal xml:lang='en'>alpha-D-glucose 6-phosphate(2-) ion</literal>
-			</binding>
-			<binding name='itemDescription'>
-				<literal xml:lang='en'>anion</literal>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q294</uri>
 			</binding>
 		</result>
 		<result>
-			<binding name='item'>
-				<uri>50257965</uri>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q611</uri>
 			</binding>
-			<binding name='itemLabel'>
-				<literal xml:lang='en'>GPI dimer [cytosol]</literal>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q612</uri>
 			</binding>
-			<binding name='itemDescription'>
-				<literal xml:lang='en'>An instance of macromolecular complex in Homo sapiens with Reactome ID (R-HSA-70469)</literal>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q613</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q614</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q615</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q616</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q617</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q618</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='c'>
+				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q619</uri>
 			</binding>
 		</result>
 	</results>
