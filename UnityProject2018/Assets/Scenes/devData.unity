@@ -8499,8 +8499,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507814657}
   m_HandleRect: {fileID: 1507814656}
   m_Direction: 2
-  m_Value: 0.95427746
-  m_Size: 0.43447837
+  m_Value: 0.9542781
+  m_Size: 0.43447843
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -26271,6 +26271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364936217}
   - component: {fileID: 1364936218}
+  - component: {fileID: 1364936219}
   m_Layer: 2
   m_Name: PathwayMock
   m_TagString: Untagged
@@ -26306,6 +26307,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   edges: []
   nodes: []
+--- !u!114 &1364936219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364936216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6b15bd0da381242a3c0378b9755cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366209746
 GameObject:
   m_ObjectHideFlags: 0

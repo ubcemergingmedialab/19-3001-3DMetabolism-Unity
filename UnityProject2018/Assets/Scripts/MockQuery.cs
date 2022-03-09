@@ -11,7 +11,7 @@ public class MockQuery : MonoBehaviour
         //Glycogen sythanse pathway
 
         PathwaySOBeta glycogenSynthasePathway = ScriptableObject.CreateInstance<PathwaySOBeta>();
-        glycogenSynthasePathway.init("glycogen Synthase pathway");
+        glycogenSynthasePathway.init("glycogen Synthase pathway");  
         // hexokinase , glucose -> glucose6phospahate 
         EdgeSOBeta hexokinase = ScriptableObject.CreateInstance<EdgeSOBeta>();
         hexokinase.init("hexokinase");
