@@ -29,8 +29,9 @@ public class EdgeSO : ScriptableObject
 
     /* initialize the essential fields 
     */
-    public void init(string name, bool bidirectionality = false){
+    public void init(string name, string newQID, bool bidirectionality = false){
 
+        this.QID = newQID;
         this.name = name;
         this.Label = name;
         this.bidirectional = bidirectionality;

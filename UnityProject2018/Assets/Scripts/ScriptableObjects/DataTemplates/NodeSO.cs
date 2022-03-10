@@ -19,8 +19,9 @@ public class NodeSO : ScriptableObject
     public string IUPACNames;
     public string link;
 
-    public void init(string name) {
+    public void init(string name, string newQID) {
         this.name = name;
         this.Label = name;
+        this.QID = newQID;
     }
 }
