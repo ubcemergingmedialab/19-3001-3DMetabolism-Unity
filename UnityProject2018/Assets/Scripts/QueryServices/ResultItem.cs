@@ -6,10 +6,12 @@ using System;
 [System.Serializable]
 public class ResultItem {
 
-	public string QID;
+	public string edgeQID;
 	public string edge;
 	public string metabolite;
+	public string metaboliteQID;
 	public string enzyme;
+	public string enzymeQID;
 	public string edgeLabel;
 	
 	public string enzymeLabel;

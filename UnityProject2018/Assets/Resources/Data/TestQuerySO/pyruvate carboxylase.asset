@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: Pyruvate + CO2 + ATP => ADP + Orthophosphate + Oxaloacetate
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q290
   Description: 
   EnergyConsumed: 
   EnergyProduced: 

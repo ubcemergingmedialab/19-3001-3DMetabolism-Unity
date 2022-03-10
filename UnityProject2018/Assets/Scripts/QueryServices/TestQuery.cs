@@ -41,7 +41,7 @@ string ResourceFolderPath = "Assets/Resources/Data/TestQuerySO/";
 public void EdgeSOInit(ResultItem item){
     if (!(EdgeSOs.ContainsKey(item.edgeLabel))){
         EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
-        edge.init(item.edgeLabel,item.QID);
+        edge.init(item.edgeLabel,item.edgeQID);
         EdgeSOs.Add(item.edgeLabel,edge);
         string newPath = ResourceFolderPath + item.enzymeLabel + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
@@ -56,7 +56,7 @@ public void NodeSOInit(ResultItem item){
         string newPath = ResourceFolderPath + item.metaboliteLabel + ".asset";
         EdgeSO currentEdge;
         NodeSO node = ScriptableObject.CreateInstance<NodeSO>();
-        node.init(item.metaboliteLabel,item.QID);
+        node.init(item.metaboliteLabel,item.metaboliteQID);
         NodeSOs.Add(item.metaboliteLabel,node);
         AssetDatabase.CreateAsset(node,newPath);
 
