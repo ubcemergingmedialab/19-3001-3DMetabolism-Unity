@@ -4,6 +4,6 @@ using UnityEngine;
 using System.IO;
 using System;
 [System.Serializable]
-public class WikibaseResults {
-	public List<ResultItem> resultList;
+public class QueryResults {
+	public List<QueryItem> QueryResultList;
 }

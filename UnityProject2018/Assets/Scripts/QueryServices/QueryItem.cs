@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 [System.Serializable]
-public class ResultItem {
+public class QueryItem {
 
 	public string edgeQID;
 	public string edge;
