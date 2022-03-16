@@ -53,41 +53,41 @@ string ResourceFolderPath = "Assets/Resources/Data/TestQuerySO/";
 }
 
 // create an EdgeSo instance from the text given in the query Json , unless the edge already exists
-public void EdgeSOInit(QueryItem item){
-    if (!(EdgeSOs.ContainsKey(item.edgeLabel))){
+public void EdgeSOInit(WikibaseBinding item){
+    if (!(EdgeSOs.ContainsKey(item.edgeLabel.value))){
         EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
-        edge.init(item.edgeLabel,item.edgeQID);
-        EdgeSOs.Add(item.edgeLabel,edge);
-        string newPath = ResourceFolderPath + item.enzymeLabel + ".asset";
+        edge.init(item.edgeLabel.value,item.edgeQID.value);
+        EdgeSOs.Add(item.edgeLabel.value,edge);
+        string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
     }
 }
 
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
 // in case the edge doesnt exists, call EdgeSOInit to create the edge. 
-public void NodeSOInit(QueryItem item){
-    if (!(NodeSOs.ContainsKey(item.metaboliteLabel))){
+public void NodeSOInit(WikibaseBinding item){
+    if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
         
-        string newPath = ResourceFolderPath + item.metaboliteLabel + ".asset";
+        string newPath = ResourceFolderPath + item.metaboliteLabel.value + ".asset";
         EdgeSO currentEdge;
         NodeSO node = ScriptableObject.CreateInstance<NodeSO>();
-        node.init(item.metaboliteLabel,item.metaboliteQID);
-        NodeSOs.Add(item.metaboliteLabel,node);
+        node.init(item.metaboliteLabel.value,item.metaboliteQID.value);
+        NodeSOs.Add(item.metaboliteLabel.value,node);
         AssetDatabase.CreateAsset(node,newPath);
 
-        if (EdgeSOs.TryGetValue(item.edgeLabel, out currentEdge)){
-            if(item.isProduct == "true"){
+        if (EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge)){
+            if(item.isProduct.value == "true"){
                 currentEdge.AddProduct(node);
-            }else if(item.isReactant == "true"){
+            }else if(item.isReactant.value == "true"){
                 currentEdge.AddReactant(node);
             }
 
         }else{
             EdgeSOInit(item);
-            EdgeSOs.TryGetValue(item.edgeLabel, out currentEdge);
-            if(item.isProduct == "true"){
+            EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
+            if(item.isProduct.value == "true"){
                 currentEdge.AddProduct(node);
-            }else if(item.isReactant == "true"){
+            }else if(item.isReactant.value == "true"){
                 currentEdge.AddReactant(node);
             }
         }
@@ -116,7 +116,7 @@ IEnumerator GetRequest(string uri)
 
             foreach( WikibaseBinding item in result.results.bindings){
                 Debug.Log("<json>" + item.metaboliteLabel.value);
-                NodeSOInit(item.metaboliteLabel.value);
+                NodeSOInit(item);
 
             }
             }
