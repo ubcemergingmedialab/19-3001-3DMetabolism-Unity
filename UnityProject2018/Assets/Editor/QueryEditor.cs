@@ -1,11 +1,17 @@
 
 using UnityEngine;
 using UnityEditor;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 
+//[CustomEditor(typeof(QueryEditor))]
 public class QueryEditor : EditorWindow
 {
+
+    string targetPathwayQID = "Here";
     public static string WQS = "http://wikibase-3dm.eml.ubc.ca:8282/proxy/wdqs/bigdata/namespace/wdq/sparql?format=json&query=";
-    public static string queryRaw = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/>" +
+    public static string queryRawFirstHalf = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/>" +
         "select distinct ?prefixedEdge" +
         "(strafter(?prefixedEdge,\":\") as ?edgeQID)" +
         "?prefixedMetabolite" +
@@ -13,7 +19,8 @@ public class QueryEditor : EditorWindow
         "?edgeLabel ?metaboliteLabel ?isReactant ?isProduct" +
         "?prefixedEnzyme" +
         "(strafter(?prefixedEnzyme,\":\") as ?enzymeQID) ?enzymeLabel where {" +
-        "foaf:Q88 wdt:P4 ?edge." +
+        "foaf:";
+    public static string queryRawSecondHalf = " wdt:P4 ?edge." +
         "?edge p:P4 ?statement." +
         "?edge wdt:P14 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
@@ -36,10 +43,17 @@ public class QueryEditor : EditorWindow
     {
         GUILayout.Label("Query to Unity", EditorStyles.boldLabel);
 
+        targetPathwayQID = EditorGUILayout.TextField("Target pathway QID:",targetPathwayQID);
+
+        // if (GUILayout.Button("save Target pathway QID"))
+        // {
+        //     targetPathwayQID = PWQID;
+        // }
+
         if (GUILayout.Button("run query and create Scriptable objects"))
-        {   
-            GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().StopAllCoroutines();
-            GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().RunQuery(WQS,queryRaw);
+        { 
+            string qRawFull = queryRawFirstHalf + targetPathwayQID + queryRawSecondHalf;
+            GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().RunQuery(WQS,qRawFull);
         }
         
     }
