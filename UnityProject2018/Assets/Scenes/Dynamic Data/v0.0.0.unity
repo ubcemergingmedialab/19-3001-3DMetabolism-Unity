@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,9 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d1b74ee091178459b89f9739fddd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 11400000, guid: 18990bf152f589a4887619d71edd1167, type: 2}
-  - {fileID: 11400000, guid: 75c2b64492ba72243b05ff4d85746e7c, type: 2}
+  pathways: []
+  queries: {fileID: 0}
 --- !u!1 &63402642
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeData: {fileID: 11400000, guid: 18990bf152f589a4887619d71edd1167, type: 2}
-  labelText: {fileID: 63402644}
+  labelText: {fileID: 0}
+  DisplayData: {fileID: 0}
 --- !u!1 &477695829
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeData: {fileID: 11400000, guid: 75c2b64492ba72243b05ff4d85746e7c, type: 2}
-  labelText: {fileID: 650038966}
+  labelText: {fileID: 0}
+  DisplayData: {fileID: 0}
 --- !u!1 &1137289781
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +644,10 @@ MonoBehaviour:
   animations:
   - {fileID: 11400000, guid: d4b998acc326864439bd87b7436487b3, type: 2}
   - {fileID: 11400000, guid: 5e1cf84240490b44585fef657fc05af8, type: 2}
+  waitTime: 1
+  resetTime: 0.1
+  resetAnimation: {fileID: 0}
+  presenter: {fileID: 0}
 --- !u!4 &1137289783
 Transform:
   m_ObjectHideFlags: 0

@@ -9938,7 +9938,6 @@ MonoBehaviour:
   scaleMin: 0.001
   scaleMax: 715.4
   scaleThreshhold: 0.47
-  mouseOverCard: 0
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26582,11 +26581,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6944630078179952746, guid: c63bbe21836d06b4f973bab5e3b883f6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63bbe21836d06b4f973bab5e3b883f6, type: 3}
---- !u!4 &1607201040 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6346571546704775820, guid: c63bbe21836d06b4f973bab5e3b883f6,
+--- !u!224 &1607201040 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6944630078179952746, guid: c63bbe21836d06b4f973bab5e3b883f6,
     type: 3}
   m_PrefabInstance: {fileID: 1607201039}
   m_PrefabAsset: {fileID: 0}

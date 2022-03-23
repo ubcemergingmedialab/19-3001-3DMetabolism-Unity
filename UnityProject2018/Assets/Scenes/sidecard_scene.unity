@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1543,6 +1543,12 @@ MonoBehaviour:
   LabelText: {fileID: 2137760392}
   DescriptionText: {fileID: 884224001}
   QIDText: {fileID: 614836088}
+  ChargeText: {fileID: 0}
+  EnergyConsumedText: {fileID: 0}
+  EnergyProducedText: {fileID: 0}
+  GibbsFreeEnergyText: {fileID: 0}
+  MolecularFormulaText: {fileID: 0}
+  IUPACNamesText: {fileID: 0}
 --- !u!114 &590989311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,6 +1565,10 @@ MonoBehaviour:
   LabelText: {fileID: 2137760392}
   DescriptionText: {fileID: 884224001}
   QIDText: {fileID: 614836088}
+  ChargeText: {fileID: 0}
+  MolecularFormulaText: {fileID: 0}
+  IUPACNamesText: {fileID: 0}
+  LinkButton: {fileID: 0}
 --- !u!1 &614836086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeUIElement: {fileID: 590989311}
   EdgeUIElement: {fileID: 0}
+  PathwayUIElement: {fileID: 0}
   Panel: {fileID: 590989304}
 --- !u!1001 &856992774
 PrefabInstance:

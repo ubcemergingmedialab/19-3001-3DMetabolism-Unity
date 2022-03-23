@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4523449, g: 0.5527848, b: 0.6759167, a: 1}
+  m_IndirectSpecularColor: {r: 0.4523453, g: 0.5527853, b: 0.6759173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17305,7 +17305,7 @@ MonoBehaviour:
   DescriptionText: {fileID: 1198535357}
   QIDText: {fileID: 929229689}
   ChargeText: {fileID: 1032467344}
-  MolecularFormulaText: {fileID: 666868416}
+  MolecularFormulaText: {fileID: 0}
   IUPACNamesText: {fileID: 789056963}
   LinkButton: {fileID: 93318057}
 --- !u!114 &1038469916

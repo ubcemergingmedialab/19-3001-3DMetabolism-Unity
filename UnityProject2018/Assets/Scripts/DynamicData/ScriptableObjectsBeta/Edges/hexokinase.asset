@@ -23,6 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 84348051af700e945b7e2b24f4ad9d76, type: 2}
   products:
   - {fileID: 11400000, guid: ce6c0a7f10432fb4abacf6acd4e28346, type: 2}
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

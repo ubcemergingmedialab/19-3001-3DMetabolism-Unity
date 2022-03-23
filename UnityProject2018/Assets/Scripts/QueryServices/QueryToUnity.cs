@@ -44,10 +44,13 @@ string ResourceFolderPath = "Assets/Resources/Data/TestQuerySO/";
 public void EdgeSOInit(WikibaseBinding item){
     if (!(EdgeSOs.ContainsKey(item.edgeLabel.value))){
         EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
+    
         edge.init(item.edgeLabel.value,item.edgeQID.value);
-        EdgeSOs.Add(item.edgeLabel.value,edge);
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
+        EdgeSOs.Add(item.edgeLabel.value,edge);
+        //AssetDatabase.ForceReserializeAssets();
+        
     }
 }
 
@@ -61,24 +64,45 @@ public void NodeSOInit(WikibaseBinding item){
         NodeSO node = ScriptableObject.CreateInstance<NodeSO>();
         node.init(item.metaboliteLabel.value,item.metaboliteQID.value);
         NodeSOs.Add(item.metaboliteLabel.value,node);
-        AssetDatabase.CreateAsset(node,newPath);
+        AssetDatabase.CreateAsset(node,newPath);  
 
         if (EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge)){
             if(item.isProduct.value == "true"){
                 currentEdge.AddProduct(node);
+                Debug.Log("old edge product");
             }else if(item.isReactant.value == "true"){
                 currentEdge.AddReactant(node);
+                Debug.Log("old edge product");
             }
 
         }else{
             EdgeSOInit(item);
-            EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
-            if(item.isProduct.value == "true"){
+            Debug.Log("new edge added");
+            EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge); //
+            if(item.isProduct.value == "true"){  
                 currentEdge.AddProduct(node);
+                Debug.Log("new edge product");
             }else if(item.isReactant.value == "true"){
-                currentEdge.AddReactant(node);
+                currentEdge.AddReactant(node);  
+                Debug.Log("new edge reactant");
             }
         }
+        //AssetDatabase.ForceReserializeAssets();  
+        
+    }
+}
+
+// empties the dictionaries holding the 
+public void ClearQueryData(){
+    NodeSOs.Clear();
+    EdgeSOs.Clear();
+
+    DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Data/TestQuerySO/");
+    Debug.Log("about to ");
+    foreach(FileInfo fi in dir.GetFiles())
+    {
+        fi.Delete();
+        Debug.Log("deleting");
     }
 }
 
@@ -87,7 +111,7 @@ public void RunQuery(string WQSLink , string raw){
     string queryReady = UnityWebRequest.EscapeURL(raw);
     StartCoroutine(GetRequest(WQSLink + queryReady));
     
-}
+}  
 
 // request the query and save and parse the json file
 IEnumerator GetRequest(string uri)
@@ -115,6 +139,8 @@ IEnumerator GetRequest(string uri)
                 NodeSOInit(item);
 
             }
+            //AssetDatabase.ForceReserializeAssets();
+  
             }
         }
     }

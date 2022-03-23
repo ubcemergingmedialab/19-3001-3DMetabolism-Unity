@@ -45,15 +45,17 @@ public class QueryEditor : EditorWindow
 
         targetPathwayQID = EditorGUILayout.TextField("Target pathway QID:",targetPathwayQID);
 
-        // if (GUILayout.Button("save Target pathway QID"))
-        // {
-        //     targetPathwayQID = PWQID;
-        // }
+        
 
         if (GUILayout.Button("run query and create Scriptable objects"))
         { 
             string qRawFull = queryRawFirstHalf + targetPathwayQID + queryRawSecondHalf;
             GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().RunQuery(WQS,qRawFull);
+        }
+
+        if (GUILayout.Button("delete current scriptable objects"))
+        {
+            GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().ClearQueryData();
         }
         
     }
