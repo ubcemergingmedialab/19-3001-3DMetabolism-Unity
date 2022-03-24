@@ -52,7 +52,7 @@ public class QueryEditor : EditorWindow
             string qRawFull = queryRawFirstHalf + targetPathwayQID + queryRawSecondHalf;
             GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().RunQuery(WQS,qRawFull);
         }
-
+  
         if (GUILayout.Button("delete current scriptable objects"))
         {
             GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().ClearQueryData();

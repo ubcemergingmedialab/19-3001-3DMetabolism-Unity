@@ -49,7 +49,7 @@ public void EdgeSOInit(WikibaseBinding item){
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
-        //AssetDatabase.ForceReserializeAssets();
+        
         
     }
 }
@@ -57,6 +57,7 @@ public void EdgeSOInit(WikibaseBinding item){
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
 // in case the edge doesnt exists, call EdgeSOInit to create the edge. 
 public void NodeSOInit(WikibaseBinding item){
+    Debug.Log("Adding node of : " + item.metaboliteLabel.value);
     if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
         
         string newPath = ResourceFolderPath + item.metaboliteLabel.value + ".asset";
@@ -87,7 +88,7 @@ public void NodeSOInit(WikibaseBinding item){
                 Debug.Log("new edge reactant");
             }
         }
-        //AssetDatabase.ForceReserializeAssets();  
+          
         
     }
 }
@@ -139,7 +140,7 @@ IEnumerator GetRequest(string uri)
                 NodeSOInit(item);
 
             }
-            //AssetDatabase.ForceReserializeAssets();
+            
   
             }
         }

@@ -19,10 +19,8 @@ MonoBehaviour:
   EnergyConsumed: 
   EnergyProduced: 
   GibbsFreeEnergy: 
-  reactants:
-  - {fileID: 11400000, guid: a3224abdc1a7bec4e90000dbdfd08f0b, type: 2}
-  products:
-  - {fileID: 11400000, guid: c9bfc330fc2a5f7479c38c7e5a4d35a8, type: 2}
+  reactants: []
+  products: []
   bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}

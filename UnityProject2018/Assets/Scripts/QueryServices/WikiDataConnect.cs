@@ -34,7 +34,7 @@ public class WikiDataConnect : MonoBehaviour
 "}";
         string queryReady = UnityWebRequest.EscapeURL(queryRaw);
         Debug.Log(WQS +queryReady);
-        //StartCoroutine(GetRequest(WQS + queryReady));
+        
     }
 
     IEnumerator GetRequest(string uri)
