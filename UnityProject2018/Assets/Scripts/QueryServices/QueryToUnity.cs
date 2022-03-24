@@ -49,65 +49,55 @@ public void EdgeSOInit(WikibaseBinding item){
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
-        
-        
+        Debug.Log("edge added");
     }
 }
 
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
 // in case the edge doesnt exists, call EdgeSOInit to create the edge. 
 public void NodeSOInit(WikibaseBinding item){
-    Debug.Log("Adding node of : " + item.metaboliteLabel.value);
+    NodeSO currentNode;
+    EdgeSO currentEdge;
     if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
         
         string newPath = ResourceFolderPath + item.metaboliteLabel.value + ".asset";
-        EdgeSO currentEdge;
-        NodeSO node = ScriptableObject.CreateInstance<NodeSO>();
-        node.init(item.metaboliteLabel.value,item.metaboliteQID.value);
-        NodeSOs.Add(item.metaboliteLabel.value,node);
-        AssetDatabase.CreateAsset(node,newPath);  
-
-        if (EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge)){
-            if(item.isProduct.value == "true"){
-                currentEdge.AddProduct(node);
-                Debug.Log("old edge product");
-            }else if(item.isReactant.value == "true"){
-                currentEdge.AddReactant(node);
-                Debug.Log("old edge product");
-            }
-
-        }else{
-            EdgeSOInit(item);
-            Debug.Log("new edge added");
-            EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge); //
-            if(item.isProduct.value == "true"){  
-                currentEdge.AddProduct(node);
-                Debug.Log("new edge product");
-            }else if(item.isReactant.value == "true"){
-                currentEdge.AddReactant(node);  
-                Debug.Log("new edge reactant");
-            }
-        }
-          
-        
+        currentNode = ScriptableObject.CreateInstance<NodeSO>();
+        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value);
+        NodeSOs.Add(item.metaboliteLabel.value,currentNode);
+        AssetDatabase.CreateAsset(currentNode,newPath);
+    }else{
+        NodeSOs.TryGetValue(item.metaboliteLabel.value, out currentNode);
     }
+    
+    if (!(EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge))){
+        EdgeSOInit(item);
+        EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
+    }
+    if(item.isProduct.value == "true"){  
+        currentEdge.AddProduct(currentNode);
+    }else if(item.isReactant.value == "true"){
+        currentEdge.AddReactant(currentNode);   
+    }
+    
 }
 
-// empties the dictionaries holding the 
-public void ClearQueryData(){
+// empties the dictionaries holding the scriptable objects
+public async void ClearQueryData(){
     NodeSOs.Clear();
     EdgeSOs.Clear();
 
     DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Data/TestQuerySO/");
-    Debug.Log("about to ");
+    int i = 0;
     foreach(FileInfo fi in dir.GetFiles())
     {
         fi.Delete();
-        Debug.Log("deleting");
+        i++;
+        
     }
+    Debug.Log("deleted: " + i + " files");
 }
 
-// make the query request ready and pass it to GetRequest(uri)
+// make the query URI ready and pass it to GetRequest(uri)
 public void RunQuery(string WQSLink , string raw){
     string queryReady = UnityWebRequest.EscapeURL(raw);
     StartCoroutine(GetRequest(WQSLink + queryReady));
@@ -136,7 +126,7 @@ IEnumerator GetRequest(string uri)
             Debug.Log("<json>" + result.results.bindings.Count);
 
             foreach( WikibaseBinding item in result.results.bindings){
-                Debug.Log("<json>" + item.metaboliteLabel.value);
+                Debug.Log("<json>" + item.metaboliteLabel.value + " with edge of: " + item.enzymeLabel.value);
                 NodeSOInit(item);
 
             }
