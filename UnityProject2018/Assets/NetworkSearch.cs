@@ -84,7 +84,6 @@ public class NetworkSearch : MonoBehaviour
 
                     foreach (NodeSO node in currentEdge.reactants){
                         nodesByEdge[currentEdge].Add(node);
-
                     }
                 } else {
                     if (currentEdge.reactants.Contains(current)){
