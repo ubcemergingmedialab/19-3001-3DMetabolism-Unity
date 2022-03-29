@@ -41,12 +41,23 @@ public class EdgeSO : ScriptableObject
 
     // add reactant to the edge
     public void AddReactant(NodeSO node){
-        reactants.Add(node);
+        foreach(NodeSO temp in this.reactants){
+            if(temp.Label == node.Label){
+                return;
+            }
+        }
+        this.reactants.Add(node);
+        
     }
 
     // add product to the edge
     public void AddProduct(NodeSO node){
-        products.Add(node);
+        foreach(NodeSO temp in this.products){
+            if(temp.Label == node.Label){
+                return;
+            }
+        }
+        this.products.Add(node);
     }
 
 }
