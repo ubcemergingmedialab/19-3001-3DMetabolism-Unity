@@ -10309,7 +10309,6 @@ MonoBehaviour:
   scaleMin: 0.001
   scaleMax: 715.4
   scaleThreshhold: 0.47
-  mouseOverCard: 0
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17617,7 +17616,7 @@ MonoBehaviour:
   DescriptionText: {fileID: 1198535357}
   QIDText: {fileID: 929229689}
   ChargeText: {fileID: 1032467344}
-  MolecularFormulaText: {fileID: 666868416}
+  MolecularFormulaText: {fileID: 0}
   IUPACNamesText: {fileID: 789056963}
   LinkButton: {fileID: 93318057}
 --- !u!114 &1038469914

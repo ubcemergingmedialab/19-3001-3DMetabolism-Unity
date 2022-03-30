@@ -10047,6 +10047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &510586544
 GameObject:
   m_ObjectHideFlags: 0
@@ -19121,7 +19122,7 @@ MonoBehaviour:
   DescriptionText: {fileID: 519969086}
   QIDText: {fileID: 46762525}
   ChargeText: {fileID: 426141102}
-  MolecularFormulaText: {fileID: 256190952}
+  MolecularFormulaText: {fileID: 0}
   IUPACNamesText: {fileID: 1129713104}
   LinkButton: {fileID: 1880862925}
 --- !u!114 &1244838127
@@ -21106,6 +21107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &1335912481
 GameObject:
   m_ObjectHideFlags: 0
@@ -22212,6 +22214,13 @@ MonoBehaviour:
   EnergyConsumedText: {fileID: 919145222}
   EnergyProducedText: {fileID: 1202313545}
   GibbsFreeEnergyText: {fileID: 1464756340}
+  AuxUI: {fileID: 0}
+  AuxLabelText: {fileID: 0}
+  AuxDescriptionText: {fileID: 0}
+  AuxQIDText: {fileID: 0}
+  AuxEnergyConsumedText: {fileID: 0}
+  AuxEnergyProducedText: {fileID: 0}
+  AuxGibbsFreeEnergyText: {fileID: 0}
 --- !u!114 &1422616996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29461,6 +29470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &2034038299
 GameObject:
   m_ObjectHideFlags: 0
@@ -31791,6 +31801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &988872253906165176
 GameObject:
   m_ObjectHideFlags: 0

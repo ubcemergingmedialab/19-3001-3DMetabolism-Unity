@@ -8,6 +8,32 @@ ShaderVariantCollection:
   m_PrefabAsset: {fileID: 0}
   m_Name: NewShaderVariants
   m_Shaders:
+  - first: {fileID: 64, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: BILLBOARD_FACE_CAMERA_POS SHADOWS_DEPTH SHADOWS_SPLIT_SPHERES SOFTPARTICLES_ON
+          UNITY_HDR_ON
+        passType: 0
+  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: BILLBOARD_FACE_CAMERA_POS SOFTPARTICLES_ON UNITY_HDR_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 3457ab57b41b5c34c9704666fd5b7c33, type: 3}
+    second:
+      variants:
+      - keywords: BILLBOARD_FACE_CAMERA_POS DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH
+          SOFTPARTICLES_ON UNITY_HDR_ON
+        passType: 4
+      - keywords: INSTANCING_ON
+        passType: 8
+      - keywords: INSTANCING_ON SHADOWS_DEPTH
+        passType: 8
+      - keywords: INSTANCING_ON SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SPLIT_SPHERES
+          SOFTPARTICLES_ON UNITY_HDR_ON
+        passType: 8
   - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
     second:
       variants:
@@ -61,12 +87,6 @@ ShaderVariantCollection:
         passType: 8
       - keywords: BILLBOARD_FACE_CAMERA_POS SOFTPARTICLES_ON
         passType: 11
-  - first: {fileID: 64, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: BILLBOARD_FACE_CAMERA_POS SHADOWS_DEPTH SHADOWS_SPLIT_SPHERES SOFTPARTICLES_ON
-          UNITY_HDR_ON
-        passType: 0
   - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
     second:
       variants:
@@ -107,33 +127,6 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
-  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-      - keywords: BILLBOARD_FACE_CAMERA_POS SOFTPARTICLES_ON UNITY_HDR_ON
-        passType: 0
-  - first: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-      - keywords: BILLBOARD_FACE_CAMERA_POS SOFTPARTICLES_ON UNITY_HDR_ON
-        passType: 0
-  - first: {fileID: 4800000, guid: 3457ab57b41b5c34c9704666fd5b7c33, type: 3}
-    second:
-      variants:
-      - keywords: BILLBOARD_FACE_CAMERA_POS DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH
-          SOFTPARTICLES_ON UNITY_HDR_ON
-        passType: 4
-      - keywords: INSTANCING_ON
-        passType: 8
-      - keywords: INSTANCING_ON SHADOWS_DEPTH
-        passType: 8
-      - keywords: INSTANCING_ON SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_SPLIT_SPHERES
-          SOFTPARTICLES_ON UNITY_HDR_ON
-        passType: 8
   - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
     second:
       variants:
@@ -190,7 +183,33 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
-  - first: {fileID: 4800000, guid: 50b406436c6214c49aaaa6011b71dde8, type: 3}
+  - first: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _POINT
+        passType: 0
+      - keywords: _ADDITIONAL_LIGHTS _LIT _POINT
+        passType: 0
+      - keywords: _ADDITIONAL_LIGHTS _POINT _SIMPLELIT
+        passType: 0
+      - keywords: _DIRECTIONAL
+        passType: 0
+      - keywords: _ADDITIONAL_LIGHTS _DIRECTIONAL _LIT
+        passType: 0
+      - keywords: _ADDITIONAL_LIGHTS _DIRECTIONAL _SIMPLELIT
+        passType: 0
+      - keywords: FOG_LINEAR _FOG
+        passType: 0
+      - keywords: _CLEAR_STENCIL_PARTIAL
+        passType: 0
+  - first: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
     second:
       variants:
       - keywords: 
@@ -200,7 +219,22 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
-  - first: {fileID: 4800000, guid: a16365e8c873daa4c94919438490b905, type: 3}
+  - first: {fileID: 4800000, guid: 63eaba0ebfb82cc43bde059b4a8c65f6, type: 3}
+    second:
+      variants:
+      - keywords: _SMAA_PRESET_LOW
+        passType: 0
+  - first: {fileID: 4800000, guid: 5e7134d6e63e0bc47a1dd2669cedb379, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 2aed67ad60045d54ba3a00c91e2d2631, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1edcd131364091c46a17cbff0b1de97a, type: 3}
     second:
       variants:
       - keywords: 
@@ -209,6 +243,31 @@ ShaderVariantCollection:
     second:
       variants:
       - keywords: _GENERIC
+        passType: 0
+  - first: {fileID: 4800000, guid: 5f1864addb451f54bae8c86d230f736e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c49e63ed1bbcb334780a3bd19dfed403, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 4431b1f1f743fbf4eb310a967890cbea, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d5a307c014552314b9f560906d708772, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: a16365e8c873daa4c94919438490b905, type: 3}
+    second:
+      variants:
+      - keywords: 
         passType: 0
   - first: {fileID: 4800000, guid: 02e071f10b6a15d4d87dac88ce529302, type: 3}
     second:
@@ -226,11 +285,6 @@ ShaderVariantCollection:
     second:
       variants:
       - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 63eaba0ebfb82cc43bde059b4a8c65f6, type: 3}
-    second:
-      variants:
-      - keywords: _SMAA_PRESET_LOW
         passType: 0
   - first: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
     second:
@@ -258,16 +312,6 @@ ShaderVariantCollection:
         passType: 0
       - keywords: 
         passType: 13
-  - first: {fileID: 4800000, guid: 4431b1f1f743fbf4eb310a967890cbea, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: c49e63ed1bbcb334780a3bd19dfed403, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
     second:
       variants:
@@ -287,11 +331,6 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
-  - first: {fileID: 4800000, guid: d5a307c014552314b9f560906d708772, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: e507fdfead5ca47e8b9a768b51c291a1, type: 3}
     second:
       variants:
@@ -299,11 +338,6 @@ ShaderVariantCollection:
         passType: 0
       - keywords: 
         passType: 13
-  - first: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: f6783ab646d374f94b199774402a5144, type: 3}
     second:
       variants:
@@ -367,42 +401,11 @@ ShaderVariantCollection:
         passType: 13
       - keywords: LOD_FADE_PERCENTAGE _WINDQUALITY_NONE
         passType: 13
-  - first: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-      - keywords: _POINT
-        passType: 0
-      - keywords: _ADDITIONAL_LIGHTS _LIT _POINT
-        passType: 0
-      - keywords: _ADDITIONAL_LIGHTS _POINT _SIMPLELIT
-        passType: 0
-      - keywords: _DIRECTIONAL
-        passType: 0
-      - keywords: _ADDITIONAL_LIGHTS _DIRECTIONAL _LIT
-        passType: 0
-      - keywords: _ADDITIONAL_LIGHTS _DIRECTIONAL _SIMPLELIT
-        passType: 0
-      - keywords: FOG_LINEAR _FOG
-        passType: 0
-      - keywords: _CLEAR_STENCIL_PARTIAL
-        passType: 0
   - first: {fileID: 4800000, guid: 0a7e590f3cf1d4ee8a8fab5b6eff09ef, type: 3}
     second:
       variants:
       - keywords: 
         passType: 13
-  - first: {fileID: 4800000, guid: 2aed67ad60045d54ba3a00c91e2d2631, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: da07703fcc09f8d4799221050659bd55, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: 0ca6dca7396eb48e5849247ffd444914, type: 3}
     second:
       variants:
@@ -410,11 +413,6 @@ ShaderVariantCollection:
         passType: 11
       - keywords: 
         passType: 13
-  - first: {fileID: 4800000, guid: 5caf62d8bd7c44596ace77ef9eb8ea31, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: 0d0f817524897904ba47a6a1d55e7668, type: 3}
     second:
       variants:
@@ -434,16 +432,6 @@ ShaderVariantCollection:
         passType: 11
       - keywords: 
         passType: 13
-  - first: {fileID: 4800000, guid: 1edcd131364091c46a17cbff0b1de97a, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 5e7134d6e63e0bc47a1dd2669cedb379, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: 5ec81c81908db34429b4f6ddecadd3bd, type: 3}
     second:
       variants:
@@ -476,18 +464,30 @@ ShaderVariantCollection:
         passType: 13
       - keywords: GEOM_TYPE_BRANCH LOD_FADE_PERCENTAGE
         passType: 13
-  - first: {fileID: 4800000, guid: 5f1864addb451f54bae8c86d230f736e, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
-  - first: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
-    second:
-      variants:
-      - keywords: 
-        passType: 0
   - first: {fileID: 4800000, guid: 8fbe92a9edfe6074e841d6dd1509bc59, type: 3}
     second:
       variants:
       - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 50b406436c6214c49aaaa6011b71dde8, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: da07703fcc09f8d4799221050659bd55, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5caf62d8bd7c44596ace77ef9eb8ea31, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: BILLBOARD_FACE_CAMERA_POS SOFTPARTICLES_ON UNITY_HDR_ON
         passType: 0

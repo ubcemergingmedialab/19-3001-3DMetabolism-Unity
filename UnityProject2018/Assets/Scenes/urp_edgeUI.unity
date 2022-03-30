@@ -9237,6 +9237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &510586544
 GameObject:
   m_ObjectHideFlags: 0
@@ -14451,6 +14452,16 @@ MonoBehaviour:
   LabelText: {fileID: 1701939714}
   DescriptionText: {fileID: 282749575}
   QIDText: {fileID: 670407265}
+  EnergyConsumedText: {fileID: 0}
+  EnergyProducedText: {fileID: 0}
+  GibbsFreeEnergyText: {fileID: 0}
+  AuxUI: {fileID: 0}
+  AuxLabelText: {fileID: 0}
+  AuxDescriptionText: {fileID: 0}
+  AuxQIDText: {fileID: 0}
+  AuxEnergyConsumedText: {fileID: 0}
+  AuxEnergyProducedText: {fileID: 0}
+  AuxGibbsFreeEnergyText: {fileID: 0}
 --- !u!114 &939341218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14480,7 +14491,12 @@ MonoBehaviour:
   LabelText: {fileID: 1701939714}
   DescriptionText: {fileID: 282749575}
   QIDText: {fileID: 670407265}
+  ChargeText: {fileID: 0}
+  EnergyConsumedText: {fileID: 0}
+  EnergyProducedText: {fileID: 0}
   GibbsFreeEnergyText: {fileID: 0}
+  MolecularFormulaText: {fileID: 0}
+  IUPACNamesText: {fileID: 0}
 --- !u!1 &955898002
 GameObject:
   m_ObjectHideFlags: 0
@@ -15686,6 +15702,10 @@ MonoBehaviour:
   LabelText: {fileID: 95167857}
   DescriptionText: {fileID: 1198535357}
   QIDText: {fileID: 929229689}
+  ChargeText: {fileID: 0}
+  MolecularFormulaText: {fileID: 0}
+  IUPACNamesText: {fileID: 0}
+  LinkButton: {fileID: 0}
 --- !u!114 &1038469914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15702,7 +15722,12 @@ MonoBehaviour:
   LabelText: {fileID: 95167857}
   DescriptionText: {fileID: 1198535357}
   QIDText: {fileID: 929229689}
+  ChargeText: {fileID: 0}
+  EnergyConsumedText: {fileID: 0}
+  EnergyProducedText: {fileID: 0}
   GibbsFreeEnergyText: {fileID: 0}
+  MolecularFormulaText: {fileID: 0}
+  IUPACNamesText: {fileID: 0}
 --- !u!114 &1038469915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17162,6 +17187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeUIElement: {fileID: 1038469913}
   EdgeUIElement: {fileID: 939341217}
+  PathwayUIElement: {fileID: 0}
   Panel: {fileID: 1038469911}
 --- !u!114 &1202353067
 MonoBehaviour:
@@ -19736,6 +19762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &1335912481
 GameObject:
   m_ObjectHideFlags: 0
@@ -27761,6 +27788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &2034038299
 GameObject:
   m_ObjectHideFlags: 0
@@ -30012,6 +30040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &988872253906165176
 GameObject:
   m_ObjectHideFlags: 0

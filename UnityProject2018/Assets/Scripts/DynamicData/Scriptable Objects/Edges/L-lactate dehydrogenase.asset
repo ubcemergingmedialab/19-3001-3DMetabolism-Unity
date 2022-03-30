@@ -19,6 +19,9 @@ MonoBehaviour:
   EnergyConsumed: NAD+ -> NADH
   EnergyProduced: Lactate Dehydrogenase
   GibbsFreeEnergy: -25.1 kJ/mol
+  reactants: []
+  products: []
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

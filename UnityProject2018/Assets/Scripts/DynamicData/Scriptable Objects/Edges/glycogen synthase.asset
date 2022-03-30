@@ -15,3 +15,20 @@ MonoBehaviour:
   Label: 
   Position: {x: 0, y: 0, z: 0}
   QID: 
+  Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: 8569a281a2b64d6469cae4369f7f508e, type: 2}
+  - {fileID: 11400000, guid: b98d04f5c691b0f46b98b799a9b7e41d, type: 2}
+  products:
+  - {fileID: 11400000, guid: eb29a35137af1d34ab235b7697babd02, type: 2}
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

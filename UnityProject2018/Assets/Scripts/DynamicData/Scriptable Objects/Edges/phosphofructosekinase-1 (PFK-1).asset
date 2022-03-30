@@ -19,6 +19,11 @@ MonoBehaviour:
   EnergyConsumed: ATP -> ADP
   EnergyProduced: Phosphofructosekinase-1
   GibbsFreeEnergy: 14.2 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: 359634eb8dc3f8d4b9d4c233f022a108, type: 2}
+  products:
+  - {fileID: 11400000, guid: fc4ba2e8a7aada1459aef358d2e3020b, type: 2}
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

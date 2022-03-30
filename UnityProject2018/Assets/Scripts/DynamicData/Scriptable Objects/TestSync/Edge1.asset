@@ -15,3 +15,17 @@ MonoBehaviour:
   Label: edge_1
   Position: {x: 0, y: 0, z: 0}
   QID: 50293158
+  Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants: []
+  products: []
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 
