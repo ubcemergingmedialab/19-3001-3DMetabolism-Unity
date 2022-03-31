@@ -1,63 +1,958 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
-	<head>
-		<variable name='c'/>
-	</head>
-	<results>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q290</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q294</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q611</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q612</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q613</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q614</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q615</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q616</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q617</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q618</uri>
-			</binding>
-		</result>
-		<result>
-			<binding name='c'>
-				<uri>http://wikibase-3dm.eml.ubc.ca/entity/Q619</uri>
-			</binding>
-		</result>
-	</results>
-</sparql>
+{
+  "head" : {
+    "vars" : [ "prefixedEdge", "edgeQID", "prefixedMetabolite", "metaboliteQID", "edgeLabel", "metaboliteLabel", "isReactant", "isProduct", "prefixedEnzyme", "enzymeQID", "enzymeLabel" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q616"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q345"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q23"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "dihydroxyacetone phosphate + glyceraldehyde 3-phosphate <=> fructose 1,6-bisphosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "beta-D-fructofuranose 6-phosphate(2-)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "aldolase tetramer [cytosol]"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q616"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q345"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q23"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q612"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q16"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q54"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "2-phosphoglycerate <=> 3-phosphoglycerate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "3-phosphoglycerate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoglycerate mutase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q612"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q16"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q54"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q290"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q60"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q132"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Pyruvate + CO2 + ATP => ADP + Orthophosphate + Oxaloacetate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "pyruvate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "pyruvate carboxylase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q290"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q60"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q132"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q615"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q33"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q62"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate <=> dihydroxyacetone phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "triose phosphate isomerase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q615"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q33"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q62"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q611"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q58"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q35"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate + H2O <=> 2-phosphoglycerate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "enolase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q611"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q58"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q35"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q613"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q17"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q55"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ATP + 3-phosphoglycerate <=> ADP + 1,3-bisphosphoglycerate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "1,3-bisphosphoglycerate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoglycerate kinase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q613"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q17"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q55"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q616"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q44"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q23"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "dihydroxyacetone phosphate + glyceraldehyde 3-phosphate <=> fructose 1,6-bisphosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "dihydroxyacetone phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "aldolase tetramer [cytosol]"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q616"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q44"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q23"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q294"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q124"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q127"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate + GTP => phosphoenolpyruvate + GDP + CO2 [cytosol]"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate carboxykinase (cytosol)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q294"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q124"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q127"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q614"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q33"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q38"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "1,3-bisphosphoglycerate + NADH + H+ <=> glyceraldehyde 3-phosphate + orthophosphate + NAD+"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate dehydrogenase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q614"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q33"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q38"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q290"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q124"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q132"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Pyruvate + CO2 + ATP => ADP + Orthophosphate + Oxaloacetate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "pyruvate carboxylase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q290"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q124"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q132"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q616"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q33"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q23"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "dihydroxyacetone phosphate + glyceraldehyde 3-phosphate <=> fructose 1,6-bisphosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "aldolase tetramer [cytosol]"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q616"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q33"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q23"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q613"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q16"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q55"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ATP + 3-phosphoglycerate <=> ADP + 1,3-bisphosphoglycerate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "3-phosphoglycerate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoglycerate kinase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q613"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q16"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q55"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q614"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q16"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q38"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "1,3-bisphosphoglycerate + NADH + H+ <=> glyceraldehyde 3-phosphate + orthophosphate + NAD+"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "3-phosphoglycerate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate dehydrogenase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q614"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q16"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q38"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q618"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q28"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q309"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose 6-phosphate <=> glucose 6-phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose 6-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphohexose isomerase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q618"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q28"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q309"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q618"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q24"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q309"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose 6-phosphate <=> glucose 6-phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose 6-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphohexose isomerase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q618"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q24"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q309"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q294"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q58"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q127"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate + GTP => phosphoenolpyruvate + GDP + CO2 [cytosol]"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate carboxykinase (cytosol)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q294"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q58"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q127"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q612"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q15"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q54"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "2-phosphoglycerate <=> 3-phosphoglycerate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "2-phosphoglycerate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoglycerate mutase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q612"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q15"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q54"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q615"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q44"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q62"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde 3-phosphate <=> dihydroxyacetone phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "dihydroxyacetone phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "triose phosphate isomerase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q615"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q44"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q62"
+      }
+    }, {
+      "prefixedEdge" : {
+        "type" : "literal",
+        "value" : "foaf:Q611"
+      },
+      "prefixedMetabolite" : {
+        "type" : "literal",
+        "value" : "foaf:Q15"
+      },
+      "prefixedEnzyme" : {
+        "type" : "literal",
+        "value" : "foaf:Q35"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate + H2O <=> 2-phosphoglycerate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "2-phosphoglycerate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "enolase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q611"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q15"
+      },
+      "enzymeQID" : {
+        "type" : "literal",
+        "value" : "Q35"
+      }
+    } ]
+  }
+}
