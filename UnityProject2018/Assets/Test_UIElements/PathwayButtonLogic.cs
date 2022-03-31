@@ -14,6 +14,7 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
     public Sprite clickYellow;
 
     public PathwaySO pathwaySO;
+    public Card dataSO;
 
     Image image;
 
@@ -24,9 +25,21 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
         button.onClick.AddListener(() => {
             AlertHighlightSystem(pathwaySO);
             OnClickColourChange(FindPathwayState(pathwaySO));
+            UpdateUI();
             ButtonFactory.Instance.UpdateAllButtonOnClick();
         });
 
+    }
+
+
+    public void UpdateUI()
+    {
+        dataSO.Label = pathwaySO.Label;
+        dataSO.QID = pathwaySO.QID;
+        dataSO.Description = pathwaySO.Description;
+        if (UIPresenter.UIList.PathwayUI != null)
+            UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.PathwayUI, false);
+        else Debug.Log("Error in calling PathwayUI list");
     }
 
     void AlertHighlightSystem(PathwaySO pathway)

@@ -48,12 +48,17 @@ public class CompoundController : MonoBehaviour
         bondObj.layer = 5; // UI Layer
         GameObject bond = (GameObject)Instantiate(bondObj, position, Quaternion.identity);
         bond.transform.SetParent(transform, false);
-        bond.transform.up = offset;
+        bond.transform.up = transform.localToWorldMatrix * offset;
         bond.transform.localScale = scale;
     }
 
     // Follow Object.Instantiate() format as closely as possible.
-    public IEnumerator loadCompound(int compoundCID, Vector3 compoundPosition = default(Vector3), Quaternion compoundRotation = default(Quaternion), Transform compoundParent = null) { 
+    public IEnumerator loadCompound(int compoundCID, Vector3 compoundPosition = default(Vector3), Quaternion compoundRotation = default(Quaternion), Transform compoundParent = null) {
+        //if there are any, delete children before adding another compound
+        foreach (Transform child in transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         string jsonURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/" + compoundCID + "/record/JSON/?record_type=3d&response_type=display";
         string compoundJSON = ""; 
         // Get JSON

@@ -30,6 +30,8 @@ public class ButtonFactory : MonoBehaviour
     public static float buttonYOffset = -50;
     public float buttonY = 400;
 
+    public Card dataSO;
+
     Dictionary<GameObject, PathwaySO> buttons = new Dictionary<GameObject, PathwaySO>();
 
 
@@ -63,6 +65,7 @@ public class ButtonFactory : MonoBehaviour
         GameObject generated = GenerateButtonAndSetPosition();
         SetButtonTextFromPathway(pathway, generated);
         generated.GetComponent<PathwayButtonLogic>().pathwaySO = pathway;
+        generated.GetComponent<PathwayButtonLogic>().dataSO = dataSO;
         return generated;
     }
 

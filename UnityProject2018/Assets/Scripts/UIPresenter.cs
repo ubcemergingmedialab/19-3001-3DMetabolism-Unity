@@ -59,7 +59,7 @@ public class UIPresenter : MonoBehaviour
         }
     }
 
-    public void NotifyUIUpdate(UIList el, bool displayPartner)
+    public void NotifyUIUpdate(UIList el, bool displayPartner = false)
     {
         UIElement element;
         if(AvailableElements.TryGetValue(el, out element))
