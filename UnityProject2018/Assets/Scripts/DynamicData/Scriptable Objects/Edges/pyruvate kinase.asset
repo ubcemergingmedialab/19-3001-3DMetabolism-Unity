@@ -20,6 +20,11 @@ MonoBehaviour:
   EnergyConsumed: ADP -> ATP
   EnergyProduced: Pyruvate Kinase
   GibbsFreeEnergy: -31.4 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: ad6444ff95a17344dbe95cabc1c9e56a, type: 2}
+  products:
+  - {fileID: 11400000, guid: 1327f9c61661d3e46b67decbb1edc5d0, type: 2}
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

@@ -20,6 +20,12 @@ MonoBehaviour:
   EnergyConsumed: None
   EnergyProduced: Aldolase
   GibbsFreeEnergy: 23.8 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: fc4ba2e8a7aada1459aef358d2e3020b, type: 2}
+  products:
+  - {fileID: 11400000, guid: e8eb7518eddb72a47a32ee68214b2ba5, type: 2}
+  - {fileID: 11400000, guid: 5fa03321ff118b34bb6c5c9388fe98a0, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

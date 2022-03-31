@@ -19,6 +19,11 @@ MonoBehaviour:
   EnergyConsumed: None
   EnergyProduced: Fumarase
   GibbsFreeEnergy: -3.8
+  reactants:
+  - {fileID: 11400000, guid: 153b096fe8d60e64daa248a244de3c9e, type: 2}
+  products:
+  - {fileID: 11400000, guid: 7cf6d0a1e484df04f9307b43b536cc09, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

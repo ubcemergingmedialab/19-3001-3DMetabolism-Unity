@@ -20,6 +20,11 @@ MonoBehaviour:
   EnergyConsumed: "NAD\u207A \u21CC NADH"
   EnergyProduced: "\u03B1-ketoglutarate dehydrogenase complex"
   GibbsFreeEnergy: -33.5 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: fa9c124ea84845547b60bf1006d70072, type: 2}
+  products:
+  - {fileID: 11400000, guid: 3b99ed93dded31b4f9ca253b167fefb4, type: 2}
+  bidirectional: 1
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 

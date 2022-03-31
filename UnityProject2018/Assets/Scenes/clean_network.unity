@@ -8399,6 +8399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &510586544
 GameObject:
   m_ObjectHideFlags: 0
@@ -17534,6 +17535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &1335912481
 GameObject:
   m_ObjectHideFlags: 0
@@ -25454,6 +25456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &2034038299
 GameObject:
   m_ObjectHideFlags: 0
@@ -27630,6 +27633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &988872253906165176
 GameObject:
   m_ObjectHideFlags: 0

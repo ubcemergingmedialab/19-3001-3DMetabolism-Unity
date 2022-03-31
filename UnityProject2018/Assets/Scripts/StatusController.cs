@@ -71,7 +71,7 @@ public class StatusController : MonoBehaviour
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
 
-            foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every node in this pathway
+            foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
 
                 foreach(GameObject node in nodes) {

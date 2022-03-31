@@ -9569,6 +9569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &510288439
 GameObject:
   m_ObjectHideFlags: 0
@@ -17636,7 +17637,7 @@ MonoBehaviour:
   DescriptionText: {fileID: 1198535357}
   QIDText: {fileID: 929229689}
   ChargeText: {fileID: 1032467344}
-  MolecularFormulaText: {fileID: 666868416}
+  MolecularFormulaText: {fileID: 0}
   IUPACNamesText: {fileID: 789056963}
   LinkButton: {fileID: 93318057}
 --- !u!114 &1038469916
@@ -22126,6 +22127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &1335912481
 GameObject:
   m_ObjectHideFlags: 0
@@ -31429,6 +31431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &2034038299
 GameObject:
   m_ObjectHideFlags: 0
@@ -33779,6 +33782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTime: 1
   moveSplit: 100
+  objectIsTargetFocus: 1
 --- !u!1 &988872253906165176
 GameObject:
   m_ObjectHideFlags: 0

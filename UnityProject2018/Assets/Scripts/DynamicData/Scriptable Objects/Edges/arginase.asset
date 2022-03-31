@@ -14,5 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: arginase
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q639
   Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: 65a3e4494978ed644b86279eeabf74ef, type: 2}
+  products:
+  - {fileID: 11400000, guid: e7fc361020b038943adc617d96fc18ee, type: 2}
+  - {fileID: 11400000, guid: 286bdcb8f6cd4c042975bf6ff9b42909, type: 2}
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

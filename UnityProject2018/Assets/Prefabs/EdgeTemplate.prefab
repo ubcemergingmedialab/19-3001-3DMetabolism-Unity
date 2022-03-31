@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   edgeData: {fileID: 0}
+  partnerData: {fileID: 0}
   DisplayData: {fileID: 11400000, guid: e36f392e84671cc409441dfbc2295b25, type: 2}
 --- !u!114 &5551214974539225720
 MonoBehaviour:

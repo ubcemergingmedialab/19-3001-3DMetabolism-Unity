@@ -12,6 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
   m_Name: phosphoenolpyruvate carboxykinase (mitochondrion)
   m_EditorClassIdentifier: 
-  Label: 
+  Label: oxaloacetate + GTP => phosphoenolpyruvate + GDP + CO2
   Position: {x: 0, y: 0, z: 0}
-  QID: 
+  QID: Q610
+  Description: 
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants:
+  - {fileID: 11400000, guid: c54ae7e47866a504a9bafa11c78aafe3, type: 2}
+  products:
+  - {fileID: 11400000, guid: bd869fcfa8ca6044492ed4a34079ad54, type: 2}
+  bidirectional: 0
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 

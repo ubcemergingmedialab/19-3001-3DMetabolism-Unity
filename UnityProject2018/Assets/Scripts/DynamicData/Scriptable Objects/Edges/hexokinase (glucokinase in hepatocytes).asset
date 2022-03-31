@@ -19,6 +19,11 @@ MonoBehaviour:
   EnergyConsumed: ATP -> ADP
   EnergyProduced: Hexokinase
   GibbsFreeEnergy: -16.7 kJ/mol
+  reactants:
+  - {fileID: 11400000, guid: 75c2b64492ba72243b05ff4d85746e7c, type: 2}
+  products:
+  - {fileID: 11400000, guid: 09646f28890776246a273845236fdf8b, type: 2}
+  bidirectional: 0
   AuxLabel: 
   AuxPosition: {x: 0, y: 0, z: 0}
   AuxQID: 
