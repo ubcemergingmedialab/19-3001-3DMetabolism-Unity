@@ -6,13 +6,14 @@ using System.IO;
 using UnityEngine.Networking;
 
 
-public class QueryToUnity : MonoBehaviour 
+public class QueryService : MonoBehaviour 
 {
 
 static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
+static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
 
-string ResourceFolderPath = "Assets/Resources/Data/TestQuerySO/";
+string ResourceFolderPath = "Assets/Resources/Data/QuerySO/";
 
  void Start() {
     
@@ -39,8 +40,12 @@ public void EdgeSOInit(WikibaseBinding item){
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
 // in case the edge doesnt exists, call EdgeSOInit to create the edge. 
 public void NodeSOInit(WikibaseBinding item){
+
     NodeSO currentNode;
     EdgeSO currentEdge;
+    PathwaySO currentPathway;
+
+
     if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
         
         string newPath = ResourceFolderPath + item.metaboliteLabel.value + ".asset";
@@ -51,7 +56,8 @@ public void NodeSOInit(WikibaseBinding item){
     }else{
         NodeSOs.TryGetValue(item.metaboliteLabel.value, out currentNode);
     }
-    
+
+    // Creating the edge and adding the node as product/reactant
     if (!(EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge))){
         EdgeSOInit(item);
         EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
@@ -62,6 +68,24 @@ public void NodeSOInit(WikibaseBinding item){
         currentEdge.AddReactant(currentNode);   
     }
     
+    if (!(PathwaySOs.TryGetValue(item.pathwayLabel.value, out currentPathway))){
+        PathwaySOInit(item);
+        PathwaySOs.TryGetValue(item.pathwayLabel.value, out currentPathway);
+    }
+    currentPathway.AddNodeToPathway(currentNode);
+    currentPathway.AddEdgeToPathway(currentNode,currentEdge);
+    
+}
+
+public void PathwaySOInit(WikibaseBinding item){
+    if (!(PathwaySOs.ContainsKey(item.pathwayLabel.value))){
+        PathwaySO pathway = ScriptableObject.CreateInstance<PathwaySO>();
+        pathway.init(item.pathwayLabel.value,item.pathwayQID.value);
+        string newPath = ResourceFolderPath + item.pathwayLabel.value + ".asset";
+        AssetDatabase.CreateAsset(pathway,newPath);
+        PathwaySOs.Add(item.pathwayLabel.value,pathway);
+    }
+
 }
 
 // empties the dictionaries holding the scriptable objects
@@ -69,7 +93,7 @@ public async void ClearQueryData(){
     NodeSOs.Clear();
     EdgeSOs.Clear();
 
-    DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Data/TestQuerySO/");
+    DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Data/QuerySO/");
     int i = 0;
     foreach(FileInfo fi in dir.GetFiles())
     {
