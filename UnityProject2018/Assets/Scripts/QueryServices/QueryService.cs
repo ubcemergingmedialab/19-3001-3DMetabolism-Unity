@@ -11,7 +11,7 @@ public class QueryService : MonoBehaviour
 
 static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
-static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
+public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
 
 string ResourceFolderPath = "Assets/Resources/Data/QuerySO/";
 

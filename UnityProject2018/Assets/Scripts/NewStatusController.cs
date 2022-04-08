@@ -17,14 +17,14 @@ using UnityEngine;
             - intialize a highlightPathway per pathwaySO ( dict<PWSO, HighlightPAthway>)
 
 */
-public class StatusController : MonoBehaviour
+public class NewStatusController : MonoBehaviour
 {
-    //SINGELTON
-    private static StatusController _instance;
-    public static StatusController Instance
-    {
-        get { return _instance; }
-    }
+    // //SINGELTON
+    // private static StatusController _instance;
+    // public static StatusController Instance
+    // {
+    //     get { return _instance; }
+    // }
 
     //fields
     private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways;     // key = nodes/edges , entry = list of pathways connected to it
@@ -45,21 +45,22 @@ public class StatusController : MonoBehaviour
     */
     void Awake() 
     {
-        if (_instance != null && _instance != this) 
-            {
-                Destroy(this.gameObject);
-                return;
-            }
-        _instance = this;   
-        DontDestroyOnLoad(this.gameObject);
+        // if (_instance != null && _instance != this) 
+        //     {
+        //         Destroy(this.gameObject);
+        //         return;
+        //     }
+        // _instance = this;   
+        // DontDestroyOnLoad(this.gameObject);
 
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
-
-        // Send the list of active pathways to the button factory singleton instance
-        //ButtonFactory.Instance.ActivePathways = activePathways;
+       
+        foreach(KeyValuePair<string,PathwaySO> pair in QueryService.PathwaySOs){
+            activePathways.Add(pair.Value);
+        }
 
 
         // <> fill the elements network 
@@ -71,7 +72,7 @@ public class StatusController : MonoBehaviour
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
 
-            foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every nodeSO in this pathway
+            foreach(NodeSO nodeSO in pathwaySO.LocalNetwork.Keys) {                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
 
                 foreach(GameObject node in nodes) {
@@ -87,8 +88,14 @@ public class StatusController : MonoBehaviour
                     }
                 }
             }
+            List<EdgeSO> edgesInPathway = new List<EdgeSO>();
+            foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
+                edgesInPathway.Add(pair.Value);
+            }
+            
+            
 
-            foreach(EdgeSO edgeSO in pathwaySO.edges) {                                                             // For every edge in this pathway (same proccess as nodes)
+            foreach(EdgeSO edgeSO in edgesInPathway) {                                                             // For every edge in this pathway (same proccess as nodes)
                 GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
 
                 foreach(GameObject edge in edges){
@@ -106,12 +113,6 @@ public class StatusController : MonoBehaviour
             }
         }
         
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {   
-
     }
 
     // Update is called once per frame
@@ -209,43 +210,4 @@ public class StatusController : MonoBehaviour
         return value;
     }
 
-// function for manually testing the higlhight pipeline with num keys activating pathways in the pathway list
-    private void PipelineTest(){
-        //0
-        if (Input.GetKeyDown(KeyCode.Alpha0)) {
-        num = 0;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //1
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-        num = 1;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //2
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
-        num = 2;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //3
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
-        num = 3;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //4
-        if (Input.GetKeyDown(KeyCode.Alpha4)) {
-        num = 4;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //5
-        if (Input.GetKeyDown(KeyCode.Alpha5)) {
-        num = 5;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //6
-        if (Input.GetKeyDown(KeyCode.Alpha6)) {
-        num = 6;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-
-    }
 }
