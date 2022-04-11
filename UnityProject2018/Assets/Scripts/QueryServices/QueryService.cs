@@ -29,7 +29,7 @@ public void EdgeSOInit(WikibaseBinding item){
             direction = true;
         }
         Debug.Log(item.isBidirectional.value + " direction var = " + direction);
-        edge.init(item.edgeLabel.value,item.edgeQID.value,direction);
+        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,direction);
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
@@ -50,7 +50,7 @@ public void NodeSOInit(WikibaseBinding item){
         
         string newPath = ResourceFolderPath + item.metaboliteLabel.value + ".asset";
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
-        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value);
+        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value);
         NodeSOs.Add(item.metaboliteLabel.value,currentNode);
         AssetDatabase.CreateAsset(currentNode,newPath);
     }else{
@@ -80,7 +80,7 @@ public void NodeSOInit(WikibaseBinding item){
 public void PathwaySOInit(WikibaseBinding item){
     if (!(PathwaySOs.ContainsKey(item.pathwayLabel.value))){
         PathwaySO pathway = ScriptableObject.CreateInstance<PathwaySO>();
-        pathway.init(item.pathwayLabel.value,item.pathwayQID.value);
+        pathway.init(item.pathwayLabel.value,item.pathwayQID.value,item.pathwayDesc.value);
         string newPath = ResourceFolderPath + item.pathwayLabel.value + ".asset";
         AssetDatabase.CreateAsset(pathway,newPath);
         PathwaySOs.Add(item.pathwayLabel.value,pathway);

@@ -18,12 +18,15 @@ public class QueryCustomEditor : EditorWindow
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
         "(strafter(?prefixedEnzyme,\":\") as ?enzymeQID) " +
         "?edgeLabel ?metaboliteLabel ?isBidirectional ?isReactant ?isProduct "+
-        "?enzymeLabel where {";
+        "?enzymeLabel ?pathwayDesc ?edgeDesc ?metaboliteDesc where {";
     public static string queryRawSecond = " p:P4 ?edgeStatement." +
+        "?pathway schema:description ?pathwayDesc."+
         "?edgeStatement ps:P4 ?edge." +
         "?edge p:P4 ?statement." +
+        "?edge schema:description ?edgeDesc." +
         "?edge wdt:P14 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
+        "?metabolite schema:description ?metaboliteDesc." +
         "?statement pq:P31|pq:P32 ?edge." +
         "BIND(REPLACE(STR(?pathway), STR(foaf:), \"foaf:\") AS ?prefixedPathway) " +
         "BIND(replace(str(?edge), str(foaf:), \"foaf:\") as ?prefixedEdge)" +
@@ -85,6 +88,12 @@ public class QueryCustomEditor : EditorWindow
         if (GUILayout.Button("delete current scriptable objects"))
         {
             GameObject.Find("QueryService").GetComponent<QueryService>().ClearQueryData();
+        }
+
+        if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
+        {
+            PrefabService prefabService = new PrefabService();
+            prefabService.PrefabAssignment();
         }
         
     }

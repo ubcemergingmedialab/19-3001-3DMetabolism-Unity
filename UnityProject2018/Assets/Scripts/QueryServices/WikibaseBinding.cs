@@ -16,6 +16,9 @@ public class WikibaseBinding
     public WikibaseBindingElement pathwayLabel;
     public WikibaseBindingElement isBidirectional;
     public WikibaseBindingElement enzymeLabel;
+    public WikibaseBindingElement pathwayDesc;
+    public WikibaseBindingElement edgeDesc;
+    public WikibaseBindingElement metaboliteDesc;
     public WikibaseBindingElement isReactant;
     public WikibaseBindingElement isProduct;
     public WikibaseBindingElement edgeQID;

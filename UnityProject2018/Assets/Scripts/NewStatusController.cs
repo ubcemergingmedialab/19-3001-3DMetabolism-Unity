@@ -90,7 +90,7 @@ public class NewStatusController : MonoBehaviour
             }
             List<EdgeSO> edgesInPathway = new List<EdgeSO>();
             foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
-                edgesInPathway.Add(pair.Value);
+                edgesInPathway.AddRange(pair.Value);
             }
             
             
@@ -117,9 +117,7 @@ public class NewStatusController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        PipelineTest();             // for manual testing of the highlight functionality
-        
+    {           
     }
 
     // Given a PathwaySO and State, find the HighlightPathway Instance of the Pathway and calls Set<state>() for said pathway. 
