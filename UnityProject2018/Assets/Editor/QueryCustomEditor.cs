@@ -6,24 +6,29 @@ using System.Collections.Generic;
 using System.IO;
 
 //[CustomEditor(typeof(QueryEditor))]
-public class QueryEditor : EditorWindow
+public class QueryCustomEditor : EditorWindow
 {
 
     string targetPathwayQID = "Here";
     public static string WQS = "http://wikibase-3dm.eml.ubc.ca:8282/proxy/wdqs/bigdata/namespace/wdq/sparql?format=json&query=";
     public static string queryRawFirst = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " +
         "select distinct " +
-        "?pathwayLabel (strafter(?prefixedEdge,\":\") as ?edgeQID) " +
+        "?pathwayLabel (STRAFTER(?prefixedPathway, \":\") AS ?pathwayQID) "+
+        "(strafter(?prefixedEdge,\":\") as ?edgeQID) " +
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
         "(strafter(?prefixedEnzyme,\":\") as ?enzymeQID) " +
         "?edgeLabel ?metaboliteLabel ?isBidirectional ?isReactant ?isProduct "+
-        "?enzymeLabel where {";
+        "?enzymeLabel ?pathwayDesc ?edgeDesc ?metaboliteDesc where {";
     public static string queryRawSecond = " p:P4 ?edgeStatement." +
+        "?pathway schema:description ?pathwayDesc."+
         "?edgeStatement ps:P4 ?edge." +
         "?edge p:P4 ?statement." +
+        "?edge schema:description ?edgeDesc." +
         "?edge wdt:P14 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
+        "?metabolite schema:description ?metaboliteDesc." +
         "?statement pq:P31|pq:P32 ?edge." +
+        "BIND(REPLACE(STR(?pathway), STR(foaf:), \"foaf:\") AS ?prefixedPathway) " +
         "BIND(replace(str(?edge), str(foaf:), \"foaf:\") as ?prefixedEdge)" +
         "BIND(replace(str(?metabolite), str(foaf:), \"foaf:\") as ?prefixedMetabolite)" +
         "BIND(replace(str(?enzyme), str(foaf:), \"foaf:\") as ?prefixedEnzyme)"+
@@ -56,14 +61,14 @@ public class QueryEditor : EditorWindow
     [MenuItem("Window/QueryService")]
     public static void ShowWindow ()
     {
-        GetWindow<QueryEditor>("Query Service");
+        GetWindow<QueryCustomEditor>("Query Service");
     }
 
     void OnGUI ()
     {   
         string temp;
         GUILayout.Label("Query to Unity", EditorStyles.boldLabel);
-        GUILayout.Label("Put  \"ALL\" to query all pathways");
+        GUILayout.Label("Put  \"ALL\" to query all pathways \n currently only work with ALL");
         targetPathwayQID = EditorGUILayout.TextField("Target pathway QID:",targetPathwayQID);
         
         if(targetPathwayQID == "ALL"){
@@ -77,12 +82,18 @@ public class QueryEditor : EditorWindow
         { 
             string qRawFull = queryRawFirst + temp + queryRawSecond ;
 
-            GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().RunQuery(WQS,qRawFull);
+            GameObject.Find("QueryService").GetComponent<QueryService>().RunQuery(WQS,qRawFull);
         }
   
         if (GUILayout.Button("delete current scriptable objects"))
         {
-            GameObject.Find("PathwayMock").GetComponent<QueryToUnity>().ClearQueryData();
+            GameObject.Find("QueryService").GetComponent<QueryService>().ClearQueryData();
+        }
+
+        if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
+        {
+            PrefabService prefabService = new PrefabService();
+            prefabService.PrefabAssignment();
         }
         
     }

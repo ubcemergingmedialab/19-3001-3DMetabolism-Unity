@@ -13,13 +13,15 @@ public class PathwaySO : ScriptableObject
     // Note: How to manage edges if there is the connections are dealt with in nodes? we need edges for highlighting 
     public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork;
 
-    public void init(string name){
+    public void init(string name, string qid, string desc){
 
         this.name = name;
         this.Label = name;
+        this.QID = qid;
+        this.Description = desc;
         
         LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>();
-        MakePathway();
+        //MakePathway();
     }
 
     // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
