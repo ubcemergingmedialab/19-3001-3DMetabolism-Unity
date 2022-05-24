@@ -29,7 +29,7 @@ public class NodeDataDisplay : MonoBehaviour
         if(nodeData != null)
         {
             Vector3 localPosition = labelText.transform.localPosition;
-            labelText.SetText("<mark=#00000088><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
             //Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
             //labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
         }
@@ -39,7 +39,7 @@ public class NodeDataDisplay : MonoBehaviour
     {
         if(nodeData != null)
         {
-            labelText.SetText("<mark=#00000055><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
         }
     }
 

@@ -18,10 +18,13 @@ public class NodeTextDisplay : MonoBehaviour
     {
         HighlightedPathwaysStrategy,
         AccentedPathwaysStrategy,
-        AllTextStrategy
+        AllTextStrategy,
+        NoTextStrategy,
     }
 
     private Dictionary<TextDisplayStrategyEnum, TextDisplayStrategy> availableStrategies;
+    private bool allValue = true;
+    private int filterValue = 2;
 
     private void Awake()
     {
@@ -37,7 +40,8 @@ public class NodeTextDisplay : MonoBehaviour
         availableStrategies.Add(TextDisplayStrategyEnum.HighlightedPathwaysStrategy, HighlightedPathwaysStrategy.Instance);
         availableStrategies.Add(TextDisplayStrategyEnum.AccentedPathwaysStrategy, AccentedPathwaysStrategy.Instance);
         availableStrategies.Add(TextDisplayStrategyEnum.AllTextStrategy, AllTextStrategy.Instance);
-        activeStrategy = HighlightedPathwaysStrategy.Instance;
+        availableStrategies.Add(TextDisplayStrategyEnum.NoTextStrategy, NoTextStrategy.Instance);
+        activeStrategy = AllTextStrategy.Instance;
     }
 
     public void UpdateTextDisplay()
@@ -54,6 +58,23 @@ public class NodeTextDisplay : MonoBehaviour
             Debug.Log("TEXT DISPLAY UPDATE");
             activeStrategy = stratToUse;
             activeStrategy.UpdateTextDisplay();
+        }
+    }
+
+    public void ChangeAllValue(bool value) {
+        allValue = value;
+        if(allValue == false) {
+            ChangeStrategy(3);
+        } else {
+            ChangeStrategy(filterValue);
+        }
+    }
+    public void ChangeFilterValue(int value) {
+        filterValue = value;
+        if(allValue == false) {
+            ChangeStrategy(3);
+        } else {
+            ChangeStrategy(filterValue);
         }
     }
 }
