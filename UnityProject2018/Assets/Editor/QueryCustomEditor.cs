@@ -92,9 +92,25 @@ public class QueryCustomEditor : EditorWindow
 
         if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
         {
-            PrefabService prefabService = new PrefabService();
-            prefabService.PrefabAssignment();
+            //PrefabService prefabService = new PrefabService();
+            GameObject.Find("QueryService").GetComponent<PrefabService>().PrefabAssignment();
+            // prefabService.PrefabAssignment();
         }
+
+        // active pathways are now filled with SOs from query using this button 
+        // TODO: active pathways needs to be cleared if the SOs are deleted, this is done manually atm
+        if (GUILayout.Button("Update active pathways in StatusController"))
+        {
+            Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
+            //GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
+            foreach(KeyValuePair<string,PathwaySO> pair in tempDict)
+            {
+                Debug.Log("<Test> pw name : " + pair.Value.Label);
+                GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
+
+            }
+        }
+
         
     }
 

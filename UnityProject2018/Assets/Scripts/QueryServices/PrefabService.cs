@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class PrefabService
+public class PrefabService : MonoBehaviour
 {
     public void PrefabAssignment(){
         List<PathwaySO> pathways = GameObject.Find("StatusController").GetComponent<StatusController>().activePathways;
+
+        // for testing purposes, checks if pathways and pathway local networks exist and shos count
+        Debug.Log("<PrefabService Test> pathway count: " + pathways.Count);
+        if (pathways[1].LocalNetwork == null) {
+            Debug.Log("pw is NULL !!");
+        }
+        Debug.Log("<PrefabService test> pathway local network count: " + pathways[1].LocalNetwork.Count);
+
+
         foreach (PathwaySO pathway in pathways){
+
             foreach (KeyValuePair<NodeSO, List<EdgeSO>> pair in pathway.LocalNetwork){
                 FindNodeSOGameObject(pair.Key);
                 foreach(EdgeSO edge in pair.Value){
@@ -17,10 +27,11 @@ public class PrefabService
         }
         
     }
-
+ 
     public void FindNodeSOGameObject(NodeSO node) {
         string nodeName = node.Label; 
-        GameObject obj = GameObject.Find(nodeName);
+        GameObject obj = new GameObject();
+        obj =  GameObject.Find(nodeName);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
@@ -31,8 +42,9 @@ public class PrefabService
     }
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
-        string edgeName = edge.Label; 
-        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName);
+        string edgeName = edge.name; 
+        GameObject[] objs = new GameObject[100];
+        objs = GameObject.FindGameObjectsWithTag(edgeName);
         foreach (GameObject obj in objs) 
         {    
             if (obj != null) {
