@@ -62,6 +62,7 @@ public void NodeSOInit(WikibaseBinding item){
         EdgeSOInit(item);
         EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
     }
+    
     if(item.isProduct.value == "true"){  
         currentEdge.AddProduct(currentNode);
     }else if(item.isReactant.value == "true"){

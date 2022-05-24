@@ -15,15 +15,15 @@ public class WikibaseBinding
     public WikibaseBindingElement metaboliteLabel;
     public WikibaseBindingElement pathwayLabel;
     public WikibaseBindingElement isBidirectional;
-    public WikibaseBindingElement enzymeLabel;
     public WikibaseBindingElement pathwayDesc;
     public WikibaseBindingElement edgeDesc;
     public WikibaseBindingElement metaboliteDesc;
     public WikibaseBindingElement isReactant;
     public WikibaseBindingElement isProduct;
+    public WikibaseBindingElement isEnzyme;
+
     public WikibaseBindingElement edgeQID;
     public WikibaseBindingElement metaboliteQID;
-    public WikibaseBindingElement enzymeQID;
     public WikibaseBindingElement pathwayQID; 
 
     

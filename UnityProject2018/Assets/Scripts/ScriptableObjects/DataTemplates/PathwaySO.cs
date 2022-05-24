@@ -21,7 +21,7 @@ public class PathwaySO : ScriptableObject
         this.Description = desc;
         
         LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>();
-        MakePathway();
+        // MakePathway();
     }
 
     // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
