@@ -72,6 +72,8 @@ public void NodeSOInit(WikibaseBinding item){
         PathwaySOInit(item);
         PathwaySOs.TryGetValue(item.pathwayLabel.value, out currentPathway);
     }
+
+    // adds the node and edge to the pathway localnetwork dictionary 
     currentPathway.AddNodeToPathway(currentNode);
     currentPathway.AddEdgeToPathway(currentNode,currentEdge);
     
@@ -142,6 +144,5 @@ IEnumerator GetRequest(string uri)
             }
         }
     }
-
 
 }

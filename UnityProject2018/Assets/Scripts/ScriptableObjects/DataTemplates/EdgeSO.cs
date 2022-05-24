@@ -32,7 +32,7 @@ public class EdgeSO : ScriptableObject
     public void init(string name, string newQID, string desc, bool bidirectionality = false){
 
         this.QID = newQID;
-        this.name = name;
+        //this.name = name;
         this.Label = name;
         this.Description = desc;
         this.bidirectional = bidirectionality;
