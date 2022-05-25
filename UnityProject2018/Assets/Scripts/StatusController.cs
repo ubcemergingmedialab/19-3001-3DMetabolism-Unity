@@ -12,8 +12,8 @@ using UnityEngine;
             - Calc max/ min highlight state -> ElementCheckState 
             - node/edge Status lists
             - ElementCheckState
-            - PAthwaySOCheckState
-            - list of active PAthways
+            - PathwaySOCheckState
+            - list of active Pathways
             - intialize a highlightPathway per pathwaySO ( dict<PWSO, HighlightPAthway>)
 
 */
