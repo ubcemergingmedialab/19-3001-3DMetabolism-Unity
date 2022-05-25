@@ -31,7 +31,7 @@ public class StatusController : MonoBehaviour
     private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;               // PathwaySO linked to its HighlightPathway Instance
     private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
-    public List<PathwaySO> activePathways;                                              // Filled manually in unity 
+    public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
 
     public GameObject tempObjectHolder;                                                 // temporary, manually testing highlighting till buttons are developed
     int num = 0; //temp
@@ -43,6 +43,7 @@ public class StatusController : MonoBehaviour
         - keeps a list of all HighlightPathway instances
         - for every node/edge, it grabs the HighlightHandler component and the list of pathways it is apart of and links them in elementsToPathways dict
     */
+
     void Awake() 
     {
         if (_instance != null && _instance != this) 
@@ -59,19 +60,26 @@ public class StatusController : MonoBehaviour
 
 
         // Send the list of active pathways to the button factory singleton instance
-        //ButtonFactory.Instance.ActivePathways = activePathways;
+        ButtonFactory.Instance.ActivePathways = activePathways;
 
 
-        // <> fill the elements network 
-        //Debug.Log("count = " + activePathways.Count);
+        // Fill the elements network 
         foreach (PathwaySO pathwaySO in activePathways) {
-            //if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
+
+            if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
 
-            foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every nodeSO in this pathway
+            List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
+            List<EdgeSO> listOfEdges = new List<EdgeSO>();                                                       
+            foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
+                listOfNodes.Add(pair.Key);                                                                          // grab all the nodes in pathway
+                listOfEdges.AddRange(pair.Value);                                                                   // grab all the edges in the pathway
+            }  
+
+            foreach(NodeSO nodeSO in listOfNodes) {                                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
 
                 foreach(GameObject node in nodes) {
@@ -88,7 +96,9 @@ public class StatusController : MonoBehaviour
                 }
             }
 
-            foreach(EdgeSO edgeSO in pathwaySO.edges) {                                                             // For every edge in this pathway (same proccess as nodes)
+                                              
+
+            foreach(EdgeSO edgeSO in listOfEdges) {                                                             // For every edge in this pathway (same proccess as nodes)
                 GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
 
                 foreach(GameObject edge in edges){
@@ -108,16 +118,11 @@ public class StatusController : MonoBehaviour
         
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {   
-
-    }
 
     // Update is called once per frame
     void Update()
     {   
-        PipelineTest();             // for manual testing of the highlight functionality
+        // PipelineTest();             // for manual testing of the highlight functionality
         
     }
 
