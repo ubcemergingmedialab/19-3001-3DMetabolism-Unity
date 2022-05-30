@@ -10,8 +10,8 @@ public class PrefabService : MonoBehaviour
 
         // for testing purposes, checks if pathways and pathway local networks exist and shos count
         Debug.Log("<PrefabService Test> pathway count: " + pathways.Count);
-        if (pathways[1].LocalNetwork == null) {
-            Debug.Log("pw is NULL !!");
+        if (pathways[0].LocalNetwork == null) {
+            Debug.Log("pw.network is NULL !!");
         }
         Debug.Log("<PrefabService test> pathway local network count: " + pathways[1].LocalNetwork.Count);
 
@@ -42,7 +42,7 @@ public class PrefabService : MonoBehaviour
     }
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
-        string edgeName = edge.name; 
+        string edgeName = edge.Label; 
         GameObject[] objs = new GameObject[100];
         objs = GameObject.FindGameObjectsWithTag(edgeName);
         foreach (GameObject obj in objs) 
