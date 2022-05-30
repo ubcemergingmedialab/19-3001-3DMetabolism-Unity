@@ -29,7 +29,7 @@ public void EdgeSOInit(WikibaseBinding item){
             direction = true;
         }
         // Debug.Log(item.isBidirectional.value + " direction var = " + direction);
-        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,direction);
+        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,direction);
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);

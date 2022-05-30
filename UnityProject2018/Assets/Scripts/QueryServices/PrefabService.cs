@@ -13,7 +13,7 @@ public class PrefabService : MonoBehaviour
         if (pathways[0].LocalNetwork == null) {
             Debug.Log("pw.network is NULL !!");
         }
-        Debug.Log("<PrefabService test> pathway local network count: " + pathways[1].LocalNetwork.Count);
+        Debug.Log("<PrefabService test> pathway local network count: " + pathways[0].LocalNetwork.Count);
 
 
         foreach (PathwaySO pathway in pathways){
@@ -32,9 +32,11 @@ public class PrefabService : MonoBehaviour
         string nodeName = node.Label; 
         GameObject obj = new GameObject();
         obj =  GameObject.Find(nodeName);
+        Debug.Log(obj.name);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
+                Debug.Log("Attached node " + nodeName);
             }
         } else {
             Debug.LogError("Node scriptable object not connected to prefab :" + nodeName);
@@ -42,9 +44,10 @@ public class PrefabService : MonoBehaviour
     }
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
-        string edgeName = edge.Label; 
+        string edgeName = edge.name; 
         GameObject[] objs = new GameObject[100];
-        objs = GameObject.FindGameObjectsWithTag(edgeName);
+        objs = GameObject.Find(String.Contains(edgeName));
+        // objs = GameObject.FindGameObjectsWithTag(edgeName);
         foreach (GameObject obj in objs) 
         {    
             if (obj != null) {
