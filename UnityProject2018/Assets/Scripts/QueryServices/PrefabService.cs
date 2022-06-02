@@ -32,7 +32,6 @@ public class PrefabService : MonoBehaviour
         string nodeName = node.Label; 
         GameObject obj = new GameObject();
         obj =  GameObject.Find(nodeName);
-        Debug.Log(obj.name);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
@@ -46,8 +45,8 @@ public class PrefabService : MonoBehaviour
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
         GameObject[] objs = new GameObject[100];
-        objs = GameObject.Find(String.Contains(edgeName));
-        // objs = GameObject.FindGameObjectsWithTag(edgeName);
+        // objs = GameObject.Find(edgeName);
+        objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
         foreach (GameObject obj in objs) 
         {    
             if (obj != null) {

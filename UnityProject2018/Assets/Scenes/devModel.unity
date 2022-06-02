@@ -9710,6 +9710,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860be4a9d962fae40b4c63c269ee960b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &407714577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407714578}
+  m_Layer: 0
+  m_Name: New Game Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407714578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407714577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411365216
 GameObject:
   m_ObjectHideFlags: 0
@@ -13624,36 +13654,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587670633}
   m_Mesh: {fileID: 4300040, guid: 08bcca721adf57449a6ce8dafb006d53, type: 3}
---- !u!1 &587872290
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 587872291}
-  m_Layer: 0
-  m_Name: New Game Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &587872291
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587872290}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588384950
 GameObject:
   m_ObjectHideFlags: 0
@@ -19922,36 +19922,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraToLookAt: {fileID: 534669904}
---- !u!1 &1030770962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1030770963}
-  m_Layer: 0
-  m_Name: New Game Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1030770963
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030770962}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031894687
 GameObject:
   m_ObjectHideFlags: 0
@@ -30637,13 +30607,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePathways:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e827687293f1d5348b48295251a8048c, type: 2}
+  - {fileID: 11400000, guid: 0c71308a138f5d84b8c11b8c930444e5, type: 2}
+  - {fileID: 11400000, guid: 32e70d06a74a4ce41a768c648a456c02, type: 2}
+  - {fileID: 11400000, guid: e4f16c7dc2db078489ba482f06ec7139, type: 2}
+  - {fileID: 11400000, guid: 62ae15b8853996040895b4ea303fd1c0, type: 2}
+  - {fileID: 11400000, guid: 6e983577bdeb6014fb30d4ef13e094e8, type: 2}
+  - {fileID: 11400000, guid: 17c5de7ec2af0fb4f935b88ae55036f0, type: 2}
   tempObjectHolder: {fileID: 2025938433}
 --- !u!1 &1655747204
 GameObject:
@@ -31163,6 +31133,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684929211}
   m_Mesh: {fileID: 4300094, guid: 08bcca721adf57449a6ce8dafb006d53, type: 3}
+--- !u!1 &1687961427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687961428}
+  m_Layer: 0
+  m_Name: New Game Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1687961428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687961427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1689091984
 GameObject:
   m_ObjectHideFlags: 0
@@ -32678,36 +32678,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770805064}
   m_Mesh: {fileID: 4300020, guid: 08bcca721adf57449a6ce8dafb006d53, type: 3}
---- !u!1 &1772962388
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1772962389}
-  m_Layer: 0
-  m_Name: New Game Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1772962389
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772962388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787179882
 GameObject:
   m_ObjectHideFlags: 0
@@ -36437,36 +36407,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &2031412629
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2031412630}
-  m_Layer: 0
-  m_Name: New Game Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2031412630
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031412629}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2034038299
 GameObject:
   m_ObjectHideFlags: 0
@@ -45243,6 +45183,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1109332544769612751, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphofructosekinase-1 (PFK-1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1156774831632569643, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -45413,6 +45358,21 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 3344214228990726688, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413370276084136294, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: phosphofructosekinase-1 (PFK-1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413370276084136294, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphofructosekinase-1 (PFK-1)
+      objectReference: {fileID: 0}
     - target: {fileID: 3618493402383798865, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -45453,6 +45413,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 4801303888000235232, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4878944938210346706, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -45486,7 +45451,7 @@ PrefabInstance:
     - target: {fileID: 5458136489942673072, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: triose phosphate isomerase OR aldolase
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5482267880985576769, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -45583,11 +45548,21 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 7182543763414056719, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7281470876567028399, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 7543958141244298359, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fructose-6-phosphate
+      objectReference: {fileID: 0}
     - target: {fileID: 7566185671929698089, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
