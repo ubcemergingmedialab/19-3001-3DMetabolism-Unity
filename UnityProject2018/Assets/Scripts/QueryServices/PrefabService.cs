@@ -38,7 +38,7 @@ public class PrefabService : MonoBehaviour
                 Debug.Log("Attached node " + nodeName);
             }
         } else {
-            Debug.LogError("Node scriptable object not connected to prefab :" + nodeName);
+            Debug.LogError("Node scriptable object not connected to prefab: " + nodeName);
         }
     }
 
