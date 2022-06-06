@@ -63,9 +63,7 @@ TagManager:
   - glucose
   - succinate dehydrogenase
   - L-lactate
-  - phosphofructosekinase-1 (PFK-1)
   - acetyl CoA
-  - fumarase (mitochodrion)
   - 6-phosphoglucono-delta-lactone
   - aspartate (mitochondrion)
   - 1,3-bisphosphoglycerate
@@ -114,6 +112,15 @@ TagManager:
   - 2-phosphoglycerate
   - malate dehydrogenase (cytosol)
   - triose phosphate isomerase
+  - Carnitine-Acyl-Carnitine Cotransporter (membrane)
+  - phosphofructokinase-1
+  - hexokinase
+  - fumarase (mitochondrion)
+  - acetyl-CoA carboxylase
+  - B-ketoacyl-ACP reductase
+  - B-ketoacyl-ACP synthase
+  - citrate lyase
+  - enoyl-ACP reductase
   layers:
   - Default
   - TransparentFX
