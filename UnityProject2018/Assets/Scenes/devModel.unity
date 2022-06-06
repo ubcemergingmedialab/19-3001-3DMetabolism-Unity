@@ -45213,6 +45213,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 681707683861134913, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoenolpyruvate carboxykinase (cytosol)
+      objectReference: {fileID: 0}
     - target: {fileID: 692703856608002219, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -45362,6 +45367,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627419341625931291, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: arginase
       objectReference: {fileID: 0}
     - target: {fileID: 2633627797818119092, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -45587,6 +45597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: thioesterase
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380639552594415557, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: arginase
       objectReference: {fileID: 0}
     - target: {fileID: 4459335424603252004, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -45883,6 +45898,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 7493848101950941746, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoenolpyruvate carboxykinase (mitochondrion)
+      objectReference: {fileID: 0}
     - target: {fileID: 7532497513256699088, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
