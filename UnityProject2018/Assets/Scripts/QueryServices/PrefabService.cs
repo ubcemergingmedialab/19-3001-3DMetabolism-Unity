@@ -30,12 +30,12 @@ public class PrefabService : MonoBehaviour
  
     public void FindNodeSOGameObject(NodeSO node) {
         string nodeName = node.Label; 
-        GameObject obj = new GameObject();
-        obj =  GameObject.Find(nodeName);
+        //GameObject obj = new GameObject();
+        GameObject obj =  GameObject.Find(nodeName);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
-                Debug.Log("Attached node " + nodeName);
+                //Debug.Log("Attached node " + nodeName);
             }
         } else {
             Debug.LogError("Node scriptable object not connected to prefab: " + nodeName);
@@ -44,9 +44,10 @@ public class PrefabService : MonoBehaviour
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
-        GameObject[] objs = new GameObject[100];
+        //GameObject[] objs = new GameObject[10];
         // objs = GameObject.Find(edgeName);
-        objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
+        //objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
         foreach (GameObject obj in objs) 
         {    
             if (obj != null) {

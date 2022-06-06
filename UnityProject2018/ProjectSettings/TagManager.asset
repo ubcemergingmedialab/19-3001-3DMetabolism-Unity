@@ -22,7 +22,6 @@ TagManager:
   - ribose-5-phosphate
   - oxaloacetate (mitochondrion)
   - citrate
-  - transketolase
   - argininosuccinate synthetase
   - carbamoyl phosphate
   - glycogen synthase
@@ -121,6 +120,39 @@ TagManager:
   - B-ketoacyl-ACP synthase
   - citrate lyase
   - enoyl-ACP reductase
+  - B-hydroxyacyl-ACP dehydratase
+  - thioesterase
+  - Carnitine Acyltransferase 1 (CPT1)
+  - Carnitine Acyltransferase 2 (CPT2) (membrane)
+  - Acyl-CoA Acetyltransferase (Thiolase)
+  - Hydroxyacyl-CoA Dehydrogenase
+  - Acyl-Carnitine (membrane)
+  - trans-delta2-enoyl-ACP
+  - palmitate
+  - B-ketoacyl-ACP
+  - Ketoacyl-CoA (mitochondrion)
+  - fructose-1,6-bisphosphate
+  - citrate (cytosol)
+  - malonyl CoA
+  - D-B-hydroxyacyl-ACP
+  - acetyl CoA (cytosol)
+  - acyl-ACP
+  - malate (mitochondrion)
+  - Trans-D2-Enoyl-CoA (mitochondrion)
+  - acyl-KS
+  - citrate (mitochondrion)
+  - Enoyl-CoA Hydratase
+  - Acyl-CoA Dehydrogenase
+  - Acyl-CoA Synthetase
+  - transketolase (1)
+  - transketolase (2)
+  - Carnitine (mitochondrion)
+  - Palmitic Acid (C16 Fatty Acid) (cytosol)
+  - Carnitine (cytosol)
+  - Acyl-Carnitine (mitochondrion)
+  - Fatty Acyl-Coenzyme A (Acyl-CoA) (cytosol)
+  - B-Hydroxyacyl-CoA (mitochondrion)
+  - Fatty Acyl-Coenzyme A (Acyl-CoA) (mitochondrion)
   layers:
   - Default
   - TransparentFX
