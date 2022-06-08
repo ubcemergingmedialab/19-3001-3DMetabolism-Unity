@@ -153,6 +153,14 @@ TagManager:
   - Fatty Acyl-Coenzyme A (Acyl-CoA) (cytosol)
   - B-Hydroxyacyl-CoA (mitochondrion)
   - Fatty Acyl-Coenzyme A (Acyl-CoA) (mitochondrion)
+  - lactate dehydrogenase
+  - thiolase II
+  - HMG-CoA lyase
+  - HMG CoA Synthase
+  - D-beta-hydroxybutyrate dehydrogenase
+  - acetoacetate decarboxylase
+  - alpha-1,6-glucosidase
+  - lactate
   layers:
   - Default
   - TransparentFX

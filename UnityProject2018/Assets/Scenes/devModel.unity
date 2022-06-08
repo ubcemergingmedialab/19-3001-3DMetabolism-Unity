@@ -8499,8 +8499,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507814657}
   m_HandleRect: {fileID: 1507814656}
   m_Direction: 2
-  m_Value: 0.9542785
-  m_Size: 0.43447852
+  m_Value: 0.9542784
+  m_Size: 0.4344785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -30579,10 +30579,12 @@ MonoBehaviour:
   activePathways:
   - {fileID: 11400000, guid: 18e4a8a0c0035cf40b8b25175e0926aa, type: 2}
   - {fileID: 11400000, guid: 2f743b40f94832045ba33820ad16aa2c, type: 2}
+  - {fileID: 11400000, guid: d7067aa206b41444380d4f2484429939, type: 2}
   - {fileID: 11400000, guid: 40833acab82669545914cd7e7ebd4fba, type: 2}
   - {fileID: 11400000, guid: 5becbbc9702e7724fb6667a732230ae3, type: 2}
+  - {fileID: 11400000, guid: d0670907021287041b8056d013d0c84f, type: 2}
   - {fileID: 11400000, guid: 62b857c46a963894b8cf20bc71f58034, type: 2}
-  - {fileID: 11400000, guid: d7067aa206b41444380d4f2484429939, type: 2}
+  - {fileID: 11400000, guid: 2d05d6c37dee00e4a9f71d0ab4f5bb48, type: 2}
   - {fileID: 11400000, guid: 39e362d6e33d17549834f43e074f0eca, type: 2}
   tempObjectHolder: {fileID: 2025938433}
 --- !u!1 &1655747204
@@ -31811,9 +31813,9 @@ MonoBehaviour:
   nodes: []
 --- !u!4 &1722435338 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+  m_CorrespondingSourceObject: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
     type: 3}
-  m_PrefabInstance: {fileID: 4084681652838871883}
+  m_PrefabInstance: {fileID: 1863467692388302610}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725679946
 GameObject:
@@ -45071,1067 +45073,1685 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &4084681652838871883
+--- !u!1001 &1863467692388302610
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 988872253906518422}
     m_Modifications:
-    - target: {fileID: 60146322550611334, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 51594527487748284, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 56340893788384645, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: D-B-hydroxyacyl-ACP
+      value: carbamoyl phosphate synthetase I
       objectReference: {fileID: 0}
-    - target: {fileID: 66106768736939914, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 78661081253979110, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
-      propertyPath: m_TagString
-      value: transketolase (1)
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">alpha-ketoglutarate (mitochondrion)</font></mark>
       objectReference: {fileID: 0}
-    - target: {fileID: 71806265866458646, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 119665321308754782, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 77948775867439684, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 131890619839960802, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
-      propertyPath: m_TagString
-      value: Carnitine Acyltransferase 2 (CPT2) (membrane)
+      propertyPath: edgeData
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 287787651422118815, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 336949478903073955, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: acetyl CoA
-      objectReference: {fileID: 0}
-    - target: {fileID: 350123150755030020, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: palmitate
-      objectReference: {fileID: 0}
-    - target: {fileID: 363067855218443844, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Carnitine Acyltransferase 1 (CPT1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 387311166843557896, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Acyl-CoA Acetyltransferase (Thiolase)
-      objectReference: {fileID: 0}
-    - target: {fileID: 436041422243037742, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422315563227, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422317889322, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422373679868, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422512470543, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422820844753, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422852534970, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041422972052486, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423040362305, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423040768311, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423487838686, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423644154597, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423728414478, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423728751313, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423911898061, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041423931963047, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041424280850151, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 436041424310769133, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 681707683861134913, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: phosphoenolpyruvate carboxykinase (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 692703856608002219, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: carbamoyl phosphate
-      objectReference: {fileID: 0}
-    - target: {fileID: 772880413094467634, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-ketoacyl-ACP reductase
-      objectReference: {fileID: 0}
-    - target: {fileID: 850348079608066158, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 197953653735488988, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 851609400323203868, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 252100516450640336, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">malonyl CoA</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 291245418801127828, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 884706791315600617, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Hydroxyacyl-CoA Dehydrogenase
-      objectReference: {fileID: 0}
-    - target: {fileID: 890606501840938464, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 895536608950424865, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 920828579428592875, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-ketoacyl-ACP synthase
-      objectReference: {fileID: 0}
-    - target: {fileID: 924655679662020751, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Name
-      value: (June 03 22) fatty_acid_synthesis
-      objectReference: {fileID: 0}
-    - target: {fileID: 1092264008997474433, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 325666347517744405, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1096157919794936645, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Acyl-CoA Acetyltransferase (Thiolase)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1131873258376397667, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-ketoacyl-ACP synthase
-      objectReference: {fileID: 0}
-    - target: {fileID: 1132766727905253233, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1307000015382744148, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1413609258159794111, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: succinate
-      objectReference: {fileID: 0}
-    - target: {fileID: 1568450080547758903, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: aspartate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572976152852368357, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1704453218434377702, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 361869428966963778, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1774707933821171438, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Name
-      value: citrate (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1807352458976095626, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 432186320441810925, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 1910246393769319777, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 460044366621762466, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 1922266403368793860, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 1950854412649211990, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2056401770435273564, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 473332404060884448, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: enoyl-ACP reductase
+      value: gluconolactonase
       objectReference: {fileID: 0}
-    - target: {fileID: 2082381525386249558, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 494323686470898458, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
-      propertyPath: m_TagString
-      value: trans-delta2-enoyl-ACP
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">B-ketoacyl-ACP</font></mark>
       objectReference: {fileID: 0}
-    - target: {fileID: 2124959555282410749, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2367428122983669511, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2398656557514635083, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: transketolase (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2433251527981163749, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2579626219085001093, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 526994536069916017, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 2627419341625931291, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: arginase
-      objectReference: {fileID: 0}
-    - target: {fileID: 2633627797818119092, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2700294481640779213, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2716570793913100363, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: oxaloacetate (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721504139050307531, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: citrulline (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2783678297483968880, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Ketoacyl-CoA (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2815187671642828795, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 2946282612566358142, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 555998334248271702, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 3132145042966468511, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 581469239882425332, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 3158433735182388370, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 610675511671137707, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 650701514621833748, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 689232993294873639, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 689889133062682455, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 690923509673297829, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: alpha-ketoglutarate dehydrogenase complex
+      objectReference: {fileID: 0}
+    - target: {fileID: 711928426641877802, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-Carnitine (mitochondrion)
+      objectReference: {fileID: 0}
+    - target: {fileID: 721830475533441990, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 767559257193480395, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: citrate lyase
       objectReference: {fileID: 0}
-    - target: {fileID: 3195557876733527551, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 820015871421491073, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Palmitic Acid (C16 Fatty Acid) (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 948869021969402278, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: citrate lyase
       objectReference: {fileID: 0}
-    - target: {fileID: 3330799771834870329, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: malate (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3360016987454977075, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 3481159351864863757, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: succinyl CoA
-      objectReference: {fileID: 0}
-    - target: {fileID: 3485226660736801405, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 3500165266376046828, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 3706670958163799531, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Name
-      value: citrate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3763533979263615702, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Acyl-Carnitine (membrane)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828888697750289492, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: ornithine (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3842306102126798185, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: transketolase (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3902310405598995010, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969064289683798827, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Acyl-CoA Dehydrogenase
-      objectReference: {fileID: 0}
-    - target: {fileID: 3991891861302472537, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: ornithine (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4002951030257557573, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: NH4+
-      objectReference: {fileID: 0}
-    - target: {fileID: 4039304757665834154, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: urea
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681651395672891, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4084681651820479808, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713153, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652346713154, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_Name
-      value: Network
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084681652527214290, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4084681653229766701, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4130696880669363458, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4148773232192561268, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4222568438403216482, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: acyl-KS
-      objectReference: {fileID: 0}
-    - target: {fileID: 4222922271846996225, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4367826268230553447, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: thioesterase
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380639552594415557, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: arginase
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459335424603252004, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: citrulline (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527916836675487072, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633352898044843879, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672308808883250297, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4691697253507485745, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: enoyl-ACP reductase
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742101112937323259, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4776071502986583026, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 4790096980296760398, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 991819286357684837, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Enoyl-CoA Hydratase
       objectReference: {fileID: 0}
-    - target: {fileID: 4797351338016454516, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 1052543032034304865, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Synthetase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066707617815039959, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transaldolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120126567932363259, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140189200855119978, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 4906942305807397196, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 1196836538531002605, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6-phosphogluconate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237903320283911716, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 5001224987348594474, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 1254276071265896161, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5024361440529413152, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5085583492939593575, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+      propertyPath: m_TagString
+      value: citrate synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288307050198971573, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 5141031777275897946, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 1365035197626843543, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: arginase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450568814435100976, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 5194669148974169353, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 1539658182147404307, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5255899947616525663, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583655049239696630, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613708145613069893, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: transketolase (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5295442426150814427, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 1614289078226188146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617292247495062409, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643387214352011142, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: sedoheptulose-7-phosphate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656972185760541724, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681007108720782875, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1696795449944230759, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: succinyl CoA synthetase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738608538455900507, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1774424996226488308, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fatty Acyl-Coenzyme A (Acyl-CoA) (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792589789032098861, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1863467691670258804, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1863467691903033995, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467692830423067, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: Network
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863467693051623266, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1863467693347981593, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 1887002792174401513, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ribulose-5-phosphate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002621792677874121, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011205515785934168, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2061574393894032668, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">arginine</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141674768088564636, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156744237502956350, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: thioesterase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223360508910946204, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257945528602083615, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">argininosuccinate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280384861614180665, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179814703398567, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">dihydroxyacetone phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179814789605580, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">malate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179814842311978, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fructose-6-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815034942994, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fructose-1,6-bisphosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815225453367, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">lactate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815240361158, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glyceraldehyde-3-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815249231585, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">phosphoenolpyruvate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815304482355, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glucose</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815678395130, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">2-phosphoglycerate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815767259834, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">oxaloacetate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179815846021072, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">glucose-6-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179816117835512, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">pyruvate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179816234712780, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">3-phosphoglycerate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179816234894099, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">pyruvate (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309179816546919875, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">1,3-bisphosphoglycerate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334839689791264285, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352273774550233415, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphopentose epimerase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417574038594558543, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2421021722295460819, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445224841083027289, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transaldolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489792354542612422, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2503209678953327216, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: isocitrate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543970732227201893, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599677424878490705, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Acyl-CoA Acetyltransferase (Thiolase)
       objectReference: {fileID: 0}
-    - target: {fileID: 5316023241773646024, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5345346181581225121, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-hydroxyacyl-ACP dehydratase
-      objectReference: {fileID: 0}
-    - target: {fileID: 5426591768529936879, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5487212203454497664, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5523312059273401647, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: argininosuccinate
-      objectReference: {fileID: 0}
-    - target: {fileID: 5555020997794036707, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5619348456581921927, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5668205944354825117, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5676763576164104251, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Acyl-CoA Acetyltransferase (Thiolase)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5708944717006070232, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5722442659712703975, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5722951974342585423, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5723869028288905516, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: arginine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5778444296199509990, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5784490399047872614, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 5803818613831343174, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 2628424216215816733, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Carnitine Acyltransferase 1 (CPT1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5804240959883884000, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 2639496723923149911, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: malonyl CoA
+      value: argininosuccinase
       objectReference: {fileID: 0}
-    - target: {fileID: 5839803763354786380, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 2640967970639739164, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736102575074750338, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrate (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2779390565967716209, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: arginase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808523201284463115, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">6-phosphogluconate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845932951989746430, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952068769684, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952437719742, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952466659764, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952752596359, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952873260732, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952989843080, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932952990024535, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953052626659, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953159805064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953208350062, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953208470296, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953276934239, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953589326978, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953595390835, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953615007397, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953653710455, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2845932953921042006, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 2878747468028907639, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: argininosuccinase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883992794786886168, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008016174030150508, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Carnitine (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052009492800547325, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">isocitrate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056658124896721212, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072140563116027717, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 3080148504350686263, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155399396240577643, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP reductase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251172739056507256, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 3256094050005903801, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 3257498428506208432, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hydroxyacyl-CoA Dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279480198320081973, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine (mitochondrion)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289396321668308368, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293425567464087730, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303247043953897217, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Trans-D2-Enoyl-CoA (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334278350203467548, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Acyl-CoA Acetyltransferase (Thiolase)
       objectReference: {fileID: 0}
-    - target: {fileID: 5854073839543966369, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Carnitine-Acyl-Carnitine Cotransporter (membrane)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5972933800199960534, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: alpha-ketoglutarate (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980060999844327151, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3340380063102246104, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 6004438810677270877, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3370611268610592570, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371943752377572136, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 6051039879173243474, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3380225673654239607, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 6138224550669043498, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-ketoacyl-ACP
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181665617611796740, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: transketolase (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6531187783547733079, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3410586378368167355, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 6608799157053066314, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3595634494709173203, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672621040849232883, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fatty Acyl-Coenzyme A (Acyl-CoA) (mitochondrion)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697609477817434125, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 6614927340502299156, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3734239359670667256, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">B-Hydroxyacyl-CoA (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757583210097098825, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">6-phosphoglucono-delta-lactone</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794208840469284796, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 6730417905542020958, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 3931998132547144101, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: erythrose-4-phosphate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950930689774447551, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956108257134342676, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064191694605541843, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 6910545324532429813, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4188036222796505356, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197434944318902089, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206707766620398607, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 6931551002281163546, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4231599762235362585, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glucose-6-phosphate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286200783679049952, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">acyl-ACP</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314073198662155101, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 6959916665990487355, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4319347132448100664, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 4327597333388890276, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 4330771745856999066, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: malate dehydrogenase (mitochondrion)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360739440877474172, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">acetyl CoA (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371790758855326489, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">fumarate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401187073464951883, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">NH4+</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410358789638096724, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: xylulose-5-phosphate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465925066386566917, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545252357120467351, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ribose-5-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546226784353272285, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642450707801994127, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">succinate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645259329716370330, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Fatty Acyl-Coenzyme A (Acyl-CoA)
+        (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702383929515325251, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 4706874274002132881, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-Hydroxyacyl-CoA (mitochondrion)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736635047720808357, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748340992117281122, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: acetyl-CoA carboxylase
       objectReference: {fileID: 0}
-    - target: {fileID: 6973826044019926012, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068183238015426001, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7071915753701870217, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150617664583098509, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4778303043670600916, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: B-ketoacyl-ACP synthase
       objectReference: {fileID: 0}
-    - target: {fileID: 7264002634506159325, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-ketoacyl-ACP synthase
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269672648638372587, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7277218221017539932, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7289756900620177320, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: transketolase (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7380194457562562450, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7381889261329381255, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7493848101950941746, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: phosphoenolpyruvate carboxykinase (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7532497513256699088, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: acyl-ACP
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571548326369697147, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7616367345893233440, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7675486955098588151, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 7882412180363655060, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: B-ketoacyl-ACP synthase
-      objectReference: {fileID: 0}
-    - target: {fileID: 7975134259487104684, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8023394713047740201, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: fumarate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8031922656122275148, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: acetyl CoA (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8094290739862996482, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8155582170613103657, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8167423217188115598, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8184465258826297555, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Acyl-CoA Acetyltransferase (Thiolase)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294488005532364036, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: fumarase (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623436599046426, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: fructose-6-phosphate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623436796717719, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: dihydroxyacetone phosphate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437260970499, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: glucose
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437274524369, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: phosphoenolpyruvate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437333688566, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: glyceraldehyde-3-phosphate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437530522146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: fructose-1,6-bisphosphate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437738546144, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: glucose-6-phosphate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437859532426, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: oxaloacetate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623437906466506, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: 2-phosphoglycerate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623438170485235, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: 1,3-bisphosphoglycerate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623438461523747, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: pyruvate (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623438461725436, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: 3-phosphoglycerate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356623438544732872, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: pyruvate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439815118391281067, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8506170191481256882, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: citrate (mitochondrion)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574614969544438811, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8582729921403001501, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: transketolase (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588501053924821313, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4807608399362788071, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 8719037702661805962, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8720505521829091393, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8761757669462297868, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: citrate (cytosol)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8766678911760350669, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: isocitrate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775279608491349423, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
-        type: 3}
-      propertyPath: cameraToLookAt
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 8796805942682103514, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4852510146143651536, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 8832912833991958774, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4856237851181519240, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 4904913294568542668, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">erythrose-4-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917565485980675133, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 8846938246876386047, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 4925111613961765873, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965427096296998651, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012003659576027397, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5012780634130224818, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5025175252443940996, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: B-ketoacyl-ACP synthase
       objectReference: {fileID: 0}
-    - target: {fileID: 8930602708068768612, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 5055333511373202995, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: argininosuccinate synthetase
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059560512931919623, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">aspartate (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087931391269698190, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ornithine transcarbamoylase
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090507776370595872, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6-phosphoglucono-delta-lactone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116745037491895262, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5122948401556501451, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5133992508260841946, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Carnitine Acyltransferase 2 (CPT2) (membrane)
       objectReference: {fileID: 0}
-    - target: {fileID: 8964814852630124678, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 5215276920266330402, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 8993642309329130259, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 5242519901752876921, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5368117833659446203, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 9029463547451250521, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 5473886840991207342, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5480913393008589773, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: hexokinase
+      value: B-ketoacyl-ACP synthase
       objectReference: {fileID: 0}
-    - target: {fileID: 9029463547729973088, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 5589944812172065278, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ribose-5-phosphate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698584624291565926, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">trans-delta2-enoyl-ACP</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734396844890061858, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: NH4+
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743283786847035197, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">xylulose-5-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755239644136100597, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5776831381203720407, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5790955576558858352, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5829600094678252682, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Acetyltransferase (Thiolase)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847742862203554395, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 5938023912129569117, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fumarase (mitochondrion)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947945665813443422, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: lactate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947945666384294053, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: malate (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991692622512638390, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">D-B-hydroxyacyl-ACP</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030442244884100085, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076436228441606642, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6080821302078282422, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087005394132091490, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6-phosphogluconate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170826787121195525, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215976390995297560, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226247167479846596, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280420680990847028, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">palmitate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295609753390831763, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">acetyl CoA</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308645112294275138, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6360549031647262384, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373674517060492243, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6374454111739843608, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6393959058560752118, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6422465628601574182, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516585583512704155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">carbamoyl phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529153435276154685, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563070669589892071, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: argininosuccinate synthetase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574724505939460869, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586340499703997059, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608270328531443366, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622304383669955759, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452053316259855, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: malate dehydrogenase (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452053382680372, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aldolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452053490595678, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glyceraldehyde-3-phosphate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054034457533, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphohexose isomerase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054057943062, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aldolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054091666119, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fructose-1,6-bisphosphatase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054234387410, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: enolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054277920773, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: triose phosphate isomerase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054278800185, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: phosphofructokinase-1
       objectReference: {fileID: 0}
-    - target: {fileID: 9089416183650073393, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 6646452054459285120, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: Trans-D2-Enoyl-CoA (mitochondrion)
+      value: pyruvate kinase
       objectReference: {fileID: 0}
-    - target: {fileID: 9114554351420955796, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+    - target: {fileID: 6646452054487162145, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: Acyl-CoA Synthetase
+      value: lactate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054685369296, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: pyruvate carboxylase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054719776092, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoglycerate kinase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054745040138, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glucose-6-phosphatase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054875753482, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoglycerate mutase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452054933073582, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoenolpyruvate carboxykinase (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646452055069629184, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: hexokinase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708817737677182175, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 6754343548197281610, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846471998175597660, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Carnitine (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849569623337291981, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921681099124010965, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948957911360068712, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: enoyl-ACP reductase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949077839850474909, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970651356422051490, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7007337437571701566, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035899937860003872, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7134367529136808469, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: edgeData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136585276641439767, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150566214805034923, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7186871510142957629, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">succinyl CoA</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7196879970017983277, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7209131758275714349, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ornithine transcarbamoylase
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211391157002363763, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7227987309520443375, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">sedoheptulose-7-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247811378804292457, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ornithine (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262608210485344377, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7277918984531205869, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transaldolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289793729526615913, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307969639835827477, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7309306885908880908, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362106134116361219, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368014818952318432, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408873874310621284, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ornithine (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478693674021541606, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Acyl-Carnitine (membrane)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485112951762697022, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498169542904647298, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Acetyltransferase (Thiolase)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529157927357871746, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aconitase
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543380760692535168, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">ribulose-5-phosphate</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545120736032001169, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594412291009130832, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7596158515615473746, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">acyl-KS</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603022350913753350, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647259495517048733, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Fatty Acyl-Coenzyme A (Acyl-CoA)
+        (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7653046815816922631, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine Acyltransferase 2 (CPT2) (membrane)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655215405659958710, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736504268238041336, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-hydroxyacyl-ACP dehydratase
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766682843762864945, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781397952155267226, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">urea</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810525459596572602, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7820507394735665374, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7873884171873349646, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878369979801047001, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7931357372991664404, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrulline (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933612925175665086, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935320362814005270, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 7947119779393957249, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7950407179707366319, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023884035628457259, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049062596547949666, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Acetyltransferase (Thiolase)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059872036492308420, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 8059923426253314311, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092458942913861368, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine-Acyl-Carnitine Cotransporter (membrane)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104455375018579477, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Acetyltransferase (Thiolase)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157508706328345663, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 8161298593851251647, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 8212498552145514527, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine Acyltransferase 1 (CPT1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225794918572905732, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 8253538020345810443, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326760332624126646, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378863244886403026, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410607715658709280, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411133716138802525, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427755554190685938, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphopentose isomerase
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454090869449037120, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Ketoacyl-CoA (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518510228491492347, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">citrulline (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520908134162185339, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">oxaloacetate (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591577258243808420, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: succinate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676797943132554076, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744702151933812857, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782524809769861096, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Palmitic Acid (C16 Fatty
+        Acid) (cytosol)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844815621051137613, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 8846409413967216659, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 8890603737632764739, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">Acyl-Carnitine (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921799100295759886, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941007286348690183, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 9064069079315676681, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_text
+      value: <mark=#00000088><font="LiberationSans SDF">malate (mitochondrion)</font></mark>
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094590092270613502, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121154802590515116, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: cameraToLookAt
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 9211045617424873859, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: citrate synthase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8d71f1682391f4a99ca2aca8e32f92, type: 3}
