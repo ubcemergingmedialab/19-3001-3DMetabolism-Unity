@@ -102,7 +102,6 @@ TagManager:
   - phosphoenolpyruvate (mitochondrion)
   - malate (cytosol)
   - pyruvate dehydrogenase complex
-  - UDP-glucose pyrophosphorylase
   - glucose-1-phosphate
   - succinyl CoA synthetase
   - NH4+
@@ -161,6 +160,10 @@ TagManager:
   - acetoacetate decarboxylase
   - alpha-1,6-glucosidase
   - lactate
+  - malate-alpha-ketoglutarate transporter
+  - aspartate-glutamate transporter
+  - glycerol-3-phosphate dehydrogenase (cytosol)
+  - UDP-glucose pyrophosphorylase
   layers:
   - Default
   - TransparentFX
