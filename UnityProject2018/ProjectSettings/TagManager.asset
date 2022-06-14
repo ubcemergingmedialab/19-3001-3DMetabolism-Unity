@@ -164,6 +164,12 @@ TagManager:
   - aspartate-glutamate transporter
   - glycerol-3-phosphate dehydrogenase (cytosol)
   - UDP-glucose pyrophosphorylase
+  - acetyl CoA (mitochondrion)
+  - acetoacetate
+  - acetoacetyl CoA
+  - acetone
+  - beta-hydroxy-beta-methylglutaryl-CoA (HMG-CoA)
+  - D-beta-hydroxybutyrate
   layers:
   - Default
   - TransparentFX
