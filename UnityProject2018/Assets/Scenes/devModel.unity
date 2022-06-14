@@ -30577,11 +30577,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePathways:
+  - {fileID: 11400000, guid: 2f743b40f94832045ba33820ad16aa2c, type: 2}
   - {fileID: 11400000, guid: 40833acab82669545914cd7e7ebd4fba, type: 2}
   - {fileID: 11400000, guid: d0670907021287041b8056d013d0c84f, type: 2}
-  - {fileID: 11400000, guid: 5becbbc9702e7724fb6667a732230ae3, type: 2}
-  - {fileID: 11400000, guid: 2f743b40f94832045ba33820ad16aa2c, type: 2}
   - {fileID: 11400000, guid: 18e4a8a0c0035cf40b8b25175e0926aa, type: 2}
+  - {fileID: 11400000, guid: 5becbbc9702e7724fb6667a732230ae3, type: 2}
   - {fileID: 11400000, guid: 0b97b0a4fc07ee34789e7cf460582ec0, type: 2}
   - {fileID: 11400000, guid: 8c4e6db0ea19ccc4bb39520891f4e5f9, type: 2}
   - {fileID: 11400000, guid: 62b857c46a963894b8cf20bc71f58034, type: 2}
@@ -45947,7 +45947,7 @@ PrefabInstance:
     - target: {fileID: 7246281302929945510, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: UDP-glucose pyrophosphorylase
       objectReference: {fileID: 0}
     - target: {fileID: 7310851415898315013, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
