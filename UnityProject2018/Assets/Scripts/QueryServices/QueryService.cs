@@ -28,12 +28,12 @@ public void EdgeSOInit(WikibaseBinding item){
         if(item.isBidirectional.value == "true"){
             direction = true;
         }
-        Debug.Log(item.isBidirectional.value + " direction var = " + direction);
-        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,direction);
+        // Debug.Log(item.isBidirectional.value + " direction var = " + direction);
+        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,direction);
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
-        Debug.Log("edge added");
+        Debug.Log(item.enzymeLabel.value + " edge added");
     }
 }
 
@@ -62,6 +62,7 @@ public void NodeSOInit(WikibaseBinding item){
         EdgeSOInit(item);
         EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
     }
+    
     if(item.isProduct.value == "true"){  
         currentEdge.AddProduct(currentNode);
     }else if(item.isReactant.value == "true"){
@@ -94,6 +95,7 @@ public void PathwaySOInit(WikibaseBinding item){
 public async void ClearQueryData(){
     NodeSOs.Clear();
     EdgeSOs.Clear();
+    PathwaySOs.Clear();
 
     DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Data/QuerySO/");
     int i = 0;

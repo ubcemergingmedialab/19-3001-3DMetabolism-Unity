@@ -11,51 +11,56 @@ public class QueryCustomEditor : EditorWindow
 
     string targetPathwayQID = "Here";
     public static string WQS = "http://wikibase-3dm.eml.ubc.ca:8282/proxy/wdqs/bigdata/namespace/wdq/sparql?format=json&query=";
-    public static string queryRawFirst = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " +
+    public static string queryRawFirst = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " + 
         "select distinct " +
         "?pathwayLabel (STRAFTER(?prefixedPathway, \":\") AS ?pathwayQID) "+
         "(strafter(?prefixedEdge,\":\") as ?edgeQID) " +
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
-        "(strafter(?prefixedEnzyme,\":\") as ?enzymeQID) " +
-        "?edgeLabel ?metaboliteLabel ?isBidirectional ?isReactant ?isProduct "+
-        "?enzymeLabel ?pathwayDesc ?edgeDesc ?metaboliteDesc where {";
+        "?edgeLabel ?metaboliteLabel ?enzymeLabel ?isBidirectional ?isReactant ?isProduct ?isEnzyme "+
+        "?pathwayDesc ?edgeDesc ?metaboliteDesc where {";
     public static string queryRawSecond = " p:P4 ?edgeStatement." +
         "?pathway schema:description ?pathwayDesc."+
         "?edgeStatement ps:P4 ?edge." +
         "?edge p:P4 ?statement." +
         "?edge schema:description ?edgeDesc." +
-        "?edge wdt:P14 ?enzyme." +
+        "?edge p:P4 ?enzymeStatement." +
+        "?enzymeStatement ps:P4 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
         "?metabolite schema:description ?metaboliteDesc." +
-        "?statement pq:P31|pq:P32 ?edge." +
+        "?statement (pq:P31|pq:P32) ?edge." +
+        "?enzymeStatement (pq:P42) ?edge." +
         "BIND(REPLACE(STR(?pathway), STR(foaf:), \"foaf:\") AS ?prefixedPathway) " +
         "BIND(replace(str(?edge), str(foaf:), \"foaf:\") as ?prefixedEdge)" +
         "BIND(replace(str(?metabolite), str(foaf:), \"foaf:\") as ?prefixedMetabolite)" +
-        "BIND(replace(str(?enzyme), str(foaf:), \"foaf:\") as ?prefixedEnzyme)"+
-        "BIND ( EXISTS { ?statement pq:P31 ?edge } as ?isReactant )" +
+        "BIND ( EXISTS { ?statement pq:P31 ?edge. } as ?isReactant )" +
         "BIND ( EXISTS {?edgeStatement pq:P40 ?edgeDirection } as ?isBidirectional )" +
-        "BIND ( EXISTS { ?statement pq:P32 ?edge } as ?isProduct )" +
+        "BIND ( EXISTS { ?statement pq:P32 ?edge. } as ?isProduct )" +
         "SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n }" ;
 
-    public static string qRawFull =   "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " +
+    public static string qRawFull =   "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " + 
         "select distinct " +
-        "?pathwayLabel (strafter(?prefixedEdge,\":\") as ?edgeQID) " +
+        "?pathwayLabel (STRAFTER(?prefixedPathway, \":\") AS ?pathwayQID) "+
+        "(strafter(?prefixedEdge,\":\") as ?edgeQID) " +
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
-        "(strafter(?prefixedEnzyme,\":\") as ?enzymeQID) " +
-        "?edgeLabel ?metaboliteLabel ?isBidirectional ?isReactant ?isProduct "+
-        "?enzymeLabel where {" +
-        "foaf:Q88 p:P4 ?edgeStatement." +
+        "?edgeLabel ?metaboliteLabel ?enzymeLabel ?isBidirectional ?isReactant ?isProduct ?isEnzyme "+
+        "?pathwayDesc ?edgeDesc ?metaboliteDesc where {" +
+        "?pathway p:P4 ?edgeStatement." +
+        "?pathway schema:description ?pathwayDesc."+
         "?edgeStatement ps:P4 ?edge." +
         "?edge p:P4 ?statement." +
-        "?edge wdt:P14 ?enzyme." +
+        "?edge schema:description ?edgeDesc." +
+        "?edge p:P4 ?enzymeStatement." +
+        "?enzymeStatement ps:P4 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
-        "?statement pq:P31|pq:P32 ?edge." +
+        "?metabolite schema:description ?metaboliteDesc." +
+        "?statement (pq:P31|pq:P32) ?edge." +
+        "?enzymeStatement (pq:P42) ?edge." +
+        "BIND(REPLACE(STR(?pathway), STR(foaf:), \"foaf:\") AS ?prefixedPathway) " +
         "BIND(replace(str(?edge), str(foaf:), \"foaf:\") as ?prefixedEdge)" +
         "BIND(replace(str(?metabolite), str(foaf:), \"foaf:\") as ?prefixedMetabolite)" +
-        "BIND(replace(str(?enzyme), str(foaf:), \"foaf:\") as ?prefixedEnzyme)"+
-        "BIND ( EXISTS { ?statement pq:P31 ?edge } as ?isReactant )" +
+        "BIND ( EXISTS { ?statement pq:P31 ?edge. } as ?isReactant )" +
         "BIND ( EXISTS {?edgeStatement pq:P40 ?edgeDirection } as ?isBidirectional )" +
-        "BIND ( EXISTS { ?statement pq:P32 ?edge } as ?isProduct )" +
+        "BIND ( EXISTS { ?statement pq:P32 ?edge. } as ?isProduct )" +
         "SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n }" ;
 
     [MenuItem("Window/QueryService")]
@@ -102,7 +107,7 @@ public class QueryCustomEditor : EditorWindow
         if (GUILayout.Button("Update active pathways in StatusController"))
         {
             Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
-            //GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
+            GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
             foreach(KeyValuePair<string,PathwaySO> pair in tempDict)
             {
                 Debug.Log("<Test> pw name : " + pair.Value.Label);

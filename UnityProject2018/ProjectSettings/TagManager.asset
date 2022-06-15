@@ -22,7 +22,6 @@ TagManager:
   - ribose-5-phosphate
   - oxaloacetate (mitochondrion)
   - citrate
-  - transketolase
   - argininosuccinate synthetase
   - carbamoyl phosphate
   - glycogen synthase
@@ -63,9 +62,7 @@ TagManager:
   - glucose
   - succinate dehydrogenase
   - L-lactate
-  - phosphofructosekinase-1 (PFK-1)
   - acetyl CoA
-  - fumarase (mitochodrion)
   - 6-phosphoglucono-delta-lactone
   - aspartate (mitochondrion)
   - 1,3-bisphosphoglycerate
@@ -105,7 +102,6 @@ TagManager:
   - phosphoenolpyruvate (mitochondrion)
   - malate (cytosol)
   - pyruvate dehydrogenase complex
-  - UDP-glucose pyrophosphorylase
   - glucose-1-phosphate
   - succinyl CoA synthetase
   - NH4+
@@ -113,6 +109,67 @@ TagManager:
   - phosphoenolpyruvate carboxykinase (cytosol)
   - 2-phosphoglycerate
   - malate dehydrogenase (cytosol)
+  - triose phosphate isomerase
+  - Carnitine-Acyl-Carnitine Cotransporter (membrane)
+  - phosphofructokinase-1
+  - hexokinase
+  - fumarase (mitochondrion)
+  - acetyl-CoA carboxylase
+  - B-ketoacyl-ACP reductase
+  - B-ketoacyl-ACP synthase
+  - citrate lyase
+  - enoyl-ACP reductase
+  - B-hydroxyacyl-ACP dehydratase
+  - thioesterase
+  - Carnitine Acyltransferase 1 (CPT1)
+  - Carnitine Acyltransferase 2 (CPT2) (membrane)
+  - Acyl-CoA Acetyltransferase (Thiolase)
+  - Hydroxyacyl-CoA Dehydrogenase
+  - Acyl-Carnitine (membrane)
+  - trans-delta2-enoyl-ACP
+  - palmitate
+  - B-ketoacyl-ACP
+  - Ketoacyl-CoA (mitochondrion)
+  - fructose-1,6-bisphosphate
+  - citrate (cytosol)
+  - malonyl CoA
+  - D-B-hydroxyacyl-ACP
+  - acetyl CoA (cytosol)
+  - acyl-ACP
+  - malate (mitochondrion)
+  - Trans-D2-Enoyl-CoA (mitochondrion)
+  - acyl-KS
+  - citrate (mitochondrion)
+  - Enoyl-CoA Hydratase
+  - Acyl-CoA Dehydrogenase
+  - Acyl-CoA Synthetase
+  - transketolase (1)
+  - transketolase (2)
+  - Carnitine (mitochondrion)
+  - Palmitic Acid (C16 Fatty Acid) (cytosol)
+  - Carnitine (cytosol)
+  - Acyl-Carnitine (mitochondrion)
+  - Fatty Acyl-Coenzyme A (Acyl-CoA) (cytosol)
+  - B-Hydroxyacyl-CoA (mitochondrion)
+  - Fatty Acyl-Coenzyme A (Acyl-CoA) (mitochondrion)
+  - lactate dehydrogenase
+  - thiolase II
+  - HMG-CoA lyase
+  - HMG CoA Synthase
+  - D-beta-hydroxybutyrate dehydrogenase
+  - acetoacetate decarboxylase
+  - alpha-1,6-glucosidase
+  - lactate
+  - malate-alpha-ketoglutarate transporter
+  - aspartate-glutamate transporter
+  - glycerol-3-phosphate dehydrogenase (cytosol)
+  - UDP-glucose pyrophosphorylase
+  - acetyl CoA (mitochondrion)
+  - acetoacetate
+  - acetoacetyl CoA
+  - acetone
+  - beta-hydroxy-beta-methylglutaryl-CoA (HMG-CoA)
+  - D-beta-hydroxybutyrate
   layers:
   - Default
   - TransparentFX

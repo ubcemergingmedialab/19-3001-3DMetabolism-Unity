@@ -21,15 +21,17 @@ public class PathwaySO : ScriptableObject
         this.Description = desc;
         
         LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>();
-        MakePathway();
+        // MakePathway();
     }
 
     // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
     public void AddNodeToPathway(NodeSO node) {
+        Debug.Log(node.Label + " in network: " + Label + " " + LocalNetwork.ContainsKey(node));
         if (!(LocalNetwork.ContainsKey(node))){
             LocalNetwork.Add(node, new List<EdgeSO>());
+            Debug.Log(node.Label + " added to " + this.Label);
         } else {
-            Debug.Log("<pathwaySO> node is already in " + this.Label + " - pathway");
+            Debug.Log("<pathwaySO> node " + node.Label + " is already in " + this.Label + " - pathway");
         }
     }
 
