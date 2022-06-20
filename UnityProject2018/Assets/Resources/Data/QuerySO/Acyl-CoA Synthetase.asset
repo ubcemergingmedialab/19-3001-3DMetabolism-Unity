@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1917073e3dfd4e243a9f52ba0e2ab73f, type: 3}
+  m_Name: Acyl-CoA Synthetase
+  m_EditorClassIdentifier: 
+  Label: "Palmitic Acid + CoA + ATP \u21CC Acyl-CoA + AMP + 2Pi"
+  Position: {x: 0, y: 0, z: 0}
+  QID: Q726
+  Description: Activation of Palmitic Acid into Fatty Acyl-CoA, which can be metabolised
+    in beta oxidation. Two-step reaction where Palmitic Acid is adenylylated by ATP,
+    then CoA-SH replaces the fatty-acid-bonded AMP.
+  EnergyConsumed: 
+  EnergyProduced: 
+  GibbsFreeEnergy: 
+  reactants: []
+  products: []
+  bidirectional: 1
+  AuxLabel: 
+  AuxPosition: {x: 0, y: 0, z: 0}
+  AuxQID: 
+  AuxDescription: 
+  AuxEnergyConsumed: 
+  AuxEnergyProduced: 
+  AuxGibbsFreeEnergy: 
