@@ -53,31 +53,43 @@ public class StatusController : MonoBehaviour
             }
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
+        
+    }
+
+    void Start(){
 
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
-
         // Send the list of active pathways to the button factory singleton instance
-        ButtonFactory.Instance.ActivePathways = activePathways;
-
-
+        //ButtonFactory.Instance.ActivePathways = activePathways;
+        Debug.Log("<HL> out of loop count: " + this.activePathways.Count);
         // Fill the elements network 
-        foreach (PathwaySO pathwaySO in activePathways) {
+        foreach (PathwaySO pathwaySO in this.activePathways) {
 
-            if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
+            if ( this.activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
+            Debug.Log("<HL> in loop count: " + this.activePathways.Count);
+            //pathwaySO.FillLists();
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
+            Debug.Log("<HL> " + pathwaySO.name + " highlight pathway component for: " + highlightPathway.pathwayToHighlight.name);
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
+            Debug.Log("<HL> " + highlightByPathwaySO.Count);
+            
 
             List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
-            List<EdgeSO> listOfEdges = new List<EdgeSO>();                                                       
-            foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
+            List<EdgeSO> listOfEdges = new List<EdgeSO>();
+            if (pathwaySO.LocalNetwork != null){
+                foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
                 listOfNodes.Add(pair.Key);                                                                          // grab all the nodes in pathway
                 listOfEdges.AddRange(pair.Value);                                                                   // grab all the edges in the pathway
-            }  
+            }
+            }else{
+                Debug.LogError("StatusController : Local netwrok in pathway is empty");
+            }                                                       
+              
 
             foreach(NodeSO nodeSO in listOfNodes) {                                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
@@ -115,14 +127,13 @@ public class StatusController : MonoBehaviour
                 }
             }
         }
-        
     }
 
 
     // Update is called once per frame
     void Update()
     {   
-        // PipelineTest();             // for manual testing of the highlight functionality
+        PipelineTest();             // for manual testing of the highlight functionality
         
     }
 

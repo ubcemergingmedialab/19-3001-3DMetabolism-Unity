@@ -116,7 +116,18 @@ public class QueryCustomEditor : EditorWindow
             }
         }
 
-        
+         if (GUILayout.Button("Print local networks"))
+        {
+            Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
+            foreach(KeyValuePair<string,PathwaySO> pw in tempDict){
+                foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.Value.LocalNetwork){
+                    Debug.Log("pathway: " + pw.Key + " network \n" + "node: " + pair.Key + " edge :");
+                    foreach(EdgeSO edge in pair.Value){
+                        Debug.Log(edge.Label);
+                    }
+                }            
+                }
+        }
     }
 
 

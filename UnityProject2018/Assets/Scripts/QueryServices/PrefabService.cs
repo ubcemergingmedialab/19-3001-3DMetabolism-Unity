@@ -13,7 +13,7 @@ public class PrefabService : MonoBehaviour
         if (pathways[0].LocalNetwork == null) {
             Debug.Log("pw.network is NULL !!");
         }
-        Debug.Log("<PrefabService test> pathway local network count: " + pathways[0].LocalNetwork.Count);
+        Debug.Log("<PrefabService test> pathway local network count: " + pathways[2].LocalNetwork.Count);
 
 
         foreach (PathwaySO pathway in pathways){

@@ -41,6 +41,7 @@ public class ButtonFactory : MonoBehaviour
             return;
         }
         _instance = this;
+
     }
 
 
