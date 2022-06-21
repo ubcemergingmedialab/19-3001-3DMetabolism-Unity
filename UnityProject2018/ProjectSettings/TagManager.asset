@@ -170,6 +170,9 @@ TagManager:
   - acetone
   - beta-hydroxy-beta-methylglutaryl-CoA (HMG-CoA)
   - D-beta-hydroxybutyrate
+  - transketolase
+  - fumarase (mitochodrion)
+  - phosphofructosekinase-1 (PFK-1)
   layers:
   - Default
   - TransparentFX
