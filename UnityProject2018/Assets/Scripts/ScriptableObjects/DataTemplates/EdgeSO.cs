@@ -29,11 +29,12 @@ public class EdgeSO : ScriptableObject
 
     /* initialize the essential fields 
     */
-    public void init(string name, string newQID, bool bidirectionality = false){
+    public void init(string name, string newQID, string desc, string enzymeLabel, bool bidirectionality = false){
 
         this.QID = newQID;
-        this.name = name;
+        this.name = enzymeLabel;
         this.Label = name;
+        this.Description = desc;
         this.bidirectional = bidirectionality;
         this.reactants = new List<NodeSO>();
         this.products = new List<NodeSO>();
