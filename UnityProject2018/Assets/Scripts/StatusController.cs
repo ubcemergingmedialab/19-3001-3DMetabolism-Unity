@@ -53,7 +53,10 @@ public class StatusController : MonoBehaviour
             }
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
+    }
 
+    void Start()
+    {
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
@@ -67,6 +70,7 @@ public class StatusController : MonoBehaviour
         foreach (PathwaySO pathwaySO in activePathways) {
 
             if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
+            Debug.Log("pw count in ButtonFactory: " + activePathways.Count);
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway

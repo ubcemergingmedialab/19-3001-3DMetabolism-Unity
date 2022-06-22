@@ -10,13 +10,14 @@ public class PrefabService : MonoBehaviour
 
         // for testing purposes, checks if pathways and pathway local networks exist and shos count
         Debug.Log("<PrefabService Test> pathway count: " + pathways.Count);
-        if (pathways[0].LocalNetwork == null) {
-            Debug.Log("pw.network is NULL !!");
-        }
-        Debug.Log("<PrefabService test> pathway local network count: " + pathways[0].LocalNetwork.Count);
+        // if (pathways[0].LocalNetwork == null) {
+        //     Debug.Log("pw.network is NULL !!");
+        // }
+        // Debug.Log("<PrefabService test> pathway local network count: " + pathways[0].LocalNetwork.Count);
 
 
         foreach (PathwaySO pathway in pathways){
+            Debug.Log("<PrefabService test> pw local network count: " + pathway.LocalNetwork.Count);
 
             foreach (KeyValuePair<NodeSO, List<EdgeSO>> pair in pathway.LocalNetwork){
                 FindNodeSOGameObject(pair.Key);
@@ -30,7 +31,6 @@ public class PrefabService : MonoBehaviour
  
     public void FindNodeSOGameObject(NodeSO node) {
         string nodeName = node.Label; 
-        //GameObject obj = new GameObject();
         GameObject obj =  GameObject.Find(nodeName);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
@@ -44,10 +44,7 @@ public class PrefabService : MonoBehaviour
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
-        //GameObject[] objs = new GameObject[10];
-        // objs = GameObject.Find(edgeName);
-        //objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
-        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName); 
         foreach (GameObject obj in objs) 
         {    
             if (obj != null) {
