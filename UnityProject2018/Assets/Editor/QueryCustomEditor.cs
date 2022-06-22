@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-//[CustomEditor(typeof(QueryEditor))]
+// [CustomEditor(typeof(QueryEditor))]
 public class QueryCustomEditor : EditorWindow
 {
 
@@ -110,7 +110,7 @@ public class QueryCustomEditor : EditorWindow
             GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
             foreach(KeyValuePair<string,PathwaySO> pair in tempDict)
             {
-                Debug.Log("<Test> pw name : " + pair.Value.Label);
+                Debug.Log("<StatusContorller List> pw name being added : " + pair.Value.Label);
                 GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
 
             }

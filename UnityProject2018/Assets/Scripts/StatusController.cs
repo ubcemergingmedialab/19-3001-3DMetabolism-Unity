@@ -81,15 +81,19 @@ public class StatusController : MonoBehaviour
 
             List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
             List<EdgeSO> listOfEdges = new List<EdgeSO>();
+
+            IDictionaryEnumerator networkEnumerator = pathwaySO.GetLocalNetworkEnumerator();
+            
             if (pathwaySO.LocalNetwork != null){
-                foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
-                listOfNodes.Add(pair.Key);                                                                          // grab all the nodes in pathway
-                listOfEdges.AddRange(pair.Value);                                                                   // grab all the edges in the pathway
-            }
+               while(networkEnumerator.MoveNext()){
+                    listOfNodes.Add( (NodeSO) networkEnumerator.Key); 
+                    listOfEdges.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                }
             }else{
                 Debug.LogError("StatusController : Local netwrok in pathway is empty");
-            }                                                       
-              
+            }
+
+            networkEnumerator.Reset();     
 
             foreach(NodeSO nodeSO in listOfNodes) {                                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);

@@ -55,6 +55,10 @@ public class PathwaySO : ScriptableObject
         }
     }
 
+    public IDictionaryEnumerator GetLocalNetworkEnumerator(){
+        return LocalNetwork.GetEnumerator();
+    }
+
     // public void FillLists(){
     //     foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in this.LocalNetwork){
     //         nodes.Add(pair.Key);

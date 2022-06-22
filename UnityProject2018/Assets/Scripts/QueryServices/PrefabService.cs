@@ -13,17 +13,24 @@ public class PrefabService : MonoBehaviour
         if (pathways[0].LocalNetwork == null) {
             Debug.Log("pw.network is NULL !!");
         }
-        Debug.Log("<PrefabService test> pathway local network count: " + pathways[2].LocalNetwork.Count);
+        // Debug.Log("<PrefabService test> pathway local network count: " + pathways[2].LocalNetwork.Count);
 
 
         foreach (PathwaySO pathway in pathways){
+            IDictionaryEnumerator LNEnumerator = pathway.GetLocalNetworkEnumerator();
 
-            foreach (KeyValuePair<NodeSO, List<EdgeSO>> pair in pathway.LocalNetwork){
-                FindNodeSOGameObject(pair.Key);
-                foreach(EdgeSO edge in pair.Value){
+            while(LNEnumerator.MoveNext()){
+                FindNodeSOGameObject((NodeSO) LNEnumerator.Key);
+                foreach(EdgeSO edge in ((List<EdgeSO>) LNEnumerator.Value)){
                     FindEdgeSOGameObject(edge);
                 }
             }
+            // foreach (KeyValuePair<NodeSO, List<EdgeSO>> pair in pathway.LocalNetwork){
+            //     FindNodeSOGameObject(pair.Key);
+            //     foreach(EdgeSO edge in pair.Value){
+            //         FindEdgeSOGameObject(edge);
+            //     }
+            // }
         }
         
     }
