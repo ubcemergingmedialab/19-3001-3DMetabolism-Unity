@@ -11,7 +11,7 @@ public class PathwaySO : ScriptableObject
     public string Label;
     public string Description;
     // Note: How to manage edges if there is the connections are dealt with in nodes? we need edges for highlighting 
-    public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork;
+    public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>() ;
 
     public void init(string name, string qid, string desc){
 
@@ -19,8 +19,8 @@ public class PathwaySO : ScriptableObject
         this.Label = name;
         this.QID = qid;
         this.Description = desc;
-        
-        LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>();
+        nodes = new List<NodeSO>();
+        edges = new List<EdgeSO>();
         // MakePathway();
     }
 
@@ -56,13 +56,19 @@ public class PathwaySO : ScriptableObject
     }
 
     public IDictionaryEnumerator GetLocalNetworkEnumerator(){
-        return LocalNetwork.GetEnumerator();
+        if(LocalNetwork != null){
+           return LocalNetwork.GetEnumerator(); 
+        }else{
+            Debug.LogError("<!> local network is null, pathwaySO.getLocalNetworkEnum");
+            return null;
+        }
+        
     }
 
-    // public void FillLists(){
-    //     foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in this.LocalNetwork){
-    //         nodes.Add(pair.Key);
-    //         edges.AddRange(pair.Value);
-    //     }
-    // }
+    public void FillLists(){
+        foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in LocalNetwork){
+            nodes.Add(pair.Key);
+            edges.AddRange(pair.Value);
+        }
+    }
 }

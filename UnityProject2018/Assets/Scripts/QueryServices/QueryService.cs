@@ -147,4 +147,11 @@ IEnumerator GetRequest(string uri)
         }
     }
 
+public void FillPathwayList(){
+    foreach (KeyValuePair<string, PathwaySO> item in PathwaySOs)
+    {
+        item.Value.FillLists();
+    }
+}
+
 }

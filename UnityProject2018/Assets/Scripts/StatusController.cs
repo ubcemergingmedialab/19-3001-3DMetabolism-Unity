@@ -53,20 +53,23 @@ public class StatusController : MonoBehaviour
             }
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
-        
-    }
-
-    void Start(){
 
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
-        // Send the list of active pathways to the button factory singleton instance
         //ButtonFactory.Instance.ActivePathways = activePathways;
-        Debug.Log("<HL> out of loop count: " + this.activePathways.Count);
+
+        if (activePathways == null || activePathways.Count == 0) {
+            Debug.LogError("<!> ACTIVE PATHWAYS EMPTY");
+        }
+        Debug.Log("<HL> out of loop count: " + this.activePathways.Count); 
         // Fill the elements network 
         foreach (PathwaySO pathwaySO in this.activePathways) {
+
+            if (pathwaySO == null){
+                Debug.LogError("<!> Status controller : pathway scriptable object in active pathways is NULL");
+            }
 
             if ( this.activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
             Debug.Log("<HL> in loop count: " + this.activePathways.Count);
@@ -89,11 +92,12 @@ public class StatusController : MonoBehaviour
                     listOfNodes.Add( (NodeSO) networkEnumerator.Key); 
                     listOfEdges.AddRange( (List<EdgeSO>) networkEnumerator.Value);
                 }
+                //networkEnumerator.Reset();
             }else{
-                Debug.LogError("StatusController : Local netwrok in pathway is empty");
+                Debug.LogError("<!>  StatusController : Local netwrok in pathway is empty");
             }
 
-            networkEnumerator.Reset();     
+                 
 
             foreach(NodeSO nodeSO in listOfNodes) {                                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
@@ -131,6 +135,12 @@ public class StatusController : MonoBehaviour
                 }
             }
         }
+        
+    }
+
+    void Start(){
+        
+        Debug.Log("<!> not disabled yet ");
     }
 
 
