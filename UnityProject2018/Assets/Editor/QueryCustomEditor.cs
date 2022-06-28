@@ -108,19 +108,33 @@ public class QueryCustomEditor : EditorWindow
 
         if (GUILayout.Button("Print local networks"))
         {
-            Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
-            foreach(KeyValuePair<string,PathwaySO> pw in tempDict){
-                Debug.Log("<!> local network count : " + pw.Value.LocalNetwork);
-                if(pw.Value.LocalNetwork == null){
-                    Debug.Log("<!> local network empty");
+            List<PathwaySO> tempList = GameObject.Find("StatusController").GetComponent<StatusController>().activePathways;
+
+            foreach(PathwaySO pw in tempList){
+                Debug.Log("<!> local network count : " + pw.LocalNetwork.Count);
+                if(pw.LocalNetwork == null){
+                    Debug.Log("<!> local network NULL");
                 }
-                foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.Value.LocalNetwork){
-                    Debug.Log("pathway: " + pw.Key + " network \n" + "node: " + pair.Key + " edge :");
+                foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.LocalNetwork){
+                    Debug.Log("pathway: " + pw.Label + " network \n" + "node: " + pair.Key + " edge :");
                     foreach(EdgeSO edge in pair.Value){
                         Debug.Log(edge.Label);
                     }
-                }            
+                }
             }
+            // Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
+            // foreach(KeyValuePair<string,PathwaySO> pw in tempDict){
+            //     Debug.Log("<!> local network count : " + pw.Value.LocalNetwork);
+            //     if(pw.Value.LocalNetwork == null){
+            //         Debug.Log("<!> local network empty");
+            //     }
+            //     foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.Value.LocalNetwork){
+            //         Debug.Log("pathway: " + pw.Key + " network \n" + "node: " + pair.Key + " edge :");
+            //         foreach(EdgeSO edge in pair.Value){
+            //             Debug.Log(edge.Label);
+            //         }
+            //     }            
+            // }
         }
 
         if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
@@ -139,6 +153,10 @@ public class QueryCustomEditor : EditorWindow
          if (GUILayout.Button("Fill pathway list (last click)"))
         {
            GameObject.Find("QueryService").GetComponent<QueryService>().FillPathwayList();
+        }
+         if (GUILayout.Button("Fill node and edges list (statusController)"))
+        {
+           GameObject.Find("StatusController").GetComponent<StatusController>().FillItemReferenceList();
         }
     }
 

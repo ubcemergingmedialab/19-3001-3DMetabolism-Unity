@@ -33,6 +33,12 @@ public class StatusController : MonoBehaviour
 
     public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
 
+    //temp nodes edge list for testing
+    public List<EdgeSO> AllEdgeSOs;
+    public List<NodeSO> AllNodeSOs;
+
+
+
     public GameObject tempObjectHolder;                                                 // temporary, manually testing highlighting till buttons are developed
     int num = 0; //temp
     
@@ -44,6 +50,13 @@ public class StatusController : MonoBehaviour
         - for every node/edge, it grabs the HighlightHandler component and the list of pathways it is apart of and links them in elementsToPathways dict
     */
 
+
+/*
+1 - Create a list of all nodes and edges in status controller to hold ref on play mode
+2 - Query the JSON in edit mode and then parse and create SOs on load
+3 - Addressables 
+
+*/
     void Awake() 
     {
         if (_instance != null && _instance != this) 
@@ -237,6 +250,21 @@ public class StatusController : MonoBehaviour
     public HighlightPathway GetHighlightByPathwaySO(PathwaySO pathwaySO){
         highlightByPathwaySO.TryGetValue(pathwaySO, out HighlightPathway value);
         return value;
+    }
+
+    // fills up tyhe all nodes and edges list in status controller in order to hold a ref to the SOs , from active pathways.
+    public void FillItemReferenceList(){
+        
+        foreach(PathwaySO pw in activePathways){
+            IDictionaryEnumerator networkEnumerator = pw.GetLocalNetworkEnumerator();
+            if (pw.LocalNetwork != null){
+               while(networkEnumerator.MoveNext()){
+                    AllNodeSOs.Add( (NodeSO) networkEnumerator.Key); 
+                    AllEdgeSOs.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                }
+            }
+        
+        }
     }
 
 // function for manually testing the higlhight pipeline with num keys activating pathways in the pathway list

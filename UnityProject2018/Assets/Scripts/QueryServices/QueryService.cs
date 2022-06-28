@@ -13,7 +13,7 @@ static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
 public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
 
-string ResourceFolderPath = "Assets/Resources/Data/QuerySO/";
+static string ResourceFolderPath = "Assets/Resources/Data/";
 
  void Start() {
     
@@ -30,7 +30,7 @@ public void EdgeSOInit(WikibaseBinding item){
         }
         // Debug.Log(item.isBidirectional.value + " direction var = " + direction);
         edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,direction);
-        string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
+        string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
         Debug.Log(item.enzymeLabel.value + " edge added");
@@ -48,7 +48,7 @@ public void NodeSOInit(WikibaseBinding item){
 
     if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
         
-        string newPath = ResourceFolderPath + item.metaboliteLabel.value + ".asset";
+        string newPath = ResourceFolderPath + "NodeSO/" +item.metaboliteLabel.value + ".asset";
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
         currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value);
         NodeSOs.Add(item.metaboliteLabel.value,currentNode);
@@ -84,7 +84,7 @@ public void PathwaySOInit(WikibaseBinding item){
     if (!(PathwaySOs.ContainsKey(item.pathwayLabel.value))){
         PathwaySO pathway = ScriptableObject.CreateInstance<PathwaySO>();
         pathway.init(item.pathwayLabel.value,item.pathwayQID.value,item.pathwayDesc.value);
-        string newPath = ResourceFolderPath + item.pathwayLabel.value + ".asset";
+        string newPath = ResourceFolderPath + "PathwaySO/"+ item.pathwayLabel.value + ".asset";
         AssetDatabase.CreateAsset(pathway,newPath);
         PathwaySOs.Add(item.pathwayLabel.value,pathway);
     }
@@ -97,14 +97,20 @@ public async void ClearQueryData(){
     EdgeSOs.Clear();
     PathwaySOs.Clear();
 
-    DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Data/QuerySO/");
+    DirectoryInfo pathwayDir = new DirectoryInfo("Assets/Resources/Data/PathwaySO/");
+    DirectoryInfo edgeDir = new DirectoryInfo("Assets/Resources/Data/EdgeSO/");
+    DirectoryInfo nodeDir = new DirectoryInfo("Assets/Resources/Data/NodeSO/");
+    List<DirectoryInfo> dirs = new List<DirectoryInfo>(){pathwayDir,edgeDir, nodeDir};
     int i = 0;
-    foreach(FileInfo fi in dir.GetFiles())
-    {
-        fi.Delete();
-        i++;
-        
+    foreach(DirectoryInfo dir in dirs){
+        foreach(FileInfo fi in dir.GetFiles())
+        {
+            fi.Delete();
+            i++;
+            
+        }  
     }
+    
     Debug.Log("deleted: " + i + " files");
 }
 
