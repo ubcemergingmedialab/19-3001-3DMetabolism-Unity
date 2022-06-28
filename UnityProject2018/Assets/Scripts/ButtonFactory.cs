@@ -53,9 +53,10 @@ public class ButtonFactory : MonoBehaviour
 
         foreach (PathwaySO pathway in ActivePathways)
         {
+            Debug.Log("adding button for " + pathway);
             buttons.Add(GenerateButton(pathway), pathway);
-            GameObject favButton = ff.GenerateButtonAndSetPosition(buttonX, buttonY, pathway);
-            ff.favButtons.Add(favButton, pathway);
+            // GameObject favButton = ff.GenerateButtonAndSetPosition(buttonX, buttonY, pathway); // TODO: fix favourites buttons, this is preventing most buttons from generating atm
+            // ff.favButtons.Add(favButton, pathway);
             buttonY += buttonYOffset;
         }
     }
