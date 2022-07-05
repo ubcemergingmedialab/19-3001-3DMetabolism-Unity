@@ -87,6 +87,11 @@ public class QueryCustomEditor : EditorWindow
             GameObject.Find("QueryService").GetComponent<QueryService>().ClearQueryData();
         }
 
+         if (GUILayout.Button("delete query xml"))
+        {
+            GameObject.Find("QueryService").GetComponent<QueryService>().DeleteQueryXml();
+        }
+
         if (GUILayout.Button("run query"))
         { 
             string qRawFull = queryRawFirst + temp + queryRawSecond ;
@@ -94,17 +99,17 @@ public class QueryCustomEditor : EditorWindow
             GameObject.Find("QueryService").GetComponent<QueryService>().RunQuery(WQS,qRawFull);
         }
   
-        if (GUILayout.Button("Update active pathways in StatusController"))
-        {
-            Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
-            GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
-            foreach(KeyValuePair<string,PathwaySO> pair in tempDict)
-            {
-                Debug.Log("<StatusContorller List> pw name being added : " + pair.Value.Label);
-                GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
+        // if (GUILayout.Button("Update active pathways in StatusController"))
+        // {
+        //     Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
+        //     GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
+        //     foreach(KeyValuePair<string,PathwaySO> pair in tempDict)
+        //     {
+        //         Debug.Log("<StatusContorller List> pw name being added : " + pair.Value.Label);
+        //         GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
 
-            }
-        }
+        //     }
+        // }
 
         if (GUILayout.Button("Print local networks"))
         {
@@ -137,27 +142,27 @@ public class QueryCustomEditor : EditorWindow
             // }
         }
 
-        if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
-        {
-            //PrefabService prefabService = new PrefabService();
-            GameObject.Find("PrefabService").GetComponent<PrefabService>().PrefabAssignment();
-            // prefabService.PrefabAssignment();
-        }
+        // if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
+        // {
+        //     //PrefabService prefabService = new PrefabService();
+        //     GameObject.Find("PrefabService").GetComponent<PrefabService>().PrefabAssignment();
+        //     // prefabService.PrefabAssignment();
+        // }
 
-        // active pathways are now filled with SOs from query using this button 
-        // TODO: active pathways needs to be cleared if the SOs are deleted, this is done manually atm
+        // // active pathways are now filled with SOs from query using this button 
+        // // TODO: active pathways needs to be cleared if the SOs are deleted, this is done manually atm
         
 
          
 
-         if (GUILayout.Button("Fill pathway list (last click)"))
-        {
-           GameObject.Find("QueryService").GetComponent<QueryService>().FillPathwayList();
-        }
-         if (GUILayout.Button("Fill node and edges list (statusController)"))
-        {
-           GameObject.Find("StatusController").GetComponent<StatusController>().FillItemReferenceList();
-        }
+        //  if (GUILayout.Button("Fill pathway list (last click)"))
+        // {
+        //    GameObject.Find("QueryService").GetComponent<QueryService>().FillPathwayList();
+        // }
+        //  if (GUILayout.Button("Fill node and edges list (statusController)"))
+        // {
+        //    GameObject.Find("StatusController").GetComponent<StatusController>().FillItemReferenceList();
+        // }
     }
 
 

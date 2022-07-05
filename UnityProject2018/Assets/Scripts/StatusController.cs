@@ -66,20 +66,16 @@ public class StatusController : MonoBehaviour
             }
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    void Start()
-    {
+        
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
-        //ButtonFactory.Instance.ActivePathways = activePathways;
-
-        if (activePathways == null || activePathways.Count == 0) {
+         if (activePathways == null || activePathways.Count == 0) {
             Debug.LogError("<!> ACTIVE PATHWAYS EMPTY");
         }
-        Debug.Log("<HL> out of loop count: " + this.activePathways.Count); 
+        
+        // Debug.Log("<HL> out of loop count: " + this.activePathways.Count); 
         // Fill the elements network 
         foreach (PathwaySO pathwaySO in this.activePathways) {
 
@@ -89,15 +85,15 @@ public class StatusController : MonoBehaviour
 
 
             if ( this.activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
-            Debug.Log("<HL> in loop count: " + this.activePathways.Count);
+            // Debug.Log("<HL> in loop count: " + this.activePathways.Count);
             //pathwaySO.FillLists();
 
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
-            Debug.Log("<HL> " + pathwaySO.name + " highlight pathway component for: " + highlightPathway.pathwayToHighlight.name);
+            // Debug.Log("<HL> " + pathwaySO.name + " highlight pathway component for: " + highlightPathway.pathwayToHighlight.name);
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
-            Debug.Log("<HL> " + highlightByPathwaySO.Count);
+            // Debug.Log("<HL> " + highlightByPathwaySO.Count);
             
 
             List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
@@ -153,12 +149,16 @@ public class StatusController : MonoBehaviour
                 }
             }
         }
-        
     }
 
-    void Start(){
+    void Start()
+    {
         
-        Debug.Log("<!> not disabled yet ");
+
+        // ButtonFactory.Instance.ActivePathways = activePathways;
+
+       
+        
     }
 
 
@@ -204,6 +204,13 @@ public class StatusController : MonoBehaviour
     public HighlightPathway.HighlightState ElementCheckState(HighlightHandler highlightHandler) {
         
         HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
+         if (highlightHandler ==null) {
+            Debug.LogError("StatusController.ElementCheckState : pathway null");
+        }   
+
+        if (highlightByPathwaySO == null) {
+            Debug.LogError("StatusController.ElementCheckState : dictionary empty");
+        }
         elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> currentList);
 
         if ( currentList != null) {
@@ -214,7 +221,7 @@ public class StatusController : MonoBehaviour
                     }
             }
         } else {
-            Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            Debug.LogError("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }

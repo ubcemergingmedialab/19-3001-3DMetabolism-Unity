@@ -30,7 +30,7 @@ public class HighlightHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateHighlight();
+        //UpdateHighlight();
         if (upArrow != null)
         {
             activeArrows = new List<GameObject>();

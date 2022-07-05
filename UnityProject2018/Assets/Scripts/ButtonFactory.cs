@@ -49,7 +49,7 @@ public class ButtonFactory : MonoBehaviour
 
         void Start()
     {
-        ActivePathways = StatusController.Instance.activePathways;
+        ActivePathways = new List<PathwaySO>(StatusController.Instance.activePathways);
         FavouriteButtonFactory ff = FavouriteButtonFactory.Instance;
 
         foreach (PathwaySO pathway in ActivePathways)
