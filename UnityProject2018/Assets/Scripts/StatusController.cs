@@ -156,10 +156,10 @@ public class StatusController : MonoBehaviour
         
     }
 
-    void Start(){
+    // void Start(){
         
-        Debug.Log("<!> not disabled yet ");
-    }
+    //     Debug.Log("<!> not disabled yet ");
+    // }
 
 
     // Update is called once per frame
