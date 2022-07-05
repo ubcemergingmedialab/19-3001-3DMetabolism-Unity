@@ -127,7 +127,7 @@ public void EdgeSOInit(WikibaseBinding item){
         string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
-        Debug.Log(item.enzymeLabel.value + " edge added");
+        // Debug.Log(item.enzymeLabel.value + " edge added");
     }
 }
 

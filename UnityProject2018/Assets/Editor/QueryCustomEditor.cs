@@ -9,7 +9,7 @@ using System.IO;
 public class QueryCustomEditor : EditorWindow
 {
 
-    string targetPathwayQID = "Here";
+    string targetPathwayQID = "ALL";
     public static string WQS = "http://wikibase-3dm.eml.ubc.ca:8282/proxy/wdqs/bigdata/namespace/wdq/sparql?format=json&query=";
     public static string queryRawFirst = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " + 
         "select distinct " +

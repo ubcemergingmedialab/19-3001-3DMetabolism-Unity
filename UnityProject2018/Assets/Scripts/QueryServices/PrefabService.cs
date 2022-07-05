@@ -11,11 +11,13 @@ public class PrefabService : MonoBehaviour
 
         // for testing purposes, checks if pathways and pathway local networks exist and shos count
         Debug.Log("<PrefabService Test> pathway count: " + pathways.Count);
+
         if (pathways[0].LocalNetwork == null) {
             Debug.Log("pw.network is NULL !!");
         }else{
             foreach (PathwaySO pathway in pathways){
                 IDictionaryEnumerator LNEnumerator = pathway.GetLocalNetworkEnumerator();
+
 
                 while(LNEnumerator.MoveNext()){
                     FindNodeSOGameObject((NodeSO) LNEnumerator.Key);
@@ -35,12 +37,11 @@ public class PrefabService : MonoBehaviour
  
     public void FindNodeSOGameObject(NodeSO node) {
         string nodeName = node.Label; 
-        //GameObject obj = new GameObject();
         GameObject obj =  GameObject.Find(nodeName);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
-                //Debug.Log("Attached node " + nodeName);
+                Debug.Log("Attached node " + nodeName);
             }
         } else {
             Debug.LogError("Node scriptable object not connected to prefab: " + nodeName);
@@ -49,10 +50,7 @@ public class PrefabService : MonoBehaviour
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
-        //GameObject[] objs = new GameObject[10];
-        // objs = GameObject.Find(edgeName);
-        //objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
-        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName); // TODO: Overlapping Edge model implementation should fix this issue
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName); 
         foreach (GameObject obj in objs) 
         {    
             if (obj != null) {

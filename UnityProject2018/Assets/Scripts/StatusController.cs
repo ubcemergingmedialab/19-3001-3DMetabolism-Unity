@@ -66,7 +66,10 @@ public class StatusController : MonoBehaviour
             }
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
+    }
 
+    void Start()
+    {
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
@@ -84,9 +87,11 @@ public class StatusController : MonoBehaviour
                 Debug.LogError("<!> Status controller : pathway scriptable object in active pathways is NULL");
             }
 
+
             if ( this.activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
             Debug.Log("<HL> in loop count: " + this.activePathways.Count);
             //pathwaySO.FillLists();
+
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
             Debug.Log("<HL> " + pathwaySO.name + " highlight pathway component for: " + highlightPathway.pathwayToHighlight.name);
