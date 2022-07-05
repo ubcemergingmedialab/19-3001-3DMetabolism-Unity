@@ -33,6 +33,12 @@ public class StatusController : MonoBehaviour
 
     public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
 
+    //temp nodes edge list for testing
+    public List<EdgeSO> AllEdgeSOs;
+    public List<NodeSO> AllNodeSOs;
+
+
+
     public GameObject tempObjectHolder;                                                 // temporary, manually testing highlighting till buttons are developed
     int num = 0; //temp
     
@@ -44,6 +50,13 @@ public class StatusController : MonoBehaviour
         - for every node/edge, it grabs the HighlightHandler component and the list of pathways it is apart of and links them in elementsToPathways dict
     */
 
+
+/*
+1 - Create a list of all nodes and edges in status controller to hold ref on play mode
+2 - Query the JSON in edit mode and then parse and create SOs on load
+3 - Addressables 
+
+*/
     void Awake() 
     {
         if (_instance != null && _instance != this) 
@@ -61,27 +74,48 @@ public class StatusController : MonoBehaviour
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
+        //ButtonFactory.Instance.ActivePathways = activePathways;
 
-        // Send the list of active pathways to the button factory singleton instance
-        ButtonFactory.Instance.ActivePathways = activePathways;
-
-
+        if (activePathways == null || activePathways.Count == 0) {
+            Debug.LogError("<!> ACTIVE PATHWAYS EMPTY");
+        }
+        Debug.Log("<HL> out of loop count: " + this.activePathways.Count); 
         // Fill the elements network 
-        foreach (PathwaySO pathwaySO in activePathways) {
+        foreach (PathwaySO pathwaySO in this.activePathways) {
 
-            if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
-            Debug.Log("pw count in ButtonFactory: " + activePathways.Count);
+            if (pathwaySO == null){
+                Debug.LogError("<!> Status controller : pathway scriptable object in active pathways is NULL");
+            }
+
+
+            if ( this.activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
+            Debug.Log("<HL> in loop count: " + this.activePathways.Count);
+            //pathwaySO.FillLists();
+
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
+            Debug.Log("<HL> " + pathwaySO.name + " highlight pathway component for: " + highlightPathway.pathwayToHighlight.name);
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
+            Debug.Log("<HL> " + highlightByPathwaySO.Count);
+            
 
             List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
-            List<EdgeSO> listOfEdges = new List<EdgeSO>();                                                       
-            foreach(KeyValuePair<NodeSO,List<EdgeSO>> pair in pathwaySO.LocalNetwork){
-                listOfNodes.Add(pair.Key);                                                                          // grab all the nodes in pathway
-                listOfEdges.AddRange(pair.Value);                                                                   // grab all the edges in the pathway
-            }  
+            List<EdgeSO> listOfEdges = new List<EdgeSO>();
+
+            IDictionaryEnumerator networkEnumerator = pathwaySO.GetLocalNetworkEnumerator();
+            
+            if (pathwaySO.LocalNetwork != null){
+               while(networkEnumerator.MoveNext()){
+                    listOfNodes.Add( (NodeSO) networkEnumerator.Key); 
+                    listOfEdges.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                }
+                //networkEnumerator.Reset();
+            }else{
+                Debug.LogError("<!>  StatusController : Local netwrok in pathway is empty");
+            }
+
+                 
 
             foreach(NodeSO nodeSO in listOfNodes) {                                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
@@ -122,11 +156,16 @@ public class StatusController : MonoBehaviour
         
     }
 
+    void Start(){
+        
+        Debug.Log("<!> not disabled yet ");
+    }
+
 
     // Update is called once per frame
     void Update()
     {   
-        // PipelineTest();             // for manual testing of the highlight functionality
+        PipelineTest();             // for manual testing of the highlight functionality
         
     }
 
@@ -216,6 +255,21 @@ public class StatusController : MonoBehaviour
     public HighlightPathway GetHighlightByPathwaySO(PathwaySO pathwaySO){
         highlightByPathwaySO.TryGetValue(pathwaySO, out HighlightPathway value);
         return value;
+    }
+
+    // fills up tyhe all nodes and edges list in status controller in order to hold a ref to the SOs , from active pathways.
+    public void FillItemReferenceList(){
+        
+        foreach(PathwaySO pw in activePathways){
+            IDictionaryEnumerator networkEnumerator = pw.GetLocalNetworkEnumerator();
+            if (pw.LocalNetwork != null){
+               while(networkEnumerator.MoveNext()){
+                    AllNodeSOs.Add( (NodeSO) networkEnumerator.Key); 
+                    AllEdgeSOs.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                }
+            }
+        
+        }
     }
 
 // function for manually testing the higlhight pipeline with num keys activating pathways in the pathway list

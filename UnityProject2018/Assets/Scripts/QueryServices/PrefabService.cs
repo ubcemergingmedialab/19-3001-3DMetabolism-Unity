@@ -8,25 +8,31 @@ public class PrefabService : MonoBehaviour
     public void PrefabAssignment(){
         List<PathwaySO> pathways = GameObject.Find("StatusController").GetComponent<StatusController>().activePathways;
 
+
         // for testing purposes, checks if pathways and pathway local networks exist and shos count
         Debug.Log("<PrefabService Test> pathway count: " + pathways.Count);
-        // if (pathways[0].LocalNetwork == null) {
-        //     Debug.Log("pw.network is NULL !!");
-        // }
-        // Debug.Log("<PrefabService test> pathway local network count: " + pathways[0].LocalNetwork.Count);
+
+        if (pathways[0].LocalNetwork == null) {
+            Debug.Log("pw.network is NULL !!");
+        }else{
+            foreach (PathwaySO pathway in pathways){
+                IDictionaryEnumerator LNEnumerator = pathway.GetLocalNetworkEnumerator();
 
 
-        foreach (PathwaySO pathway in pathways){
-            Debug.Log("<PrefabService test> pw local network count: " + pathway.LocalNetwork.Count);
-
-            foreach (KeyValuePair<NodeSO, List<EdgeSO>> pair in pathway.LocalNetwork){
-                FindNodeSOGameObject(pair.Key);
-                foreach(EdgeSO edge in pair.Value){
-                    FindEdgeSOGameObject(edge);
+                while(LNEnumerator.MoveNext()){
+                    FindNodeSOGameObject((NodeSO) LNEnumerator.Key);
+                    foreach(EdgeSO edge in ((List<EdgeSO>) LNEnumerator.Value)){
+                        FindEdgeSOGameObject(edge);
+                    }
                 }
+                // foreach (KeyValuePair<NodeSO, List<EdgeSO>> pair in pathway.LocalNetwork){
+                //     FindNodeSOGameObject(pair.Key);
+                //     foreach(EdgeSO edge in pair.Value){
+                //         FindEdgeSOGameObject(edge);
+                //     }
+                // }
             }
         }
-        
     }
  
     public void FindNodeSOGameObject(NodeSO node) {

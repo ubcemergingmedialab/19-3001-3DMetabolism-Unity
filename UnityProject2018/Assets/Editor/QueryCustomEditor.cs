@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-//[CustomEditor(typeof(QueryEditor))]
+// [CustomEditor(typeof(QueryEditor))]
 public class QueryCustomEditor : EditorWindow
 {
 
@@ -82,41 +82,82 @@ public class QueryCustomEditor : EditorWindow
             temp = "foaf:" + targetPathwayQID;
         }
         
+        if (GUILayout.Button("delete current scriptable objects"))
+        {
+            GameObject.Find("QueryService").GetComponent<QueryService>().ClearQueryData();
+        }
 
-        if (GUILayout.Button("run query and create Scriptable objects"))
+        if (GUILayout.Button("run query"))
         { 
             string qRawFull = queryRawFirst + temp + queryRawSecond ;
 
             GameObject.Find("QueryService").GetComponent<QueryService>().RunQuery(WQS,qRawFull);
         }
   
-        if (GUILayout.Button("delete current scriptable objects"))
-        {
-            GameObject.Find("QueryService").GetComponent<QueryService>().ClearQueryData();
-        }
-
-        if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
-        {
-            //PrefabService prefabService = new PrefabService();
-            GameObject.Find("QueryService").GetComponent<PrefabService>().PrefabAssignment();
-            // prefabService.PrefabAssignment();
-        }
-
-        // active pathways are now filled with SOs from query using this button 
-        // TODO: active pathways needs to be cleared if the SOs are deleted, this is done manually atm
         if (GUILayout.Button("Update active pathways in StatusController"))
         {
             Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
             GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
             foreach(KeyValuePair<string,PathwaySO> pair in tempDict)
             {
-                Debug.Log("<Test> pw name : " + pair.Value.Label);
+                Debug.Log("<StatusContorller List> pw name being added : " + pair.Value.Label);
                 GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
 
             }
         }
 
+        if (GUILayout.Button("Print local networks"))
+        {
+            List<PathwaySO> tempList = GameObject.Find("StatusController").GetComponent<StatusController>().activePathways;
+
+            foreach(PathwaySO pw in tempList){
+                Debug.Log("<!> local network count : " + pw.LocalNetwork.Count);
+                if(pw.LocalNetwork == null){
+                    Debug.Log("<!> local network NULL");
+                }
+                foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.LocalNetwork){
+                    Debug.Log("pathway: " + pw.Label + " network \n" + "node: " + pair.Key + " edge :");
+                    foreach(EdgeSO edge in pair.Value){
+                        Debug.Log(edge.Label);
+                    }
+                }
+            }
+            // Dictionary<string,PathwaySO> tempDict = QueryService.PathwaySOs;
+            // foreach(KeyValuePair<string,PathwaySO> pw in tempDict){
+            //     Debug.Log("<!> local network count : " + pw.Value.LocalNetwork);
+            //     if(pw.Value.LocalNetwork == null){
+            //         Debug.Log("<!> local network empty");
+            //     }
+            //     foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.Value.LocalNetwork){
+            //         Debug.Log("pathway: " + pw.Key + " network \n" + "node: " + pair.Key + " edge :");
+            //         foreach(EdgeSO edge in pair.Value){
+            //             Debug.Log(edge.Label);
+            //         }
+            //     }            
+            // }
+        }
+
+        if (GUILayout.Button("connect eligible scriptable objects to prefabs"))
+        {
+            //PrefabService prefabService = new PrefabService();
+            GameObject.Find("PrefabService").GetComponent<PrefabService>().PrefabAssignment();
+            // prefabService.PrefabAssignment();
+        }
+
+        // active pathways are now filled with SOs from query using this button 
+        // TODO: active pathways needs to be cleared if the SOs are deleted, this is done manually atm
         
+
+         
+
+         if (GUILayout.Button("Fill pathway list (last click)"))
+        {
+           GameObject.Find("QueryService").GetComponent<QueryService>().FillPathwayList();
+        }
+         if (GUILayout.Button("Fill node and edges list (statusController)"))
+        {
+           GameObject.Find("StatusController").GetComponent<StatusController>().FillItemReferenceList();
+        }
     }
 
 
