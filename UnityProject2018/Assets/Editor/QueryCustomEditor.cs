@@ -87,7 +87,7 @@ public class QueryCustomEditor : EditorWindow
             GameObject.Find("QueryService").GetComponent<QueryService>().ClearQueryData();
         }
 
-        if (GUILayout.Button("run query and create Scriptable objects"))
+        if (GUILayout.Button("run query"))
         { 
             string qRawFull = queryRawFirst + temp + queryRawSecond ;
 
