@@ -40,7 +40,7 @@ public class MouseOrbit : MonoBehaviour
     float y = 0.0f;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {   
         if (_instance != null && _instance != this) 
         {
@@ -49,7 +49,9 @@ public class MouseOrbit : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
-        
+    }
+
+    void Start(){
         Vector3 angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;

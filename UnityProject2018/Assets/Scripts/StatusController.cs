@@ -12,8 +12,8 @@ using UnityEngine;
             - Calc max/ min highlight state -> ElementCheckState 
             - node/edge Status lists
             - ElementCheckState
-            - PAthwaySOCheckState
-            - list of active PAthways
+            - PathwaySOCheckState
+            - list of active Pathways
             - intialize a highlightPathway per pathwaySO ( dict<PWSO, HighlightPAthway>)
 
 */
@@ -27,11 +27,17 @@ public class StatusController : MonoBehaviour
     }
 
     //fields
-    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways;     // key = nodes/edges , entry = list of pathways connected to it
+    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways;     // key = nodes/edges hh , entry = list of highlightPathways connected to it
     private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;               // PathwaySO linked to its HighlightPathway Instance
     private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
-    public List<PathwaySO> activePathways;                                              // Filled manually in unity 
+    public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
+
+    //temp nodes edge list for testing
+    public List<EdgeSO> AllEdgeSOs;
+    public List<NodeSO> AllNodeSOs;
+
+
 
     public GameObject tempObjectHolder;                                                 // temporary, manually testing highlighting till buttons are developed
     int num = 0; //temp
@@ -52,31 +58,54 @@ public class StatusController : MonoBehaviour
             }
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
+        
 
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
+         if (activePathways == null || activePathways.Count == 0) {
+            Debug.LogError("StatusCtrl: activePathways is null/empty ");
+        }
 
-        // Send the list of active pathways to the button factory singleton instance
-        //ButtonFactory.Instance.ActivePathways = activePathways;
+        // Fill the elements network 
+        foreach (PathwaySO pathwaySO in this.activePathways) {
 
-
-        // <> fill the elements network 
-        //Debug.Log("count = " + activePathways.Count);
-        foreach (PathwaySO pathwaySO in activePathways) {
-            //if ( activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
+            if (pathwaySO == null){
+                Debug.LogError("<!> Status controller : pathway scriptable object in active pathways is NULL");
+            }
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
+            
 
-            foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every nodeSO in this pathway
+            List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
+            List<EdgeSO> listOfEdges = new List<EdgeSO>();
+
+            IDictionaryEnumerator networkEnumerator = pathwaySO.GetLocalNetworkEnumerator();
+            
+            if (pathwaySO.LocalNetwork != null){
+               while(networkEnumerator.MoveNext()){
+                    listOfNodes.Add( (NodeSO) networkEnumerator.Key); 
+                    listOfEdges.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                }
+                //networkEnumerator.Reset();
+            }else{
+                Debug.LogError("<!>  StatusController : Local network in pathway is empty");
+            }
+
+                 
+
+            foreach(NodeSO nodeSO in listOfNodes) {                                                                 // For every nodeSO in this pathway
                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
 
                 foreach(GameObject node in nodes) {
                     if(node != null) {
                         HighlightHandler hl = node.GetComponent<HighlightHandler>();                                // find the nodes handler
+                        if(hl == null) {
+                            Debug.LogError("StatusController :higlightHandler is null ");
+                        }
                         List<HighlightPathway> sharingPathways;                                                     
 
                         if(elementToPathways.TryGetValue(hl, out sharingPathways)) {                                // Find node in elementToPathways
@@ -88,7 +117,9 @@ public class StatusController : MonoBehaviour
                 }
             }
 
-            foreach(EdgeSO edgeSO in pathwaySO.edges) {                                                             // For every edge in this pathway (same proccess as nodes)
+                                              
+
+            foreach(EdgeSO edgeSO in listOfEdges) {                                                             // For every edge in this pathway (same proccess as nodes)
                 GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
 
                 foreach(GameObject edge in edges){
@@ -104,15 +135,16 @@ public class StatusController : MonoBehaviour
                     }
                 }
             }
+
+            pathwaySO.FillLists();
         }
-        
     }
 
-    // Start is called before the first frame update
     void Start()
-    {   
+    {
 
     }
+
 
     // Update is called once per frame
     void Update()
@@ -126,27 +158,32 @@ public class StatusController : MonoBehaviour
     public void SetPathwayState(PathwaySO targetPathwaySO, HighlightPathway.HighlightState state){
         HighlightPathway highlightPathway = GetHighlightByPathwaySO(targetPathwaySO);
 
-        switch(state)
-        {
-            case HighlightPathway.HighlightState.Default:
-                highlightPathway.SetDefault();
-                
-                break;
-            
-            case HighlightPathway.HighlightState.Highlighted:
-                highlightPathway.SetHighlighted();
-                break;
+        if(highlightPathway != null){
 
-            case HighlightPathway.HighlightState.Accented:
-                highlightPathway.SetAccented();
-                foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in highlightByPathwaySO) {
-                    if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathwaySO.name) {
-                        entry.Value.SetHighlighted(); //downgrade all other accented pathways
+            switch(state)
+            {
+                case HighlightPathway.HighlightState.Default:
+                    highlightPathway.SetDefault();
+                    
+                    break;
+                
+                case HighlightPathway.HighlightState.Highlighted:
+                    highlightPathway.SetHighlighted();
+                    break;
+
+                case HighlightPathway.HighlightState.Accented:
+                    highlightPathway.SetAccented();
+                    foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in highlightByPathwaySO) {
+                        if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathwaySO.name) {
+                            entry.Value.SetHighlighted(); //downgrade all other accented pathways
+                        }
                     }
-                }
-                break;
-                    default:
-                        break;
+                    break;
+                        default:
+                            break;
+            }
+        } else {
+            Debug.LogError("<!> StatusCtrl.SetPathwayState(), null highlightPathway");
         }
 
     }
@@ -156,6 +193,13 @@ public class StatusController : MonoBehaviour
     public HighlightPathway.HighlightState ElementCheckState(HighlightHandler highlightHandler) {
         
         HighlightPathway.HighlightState tempState = HighlightPathway.HighlightState.Default;
+         if (highlightHandler ==null) {
+            Debug.LogError("StatusController.ElementCheckState : pathway null");
+        }   
+
+        if (highlightByPathwaySO == null) {
+            Debug.LogError("StatusController.ElementCheckState : highlightByPathwaySO dictionary empty");
+        }
         elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> currentList);
 
         if ( currentList != null) {
@@ -166,7 +210,7 @@ public class StatusController : MonoBehaviour
                     }
             }
         } else {
-            Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            Debug.LogError("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }
@@ -207,6 +251,22 @@ public class StatusController : MonoBehaviour
     public HighlightPathway GetHighlightByPathwaySO(PathwaySO pathwaySO){
         highlightByPathwaySO.TryGetValue(pathwaySO, out HighlightPathway value);
         return value;
+    }
+
+    // fills up all nodes and edges list in status controller in order to hold a ref to the SOs , from active pathways.
+    // not currently used
+    public void FillItemReferenceList(){
+        
+        foreach(PathwaySO pw in activePathways){
+            IDictionaryEnumerator networkEnumerator = pw.GetLocalNetworkEnumerator();
+            if (pw.LocalNetwork != null){
+               while(networkEnumerator.MoveNext()){
+                    AllNodeSOs.Add( (NodeSO) networkEnumerator.Key); 
+                    AllEdgeSOs.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                }
+            }
+        
+        }
     }
 
 // function for manually testing the higlhight pipeline with num keys activating pathways in the pathway list

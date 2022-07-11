@@ -43,19 +43,21 @@ public class ButtonFactory : MonoBehaviour
             return;
         }
         _instance = this;
+
     }
 
 
         void Start()
     {
-        ActivePathways = StatusController.Instance.activePathways;
+        ActivePathways = new List<PathwaySO>(StatusController.Instance.activePathways);
         FavouriteButtonFactory ff = FavouriteButtonFactory.Instance;
 
         foreach (PathwaySO pathway in ActivePathways)
         {
+            Debug.Log("adding button for " + pathway);
             buttons.Add(GenerateButton(pathway), pathway);
-            GameObject favButton = ff.GenerateButtonAndSetPosition(buttonX, buttonY, pathway);
-            ff.favButtons.Add(favButton, pathway);
+            // GameObject favButton = ff.GenerateButtonAndSetPosition(buttonX, buttonY, pathway); // TODO: fix favourites buttons, this is preventing most buttons from generating atm
+            // ff.favButtons.Add(favButton, pathway);
             buttonY += buttonYOffset;
         }
     }

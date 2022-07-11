@@ -25,6 +25,7 @@ public class HighlightPathway
     public HighlightPathway(PathwaySO pathway){
         pathwayToHighlight = pathway;
         state = HighlightState.Default;
+        // Debug.Log("<!> new highlight pathway for, " + pathway.name);
     }
 
     // set the Stae to Single Highlighted and update all of its component/elements

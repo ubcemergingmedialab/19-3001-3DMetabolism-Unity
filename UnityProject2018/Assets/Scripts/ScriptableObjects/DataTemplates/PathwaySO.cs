@@ -11,23 +11,27 @@ public class PathwaySO : ScriptableObject
     public string Label;
     public string Description;
     // Note: How to manage edges if there is the connections are dealt with in nodes? we need edges for highlighting 
-    public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork;
+    public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>() ;
 
-    public void init(string name){
+    public void init(string name, string qid, string desc){
 
         this.name = name;
         this.Label = name;
-        
-        LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>();
-        MakePathway();
+        this.QID = qid;
+        this.Description = desc;
+        nodes = new List<NodeSO>();
+        edges = new List<EdgeSO>();
+        // MakePathway();
     }
 
     // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
     public void AddNodeToPathway(NodeSO node) {
+        // Debug.Log(node.Label + " in network: " + Label + " " + LocalNetwork.ContainsKey(node));
         if (!(LocalNetwork.ContainsKey(node))){
             LocalNetwork.Add(node, new List<EdgeSO>());
+            // Debug.Log(node.Label + " added to " + this.Label);
         } else {
-            Debug.Log("<pathwaySO> node is already in " + this.Label + " - pathway");
+            // Debug.Log("<pathwaySO> node " + node.Label + " is already in " + this.Label + " - pathway");
         }
     }
 
@@ -36,7 +40,7 @@ public class PathwaySO : ScriptableObject
         LocalNetwork[parentNode].Add(edge);
     }
 
-    // a way to create pathways thorugh the local files instead of queries.
+    // a way to create pathways thorugh the local files instead of queries. 
     // goes through the edges in a pathway, and adds the nodes and edges to its dictionary
     public void MakePathway(){
         foreach (EdgeSO edge in edges){
@@ -48,6 +52,23 @@ public class PathwaySO : ScriptableObject
                 AddNodeToPathway(node);
                 AddEdgeToPathway(node,edge);
             }
+        }
+    }
+
+    public IDictionaryEnumerator GetLocalNetworkEnumerator(){
+        if(LocalNetwork != null){
+           return LocalNetwork.GetEnumerator(); 
+        }else{
+            Debug.LogError("<!> local network is null, pathwaySO.getLocalNetworkEnum");
+            return null;
+        }
+        
+    }
+
+    public void FillLists(){
+        foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in LocalNetwork){
+            nodes.Add(pair.Key);
+            edges.AddRange(pair.Value);
         }
     }
 }
