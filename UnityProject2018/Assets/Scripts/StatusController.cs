@@ -27,7 +27,7 @@ public class StatusController : MonoBehaviour
     }
 
     //fields
-    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways;     // key = nodes/edges , entry = list of pathways connected to it
+    private Dictionary<HighlightHandler, List<HighlightPathway>> elementToPathways;     // key = nodes/edges hh , entry = list of highlightPathways connected to it
     private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;               // PathwaySO linked to its HighlightPathway Instance
     private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
@@ -49,14 +49,6 @@ public class StatusController : MonoBehaviour
         - keeps a list of all HighlightPathway instances
         - for every node/edge, it grabs the HighlightHandler component and the list of pathways it is apart of and links them in elementsToPathways dict
     */
-
-
-/*
-1 - Create a list of all nodes and edges in status controller to hold ref on play mode
-2 - Query the JSON in edit mode and then parse and create SOs on load
-3 - Addressables 
-
-*/
     void Awake() 
     {
         if (_instance != null && _instance != this) 
@@ -67,33 +59,25 @@ public class StatusController : MonoBehaviour
         _instance = this;   
         DontDestroyOnLoad(this.gameObject);
         
+
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
         highlightPathways = new List<HighlightPathway>();
 
          if (activePathways == null || activePathways.Count == 0) {
-            Debug.LogError("<!> ACTIVE PATHWAYS EMPTY");
+            Debug.LogError("StatusCtrl: activePathways is null/empty ");
         }
-        
-        // Debug.Log("<HL> out of loop count: " + this.activePathways.Count); 
+
         // Fill the elements network 
         foreach (PathwaySO pathwaySO in this.activePathways) {
 
             if (pathwaySO == null){
                 Debug.LogError("<!> Status controller : pathway scriptable object in active pathways is NULL");
             }
-
-
-            if ( this.activePathways.Count == 0) {Debug.LogError("active pathways are empty");}
-            // Debug.Log("<HL> in loop count: " + this.activePathways.Count);
-            //pathwaySO.FillLists();
-
             
             HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
-            // Debug.Log("<HL> " + pathwaySO.name + " highlight pathway component for: " + highlightPathway.pathwayToHighlight.name);
             highlightByPathwaySO.Add(pathwaySO,highlightPathway);                                                   // link the pathwaySO to its highlightPathway
             highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
-            // Debug.Log("<HL> " + highlightByPathwaySO.Count);
             
 
             List<NodeSO> listOfNodes = new List<NodeSO>();                                                          
@@ -108,7 +92,7 @@ public class StatusController : MonoBehaviour
                 }
                 //networkEnumerator.Reset();
             }else{
-                Debug.LogError("<!>  StatusController : Local netwrok in pathway is empty");
+                Debug.LogError("<!>  StatusController : Local network in pathway is empty");
             }
 
                  
@@ -119,6 +103,9 @@ public class StatusController : MonoBehaviour
                 foreach(GameObject node in nodes) {
                     if(node != null) {
                         HighlightHandler hl = node.GetComponent<HighlightHandler>();                                // find the nodes handler
+                        if(hl == null) {
+                            Debug.LogError("StatusController :higlightHandler is null ");
+                        }
                         List<HighlightPathway> sharingPathways;                                                     
 
                         if(elementToPathways.TryGetValue(hl, out sharingPathways)) {                                // Find node in elementToPathways
@@ -148,17 +135,14 @@ public class StatusController : MonoBehaviour
                     }
                 }
             }
+
+            pathwaySO.FillLists();
         }
     }
 
     void Start()
     {
-        
 
-        // ButtonFactory.Instance.ActivePathways = activePathways;
-
-       
-        
     }
 
 
@@ -174,27 +158,32 @@ public class StatusController : MonoBehaviour
     public void SetPathwayState(PathwaySO targetPathwaySO, HighlightPathway.HighlightState state){
         HighlightPathway highlightPathway = GetHighlightByPathwaySO(targetPathwaySO);
 
-        switch(state)
-        {
-            case HighlightPathway.HighlightState.Default:
-                highlightPathway.SetDefault();
-                
-                break;
-            
-            case HighlightPathway.HighlightState.Highlighted:
-                highlightPathway.SetHighlighted();
-                break;
+        if(highlightPathway != null){
 
-            case HighlightPathway.HighlightState.Accented:
-                highlightPathway.SetAccented();
-                foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in highlightByPathwaySO) {
-                    if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathwaySO.name) {
-                        entry.Value.SetHighlighted(); //downgrade all other accented pathways
+            switch(state)
+            {
+                case HighlightPathway.HighlightState.Default:
+                    highlightPathway.SetDefault();
+                    
+                    break;
+                
+                case HighlightPathway.HighlightState.Highlighted:
+                    highlightPathway.SetHighlighted();
+                    break;
+
+                case HighlightPathway.HighlightState.Accented:
+                    highlightPathway.SetAccented();
+                    foreach(KeyValuePair<PathwaySO, HighlightPathway> entry in highlightByPathwaySO) {
+                        if(entry.Value.state == HighlightPathway.HighlightState.Accented && entry.Value.pathwayToHighlight.name != targetPathwaySO.name) {
+                            entry.Value.SetHighlighted(); //downgrade all other accented pathways
+                        }
                     }
-                }
-                break;
-                    default:
-                        break;
+                    break;
+                        default:
+                            break;
+            }
+        } else {
+            Debug.LogError("<!> StatusCtrl.SetPathwayState(), null highlightPathway");
         }
 
     }
@@ -209,7 +198,7 @@ public class StatusController : MonoBehaviour
         }   
 
         if (highlightByPathwaySO == null) {
-            Debug.LogError("StatusController.ElementCheckState : dictionary empty");
+            Debug.LogError("StatusController.ElementCheckState : highlightByPathwaySO dictionary empty");
         }
         elementToPathways.TryGetValue(highlightHandler, out List<HighlightPathway> currentList);
 
@@ -264,7 +253,8 @@ public class StatusController : MonoBehaviour
         return value;
     }
 
-    // fills up tyhe all nodes and edges list in status controller in order to hold a ref to the SOs , from active pathways.
+    // fills up all nodes and edges list in status controller in order to hold a ref to the SOs , from active pathways.
+    // not currently used
     public void FillItemReferenceList(){
         
         foreach(PathwaySO pw in activePathways){
