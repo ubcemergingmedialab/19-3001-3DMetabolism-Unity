@@ -210,4 +210,9 @@ public async void ClearQueryData(){
     Debug.Log("deleted: " + i + " files");
 }
 
+public async void DeleteQueryXml(){
+
+    File.Delete("Assets/Resources/Data/query.xml");
+}
+
 }

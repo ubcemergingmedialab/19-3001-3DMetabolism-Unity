@@ -40,7 +40,7 @@ public class PathwaySO : ScriptableObject
         LocalNetwork[parentNode].Add(edge);
     }
 
-    // a way to create pathways thorugh the local files instead of queries.
+    // a way to create pathways thorugh the local files instead of queries. 
     // goes through the edges in a pathway, and adds the nodes and edges to its dictionary
     public void MakePathway(){
         foreach (EdgeSO edge in edges){
