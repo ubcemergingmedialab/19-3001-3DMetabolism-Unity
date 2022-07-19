@@ -122,6 +122,10 @@ public class NetworkSearch : MonoBehaviour
         Debug.Log(printResult);
     }
 
+    public void MockSearch(){
+        BFSTest(StatusController.Instance.activePathways[2],StatusController.Instance.activePathways[2].nodes[8],StatusController.Instance.activePathways[2].nodes[6]);
+    }
+
 
 // 
 //     foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every node in this pathway
