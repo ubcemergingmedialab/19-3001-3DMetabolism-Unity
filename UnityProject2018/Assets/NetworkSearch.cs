@@ -17,6 +17,11 @@ public class NetworkSearch : MonoBehaviour
     }
 
     
+    
+
+
+
+
     Dictionary<int,List<ScriptableObject>> SearchForPath(PathwaySO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
 
         int pathNum = 1;
