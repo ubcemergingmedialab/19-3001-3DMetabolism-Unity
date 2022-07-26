@@ -7,7 +7,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "malate dehydrogenase catalyses the oxidation reaction of malate to oxaloacetate"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -17,7 +17,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It has the same structure as succinate with the execption of an OH group at the second carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -70,7 +70,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "succinyl-CoA synthetase catalyses the formation of succinate from succinyl-CoA and releases the Co-enzyme A molecule."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -80,7 +80,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 4 carbon citric acid cycle intermediate. It is a thioester of succinic acid and coenzyme A. It has an acetate group on one end and the thioester on the other"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -133,7 +133,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "citrate synthase catalyses the formation of citrate from oxaloacetate and acetyl-CoA. A water molecule is consumed and co-enzyme A molecule is released"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -143,7 +143,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "a molecule that participates in many biochemical reactions, has a coenzyme A group attached to an acetyl by a thioester bond. It delivers an acetyl group to the citric acid cycle. It is formed from pyruvate by the pyruvate dehydrogenase complex"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -196,7 +196,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "a-ketoglutarate dehydrogenase catalyses the formation of succinyl-CoA from a-ketoglutarate. It is a decarboxylation reaction and results in the release of one CO2 molecule. It is a complex of three sub-enzymes."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -206,7 +206,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 5 carbon citric acid cyclle intermediate formed from isocitrate after the reomval of a carbon dioxide molecule. It has two acetate groups on both ends of the molecule and a keto group on the second carbon ('alpha' position)"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -259,7 +259,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "succinate dehydrogenase catalyses the formation of fumarate from succinate. It is a dehydrogenation reaction."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -269,7 +269,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Dicarboxylic acid"
+        "value" : "It is the connjugate base of succinate acid which is a dicarboxylic acid. It is 4 carbon long and has the carboxylic acid group on both the ends"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -322,7 +322,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "citrate synthase catalyses the formation of citrate from oxaloacetate and acetyl-CoA. A water molecule is consumed and co-enzyme A molecule is released"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -332,7 +332,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "it is a 4 carbon citric acid cycle intermediate that reacts with acetyl CoA. It has two acetate groups and an oxalo group"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -385,7 +385,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "fumarase catalyses the formation of malate from fumarate. The reaction consumes a water molecule and adds an OH group to the second carbon."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -395,7 +395,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<placeholder>"
+        "value" : "It has the same structure as succinate with the exception of a double bond between the second and third carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -637,6 +637,69 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "<PlaceHolder>"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "An instance of the biological pathway in Homo sapiens with Reactome ID (R-HSA-70171)"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glucose is a common monosaccharide and serves as the body's main source of energy. Glucose is broken down for energy via glycolysis. The body can also produce glucose via gluconeogenesis, and excess glucose can be stored as glycogen."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Gluconeogenesis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose-6-phosphate + H2O => glucose + orthophosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose-6-phosphatase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q88"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q619"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q87"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "<placeholder>"
       },
       "pathwayDesc" : {
@@ -763,7 +826,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "a-ketoglutarate dehydrogenase catalyses the formation of succinyl-CoA from a-ketoglutarate. It is a decarboxylation reaction and results in the release of one CO2 molecule. It is a complex of three sub-enzymes."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -773,7 +836,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 4 carbon citric acid cycle intermediate. It is a thioester of succinic acid and coenzyme A. It has an acetate group on one end and the thioester on the other"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -826,70 +889,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71496)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "fructose-1,6-bisphosphate <=> dihydroxyacetone phosphate + glyceraldehyde 3-phosphate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glyceraldehyde-3-phosphate"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "aldolase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q83"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q72"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q33"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71850)"
+        "value" : "Phosphoglycerate kinase catalyzes the transfer of the high-energy phosphoryl group from 1,3-bisphosphoglycerate to ADP, yielding 3-phosphoglycerate and ATP. This reaction happens twice per molecule of glucose"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -899,7 +899,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "3-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -947,6 +947,69 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q16"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Aldolase catalyzes cleavage of fructose-1,6-bisphosphate, yielding glyceraldehyde-3-phosphate and dihydroxyacetone phosphate. This reaction is an aldol condensation and is reversible."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose-1,6-bisphosphate <=> dihydroxyacetone phosphate + glyceraldehyde 3-phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glyceraldehyde-3-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "aldolase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q83"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q72"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q33"
       }
     }, {
       "edgeDesc" : {
@@ -1204,7 +1267,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "citrate synthase catalyses the formation of citrate from oxaloacetate and acetyl-CoA. A water molecule is consumed and co-enzyme A molecule is released"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -1214,7 +1277,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<placeholder>"
+        "value" : "it is a 6 carbon citric acid cycle intermediate that is symmetric and has three acetate groups . It has an OH group on the third carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -1262,6 +1325,69 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q867"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hexokinase (glucokinase in hepatoctyes) catalyzes the phosphorylation of glucose at C-6 to yield glucose-6-phosphate, trapping glucose in the cell. This reaction is irreversible under intracellular conditions."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose + ATP → glucose-6-phosphate + ADP"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose-6-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "hexokinase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q83"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q319"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q24"
       }
     }, {
       "edgeDesc" : {
@@ -1393,17 +1519,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70454)"
+        "value" : "Triose phosphate isomerase catalyzes the conversion of dihydroxyacetone phosphate to glyceraldehyde-3-phosphate. This reaction is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -1514,69 +1640,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q626"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70471)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose-6-phosphate ⇄ fructose-6-phosphate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "fructose-6-phosphate"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "phosphohexose isomerase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q83"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q69"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q28"
       }
     }, {
       "edgeDesc" : {
@@ -2149,7 +2212,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71660)"
+        "value" : "Enolase catalyzes the removal of a molecule of water from 2-phosphoglycerate to yield phosphoenolpyruvate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -2159,7 +2222,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Phosphoenolpyruvate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -2212,7 +2275,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70449)"
+        "value" : "Glyceraldehyde-3-phosphate dehydrogenase oxidizes glyceraldehyde-3-phosphate and adds a phosphate to yield 1,3-bisphosphoglycerate. NADH is produced as a byproduct. This reaction occurs twice per glucose; reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -2222,7 +2285,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "1,3-bisphosphoglycerate is a 3-carbon molecule that contains two phosphate groups: one bound to C1 and the other bound to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -2464,17 +2527,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71850)"
+        "value" : "Phosphoglycerate kinase catalyzes the transfer of the high-energy phosphoryl group from 1,3-bisphosphoglycerate to ADP, yielding 3-phosphoglycerate and ATP. This reaction happens twice per molecule of glucose"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "3-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -2600,7 +2663,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 5 carbon citric acid cyclle intermediate formed from isocitrate after the reomval of a carbon dioxide molecule. It has two acetate groups on both ends of the molecule and a keto group on the second carbon ('alpha' position)"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -2663,7 +2726,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-6-phosphate is a fructose sugar with a phosphate group replacing the hydroxy group of C6. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -2852,132 +2915,6 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Pyruvate Dehydrogenase Complex"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "pyruvate + CoA-SH + NAD+ -> acetyl CoA + NADH + H+ + CO2"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "acetyl CoA (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "pyruvate dehydrogenase complex"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q909"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q910"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q18"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "catalyzed by hexokinase (glucokinase in hepatocytes)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<PlaceHolder>"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycogen Synthesis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose + ATP => glucose-6-phosphate + ADP"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose-6-phosphate"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "hexokinase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q678"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q319"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q24"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
         "value" : "<placeholder>"
       },
       "pathwayLabel" : {
@@ -3041,7 +2978,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "it is a 4 carbon citric acid cycle intermediate that reacts with acetyl CoA. It has two acetate groups and an oxalo group"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -3089,69 +3026,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q124"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<PlaceHolder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "NA"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Beta-Oxidation"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "𝛃-Ketoacyl-CoA + CoA-SH → Fatty Acyl-CoA (Cn-2) + Acetyl-CoA"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "acetyl CoA (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Acyl-CoA Acetyltransferase (Thiolase)"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q725"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q733"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q18"
       }
     }, {
       "edgeDesc" : {
@@ -3409,7 +3283,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction; (Z)-aconitate is an intermediate"
+        "value" : "aconitase catalyses the formation of isocitrate (has the OH group on C-4) from citrate (with OH group on C-3) via the formation of a cis-citrate intermediate. The reaction proceeds by dehydration of citrate followed by hydration of cis-citrate."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -3419,7 +3293,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a structural isomer of citrate that has the OH group on the second carbon instead of the third"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -3661,17 +3535,80 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71660)"
+        "value" : "malate dehydrogenase catalyses the oxidation reaction of malate to oxaloacetate"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "This biological pathway is a circular pathway which uses Acetyl-CoA to produce 3 NADH, 1 FADH2 and 1 ATP molecule. This cycle is also sometimes called the Krebs Cycle or Citric Acid Cycle."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "it is a 4 carbon citric acid cycle intermediate that reacts with acetyl CoA. It has two acetate groups and an oxalo group"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Tricarboxylic Acid Cycle"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate + NAD⁺ ⇌ oxaloacetate + NADH + H⁺"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate dehydrogenase (mitochondrion)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q229"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q228"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q124"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Enolase catalyzes the removal of a molecule of water from 2-phosphoglycerate to yield phosphoenolpyruvate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Phosphoenolpyruvate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -3850,80 +3787,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "catalyzed by hexokinase (glucokinase in hepatocytes)"
+        "value" : "Glyceraldehyde-3-phosphate dehydrogenase oxidizes glyceraldehyde-3-phosphate and adds a phosphate to yield 1,3-bisphosphoglycerate. NADH is produced as a byproduct. This reaction occurs twice per glucose; reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose + ATP => glucose-6-phosphate + ADP"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose-6-phosphate"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "hexokinase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q83"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q319"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q24"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70449)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "1,3-bisphosphoglycerate is a 3-carbon molecule that contains two phosphate groups: one bound to C1 and the other bound to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -4044,6 +3918,69 @@
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glucose is a common monosaccharide and serves as the body's main source of energy. Glucose is broken down for energy via glycolysis. The body can also produce glucose via gluconeogenesis, and excess glucose can be stored as glycogen."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycogen Breakdown"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glycogen (branched) <=> glycogen (unbranched)"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "debranching enzyme (specifically, alpha-1,6-glucosidase)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q623"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q629"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q87"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "cycle of biochemical reactions producing urea"
       },
       "metaboliteDesc" : {
@@ -4097,69 +4034,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q666"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<PlaceHolder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<PlaceHolder>"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Pentose Phosphate Pathway"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "sedoheptulose 7-phosphate + D-glyceraldehyde 3-phosphate <=> D-erythrose 4-phosphate + D-fructose 6-phosphate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "fructose-6-phosphate"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "transaldolase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q710"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q720"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q28"
       }
     }, {
       "edgeDesc" : {
@@ -4291,7 +4165,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "succinate dehydrogenase catalyses the formation of fumarate from succinate. It is a dehydrogenation reaction."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -4301,7 +4175,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<placeholder>"
+        "value" : "It has the same structure as succinate with the exception of a double bond between the second and third carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -4417,17 +4291,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70467)"
+        "value" : "Phosphofructokinase-1 (PFK-1) phosphorylates fructose-6-phosphate to yield fructose-1,6-bisphosphate. This reaction is the first committed step of glycolysis (once fructose-1,6-bisphosphate is made, the molecule will continue through glycolysis)."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-1,6-bisphosphate is a fructose sugar with 2 phosphate groups: one on C6 and the other on C1. Frucose-1,6-bisphosphate is involved in glycolysis and gluconeogenesis, and it also acts as a positive allosteric regulator of pyruvate kinase."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -4543,7 +4417,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "isocitrate dehydrogenase catalyses conversion of isocitrate into a-ketoglutarate. It is a decarboxylation reaction and results in the release of one carbon dioxide molecule."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -4553,7 +4427,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 5 carbon citric acid cyclle intermediate formed from isocitrate after the reomval of a carbon dioxide molecule. It has two acetate groups on both ends of the molecule and a keto group on the second carbon ('alpha' position)"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -4601,69 +4475,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q203"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "synthesis of ketone bodies"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Ketone Body Synthesis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "beta-hydroxy-beta-methylglutaryl-CoA (HMG-CoA) <=> acetoacetate + acetyl CoA"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "acetyl CoA (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "HMG-CoA lyase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q893"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q900"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q18"
       }
     }, {
       "edgeDesc" : {
@@ -4742,7 +4553,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "simple sugar"
+        "value" : "Glucose is a common monosaccharide and serves as the body's main source of energy. Glucose is broken down for energy via glycolysis. The body can also produce glucose via gluconeogenesis, and excess glucose can be stored as glycogen."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -4921,7 +4732,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
+        "value" : "fumarase catalyses the formation of malate from fumarate. The reaction consumes a water molecule and adds an OH group to the second carbon."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -4931,7 +4742,70 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Dicarboxylic acid"
+        "value" : "It has the same structure as succinate with the execption of an OH group at the second carbon"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Tricarboxylic Acid Cycle"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fumarate + H₂O ⇌ malate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fumarase (mitochondrion)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q229"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q227"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q119"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "succinyl-CoA synthetase catalyses the formation of succinate from succinyl-CoA and releases the Co-enzyme A molecule."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "This biological pathway is a circular pathway which uses Acetyl-CoA to produce 3 NADH, 1 FADH2 and 1 ATP molecule. This cycle is also sometimes called the Krebs Cycle or Citric Acid Cycle."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "It is the connjugate base of succinate acid which is a dicarboxylic acid. It is 4 carbon long and has the carboxylic acid group on both the ends"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -5047,7 +4921,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71496)"
+        "value" : "Aldolase catalyzes cleavage of fructose-1,6-bisphosphate, yielding glyceraldehyde-3-phosphate and dihydroxyacetone phosphate. This reaction is an aldol condensation and is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -5057,7 +4931,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Dihydroxyacetone phosphate is a substrate of glycolysis and gluconeogenesis. It is also impotant for triacylglycerol synthesis (dihydroxyacetone phosphate provides the glycerol backbone)."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -5110,7 +4984,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71654)"
+        "value" : "Phosphoglycerate mutase catalyzes the movement of the phosphoryl group from C-3 to C-2, converting 3-phosphoglycerate to 2-phosphoglycerate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -5120,7 +4994,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "2-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -5236,17 +5110,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71670)"
+        "value" : "Pyruvate kinase catalyzes the transfer of the phosphoryl group from phosphoenolpyruvate to ADP, yielding pyruvate and ATP. This reaction happens twice per molecule of glucose"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Pyruvate is the end product of glycolysis. Following glycolysis, pyruvate can be oxidized by the pyruvate dehydrogenase complex to yield acetyl-CoA (aerobic conditions), or can be reduced to form lactate via fermentation (anaerobic conditions)."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -5488,7 +5362,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71496)"
+        "value" : "Aldolase catalyzes cleavage of fructose-1,6-bisphosphate, yielding glyceraldehyde-3-phosphate and dihydroxyacetone phosphate. This reaction is an aldol condensation and is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -5498,7 +5372,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -5561,70 +5435,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Malate-Aspartate Shuttle"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate + NAD+ <=> oxaloacetate + NADH"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "oxaloacetate (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate dehydrogenase (mitochondrion)"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q872"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q882"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q124"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "pathway used in hepatocytes and cardiac myocytes to shuttle electrons from NADH produced in glycolysis to the mitochondrial matrix"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 5 carbon citric acid cyclle intermediate formed from isocitrate after the reomval of a carbon dioxide molecule. It has two acetate groups on both ends of the molecule and a keto group on the second carbon ('alpha' position)"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -5672,6 +5483,69 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q203"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "antiporter"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "pathway used in hepatocytes and cardiac myocytes to shuttle electrons from NADH produced in glycolysis to the mitochondrial matrix"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "It has the same structure as succinate with the execption of an OH group at the second carbon"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Malate-Aspartate Shuttle"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate + alpha-ketoglutarate <=> alpha-ketoglutarate + malate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate-alpha-ketoglutarate transporter"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q872"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q876"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q119"
       }
     }, {
       "edgeDesc" : {
@@ -6055,7 +5929,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70454)"
+        "value" : "Triose phosphate isomerase catalyzes the conversion of dihydroxyacetone phosphate to glyceraldehyde-3-phosphate. This reaction is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -6065,7 +5939,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -6118,7 +5992,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70471)"
+        "value" : "Phosphohexose isomerase (also known as phosphoglucose isomerase) catalyzes the reversible isomerization of glucose-6-phosphate (an aldose) to fructose-6-phosphate (a ketose). The reaction proceeds through an enediol intermediate."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -6128,7 +6002,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-6-phosphate is a fructose sugar with a phosphate group replacing the hydroxy group of C6. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -6307,69 +6181,6 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71496)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "fructose-1,6-bisphosphate <=> dihydroxyacetone phosphate + glyceraldehyde 3-phosphate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "dihydroxyacetone phosphate"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "aldolase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q83"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q72"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q44"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
         "value" : "catalyzed by thioesterase"
       },
       "pathwayDesc" : {
@@ -6433,17 +6244,80 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71654)"
+        "value" : "Aldolase catalyzes cleavage of fructose-1,6-bisphosphate, yielding glyceraldehyde-3-phosphate and dihydroxyacetone phosphate. This reaction is an aldol condensation and is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Dihydroxyacetone phosphate is a substrate of glycolysis and gluconeogenesis. It is also impotant for triacylglycerol synthesis (dihydroxyacetone phosphate provides the glycerol backbone)."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose-1,6-bisphosphate <=> dihydroxyacetone phosphate + glyceraldehyde 3-phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "dihydroxyacetone phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "aldolase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q83"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q72"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q44"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Phosphoglycerate mutase catalyzes the movement of the phosphoryl group from C-3 to C-2, converting 3-phosphoglycerate to 2-phosphoglycerate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "2-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -6554,6 +6428,69 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q236"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70241)"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "An instance of the biological pathway in Homo sapiens with Reactome ID (R-HSA-70171)"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Phosphoenolpyruvate is a substrate in glycolysis and gluconeogenesis."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Gluconeogenesis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate + GTP => phosphoenolpyruvate + GDP + CO2 [cytosol]"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate (cytosol)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphoenolpyruvate carboxykinase (cytosol)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q88"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q294"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q58"
       }
     }, {
       "edgeDesc" : {
@@ -6748,6 +6685,69 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "Hexokinase (glucokinase in hepatoctyes) catalyzes the phosphorylation of glucose at C-6 to yield glucose-6-phosphate, trapping glucose in the cell. This reaction is irreversible under intracellular conditions."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycogen Synthesis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose + ATP → glucose-6-phosphate + ADP"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose-6-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "hexokinase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q678"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q319"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q24"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "<placeholder>"
       },
       "pathwayDesc" : {
@@ -6811,17 +6811,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70454)"
+        "value" : "Triose phosphate isomerase catalyzes the conversion of dihydroxyacetone phosphate to glyceraldehyde-3-phosphate. This reaction is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Dihydroxyacetone phosphate is a substrate of glycolysis and gluconeogenesis. It is also impotant for triacylglycerol synthesis (dihydroxyacetone phosphate provides the glycerol backbone)."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -6932,69 +6932,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q354"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<PlaceHolder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological pathway in Homo sapiens with Reactome ID (R-HSA-70171)"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "simple sugar"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Gluconeogenesis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose-6-phosphate + H2O => glucose + orthophosphate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose-6-phosphatase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q88"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q619"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q87"
       }
     }, {
       "edgeDesc" : {
@@ -7388,7 +7325,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -7577,7 +7514,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -7693,17 +7630,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70467)"
+        "value" : "Phosphofructokinase-1 (PFK-1) phosphorylates fructose-6-phosphate to yield fructose-1,6-bisphosphate. This reaction is the first committed step of glycolysis (once fructose-1,6-bisphosphate is made, the molecule will continue through glycolysis)."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-6-phosphate is a fructose sugar with a phosphate group replacing the hydroxy group of C6. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -7747,6 +7684,69 @@
       "edgeQID" : {
         "type" : "literal",
         "value" : "Q71"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q28"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Phosphohexose isomerase (also known as phosphoglucose isomerase) catalyzes the reversible isomerization of glucose-6-phosphate (an aldose) to fructose-6-phosphate (a ketose). The reaction proceeds through an enediol intermediate."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Fructose-6-phosphate is a fructose sugar with a phosphate group replacing the hydroxy group of C6. It is a substrate of glycolysis and gluconeogenesis."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose-6-phosphate ⇄ fructose-6-phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose-6-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "phosphohexose isomerase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q83"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q69"
       },
       "metaboliteQID" : {
         "type" : "literal",
@@ -7892,7 +7892,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "a molecule that participates in many biochemical reactions, has a coenzyme A group attached to an acetyl by a thioester bond. It delivers an acetyl group to the citric acid cycle. It is formed from pyruvate by the pyruvate dehydrogenase complex"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -8018,7 +8018,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -8333,7 +8333,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -8396,7 +8396,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "a molecule that participates in many biochemical reactions, has a coenzyme A group attached to an acetyl by a thioester bond. It delivers an acetyl group to the citric acid cycle. It is formed from pyruvate by the pyruvate dehydrogenase complex"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -8459,7 +8459,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-6-phosphate is a fructose sugar with a phosphate group replacing the hydroxy group of C6. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -8827,7 +8827,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71654)"
+        "value" : "Phosphoglycerate mutase catalyzes the movement of the phosphoryl group from C-3 to C-2, converting 3-phosphoglycerate to 2-phosphoglycerate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -8837,7 +8837,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "3-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -8900,7 +8900,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9021,12 +9021,75 @@
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "a molecule that participates in many biochemical reactions, has a coenzyme A group attached to an acetyl by a thioester bond. It delivers an acetyl group to the citric acid cycle. It is formed from pyruvate by the pyruvate dehydrogenase complex"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Pyruvate Dehydrogenase Complex"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "pyruvate + CoA-SH + NAD+ -> acetyl CoA + NADH + H+ + CO2"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "acetyl CoA (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "pyruvate dehydrogenase complex"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q909"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q910"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q18"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "transports high-energy electrons from the cytosol to the mitochondrial matrix in skeletal muscle and the brain."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Dihydroxyacetone phosphate is a substrate of glycolysis and gluconeogenesis. It is also impotant for triacylglycerol synthesis (dihydroxyacetone phosphate provides the glycerol backbone)."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9074,6 +9137,69 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q44"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hexokinase (glucokinase in hepatoctyes) catalyzes the phosphorylation of glucose at C-6 to yield glucose-6-phosphate, trapping glucose in the cell. This reaction is irreversible under intracellular conditions."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glucose is a common monosaccharide and serves as the body's main source of energy. Glucose is broken down for energy via glycolysis. The body can also produce glucose via gluconeogenesis, and excess glucose can be stored as glycogen."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycogen Synthesis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose + ATP → glucose-6-phosphate + ADP"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "hexokinase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q678"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q319"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q87"
       }
     }, {
       "edgeDesc" : {
@@ -9142,7 +9268,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70449)"
+        "value" : "Glyceraldehyde-3-phosphate dehydrogenase oxidizes glyceraldehyde-3-phosphate and adds a phosphate to yield 1,3-bisphosphoglycerate. NADH is produced as a byproduct. This reaction occurs twice per glucose; reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -9152,7 +9278,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9205,6 +9331,69 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "<PlaceHolder>"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NA"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "a molecule that participates in many biochemical reactions, has a coenzyme A group attached to an acetyl by a thioester bond. It delivers an acetyl group to the citric acid cycle. It is formed from pyruvate by the pyruvate dehydrogenase complex"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Beta-Oxidation"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "𝛃-Ketoacyl-CoA + CoA-SH → Fatty Acyl-CoA (Cn-2) + Acetyl-CoA"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "acetyl CoA (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Acyl-CoA Acetyltransferase (Thiolase)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q725"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q733"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q18"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "<placeholder>"
       },
       "pathwayDesc" : {
@@ -9215,7 +9404,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It has the same structure as succinate with the execption of an OH group at the second carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9331,7 +9520,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71496)"
+        "value" : "Aldolase catalyzes cleavage of fructose-1,6-bisphosphate, yielding glyceraldehyde-3-phosphate and dihydroxyacetone phosphate. This reaction is an aldol condensation and is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -9341,7 +9530,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-1,6-bisphosphate is a fructose sugar with 2 phosphate groups: one on C6 and the other on C1. Frucose-1,6-bisphosphate is involved in glycolysis and gluconeogenesis, and it also acts as a positive allosteric regulator of pyruvate kinase."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9520,69 +9709,6 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "This biological pathway is a circular pathway which uses Acetyl-CoA to produce 3 NADH, 1 FADH2 and 1 ATP molecule. This cycle is also sometimes called the Krebs Cycle or Citric Acid Cycle."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Tricarboxylic Acid Cycle"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate + NAD⁺ ⇌ oxaloacetate + NADH + H⁺"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "oxaloacetate (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate dehydrogenase (mitochondrion)"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q229"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q228"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q124"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
         "value" : "catalyzed by citrate lyase"
       },
       "pathwayDesc" : {
@@ -9593,7 +9719,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Weak organic acid"
+        "value" : "it is a 6 carbon citric acid cycle intermediate that is symmetric and has three acetate groups . It has an OH group on the third carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9835,7 +9961,70 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70471)"
+        "value" : "Hexokinase (glucokinase in hepatoctyes) catalyzes the phosphorylation of glucose at C-6 to yield glucose-6-phosphate, trapping glucose in the cell. This reaction is irreversible under intracellular conditions."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glucose is a common monosaccharide and serves as the body's main source of energy. Glucose is broken down for energy via glycolysis. The body can also produce glucose via gluconeogenesis, and excess glucose can be stored as glycogen."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose + ATP → glucose-6-phosphate + ADP"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "glucose"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "hexokinase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q83"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q319"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q87"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Phosphohexose isomerase (also known as phosphoglucose isomerase) catalyzes the reversible isomerization of glucose-6-phosphate (an aldose) to fructose-6-phosphate (a ketose). The reaction proceeds through an enediol intermediate."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -9845,7 +10034,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -9898,70 +10087,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "simple sugar"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycogen Breakdown"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glycogen (branched) <=> glycogen (unbranched)"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "debranching enzyme (specifically, alpha-1,6-glucosidase)"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q623"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q629"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q87"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71660)"
+        "value" : "Enolase catalyzes the removal of a molecule of water from 2-phosphoglycerate to yield phosphoenolpyruvate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -9971,7 +10097,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "2-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10024,7 +10150,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71850)"
+        "value" : "Phosphoglycerate kinase catalyzes the transfer of the high-energy phosphoryl group from 1,3-bisphosphoglycerate to ADP, yielding 3-phosphoglycerate and ATP. This reaction happens twice per molecule of glucose"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -10034,7 +10160,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "1,3-bisphosphoglycerate is a 3-carbon molecule that contains two phosphate groups: one bound to C1 and the other bound to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10150,6 +10276,69 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "<PlaceHolder>"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "<PlaceHolder>"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Fructose-6-phosphate is a fructose sugar with a phosphate group replacing the hydroxy group of C6. It is a substrate of glycolysis and gluconeogenesis."
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Pentose Phosphate Pathway"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "sedoheptulose 7-phosphate + D-glyceraldehyde 3-phosphate <=> D-erythrose 4-phosphate + D-fructose 6-phosphate"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "fructose-6-phosphate"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "transaldolase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q710"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q720"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q28"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "<placeholder>"
       },
       "pathwayDesc" : {
@@ -10160,7 +10349,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "it is a 4 carbon citric acid cycle intermediate that reacts with acetyl CoA. It has two acetate groups and an oxalo group"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10286,7 +10475,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10349,7 +10538,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a 5 carbon citric acid cyclle intermediate formed from isocitrate after the reomval of a carbon dioxide molecule. It has two acetate groups on both ends of the molecule and a keto group on the second carbon ('alpha' position)"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10412,7 +10601,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Pyruvate is the end product of glycolysis. Following glycolysis, pyruvate can be oxidized by the pyruvate dehydrogenase complex to yield acetyl-CoA (aerobic conditions), or can be reduced to form lactate via fermentation (anaerobic conditions)."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10465,17 +10654,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71654)"
+        "value" : "Phosphoglycerate mutase catalyzes the movement of the phosphoryl group from C-3 to C-2, converting 3-phosphoglycerate to 2-phosphoglycerate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "3-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10528,17 +10717,80 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70449)"
+        "value" : "<placeholder>"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "synthesis of ketone bodies"
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "a molecule that participates in many biochemical reactions, has a coenzyme A group attached to an acetyl by a thioester bond. It delivers an acetyl group to the citric acid cycle. It is formed from pyruvate by the pyruvate dehydrogenase complex"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ketone Body Synthesis"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "beta-hydroxy-beta-methylglutaryl-CoA (HMG-CoA) <=> acetoacetate + acetyl CoA"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "acetyl CoA (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "HMG-CoA lyase"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q893"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q900"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q18"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glyceraldehyde-3-phosphate dehydrogenase oxidizes glyceraldehyde-3-phosphate and adds a phosphate to yield 1,3-bisphosphoglycerate. NADH is produced as a byproduct. This reaction occurs twice per glucose; reverse reaction occurs in gluconeogenesis."
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Glyceraldehyde-3-phosphate is a glyceraldehyde molecule with a phosphate group attached to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10649,69 +10901,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q864"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical reaction"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "This biological pathway is a circular pathway which uses Acetyl-CoA to produce 3 NADH, 1 FADH2 and 1 ATP molecule. This cycle is also sometimes called the Krebs Cycle or Citric Acid Cycle."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Tricarboxylic Acid Cycle"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "fumarate + H₂O ⇌ malate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "fumarase (mitochondrion)"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q229"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q227"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q119"
       }
     }, {
       "edgeDesc" : {
@@ -10853,7 +11042,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10906,17 +11095,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71496)"
+        "value" : "Aldolase catalyzes cleavage of fructose-1,6-bisphosphate, yielding glyceraldehyde-3-phosphate and dihydroxyacetone phosphate. This reaction is an aldol condensation and is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-1,6-bisphosphate is a fructose sugar with 2 phosphate groups: one on C6 and the other on C1. Frucose-1,6-bisphosphate is involved in glycolysis and gluconeogenesis, and it also acts as a positive allosteric regulator of pyruvate kinase."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -10979,7 +11168,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -11168,7 +11357,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Fructose-1,6-bisphosphate is a fructose sugar with 2 phosphate groups: one on C6 and the other on C1. Frucose-1,6-bisphosphate is involved in glycolysis and gluconeogenesis, and it also acts as a positive allosteric regulator of pyruvate kinase."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -11347,69 +11536,6 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "catalyzed by hexokinase (glucokinase in hepatocytes)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<placeholder>"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "simple sugar"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycogen Synthesis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose + ATP => glucose-6-phosphate + ADP"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "hexokinase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q678"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q319"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q87"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
         "value" : "<placeholder>"
       },
       "pathwayDesc" : {
@@ -11473,17 +11599,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70471)"
+        "value" : "Phosphohexose isomerase (also known as phosphoglucose isomerase) catalyzes the reversible isomerization of glucose-6-phosphate (an aldose) to fructose-6-phosphate (a ketose). The reaction proceeds through an enediol intermediate."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "Glucose-6-phosphate is a glucose sugar with a phosphate group replacing the hydroxy group of C6. Glucose-6-phosphate is a substrate in glycolysis, glycogen synthesis, pentose phosphate pathway, and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -11536,7 +11662,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70454)"
+        "value" : "Triose phosphate isomerase catalyzes the conversion of dihydroxyacetone phosphate to glyceraldehyde-3-phosphate. This reaction is reversible."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -11546,7 +11672,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Dihydroxyacetone phosphate is a substrate of glycolysis and gluconeogenesis. It is also impotant for triacylglycerol synthesis (dihydroxyacetone phosphate provides the glycerol backbone)."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -11599,17 +11725,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71660)"
+        "value" : "Enolase catalyzes the removal of a molecule of water from 2-phosphoglycerate to yield phosphoenolpyruvate. This reaction happens twice per molecule of glucose; the reverse reaction occurs in gluconeogenesis."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "2-phosphoglycerate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -11662,17 +11788,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71850)"
+        "value" : "Phosphoglycerate kinase catalyzes the transfer of the high-energy phosphoryl group from 1,3-bisphosphoglycerate to ADP, yielding 3-phosphoglycerate and ATP. This reaction happens twice per molecule of glucose"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "1,3-bisphosphoglycerate is a 3-carbon molecule that contains two phosphate groups: one bound to C1 and the other bound to C3. It is a substrate of glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -11919,6 +12045,69 @@
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
+        "value" : "pathway used in hepatocytes and cardiac myocytes to shuttle electrons from NADH produced in glycolysis to the mitochondrial matrix"
+      },
+      "metaboliteDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "it is a 4 carbon citric acid cycle intermediate that reacts with acetyl CoA. It has two acetate groups and an oxalo group"
+      },
+      "pathwayLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Malate-Aspartate Shuttle"
+      },
+      "edgeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate + NAD+ <=> oxaloacetate + NADH"
+      },
+      "metaboliteLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "oxaloacetate (mitochondrion)"
+      },
+      "enzymeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "malate dehydrogenase (mitochondrion)"
+      },
+      "isReactant" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isBidirectional" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "false"
+      },
+      "isProduct" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+        "type" : "literal",
+        "value" : "true"
+      },
+      "pathwayQID" : {
+        "type" : "literal",
+        "value" : "Q872"
+      },
+      "edgeQID" : {
+        "type" : "literal",
+        "value" : "Q882"
+      },
+      "metaboliteQID" : {
+        "type" : "literal",
+        "value" : "Q124"
+      }
+    }, {
+      "edgeDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "<placeholder>"
+      },
+      "pathwayDesc" : {
+        "xml:lang" : "en",
+        "type" : "literal",
         "value" : "synthesis of ketone bodies"
       },
       "metaboliteDesc" : {
@@ -11977,70 +12166,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "antiporter"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "pathway used in hepatocytes and cardiac myocytes to shuttle electrons from NADH produced in glycolysis to the mitochondrial matrix"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Malate-Aspartate Shuttle"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate + alpha-ketoglutarate <=> alpha-ketoglutarate + malate"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate (mitochondrion)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "malate-alpha-ketoglutarate transporter"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q872"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q876"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q119"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "<PlaceHolder>"
+        "value" : "isocitrate dehydrogenase catalyses conversion of isocitrate into a-ketoglutarate. It is a decarboxylation reaction and results in the release of one carbon dioxide molecule."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -12050,7 +12176,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "It is a structural isomer of citrate that has the OH group on the second carbon instead of the third"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -12098,69 +12224,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q208"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "catalyzed by hexokinase (glucokinase in hepatocytes)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "simple sugar"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Glycolysis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose + ATP => glucose-6-phosphate + ADP"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "glucose"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "hexokinase"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q83"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q319"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q87"
       }
     }, {
       "edgeDesc" : {
@@ -12229,17 +12292,17 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-71670)"
+        "value" : "Pyruvate kinase catalyzes the transfer of the phosphoryl group from phosphoenolpyruvate to ADP, yielding pyruvate and ATP. This reaction happens twice per molecule of glucose"
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Glycolysis stands for glykys (sweet) and lysis (splitting). In other words, this pathway is involved in the breakdown of glucose into pyruvate which can be further used to create energy for the cell."
+        "value" : "Glycolysis is a catabolic pathway in which glucose is broken down into 2 molecules of pyruvate with a net energy production of 2 ATPs.  Glycolysis takes place in the cytoplasm."
       },
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical compound"
+        "value" : "Phosphoenolpyruvate is a substrate in glycolysis and gluconeogenesis."
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -12481,7 +12544,7 @@
       "edgeDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "chemical reaction; (Z)-aconitate is an intermediate"
+        "value" : "aconitase catalyses the formation of isocitrate (has the OH group on C-4) from citrate (with OH group on C-3) via the formation of a cis-citrate intermediate. The reaction proceeds by dehydration of citrate followed by hydration of cis-citrate."
       },
       "pathwayDesc" : {
         "xml:lang" : "en",
@@ -12491,7 +12554,7 @@
       "metaboliteDesc" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Weak organic acid"
+        "value" : "it is a 6 carbon citric acid cycle intermediate that is symmetric and has three acetate groups . It has an OH group on the third carbon"
       },
       "pathwayLabel" : {
         "xml:lang" : "en",
@@ -12728,69 +12791,6 @@
       "metaboliteQID" : {
         "type" : "literal",
         "value" : "Q737"
-      }
-    }, {
-      "edgeDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological reaction in Homo sapiens with Reactome ID (R-HSA-70241)"
-      },
-      "pathwayDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "An instance of the biological pathway in Homo sapiens with Reactome ID (R-HSA-70171)"
-      },
-      "metaboliteDesc" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "chemical compound"
-      },
-      "pathwayLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Gluconeogenesis"
-      },
-      "edgeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "oxaloacetate + GTP => phosphoenolpyruvate + GDP + CO2 [cytosol]"
-      },
-      "metaboliteLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "phosphoenolpyruvate (cytosol)"
-      },
-      "enzymeLabel" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "phosphoenolpyruvate carboxykinase (cytosol)"
-      },
-      "isReactant" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isBidirectional" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "false"
-      },
-      "isProduct" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
-        "type" : "literal",
-        "value" : "true"
-      },
-      "pathwayQID" : {
-        "type" : "literal",
-        "value" : "Q88"
-      },
-      "edgeQID" : {
-        "type" : "literal",
-        "value" : "Q294"
-      },
-      "metaboliteQID" : {
-        "type" : "literal",
-        "value" : "Q58"
       }
     }, {
       "edgeDesc" : {
