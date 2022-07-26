@@ -82,7 +82,7 @@ public class NetworkSearch : MonoBehaviour
 
             nodesByEdge.Add(currentEdge, new List<NodeSO>());
             if (currentEdge.bidirectional){
-                Debug.Log("BFS found bidirectional edge");
+                //Debug.Log("BFS found bidirectional edge");
                 //search products and reactants, return the one where we dont find node in
 
                 if (currentEdge.products.Contains(current)){
@@ -128,7 +128,7 @@ public class NetworkSearch : MonoBehaviour
     }
 
     public void MockSearch(){
-        BFSTest(StatusController.Instance.activePathways[2],StatusController.Instance.activePathways[2].nodes[8],StatusController.Instance.activePathways[2].nodes[6]);
+        BFSTest(StatusController.Instance.activePathways[2],StatusController.Instance.activePathways[2].nodes[8],StatusController.Instance.activePathways[3].nodes[0]);
     }
 
 
