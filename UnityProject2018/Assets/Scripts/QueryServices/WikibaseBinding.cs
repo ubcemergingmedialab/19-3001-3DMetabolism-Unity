@@ -20,7 +20,14 @@ public class WikibaseBinding
     public WikibaseBindingElement isBidirectional;
     public WikibaseBindingElement pathwayDesc;
     public WikibaseBindingElement edgeDesc;
+    public WikibaseBindingElement edgeEnzymeTypeLabel;
+    public WikibaseBindingElement edgeCofactorsLabel;
+
     public WikibaseBindingElement metaboliteDesc;
+    public WikibaseBindingElement metaboliteMoleFormula;
+    public WikibaseBindingElement metaboliteIUPAC;
+    public WikibaseBindingElement metaboliteStrucDesc;
+
     public WikibaseBindingElement isReactant;
     public WikibaseBindingElement isProduct;
     public WikibaseBindingElement isEnzyme;

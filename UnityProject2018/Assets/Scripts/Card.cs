@@ -8,19 +8,20 @@ public class Card: ScriptableObject {
     public string Label;
     public string QID;
     public string Description;
-    public string Charge;
+    // public string Charge;
     public string EnergyConsumed;
     public string EnergyProduced;
     public string GibbsFreeEnergy;
     public string MolecularFormula;
     public string IUPACNames;
+    public string StructuralDescription;
     public string link;
 
 
     public string AuxLabel;
     public string AuxQID;
     public string AuxDescription;
-    public string AuxCharge;
+    // public string AuxCharge;
     public string AuxEnergyConsumed;
     public string AuxEnergyProduced;
     public string AuxGibbsFreeEnergy;

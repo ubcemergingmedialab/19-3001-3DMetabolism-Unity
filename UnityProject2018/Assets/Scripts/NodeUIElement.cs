@@ -10,9 +10,10 @@ public class NodeUIElement : UIElement
     public Text DescriptionText;
 
     public Text QIDText;
-    public Text ChargeText;
+    // public Text ChargeText;
     public TextMeshProUGUI MolecularFormulaText;
     public Text IUPACNamesText;
+    public Text StructuralDescriptionText;
     public GameObject LinkButton;
 
     override public void UpdateUI()
@@ -23,9 +24,10 @@ public class NodeUIElement : UIElement
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
-        ChargeText.text = ((Card)DataReference).Charge;
+        // ChargeText.text = ((Card)DataReference).Charge;
         MolecularFormulaText.text = ((Card)DataReference).MolecularFormula;
         IUPACNamesText.text = ((Card)DataReference).IUPACNames;
+        StructuralDescriptionText.text = ((Card)DataReference).StructuralDescription;
         if (((Card)DataReference).link != null && ((Card)DataReference).link.Length > 0)
         {
             Debug.Log("updating link");
