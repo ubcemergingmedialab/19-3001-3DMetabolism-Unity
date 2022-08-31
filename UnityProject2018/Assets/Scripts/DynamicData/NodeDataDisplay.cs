@@ -70,9 +70,10 @@ public class NodeDataDisplay : MonoBehaviour
         DisplayData.Label = nodeData.Label;
         DisplayData.QID = nodeData.QID;
         DisplayData.Description = nodeData.Description;
-        // DisplayData.Charge = nodeData.Charge;
+        DisplayData.Charge = nodeData.Charge;
         DisplayData.MolecularFormula = nodeData.MolecularFormula;
         DisplayData.IUPACNames = nodeData.IUPACNames;
+        DisplayData.Pubchemlink = nodeData.Pubchemlink;
         if (UIPresenter.UIList.NodeUI != null)
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI, false);
         else Debug.Log("Error in callin NodeUI list");

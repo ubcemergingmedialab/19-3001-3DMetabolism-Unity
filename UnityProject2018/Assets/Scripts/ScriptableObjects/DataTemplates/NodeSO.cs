@@ -11,7 +11,6 @@ public class NodeSO : ScriptableObject
     public Quaternion Rotation;
     [TextArea(10, 100)]
     public string Description;
-    // public string Charge;
     [TextArea(10, 100)]
     public string EnzymeRequired;
     public string MolecularFormula;
@@ -19,9 +18,11 @@ public class NodeSO : ScriptableObject
     public string IUPACNames;
     [TextArea(10, 100)]
     public string StructuralDescription;
+    public string Charge;
+    public string Pubchemlink;
     public string link;
 
-    public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc) {
+    public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc, string charge, string pubchem) {
         this.name = name;
         this.Label = name;
         this.QID = newQID;
@@ -29,5 +30,7 @@ public class NodeSO : ScriptableObject
         this.MolecularFormula = moleForm;
         this.IUPACNames = IUPAC;
         this.StructuralDescription = StrucDesc;
+        this.Charge = charge;
+        this.Pubchemlink = pubchem;
     }
 }

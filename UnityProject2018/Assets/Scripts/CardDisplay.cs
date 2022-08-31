@@ -11,10 +11,13 @@ public class CardDisplay : MonoBehaviour {
     public Text DescriptionText;
 
     public Text QIDText;
-    // public Text ChargeText;
-    public Text EnergyConsumedText;
-    public Text EnergyProducedText;
-    public Text GibbsFreeEnergyText;
+    public Text EnzymeClassText;
+    public Text CofactorsText;
+    public Text EnergyRequiredText;
+    public Text PubchemlinkText;
+    public Text RegulationText;
+
+    public Text ChargeText;
     public Text MolecularFormulaText;
     public Text IUPACNamesText;
     public Text StructuralDescriptionText;
@@ -24,10 +27,12 @@ public class CardDisplay : MonoBehaviour {
         LabelText.text = card.Label;
         DescriptionText.text = card.Description;
         QIDText.text = card.QID;
-        // ChargeText.text = card.Charge;
-        EnergyConsumedText.text = card.EnergyConsumed;
-        EnergyProducedText.text = card.EnergyProduced;
-        GibbsFreeEnergyText.text = card.GibbsFreeEnergy;
+        ChargeText.text = card.Charge;
+        EnzymeClassText.text = card.EnzymeClass;
+        CofactorsText.text = card.Cofactors;
+        EnergyRequiredText.text = card.EnergyRequired;
+        PubchemlinkText.text = card.Pubchemlink;
+        RegulationText.text = card.Regulation;
         MolecularFormulaText.text = card.MolecularFormula;
         IUPACNamesText.text = card.IUPACNames;
         StructuralDescriptionText.text = card.StructuralDescription;

@@ -10,18 +10,21 @@ public class EdgeUIElement : UIElement
     public Text DescriptionText;
 
     public Text QIDText;
-    public Text EnergyConsumedText;
-    public Text EnergyProducedText;
-    public Text GibbsFreeEnergyText;
+    public Text EnzymeClassText;
+    public Text CofactorsText;
+    public Text PubchemlinkText;
+    public Text RegulationText;
 
     public GameObject AuxUI;
     public Text AuxLabelText;
     public Text AuxDescriptionText;
 
     public Text AuxQIDText;
-    public Text AuxEnergyConsumedText;
-    public Text AuxEnergyProducedText;
-    public Text AuxGibbsFreeEnergyText;
+    public Text AuxEnzymeClassText;
+    public Text AuxCofactorsText;
+    public Text AuxPubchemlinkText;
+    public Text AuxRegulationText;
+
 
     override public void UpdateUI()
     {
@@ -31,9 +34,10 @@ public class EdgeUIElement : UIElement
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
-        EnergyConsumedText.text = ((Card)DataReference).EnergyConsumed;
-        EnergyProducedText.text = ((Card)DataReference).EnergyProduced;
-        GibbsFreeEnergyText.text = ((Card)DataReference).GibbsFreeEnergy;
+        EnzymeClassText.text = ((Card)DataReference).EnzymeClass;
+        CofactorsText.text = ((Card)DataReference).Cofactors;
+        PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
+        RegulationText.text = ((Card)DataReference).Regulation;
         if(AuxUI != null) {
             AuxUI.SetActive(false);
         }
@@ -48,18 +52,20 @@ public class EdgeUIElement : UIElement
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
-        EnergyConsumedText.text = ((Card)DataReference).EnergyConsumed;
-        EnergyProducedText.text = ((Card)DataReference).EnergyProduced;
-        GibbsFreeEnergyText.text = ((Card)DataReference).GibbsFreeEnergy;
+        EnzymeClassText.text = ((Card)DataReference).EnzymeClass;
+        CofactorsText.text = ((Card)DataReference).Cofactors;
+        PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
+        RegulationText.text = ((Card)DataReference).Regulation;
 
         if(AuxUI != null) {
             AuxUI.SetActive(true);
             AuxLabelText.text = ((Card)DataReference).AuxLabel;
             AuxDescriptionText.text = ((Card)DataReference).AuxDescription;
             AuxQIDText.text = ((Card)DataReference).AuxQID;
-            AuxEnergyConsumedText.text = ((Card)DataReference).AuxEnergyConsumed;
-            AuxEnergyProducedText.text = ((Card)DataReference).AuxEnergyProduced;
-            AuxGibbsFreeEnergyText.text = ((Card)DataReference).AuxGibbsFreeEnergy;
+            AuxEnzymeClassText.text = ((Card)DataReference).AuxEnzymeClass;
+            AuxCofactorsText.text = ((Card)DataReference).AuxCofactors;
+            AuxPubchemlinkText.text = ((Card)DataReference).AuxPubchemlink;
+            AuxRegulationText.text = ((Card)DataReference).AuxRegulation;
         }
     }
 }
