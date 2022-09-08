@@ -11,7 +11,7 @@ public class NodeUIElement : UIElement
 
     public Text QIDText;
     public Text ChargeText;
-    public TextMeshProUGUI MolecularFormulaText;
+    public Text MolecularFormulaText;
     public Text IUPACNamesText;
     public Text StructuralDescriptionText;
     public Text PubchemlinkText;
