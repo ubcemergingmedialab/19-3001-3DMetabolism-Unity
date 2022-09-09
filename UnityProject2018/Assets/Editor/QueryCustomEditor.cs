@@ -18,7 +18,7 @@ public class QueryCustomEditor : EditorWindow
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
         "?edgeLabel ?metaboliteLabel ?enzymeLabel ?isBidirectional " +
         "?metaboliteMoleFormula ?metaboliteIUPAC ?metaboliteStrucDesc ?metaboliteCharge ?metabolitePubchem " +
-        "?edgeEnzymeTypeLabel ?edgeCofactorsLabel ?edgeEnergyReq ?edgePubchem ?edgeRegulation " +
+        "?edgeEnzymeTypeLabel ?edgeCofactorsLabel ?edgeEnergyReqLabel ?edgePubchem ?edgeRegulation " +
         "?isReactant ?isProduct ?isEnzyme "+
         "?pathwayDesc ?edgeDesc ?metaboliteDesc where { ";
     public static string queryRawSecond = " p:P4 ?edgeStatement." +
@@ -30,18 +30,18 @@ public class QueryCustomEditor : EditorWindow
         "?enzymeStatement ps:P4 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
         "?metabolite schema:description ?metaboliteDesc." +
-        "?metabolite wdt:P37 ?metaboliteMoleFormula." + // new
-        "?metabolite wdt:P38 ?metaboliteIUPAC." + // new
-        "?metabolite wdt:P44 ?metaboliteStrucDesc." + // new
-        "?metabolite wdt:P27 ?metaboliteCharge." + //new
-        "?metabolite wdt:P45 ?metabolitePubchem." + //new
+        "?metabolite wdt:P37 ?metaboliteMoleFormula." + 
+        "?metabolite wdt:P38 ?metaboliteIUPAC." + 
+        "?metabolite wdt:P44 ?metaboliteStrucDesc." + 
+        "?metabolite wdt:P27 ?metaboliteCharge." + 
+        "?metabolite wdt:P45 ?metabolitePubchem." + 
         "?statement (pq:P31|pq:P32) ?edge." +
         "?enzymeStatement (pq:P42) ?edge." +
-        "?edge wdt:P14 ?edgeEnzymeType." + // new
-        "?edge wdt:P22 ?edgeCofactors." + // new
-        "?edge wdt:P13 ?edgeEnergyReq." + //new
-        "?edge wdt:P45 ?edgePubchem." + //new
-        "?edge wdt:P43 ?edgeRegulation." + //new
+        "?edge wdt:P14 ?edgeEnzymeType." + 
+        "?edge wdt:P22 ?edgeCofactors." + 
+        "?edge wdt:P13 ?edgeEnergyReq." + 
+        "?edge wdt:P45 ?edgePubchem." + 
+        "?edge wdt:P43 ?edgeRegulation." + 
         "BIND(REPLACE(STR(?pathway), STR(foaf:), \"foaf:\") AS ?prefixedPathway) " +
         "BIND(replace(str(?edge), str(foaf:), \"foaf:\") as ?prefixedEdge)" +
         "BIND(replace(str(?metabolite), str(foaf:), \"foaf:\") as ?prefixedMetabolite)" +

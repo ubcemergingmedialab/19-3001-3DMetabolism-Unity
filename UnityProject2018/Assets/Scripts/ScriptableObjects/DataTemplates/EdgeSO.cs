@@ -9,6 +9,7 @@ public class EdgeSO : ScriptableObject
     public Vector3 Position;
     public string QID;
     public string Description;
+    public string Enzyme;
     public string EnzymeClass;
     public string Cofactors;
     public string EnergyRequired;
@@ -39,6 +40,7 @@ public class EdgeSO : ScriptableObject
         this.name = enzymeLabel;
         this.Label = name;
         this.Description = desc;
+        this.Enzyme = enzymeLabel;
         this.bidirectional = bidirectionality;
         this.reactants = new List<NodeSO>();
         this.products = new List<NodeSO>();

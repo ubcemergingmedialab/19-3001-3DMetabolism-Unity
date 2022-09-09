@@ -27,6 +27,7 @@ public class EdgeDataDisplay : MonoBehaviour
         DisplayData.QID = edgeData.QID;
         DisplayData.Description = edgeData.Description;
         DisplayData.EnzymeClass = edgeData.EnzymeClass;
+        DisplayData.Enzyme = edgeData.Enzyme;
         DisplayData.Cofactors = edgeData.Cofactors;
         DisplayData.EnergyRequired = edgeData.EnergyRequired;
         DisplayData.Pubchemlink = edgeData.Pubchemlink;

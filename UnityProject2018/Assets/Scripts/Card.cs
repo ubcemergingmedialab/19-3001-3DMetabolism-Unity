@@ -10,6 +10,7 @@ public class Card: ScriptableObject {
     public string Description;
     public string Charge;
     public string EnzymeClass;
+    public string Enzyme;
     public string Cofactors;
     public string EnergyRequired;
     public string Pubchemlink;
@@ -25,6 +26,7 @@ public class Card: ScriptableObject {
     public string AuxDescription;
     public string AuxCharge;
     public string AuxEnzymeClass;
+    public string AuxEnzyme;
     public string AuxCofactors;
     public string AuxEnergyRequired;
     public string AuxPubchemlink;

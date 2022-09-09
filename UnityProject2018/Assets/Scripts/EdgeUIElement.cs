@@ -11,6 +11,8 @@ public class EdgeUIElement : UIElement
 
     public Text QIDText;
     public Text EnzymeClassText;
+    public Text EnzymeText;
+    public Text EnergyRequiredText;
     public Text CofactorsText;
     public Text PubchemlinkText;
     public Text RegulationText;
@@ -35,6 +37,8 @@ public class EdgeUIElement : UIElement
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
         EnzymeClassText.text = ((Card)DataReference).EnzymeClass;
+        EnzymeText.text = ((Card)DataReference).Enzyme;
+        EnergyRequiredText.text = ((Card)DataReference).EnergyRequired;
         CofactorsText.text = ((Card)DataReference).Cofactors;
         PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
         RegulationText.text = ((Card)DataReference).Regulation;
@@ -54,6 +58,7 @@ public class EdgeUIElement : UIElement
         QIDText.text = ((Card)DataReference).QID;
         EnzymeClassText.text = ((Card)DataReference).EnzymeClass;
         CofactorsText.text = ((Card)DataReference).Cofactors;
+        EnergyRequiredText.text = ((Card)DataReference).EnergyRequired;
         PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
         RegulationText.text = ((Card)DataReference).Regulation;
 
