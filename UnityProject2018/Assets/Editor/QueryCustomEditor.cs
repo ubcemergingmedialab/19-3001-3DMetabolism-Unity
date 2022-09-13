@@ -8,7 +8,7 @@ using System.IO;
 // [CustomEditor(typeof(QueryEditor))]
 public class QueryCustomEditor : EditorWindow
 {
-
+    string targetTag = "alanine aminotransferase";
     string targetPathwayQID = "ALL";
     public static string WQS = "http://wikibase-3dm.eml.ubc.ca:8282/proxy/wdqs/bigdata/namespace/wdq/sparql?format=json&query=";
     public static string queryRawFirst = "PREFIX foaf: <http://wikibase-3dm.eml.ubc.ca/entity/> " + 
@@ -101,6 +101,7 @@ public class QueryCustomEditor : EditorWindow
         GUILayout.Label("Query to Unity", EditorStyles.boldLabel);
         GUILayout.Label("Put  \"ALL\" to query all pathways \n currently only work with ALL");
         targetPathwayQID = EditorGUILayout.TextField("Target pathway QID:",targetPathwayQID);
+        targetTag = EditorGUILayout.TextField("Target object tag:", targetTag);
         
         if(targetPathwayQID == "ALL"){
             temp = "?pathway";
@@ -177,9 +178,9 @@ public class QueryCustomEditor : EditorWindow
 
         // // active pathways are now filled with SOs from query using this button 
         // // TODO: active pathways needs to be cleared if the SOs are deleted, this is done manually atm
-        
 
-         
+
+
 
         //  if (GUILayout.Button("Fill pathway list (last click)"))
         // {
@@ -189,9 +190,16 @@ public class QueryCustomEditor : EditorWindow
         // {
         //    GameObject.Find("StatusController").GetComponent<StatusController>().FillItemReferenceList();
         // }
+        if (GUILayout.Button("find tagged objs"))
+        {
+            GameObject[] tagged = GameObject.FindGameObjectsWithTag(targetTag);
+            
+            foreach(GameObject alam in tagged)
+            {
+                Debug.Log("obj:" + alam.name);
+            }
+        }
+
+
     }
-
-
-
-
 }
