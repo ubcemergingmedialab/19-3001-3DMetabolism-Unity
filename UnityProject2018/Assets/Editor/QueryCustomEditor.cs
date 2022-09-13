@@ -194,9 +194,9 @@ public class QueryCustomEditor : EditorWindow
         {
             GameObject[] tagged = GameObject.FindGameObjectsWithTag(targetTag);
             
-            foreach(GameObject alam in tagged)
+            foreach(GameObject obj in tagged)
             {
-                Debug.Log("obj:" + alam.name);
+                Debug.Log("obj:" + obj.name);
             }
         }
 

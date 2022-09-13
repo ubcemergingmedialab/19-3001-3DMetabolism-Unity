@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/scrollBar.unity
     guid: cd4c811c221cedf4c9ed8e3776ddcee5
   - enabled: 0
-    path: Assets/Scenes/devUIMenu.unity
-    guid: 5bebf6aaade0e4a88ae3a8c7bda962f8
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/_Main.unity
     guid: 9bf77c82321493d459b0e00eda5cb296
+  - enabled: 1
+    path: Assets/Scenes/devSidecard.unity
+    guid: 7883b0fd3084ec0498e4f3da304df2c1
   m_configObjects: {}

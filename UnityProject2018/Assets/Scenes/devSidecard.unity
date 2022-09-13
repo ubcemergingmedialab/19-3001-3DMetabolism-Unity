@@ -26566,7 +26566,7 @@ PrefabInstance:
     - target: {fileID: 24290790557960618, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -723.6
+      value: -663.12
       objectReference: {fileID: 0}
     - target: {fileID: 1017864279614105888, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
@@ -26761,7 +26761,7 @@ PrefabInstance:
     - target: {fileID: 2388934949133178645, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -721.2
+      value: -663.1
       objectReference: {fileID: 0}
     - target: {fileID: 2604012230235771020, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
@@ -26972,7 +26972,7 @@ PrefabInstance:
     - target: {fileID: 7032068493490411934, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -755
+      value: -690.2
       objectReference: {fileID: 0}
     - target: {fileID: 7032068493490411935, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
@@ -27272,7 +27272,7 @@ PrefabInstance:
     - target: {fileID: 7032068494048855859, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -803.5
+      value: -744
       objectReference: {fileID: 0}
     - target: {fileID: 7032068494048855860, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
@@ -27509,7 +27509,7 @@ PrefabInstance:
     - target: {fileID: 7032068494401491420, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -249.3
+      value: -183.2
       objectReference: {fileID: 0}
     - target: {fileID: 7032068494401491421, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
@@ -27680,7 +27680,7 @@ PrefabInstance:
     - target: {fileID: 7032068494659028963, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -780.94
+      value: -720
       objectReference: {fileID: 0}
     - target: {fileID: 7032068494659028964, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
@@ -27980,6 +27980,11 @@ PrefabInstance:
     - target: {fileID: 7032068495013380026, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032068495013380026, guid: b2e1923c25a3b8b46b1ef961737adb28,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7032068495248074223, guid: b2e1923c25a3b8b46b1ef961737adb28,
@@ -54486,6 +54491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: alanine aminotransferase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2086918294196329221, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2126179706333664536, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
