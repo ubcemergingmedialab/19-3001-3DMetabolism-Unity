@@ -68,6 +68,7 @@ public class StatusController : MonoBehaviour
             Debug.LogError("StatusCtrl: activePathways is null/empty ");
         }
 
+
         // Fill the elements network 
         foreach (PathwaySO pathwaySO in this.activePathways) {
 
