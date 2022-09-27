@@ -9,11 +9,15 @@ public class Card: ScriptableObject {
     public string QID;
     public string Description;
     public string Charge;
-    public string EnergyConsumed;
-    public string EnergyProduced;
-    public string GibbsFreeEnergy;
+    public string EnzymeClass;
+    public string Enzyme;
+    public string Cofactors;
+    public string EnergyRequired;
+    public string Pubchemlink;
+    public string Regulation;
     public string MolecularFormula;
     public string IUPACNames;
+    public string StructuralDescription;
     public string link;
 
 
@@ -21,9 +25,12 @@ public class Card: ScriptableObject {
     public string AuxQID;
     public string AuxDescription;
     public string AuxCharge;
-    public string AuxEnergyConsumed;
-    public string AuxEnergyProduced;
-    public string AuxGibbsFreeEnergy;
+    public string AuxEnzymeClass;
+    public string AuxEnzyme;
+    public string AuxCofactors;
+    public string AuxEnergyRequired;
+    public string AuxPubchemlink;
+    public string AuxRegulation;
     public string AuxMolecularFormula;
     public string AuxIUPACNames;
     public string Auxlink;

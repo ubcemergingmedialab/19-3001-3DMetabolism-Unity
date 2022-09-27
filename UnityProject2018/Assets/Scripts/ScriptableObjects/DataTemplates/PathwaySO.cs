@@ -68,6 +68,7 @@ public class PathwaySO : ScriptableObject
     public void FillLists(){
         foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in LocalNetwork){
             nodes.Add(pair.Key);
+            
             edges.AddRange(pair.Value);
         }
     }

@@ -9,9 +9,12 @@ public class EdgeSO : ScriptableObject
     public Vector3 Position;
     public string QID;
     public string Description;
-    public string EnergyConsumed;
-    public string EnergyProduced;
-    public string GibbsFreeEnergy;
+    public string Enzyme;
+    public string EnzymeClass;
+    public string Cofactors;
+    public string EnergyRequired;
+    public string Pubchemlink;
+    public string Regulation;
 
     //public NodeSOBeta parent;
     public List<NodeSO> reactants;
@@ -23,21 +26,29 @@ public class EdgeSO : ScriptableObject
     public Vector3 AuxPosition;
     public string AuxQID;
     public string AuxDescription;
-    public string AuxEnergyConsumed;
-    public string AuxEnergyProduced;
-    public string AuxGibbsFreeEnergy;
+    public string AuxEnzymeClass;
+    public string AuxCofactors;
+    public string AuxEnergyRequired;
+    public string AuxPubchemlink;
+    public string AuxRegulation;
 
     /* initialize the essential fields 
     */
-    public void init(string name, string newQID, string desc, string enzymeLabel, bool bidirectionality = false){
+    public void init(string name, string newQID, string desc, string enzymeLabel, string enzymeclass, string cofactors, string energyreq, string pubchem, string regulation, bool bidirectionality = false){
 
         this.QID = newQID;
         this.name = enzymeLabel;
         this.Label = name;
         this.Description = desc;
+        this.Enzyme = enzymeLabel;
         this.bidirectional = bidirectionality;
         this.reactants = new List<NodeSO>();
         this.products = new List<NodeSO>();
+        this.EnzymeClass = enzymeclass;
+        this.Cofactors = cofactors;
+        this.EnergyRequired = energyreq;
+        this.Pubchemlink = pubchem;
+        this.Regulation = regulation;
     }
 
     // add reactant to the edge

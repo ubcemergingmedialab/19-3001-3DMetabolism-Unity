@@ -13,8 +13,12 @@ static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
 public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
 
+public TextAsset queryxml;
+
 static string ResourceFolderPath = "Assets/Resources/Data/";
 static string JsonFileDestination = "Assets/Resources/Data/query.xml";
+// static string JsonFileDestination = "query.xml";
+
 
 /*
     1-  serialize the json
@@ -77,9 +81,12 @@ static void WriteString(string str)
 // initiate the scriptable object creating after serialization 
 void SerializeAndCreate()
 {   
-    FileStream fileStream = new FileStream(JsonFileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-    var streamReader = new StreamReader(fileStream);
-    string xmlToString = streamReader.ReadToEnd();
+    // FileStream fileStream = new FileStream(JsonFileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    // var streamReader = new StreamReader(fileStream);
+    // string xmlToString = streamReader.ReadToEnd();
+
+    string xmlToString = queryxml.text;
+    
     WikibaseResult result = JsonUtility.FromJson<WikibaseResult>(xmlToString);
 
     foreach( WikibaseBinding item in result.results.bindings){
@@ -123,7 +130,7 @@ public void EdgeSOInit(WikibaseBinding item){
             direction = true;
         }
         // Debug.Log(item.isBidirectional.value + " direction var = " + direction);
-        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,direction);
+        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,item.edgeEnzymeTypeLabel.value, item.edgeCofactorsLabel.value, item.edgeEnergyReqLabel.value, item.edgePubchem.value, item.edgeRegulation.value/*, System.Convert.ToBoolean(item.isBidirectional.value)*/);
         string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
         AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
@@ -146,7 +153,7 @@ public void NodeSOInit(WikibaseBinding item){
         
         string newPath = ResourceFolderPath + "NodeSO/" +item.metaboliteLabel.value + ".asset";
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
-        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value);
+        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value,item.metaboliteMoleFormula.value,item.metaboliteIUPAC.value,item.metaboliteStrucDesc.value,item.metaboliteCharge.value,item.metabolitePubchem.value);
         NodeSOs.Add(item.metaboliteLabel.value,currentNode);
         AssetDatabase.CreateAsset(currentNode,newPath);
     }else{
@@ -213,6 +220,7 @@ public async void ClearQueryData(){
 public async void DeleteQueryXml(){
 
     File.Delete("Assets/Resources/Data/query.xml");
+    File.Delete("Assets/Resources/query.xml");
 }
 
 }
