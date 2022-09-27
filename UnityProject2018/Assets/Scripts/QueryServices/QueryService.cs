@@ -13,8 +13,12 @@ static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
 public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
 
+public TextAsset queryxml;
+
 static string ResourceFolderPath = "Assets/Resources/Data/";
-static string JsonFileDestination = "Assets/Resources/Data/query.xml";
+// static string JsonFileDestination = "Assets/Resources/Data/query.xml";
+static string JsonFileDestination = "query.xml";
+
 
 /*
     1-  serialize the json
@@ -77,9 +81,12 @@ static void WriteString(string str)
 // initiate the scriptable object creating after serialization 
 void SerializeAndCreate()
 {   
-    FileStream fileStream = new FileStream(JsonFileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-    var streamReader = new StreamReader(fileStream);
-    string xmlToString = streamReader.ReadToEnd();
+    // FileStream fileStream = new FileStream(JsonFileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    // var streamReader = new StreamReader(fileStream);
+    // string xmlToString = streamReader.ReadToEnd();
+
+    string xmlToString = queryxml.text;
+    
     WikibaseResult result = JsonUtility.FromJson<WikibaseResult>(xmlToString);
 
     foreach( WikibaseBinding item in result.results.bindings){
