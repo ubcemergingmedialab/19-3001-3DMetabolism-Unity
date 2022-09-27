@@ -117,6 +117,7 @@ public class QueryCustomEditor : EditorWindow
          if (GUILayout.Button("delete query xml"))
         {
             GameObject.Find("QueryService").GetComponent<QueryService>().DeleteQueryXml();
+            Debug.Log("Deleted XML");
         }
 
         if (GUILayout.Button("run query"))
@@ -124,6 +125,7 @@ public class QueryCustomEditor : EditorWindow
             string qRawFull = queryRawFirst + temp + queryRawSecond ;
 
             GameObject.Find("QueryService").GetComponent<QueryService>().RunQuery(WQS,qRawFull);
+            Debug.Log("RunQuery Complete");
         }
   
         // if (GUILayout.Button("Update active pathways in StatusController"))
