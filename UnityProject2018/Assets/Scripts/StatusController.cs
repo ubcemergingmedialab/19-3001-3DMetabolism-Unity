@@ -149,7 +149,7 @@ public class StatusController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        PipelineTest();             // for manual testing of the highlight functionality
+        // PipelineTest();             // for manual testing of the highlight functionality
         
     }
 
@@ -210,7 +210,7 @@ public class StatusController : MonoBehaviour
                     }
             }
         } else {
-            Debug.LogError("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }
@@ -270,42 +270,42 @@ public class StatusController : MonoBehaviour
     }
 
 // function for manually testing the higlhight pipeline with num keys activating pathways in the pathway list
-    private void PipelineTest(){
-        //0
-        if (Input.GetKeyDown(KeyCode.Alpha0)) {
-        num = 0;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //1
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-        num = 1;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //2
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
-        num = 2;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //3
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
-        num = 3;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //4
-        if (Input.GetKeyDown(KeyCode.Alpha4)) {
-        num = 4;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //5
-        if (Input.GetKeyDown(KeyCode.Alpha5)) {
-        num = 5;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
-        //6
-        if (Input.GetKeyDown(KeyCode.Alpha6)) {
-        num = 6;
-        tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
-        }
+    // private void PipelineTest(){
+    //     //0
+    //     if (Input.GetKeyDown(KeyCode.Alpha0)) {
+    //     num = 0;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
+    //     //1
+    //     if (Input.GetKeyDown(KeyCode.Alpha1)) {
+    //     num = 1;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
+    //     //2
+    //     if (Input.GetKeyDown(KeyCode.Alpha2)) {
+    //     num = 2;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
+    //     //3
+    //     if (Input.GetKeyDown(KeyCode.Alpha3)) {
+    //     num = 3;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
+    //     //4
+    //     if (Input.GetKeyDown(KeyCode.Alpha4)) {
+    //     num = 4;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
+    //     //5
+    //     if (Input.GetKeyDown(KeyCode.Alpha5)) {
+    //     num = 5;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
+    //     //6
+    //     if (Input.GetKeyDown(KeyCode.Alpha6)) {
+    //     num = 6;
+    //     tempObjectHolder.GetComponentInChildren<HighlightService>().Highlight(activePathways[num]);
+    //     }
 
-    }
+    // }
 }
