@@ -12,6 +12,7 @@ public class QueryService : MonoBehaviour
 static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
 public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
+static PathwaySO GlobalPathway;
 
 static string ResourceFolderPath = "Assets/Resources/Data/";
 static string JsonFileDestination = "Assets/Resources/Data/query.xml";
@@ -82,6 +83,7 @@ void SerializeAndCreate()
     string xmlToString = streamReader.ReadToEnd();
     WikibaseResult result = JsonUtility.FromJson<WikibaseResult>(xmlToString);
 
+    GlobalPathway = ScriptableObject.CreateInstance<PathwaySO>();
     foreach( WikibaseBinding item in result.results.bindings){
                 NodeSOInit(item);
             }
@@ -133,6 +135,7 @@ public void EdgeSOInit(WikibaseBinding item){
 
 
 
+// TODO: update init to fit new pathway logic
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
 // in case the edge doesnt exists, call EdgeSOInit to create the edge. 
 public void NodeSOInit(WikibaseBinding item){
@@ -171,8 +174,10 @@ public void NodeSOInit(WikibaseBinding item){
     }
 
     // adds the node and edge to the pathway localnetwork dictionary 
-    currentPathway.AddNodeToPathway(currentNode);
-    currentPathway.AddEdgeToPathway(currentNode,currentEdge);
+    currentPathway.AddNode(currentNode);
+    currentPathway.AddEdge(currentNode,currentEdge);
+
+    // 
     
 }
 

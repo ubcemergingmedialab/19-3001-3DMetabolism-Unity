@@ -20,8 +20,6 @@ public class NetworkSearch : MonoBehaviour
     
 
 
-
-
     Dictionary<int,List<ScriptableObject>> SearchForPath(PathwaySO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
 
         int pathNum = 1;
@@ -46,24 +44,22 @@ public class NetworkSearch : MonoBehaviour
 
             Dictionary<EdgeSO,List<NodeSO>> children = FindChildren(pathway,visited,currentNode);
                 
-                foreach(KeyValuePair <EdgeSO, List<NodeSO>> entry in children) {
-                    
+            foreach(KeyValuePair <EdgeSO, List<NodeSO>> entry in children) {
+                
+                foreach (NodeSO curr in entry.Value){
+                    List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
+                    newPath.Add(entry.Key);
+                    newPath.Add(curr); // CHECKME: why add key of entry? 
 
-                    foreach (NodeSO curr in entry.Value){
-                        List<ScriptableObject> newPath = new List<ScriptableObject>(currentPath);
-                        newPath.Add(entry.Key);
-                        newPath.Add(curr);
-
-                        if (visited.ContainsKey(curr.Label)){
-                        continue;
-                        }
-                        if (curr.Label != nodeToFind.Label){
-                            visited.Add(curr.Label,true);
-                        }
-                        BFSQueue.Enqueue(newPath);
+                    if (visited.ContainsKey(curr.Label)){
+                    continue;
                     }
-                    
+                    if (curr.Label != nodeToFind.Label){
+                        visited.Add(curr.Label,true);
+                    }
+                    BFSQueue.Enqueue(newPath);
                 }
+            }
 
        }
 
@@ -73,6 +69,8 @@ public class NetworkSearch : MonoBehaviour
        return CorrectPaths;
     }
 
+
+    // TODO: refactor so that it searches based on edge & nodes
     Dictionary<EdgeSO,List<NodeSO>> FindChildren(PathwaySO pathway,Dictionary<string,bool> visited, NodeSO current)
     {
         
@@ -128,7 +126,9 @@ public class NetworkSearch : MonoBehaviour
     }
 
     public void MockSearch(){
-        BFSTest(StatusController.Instance.activePathways[2],StatusController.Instance.activePathways[2].nodes[8],StatusController.Instance.activePathways[3].nodes[0]);
+        BFSTest(StatusController.Instance.activePathways[2],
+            StatusController.Instance.activePathways[2].nodes[8],
+            StatusController.Instance.activePathways[2].nodes[0]);
     }
 
 

@@ -25,7 +25,7 @@ public class PathwaySO : ScriptableObject
     }
 
     // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
-    public void AddNodeToPathway(NodeSO node) {
+    public void AddNode(NodeSO node) {
         // Debug.Log(node.Label + " in network: " + Label + " " + LocalNetwork.ContainsKey(node));
         if (!(LocalNetwork.ContainsKey(node))){
             LocalNetwork.Add(node, new List<EdgeSO>());
@@ -36,7 +36,7 @@ public class PathwaySO : ScriptableObject
     }
 
     // add an edge to a node inside the Local network dictionary
-    public void AddEdgeToPathway(NodeSO parentNode, EdgeSO edge){
+    public void AddEdge(NodeSO parentNode, EdgeSO edge){
         LocalNetwork[parentNode].Add(edge);
     }
 
@@ -45,12 +45,12 @@ public class PathwaySO : ScriptableObject
     public void MakePathway(){
         foreach (EdgeSO edge in edges){
             foreach(NodeSO node in edge.reactants){
-                AddNodeToPathway(node);
-                AddEdgeToPathway(node,edge);
+                AddNode(node);
+                AddEdge(node,edge);
             }
             foreach(NodeSO node in edge.products){
-                AddNodeToPathway(node);
-                AddEdgeToPathway(node,edge);
+                AddNode(node);
+                AddEdge(node,edge);
             }
         }
     }
