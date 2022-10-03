@@ -16,7 +16,7 @@ public class CompoundController : MonoBehaviour
     }
     void OnEnable()
     {
-        StartCoroutine(loadCompound(241));
+        StartCoroutine(loadCompound(10267));
     }
 
     // From https://answers.unity.com/questions/21174/create-cylinder-primitive-between-2-endpoints.html, translated hastily from UnityScript

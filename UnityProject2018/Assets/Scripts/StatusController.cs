@@ -68,6 +68,7 @@ public class StatusController : MonoBehaviour
             Debug.LogError("StatusCtrl: activePathways is null/empty ");
         }
 
+
         // Fill the elements network 
         foreach (PathwaySO pathwaySO in this.activePathways) {
 
@@ -144,6 +145,7 @@ public class StatusController : MonoBehaviour
     {
 
     }
+
 
 
     // Update is called once per frame

@@ -26,17 +26,22 @@ public class EdgeDataDisplay : MonoBehaviour
         DisplayData.Label = edgeData.Label;
         DisplayData.QID = edgeData.QID;
         DisplayData.Description = edgeData.Description;
-        DisplayData.EnergyConsumed = edgeData.EnergyConsumed;
-        DisplayData.EnergyProduced = edgeData.EnergyProduced;
-        DisplayData.GibbsFreeEnergy = edgeData.GibbsFreeEnergy;
+        DisplayData.EnzymeClass = edgeData.EnzymeClass;
+        DisplayData.Enzyme = edgeData.Enzyme;
+        DisplayData.Cofactors = edgeData.Cofactors;
+        DisplayData.EnergyRequired = edgeData.EnergyRequired;
+        DisplayData.Pubchemlink = edgeData.Pubchemlink;
+        DisplayData.Regulation = edgeData.Regulation;
         if(displayPartner) {
             Debug.Log("edge has partner");
             DisplayData.AuxLabel = partnerData.Label;
             DisplayData.AuxQID = partnerData.QID;
             DisplayData.AuxDescription = partnerData.Description;
-            DisplayData.AuxEnergyConsumed = partnerData.EnergyConsumed;
-            DisplayData.AuxEnergyProduced = partnerData.EnergyProduced;
-            DisplayData.AuxGibbsFreeEnergy = partnerData.GibbsFreeEnergy;
+            DisplayData.AuxEnzymeClass = partnerData.EnzymeClass;
+            DisplayData.AuxCofactors = partnerData.Cofactors;
+            DisplayData.AuxEnergyRequired = partnerData.EnergyRequired;
+            DisplayData.AuxPubchemlink = partnerData.Pubchemlink;
+            DisplayData.AuxRegulation = partnerData.Regulation;
         }
         UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.EdgeUI, displayPartner);
     }
