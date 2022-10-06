@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Pathway", menuName = "Pathway")]
-public class PathwaySO : ScriptableObject
+public class PathwaySO : ConnectionsSO
 {
     public string QID;
     public List<NodeSO> nodes;
     public List<EdgeSO> edges;
     public string Label;
     public string Description;
-    // Note: How to manage edges if there is the connections are dealt with in nodes? we need edges for highlighting 
-    public Dictionary<NodeSO, List<EdgeSO>> LocalNetwork = new Dictionary<NodeSO, List<EdgeSO>>() ;
 
     public void init(string name, string qid, string desc){
 
@@ -22,22 +20,6 @@ public class PathwaySO : ScriptableObject
         nodes = new List<NodeSO>();
         edges = new List<EdgeSO>();
         // MakePathway();
-    }
-
-    // if the node ahsnt been added to the pathway, add it to the lcoal network dictionary
-    public void AddNode(NodeSO node) {
-        // Debug.Log(node.Label + " in network: " + Label + " " + LocalNetwork.ContainsKey(node));
-        if (!(LocalNetwork.ContainsKey(node))){
-            LocalNetwork.Add(node, new List<EdgeSO>());
-            // Debug.Log(node.Label + " added to " + this.Label);
-        } else {
-            // Debug.Log("<pathwaySO> node " + node.Label + " is already in " + this.Label + " - pathway");
-        }
-    }
-
-    // add an edge to a node inside the Local network dictionary
-    public void AddEdge(NodeSO parentNode, EdgeSO edge){
-        LocalNetwork[parentNode].Add(edge);
     }
 
     // a way to create pathways thorugh the local files instead of queries. 

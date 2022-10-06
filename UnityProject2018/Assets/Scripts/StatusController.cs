@@ -32,6 +32,8 @@ public class StatusController : MonoBehaviour
     private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
     public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
+    
+    public ConnectionsSO globalPathway;
 
     //temp nodes edge list for testing
     public List<EdgeSO> AllEdgeSOs;
