@@ -127,7 +127,7 @@ public class NetworkSearch : MonoBehaviour
 
     public void MockSearch(){
 
-        Debug.Log(StatusController.Instance.activePathways.Count);
+        Debug.Log(StatusController.Instance.activePathways);
         // BFSTest(StatusController.Instance.activePathways[2],
         //     StatusController.Instance.activePathways[2].nodes[8],
         //     StatusController.Instance.activePathways[2].nodes[0]);
