@@ -19,6 +19,7 @@ public class Card: ScriptableObject {
     public string IUPACNames;
     public string StructuralDescription;
     public string link;
+    public string CID;
 
 
     public string AuxLabel;

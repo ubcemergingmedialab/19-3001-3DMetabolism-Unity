@@ -17,7 +17,7 @@ public class QueryCustomEditor : EditorWindow
         "(strafter(?prefixedEdge,\":\") as ?edgeQID) " +
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
         "?edgeLabel ?metaboliteLabel ?enzymeLabel ?isBidirectional " +
-        "?metaboliteMoleFormula ?metaboliteIUPAC ?metaboliteStrucDesc ?metaboliteCharge ?metabolitePubchem " +
+        "?metaboliteMoleFormula ?metaboliteIUPAC ?metaboliteStrucDesc ?metaboliteCharge ?metabolitePubchem ?metaboliteCID" +
         "?edgeEnzymeTypeLabel ?edgeCofactorsLabel ?edgeEnergyReqLabel ?edgePubchem ?edgeRegulation " +
         "?isReactant ?isProduct ?isEnzyme "+
         "?pathwayDesc ?edgeDesc ?metaboliteDesc where { ";
@@ -35,6 +35,7 @@ public class QueryCustomEditor : EditorWindow
         "?metabolite wdt:P44 ?metaboliteStrucDesc." + 
         "?metabolite wdt:P27 ?metaboliteCharge." + 
         "?metabolite wdt:P45 ?metabolitePubchem." + 
+        "?metabolite wdt:P26 ?metaboliteCID." +
         "?statement (pq:P31|pq:P32) ?edge." +
         "?enzymeStatement (pq:P42) ?edge." +
         "?edge wdt:P14 ?edgeEnzymeType." + 

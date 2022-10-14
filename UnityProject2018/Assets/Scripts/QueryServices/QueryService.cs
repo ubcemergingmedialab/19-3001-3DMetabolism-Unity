@@ -153,7 +153,7 @@ public void NodeSOInit(WikibaseBinding item){
         
         string newPath = ResourceFolderPath + "NodeSO/" +item.metaboliteLabel.value + ".asset";
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
-        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value,item.metaboliteMoleFormula.value,item.metaboliteIUPAC.value,item.metaboliteStrucDesc.value,item.metaboliteCharge.value,item.metabolitePubchem.value);
+        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value,item.metaboliteMoleFormula.value,item.metaboliteIUPAC.value,item.metaboliteStrucDesc.value,item.metaboliteCharge.value,item.metabolitePubchem.value, item.metaboliteCID.value);
         NodeSOs.Add(item.metaboliteLabel.value,currentNode);
         AssetDatabase.CreateAsset(currentNode,newPath);
     }else{

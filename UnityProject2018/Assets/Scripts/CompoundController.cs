@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using SimpleJSON;                   // I think we can use internal JSON capabilities now, but I used this as I'm familiar with it.
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class CompoundController : MonoBehaviour
 {
-    public int CID = 241;        // Pubchem Compound ID  (241 = Benzene, our test atom)
+    public ScriptableObject DataReference;
+    public int CID;        // Pubchem Compound ID  (241 = Benzene, our test atom)
     private string jsonURL;         // The basic URL for Pubchem compounds
 
     // Start is called before the first frame update
@@ -14,9 +16,13 @@ public class CompoundController : MonoBehaviour
     {
 //        StartCoroutine(loadCompound(241));
     }
+
+    void Update(){
+        CID = int.Parse(((Card)DataReference).CID);
+    }
     void OnEnable()
     {
-        StartCoroutine(loadCompound(10267));
+        StartCoroutine(loadCompound(CID));
     }
 
     // From https://answers.unity.com/questions/21174/create-cylinder-primitive-between-2-endpoints.html, translated hastily from UnityScript
