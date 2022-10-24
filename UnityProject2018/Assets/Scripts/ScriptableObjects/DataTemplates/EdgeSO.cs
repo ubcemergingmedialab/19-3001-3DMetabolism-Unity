@@ -72,4 +72,22 @@ public class EdgeSO : ScriptableObject
         this.products.Add(node);
     }
 
+    
+
+    public override bool Equals(object obj)
+    {
+        return obj is EdgeSO sO &&
+               base.Equals(obj) &&
+               Label == sO.Label &&
+               QID == sO.QID;
+    }
+
+    public override int GetHashCode()
+    {
+        int hashCode = -972108708;
+        hashCode = hashCode * -1521134295 + base.GetHashCode();
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Label);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(QID);
+        return hashCode;
+    }
 }

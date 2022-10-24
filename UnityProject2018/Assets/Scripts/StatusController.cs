@@ -91,7 +91,7 @@ public class StatusController : MonoBehaviour
             if (pathwaySO.LocalNetwork != null){
                while(networkEnumerator.MoveNext()){
                     listOfNodes.Add( (NodeSO) networkEnumerator.Key); 
-                    listOfEdges.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                    listOfEdges.AddRange( (HashSet<EdgeSO>) networkEnumerator.Value);
                 }
                 //networkEnumerator.Reset();
             }else{
@@ -266,7 +266,7 @@ public class StatusController : MonoBehaviour
             if (pw.LocalNetwork != null){
                while(networkEnumerator.MoveNext()){
                     AllNodeSOs.Add( (NodeSO) networkEnumerator.Key); 
-                    AllEdgeSOs.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                    AllEdgeSOs.AddRange( (HashSet<EdgeSO>) networkEnumerator.Value);
                 }
             }
         

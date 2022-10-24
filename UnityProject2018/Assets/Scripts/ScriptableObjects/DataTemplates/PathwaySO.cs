@@ -37,18 +37,8 @@ public class PathwaySO : ConnectionsSO
         }
     }
 
-    public IDictionaryEnumerator GetLocalNetworkEnumerator(){
-        if(LocalNetwork != null){
-           return LocalNetwork.GetEnumerator(); 
-        }else{
-            Debug.LogError("<!> local network is null, pathwaySO.getLocalNetworkEnum");
-            return null;
-        }
-        
-    }
-
     public void FillLists(){
-        foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in LocalNetwork){
+        foreach(KeyValuePair<NodeSO, HashSet<EdgeSO>> pair in LocalNetwork){
             nodes.Add(pair.Key);
             
             edges.AddRange(pair.Value);

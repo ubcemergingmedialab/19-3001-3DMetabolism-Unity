@@ -20,7 +20,7 @@ public class NetworkSearch : MonoBehaviour
     
 
 
-    Dictionary<int,List<ScriptableObject>> SearchForPath(PathwaySO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
+    Dictionary<int,List<ScriptableObject>> SearchForPath(ConnectionsSO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
 
         int pathNum = 1;
         Dictionary<int,List<ScriptableObject>> CorrectPaths = new Dictionary<int,List<ScriptableObject>>();
@@ -70,12 +70,11 @@ public class NetworkSearch : MonoBehaviour
     }
 
 
-    // TODO: refactor so that it searches based on edge & nodes
-    Dictionary<EdgeSO,List<NodeSO>> FindChildren(PathwaySO pathway,Dictionary<string,bool> visited, NodeSO current)
+    Dictionary<EdgeSO,List<NodeSO>> FindChildren(ConnectionsSO pathway,Dictionary<string,bool> visited, NodeSO current)
     {
         
         Dictionary<EdgeSO,List<NodeSO>> nodesByEdge = new Dictionary<EdgeSO,List<NodeSO>>();
-        List<EdgeSO> interactedEdges = pathway.LocalNetwork[current];
+        HashSet<EdgeSO> interactedEdges = pathway.LocalNetwork[current];
         foreach (EdgeSO currentEdge in interactedEdges){
 
             nodesByEdge.Add(currentEdge, new List<NodeSO>());
@@ -108,10 +107,10 @@ public class NetworkSearch : MonoBehaviour
         return nodesByEdge;
     }
 
-    public void BFSTest(PathwaySO pathway, NodeSO start, NodeSO end) {
+    public void BFSTest(ConnectionsSO pathway, NodeSO start, NodeSO end) {
         Dictionary<int,List<ScriptableObject>> result =  SearchForPath(pathway,start,end);
 
-        string printResult = "<BFS> search in " + pathway.name + "from node:" + start.Label +  " - end node:" + end.Label;
+        string printResult = "<BFS> search in " + pathway.name + " from node:" + start.Label +  " - end node:" + end.Label;
 
         foreach(KeyValuePair<int,List<ScriptableObject>> path in result){
         int n = 1;
@@ -126,11 +125,29 @@ public class NetworkSearch : MonoBehaviour
     }
 
     public void MockSearch(){
+        ConnectionsSO global = StatusController.Instance.globalPathway;
+        HashSet<string> testSet = new HashSet<string>();
 
-        Debug.Log(StatusController.Instance.activePathways);
-        // BFSTest(StatusController.Instance.activePathways[2],
-        //     StatusController.Instance.activePathways[2].nodes[8],
-        //     StatusController.Instance.activePathways[2].nodes[0]);
+        // test if globalNetwork contains duplicate
+        Debug.Log("Global Pathway Nodes");
+        foreach (NodeSO node in global.LocalNetwork.Keys) {
+            foreach (EdgeSO edge in global.LocalNetwork[node]) {
+                if (testSet.Contains(edge.Label)) {
+                    Debug.Log($"Node: {node.Label} contains duplicate edge in {edge.Label}"); 
+                }
+
+                testSet.Add(edge.Label); 
+            }
+
+            testSet.Clear();
+            
+            // Debug.Log("Printing for " + key.name);
+            // global.PrintConnections(key);
+        }
+
+        BFSTest(StatusController.Instance.activePathways[2],
+            StatusController.Instance.activePathways[2].nodes[0],
+            StatusController.Instance.activePathways[2].nodes[8]);
     }
 
 

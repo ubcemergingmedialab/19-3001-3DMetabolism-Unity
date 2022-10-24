@@ -21,7 +21,7 @@ public class PrefabService : MonoBehaviour
 
                 while(LNEnumerator.MoveNext()){
                     FindNodeSOGameObject((NodeSO) LNEnumerator.Key);
-                    foreach(EdgeSO edge in ((List<EdgeSO>) LNEnumerator.Value)){
+                    foreach(EdgeSO edge in ((HashSet<EdgeSO>) LNEnumerator.Value)){
                         FindEdgeSOGameObject(edge);
                     }
                 }
