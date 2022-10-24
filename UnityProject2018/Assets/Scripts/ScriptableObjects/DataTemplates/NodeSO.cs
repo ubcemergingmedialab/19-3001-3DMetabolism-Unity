@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * ScriptableObject for Nodes
+ * - Equals and GetHashCode overrides are required for Dictionary<NodeSO, ...>
+ */
 [CreateAssetMenu(fileName = "New Node", menuName = "Node")]
 public class NodeSO : ScriptableObject
 {

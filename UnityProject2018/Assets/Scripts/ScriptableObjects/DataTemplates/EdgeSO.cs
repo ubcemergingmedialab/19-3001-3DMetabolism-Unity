@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * ScriptableObject for Edges
+ * - Equals and GetHashCode overrides are required for HashSet<EdgeSO>
+ */
 [CreateAssetMenu(fileName = "New Edge", menuName = "Edge")]
 public class EdgeSO : ScriptableObject
 {
