@@ -51,6 +51,7 @@ public class FocusController : MonoBehaviour
 
     }
 
+// switches the boolean of the AutoCameraLock. ie locks and unlocks the camera movement 
     public void SetAutoLock(){
         AutoCameraLock = (!AutoCameraLock);
     }
