@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * ScriptableObject for pathways. Child class of ConnectionsSO
- * - Potential Issue: after LocalNetwork is populated, FillLists() must be called for nodes and edges to be non-empty
- */
+/// <summary>
+/// ScriptableObject for pathways. Inherits all members of ConnectionSO
+/// </summary>
+/// <remarks>
+/// Potential Issue: after LocalNetwork is populated, FillLists() must be called for nodes and edges to be non-empty
+/// </remarks>
 [CreateAssetMenu(fileName = "New Pathway", menuName = "Pathway")]
 public class PathwaySO : ConnectionsSO
 {
@@ -15,6 +17,9 @@ public class PathwaySO : ConnectionsSO
     public string Label;
     public string Description;
 
+    /// <summary>
+    /// Initialize PathwaySO with name, QID and desription
+    /// </summary>
     public void init(string name, string qid, string desc){
 
         this.name = name;
@@ -26,8 +31,12 @@ public class PathwaySO : ConnectionsSO
         // MakePathway();
     }
 
-    // a way to create pathways thorugh the local files instead of queries. 
-    // goes through the edges in a pathway, and adds the nodes and edges to its dictionary
+    /// <summary> 
+    /// Goes through the fields "nodes" and "edges", and adds the nodes and edges to LocalNetwork
+    /// </summary>
+    /// <remarks>
+    /// A way to create pathways thorugh the local files instead of queries.
+    /// </remarks>
     public void MakePathway(){
         foreach (EdgeSO edge in edges){
             foreach(NodeSO node in edge.reactants){
@@ -41,7 +50,9 @@ public class PathwaySO : ConnectionsSO
         }
     }
 
-    // Goes through connections in local network, and adds nodes and edges to nodes and edges
+    /// <summary>
+    /// Goes through connections in local network, and adds nodes and edges to nodes and edges
+    /// </summary>
     public void FillLists(){
         foreach(KeyValuePair<NodeSO, HashSet<EdgeSO>> pair in LocalNetwork){
             nodes.Add(pair.Key);

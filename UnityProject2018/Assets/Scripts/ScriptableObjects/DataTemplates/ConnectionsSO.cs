@@ -10,7 +10,7 @@ using UnityEngine;
 public class ConnectionsSO : ScriptableObject
 {
     /// <summary>
-    /// Stores edges of a node as an adjacency matrix
+    /// Stores edges of each node as a Dictionary
     /// </summary>
     public Dictionary<NodeSO, HashSet<EdgeSO>> LocalNetwork; 
 
@@ -66,14 +66,32 @@ public class ConnectionsSO : ScriptableObject
     {
         IEnumerable<NodeSO> query = LocalNetwork.Keys.Where<NodeSO>(node => node.Label == "something"); // TODO: change to regex
 
-        List<string> matchedNodes = new List<string>(); 
+        List<string> matchedNodes = new List<string>();
         foreach (NodeSO node in query)
         {
             matchedNodes.Add(node.Label);
         }
-        return new List<string>();
+        return matchedNodes;
+    }
+    
+    /// <summary>
+    /// Find node in network that has the same label as keyword
+    /// </summary>
+    /// <returns>Instance of matching keyword or null</returns>
+    public NodeSO getNodeByName(string keyword)
+    {
+        List<string> matchedNodes = new List<string>();
+        foreach (NodeSO node in LocalNetwork.Keys)
+        {
+            if (node.Label == keyword)
+            {
+                return node; 
+            }
+        }
+        return null; 
     }
 
+    /// <returns> LocalNetwork as a Dictionary Emunerator </returns>
     public IDictionaryEnumerator GetLocalNetworkEnumerator()
     {
         if (LocalNetwork != null)
