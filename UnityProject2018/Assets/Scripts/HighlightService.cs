@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-    Updated version of the old HighlightContorller. old functions commented out at the bottom.
-    This component is the first point of contact between the buttons and the highlighting proccess.
-        - It sends out the highligting message out to StatusController.
-        - gets the renderers/bounds of the highlighted pathways
-*/
+/// <summary>
+/// first point of contact between the buttons and the highlight Pipeline.
+/// - Sends out the highligting message out to StatusController.
+/// - gets the renderers/bounds of the highlighted pathways
+/// - Sets the Camera focus to the highlighted pathways.
+/// Singleton
+/// </summary>
 public class HighlightService : MonoBehaviour
 {
     //SINGLETON
@@ -20,7 +21,10 @@ public class HighlightService : MonoBehaviour
 
     public GameObject UIContainer;
 
-
+/// <summary>
+/// Create the singleton instance
+/// Hold only one active instance of this class
+/// </summary>
     void Awake()  
     {
         if (_instance != null && _instance != this) 
@@ -32,18 +36,11 @@ public class HighlightService : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    // Calculates the new state the service wants the given pathwaySO to be in and calls SetPathwayState() on the given PathwaySO
+    /// <summary>
+    /// Based on the current highlight state of target pathwaySO, calculate and set the new highlight state, update the camera focus
+    /// </summary>
+    /// <param name="targetPathway"> Pathway to highlight </param>
+    /// 
     public void Highlight(PathwaySO targetPathway) {
         Debug.Log("calling highlight on " + targetPathway.name);
         
@@ -77,15 +74,18 @@ public class HighlightService : MonoBehaviour
     }
 
 
-    // Returns a list of renderers of the highlighted pathways.
-    // Note : It iterates through the Private elementToPathways Dictionary in Status Controller using the GetEnumerator() function
+
+    /// <summary>
+    /// Get the renderer components of all highlighted pathways from the StatusController.elementToPathways Dictionary
+    /// </summary>
+    /// <returns>Renderers of the highlighted pathways</returns>
+    /// <exception cref="ArgumentNullException"> Highlighted Pathways are NULL</exception>
     public List<Renderer> GetHighlightedRenderers() {
         //declare renderer accumulator
         List<Renderer> highlightedRenderers = new List<Renderer>();
-        //iterate over status list
 
         IDictionaryEnumerator Enumerator = StatusController.Instance.GetElementToPathwaysEnumerator();
-        
+
         while (Enumerator.MoveNext()) {                                                                 // Moves on to the next pair in Dict
        
             List<HighlightPathway> currentList = (List<HighlightPathway>) Enumerator.Value;             // List of pathways shared with HighlightHandler
@@ -110,8 +110,11 @@ public class HighlightService : MonoBehaviour
         return highlightedRenderers;
     }
 
-    // Returns the list of Bounds of highlighted pathways 
-    // Note : It iterates through the Private elementToPathways Dictionary in Status Controller using the GetEnumerator() function
+
+    /// <summary>
+    /// Get the Bounds of the renderers of all the highlighted pathways
+    /// </summary>
+    /// <returns>Bounds of renderers of higlhighted pathways</returns>
     public List<Bounds> GetHighlightedBounds() {
         //declare Bounds accumulator
         List<Bounds> highlightedBounds = new List<Bounds>();
@@ -142,6 +145,12 @@ public class HighlightService : MonoBehaviour
 
 
     // Takes a List of Renders (from HighlightedRenderers()) and returns a list of Bounds corresponding to the renderers !!!
+    /// <summary>
+    /// Get the bounds of a list of renderes
+    /// </summary>
+    /// <param name="renderers"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentNullException"> renderes are NULL </exception>
     public List<Bounds> getBounds(List<Renderer> renderers) {
         // Null check
         if (renderers == null) {

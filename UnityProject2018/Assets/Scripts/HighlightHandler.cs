@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Implement the visual consequences of the highlight state on pathway components, namely material color, directional arrows, text display strategy (labels).
+/// Last step of the highlight pipeline
+/// </summary>
 public class HighlightHandler : MonoBehaviour
 {
     public Color accentColor = Color.yellow;
@@ -19,7 +23,10 @@ public class HighlightHandler : MonoBehaviour
     private Vector3 accentScale;
 
     private Transform parent;
-    // Awake is called before start
+    
+    /// <summary>
+    /// Assings parent tranform, and initializes highlight scales, and material
+    /// </summary>
     private void Awake()
     {
         parent = transform.parent;
@@ -27,7 +34,10 @@ public class HighlightHandler : MonoBehaviour
         accentScale = new Vector3(parent.localScale.x * 1.1f, parent.localScale.y * 1.1f, parent.localScale.z * 1.1f);
         _propBlock = new MaterialPropertyBlock();
     }
-    // Start is called before the first frame update
+    
+    /// <summary>
+    /// Assigns component's animator and directional arrows for accented state based on the reactions directionality
+    /// </summary>
     void Start()
     {
         // UpdateHighlight();
@@ -43,16 +53,17 @@ public class HighlightHandler : MonoBehaviour
         animatorComponent = parent.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    /// <summary>
+    /// True if pathway is doubled higlhighlighted
+    /// </summary>
+    /// <returns></returns>
     public bool IsDoubleHighlighted() {
         return (StatusController.Instance.ElementCheckState(this) == HighlightPathway.HighlightState.Accented);
     }
     
+    /// <summary>
+    /// Activates the assigned directional arrows 
+    /// </summary>
     private void ActivateArrows()
     {
         if (activeArrows != null)
@@ -62,7 +73,9 @@ public class HighlightHandler : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Deactivates the assigned directional arrows 
+    /// </summary>
     private void DeactivateArrows()
     {
         if (activeArrows!= null)
@@ -74,10 +87,12 @@ public class HighlightHandler : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Assing material color to components and text display strategy based on their highlight state.
+    /// if pathway is accented, activate the arrows, else deactivate
+    /// </summary>
     public void UpdateHighlight()
     {
-        // Debug.Log(parent.name + " " + highlightCounter);
         HighlightPathway.HighlightState currentState = StatusController.Instance.ElementCheckState(this);   // finds the new highlight state and sets the visuals accordingly
 
         if (currentState == HighlightPathway.HighlightState.Default)                                        // if Default state
