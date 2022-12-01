@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ScriptableObject for pathways. Inherits all members of ConnectionSO
+/// ScriptableObject for metabolic pathways, populated with wikibase data.<br/> 
+/// Inherits all members of ConnectionSO
 /// </summary>
 /// <remarks>
 /// Potential Issue: after LocalNetwork is populated, FillLists() must be called for nodes and edges to be non-empty

@@ -6,6 +6,10 @@ using UnityEngine;
  * ScriptableObject for Edges
  * - Equals and GetHashCode overrides are required for HashSet<EdgeSO>
  */
+
+/// <summary>
+/// ScriptableObject for Edges
+/// </summary>
 [CreateAssetMenu(fileName = "New Edge", menuName = "Edge")]
 public class EdgeSO : ScriptableObject
 {
@@ -20,7 +24,6 @@ public class EdgeSO : ScriptableObject
     public string Pubchemlink;
     public string Regulation;
 
-    //public NodeSOBeta parent;
     public List<NodeSO> reactants;
     public List<NodeSO> products;
     public bool bidirectional;
@@ -36,8 +39,9 @@ public class EdgeSO : ScriptableObject
     public string AuxPubchemlink;
     public string AuxRegulation;
 
-    /* initialize the essential fields 
-    */
+    /// <summary>
+    /// Initialize EdgeSO with essential fields
+    /// </summary>
     public void init(string name, string newQID, string desc, string enzymeLabel, string enzymeclass, string cofactors, string energyreq, string pubchem, string regulation, bool bidirectionality = false){
 
         this.QID = newQID;
@@ -55,7 +59,9 @@ public class EdgeSO : ScriptableObject
         this.Regulation = regulation;
     }
 
-    // add reactant to the edge
+    /// <summary>
+    /// Add reactant to the edge
+    /// </summary>
     public void AddReactant(NodeSO node){
         foreach(NodeSO temp in this.reactants){
             if(temp.Label == node.Label){
@@ -76,21 +82,17 @@ public class EdgeSO : ScriptableObject
         this.products.Add(node);
     }
 
-    
-
     public override bool Equals(object obj)
     {
         return obj is EdgeSO sO &&
                base.Equals(obj) &&
-               Label == sO.Label &&
                QID == sO.QID;
     }
 
     public override int GetHashCode()
     {
-        int hashCode = -972108708;
+        int hashCode = -1760945465;
         hashCode = hashCode * -1521134295 + base.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Label);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(QID);
         return hashCode;
     }
