@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class NetworkSearch : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //SINGLETON
+    private static NetworkSearch _instance;
+    public static NetworkSearch Instance
     {
-        
+        get { return _instance; }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    
-    
 
-
-    Dictionary<int,List<ScriptableObject>> SearchForPath(ConnectionsSO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
+    public Dictionary<int,List<ScriptableObject>> SearchForPath(ConnectionsSO pathway, NodeSO nodeRoot, NodeSO nodeToFind) {
 
         int pathNum = 1;
         Dictionary<int,List<ScriptableObject>> CorrectPaths = new Dictionary<int,List<ScriptableObject>>();
@@ -112,61 +115,85 @@ public class NetworkSearch : MonoBehaviour
 
         string printResult = "<BFS> search in " + pathway.name + " from node:" + start.Label +  " - end node:" + end.Label;
 
-        foreach(KeyValuePair<int,List<ScriptableObject>> path in result){
-        int n = 1;
-        Debug.Log("<BFS> count =" + result.Count);
-        printResult += "\npath number : " + path.Key;
-            foreach (ScriptableObject step in path.Value){
+        foreach (KeyValuePair<int, List<ScriptableObject>> path in result)
+        {
+            int n = 1;
+            Debug.Log("<BFS> count =" + result.Count);
+            printResult += "\npath number : " + path.Key;
+            foreach (ScriptableObject step in path.Value)
+            {
                 printResult += "\n" + n + " - " + step.name; //GetType().ToString();
-                n++;   
+                n++;
             }
         }
         Debug.Log(printResult);
     }
 
-    public void MockSearch(){
+    public void MockSearch()
+    {
+        //LogPathways();
+
+
+        //BFSTest(StatusController.Instance.globalPathway,
+        //    StatusController.Instance.activePathways[1].nodes[10],
+        //    StatusController.Instance.activePathways[2].nodes[1]);
+    }
+
+    public static void LogPathways()
+    {
+        List<PathwaySO> pathways = StatusController.Instance.activePathways;
+        Debug.Log("Global Pathway Nodes");
+        for (int i = 0; i < pathways.Count; i++)
+        {
+            string output = "";
+            output += $"Pathway at index {i}: {pathways[i].Label} contains nodes: "; 
+            foreach(NodeSO node in pathways[i].LocalNetwork.Keys)
+            {
+                output += $"\n\t{node.Label}"; 
+            }
+            Debug.Log(output);
+        }
+
+    }
+
+    private static void TestForDuplicates()
+    {
         ConnectionsSO global = StatusController.Instance.globalPathway;
         HashSet<string> testSet = new HashSet<string>();
-
         // test if globalNetwork contains duplicate
-        Debug.Log("Global Pathway Nodes");
-        foreach (NodeSO node in global.LocalNetwork.Keys) {
-            foreach (EdgeSO edge in global.LocalNetwork[node]) {
-                if (testSet.Contains(edge.Label)) {
-                    Debug.Log($"Node: {node.Label} contains duplicate edge in {edge.Label}"); 
+        Debug.Log("Testing For Duplicates");
+        foreach (NodeSO node in global.LocalNetwork.Keys)
+        {
+            foreach (EdgeSO edge in global.LocalNetwork[node])
+            {
+                if (testSet.Contains(edge.Label))
+                {
+                    Debug.Log($"Node: {node.Label} contains duplicate edge in {edge.Label}");
                 }
-
-                testSet.Add(edge.Label); 
+                testSet.Add(edge.Label);
             }
 
             testSet.Clear();
-            
-            // Debug.Log("Printing for " + key.name);
-            // global.PrintConnections(key);
         }
-
-        BFSTest(StatusController.Instance.activePathways[2],
-            StatusController.Instance.activePathways[2].nodes[0],
-            StatusController.Instance.activePathways[2].nodes[8]);
     }
 
 
-// 
-//     foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every node in this pathway
-//                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
+    // 
+    //     foreach(NodeSO nodeSO in pathwaySO.nodes) {                                                             // For every node in this pathway
+    //                 GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
 
-//                 foreach(GameObject node in nodes) {
-//                     if(node != null) {
-//                         HighlightHandler hl = node.GetComponent<HighlightHandler>();                                // find the nodes handler
-//                         List<HighlightPathway> sharingPathways;                                                     
+    //                 foreach(GameObject node in nodes) {
+    //                     if(node != null) {
+    //                         HighlightHandler hl = node.GetComponent<HighlightHandler>();                                // find the nodes handler
+    //                         List<HighlightPathway> sharingPathways;                                                     
 
-//                         if(elementToPathways.TryGetValue(hl, out sharingPathways)) {                                // Find node in elementToPathways
-//                             sharingPathways.Add(highlightPathway);                                                  // add the highlightPathway to the element's list of hpw
-//                         } else {
-//                             elementToPathways.Add(hl, new List<HighlightPathway>{highlightPathway});                // Make a new list if node is not yet in the Dictionary 
-//                         }
-//                     }
-//                 }
-//             }
-// 
+    //                         if(elementToPathways.TryGetValue(hl, out sharingPathways)) {                                // Find node in elementToPathways
+    //                             sharingPathways.Add(highlightPathway);                                                  // add the highlightPathway to the element's list of hpw
+    //                         } else {
+    //                             elementToPathways.Add(hl, new List<HighlightPathway>{highlightPathway});                // Make a new list if node is not yet in the Dictionary 
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    // 
 }
