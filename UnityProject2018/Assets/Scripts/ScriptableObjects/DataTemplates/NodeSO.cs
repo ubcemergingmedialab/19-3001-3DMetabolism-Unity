@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ScriptableObject for Nodes
+/// </summary>
 [CreateAssetMenu(fileName = "New Node", menuName = "Node")]
 public class NodeSO : ScriptableObject
 {
@@ -21,6 +24,9 @@ public class NodeSO : ScriptableObject
     public string Pubchemlink;
     public string link;
 
+    /// <summary>
+    /// Initialize NodeSO with essential fields
+    /// </summary>
     public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc, string charge, string pubchem) {
         this.name = name;
         this.Label = name;
@@ -32,4 +38,28 @@ public class NodeSO : ScriptableObject
         this.Charge = charge;
         this.Pubchemlink = pubchem;
     }
+
+    /// <summary>
+    /// Override required for usage as key in a Dictionary. 
+    /// 2 NodeSOs are equal if their QID are equal. 
+    /// </summary>
+    public override bool Equals(object obj)
+    {
+        return obj is NodeSO sO &&
+               base.Equals(obj) &&
+               QID == sO.QID;
+    }
+
+    /// <summary>
+    /// Override required for usage as key in a Dictionary. 
+    /// 2 NodeSOs have identical hashcode if their QID are equal. 
+    /// </summary>
+    public override int GetHashCode()
+    {
+        int hashCode = -1760945465;
+        hashCode = hashCode * -1521134295 + base.GetHashCode();
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(QID);
+        return hashCode;
+    }
+
 }

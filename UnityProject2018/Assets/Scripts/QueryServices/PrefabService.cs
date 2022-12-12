@@ -21,7 +21,7 @@ public class PrefabService : MonoBehaviour
 
                 while(LNEnumerator.MoveNext()){
                     FindNodeSOGameObject((NodeSO) LNEnumerator.Key);
-                    foreach(EdgeSO edge in ((List<EdgeSO>) LNEnumerator.Value)){
+                    foreach(EdgeSO edge in ((HashSet<EdgeSO>) LNEnumerator.Value)){
                         FindEdgeSOGameObject(edge);
                     }
                 }
@@ -41,7 +41,7 @@ public class PrefabService : MonoBehaviour
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
-                Debug.Log("Attached node " + nodeName);
+                // Debug.Log("Attached node " + nodeName);
             }
         } else {
             Debug.LogError("Node scriptable object not connected to prefab: " + nodeName);

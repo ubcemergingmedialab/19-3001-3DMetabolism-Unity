@@ -149,7 +149,7 @@ public class QueryCustomEditor : EditorWindow
                 if(pw.LocalNetwork == null){
                     Debug.Log("<!> local network NULL");
                 }
-                foreach(KeyValuePair<NodeSO, List<EdgeSO>> pair in pw.LocalNetwork){
+                foreach(KeyValuePair<NodeSO, HashSet<EdgeSO>> pair in pw.LocalNetwork){
                     Debug.Log("pathway: " + pw.Label + " network \n" + "node: " + pair.Key + " edge :");
                     foreach(EdgeSO edge in pair.Value){
                         Debug.Log(edge.Label);

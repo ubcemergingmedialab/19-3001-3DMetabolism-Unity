@@ -29,6 +29,8 @@ public class StatusController : MonoBehaviour
     private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
     public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
+    
+    public ConnectionsSO globalPathway;
 
     //temp nodes edge list for testing
     public List<EdgeSO> AllEdgeSOs;
@@ -88,7 +90,7 @@ public class StatusController : MonoBehaviour
             if (pathwaySO.LocalNetwork != null){
                while(networkEnumerator.MoveNext()){
                     listOfNodes.Add( (NodeSO) networkEnumerator.Key); 
-                    listOfEdges.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                    listOfEdges.AddRange( (HashSet<EdgeSO>) networkEnumerator.Value);
                 }
                 //networkEnumerator.Reset();
             }else{
@@ -278,7 +280,7 @@ public class StatusController : MonoBehaviour
             if (pw.LocalNetwork != null){
                while(networkEnumerator.MoveNext()){
                     AllNodeSOs.Add( (NodeSO) networkEnumerator.Key); 
-                    AllEdgeSOs.AddRange( (List<EdgeSO>) networkEnumerator.Value);
+                    AllEdgeSOs.AddRange( (HashSet<EdgeSO>) networkEnumerator.Value);
                 }
             }
         
