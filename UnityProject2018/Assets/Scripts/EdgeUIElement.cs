@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+/// <summary>
+/// Fills Edge Sidecard UI with data from the currently selected Card
+/// </summary>
 public class EdgeUIElement : UIElement
 {
     public Text LabelText;
     public Text DescriptionText;
-
     public Text QIDText;
     public Text EnzymeClassText;
     public Text EnzymeText;
@@ -17,17 +18,10 @@ public class EdgeUIElement : UIElement
     public Text PubchemlinkText;
     public Text RegulationText;
 
-    // public GameObject AuxUI;
-    // public Text AuxLabelText;
-    // public Text AuxDescriptionText;
 
-    // public Text AuxQIDText;
-    // public Text AuxEnzymeClassText;
-    // public Text AuxCofactorsText;
-    // public Text AuxPubchemlinkText;
-    // public Text AuxRegulationText;
-
-
+    /// <summary>
+    /// Updates UI of the Edge Sidecard with the values from the Data Reference
+    /// </summary>
     override public void UpdateUI()
     {
         // Update Edge UI Element
@@ -42,12 +36,13 @@ public class EdgeUIElement : UIElement
         CofactorsText.text = ((Card)DataReference).Cofactors;
         PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
         RegulationText.text = ((Card)DataReference).Regulation;
-        // if(AuxUI != null) {
-        //     AuxUI.SetActive(false);
-        // }
   
     }
 
+    /// <summary>
+    /// Deprecated - Updates the UI with values from DataReference when the edge has a partner
+    /// </summary>
+    /// <param name="hasPartner"> indicates if the edge has a partner</param>
     override public void UpdateUI(bool hasPartner)
     {
         // Update Edge UI Element
@@ -62,15 +57,5 @@ public class EdgeUIElement : UIElement
         PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
         RegulationText.text = ((Card)DataReference).Regulation;
 
-        // if(AuxUI != null) {
-        //     AuxUI.SetActive(true);
-        //     AuxLabelText.text = ((Card)DataReference).AuxLabel;
-        //     AuxDescriptionText.text = ((Card)DataReference).AuxDescription;
-        //     AuxQIDText.text = ((Card)DataReference).AuxQID;
-        //     AuxEnzymeClassText.text = ((Card)DataReference).AuxEnzymeClass;
-        //     AuxCofactorsText.text = ((Card)DataReference).AuxCofactors;
-        //     AuxPubchemlinkText.text = ((Card)DataReference).AuxPubchemlink;
-        //     AuxRegulationText.text = ((Card)DataReference).AuxRegulation;
-        // }
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Fills Node Sidecard UI with data from the currently selected Card
+/// </summary>
 public class NodeUIElement : UIElement
 {
     public Text LabelText;
@@ -17,6 +20,11 @@ public class NodeUIElement : UIElement
     public Text PubchemlinkText;
     public GameObject LinkButton;
 
+/// <summary>
+/// /// <summary>
+    /// Updates UI of the Node Sidecard with the values from the Data Reference
+    /// </summary>
+/// </summary>
     override public void UpdateUI()
     {
         //Update Node UI
@@ -37,6 +45,10 @@ public class NodeUIElement : UIElement
         }
     }
 
+/// <summary>
+/// Not implemented - Updates the UI with values from DataReference when the node has a partner
+/// </summary>
+/// <param name="hasPartner"> indicates if the edge has a partner</param>
     override public void UpdateUI(bool hasPartner)
     {
         //Update Node UI

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Takes the information stored in edgeData and transfers it into DisplayData
+/// </summary>
 public class EdgeDataDisplay : MonoBehaviour
 {
     public EdgeSO edgeData;
@@ -20,6 +23,9 @@ public class EdgeDataDisplay : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Sets the DisplayData values to the equivalent in edgeData
+    /// </summary>
     public void UpdateScriptableObject()
     {
         bool displayPartner = (!GetComponent<HighlightHandler>().IsDoubleHighlighted()) && (partnerData != null);

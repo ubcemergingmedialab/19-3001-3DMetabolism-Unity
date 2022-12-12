@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages the text labelling of nodes/metabolites as well as updates the nodeSO attached to sidecard UI to contain data from the currently selected node.
+/// </summary>
 [ExecuteAlways]
 public class NodeDataDisplay : MonoBehaviour
 {
@@ -24,6 +27,9 @@ public class NodeDataDisplay : MonoBehaviour
         MaintainLabelText();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void InitializeLabelText()
     {
         if(nodeData != null)

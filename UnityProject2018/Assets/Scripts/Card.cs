@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// General class containing string data to be displayed on sidecards
+/// </summary>
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class Card: ScriptableObject {
     
