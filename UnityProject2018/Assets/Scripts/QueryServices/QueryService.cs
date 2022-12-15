@@ -12,6 +12,7 @@ public class QueryService : MonoBehaviour
 static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
 static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
 public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
+static ConnectionsSO globalPathway;
 
 public TextAsset queryxml;
 
@@ -89,6 +90,7 @@ void SerializeAndCreate()
     
     WikibaseResult result = JsonUtility.FromJson<WikibaseResult>(xmlToString);
 
+    globalPathway = ScriptableObject.CreateInstance<ConnectionsSO>();
     foreach( WikibaseBinding item in result.results.bindings){
                 NodeSOInit(item);
             }
@@ -98,12 +100,14 @@ void SerializeAndCreate()
 
 // fill active pathways in statuscontroller after querying 
 void PathwaysToActive(){
+    FillPathwayList(); //TODO: list usage seems to be unused, added for testing MockSearch()
     GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
     foreach(KeyValuePair<string,PathwaySO> pair in PathwaySOs)
         {
             GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
 
         }
+    GameObject.Find("StatusController").GetComponent<StatusController>().globalPathway = globalPathway;
 }
 
 
@@ -140,6 +144,7 @@ public void EdgeSOInit(WikibaseBinding item){
 
 
 
+// TODO: update init to fit new pathway logic
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
 // in case the edge doesnt exists, call EdgeSOInit to create the edge. 
 public void NodeSOInit(WikibaseBinding item){
@@ -178,8 +183,12 @@ public void NodeSOInit(WikibaseBinding item){
     }
 
     // adds the node and edge to the pathway localnetwork dictionary 
-    currentPathway.AddNodeToPathway(currentNode);
-    currentPathway.AddEdgeToPathway(currentNode,currentEdge);
+    currentPathway.AddNode(currentNode);
+    currentPathway.AddEdge(currentNode,currentEdge);
+
+    // add nodes and edges to global pathway
+    globalPathway.AddNode(currentNode);
+    globalPathway.AddEdge(currentNode, currentEdge);
     
 }
 
