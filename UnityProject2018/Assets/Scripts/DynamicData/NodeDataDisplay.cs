@@ -85,6 +85,7 @@ public class NodeDataDisplay : MonoBehaviour
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI, false);
         else Debug.Log("Error in callin NodeUI list");
         DisplayData.link = nodeData.link;
+        DisplayData.CID = nodeData.CID; 
     }   
-}
+}  
 

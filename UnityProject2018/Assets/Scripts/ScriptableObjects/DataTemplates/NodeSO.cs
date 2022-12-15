@@ -23,11 +23,12 @@ public class NodeSO : ScriptableObject
     public string Charge;
     public string Pubchemlink;
     public string link;
+    public string CID;
 
     /// <summary>
     /// Initialize NodeSO with essential fields
     /// </summary>
-    public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc, string charge, string pubchem) {
+    public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc, string charge, string pubchem, string cid) {
         this.name = name;
         this.Label = name;
         this.QID = newQID;
@@ -37,6 +38,7 @@ public class NodeSO : ScriptableObject
         this.StructuralDescription = StrucDesc;
         this.Charge = charge;
         this.Pubchemlink = pubchem;
+        this.CID = cid;
     }
 
     /// <summary>

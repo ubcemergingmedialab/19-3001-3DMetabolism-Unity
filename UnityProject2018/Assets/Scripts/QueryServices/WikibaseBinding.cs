@@ -32,6 +32,7 @@ public class WikibaseBinding
     public WikibaseBindingElement metaboliteStrucDesc;
     public WikibaseBindingElement metaboliteCharge;
     public WikibaseBindingElement metabolitePubchem;
+    public WikibaseBindingElement metaboliteCID;
 
     public WikibaseBindingElement isReactant;
     public WikibaseBindingElement isProduct;
