@@ -35,6 +35,7 @@ public class SearchController : MonoBehaviour
                 StatusController.Instance.globalPathway, fromNode, toNode
             );
 
+            ResultBtnFactory.Instance.ResetButtons(); 
             ResultBtnFactory.Instance.MakeButtons(result);
 
         }
