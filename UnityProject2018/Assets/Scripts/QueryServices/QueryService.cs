@@ -132,7 +132,7 @@ public void EdgeSOInit(WikibaseBinding item){
         // Debug.Log(item.isBidirectional.value + " direction var = " + direction);
         edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,item.edgeEnzymeTypeLabel.value, item.edgeCofactorsLabel.value, item.edgeEnergyReqLabel.value, item.edgePubchem.value, item.edgeRegulation.value/*, System.Convert.ToBoolean(item.isBidirectional.value)*/);
         string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
-        AssetDatabase.CreateAsset(edge,newPath);
+        // AssetDatabase.CreateAsset(edge,newPath);
         EdgeSOs.Add(item.edgeLabel.value,edge);
         // Debug.Log(item.enzymeLabel.value + " edge added");
     }
@@ -155,7 +155,7 @@ public void NodeSOInit(WikibaseBinding item){
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
         currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value,item.metaboliteMoleFormula.value,item.metaboliteIUPAC.value,item.metaboliteStrucDesc.value,item.metaboliteCharge.value,item.metabolitePubchem.value, item.metaboliteCID.value);
         NodeSOs.Add(item.metaboliteLabel.value,currentNode);
-        AssetDatabase.CreateAsset(currentNode,newPath);
+        // AssetDatabase.CreateAsset(currentNode,newPath);
     }else{
         NodeSOs.TryGetValue(item.metaboliteLabel.value, out currentNode);
     }
@@ -188,7 +188,7 @@ public void PathwaySOInit(WikibaseBinding item){
         PathwaySO pathway = ScriptableObject.CreateInstance<PathwaySO>();
         pathway.init(item.pathwayLabel.value,item.pathwayQID.value,item.pathwayDesc.value);
         string newPath = ResourceFolderPath + "PathwaySO/"+ item.pathwayLabel.value + ".asset";
-        AssetDatabase.CreateAsset(pathway,newPath);
+        // AssetDatabase.CreateAsset(pathway,newPath);
         PathwaySOs.Add(item.pathwayLabel.value,pathway);
     }
 
