@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/// <summary>
+/// triggers the Automatic camera movement on to highlighted pathways.
+/// Also has a camera lock ,where the automatic focus is disabled when locked
+/// </summary>
 public class FocusController : MonoBehaviour
 {
+    public Collider defaultCenter;
+    private bool AutoCameraLock = false;
+
+    //SINGLETON
     private static FocusController _instance;
     public static FocusController Instance
     {
         get { return _instance; }
     }
 
-    public Collider defaultCenter;
-    private bool AutoCameraLock = false; // TO BE MADE PRIVATE, public only for demo purposes
-
+    /// <summary>
+    /// Create the singleton instance. Hold only one active instance of this class
+    /// </summary>
     void Awake(){
         if (_instance != null && _instance != this) 
             {
@@ -24,18 +32,10 @@ public class FocusController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-// changes the focus to the aggregate view of the highlighted Pathways using GetHighlightedRenderers and CenterCamera functions
+    /// <summary>
+    /// changes the focus to the aggregate view of the highlighted Pathways using GetHighlightedRenderers and CenterCamera functions
+    /// </summary>
     public void UpdateFocus() {
 
         if (AutoCameraLock) {return;}
@@ -51,12 +51,13 @@ public class FocusController : MonoBehaviour
 
     }
 
-// switches the boolean of the AutoCameraLock. ie locks and unlocks the camera movement 
+    /// <summary>
+    /// switches the boolean of the AutoCameraLock. ie locks and unlocks the camera movement
+    /// </summary>
     public void SetAutoLock(){
         AutoCameraLock = (!AutoCameraLock);
     }
 }
-
 
 
 

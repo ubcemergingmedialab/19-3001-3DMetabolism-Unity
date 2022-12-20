@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// movements based on click feedbacks and highlighting 
+/// Camera move movements using coroutines, including the aggregate zoom function for highlighted pathways
+/// Instead of moving the camera, we move the center of the network to simulate camera movement
+/// Bounds encapsulation
+/// </summary>
 public class ClickListen : MonoBehaviour
 {
     public float totalTime = 1f;
@@ -16,7 +22,10 @@ public class ClickListen : MonoBehaviour
     private bool isMoving = false;
     private bool isZooming = false;
     public bool objectIsTargetFocus = true;
-    // Start is called before the first frame update
+
+    /// <summary>
+    /// Intilize the coroutine counters and set the network
+    /// </summary>
     void Start()
     {
         timeCounter = totalTime;
@@ -27,6 +36,10 @@ public class ClickListen : MonoBehaviour
             network = GameObject.Find("Center/Network");
     }
 
+    /// <summary>
+    /// By holding  the left shift button and clicking onto the object, the camera focus changes onto that object
+    /// moves the focus my using MoveRoutine
+    /// </summary>
     private void OnMouseOver()
     {
         if(objectIsTargetFocus) {
@@ -40,6 +53,13 @@ public class ClickListen : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// coroutine 
+    /// moves the network chunck by chunk until it has to stop moving.
+    /// instead of moving the camera, we move the center of the network to change focus
+    /// </summary>
+    /// <param name="chunk"></param>
+    /// <returns></returns>
     private IEnumerator MoveRoutine(Vector3 chunk)
     {
         isMoving = true;
@@ -57,7 +77,11 @@ public class ClickListen : MonoBehaviour
         }
     }
 
-    // creates a coroutine for a smooth movement onto the new aggregated zoom value for highlighted path ways
+    /// <summary>
+    /// cretes a coroutine to smoothly move on to the new aggreated zoom (highlighted pathway) by changing the camera distance from the focus
+    /// </summary>
+    /// <param name="newDistance"></param>
+    /// <returns></returns>
     private IEnumerator DistanceRoutine(float newDistance) {
 
         float startDistance = GameObject.Find("MainCamera").GetComponent<MouseOrbit>().distance;
@@ -82,7 +106,12 @@ public class ClickListen : MonoBehaviour
             }
         }
     }
-   // takes a bound and moves the center of world to the center of the aggregate view of highlighted Pathways 
+
+   /// <summary>
+   /// given a bounds , it moves the center of the bound onto the center of the camera 
+   /// mainly used for the aggregate highlighted poathway zoom
+   /// </summary>
+   /// <param name="bounds"></param>
     public void CenterCamera(Bounds bounds) {
 
         if(moveRoutine != null) {                                                   // if a moveRoutine is still running 
@@ -108,7 +137,10 @@ public class ClickListen : MonoBehaviour
         }
     }
 
-    // Moves the world's Center on to the collider
+    /// <summary>
+    /// similar to CneterCamera but with a collider instead of bounds
+    /// </summary>
+    /// <param name="collider"></param>
     public void ColliderCenterCamera(Collider collider) {
             
         if (collider == null) { throw new ArgumentNullException(nameof(collider));}
@@ -135,7 +167,13 @@ public class ClickListen : MonoBehaviour
         }
     }
 
-// takes a list of bounds and ecapsulates all of them into one bound
+
+    /// <summary>   
+    /// encapsulates all the input bounds into one 
+    /// used when new pathways are highlighted and need to be in camera
+    /// </summary>
+    /// <param name="targetBoundsList"></param>
+    /// <returns>encapsulated bounds of all the input bounds</returns>
     public Bounds BoundsEncapsulate(List<Bounds> targetBoundsList){
         Bounds bounds = new Bounds();
 
