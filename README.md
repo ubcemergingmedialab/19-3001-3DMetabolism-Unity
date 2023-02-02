@@ -11,17 +11,34 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 | ------ | ------ |
 | CleanNetwork.fbx | A static implementation of our network on Glycolysis and Gluconeogenesis |
 
-## Versioning
-
-- Unity 2020.3.7f
+## Prerequisites
+1. Unity 2020.3.7f
+2. Node npx (suggested)
 
 ## Getting Started
+1. Clone the repository
+2. Open the project.  The scene that is in active development is `development`.
 
-1. Instructions for use here
+## Testing WebGL builds
 
-## Building
+If you want to test features for the actual target (WebGL), there are multiple options after building the project (see below).
 
-1. Instructions for building the project here
+### Node
+1. Go to the Builds folder, open up a terminal and do `npx http-server`.  
+2. This will spin up a local server and you can copy/paste the URL to see your changes.
+3. CTRL + c, to stop the service.
+
+### Unity
+In the project, go to File -> Build And Run.
+
+## Building / Deploying
+
+1. In Unity -> File -> Build Settings.  Include the scenes you want to build
+2. Make sure the Platform is WebGL.  Default options are OK.
+3. Click Build.
+4. Log into AWS as an admin and go to S3 Buckets.
+5. Drag and drop all the files inside the build folder into the bucket.
+6. Save the changes - the app is now deployed and udpated on AWS.
 
 ## Contributing (Optional) 
 
@@ -33,12 +50,13 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 ### Faculty:
 Dr. Lindsay Rogers
 
-### Current EML Student Team:
+### Current EML Team:
 
-- Nikko - Developer/Lead
-- Rayyan - Developer
-- Joshua - Designer
-- Dante - Developer
+- Rayyan - Project Lead / Content Team
+- Mohsen- Developer / Consultant
+- Jiho- Designer
+- Robert- Developer
+- Ella - Content Team
 
 ### Spring 2021 Team:
 - Dante - Lead
