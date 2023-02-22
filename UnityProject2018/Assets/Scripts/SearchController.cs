@@ -17,14 +17,14 @@ public class SearchController : MonoBehaviour
         if (FromInput.text == "" || ToInput.text == "")
         {
             Debug.LogError("Search input cannot be empty! ");
-            NetworkSearch.LogPathways(); 
-            return; 
+            NetworkSearch.LogPathways();
+            return;
         }
 
         NodeSO fromNode;
         NodeSO toNode;
 
-        if (TryFindNode(FromInput.text, out fromNode) && 
+        if (TryFindNode(FromInput.text, out fromNode) &&
             TryFindNode(ToInput.text, out toNode))
         {
             NetworkSearch.Instance.BFSTest(
@@ -34,15 +34,13 @@ public class SearchController : MonoBehaviour
             Dictionary<int, List<ScriptableObject>> result = NetworkSearch.Instance.SearchForPath(
                 StatusController.Instance.globalPathway, fromNode, toNode
             );
-            
-            //TODO we would need to reset the highlights of the current search results
-            //TODO AND we need to remove the list of created pathways in StatusController
 
-            ResultBtnFactory.Instance.ResetButtons(); 
+            //We would need to reset the highlights of the current search results
+            //and we need to remove the list of created pathways in StatusController
+            StatusController.Instance.ResetHighlightingFromSearchResultPathways();
+            ResultBtnFactory.Instance.ResetButtons();
             ResultBtnFactory.Instance.MakeButtons(result);
-
         }
-
     }
 
     /// <summary>
@@ -54,10 +52,10 @@ public class SearchController : MonoBehaviour
     bool TryFindNode(string nodeName, out NodeSO node)
     {
         GameObject obj = GameObject.Find(nodeName);                                        // find the object
-        node = StatusController.Instance.globalPathway.getNodeByName(nodeName); 
+        node = StatusController.Instance.globalPathway.getNodeByName(nodeName);
         if (node != null)
         {
-            return true; 
+            return true;
         }
         Debug.LogError("SearchController: " + nodeName + " is not a valid node name");
         return false;

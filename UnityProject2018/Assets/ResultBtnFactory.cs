@@ -27,7 +27,6 @@ public class ResultBtnFactory : MonoBehaviour
 
     public Card dataSO;
 
-    //Dictionary<GameObject, PathwaySO> buttons = new Dictionary<GameObject, PathwaySO>();
     List<GameObject> resultBtns = new List<GameObject>();
 
 
@@ -43,12 +42,10 @@ public class ResultBtnFactory : MonoBehaviour
 
     }
 
-    // TODO: refactor results
     public void MakeButtons(Dictionary<int, List<ScriptableObject>> paths)
     {
         foreach (KeyValuePair<int, List<ScriptableObject>> path in paths)
         {
-            // Debug.Log("adding button for " + pathway);
             resultBtns.Add(GenerateButton(path.Key, path.Value));
             currentButtonY += buttonYOffset;
         }
@@ -65,47 +62,27 @@ public class ResultBtnFactory : MonoBehaviour
         resultBtns = new List<GameObject>();
     }
 
+    /// <summary>
+    /// Generates a button that represents a single result of a pathway search.
+    /// The list input (path) is in order.
+    /// </summary>
+    /// <param name="n"> the # representing which set of results </param>
+    /// <param name="path"> the list of SO (Nodes or Edges) that matches the search parameters </param>
     GameObject GenerateButton(int n, List<ScriptableObject> path)
     {
         GameObject generated = InitButtonAndSetPosition();
         SetBtnText(n, path, generated);
 
-        int numPathways = StatusController.Instance.activePathways.Count;
-
-        // TO REFACTOR: Populate with new button logic + actual paths
-        //create a new PathwaySO and use that instead of StatusController.Instance.activePathways[n % numPathways];
-        PathwaySO pathway = ScriptableObject.CreateInstance<PathwaySO>();
-        pathway.init("SearchResult" + n, "SR QID", "Search Result Description");
-
-
-        //currentPathway.AddNode(currentNode);
-        //currentPathway.AddEdge(currentNode, currentEdge);
-        for (int i = 0; i < path.Count; i++)
-        {
-            //add this node to the pathway if it is a node
-            if (path[i].GetType() == typeof(NodeSO))
-            {
-                pathway.AddNode((NodeSO)path[i]);
-            }
-            else if (path[i].GetType() == typeof(EdgeSO))
-            {
-                //we are adding the previous node as a parent to this edge
-                pathway.AddEdge((NodeSO)path[i - 1], (EdgeSO)path[i]);
-            }
-        }
+        //create a new PathwaySO and fill it with edges and nodes
+        PathwaySO pathway = PathwaySO.CreateAndFillPathway(n, path);
 
         //assign the pathway we just created (with it's resulting nodes and edges)
         generated.GetComponent<PathwayButtonLogic>().pathwaySO = pathway;
 
-        //now query service has a new pathway (not the traditional pre-set pathway).
-        //TODO we might not need this since we are updating the status controller anywuays
-        //QueryService.PathwaySOs.Add("SearchResult" + n, pathway);
-
         //Highlight manager needs to knows about this 'pathway'
-        StatusController.Instance.AddPathwayToHighlight(pathway);
-        //---
+        StatusController.Instance.AddPathwayToHighlight(pathway, true);
 
-        //generated.GetComponent<PathwayButtonLogic>().pathwaySO = StatusController.Instance.activePathways[n % numPathways];
+        //fill it with placeholder data for the side card.  Ex: "SearchResult 1" "SR QID" "Search Result Description".
         generated.GetComponent<PathwayButtonLogic>().dataSO = dataSO;
         return generated;
     }
@@ -125,5 +102,4 @@ public class ResultBtnFactory : MonoBehaviour
         rect.anchoredPosition = new Vector3(buttonX, currentButtonY, 0);
         return generated;
     }
-
 }

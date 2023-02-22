@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 /// <summary>
 /// 2021-10-14
 /// Centeralized point of access for status of SOs on all levels, pathways or components.
@@ -13,7 +11,6 @@ using UnityEngine;
 /// - List of active Pathways
 /// - Intialize a highlightPathway per pathwaySO ( dict (PWSO, HighlightPAthway))
 /// </summary>
-
 public class StatusController : MonoBehaviour
 {
     //SINGELTON
@@ -28,6 +25,9 @@ public class StatusController : MonoBehaviour
     private Dictionary<PathwaySO, HighlightPathway> highlightByPathwaySO;               // PathwaySO linked to its HighlightPathway Instance
     private List<HighlightPathway> highlightPathways;                                   // list of all highlightPathways initialized
 
+    private List<PathwaySO> searchResultPathwaySOList;                                  //List of created PathwaySO from search results.  Used to remove itself from highlightByPathwaySO when finished
+    private List<HighlightPathway> searchResultHighlightPathwayList;                    //List of created Highlights from search results.  Remove from highlightPathways when done.
+
     public List<PathwaySO> activePathways;                                              // filled now using th query service editor (was fiiled manual in unity previously)
 
     public ConnectionsSO globalPathway;
@@ -36,11 +36,7 @@ public class StatusController : MonoBehaviour
     public List<EdgeSO> AllEdgeSOs;
     public List<NodeSO> AllNodeSOs;
 
-
-
     public GameObject tempObjectHolder;                                                 // temporary, manually testing highlighting till buttons are developed
-
-
 
     /// <summary>
     /// - Initialization of the fields
@@ -59,7 +55,6 @@ public class StatusController : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
-
 
         elementToPathways = new Dictionary<HighlightHandler, List<HighlightPathway>>();
         highlightByPathwaySO = new Dictionary<PathwaySO, HighlightPathway>();
@@ -80,94 +75,32 @@ public class StatusController : MonoBehaviour
                 Debug.LogError("<!> Status controller : pathway scriptable object in active pathways is NULL");
             }
 
-            HighlightPathway highlightPathway = new HighlightPathway(pathwaySO);                                    // initialize a highlightPathway per active pathway
-            highlightByPathwaySO.Add(pathwaySO, highlightPathway);                                                   // link the pathwaySO to its highlightPathway
-            highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
-
-
-            List<NodeSO> listOfNodes = new List<NodeSO>();
-            List<EdgeSO> listOfEdges = new List<EdgeSO>();
-
-            IDictionaryEnumerator networkEnumerator = pathwaySO.GetLocalNetworkEnumerator();
-
-            if (pathwaySO.LocalNetwork != null)
-            {
-                while (networkEnumerator.MoveNext())
-                {
-                    listOfNodes.Add((NodeSO)networkEnumerator.Key);
-                    listOfEdges.AddRange((HashSet<EdgeSO>)networkEnumerator.Value);
-                }
-                //networkEnumerator.Reset();
-            }
-            else
-            {
-                Debug.LogError("<!>  StatusController : Local network in pathway is empty");
-            }
-
-
-
-            foreach (NodeSO nodeSO in listOfNodes)
-            {                                                                 // For every nodeSO in this pathway
-                GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
-
-                foreach (GameObject node in nodes)
-                {
-                    if (node != null)
-                    {
-                        HighlightHandler hl = node.GetComponent<HighlightHandler>();                                // find the nodes handler
-                        if (hl == null)
-                        {
-                            Debug.LogError("StatusController :higlightHandler is null ");
-                        }
-                        List<HighlightPathway> sharingPathways;
-
-                        if (elementToPathways.TryGetValue(hl, out sharingPathways))
-                        {                                // Find node in elementToPathways
-                            sharingPathways.Add(highlightPathway);                                                  // add the highlightPathway to the element's list of hpw
-                        }
-                        else
-                        {
-                            elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });                // Make a new list if node is not yet in the Dictionary 
-                        }
-                    }
-                }
-            }
-
-
-
-            foreach (EdgeSO edgeSO in listOfEdges)
-            {                                                             // For every edge in this pathway (same proccess as nodes)
-                GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
-
-                foreach (GameObject edge in edges)
-                {
-                    if (edge != null)
-                    {
-                        HighlightHandler hl = edge.GetComponent<HighlightHandler>();
-                        List<HighlightPathway> sharingPathways;
-
-                        if (elementToPathways.TryGetValue(hl, out sharingPathways))
-                        {
-                            sharingPathways.Add(highlightPathway);
-                        }
-                        else
-                        {
-                            elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });
-                        }
-                    }
-                }
-            }
-
-            pathwaySO.FillLists();
+            //add pathway to highlight, not from search function
+            AddPathwayToHighlight(pathwaySO, false);
         }
     }
 
-    //TODO DEFIN. REFACTOR HERE FOR SEARCH RESULTS
-    public void AddPathwayToHighlight(PathwaySO inputPathway)
+    /// <summary>
+    /// - instantiates a highlightPathway instance per a PathwaySO and links them in the highlightByPathwaySO Dictionary
+    /// - keeps a list of all HighlightPathway instances
+    /// - for every node/edge, it grabs the HighlightHandler component and the list of pathways it is apart of and links them in elementsToPathways dict
+    /// - maintains two lists of search results used to highlight pathways (searchResultPathwaySOList and searchResultPathwaySOList).  List will not be used for normal pathways (from wikibase)
+    /// </summary>
+    /// <param name="inputPathway">The created PathwaySO pathway from search</param>
+    /// <param name="isFromSearch">Is the created inputPathway from search</param>
+    public void AddPathwayToHighlight(PathwaySO inputPathway, bool isFromSearch)
     {
         HighlightPathway highlightPathway = new HighlightPathway(inputPathway);                                    // initialize a highlightPathway per active pathway
         highlightByPathwaySO.Add(inputPathway, highlightPathway);                                                   // link the pathwaySO to its highlightPathway
         highlightPathways.Add(highlightPathway);                                                                // add the new highlight pathway to the list that keeps track of them
+
+        //add it this list (because these were artificially generated from search results)
+        //to be removed later
+        if (isFromSearch)
+        {
+            searchResultPathwaySOList.Add(inputPathway);
+            searchResultHighlightPathwayList.Add(highlightPathway);
+        }
 
         List<NodeSO> listOfNodes = new List<NodeSO>();
         List<EdgeSO> listOfEdges = new List<EdgeSO>();
@@ -238,18 +171,40 @@ public class StatusController : MonoBehaviour
                 }
             }
         }
-
         inputPathway.FillLists();
     }
 
-    //TODO REFACTOR / move around
+    /// <summary>
+    /// Finds the highlight object for each pathway from search, then sets it to the default state.
+    /// After, it will be removed from the list in highlightPathways and highlightByPathwaySO.
+    /// Those lists need to be maintained otherwise list will forever grow.
+    /// </summary>
     public void ResetHighlightingFromSearchResultPathways()
     {
-        //get list of ONLY the created pathways
-        //invoke SetPathwayState for each pathway, set the state to DEFAULT
-        //Remove the created pathways (fake pathways) referenced below:
-        //highlightByPathwaySO
-        //highlightPathways
+        //Remove added pathwaySO and highlightpathways that came from search results
+        if (searchResultPathwaySOList != null && searchResultHighlightPathwayList != null)
+        {
+            foreach (PathwaySO pathwaySO in searchResultPathwaySOList)
+            {
+                highlightByPathwaySO.Remove(pathwaySO);
+            }
+
+            foreach (HighlightPathway highlightPathway in searchResultHighlightPathwayList)
+            {
+                //invoke SetPathwayState for each pathway, set the state to DEFAULT
+                highlightPathway.SetDefault();
+                highlightPathways.Remove(highlightPathway);
+            }
+            //clear the list of pathways/highlights that were created from search.
+            searchResultPathwaySOList.Clear();
+            searchResultHighlightPathwayList.Clear();
+        }
+        else
+        {
+            //create new list here if it's null (first time running search)
+            searchResultPathwaySOList = new List<PathwaySO>();
+            searchResultHighlightPathwayList = new List<HighlightPathway>();
+        }
     }
 
     /// <summary>
@@ -296,8 +251,6 @@ public class StatusController : MonoBehaviour
         }
 
     }
-
-
 
     /// <summary>
     /// Returns the max highlight state of an element (node/edge) based on the pathway its connected to. (Accent > Highlighted > Default)
@@ -400,7 +353,6 @@ public class StatusController : MonoBehaviour
         return value;
     }
 
-
     /// <summary>
     /// puts all nodes and edges of each active pathwaySO in their corresponding list on the SO, in ortder to keep a refrence to the components
     /// </summary>
@@ -421,5 +373,4 @@ public class StatusController : MonoBehaviour
 
         }
     }
-
 }
