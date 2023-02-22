@@ -34,6 +34,9 @@ public class SearchController : MonoBehaviour
             Dictionary<int, List<ScriptableObject>> result = NetworkSearch.Instance.SearchForPath(
                 StatusController.Instance.globalPathway, fromNode, toNode
             );
+            
+            //TODO we would need to reset the highlights of the current search results
+            //TODO AND we need to remove the list of created pathways in StatusController
 
             ResultBtnFactory.Instance.ResetButtons(); 
             ResultBtnFactory.Instance.MakeButtons(result);

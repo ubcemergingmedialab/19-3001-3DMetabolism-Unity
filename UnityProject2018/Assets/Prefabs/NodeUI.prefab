@@ -2598,7 +2598,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2376160772261561571}
   - component: {fileID: 3878531123161925598}
-  - component: {fileID: 4091424014701628113}
   - component: {fileID: 1221459566550045830}
   m_Layer: 5
   m_Name: CompoundControllerCamera
@@ -2669,14 +2668,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4091424014701628113
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4926617131911938902}
-  m_Enabled: 1
 --- !u!114 &1221459566550045830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2961,15 +2952,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31becd86fcaa5f4ca4554fe4c74754b, type: 3}
---- !u!224 &8396956739347293268 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6739114671590269518, guid: f31becd86fcaa5f4ca4554fe4c74754b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2954887733859632666}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5001806960592168861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7811531293265551751, guid: f31becd86fcaa5f4ca4554fe4c74754b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2954887733859632666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8396956739347293268 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6739114671590269518, guid: f31becd86fcaa5f4ca4554fe4c74754b,
     type: 3}
   m_PrefabInstance: {fileID: 2954887733859632666}
   m_PrefabAsset: {fileID: 0}

@@ -23,7 +23,7 @@ public class ResultBtnFactory : MonoBehaviour
     public static float buttonX = 0;
     public static float buttonYOffset = -50;
     public float buttonY;
-    public float currentButtonY; 
+    public float currentButtonY;
 
     public Card dataSO;
 
@@ -38,7 +38,7 @@ public class ResultBtnFactory : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
-        currentButtonY = buttonY; 
+        currentButtonY = buttonY;
         _instance = this;
 
     }
@@ -59,19 +59,53 @@ public class ResultBtnFactory : MonoBehaviour
     {
         foreach (GameObject go in resultBtns)
         {
-            Destroy(go); 
+            Destroy(go);
         }
         currentButtonY = buttonY;
-        resultBtns = new List<GameObject>(); 
+        resultBtns = new List<GameObject>();
     }
 
     GameObject GenerateButton(int n, List<ScriptableObject> path)
     {
         GameObject generated = InitButtonAndSetPosition();
         SetBtnText(n, path, generated);
+
+        int numPathways = StatusController.Instance.activePathways.Count;
+
         // TO REFACTOR: Populate with new button logic + actual paths
-        int numPathways = StatusController.Instance.activePathways.Count; 
-        generated.GetComponent<PathwayButtonLogic>().pathwaySO = StatusController.Instance.activePathways[n % numPathways]; 
+        //create a new PathwaySO and use that instead of StatusController.Instance.activePathways[n % numPathways];
+        PathwaySO pathway = ScriptableObject.CreateInstance<PathwaySO>();
+        pathway.init("SearchResult" + n, "SR QID", "Search Result Description");
+
+
+        //currentPathway.AddNode(currentNode);
+        //currentPathway.AddEdge(currentNode, currentEdge);
+        for (int i = 0; i < path.Count; i++)
+        {
+            //add this node to the pathway if it is a node
+            if (path[i].GetType() == typeof(NodeSO))
+            {
+                pathway.AddNode((NodeSO)path[i]);
+            }
+            else if (path[i].GetType() == typeof(EdgeSO))
+            {
+                //we are adding the previous node as a parent to this edge
+                pathway.AddEdge((NodeSO)path[i - 1], (EdgeSO)path[i]);
+            }
+        }
+
+        //assign the pathway we just created (with it's resulting nodes and edges)
+        generated.GetComponent<PathwayButtonLogic>().pathwaySO = pathway;
+
+        //now query service has a new pathway (not the traditional pre-set pathway).
+        //TODO we might not need this since we are updating the status controller anywuays
+        //QueryService.PathwaySOs.Add("SearchResult" + n, pathway);
+
+        //Highlight manager needs to knows about this 'pathway'
+        StatusController.Instance.AddPathwayToHighlight(pathway);
+        //---
+
+        //generated.GetComponent<PathwayButtonLogic>().pathwaySO = StatusController.Instance.activePathways[n % numPathways];
         generated.GetComponent<PathwayButtonLogic>().dataSO = dataSO;
         return generated;
     }

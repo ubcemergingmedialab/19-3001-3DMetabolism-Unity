@@ -184,7 +184,7 @@ public void NodeSOInit(WikibaseBinding item){
 
     // adds the node and edge to the pathway localnetwork dictionary 
     currentPathway.AddNode(currentNode);
-    currentPathway.AddEdge(currentNode,currentEdge);
+    currentPathway.AddEdge(currentNode, currentEdge);
 
     // add nodes and edges to global pathway
     globalPathway.AddNode(currentNode);

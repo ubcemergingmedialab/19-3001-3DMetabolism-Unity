@@ -16477,7 +16477,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: glucose
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -17895,7 +17895,7 @@ MonoBehaviour:
     type: 3}
   buttonY: 230
   currentButtonY: 0
-  dataSO: {fileID: 0}
+  dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
 --- !u!1 &1262850941
 GameObject:
   m_ObjectHideFlags: 0
@@ -19655,6 +19655,12 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1185078620642538083, guid: b2e1923c25a3b8b46b1ef961737adb28,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 1328670670389736668, guid: b2e1923c25a3b8b46b1ef961737adb28,
         type: 3}
       propertyPath: m_Name
@@ -30114,7 +30120,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: fructose-6-phosphate
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
