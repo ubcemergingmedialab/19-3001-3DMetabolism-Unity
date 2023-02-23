@@ -2,6 +2,11 @@
 ## Project Description
 A visualization of the Metabolic that leverages the third dimension and Unity animations to make the network easier to understand
 
+## About this branch
+this branch is to prototype the animation pipeline (IAT4U) pipeline in action.  Features:
+- Prototyping temporary UI assets, like a 'play animation' button that will appear for each search result.
+- Each node and edge will 'pulse' in color based on the order from the seearch.
+
 ## External Assets
 
 ### Included
