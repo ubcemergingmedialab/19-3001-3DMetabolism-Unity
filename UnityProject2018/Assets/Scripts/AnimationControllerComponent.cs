@@ -18,7 +18,27 @@ public class AnimationControllerComponent : MonoBehaviour
     public AnimationDescription resetAnimation;
     public AnimationDescriptionPresenter presenter;
 
+    // singleton instantiation of AnimationControllerComponent
+    private static AnimationControllerComponent _instance;
+    public static AnimationControllerComponent Instance
+    {
+        get { return _instance; }
+    }
+
     private Coroutine animationRoutine;
+
+    /// <summary>
+    /// Singleton!
+    /// </summary>
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+    }
 
     /// <summary>
     ///Assigns Presenter (optional)
@@ -34,6 +54,32 @@ public class AnimationControllerComponent : MonoBehaviour
 
         //For testing
         //StartCoroutine(PlayAnimations());
+    }
+
+    /// <summary>
+    /// Animates each ordered item from start to finish.
+    /// -Stops existing animations / coroutines
+    /// -Pulses the start and end node before it loops through
+    /// </summary>
+    /// <param name="list">list of ordered scriptable objects to be animated
+    public void AnimateSearchResults(List<ScriptableObject> list)
+    {
+        foreach(ScriptableObject so in list)
+        {
+            AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+
+            //add it
+            animations.Add(ad);
+        }
+        //TODO STOP EXISTING ANIMATIONS
+        //???
+
+        //TODO DO STUFF
+        //Create new AD and add that to the list of animations
+
+        //TODO
+        //start the loop
+        StartCoroutine(PlayAnimations());
     }
 
     /// <summary>

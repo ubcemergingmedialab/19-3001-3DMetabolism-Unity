@@ -17893,7 +17893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 413327639287738963, guid: c63bbe21836d06b4f973bab5e3b883f6,
     type: 3}
-  buttonY: 230
+  searchButtonAnimationPrefab: {fileID: 413327639287738963, guid: c675116d501a2da4f8a3e7484fc4b16e,
+    type: 3}
+  buttonY: 200
   currentButtonY: 0
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
 --- !u!1 &1262850941

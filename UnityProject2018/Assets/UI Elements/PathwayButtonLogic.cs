@@ -40,6 +40,9 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
         if (UIPresenter.UIList.PathwayUI != null)
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.PathwayUI, false);
         else Debug.Log("Error in calling PathwayUI list");
+
+        //Update strategy here.  We only want to show the relevent text labels from search.
+        NodeTextDisplay.Instance.ChangeFilterValue(0);
     }
 
     void AlertHighlightSystem(PathwaySO pathway)
@@ -110,7 +113,6 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
             default:
                 break;
         }
-
     }
 
     public void OnPointerEnter(PointerEventData eventData)
