@@ -64,9 +64,33 @@ public class AnimationControllerComponent : MonoBehaviour
     /// <param name="list">list of ordered scriptable objects to be animated
     public void AnimateSearchResults(List<ScriptableObject> list)
     {
-        foreach(ScriptableObject so in list)
+        foreach (ScriptableObject so in list)
         {
             AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+            ad.AnimatedObjects = new List<string>();
+            ad.TriggerToSet = new List<string>();
+
+            //add this node to the pathway if it is a node
+            if (so.GetType() == typeof(NodeSO))
+            {
+                NodeSO nodeSO = (NodeSO)so;
+
+                //name of the physical node
+                ad.AnimatedObjects.Add(nodeSO.Label);
+                ad.TriggerToSet.Add("Pulse");
+            }
+            else if (so.GetType() == typeof(EdgeSO))
+            {
+                EdgeSO edgeSO = (EdgeSO)so;
+
+                //name of the physical node
+                ad.AnimatedObjects.Add(edgeSO.Enzyme);
+                ad.TriggerToSet.Add("Pulse");
+            }
+            else
+            {
+                Debug.LogWarning("We cannot add a SO that is neither a node or a edge");
+            }
 
             //add it
             animations.Add(ad);

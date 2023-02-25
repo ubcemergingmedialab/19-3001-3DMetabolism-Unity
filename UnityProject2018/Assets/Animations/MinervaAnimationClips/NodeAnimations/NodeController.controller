@@ -77,6 +77,20 @@ MonoBehaviour:
   StartColor: {r: 1, g: 1, b: 1, a: 1}
   EndColor: {r: 0.35849, g: 0.35849, b: 0.35849, a: 1}
   animationLength: 2
+--- !u!114 &-3821385975252693224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88dd43a556ec363429755fcf4cc8baee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndColor: {r: 1, g: 0.3183669, b: 0, a: 1}
+  animationLength: 2
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -310,6 +324,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102157638003106062}
     m_Position: {x: 100, y: 210, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 6059867080511460221}
+    m_Position: {x: 330, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -317,7 +334,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 110, y: 90, z: 0}
   m_EntryPosition: {x: 120, y: 140, z: 0}
-  m_ExitPosition: {x: 350, y: 230, z: 0}
+  m_ExitPosition: {x: 350, y: 360, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102157638003106062}
 --- !u!1101 &3654133890714794200
@@ -354,6 +371,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c2c4bd50d363249b8b15af6a328952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1102 &6059867080511460221
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pulse
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours:
+  - {fileID: -3821385975252693224}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 0
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!114 &8137104006636074639
 MonoBehaviour:
   m_ObjectHideFlags: 1
