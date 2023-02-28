@@ -37,7 +37,9 @@ public class SearchController : MonoBehaviour
 
             //We would need to reset the highlights of the current search results
             //and we need to remove the list of created pathways in StatusController
+            //and we need to stop any existing animations
             StatusController.Instance.ResetHighlightingFromSearchResultPathways();
+            AnimationControllerComponent.Instance.StopAllAnimations(true);
             ResultBtnFactory.Instance.ResetButtons();
             ResultBtnFactory.Instance.MakeButtons(result);
         }

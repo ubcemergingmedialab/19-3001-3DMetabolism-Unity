@@ -10,13 +10,15 @@ public class PulseAnimateMaterial : StateMachineBehaviour
     private float currentTime;
     private bool isFoward;
 
+    private float usedAnimationLength;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         currentTime = 0;
         StartColor = animator.GetComponent<Renderer>().material.GetColor("_WiggleColor");
         isFoward = true;
-        animationLength /= 2;
+        usedAnimationLength = animationLength / 2;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -24,10 +26,10 @@ public class PulseAnimateMaterial : StateMachineBehaviour
     {
         if (isFoward)
         {
-            if (currentTime <= animationLength)
+            if (currentTime <= usedAnimationLength)
             {
                 currentTime += Time.deltaTime;
-                animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", Color.Lerp(StartColor, EndColor, currentTime / animationLength));
+                animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", Color.Lerp(StartColor, EndColor, currentTime / usedAnimationLength));
             }
             else
             {
@@ -38,7 +40,7 @@ public class PulseAnimateMaterial : StateMachineBehaviour
         else
         {
             currentTime += Time.deltaTime;
-            animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", Color.Lerp(EndColor, StartColor, currentTime / animationLength));
+            animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", Color.Lerp(EndColor, StartColor, currentTime / usedAnimationLength));
         }
     }
 

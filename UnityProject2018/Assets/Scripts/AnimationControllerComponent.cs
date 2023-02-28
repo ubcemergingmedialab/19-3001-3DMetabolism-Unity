@@ -15,6 +15,7 @@ public class AnimationControllerComponent : MonoBehaviour
     public List<AnimationDescription> animations;
     public float waitTime = 1f;
     public float resetTime = 0.1f;
+    public int timesToPulseStartAndEndNodes = 1;
     public AnimationDescription resetAnimation;
     public AnimationDescriptionPresenter presenter;
 
@@ -57,6 +58,43 @@ public class AnimationControllerComponent : MonoBehaviour
     }
 
     /// <summary>
+    /// Stops all animations
+    /// Clears the queue from animations
+    /// Waits for a period of time
+    /// </summary>
+    public void StopAllAnimations(bool resetColor)
+    {
+        if (animationRoutine != null)
+        {
+            StopCoroutine(animationRoutine);
+
+
+            if (resetColor)
+            {
+                foreach (AnimationDescription animation in animations)
+                {
+                    foreach (string name in animation.AnimatedObjects)
+                    {
+                        GameObject curGO = GameObject.Find(name);
+                        if (curGO != null)
+                        {
+                            Animator gameObjectAnimator = curGO.GetComponent<Animator>();
+                            if (gameObjectAnimator != null)
+                            {
+                                gameObjectAnimator.Play("Reset");
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            animations.Clear();
+        }
+    }
+
+    /// <summary>
     /// Animates each ordered item from start to finish.
     /// -Stops existing animations / coroutines
     /// -Pulses the start and end node before it loops through
@@ -64,6 +102,32 @@ public class AnimationControllerComponent : MonoBehaviour
     /// <param name="list">list of ordered scriptable objects to be animated
     public void AnimateSearchResults(List<ScriptableObject> list)
     {
+        StopAllAnimations(false);
+
+        //TODO refactor this 
+        //pulse the start and end node 'x' times
+        for (int i = 0; i < timesToPulseStartAndEndNodes; i++)
+        {
+            AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+            ad.AnimatedObjects = new List<string>();
+            ad.TriggerToSet = new List<string>();
+
+            ScriptableObject startNodeSO = list[0];
+            ScriptableObject endNodeSO = list[list.Count - 1];
+
+            NodeSO start = (NodeSO)startNodeSO;
+            NodeSO end = (NodeSO)endNodeSO;
+
+            ad.AnimatedObjects.Add(start.Label);
+            ad.TriggerToSet.Add("Flash");
+
+            ad.AnimatedObjects.Add(end.Label);
+            ad.TriggerToSet.Add("Flash");
+
+            animations.Add(ad);
+        }
+
+        //Go through each node and edge and pulse 1x
         foreach (ScriptableObject so in list)
         {
             AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
@@ -74,10 +138,9 @@ public class AnimationControllerComponent : MonoBehaviour
             if (so.GetType() == typeof(NodeSO))
             {
                 NodeSO nodeSO = (NodeSO)so;
-
-                //name of the physical node
                 ad.AnimatedObjects.Add(nodeSO.Label);
                 ad.TriggerToSet.Add("Pulse");
+                //ad.TriggerToSet.Add("PulseMaterialText");
             }
             else if (so.GetType() == typeof(EdgeSO))
             {
@@ -95,15 +158,8 @@ public class AnimationControllerComponent : MonoBehaviour
             //add it
             animations.Add(ad);
         }
-        //TODO STOP EXISTING ANIMATIONS
-        //???
 
-        //TODO DO STUFF
-        //Create new AD and add that to the list of animations
-
-        //TODO
-        //start the loop
-        StartCoroutine(PlayAnimations());
+        animationRoutine = StartCoroutine("PlayAnimations");
     }
 
     /// <summary>
@@ -194,6 +250,8 @@ public class AnimationControllerComponent : MonoBehaviour
                 if (gameObjectAnimator != null)
                 {
                     gameObjectAnimator.Play("Idle");
+                    //gameObjectAnimator.StopPlayback();
+                    //gameObjectAnimator.Play("Reset");
                 }
             }
         }
