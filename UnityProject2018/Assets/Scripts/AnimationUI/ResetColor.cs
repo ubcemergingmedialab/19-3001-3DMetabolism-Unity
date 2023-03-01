@@ -11,7 +11,7 @@ public class ResetColor : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", resetColor);
+        //animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", resetColor);
 
         Transform transform = animator.transform.Find("NodeTemplate/Label");
 

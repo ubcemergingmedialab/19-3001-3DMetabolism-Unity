@@ -62,32 +62,26 @@ public class AnimationControllerComponent : MonoBehaviour
     /// Clears the queue from animations
     /// Waits for a period of time
     /// </summary>
-    public void StopAllAnimations(bool resetColor)
+    public void StopAllAnimations()
     {
         if (animationRoutine != null)
         {
             StopCoroutine(animationRoutine);
 
-
-            if (resetColor)
+            foreach (AnimationDescription animation in animations)
             {
-                foreach (AnimationDescription animation in animations)
+                foreach (string name in animation.AnimatedObjects)
                 {
-                    foreach (string name in animation.AnimatedObjects)
+                    GameObject curGO = GameObject.Find(name);
+                    if (curGO != null)
                     {
-                        GameObject curGO = GameObject.Find(name);
-                        if (curGO != null)
+                        Animator gameObjectAnimator = curGO.GetComponent<Animator>();
+                        if (gameObjectAnimator != null)
                         {
-                            Animator gameObjectAnimator = curGO.GetComponent<Animator>();
-                            if (gameObjectAnimator != null)
-                            {
-                                gameObjectAnimator.Play("Reset");
-                            }
+                            gameObjectAnimator.Play("Idle");
                         }
                     }
-
                 }
-
             }
 
             animations.Clear();
@@ -102,7 +96,7 @@ public class AnimationControllerComponent : MonoBehaviour
     /// <param name="list">list of ordered scriptable objects to be animated
     public void AnimateSearchResults(List<ScriptableObject> list)
     {
-        StopAllAnimations(false);
+        StopAllAnimations();
 
         //TODO refactor this 
         //pulse the start and end node 'x' times

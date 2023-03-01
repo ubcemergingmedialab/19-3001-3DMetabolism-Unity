@@ -36,7 +36,7 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
     {
         //TODO??dowweneed
         //TODO do we need this?
-        AnimationControllerComponent.Instance.StopAllAnimations(false);
+        AnimationControllerComponent.Instance.StopAllAnimations();
 
         dataSO.Label = pathwaySO.Label;
         dataSO.QID = pathwaySO.QID;

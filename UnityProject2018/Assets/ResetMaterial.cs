@@ -8,8 +8,10 @@ public class ResetMaterial : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(!initialColor.Equals(Color.clear)) {
-            animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", initialColor);
+        NodeTextDisplay.Instance.UpdateTextDisplay();
+
+        if (!initialColor.Equals(Color.clear)) {
+            //animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", initialColor);
         }
     }
 
@@ -22,7 +24,7 @@ public class ResetMaterial : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        initialColor = animator.GetComponent<Renderer>().material.GetColor("_WiggleColor");
+        //initialColor = animator.GetComponent<Renderer>().material.GetColor("_WiggleColor");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
