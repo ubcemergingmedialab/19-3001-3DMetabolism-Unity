@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class ResetMaterial : StateMachineBehaviour
+public class ResetColor : StateMachineBehaviour
 {
-    private Color initialColor;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //NodeTextDisplay.Instance.UpdateTextDisplay();
-
-        if (!initialColor.Equals(Color.clear)) {
-            //animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", initialColor);
-        }
+        //Reset the text display (just once for OnStateEnter)
+        NodeTextDisplay.Instance.UpdateTextDisplay();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,10 +19,10 @@ public class ResetMaterial : StateMachineBehaviour
     //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        //initialColor = animator.GetComponent<Renderer>().material.GetColor("_WiggleColor");
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

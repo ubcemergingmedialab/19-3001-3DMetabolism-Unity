@@ -91,6 +91,7 @@ public class PathwaySO : ConnectionsSO
                 pathway.AddEdge((NodeSO)path[i - 1], (EdgeSO)path[i]);
             }
         }
+
         return pathway;
     }
 }

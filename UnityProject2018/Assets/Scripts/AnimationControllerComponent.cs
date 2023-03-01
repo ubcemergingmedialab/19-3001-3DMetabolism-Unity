@@ -15,10 +15,31 @@ public class AnimationControllerComponent : MonoBehaviour
     public List<AnimationDescription> animations;
     public float waitTime = 1f;
     public float resetTime = 0.1f;
+    public int timesToPulseStartAndEndNodes = 1;
     public AnimationDescription resetAnimation;
     public AnimationDescriptionPresenter presenter;
 
+    // singleton instantiation of AnimationControllerComponent
+    private static AnimationControllerComponent _instance;
+    public static AnimationControllerComponent Instance
+    {
+        get { return _instance; }
+    }
+
     private Coroutine animationRoutine;
+
+    /// <summary>
+    /// Singleton!
+    /// </summary>
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+    }
 
     /// <summary>
     ///Assigns Presenter (optional)
@@ -34,6 +55,116 @@ public class AnimationControllerComponent : MonoBehaviour
 
         //For testing
         //StartCoroutine(PlayAnimations());
+    }
+
+    /// <summary>
+    /// Stops animation coroutine, tells the nodes/edges to play the 'Reset' trigger, then clears the queue from animations
+    /// </summary>
+    public void StopAllAnimations()
+    {
+        if (animationRoutine != null)
+        {
+            StopCoroutine(animationRoutine);
+
+            foreach (AnimationDescription animation in animations)
+            {
+                foreach (string name in animation.AnimatedObjects)
+                {
+                    //TODO generally don't want to call GO.find.  Better to cache the GO somewhere everytime we load.
+                    //in this case it might be fine because it generally only gets called once? (To stop a specific animation).
+                    GameObject curGO = GameObject.Find(name);
+                    if (curGO != null)
+                    {
+                        Animator gameObjectAnimator = curGO.GetComponent<Animator>();
+                        if (gameObjectAnimator != null)
+                        {
+                            gameObjectAnimator.Play("Reset");
+                        }
+                    }
+                }
+            }
+            animations.Clear();
+        }
+    }
+
+    /// <summary>
+    /// Casts into a NodeSO object to get the label (name of the game object) and the trigger (name of the animation trigger)
+    /// </summary>
+    /// <param name="ad">The animation description to define the set of animations.
+    /// <param name="so">The scriptable object from the search result.
+    /// <param name="triggerName">The name of the trigger/animation clip.
+    private void AddNodeToAnimationDescription(AnimationDescription ad, ScriptableObject so, string triggerName)
+    {
+        NodeSO nodeSo = (NodeSO)so;
+        ad.AnimatedObjects.Add(nodeSo.Label);
+        ad.TriggerToSet.Add(triggerName);
+    }
+
+    /// <summary>
+    /// Casts into a EdgeSO object to get the Enzyme (name of the game object) and the trigger (name of the animation trigger)
+    /// </summary>
+    /// <param name="ad">The animation description to define the set of animations.
+    /// <param name="so">The scriptable object from the search result.
+    /// <param name="triggerName">The name of the trigger/animation clip.
+    private void AddEdgeToAnimationDescription(AnimationDescription ad, ScriptableObject so, string triggerName)
+    {
+        EdgeSO edgeSo = (EdgeSO)so;
+        ad.AnimatedObjects.Add(edgeSo.Enzyme);
+        ad.TriggerToSet.Add(triggerName);
+    }
+
+    /// <summary>
+    /// Animates each ordered item from start to finish.
+    /// -Stops existing animation coroutine
+    /// -Pulses the start and end node before it loops through
+    /// </summary>
+    /// <param name="list">list of ordered scriptable objects to be animated
+    public void AnimateSearchResults(List<ScriptableObject> list)
+    {
+        StopAllAnimations();
+
+        //'Pulse' the starting and end nodes 'x' times.
+        for (int i = 0; i < timesToPulseStartAndEndNodes; i++)
+        {
+            AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+            ad.AnimatedObjects = new List<string>();
+            ad.TriggerToSet = new List<string>();
+
+            ScriptableObject startNodeSO = list[0];
+            ScriptableObject endNodeSO = list[list.Count - 1];
+
+            AddNodeToAnimationDescription(ad, startNodeSO, "Flash");
+            AddNodeToAnimationDescription(ad, endNodeSO, "Flash");
+            animations.Add(ad);
+        }
+
+        //Go through each node and edge and pulse 1x
+        foreach (ScriptableObject so in list)
+        {
+            AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+            ad.AnimatedObjects = new List<string>();
+            ad.TriggerToSet = new List<string>();
+
+            //add this node to the pathway if it is a node
+            if (so.GetType() == typeof(NodeSO))
+            {
+                AddNodeToAnimationDescription(ad, so, "Pulse");
+            }
+            else if (so.GetType() == typeof(EdgeSO))
+            {
+                AddEdgeToAnimationDescription(ad, so, "Pulse");
+            }
+            else
+            {
+                Debug.LogWarning("We cannot add a SO that is neither a node or a edge");
+            }
+
+            //add it
+            animations.Add(ad);
+        }
+        
+        //Start the animation
+        animationRoutine = StartCoroutine("PlayAnimations");
     }
 
     /// <summary>
@@ -127,14 +258,6 @@ public class AnimationControllerComponent : MonoBehaviour
                 }
             }
         }
-        /*
-        foreach(Animator anim in transform.GetComponentsInChildren<Animator>(true))
-        {
-            if(anim.gameObject.activeSelf)
-            {
-                anim.Play("Idle");
-            }
-        }*/
     }
 
     /// <summary>

@@ -80,6 +80,23 @@ public class StatusController : MonoBehaviour
         }
     }
 
+    public void ResetSearchPathwayHighlights()
+    {
+        if (null != searchResultHighlightPathwayList && searchResultHighlightPathwayList.Count != 0)
+        {
+            for (int i = 0; i < searchResultHighlightPathwayList.Count; i++)
+            {
+                HighlightPathway hp = searchResultHighlightPathwayList[i];
+                PathwaySO pathwaySO = searchResultPathwaySOList[i];
+                if (hp != null && pathwaySO != null)
+                {
+                    //Takes the current state, and set it again
+                    SetPathwayState(pathwaySO, hp.state);
+                }
+            }
+        }
+    }
+
     /// <summary>
     /// - instantiates a highlightPathway instance per a PathwaySO and links them in the highlightByPathwaySO Dictionary
     /// - keeps a list of all HighlightPathway instances
@@ -98,6 +115,15 @@ public class StatusController : MonoBehaviour
         //to be removed later
         if (isFromSearch)
         {
+            if (null == searchResultPathwaySOList)
+            {
+                searchResultPathwaySOList = new List<PathwaySO>();
+
+            }
+            if (null == searchResultHighlightPathwayList)
+            {
+                searchResultHighlightPathwayList = new List<HighlightPathway>();
+            }
             searchResultPathwaySOList.Add(inputPathway);
             searchResultHighlightPathwayList.Add(highlightPathway);
         }

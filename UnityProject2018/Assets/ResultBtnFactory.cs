@@ -16,6 +16,7 @@ public class ResultBtnFactory : MonoBehaviour
     }
 
     public GameObject buttonPrefab;
+    public GameObject searchButtonAnimationPrefab;
 
     // Determines the placement of buttons.
     // X value should remain constant, Y value should differ by the offset
@@ -39,14 +40,14 @@ public class ResultBtnFactory : MonoBehaviour
         }
         currentButtonY = buttonY;
         _instance = this;
-
     }
 
     public void MakeButtons(Dictionary<int, List<ScriptableObject>> paths)
     {
         foreach (KeyValuePair<int, List<ScriptableObject>> path in paths)
         {
-            resultBtns.Add(GenerateButton(path.Key, path.Value));
+            resultBtns.Add(GenerateSearchResultHighlightBtn(path.Key, path.Value));
+            resultBtns.Add(GenerateSearchResultAnimateBtn(path.Key, path.Value));
             currentButtonY += buttonYOffset;
         }
     }
@@ -68,13 +69,14 @@ public class ResultBtnFactory : MonoBehaviour
     /// </summary>
     /// <param name="n"> the # representing which set of results </param>
     /// <param name="path"> the list of SO (Nodes or Edges) that matches the search parameters </param>
-    GameObject GenerateButton(int n, List<ScriptableObject> path)
+    GameObject GenerateSearchResultHighlightBtn(int n, List<ScriptableObject> path)
     {
         GameObject generated = InitButtonAndSetPosition();
         SetBtnText(n, path, generated);
 
         //create a new PathwaySO and fill it with edges and nodes
         PathwaySO pathway = PathwaySO.CreateAndFillPathway(n, path);
+        pathway.FillLists();
 
         //assign the pathway we just created (with it's resulting nodes and edges)
         generated.GetComponent<PathwayButtonLogic>().pathwaySO = pathway;
@@ -87,6 +89,26 @@ public class ResultBtnFactory : MonoBehaviour
         return generated;
     }
 
+    /// <summary>
+    /// Generates a button that represents a single animation to be played for a pathway search.
+    /// The list input (path) is in order.
+    /// </summary>
+    /// <param name="n"> the # representing which set of results </param>
+    /// <param name="path"> the list of SO (Nodes or Edges) that matches the search parameters </param>
+    GameObject GenerateSearchResultAnimateBtn(int n, List<ScriptableObject> path)
+    {
+        GameObject generated = InitAnimationButtonAndSetPosition();
+
+        //create a new PathwaySO and fill it with edges and nodes
+        PathwaySO pathway = PathwaySO.CreateAndFillPathway(n, path);
+        pathway.FillLists();
+
+        //assign the ordered list of SO (so we know the order of objects to animate)
+        generated.GetComponent<SearchResultAnimationButtonLogic>().listOfOrderedSO = path;
+
+        return generated;
+    }
+
     private static void SetBtnText
         (int n, List<ScriptableObject> path, GameObject generated)
     {
@@ -95,11 +117,29 @@ public class ResultBtnFactory : MonoBehaviour
         //childText.text += " via " + path[path.Count / 2].name; 
     }
 
+    /// <summary>
+    /// Creates 'search result' button until UI/UX comes up with a better option.  
+    /// Placeholder buttons until UI/UX comes up with a better option. 
+    /// </summary>
     private GameObject InitButtonAndSetPosition()
     {
         GameObject generated = Instantiate(buttonPrefab, transform);
         RectTransform rect = generated.GetComponent<RectTransform>();
-        rect.anchoredPosition = new Vector3(buttonX, currentButtonY, 0);
+        rect.offsetMin = new Vector2(-125, currentButtonY);
+        rect.offsetMax = new Vector2(30, currentButtonY + 50);
+        return generated;
+    }
+
+    /// <summary>
+    /// Creates'play animation' button for a search result
+    /// Placeholder buttons until UI/UX comes up with a better option.  
+    /// </summary>
+    private GameObject InitAnimationButtonAndSetPosition()
+    {
+        GameObject generated = Instantiate(searchButtonAnimationPrefab, transform);
+        RectTransform rect = generated.GetComponent<RectTransform>();
+        rect.offsetMin = new Vector2(30, currentButtonY);
+        rect.offsetMax = new Vector2(125, currentButtonY + 50);
         return generated;
     }
 }

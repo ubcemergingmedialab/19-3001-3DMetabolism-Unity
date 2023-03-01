@@ -5,7 +5,6 @@ using TMPro;
 
 public class SearchController : MonoBehaviour
 {
-
     public TMP_InputField FromInput;
     public TMP_InputField ToInput;
     NodeSO fromNode;
@@ -35,10 +34,18 @@ public class SearchController : MonoBehaviour
                 StatusController.Instance.globalPathway, fromNode, toNode
             );
 
-            //We would need to reset the highlights of the current search results
-            //and we need to remove the list of created pathways in StatusController
+            //Stops all animations.
+            //Resets the highlights in the search results.
+            //Removes the added pathways from search in status controllers.
+            //Update TextDisplay strat.
+            //destroys the old buttons.
+            AnimationControllerComponent.Instance.StopAllAnimations();
+            StatusController.Instance.ResetSearchPathwayHighlights();
             StatusController.Instance.ResetHighlightingFromSearchResultPathways();
+            NodeTextDisplay.Instance.UpdateTextDisplay();
             ResultBtnFactory.Instance.ResetButtons();
+
+            //...then finally creates a set of buttons for each search result.
             ResultBtnFactory.Instance.MakeButtons(result);
         }
     }

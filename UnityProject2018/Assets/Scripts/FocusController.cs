@@ -22,54 +22,68 @@ public class FocusController : MonoBehaviour
     /// <summary>
     /// Create the singleton instance. Hold only one active instance of this class
     /// </summary>
-    void Awake(){
-        if (_instance != null && _instance != this) 
-            {
-                Destroy(this.gameObject);
-                return;
-            }
-        _instance = this;   
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
 
-    //TODO 
     //Create new UpdateFocus() method public that
-    //takes in bounds (they come from the renderer component) then pass it in to the clicklisten (see updatefocus for ex).
+    //takes in bounds (can come from the renderer component) then pass it in to the clicklisten. See UpdateFocus() for ex.
     //this will focus the camera to the resulting elements of the search results (rather than an entire pathway)
+    public void UpdateFocus(List<Bounds> boundsList)
+    {
+        if (AutoCameraLock) { return; }
+        if (boundsList.Count == 0)
+        {
+            Debug.Log(" no PW highlighted defaulting to defaultCenter");
+            GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
+            return;
+        }
+
+        Bounds bounds = GetComponent<ClickListen>().BoundsEncapsulate(boundsList);
+        GetComponent<ClickListen>().CenterCamera(bounds);
+    }
 
     /// <summary>
     /// changes the focus to the aggregate view of the highlighted Pathways using GetHighlightedRenderers and CenterCamera functions
     /// </summary>
-    public void UpdateFocus() {
+    public void UpdateFocus()
+    {
 
-        if (AutoCameraLock) {return;}
+        if (AutoCameraLock) { return; }
         List<Bounds> boundsList = HighlightService.Instance.GetHighlightedBounds();
-        if (boundsList.Count == 0){
+        if (boundsList.Count == 0)
+        {
             Debug.Log(" no PW highlighted defaulting to defaultCenter");
             GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
             return;
-       }
+        }
         Bounds bounds = GetComponent<ClickListen>().BoundsEncapsulate(boundsList);
-        
         GetComponent<ClickListen>().CenterCamera(bounds);
-
     }
 
     /// <summary>
     /// switches the boolean of the AutoCameraLock. ie locks and unlocks the camera movement
     /// </summary>
-    public void SetAutoLock(){
+    public void SetAutoLock()
+    {
         AutoCameraLock = (!AutoCameraLock);
     }
 }
 
 
 
-    //  RENDER VERSION OF UPDATE FOCUS
-    //    List<Renderer> renderers  = HighlightService.Instance.GetHighlightedRenderers();
-    //    if (renderers.Count == 0){
-    //        Debug.Log(" Render List is EMPTY!");
-    //        renderers.Add(defaultCenter.GetComponent<Renderer>());
-    //    } 
-    
-    //    GetComponent<ClickListen>().CenterCamera(renderers);
+//  RENDER VERSION OF UPDATE FOCUS
+//    List<Renderer> renderers  = HighlightService.Instance.GetHighlightedRenderers();
+//    if (renderers.Count == 0){
+//        Debug.Log(" Render List is EMPTY!");
+//        renderers.Add(defaultCenter.GetComponent<Renderer>());
+//    } 
+
+//    GetComponent<ClickListen>().CenterCamera(renderers);

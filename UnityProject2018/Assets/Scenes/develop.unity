@@ -17893,7 +17893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 413327639287738963, guid: c63bbe21836d06b4f973bab5e3b883f6,
     type: 3}
-  buttonY: 230
+  searchButtonAnimationPrefab: {fileID: 413327639287738963, guid: c675116d501a2da4f8a3e7484fc4b16e,
+    type: 3}
+  buttonY: 200
   currentButtonY: 0
   dataSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
 --- !u!1 &1262850941
@@ -31746,7 +31748,7 @@ GameObject:
   - component: {fileID: 988872253906518422}
   - component: {fileID: 988872253906165175}
   - component: {fileID: 988872253906165177}
-  - component: {fileID: 988872253906165296}
+  - component: {fileID: 988872253906165176}
   - component: {fileID: 988872253906165178}
   m_Layer: 2
   m_Name: DefaultPathway
@@ -31770,6 +31772,24 @@ MonoBehaviour:
   totalTime: 1
   moveSplit: 100
   objectIsTargetFocus: 1
+--- !u!114 &988872253906165176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988872253906165174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43330e48b63782247bc6fe81ccabcefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations: []
+  waitTime: 2
+  resetTime: 2
+  timesToPulseStartAndEndNodes: 2
+  resetAnimation: {fileID: 0}
+  presenter: {fileID: 0}
 --- !u!136 &988872253906165177
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31814,31 +31834,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &988872253906165296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988872253906165174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43330e48b63782247bc6fe81ccabcefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animations:
-  - {fileID: 11400000, guid: f256fc20ec8ae904eb1edcf6f83348c9, type: 2}
-  - {fileID: 11400000, guid: 05e94c0fcd05356448ad56ee489481ac, type: 2}
-  - {fileID: 11400000, guid: 491537ace0680aa4e8ffa8b5c10dca05, type: 2}
-  - {fileID: 11400000, guid: 3ed7ad20534344846a82f61e5050beb8, type: 2}
-  - {fileID: 11400000, guid: 6cef9a2a64bb1a743875295eebc68829, type: 2}
-  - {fileID: 11400000, guid: 40ed67ab7fc8aef42838dcd05f1b88ad, type: 2}
-  - {fileID: 11400000, guid: dc3bd9c71b756cb4ab7850e825272876, type: 2}
-  - {fileID: 0}
-  waitTime: 2
-  resetTime: 0.1
-  resetAnimation: {fileID: 11400000, guid: d025587e8d327594593b947c9755e491, type: 2}
-  presenter: {fileID: 0}
 --- !u!4 &988872253906518422
 Transform:
   m_ObjectHideFlags: 0
@@ -46010,6 +46005,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380523452977442257, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 8380523452977442257, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380523452977442257, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
       propertyPath: m_lineSpacing
       value: 0
       objectReference: {fileID: 0}
@@ -46042,6 +46048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380523452977442257, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8380523452977442257, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
