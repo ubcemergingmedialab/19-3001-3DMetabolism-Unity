@@ -12,6 +12,9 @@ public class ResetColor : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", resetColor);
+        
+        //RESET NODE
+        NodeTextDisplay.Instance.UpdateTextDisplay();
 
         Transform transform = animator.transform.Find("NodeTemplate/Label");
 

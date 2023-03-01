@@ -78,7 +78,7 @@ public class AnimationControllerComponent : MonoBehaviour
                         Animator gameObjectAnimator = curGO.GetComponent<Animator>();
                         if (gameObjectAnimator != null)
                         {
-                            gameObjectAnimator.Play("Idle");
+                            gameObjectAnimator.Play("Reset");
                         }
                     }
                 }
