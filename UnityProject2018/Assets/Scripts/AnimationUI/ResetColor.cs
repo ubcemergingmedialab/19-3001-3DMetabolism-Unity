@@ -5,28 +5,11 @@ using UnityEngine;
 
 public class ResetColor : StateMachineBehaviour
 {
-    //TODO buggy
-    public Color resetColor;
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", resetColor);
-        
-        //RESET NODE
+        //Reset the text display (just once for OnStateEnter)
         NodeTextDisplay.Instance.UpdateTextDisplay();
-
-        Transform transform = animator.transform.Find("NodeTemplate/Label");
-
-        if(null!= transform)
-        {
-            TextMeshPro tmp = transform.GetComponent<TextMeshPro>();
-            if (null != tmp)
-            {
-                //TODO change color to ???
-            }
-        }
-        //animator.transform.Find("NodeTemplate/Label").GetComponent<TextMeshPro>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

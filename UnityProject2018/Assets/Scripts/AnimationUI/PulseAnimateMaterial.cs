@@ -18,12 +18,15 @@ public class PulseAnimateMaterial : StateMachineBehaviour
         currentTime = 0;
         StartColor = animator.GetComponent<Renderer>().material.GetColor("_WiggleColor");
         isFoward = true;
+
+        //divide by two because we split the animation into two parts.  1st is to transition to targeted color, 2nd is to come back.
         usedAnimationLength = animationLength / 2;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //when we are in the first half of animation, lerp towards color.
         if (isFoward)
         {
             if (currentTime <= usedAnimationLength)
@@ -37,6 +40,7 @@ public class PulseAnimateMaterial : StateMachineBehaviour
                 currentTime = 0;
             }
         }
+        //when we are in the last half of animation, lerp towards original color.
         else
         {
             currentTime += Time.deltaTime;
@@ -47,8 +51,6 @@ public class PulseAnimateMaterial : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log(animator.gameObject);
-        //StatusController.Instance.ResetSearchPathwayHighlights();
-        //animator.GetComponent<Renderer>().material.SetColor("_WiggleColor", StartColor);
+        //NO-OP: The text is reset via trigger in ResetColor.
     }
 }

@@ -11,9 +11,6 @@ public class SearchResultAnimationButtonLogic : MonoBehaviour, IPointerEnterHand
     public Sprite clickColor;
     private Image image;
 
-    //TODO do we need this?  probably?
-    public PathwaySO pathwaySO;
-    public Card dataSO;
     public List<ScriptableObject> listOfOrderedSO;
 
     // Start is called before the first frame update
@@ -23,21 +20,12 @@ public class SearchResultAnimationButtonLogic : MonoBehaviour, IPointerEnterHand
         Button button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(() =>
         {
-            //AlertHighlightSystem(pathwaySO);
-
             OnClickHandler();
             OnClickColourChange();
-            //UpdateUI();
             //ButtonFactory.Instance.UpdateAllButtonOnClick(); //TODO probably tell other animations to stop here? update other button states?
         });
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
     public void OnClickHandler()
     {
         //Animate the search results

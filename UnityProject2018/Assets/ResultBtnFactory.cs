@@ -89,35 +89,23 @@ public class ResultBtnFactory : MonoBehaviour
         return generated;
     }
 
+    /// <summary>
+    /// Generates a button that represents a single animation to be played for a pathway search.
+    /// The list input (path) is in order.
+    /// </summary>
+    /// <param name="n"> the # representing which set of results </param>
+    /// <param name="path"> the list of SO (Nodes or Edges) that matches the search parameters </param>
     GameObject GenerateSearchResultAnimateBtn(int n, List<ScriptableObject> path)
     {
         GameObject generated = InitAnimationButtonAndSetPosition();
-        //SetBtnText(n, path, generated);
 
         //create a new PathwaySO and fill it with edges and nodes
-        //TODO we are doing this twice!!!
-        //TODO do we need this?
         PathwaySO pathway = PathwaySO.CreateAndFillPathway(n, path);
         pathway.FillLists();
 
-        //assign the pathway we just created (with it's resulting nodes and edges)
-        //TODO do we need this??
-        generated.GetComponent<SearchResultAnimationButtonLogic>().pathwaySO = pathway;
-
+        //assign the ordered list of SO (so we know the order of objects to animate)
         generated.GetComponent<SearchResultAnimationButtonLogic>().listOfOrderedSO = path;
 
-        //generated.GetComponent<SearchResultAnimationButtonLogic>().bounds = listOfBoundsFromSearch;
-
-        //if (listOfBoundsFromSearch.Count != 0)
-        //{
-        //    FocusController.Instance.UpdateFocus(listOfBoundsFromSearch);
-        //}
-
-        //Highlight manager needs to knows about this 'pathway'
-        //StatusController.Instance.AddPathwayToHighlight(pathway, true);
-
-        //fill it with placeholder data for the side card.  Ex: "SearchResult 1" "SR QID" "Search Result Description".
-        //generated.GetComponent<PathwayButtonLogic>().dataSO = dataSO;
         return generated;
     }
 
@@ -129,32 +117,29 @@ public class ResultBtnFactory : MonoBehaviour
         //childText.text += " via " + path[path.Count / 2].name; 
     }
 
-    //TODO UI Offsets are very confusing
-    //LEFT -125, RIGHT 0
+    /// <summary>
+    /// Creates 'search result' button until UI/UX comes up with a better option.  
+    /// Placeholder buttons until UI/UX comes up with a better option. 
+    /// </summary>
     private GameObject InitButtonAndSetPosition()
     {
         GameObject generated = Instantiate(buttonPrefab, transform);
         RectTransform rect = generated.GetComponent<RectTransform>();
-        //rect.anchoredPosition = new Vector3(buttonX, currentButtonY, 0);
         rect.offsetMin = new Vector2(-125, currentButtonY);
         rect.offsetMax = new Vector2(30, currentButtonY + 50);
         return generated;
     }
 
-    //TODO fixed x value?
-    //LEFT 0, RIGHT -125
+    /// <summary>
+    /// Creates'play animation' button for a search result
+    /// Placeholder buttons until UI/UX comes up with a better option.  
+    /// </summary>
     private GameObject InitAnimationButtonAndSetPosition()
     {
         GameObject generated = Instantiate(searchButtonAnimationPrefab, transform);
         RectTransform rect = generated.GetComponent<RectTransform>();
-        //rect.anchoredPosition = new Vector3(buttonX, currentButtonY, 0);
         rect.offsetMin = new Vector2(30, currentButtonY);
         rect.offsetMax = new Vector2(125, currentButtonY + 50);
-
-        //TODO move somewhere else
-        //Text childText = generated.GetComponentInChildren<Text>();
-        //childText.text = "Animate";
-
         return generated;
     }
 }

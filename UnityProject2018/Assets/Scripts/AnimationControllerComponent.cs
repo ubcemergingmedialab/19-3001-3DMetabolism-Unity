@@ -58,9 +58,7 @@ public class AnimationControllerComponent : MonoBehaviour
     }
 
     /// <summary>
-    /// Stops all animations
-    /// Clears the queue from animations
-    /// Waits for a period of time
+    /// Stops animation coroutine, tells the nodes/edges to play the 'Reset' trigger, then clears the queue from animations
     /// </summary>
     public void StopAllAnimations()
     {
@@ -72,6 +70,8 @@ public class AnimationControllerComponent : MonoBehaviour
             {
                 foreach (string name in animation.AnimatedObjects)
                 {
+                    //TODO generally don't want to call GO.find.  Better to cache the GO somewhere everytime we load.
+                    //in this case it might be fine because it generally only gets called once? (To stop a specific animation).
                     GameObject curGO = GameObject.Find(name);
                     if (curGO != null)
                     {
@@ -83,14 +83,39 @@ public class AnimationControllerComponent : MonoBehaviour
                     }
                 }
             }
-
             animations.Clear();
         }
     }
 
     /// <summary>
+    /// Casts into a NodeSO object to get the label (name of the game object) and the trigger (name of the animation trigger)
+    /// </summary>
+    /// <param name="ad">The animation description to define the set of animations.
+    /// <param name="so">The scriptable object from the search result.
+    /// <param name="triggerName">The name of the trigger/animation clip.
+    private void AddNodeToAnimationDescription(AnimationDescription ad, ScriptableObject so, string triggerName)
+    {
+        NodeSO nodeSo = (NodeSO)so;
+        ad.AnimatedObjects.Add(nodeSo.Label);
+        ad.TriggerToSet.Add(triggerName);
+    }
+
+    /// <summary>
+    /// Casts into a EdgeSO object to get the Enzyme (name of the game object) and the trigger (name of the animation trigger)
+    /// </summary>
+    /// <param name="ad">The animation description to define the set of animations.
+    /// <param name="so">The scriptable object from the search result.
+    /// <param name="triggerName">The name of the trigger/animation clip.
+    private void AddEdgeToAnimationDescription(AnimationDescription ad, ScriptableObject so, string triggerName)
+    {
+        EdgeSO edgeSo = (EdgeSO)so;
+        ad.AnimatedObjects.Add(edgeSo.Enzyme);
+        ad.TriggerToSet.Add(triggerName);
+    }
+
+    /// <summary>
     /// Animates each ordered item from start to finish.
-    /// -Stops existing animations / coroutines
+    /// -Stops existing animation coroutine
     /// -Pulses the start and end node before it loops through
     /// </summary>
     /// <param name="list">list of ordered scriptable objects to be animated
@@ -98,8 +123,7 @@ public class AnimationControllerComponent : MonoBehaviour
     {
         StopAllAnimations();
 
-        //TODO refactor this 
-        //pulse the start and end node 'x' times
+        //'Pulse' the starting and end nodes 'x' times.
         for (int i = 0; i < timesToPulseStartAndEndNodes; i++)
         {
             AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
@@ -109,15 +133,8 @@ public class AnimationControllerComponent : MonoBehaviour
             ScriptableObject startNodeSO = list[0];
             ScriptableObject endNodeSO = list[list.Count - 1];
 
-            NodeSO start = (NodeSO)startNodeSO;
-            NodeSO end = (NodeSO)endNodeSO;
-
-            ad.AnimatedObjects.Add(start.Label);
-            ad.TriggerToSet.Add("Flash");
-
-            ad.AnimatedObjects.Add(end.Label);
-            ad.TriggerToSet.Add("Flash");
-
+            AddNodeToAnimationDescription(ad, startNodeSO, "Flash");
+            AddNodeToAnimationDescription(ad, endNodeSO, "Flash");
             animations.Add(ad);
         }
 
@@ -131,18 +148,11 @@ public class AnimationControllerComponent : MonoBehaviour
             //add this node to the pathway if it is a node
             if (so.GetType() == typeof(NodeSO))
             {
-                NodeSO nodeSO = (NodeSO)so;
-                ad.AnimatedObjects.Add(nodeSO.Label);
-                ad.TriggerToSet.Add("Pulse");
-                //ad.TriggerToSet.Add("PulseMaterialText");
+                AddNodeToAnimationDescription(ad, so, "Pulse");
             }
             else if (so.GetType() == typeof(EdgeSO))
             {
-                EdgeSO edgeSO = (EdgeSO)so;
-
-                //name of the physical node
-                ad.AnimatedObjects.Add(edgeSO.Enzyme);
-                ad.TriggerToSet.Add("Pulse");
+                AddEdgeToAnimationDescription(ad, so, "Pulse");
             }
             else
             {
@@ -152,7 +162,8 @@ public class AnimationControllerComponent : MonoBehaviour
             //add it
             animations.Add(ad);
         }
-
+        
+        //Start the animation
         animationRoutine = StartCoroutine("PlayAnimations");
     }
 
@@ -244,19 +255,9 @@ public class AnimationControllerComponent : MonoBehaviour
                 if (gameObjectAnimator != null)
                 {
                     gameObjectAnimator.Play("Idle");
-                    //gameObjectAnimator.StopPlayback();
-                    //gameObjectAnimator.Play("Reset");
                 }
             }
         }
-        /*
-        foreach(Animator anim in transform.GetComponentsInChildren<Animator>(true))
-        {
-            if(anim.gameObject.activeSelf)
-            {
-                anim.Play("Idle");
-            }
-        }*/
     }
 
     /// <summary>

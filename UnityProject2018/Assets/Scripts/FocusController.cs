@@ -33,9 +33,8 @@ public class FocusController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    //TODO 
     //Create new UpdateFocus() method public that
-    //takes in bounds (they come from the renderer component) then pass it in to the clicklisten (see updatefocus for ex).
+    //takes in bounds (can come from the renderer component) then pass it in to the clicklisten. See UpdateFocus() for ex.
     //this will focus the camera to the resulting elements of the search results (rather than an entire pathway)
     public void UpdateFocus(List<Bounds> boundsList)
     {

@@ -28,14 +28,12 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
             UpdateUI();
             ButtonFactory.Instance.UpdateAllButtonOnClick();
         });
-
     }
 
 
     public void UpdateUI()
     {
-        //TODO??dowweneed
-        //TODO do we need this?
+        //Stops all animations.
         AnimationControllerComponent.Instance.StopAllAnimations();
 
         dataSO.Label = pathwaySO.Label;
@@ -47,8 +45,6 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
 
         //Update strategy here.  We only want to show the relevent text labels from search.
         NodeTextDisplay.Instance.ChangeFilterValue(0);
-
-
     }
 
     void AlertHighlightSystem(PathwaySO pathway)
