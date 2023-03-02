@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NodeTextDisplay : MonoBehaviour
 {
+    //the Show all label toggle.
+    public Toggle toggle;
 
     private static NodeTextDisplay _instance;
     public static NodeTextDisplay Instance
@@ -68,6 +71,7 @@ public class NodeTextDisplay : MonoBehaviour
         } else {
             ChangeStrategy(filterValue);
         }
+        UpdateToggleDisplay();
     }
     public void ChangeFilterValue(int value) {
         filterValue = value;
@@ -76,5 +80,10 @@ public class NodeTextDisplay : MonoBehaviour
         } else {
             ChangeStrategy(filterValue);
         }
+    }
+
+    private void UpdateToggleDisplay()
+    {
+        toggle.isOn = allValue;
     }
 }

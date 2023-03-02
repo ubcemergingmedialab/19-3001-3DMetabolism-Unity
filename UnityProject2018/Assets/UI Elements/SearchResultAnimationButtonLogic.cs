@@ -22,8 +22,15 @@ public class SearchResultAnimationButtonLogic : MonoBehaviour, IPointerEnterHand
         {
             OnClickHandler();
             OnClickColourChange();
+            UpdateUI();
             //ButtonFactory.Instance.UpdateAllButtonOnClick(); //TODO probably tell other animations to stop here? update other button states?
         });
+    }
+
+    public void UpdateUI()
+    {
+        //Set all labels to show = false.  The animation script will show the labels.
+        NodeTextDisplay.Instance.ChangeAllValue(false);
     }
 
     public void OnClickHandler()
