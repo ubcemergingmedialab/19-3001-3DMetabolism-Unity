@@ -13,7 +13,8 @@ A visualization of the Metabolic that leverages the third dimension and Unity an
 
 | Asset | Purpose |
 | ------ | ------ |
-| CleanNetwork.fbx | A static implementation of our network on Glycolysis and Gluconeogenesis |
+| CleanNetwork.fbx | A static implementation of our network on Glycolysis and Gluconeogenesis | |
+| Green Arrow sprite | Arrow-up icons created by lutfix for enzyme directions | https://www.flaticon.com/free-icons/arrow-up |
 
 ## Prerequisites
 1. Unity 2020.3.7f
