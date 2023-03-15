@@ -51,6 +51,10 @@ public class PulseAnimateMaterial : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //NO-OP: The text is reset via trigger in ResetColor.
+        //TODO: This calls to update every single pathway to update their material color to the correct state,
+        //which isn't very good in performance.
+        //we are using Status Controller to do the work for us to set to the correct color because this StateMachineBehaviour doesn't know
+        //what the correct color is at that given point in time when we exit.  If we start at blue OnStateEnter, the correct color could be yellow OnStateExit.
+        StatusController.Instance.ResetSearchPathwayHighlights();
     }
 }
