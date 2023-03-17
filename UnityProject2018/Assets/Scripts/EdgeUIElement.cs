@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 /// </summary>
 public class EdgeUIElement : UIElement
 {
-    public Text LabelText;
+    public TextMeshProUGUI LabelText;
     public Text DescriptionText;
     public Text QIDText;
     public Text EnzymeClassText;
