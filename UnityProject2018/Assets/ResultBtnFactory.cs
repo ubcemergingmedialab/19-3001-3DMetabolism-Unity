@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -112,7 +113,7 @@ public class ResultBtnFactory : MonoBehaviour
     private static void SetBtnText
         (int n, List<ScriptableObject> path, GameObject generated)
     {
-        Text childText = generated.GetComponentInChildren<Text>();
+        TextMeshProUGUI childText = generated.GetComponentInChildren<TextMeshProUGUI>();
         childText.text = "Path " + n;
         //childText.text += " via " + path[path.Count / 2].name; 
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,7 +48,7 @@ public class ButtonFactory : MonoBehaviour
     }
 
 
-        void Start()
+    void Start()
     {
         ActivePathways = new List<PathwaySO>(StatusController.Instance.activePathways);
         FavouriteButtonFactory ff = FavouriteButtonFactory.Instance;
@@ -74,8 +75,8 @@ public class ButtonFactory : MonoBehaviour
     private static void SetButtonTextFromPathway
         (PathwaySO pathway, GameObject generated)
     {
-        Text childText = generated.GetComponentInChildren<Text>();
-        childText.text = pathway.Label;
+        TextMeshProUGUI tmp = generated.GetComponentInChildren<TextMeshProUGUI>();
+        tmp.text = pathway.Label;
     }
 
     private GameObject GenerateButtonAndSetPosition()
@@ -89,7 +90,7 @@ public class ButtonFactory : MonoBehaviour
     public void UpdateAllButtonOnClick()
     {
         // ensure that only one button appears yellow
-        foreach(GameObject button in buttons.Keys)
+        foreach (GameObject button in buttons.Keys)
         {
             PathwayButtonLogic pathwayButtonLogic = button.GetComponent<PathwayButtonLogic>();
             pathwayButtonLogic.OnClickColourChange(pathwayButtonLogic.FindPathwayState(buttons[button]));
