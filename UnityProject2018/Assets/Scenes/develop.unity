@@ -11264,6 +11264,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4543190281464636161}
     m_Modifications:
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11557331}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIPresenter, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 622667564685308601, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1274335102665175223, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_SizeDelta.x
