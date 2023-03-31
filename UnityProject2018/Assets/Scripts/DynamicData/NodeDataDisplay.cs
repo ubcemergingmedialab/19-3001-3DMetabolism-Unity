@@ -13,8 +13,12 @@ public class NodeDataDisplay : MonoBehaviour
     public TextMeshPro labelText;
     public Card DisplayData;
 
+    private List<string> blackListedList;
+
     void Start()
     {
+        //Gets a list of strings that we don't want to show in labels
+        blackListedList = Constants.GetBlackListedLabels();
     }
 
     private void OnEnable()
@@ -27,12 +31,13 @@ public class NodeDataDisplay : MonoBehaviour
         MaintainLabelText();
     }
 
+
     /// <summary>
     /// 
     /// </summary>
     private void InitializeLabelText()
     {
-        if(nodeData != null)
+        if (nodeData != null)
         {
             Vector3 localPosition = labelText.transform.localPosition;
             labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
@@ -41,11 +46,29 @@ public class NodeDataDisplay : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the node label to a specific string.
+    /// TODO - is it necessary to call this on every update for every single node? (seems overkill and inefficient).
+    /// </summary>
     private void MaintainLabelText()
     {
-        if(nodeData != null)
+        bool blackListedCharsFound = false;
+        if (nodeData != null)
         {
-            labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            foreach (string blackListedChar in blackListedList)
+            {
+                if (nodeData.Label.Contains(blackListedChar))
+                {
+                    blackListedCharsFound = true;
+                    labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
+                }
+            }
+
+            //if we found a blacklisted char, we don't need to render labelText again
+            if (!blackListedCharsFound)
+            {
+                labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            }
         }
     }
 
@@ -85,7 +108,7 @@ public class NodeDataDisplay : MonoBehaviour
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI, false);
         else Debug.Log("Error in callin NodeUI list");
         DisplayData.link = nodeData.link;
-        DisplayData.CID = nodeData.CID; 
-    }   
-}  
+        DisplayData.CID = nodeData.CID;
+    }
+}
 
