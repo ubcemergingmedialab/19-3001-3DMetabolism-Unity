@@ -50,32 +50,27 @@ In the project, go to File -> Build And Run.
 1. Instructions for public contributions here
 2. Create a wiki page if this is long
 
-## Team
-
 ### Faculty:
 Dr. Lindsay Rogers
 
 ### Current EML Team:
-
+- Fredrick - Lead Developer
+- Mohsen - Developer / Consultant
+- Reva - Designer
+- Kenneth - Content expert
+- Farida - Content expert
+### winter 2023 Team:
 - Rayyan - Project Lead / Content Team
 - Mohsen- Developer / Consultant
 - Jiho- Designer
 - Robert- Developer
 - Ella - Content Team
+### Preivous team members:
+Rayyan Saiyed, Dante Cerron, Robert Shum, Ella Gray, Jiho Kim, Nikko Dumrique,
+Joshua Yoon, Michael O'keefe, Tom Tao, Kim Nipp, Hai Lin, Rosaline Beak,
+Jenn, Courtney, Daisy ye, 
 
-### Spring 2021 Team:
-- Dante - Lead
-- Nikko - Developer
-- Hai Lin - Developer
-- Jenn - Designer
-- Kim - Designer
 
-### Fall 2020 Team:
-- Courtney - Lead/Designer
-- Kim - Designer
-- Dante - Developer
-- Nikko - Developer
-- Hai Lin - Developer
 
 ## Documentation
 For documentation, please visit the UBC Wiki for this repository (this wiki talks about a past Aframe version): 
