@@ -50,14 +50,15 @@ public class DragToRotate : MonoBehaviour
         if (isDragging)
         {
             mPosDelta = Input.mousePosition - mPrevPos;
-            if (Vector3.Dot(transform.up, Vector3.up) >= 0)
-            {
-                transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
-            }
-            else
-            {
-                transform.Rotate(transform.up, Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
-            }
+
+
+
+            float horizontalRotation = -mPosDelta.x;
+            float verticalRotation = mPosDelta.y;
+
+            transform.Rotate(Vector3.up, horizontalRotation, Space.World);
+            transform.Rotate(Vector3.right, verticalRotation, Space.World);
+
         }
 
 
