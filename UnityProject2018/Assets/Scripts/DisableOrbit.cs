@@ -24,11 +24,11 @@ public class DisableOrbit : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData pointerEventData){
         //Debug.Log("Mouse Entered");
-        MouseOrbit.Instance.SetDisableOrbit(true);
+        //MouseOrbit.Instance.SetIsOrbiting(false);
     }
 
     public void OnPointerExit(PointerEventData pointerEventData){
         //Debug.Log("Mouse Exited");
-        MouseOrbit.Instance.SetDisableOrbit(false);
+        //MouseOrbit.Instance.SetIsOrbiting(true);
     }
 }

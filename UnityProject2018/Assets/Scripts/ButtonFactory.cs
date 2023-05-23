@@ -77,6 +77,7 @@ public class ButtonFactory : MonoBehaviour
     {
         TextMeshProUGUI tmp = generated.GetComponentInChildren<TextMeshProUGUI>();
         tmp.text = pathway.Label;
+        tmp.fontSize = 16;
     }
 
     private GameObject GenerateButtonAndSetPosition()

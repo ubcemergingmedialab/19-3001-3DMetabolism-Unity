@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
 public class MouseOrbit : MonoBehaviour
@@ -34,15 +35,17 @@ public class MouseOrbit : MonoBehaviour
     private Rigidbody rigidbody;
     private bool needsUpdate = false;
 
-    private bool disableOrbit = false; 
-
+    private bool _isOrbiting = true;
+    private bool _canOrbit = true;
+    private bool _clickedOnUIFirst = false;
+    
     float x = 0.0f;
     float y = 0.0f;
 
     // Use this for initialization
     void Awake()
-    {   
-        if (_instance != null && _instance != this) 
+    {
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
             return;
@@ -51,7 +54,8 @@ public class MouseOrbit : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    void Start(){
+    void Start()
+    {
         Vector3 angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;
@@ -72,8 +76,21 @@ public class MouseOrbit : MonoBehaviour
         Vector3 negDistance;
         Vector3 position;
 
-        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) && !disableOrbit) // in case a mouse event happens
+        if (!_canOrbit)
+            return;
+
+        if (Input.GetMouseButtonDown(0))
+            if (IsPointerOverNamedUIElements())
+            {
+                _clickedOnUIFirst = true;
+                return;
+            }
+
+        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) && _isOrbiting) // in case a mouse event happens
         {
+            if (_clickedOnUIFirst)
+                return;
+
             if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
             {
                 x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
@@ -92,19 +109,25 @@ public class MouseOrbit : MonoBehaviour
                 transform.rotation = rotation;
                 transform.position = position;
 
-                if(distance >= scaleThreshhold && isLines == false)
+                if (distance >= scaleThreshhold && isLines == false)
                 {
                     isLines = true;
-                } else if(distance > scaleThreshhold && isLines == true)
+                }
+                else if (distance > scaleThreshhold && isLines == true)
                 {
                     isLines = false;
                 }
                 needsUpdate = false;
-            
-                }
+
+            }
+        }
+        else if (!target && Input.GetButton("Fire1"))
+        {
+            SetIsOrbiting(true);
         }
 
-        if (needsUpdate) {                                              // only when update is needed, update the distance                
+        if (needsUpdate)
+        {                                              // only when update is needed, update the distance                
             needsUpdate = false;
             distance = Mathf.Clamp(distance, distanceMin, distanceMax);
             rotation = Quaternion.Euler(y, x, 0);
@@ -116,13 +139,20 @@ public class MouseOrbit : MonoBehaviour
 
             distance = Mathf.Clamp(distance, distanceMin, distanceMax);
 
-            if(distance >= scaleThreshhold && isLines == false)
+            if (distance >= scaleThreshhold && isLines == false)
             {
                 isLines = true;
-            } else if(distance > scaleThreshhold && isLines == true)
+            }
+            else if (distance > scaleThreshhold && isLines == true)
             {
                 isLines = false;
             }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            _clickedOnUIFirst = false;
+            SetIsOrbiting(true);
         }
     }
 
@@ -137,7 +167,7 @@ public class MouseOrbit : MonoBehaviour
 
     public void ChangeFocus(Transform newTarget)
     {
-        
+
         target = newTarget;
         distance = defaultDistance;
         needsUpdate = true;
@@ -149,11 +179,51 @@ public class MouseOrbit : MonoBehaviour
         needsUpdate = true;
     }
 
-    public void SetDisableOrbit(bool boolean)
+    public void SetIsOrbiting(bool boolean)
     {
-        disableOrbit = boolean;
+        _isOrbiting = boolean;
     }
 
-    public void TestDebugLog () {
-        Debug.Log("BUtton pressed!"); }
+    public void SetCanOrbit(bool canOrbit)
+    {
+        this._canOrbit = canOrbit;
+    }
+
+    public bool IsOrbiting()
+    {
+        return _isOrbiting;
+    }
+
+    public void TestDebugLog()
+    {
+        Debug.Log("BUtton pressed!");
+    }
+
+    /// <summary>
+    /// Checks if mouse is over certain UI elements
+    /// </summary>
+    /// <param name="raycastResults"></param>
+    /// <returns></returns>
+    private bool IsPointerOverNamedUIElements()
+    {
+        List<RaycastResult> raycastResults = GetEventSystemRaycastResults();
+        //"Compound Controller Image"
+        for (int index = 0; index < raycastResults.Count; index++)
+        {
+            RaycastResult curRaysastResult = raycastResults[index];
+            if (curRaysastResult.gameObject.name.Contains("Menu") || curRaysastResult.gameObject.name.Contains("EdgeUI") || curRaysastResult.gameObject.name.Contains("PathwayUI") || curRaysastResult.gameObject.name.Contains("NodeUI"))
+                return true;
+        }
+        return false;
+    }
+
+    // Gets all event system raycast results of current mouse or touch position.
+    static List<RaycastResult> GetEventSystemRaycastResults()
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> raysastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, raysastResults);
+        return raysastResults;
+    }
 }

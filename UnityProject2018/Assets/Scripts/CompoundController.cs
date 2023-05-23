@@ -9,6 +9,7 @@ public class CompoundController : MonoBehaviour
 {
     public ScriptableObject DataReference;
     public int CID;        // Pubchem Compound ID  (241 = Benzene, our test atom)
+    public ScrollRect parentScrollView;
     private string jsonURL;         // The basic URL for Pubchem compounds
 
     // Start is called before the first frame update
@@ -18,11 +19,11 @@ public class CompoundController : MonoBehaviour
     }
 
     void Update(){
-        CID = int.Parse(((Card)DataReference).CID);
+        //CID = int.Parse(((Card)DataReference).CID);
     }
     void OnEnable()
     {
-        StartCoroutine(loadCompound(CID));
+        StartCoroutine(loadCompound());
     }
 
     // From https://answers.unity.com/questions/21174/create-cylinder-primitive-between-2-endpoints.html, translated hastily from UnityScript
@@ -59,13 +60,20 @@ public class CompoundController : MonoBehaviour
     }
 
     // Follow Object.Instantiate() format as closely as possible.
-    public IEnumerator loadCompound(int compoundCID, Vector3 compoundPosition = default(Vector3), Quaternion compoundRotation = default(Quaternion), Transform compoundParent = null) {
+    public IEnumerator loadCompound(Vector3 compoundPosition = default(Vector3), Quaternion compoundRotation = default(Quaternion), Transform compoundParent = null) {
         //if there are any, delete children before adding another compound
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
         }
-        string jsonURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/" + compoundCID + "/record/JSON/?record_type=3d&response_type=display";
+
+        // This solves the issue of the CID being incorrect when loading the compound
+        CID = int.Parse(((Card)DataReference).CID);
+
+        while (CID < 0)
+            yield return new WaitForSeconds(0.1f);
+
+        string jsonURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/" + CID + "/record/JSON/?record_type=3d&response_type=display";
         string compoundJSON = ""; 
         // Get JSON
         using (UnityWebRequest webRequest = UnityWebRequest.Get(jsonURL))
@@ -100,7 +108,7 @@ public class CompoundController : MonoBehaviour
             if (atomObj == null)
             {
                 atomObj = (GameObject)Resources.Load("Prefabs/atomMissing");
-                Debug.Log("Can't Find Prefabs/atom" + atomElement);
+                //Debug.Log("Can't Find Prefabs/atom" + atomElement);
             }
             atomObj.layer = 5; //UI Layer
             GameObject instantiated = Instantiate(atomObj, new Vector3(atomX, atomY, atomZ), Quaternion.identity);

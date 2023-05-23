@@ -104,11 +104,11 @@ public class NodeDataDisplay : MonoBehaviour
         DisplayData.IUPACNames = nodeData.IUPACNames;
         DisplayData.Pubchemlink = nodeData.Pubchemlink;
         DisplayData.StructuralDescription = nodeData.StructuralDescription;
+        DisplayData.link = nodeData.link;
+        DisplayData.CID = nodeData.CID;
         if (UIPresenter.UIList.NodeUI != null)
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI, false);
         else Debug.Log("Error in callin NodeUI list");
-        DisplayData.link = nodeData.link;
-        DisplayData.CID = nodeData.CID;
     }
 }
 
