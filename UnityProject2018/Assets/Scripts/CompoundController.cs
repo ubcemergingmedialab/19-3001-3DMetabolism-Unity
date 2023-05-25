@@ -71,7 +71,10 @@ public class CompoundController : MonoBehaviour
         CID = int.Parse(((Card)DataReference).CID);
 
         while (CID < 0)
+        {
             yield return new WaitForSeconds(0.1f);
+            CID = int.Parse(((Card)DataReference).CID);
+        }
 
         string jsonURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/" + CID + "/record/JSON/?record_type=3d&response_type=display";
         string compoundJSON = ""; 
