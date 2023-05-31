@@ -64,7 +64,7 @@ public class ClickListen : MonoBehaviour
     {
         isMoving = true;
 
-        while(isMoving)
+        while (isMoving)
         {
             yield return new WaitForSeconds(totalTime / moveSplit);
             network.transform.position += chunk;

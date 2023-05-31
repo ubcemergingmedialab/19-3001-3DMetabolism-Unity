@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using TMPro;
+using System.Linq;
 
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
 public class MouseOrbit : MonoBehaviour
@@ -13,6 +15,7 @@ public class MouseOrbit : MonoBehaviour
         get { return _instance; }
     }
     public Transform target;
+    public GameObject targetInFocus;
     public float distance = 5.0f;
     public float defaultDistance = 13.0f;
     public float xSpeed = 120.0f;
@@ -42,6 +45,8 @@ public class MouseOrbit : MonoBehaviour
     float x = 0.0f;
     float y = 0.0f;
 
+    public CameraLabelController cameraLabelController;
+
     // Use this for initialization
     void Awake()
     {
@@ -52,6 +57,9 @@ public class MouseOrbit : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        
+
     }
 
     void Start()
@@ -66,8 +74,9 @@ public class MouseOrbit : MonoBehaviour
         if (rigidbody != null)
         {
             rigidbody.freezeRotation = true;
-        }
+        }       
     }
+        
 
 
     void LateUpdate()
@@ -75,6 +84,7 @@ public class MouseOrbit : MonoBehaviour
         Quaternion rotation;
         Vector3 negDistance;
         Vector3 position;
+
 
         if (!_canOrbit)
             return;
@@ -85,6 +95,9 @@ public class MouseOrbit : MonoBehaviour
                 _clickedOnUIFirst = true;
                 return;
             }
+
+
+        
 
         if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) && _isOrbiting) // in case a mouse event happens
         {
@@ -198,6 +211,7 @@ public class MouseOrbit : MonoBehaviour
     {
         Debug.Log("BUtton pressed!");
     }
+
 
     /// <summary>
     /// Checks if mouse is over certain UI elements

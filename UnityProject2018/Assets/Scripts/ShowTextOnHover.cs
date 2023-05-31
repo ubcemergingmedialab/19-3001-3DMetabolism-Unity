@@ -7,6 +7,7 @@ public class ShowTextOnHover : MonoBehaviour
 {
 
     public TextMeshPro text;
+    public bool isShowingText = false;
     private Color originalColor;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class ShowTextOnHover : MonoBehaviour
         if(text != null)
         {
             originalColor = text.color;
+            isShowingText = true;
             text.color = new Color(1, 1, 1, 1);
         }
     }
@@ -38,6 +40,7 @@ public class ShowTextOnHover : MonoBehaviour
         // change color back to original
         if(text != null)
         {
+            isShowingText = false;
             text.color = originalColor;
         }
     }
