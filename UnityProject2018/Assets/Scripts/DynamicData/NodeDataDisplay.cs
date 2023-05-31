@@ -52,6 +52,16 @@ public class NodeDataDisplay : MonoBehaviour
     /// </summary>
     private void MaintainLabelText()
     {
+        // Check if text is currently showing from hovering mouse over object
+        if (GetComponent<ShowTextOnHover>())
+        {
+            if (GetComponent<ShowTextOnHover>().isShowingText)
+            {
+                // If text is showing and this target is not the main focus right now, return
+                if (MouseOrbit.Instance.targetInFocus != gameObject)
+                return;
+            }
+        }
         bool blackListedCharsFound = false;
         if (nodeData != null)
         {
@@ -69,6 +79,24 @@ public class NodeDataDisplay : MonoBehaviour
             {
                 labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
             }
+
+            // Calculate multiplier based on object distance to main camera
+            float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
+
+            // Perform fontsize and transparency calculations
+            if (MouseOrbit.Instance.targetInFocus == gameObject)
+            {
+                distanceToCameraMultiplier = 1;
+                labelText.alpha = distanceToCameraMultiplier;
+                labelText.fontSize = 36.0f * distanceToCameraMultiplier;
+            }
+            else
+            {
+                labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
+                labelText.fontSize = 32.0f * distanceToCameraMultiplier;
+            }
+            
+            
         }
     }
 
@@ -96,6 +124,8 @@ public class NodeDataDisplay : MonoBehaviour
 
     public void UpdateScriptableObject()
     {
+
+        MouseOrbit.Instance.targetInFocus = gameObject;
         DisplayData.Label = nodeData.Label;
         DisplayData.QID = nodeData.QID;
         DisplayData.Description = nodeData.Description;
@@ -109,6 +139,8 @@ public class NodeDataDisplay : MonoBehaviour
         if (UIPresenter.UIList.NodeUI != null)
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.NodeUI, false);
         else Debug.Log("Error in callin NodeUI list");
+
+
     }
 }
 
