@@ -24,7 +24,7 @@ public class MouseOrbit : MonoBehaviour
     public float yMinLimit = -20f;
     public float yMaxLimit = 80f;
 
-    public float dragSpeed = 1.5f;
+    public float dragSpeed = 1f;
     public float rotationSpeed = 2f;
     public float zoomSpeed = 100f;
     public float distanceMin = .5f;
@@ -164,7 +164,7 @@ public class MouseOrbit : MonoBehaviour
         if (scrollWheel != 0 && !IsPointerOverNamedUIElements())
         {
             // Calculate zoom amount
-            float zoomAmount = scrollWheel * zoomSpeed;
+            float zoomAmount = -scrollWheel * zoomSpeed;
 
             // Calculate new zoom position
             Vector3 zoomPosition = transform.position + transform.forward * zoomAmount;
