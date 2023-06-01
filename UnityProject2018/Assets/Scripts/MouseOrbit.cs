@@ -144,13 +144,13 @@ public class MouseOrbit : MonoBehaviour
         {
             Vector3 deltaMousePosY = Input.mousePosition - prevMousePosY;
             // Calculate rotation around the X axis and rotate
-            float rotationX = deltaMousePosY.y * rotationSpeed * Time.deltaTime;
+            float rotationX = -deltaMousePosY.y * rotationSpeed * Time.deltaTime;
             transform.Rotate(Vector3.right, rotationX, Space.Self);
 
             Vector3 deltaMousePosX = Input.mousePosition - prevMousePosX;
 
             // Calculate rotation around the Y axis and rotate
-            float rotationY = -deltaMousePosX.x * rotationSpeed * Time.deltaTime;
+            float rotationY = deltaMousePosX.x * rotationSpeed * Time.deltaTime;
             transform.Rotate(Vector3.up, rotationY, Space.World);
 
             // Update previous mouse position
