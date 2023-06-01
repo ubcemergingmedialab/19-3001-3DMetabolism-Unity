@@ -24,8 +24,11 @@ public class MouseOrbit : MonoBehaviour
     public float yMinLimit = -20f;
     public float yMaxLimit = 80f;
 
+    public float dragSpeed = 1.5f;
+    public float rotationSpeed = 2f;
+    public float zoomSpeed = 100f;
     public float distanceMin = .5f;
-    public float distanceMax = 15f;
+    public float distanceMax = 35f;
 
     public float scaleSpeed = 0.1f;
     public float scaleMin = 0.001f;
@@ -36,12 +39,19 @@ public class MouseOrbit : MonoBehaviour
     private bool isLines = false;
 
     private Rigidbody rigidbody;
-    private bool needsUpdate = false;
+    private Vector3 prevMousePos;
+    private Vector3 prevMousePosY;
+    private Vector3 prevMousePosX;
 
+    private bool needsUpdate = false;
     private bool _isOrbiting = true;
     private bool _canOrbit = true;
     private bool _clickedOnUIFirst = false;
-    
+
+    private bool _isDragging = false;
+    private bool _isRotating = false;
+
+
     float x = 0.0f;
     float y = 0.0f;
 
@@ -80,93 +90,94 @@ public class MouseOrbit : MonoBehaviour
 
 
     void LateUpdate()
-    {
-        Quaternion rotation;
-        Vector3 negDistance;
-        Vector3 position;
-
-
+    { 
         if (!_canOrbit)
             return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(2))
             if (IsPointerOverNamedUIElements())
             {
                 _clickedOnUIFirst = true;
                 return;
             }
 
-
-        
-
-        if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) && _isOrbiting) // in case a mouse event happens
+        // check if the scroll wheel is pressed to drag
+        else if (Input.GetMouseButtonDown(2))
         {
-            if (_clickedOnUIFirst)
-                return;
-
-            if (target && (Input.GetButton("Fire1") || Input.mouseScrollDelta.y != 0) || needsUpdate)
-            {
-                x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-                y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-
-                y = ClampAngle(y, yMinLimit, yMaxLimit);
-
-                rotation = Quaternion.Euler(y, x, 0);
-
-                distance = Mathf.Clamp(distance, distanceMin, distanceMax);
-
-                distance -= Input.GetAxis("Mouse ScrollWheel") * scaleSpeed;
-                negDistance = new Vector3(0.0f, 0.0f, -distance);
-                position = rotation * negDistance + target.position;
-
-                transform.rotation = rotation;
-                transform.position = position;
-
-                if (distance >= scaleThreshhold && isLines == false)
-                {
-                    isLines = true;
-                }
-                else if (distance > scaleThreshhold && isLines == true)
-                {
-                    isLines = false;
-                }
-                needsUpdate = false;
-
-            }
+            _isDragging = true;
+            prevMousePos = Input.mousePosition;
         }
-        else if (!target && Input.GetButton("Fire1"))
+
+        if (Input.GetMouseButtonUp(2))
         {
-            SetIsOrbiting(true);
+            _isDragging = false;
         }
 
-        if (needsUpdate)
-        {                                              // only when update is needed, update the distance                
-            needsUpdate = false;
-            distance = Mathf.Clamp(distance, distanceMin, distanceMax);
-            rotation = Quaternion.Euler(y, x, 0);
-            negDistance = new Vector3(0.0f, 0.0f, -distance);
-            position = rotation * negDistance + target.position;
-
-            transform.rotation = rotation;
-            transform.position = position;
-
-            distance = Mathf.Clamp(distance, distanceMin, distanceMax);
-
-            if (distance >= scaleThreshhold && isLines == false)
-            {
-                isLines = true;
-            }
-            else if (distance > scaleThreshhold && isLines == true)
-            {
-                isLines = false;
-            }
-        }
-
-        if (Input.GetMouseButtonUp(0))
+        // Check if left mouse button is held down
+        if (Input.GetMouseButtonDown(0))
         {
-            _clickedOnUIFirst = false;
-            SetIsOrbiting(true);
+            _isRotating = true;
+            prevMousePosY = Input.mousePosition;
+            prevMousePosX = Input.mousePosition;
         }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            _isRotating = false;
+        }
+
+        if (_isDragging)
+        {
+            Vector3 deltaMousePosition = Input.mousePosition - prevMousePos;
+
+            // Calculate camera movement
+            Vector3 cameraMovement = new Vector3(-deltaMousePosition.x, -deltaMousePosition.y, 0) * dragSpeed * Time.deltaTime;
+
+            // Apply camera movement to the camera's position
+            transform.Translate(cameraMovement, Space.Self);
+
+            // Update previous mouse position
+            prevMousePos = Input.mousePosition;
+        }
+
+        // Rotate camera while holding left mouse button
+        if (_isRotating)
+        {
+            Vector3 deltaMousePosY = Input.mousePosition - prevMousePosY;
+            // Calculate rotation around the X axis and rotate
+            float rotationX = deltaMousePosY.y * rotationSpeed * Time.deltaTime;
+            transform.Rotate(Vector3.right, rotationX, Space.Self);
+
+            Vector3 deltaMousePosX = Input.mousePosition - prevMousePosX;
+
+            // Calculate rotation around the Y axis and rotate
+            float rotationY = -deltaMousePosX.x * rotationSpeed * Time.deltaTime;
+            transform.Rotate(Vector3.up, rotationY, Space.World);
+
+            // Update previous mouse position
+            prevMousePosY = Input.mousePosition;
+            prevMousePosX = Input.mousePosition;
+        }
+
+        // Zoom camera using mouse scroll wheel
+        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scrollWheel != 0 && !IsPointerOverNamedUIElements())
+        {
+            // Calculate zoom amount
+            float zoomAmount = scrollWheel * zoomSpeed;
+
+            // Calculate new zoom position
+            Vector3 zoomPosition = transform.position + transform.forward * zoomAmount;
+
+            // Clamp zoom position within min and max zoom distances
+            zoomPosition = Vector3.ClampMagnitude(zoomPosition - transform.position, distanceMax) + transform.position;
+            zoomPosition = Vector3.ClampMagnitude(zoomPosition - transform.position, -distanceMin) + transform.position;
+
+            // Apply zoom position to the camera's position
+            transform.position = zoomPosition;
+        }
+
+
     }
 
     public static float ClampAngle(float angle, float min, float max)
