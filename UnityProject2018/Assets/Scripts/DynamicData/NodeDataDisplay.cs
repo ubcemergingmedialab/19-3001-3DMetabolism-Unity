@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static NodeTextDisplay;
 
 /// <summary>
 /// Manages the text labelling of nodes/metabolites as well as updates the nodeSO attached to sidecard UI to contain data from the currently selected node.
@@ -52,6 +53,26 @@ public class NodeDataDisplay : MonoBehaviour
     /// </summary>
     private void MaintainLabelText()
     {
+        switch (NodeTextDisplay.Instance.activeStrategyEnum)
+        {
+            case TextDisplayStrategyEnum.HighlightedPathwaysStrategy:
+                HighlightPathway.HighlightState highlightState = StatusController.Instance.ElementCheckState(GetComponent<HighlightHandler>());
+                if (highlightState != HighlightPathway.HighlightState.Highlighted)
+                    return;
+                break;
+            case TextDisplayStrategyEnum.AccentedPathwaysStrategy:
+                HighlightPathway.HighlightState accentedState = StatusController.Instance.ElementCheckState(GetComponent<HighlightHandler>());
+                if (accentedState != HighlightPathway.HighlightState.Accented)
+                    return;
+                break;
+            case TextDisplayStrategyEnum.AllTextStrategy:
+                break;
+            case TextDisplayStrategyEnum.NoTextStrategy:
+                return;
+            default:
+                break;
+        }
+
         // Check if text is currently showing from hovering mouse over object
         if (GetComponent<ShowTextOnHover>())
         {
@@ -59,7 +80,7 @@ public class NodeDataDisplay : MonoBehaviour
             {
                 // If text is showing and this target is not the main focus right now, return
                 if (MouseOrbit.Instance.targetInFocus != gameObject)
-                return;
+                    return;
             }
         }
         bool blackListedCharsFound = false;
@@ -80,6 +101,7 @@ public class NodeDataDisplay : MonoBehaviour
                 labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
             }
 
+
             // Calculate multiplier based on object distance to main camera
             float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
 
@@ -95,8 +117,8 @@ public class NodeDataDisplay : MonoBehaviour
                 labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
                 labelText.fontSize = 32.0f * distanceToCameraMultiplier;
             }
-            
-            
+
+
         }
     }
 

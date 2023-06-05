@@ -17,6 +17,8 @@ public class NodeTextDisplay : MonoBehaviour
 
     TextDisplayStrategy activeStrategy;
 
+    public TextDisplayStrategyEnum activeStrategyEnum = TextDisplayStrategyEnum.AllTextStrategy;
+
     public enum TextDisplayStrategyEnum
     {
         HighlightedPathwaysStrategy,
@@ -45,6 +47,7 @@ public class NodeTextDisplay : MonoBehaviour
         availableStrategies.Add(TextDisplayStrategyEnum.AllTextStrategy, AllTextStrategy.Instance);
         availableStrategies.Add(TextDisplayStrategyEnum.NoTextStrategy, NoTextStrategy.Instance);
         activeStrategy = AllTextStrategy.Instance;
+        activeStrategyEnum = TextDisplayStrategyEnum.AllTextStrategy;
     }
 
     public void UpdateTextDisplay()
@@ -60,6 +63,7 @@ public class NodeTextDisplay : MonoBehaviour
         {
             Debug.Log("TEXT DISPLAY UPDATE");
             activeStrategy = stratToUse;
+            activeStrategyEnum = (TextDisplayStrategyEnum)stratCode;
             activeStrategy.UpdateTextDisplay();
         }
     }

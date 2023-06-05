@@ -8,7 +8,7 @@ public class CameraLabelController : MonoBehaviour
 
     private List<GameObject> _allLabels;
 
-    private float maxDistance = 25f;
+    private float maxDistance = 35f;
     private float minDistance = 4f;
 
 
@@ -21,7 +21,8 @@ public class CameraLabelController : MonoBehaviour
 
         for (int i = 0; i < labels.Length; i++)
         {
-            _allLabels.Add(labels[i].gameObject);
+            if (labels[i].gameObject.transform.parent.transform.parent.name != "PathwayLabels")
+                _allLabels.Add(labels[i].gameObject);
         }
 
     }
@@ -30,9 +31,9 @@ public class CameraLabelController : MonoBehaviour
     public float GetAlphaValue(Vector3 position)
     {
         float distance = Vector3.Distance(position, Camera.main.transform.position);
-        
-        if (distance >= maxDistance)
-            return 0.2f;
+
+            if (distance >= maxDistance)
+                return 0.2f;
 
 
         return 1 - (distance / maxDistance);
