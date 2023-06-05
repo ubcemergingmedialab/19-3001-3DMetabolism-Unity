@@ -67,6 +67,7 @@ public class ClickListen : MonoBehaviour
         while (isMoving)
         {
             yield return new WaitForSeconds(totalTime / moveSplit);
+            //GameObject.Find("MainCamera").transform.position -= chunk;
             network.transform.position += chunk;
             timeCounter -= totalTime / moveSplit;
             if(timeCounter <= 0)
@@ -167,6 +168,8 @@ public class ClickListen : MonoBehaviour
         }
     }
 
+
+    // potentially replaced by camera controller 
 
     /// <summary>   
     /// encapsulates all the input bounds into one 
