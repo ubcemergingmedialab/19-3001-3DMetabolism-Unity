@@ -80,7 +80,10 @@ public class MouseOrbit : MonoBehaviour
         y = angles.x;
 
         rigidbody = GetComponent<Rigidbody>();
-        targetBounds = target.transform.GetComponent<Renderer>().bounds; // rotate the camera around this
+        if(target.transform.GetComponent<Renderer>() != null)
+        {
+            targetBounds = target.transform.GetComponent<Renderer>().bounds; // rotate the camera around this
+        }
 
         // Make the rigid body not change rotation
         if (rigidbody != null)

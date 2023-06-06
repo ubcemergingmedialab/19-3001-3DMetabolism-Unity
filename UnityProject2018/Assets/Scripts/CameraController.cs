@@ -5,7 +5,7 @@ using System;
 
 public class CameraController: MonoBehaviour
 {
-    public float movementSpeed = 3f; // Speed of camera movement
+    public float movementSpeed = 10f; // Speed of camera movement
     public float padding = 1f; // Additional padding around the bounding box
     public float totalTime = 1f;
 
