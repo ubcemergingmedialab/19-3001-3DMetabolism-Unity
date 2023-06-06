@@ -45,7 +45,7 @@ public class HighlightService : MonoBehaviour
         Debug.Log("calling highlight on " + targetPathway.name);
         
         if(UIContainer != null) {
-            HighlightPathway.HighlightState currentState = StatusController.Instance.PathwayCheckState(targetPathway);
+            HighlightPathway.HighlightState? currentState = StatusController.Instance.PathwayCheckState(targetPathway);
             HighlightPathway.HighlightState newState = HighlightPathway.HighlightState.Default;
 
             if (currentState != null){

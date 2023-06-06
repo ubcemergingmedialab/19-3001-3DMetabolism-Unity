@@ -61,10 +61,11 @@ public class FocusController : MonoBehaviour
         if (boundsList.Count == 0)
         {
             Debug.Log(" no PW highlighted defaulting to defaultCenter");
-            //GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
+            GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
             return;
         }
         Bounds bounds = BoundsEncapsulate(boundsList);
+        //GetComponent<ClickListen>().CenterCamera(bounds);
         GetComponent<CameraController>().MoveCameraToTarget();
     }
 
