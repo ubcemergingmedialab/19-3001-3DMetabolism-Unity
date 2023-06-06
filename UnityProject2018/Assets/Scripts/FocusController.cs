@@ -64,8 +64,9 @@ public class FocusController : MonoBehaviour
             GetComponent<ClickListen>().ColliderCenterCamera(defaultCenter);
             return;
         }
-        Bounds bounds = GetComponent<ClickListen>().BoundsEncapsulate(boundsList);
-        GetComponent<ClickListen>().CenterCamera(bounds);
+        Bounds bounds = BoundsEncapsulate(boundsList);
+        //GetComponent<ClickListen>().CenterCamera(bounds);
+        GetComponent<CameraController>().MoveCameraToTarget();
     }
 
     /// <summary>
@@ -74,6 +75,30 @@ public class FocusController : MonoBehaviour
     public void SetAutoLock()
     {
         AutoCameraLock = (!AutoCameraLock);
+    }
+
+    /// <summary>   
+    /// encapsulates all the input bounds into one 
+    /// used when new pathways are highlighted and need to be in camera
+    /// </summary>
+    /// <param name="targetBoundsList"></param>
+    /// <returns>encapsulated bounds of all the input bounds</returns>
+    private Bounds BoundsEncapsulate(List<Bounds> targetBoundsList)
+    {
+        Bounds bounds = new Bounds();
+
+        for (int index = 0; index < targetBoundsList.Count; index++)
+        {
+            if (index == 0)
+            {
+                bounds = targetBoundsList[index];
+            }
+            else
+            {
+                bounds.Encapsulate(targetBoundsList[index]);                        // encaplsulate all the bounds into one bound
+            }
+        }
+        return bounds;
     }
 }
 

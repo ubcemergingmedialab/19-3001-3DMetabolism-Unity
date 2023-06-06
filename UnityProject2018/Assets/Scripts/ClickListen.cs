@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
+/// This class is the example of the old way we use to move the model on the focus of the camera to give the camera movement illusion
+/// 
 /// movements based on click feedbacks and highlighting 
 /// Camera move movements using coroutines, including the aggregate zoom function for highlighted pathways
 /// Instead of moving the camera, we move the center of the network to simulate camera movement
@@ -67,6 +69,7 @@ public class ClickListen : MonoBehaviour
         while (isMoving)
         {
             yield return new WaitForSeconds(totalTime / moveSplit);
+            //GameObject.Find("MainCamera").transform.position -= chunk;
             network.transform.position += chunk;
             timeCounter -= totalTime / moveSplit;
             if(timeCounter <= 0)
@@ -167,6 +170,8 @@ public class ClickListen : MonoBehaviour
         }
     }
 
+
+    // potentially replaced by camera controller 
 
     /// <summary>   
     /// encapsulates all the input bounds into one 

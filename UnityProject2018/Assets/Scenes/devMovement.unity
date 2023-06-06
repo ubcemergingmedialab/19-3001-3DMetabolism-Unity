@@ -12847,6 +12847,7 @@ GameObject:
   - component: {fileID: 534669906}
   - component: {fileID: 534669907}
   - component: {fileID: 534669908}
+  - component: {fileID: 534669909}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -12933,7 +12934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14f0151b1ad7f24787c2413c1695d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 116082195}
+  target: {fileID: 988872253906518422}
   targetInFocus: {fileID: 0}
   distance: 13
   defaultDistance: 13
@@ -12941,6 +12942,9 @@ MonoBehaviour:
   ySpeed: 70
   yMinLimit: -90
   yMaxLimit: 90
+  dragSpeed: 1
+  rotationSpeed: 2
+  zoomSpeed: 100
   distanceMin: 0.5
   distanceMax: 50
   scaleSpeed: 3.76
@@ -12994,6 +12998,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48355b13cbaf8d429701cfa754cb72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &534669909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e677adf2b7b6c8845923825aef5a5f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  padding: 1
+  totalTime: 1
+  defaultCenter: {fileID: 988872253906165177}
 --- !u!1 &534925124
 GameObject:
   m_ObjectHideFlags: 0
@@ -14476,7 +14496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.7247}
+  m_AnchoredPosition: {x: 0, y: 484.72498}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998

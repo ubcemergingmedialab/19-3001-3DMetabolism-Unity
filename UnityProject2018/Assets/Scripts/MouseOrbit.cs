@@ -15,6 +15,7 @@ public class MouseOrbit : MonoBehaviour
         get { return _instance; }
     }
     public Transform target;
+    private Bounds targetBounds;
     public GameObject targetInFocus;
     public float distance = 5.0f;
     public float defaultDistance = 13.0f;
@@ -25,7 +26,7 @@ public class MouseOrbit : MonoBehaviour
     public float yMaxLimit = 80f;
 
     public float dragSpeed = 1f;
-    public float rotationSpeed = 2f;
+    public float rotationSpeed = 5f;
     public float zoomSpeed = 100f;
     public float distanceMin = .5f;
     public float distanceMax = 35f;
@@ -79,6 +80,7 @@ public class MouseOrbit : MonoBehaviour
         y = angles.x;
 
         rigidbody = GetComponent<Rigidbody>();
+        targetBounds = target.transform.GetComponent<Renderer>().bounds; // rotate the camera around this
 
         // Make the rigid body not change rotation
         if (rigidbody != null)
@@ -145,13 +147,13 @@ public class MouseOrbit : MonoBehaviour
             Vector3 deltaMousePosY = Input.mousePosition - prevMousePosY;
             // Calculate rotation around the X axis and rotate
             float rotationX = -deltaMousePosY.y * rotationSpeed * Time.deltaTime;
-            transform.Rotate(Vector3.right, rotationX, Space.Self);
+            transform.RotateAround(targetBounds.center, transform.right, rotationX);
 
             Vector3 deltaMousePosX = Input.mousePosition - prevMousePosX;
 
             // Calculate rotation around the Y axis and rotate
             float rotationY = deltaMousePosX.x * rotationSpeed * Time.deltaTime;
-            transform.Rotate(Vector3.up, rotationY, Space.World);
+            transform.RotateAround(targetBounds.center, Vector3.up, rotationY);
 
             // Update previous mouse position
             prevMousePosY = Input.mousePosition;
@@ -195,6 +197,11 @@ public class MouseOrbit : MonoBehaviour
         target = newTarget;
         distance = defaultDistance;
         needsUpdate = true;
+    }
+
+    public void ChangeTargetBounds(Bounds newTarget)
+    {
+        targetBounds = newTarget;
     }
 
     public void ChangeDistance(float dist)

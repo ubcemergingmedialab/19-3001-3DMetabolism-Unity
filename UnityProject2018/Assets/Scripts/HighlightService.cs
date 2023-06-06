@@ -45,7 +45,7 @@ public class HighlightService : MonoBehaviour
         Debug.Log("calling highlight on " + targetPathway.name);
         
         if(UIContainer != null) {
-            HighlightPathway.HighlightState currentState = StatusController.Instance.PathwayCheckState(targetPathway);
+            HighlightPathway.HighlightState? currentState = StatusController.Instance.PathwayCheckState(targetPathway);
             HighlightPathway.HighlightState newState = HighlightPathway.HighlightState.Default;
 
             if (currentState != null){
@@ -68,7 +68,8 @@ public class HighlightService : MonoBehaviour
                 }
 
                 StatusController.Instance.SetPathwayState(targetPathway,newState);
-                FocusController.Instance.UpdateFocus();
+                GameObject.Find("MainCamera").GetComponent<CameraController>().MoveCameraToTarget();
+                //FocusController.Instance.UpdateFocus();
             }
         }
     }
@@ -151,7 +152,7 @@ public class HighlightService : MonoBehaviour
     /// <param name="renderers"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"> renderes are NULL </exception>
-    public List<Bounds> getBounds(List<Renderer> renderers) {
+    public List<Bounds> GetBounds(List<Renderer> renderers) {
         // Null check
         if (renderers == null) {
             throw new ArgumentNullException(nameof(renderers));
