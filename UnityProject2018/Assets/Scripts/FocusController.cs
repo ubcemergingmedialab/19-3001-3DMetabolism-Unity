@@ -66,7 +66,7 @@ public class FocusController : MonoBehaviour
         }
         Bounds bounds = BoundsEncapsulate(boundsList);
         //GetComponent<ClickListen>().CenterCamera(bounds);
-        GetComponent<CameraController>().MoveCameraToTarget();
+        GetComponent<CameraController>().MoveCameraToHighlightedTarget();
     }
 
     /// <summary>

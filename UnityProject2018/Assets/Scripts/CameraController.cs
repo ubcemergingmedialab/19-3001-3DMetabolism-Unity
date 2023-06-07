@@ -5,9 +5,9 @@ using System;
 
 public class CameraController: MonoBehaviour
 {
-    public float movementSpeed = 10f; // Speed of camera movement
+    public float movementSpeed = 50f; // Speed of camera movement
     public float padding = 1f; // Additional padding around the bounding box
-    public float totalTime = 1f;
+    private float _totalTime = 1f;
 
     private IEnumerator moveCameraRoutine;
 
@@ -15,7 +15,7 @@ public class CameraController: MonoBehaviour
     public Collider defaultCenter;
 
     // moves the camera onto the the target bounds
-    public void MoveCameraToTarget()
+    public void MoveCameraToHighlightedTarget()
     {
         if (_autoCameraLock) { return; } // if the camera like is true, automatic camera movement is disabled
         if (moveCameraRoutine != null)
@@ -23,13 +23,36 @@ public class CameraController: MonoBehaviour
             StopCoroutine(moveCameraRoutine);
         }
         Bounds targetBounds = GetAggregateBounds();
-        Vector3 targetPosition = CalculateTargetPosition(targetBounds);
+        Vector3 targetPosition = CalculateTargetPosition(targetBounds,1.1f);
         moveCameraRoutine = MoveCameraCoroutine(targetPosition);
         StartCoroutine(moveCameraRoutine);
         Camera.main.GetComponent<MouseOrbit>().ChangeTargetBounds(targetBounds); // set the rotating axis of the camera around the target
     }
+    
+    /// <summary>
+    /// specifically made for nodes and edges where the parent has a mesh renderer. it moves the camera on to the element
+    /// </summary>
+    /// <param name="targetTransform"></param>
+    public void MoveCameraToParentElement(Transform targetTransform)
+    {
+        if (_autoCameraLock) { return; }
+        if (moveCameraRoutine != null)
+        {
+            StopCoroutine(moveCameraRoutine);
+        }
+        StopAllCoroutines();
+        Renderer ElementRenderer = targetTransform.parent.GetComponent<MeshRenderer>();
+        if(ElementRenderer == null)
+        {
+            Debug.Log("there is no mesh connected to the parent of this component");
+            return;
+        }
+        Vector3 targetPosition = CalculateTargetPosition(ElementRenderer.bounds, 10f); // larger margin
+        moveCameraRoutine = MoveCameraCoroutine(targetPosition);
+        StartCoroutine(moveCameraRoutine);
+        Camera.main.GetComponent<MouseOrbit>().ChangeTargetBounds(ElementRenderer.bounds);
 
-
+    }
 
     // coroutine that Lerps the camera onto the target position
     private System.Collections.IEnumerator MoveCameraCoroutine(Vector3 targetPosition)
@@ -51,27 +74,26 @@ public class CameraController: MonoBehaviour
         }
 
     }
-
     /// <summary>
     /// Calculates the Target position of the camera based on the bounds given , in order to fit the bounds inside the cameraFOV
     /// </summary>
-    /// <param name="targetBounds"></param>
-    /// <returns name= "targetPosition"> </returns>
-    private Vector3 CalculateTargetPosition(Bounds targetBounds)
+    /// <param name="targetBounds"> the bounds of the thing we want to focus on</param>
+    /// <param name="ScreenMargin"> how much padding do we want to add</param>
+    /// <returns></returns>
+    private Vector3 CalculateTargetPosition(Bounds targetBounds, float ScreenMargin)
     {
 
         Vector3 boundsCenter = targetBounds.center;
         Vector3 cameraDirection = -Camera.main.transform.forward;//targetBounds.size.normalized;
 
-        float margin = 1.1f;
-        float distance = (targetBounds.extents.magnitude * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
+        //float margin = 1.1f;
+        float distance = (targetBounds.extents.magnitude * ScreenMargin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
 
-        Vector3 targetPosition = boundsCenter + cameraDirection * distance ;// * (distance));// + (directionToTargetPosition * distance);// + (cameraDirection * (distance));
+        Vector3 targetPosition = boundsCenter + cameraDirection * distance ;
 
-
-        Debug.Log(boundsCenter);
         return targetPosition;
     }
+
 
     // returns the aggreagate of the bounds of the highlighted pathways given by highlightservice. if no pathway highlighted, it gives the defaultCneter
     private Bounds GetAggregateBounds()
@@ -122,5 +144,10 @@ public class CameraController: MonoBehaviour
     public void SwitchAutoLock()
     {
         _autoCameraLock = (!_autoCameraLock);
+    }
+
+    public bool GetAutoLock()
+    {
+        return _autoCameraLock;
     }
 }

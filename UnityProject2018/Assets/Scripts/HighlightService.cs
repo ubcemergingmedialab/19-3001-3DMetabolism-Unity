@@ -68,7 +68,7 @@ public class HighlightService : MonoBehaviour
                 }
 
                 StatusController.Instance.SetPathwayState(targetPathway,newState);
-                GameObject.Find("MainCamera").GetComponent<CameraController>().MoveCameraToTarget();
+                GameObject.Find("MainCamera").GetComponent<CameraController>().MoveCameraToHighlightedTarget();
                 //FocusController.Instance.UpdateFocus();
             }
         }
