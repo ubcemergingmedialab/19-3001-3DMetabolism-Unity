@@ -70,7 +70,7 @@ public class CameraController: MonoBehaviour
             float journeyFraction = distanceCovered / journeyLength;
             transform.position = Vector3.Lerp(startPosition, targetPosition, journeyFraction);
 
-            yield return new WaitForEndOfFrame(); 
+            yield return null; 
         }
 
     }

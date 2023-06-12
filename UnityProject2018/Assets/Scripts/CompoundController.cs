@@ -62,6 +62,9 @@ public class CompoundController : MonoBehaviour
     // Follow Object.Instantiate() format as closely as possible.
     public IEnumerator loadCompound(Vector3 compoundPosition = default(Vector3), Quaternion compoundRotation = default(Quaternion), Transform compoundParent = null) {
         //if there are any, delete children before adding another compound
+
+        yield return new WaitForEndOfFrame(); // patch for an error on start
+
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);

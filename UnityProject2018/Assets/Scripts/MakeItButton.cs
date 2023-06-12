@@ -37,4 +37,12 @@ public class MakeItButton : MonoBehaviour
             }
         }
     }
+
+    public void ButtonClicked()
+    {
+        if (GetComponent<EdgeDataDisplay>())
+        {
+            GetComponent<EdgeDataDisplay>().UpdateScriptableObject();
+        }
+    }
 }
