@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TabMove : MonoBehaviour
+public class GlobalSearchScript : MonoBehaviour
 {
+
+    public GameObject searchBar;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+void SearchElement(string input)
     {
-        
+        //
     }
 }
