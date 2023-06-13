@@ -10,13 +10,14 @@ using UnityEngine;
 /// Potential Issue: after LocalNetwork is populated, FillLists() must be called for nodes and edges to be non-empty
 /// </remarks>
 [CreateAssetMenu(fileName = "New Pathway", menuName = "Pathway")]
+[System.Serializable]
 public class PathwaySO : ConnectionsSO
 {
-    public string QID;
+    // public string QID;
     public List<NodeSO> nodes;
     public List<EdgeSO> edges;
-    public string Label;
-    public string Description;
+    // public string Label;
+    // public string Description;
 
     /// <summary>
     /// Initialize PathwaySO with name, QID and desription

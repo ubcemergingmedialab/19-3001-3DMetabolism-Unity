@@ -7,7 +7,8 @@ using UnityEngine;
 /// General class for node-edge connections, extended by PathwaySO. 
 /// </summary>
 [CreateAssetMenu(fileName = "New Connections", menuName = "Connections")]
-public class ConnectionsSO : ScriptableObject
+[System.Serializable]
+public class ConnectionsSO : GenericSO
 {
     /// <summary>
     /// Stores edges of each node as a Dictionary

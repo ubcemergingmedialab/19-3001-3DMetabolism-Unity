@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "List Of Queries", menuName ="List Of Queries")]
+[System.Serializable]
 public class QueriesSO : ScriptableObject
 {
     [TextArea(10, 100)]
