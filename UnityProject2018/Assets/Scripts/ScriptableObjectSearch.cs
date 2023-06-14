@@ -9,6 +9,7 @@ public class ScriptableObjectSearch : MonoBehaviour
 
     public HashSet<GenericSO> searchableObjects;
     public TMP_InputField userInputField;
+    public GameObject resultGenerator;
 
 
     void Start()
@@ -40,7 +41,23 @@ public class ScriptableObjectSearch : MonoBehaviour
         foreach (var obj in searchResults)
         {
             Debug.Log("<srch result> " + obj.Label);
+
+            if (obj.GetType() == typeof(EdgeSO))
+            {
+                resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton();
+            }
+            else if (obj.GetType() == typeof(NodeSO))
+            {
+
+            }
+            else if (obj.GetType() == typeof(ConnectionsSO))
+            {
+
+            }
+
         }
+
+
 
         return searchResults;
     }
