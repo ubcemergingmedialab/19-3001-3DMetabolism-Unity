@@ -5,9 +5,11 @@ using System.IO;
 
 public class PrefabService : MonoBehaviour
 {
+    GameObject edgeLabelsObject;
+
     public void PrefabAssignment(){
         List<PathwaySO> pathways = GameObject.Find("StatusController").GetComponent<StatusController>().activePathways;
-
+        edgeLabelsObject = GameObject.Find("EdgeLabels");
 
         // for testing purposes, checks if pathways and pathway local networks exist and shos count
         Debug.Log("<PrefabService Test> pathway count: " + pathways.Count);
@@ -55,7 +57,12 @@ public class PrefabService : MonoBehaviour
         {    
             if (obj != null) {
                 if(obj.GetComponentInChildren<EdgeDataDisplay>().edgeData == null) {
+                    
+                    // Assign Edge data to Edge gameobject
                     obj.GetComponentInChildren<EdgeDataDisplay>().edgeData = edge;
+
+                    // Instantiate edge label on top of the edge
+                    obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
                 }
             } else {
                 Debug.LogError("Edge scriptable object not connected to prefab :" + edgeName);
