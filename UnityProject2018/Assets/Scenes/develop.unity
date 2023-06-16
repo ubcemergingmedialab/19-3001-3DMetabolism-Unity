@@ -3416,6 +3416,7 @@ GameObject:
   - component: {fileID: 109616324}
   - component: {fileID: 109616323}
   - component: {fileID: 109616322}
+  - component: {fileID: 109616325}
   m_Layer: 0
   m_Name: Highlight
   m_TagString: Untagged
@@ -3489,10 +3490,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 109616325}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3540,6 +3541,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109616320}
   m_CullTransparentMesh: 1
+--- !u!114 &109616325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109616320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 2
+  settingValue: 3
 --- !u!1 &111680751
 GameObject:
   m_ObjectHideFlags: 0
@@ -10779,6 +10794,7 @@ GameObject:
   - component: {fileID: 377059109}
   - component: {fileID: 377059108}
   - component: {fileID: 377059107}
+  - component: {fileID: 377059110}
   m_Layer: 5
   m_Name: SettingMenuPage
   m_TagString: Untagged
@@ -10870,6 +10886,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377059105}
   m_CullTransparentMesh: 1
+--- !u!114 &377059110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377059105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bdee325179f0d46aff168d938ed93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metaboliteSetting: 1
+  reactionSetting: 1
+  metabolicPathwaySetting: 1
+  cofactorSetting: 0
+  enabledCofactorTypes: 
+  textsizePercentageSetting: 100
+  reactionArrows: 1
+  cameraLock: 0
 --- !u!1 &378002738
 GameObject:
   m_ObjectHideFlags: 0
@@ -13169,6 +13205,7 @@ GameObject:
   - component: {fileID: 435444996}
   - component: {fileID: 435444995}
   - component: {fileID: 435444994}
+  - component: {fileID: 435444997}
   m_Layer: 0
   m_Name: Highlight
   m_TagString: Untagged
@@ -13242,10 +13279,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 435444997}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13293,6 +13330,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435444992}
   m_CullTransparentMesh: 1
+--- !u!114 &435444997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435444992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 1
+  settingValue: 3
 --- !u!1 &439458750
 GameObject:
   m_ObjectHideFlags: 0
@@ -17334,7 +17385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.7246}
+  m_AnchoredPosition: {x: 0, y: 484.72495}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -24924,8 +24975,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 0, y: 0.027496338}
+  m_SizeDelta: {x: 20, y: 20.3165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881954608
 MonoBehaviour:
@@ -25226,6 +25277,7 @@ GameObject:
   - component: {fileID: 894060499}
   - component: {fileID: 894060498}
   - component: {fileID: 894060497}
+  - component: {fileID: 894060500}
   m_Layer: 0
   m_Name: All
   m_TagString: Untagged
@@ -25299,10 +25351,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 894060500}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25350,6 +25402,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894060495}
   m_CullTransparentMesh: 1
+--- !u!114 &894060500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894060495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 2
+  settingValue: 2
 --- !u!1 &895078306
 GameObject:
   m_ObjectHideFlags: 0
@@ -28072,6 +28138,7 @@ GameObject:
   - component: {fileID: 980635022}
   - component: {fileID: 980635021}
   - component: {fileID: 980635020}
+  - component: {fileID: 980635023}
   m_Layer: 0
   m_Name: Accent
   m_TagString: Untagged
@@ -28145,10 +28212,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 980635023}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28196,6 +28263,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980635018}
   m_CullTransparentMesh: 1
+--- !u!114 &980635023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980635018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 0
+  settingValue: 4
 --- !u!1 &981874857
 GameObject:
   m_ObjectHideFlags: 0
@@ -30248,6 +30329,7 @@ GameObject:
   - component: {fileID: 1028299168}
   - component: {fileID: 1028299167}
   - component: {fileID: 1028299166}
+  - component: {fileID: 1028299169}
   m_Layer: 0
   m_Name: Accent
   m_TagString: Untagged
@@ -30321,10 +30403,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1028299169}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -30372,6 +30454,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028299164}
   m_CullTransparentMesh: 1
+--- !u!114 &1028299169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028299164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 2
+  settingValue: 4
 --- !u!1 &1030559162
 GameObject:
   m_ObjectHideFlags: 0
@@ -33515,6 +33611,7 @@ GameObject:
   - component: {fileID: 1142339229}
   - component: {fileID: 1142339228}
   - component: {fileID: 1142339227}
+  - component: {fileID: 1142339230}
   m_Layer: 0
   m_Name: All
   m_TagString: Untagged
@@ -33588,10 +33685,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1142339230}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -33639,6 +33736,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142339225}
   m_CullTransparentMesh: 1
+--- !u!114 &1142339230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142339225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 1
+  settingValue: 2
 --- !u!114 &1145609158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36835,6 +36946,7 @@ GameObject:
   - component: {fileID: 1232895215}
   - component: {fileID: 1232895214}
   - component: {fileID: 1232895213}
+  - component: {fileID: 1232895216}
   m_Layer: 0
   m_Name: Highlight
   m_TagString: Untagged
@@ -36908,10 +37020,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1232895216}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -36959,6 +37071,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232895211}
   m_CullTransparentMesh: 1
+--- !u!114 &1232895216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232895211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 0
+  settingValue: 3
 --- !u!1 &1237367375
 GameObject:
   m_ObjectHideFlags: 0
@@ -37268,6 +37394,7 @@ GameObject:
   - component: {fileID: 1240519679}
   - component: {fileID: 1240519678}
   - component: {fileID: 1240519677}
+  - component: {fileID: 1240519680}
   m_Layer: 0
   m_Name: All
   m_TagString: Untagged
@@ -37341,14 +37468,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1240519680}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -37392,6 +37519,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240519675}
   m_CullTransparentMesh: 1
+--- !u!114 &1240519680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240519675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 0
+  settingValue: 2
 --- !u!1 &1245906534
 GameObject:
   m_ObjectHideFlags: 0
@@ -37715,6 +37856,7 @@ GameObject:
   - component: {fileID: 1254385052}
   - component: {fileID: 1254385051}
   - component: {fileID: 1254385050}
+  - component: {fileID: 1254385053}
   m_Layer: 0
   m_Name: Accent
   m_TagString: Untagged
@@ -37788,10 +37930,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1254385053}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -37839,6 +37981,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254385048}
   m_CullTransparentMesh: 1
+--- !u!114 &1254385053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254385048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 3
+  settingValue: 4
 --- !u!1 &1262850941
 GameObject:
   m_ObjectHideFlags: 0
@@ -40831,7 +40987,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 16
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -41763,7 +41919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190, y: -476.0001}
+  m_AnchoredPosition: {x: 187, y: -475.99982}
   m_SizeDelta: {x: 374, y: 952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417452971
@@ -43604,6 +43760,7 @@ GameObject:
   - component: {fileID: 1501104321}
   - component: {fileID: 1501104320}
   - component: {fileID: 1501104319}
+  - component: {fileID: 1501104322}
   m_Layer: 0
   m_Name: Accent
   m_TagString: Untagged
@@ -43677,10 +43834,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1501104322}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43728,6 +43885,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501104317}
   m_CullTransparentMesh: 1
+--- !u!114 &1501104322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501104317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 1
+  settingValue: 4
 --- !u!1 &1506130195
 GameObject:
   m_ObjectHideFlags: 0
@@ -45369,6 +45540,7 @@ GameObject:
   - component: {fileID: 1573261396}
   - component: {fileID: 1573261395}
   - component: {fileID: 1573261394}
+  - component: {fileID: 1573261397}
   m_Layer: 0
   m_Name: All
   m_TagString: Untagged
@@ -45442,10 +45614,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 1573261397}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -45493,6 +45665,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573261392}
   m_CullTransparentMesh: 1
+--- !u!114 &1573261397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573261392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 3
+  settingValue: 2
 --- !u!1 &1573557638
 GameObject:
   m_ObjectHideFlags: 0
@@ -47010,9 +47196,9 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -39}
-  m_SizeDelta: {x: 0, y: -78}
+  m_AnchorMax: {x: 1, y: 0.92468923}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1629172268
 GameObject:
@@ -60355,6 +60541,7 @@ GameObject:
   - component: {fileID: 2107750394}
   - component: {fileID: 2107750393}
   - component: {fileID: 2107750392}
+  - component: {fileID: 2107750395}
   m_Layer: 0
   m_Name: Highlight
   m_TagString: Untagged
@@ -60428,10 +60615,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1048892345}
-        m_TargetAssemblyTypeName: NodeTextDisplay, Assembly-CSharp
-        m_MethodName: ChangeFilterValue
-        m_Mode: 3
+      - m_Target: {fileID: 2107750395}
+        m_TargetAssemblyTypeName: GeneralSettingsButton, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -60479,6 +60666,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107750390}
   m_CullTransparentMesh: 1
+--- !u!114 &2107750395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107750390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824d596dc8764545a6be0427a6b1e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingType: 3
+  settingValue: 3
 --- !u!1 &2109507733
 GameObject:
   m_ObjectHideFlags: 0
