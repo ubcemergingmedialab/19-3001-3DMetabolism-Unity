@@ -10,6 +10,7 @@ public class ScriptableObjectSearch : MonoBehaviour
     public HashSet<GenericSO> searchableObjects;
     public TMP_InputField userInputField;
     public GameObject resultGenerator;
+    public Transform parentTransform;
 
 
     void Start()
@@ -23,8 +24,12 @@ public class ScriptableObjectSearch : MonoBehaviour
 
     public void TriggerSearch()
     {
-        //
-        SearchScriptableObjects(userInputField.GetComponent<TMP_InputField>().text);
+        string searchInput = userInputField.GetComponent<TMP_InputField>().text;
+        if (!string.IsNullOrWhiteSpace(searchInput)) // check to see if there is an actual input
+        {
+            SearchScriptableObjects(searchInput);   // trigger search
+        }
+        
         
     }
 
@@ -42,16 +47,26 @@ public class ScriptableObjectSearch : MonoBehaviour
         {
             Debug.Log("<srch result> " + obj.Label);
 
+
             if (obj.GetType() == typeof(EdgeSO))
             {
-                resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton();
+                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform);
+                newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
+                newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Reaction";
+
             }
             else if (obj.GetType() == typeof(NodeSO))
             {
+                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform);
+                newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
+                newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Metabolite";
 
             }
-            else if (obj.GetType() == typeof(ConnectionsSO))
+            else if (obj.GetType() == typeof(PathwaySO))
             {
+                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform);
+                newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
+                newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Pathway";
 
             }
 
@@ -60,6 +75,14 @@ public class ScriptableObjectSearch : MonoBehaviour
 
 
         return searchResults;
+    }
+
+    public void deleteSearchResult()
+    {
+        foreach (Transform child in parentTransform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
 
