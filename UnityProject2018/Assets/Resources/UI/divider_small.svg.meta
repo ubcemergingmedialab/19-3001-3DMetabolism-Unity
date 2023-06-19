@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 546b6279e1079f24194fa4204d9e7708
+guid: 2325c1ac911095441982d3b617bdee00
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
-  svgType: 1
+  svgType: 0
   texturedSpriteMeshType: 0
   svgPixelsPerUnit: 100
   gradientResolution: 64
@@ -27,28 +27,28 @@ ScriptedImporter:
   maxCordDeviation: 1
   maxTangentAngleEnabled: 0
   maxTangentAngle: 5
-  keepTextureAspectRatio: 1
+  keepTextureAspectRatio: 0
   textureSize: 256
   textureWidth: 256
-  textureHeight: 256
+  textureHeight: 68
   wrapMode: 0
-  filterMode: 1
+  filterMode: 0
   sampleCount: 4
   preserveSVGImageAspect: 0
-  useSVGPixelsPerUnit: 0
+  useSVGPixelsPerUnit: 1
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: divider_smallSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.49485347, y: 0.48112512}
       alignment: 0
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 0, z: 6, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
-      spriteID: b9d55b82807874a40a405c5bcb15d687
+        width: 22
+        height: 6
+      spriteID: 3c71f51b071a1d7438375b65e7e2d043
     PhysicsOutlines: []

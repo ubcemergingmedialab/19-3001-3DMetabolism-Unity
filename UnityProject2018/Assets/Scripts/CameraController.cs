@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class CameraController: MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public float movementSpeed = 50f; // Speed of camera movement
     public float padding = 1f; // Additional padding around the bounding box
@@ -23,12 +23,12 @@ public class CameraController: MonoBehaviour
             StopCoroutine(moveCameraRoutine);
         }
         Bounds targetBounds = GetAggregateBounds();
-        Vector3 targetPosition = CalculateTargetPosition(targetBounds,1.1f);
+        Vector3 targetPosition = CalculateTargetPosition(targetBounds, 1.1f);
         moveCameraRoutine = MoveCameraCoroutine(targetPosition);
         StartCoroutine(moveCameraRoutine);
         Camera.main.GetComponent<MouseOrbit>().ChangeTargetBounds(targetBounds); // set the rotating axis of the camera around the target
     }
-    
+
     /// <summary>
     /// specifically made for nodes and edges where the parent has a mesh renderer. it moves the camera on to the element
     /// </summary>
@@ -42,7 +42,7 @@ public class CameraController: MonoBehaviour
         }
         StopAllCoroutines();
         Renderer ElementRenderer = targetTransform.parent.GetComponent<MeshRenderer>();
-        if(ElementRenderer == null)
+        if (ElementRenderer == null)
         {
             Debug.Log("there is no mesh connected to the parent of this component");
             return;
@@ -57,7 +57,8 @@ public class CameraController: MonoBehaviour
     // coroutine that Lerps the camera onto the target position
     private System.Collections.IEnumerator MoveCameraCoroutine(Vector3 targetPosition)
     {
-        
+        if (MouseOrbit.Instance.cameraLocked) { yield return null; }
+
         Vector3 startPosition = transform.position;
         float startTime = Time.time;
         float journeyLength = Vector3.Distance(startPosition, targetPosition);
@@ -70,7 +71,7 @@ public class CameraController: MonoBehaviour
             float journeyFraction = distanceCovered / journeyLength;
             transform.position = Vector3.Lerp(startPosition, targetPosition, journeyFraction);
 
-            yield return null; 
+            yield return null;
         }
 
     }
@@ -89,7 +90,7 @@ public class CameraController: MonoBehaviour
         //float margin = 1.1f;
         float distance = (targetBounds.extents.magnitude * ScreenMargin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2.0f); //calcs the camera distance to the corresponding bounds
 
-        Vector3 targetPosition = boundsCenter + cameraDirection * distance ;
+        Vector3 targetPosition = boundsCenter + cameraDirection * distance;
 
         return targetPosition;
     }

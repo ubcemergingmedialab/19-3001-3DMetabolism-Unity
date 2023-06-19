@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public enum SettingsType { metabolite, reaction, pathway, cofactor }
 public enum SettingsValue { none, off, all, highlight, accent };
-public enum CofactorType { atp, adp, nadpos, nadh, h20, co2, fad, fadh, p1 };
+public enum CofactorType { none, atp, adp, nadpos, nadh, h2o, co2, fad, fadh, p1, amp };
 
 public class GeneralSettingsManager : MonoBehaviour
 {
@@ -21,21 +21,20 @@ public class GeneralSettingsManager : MonoBehaviour
     public bool reactionArrows = true;
     public bool cameraLock = false;
 
+    public bool overridingToggles = false;
+
     private static GeneralSettingsManager _instance;
     public static GeneralSettingsManager Instance
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = new GeneralSettingsManager();
-            }
             return _instance;
         }
     }
 
     private void Awake()
     {
+        _instance = this;
         DontDestroyOnLoad(gameObject);
         enabledCofactorTypes = new List<CofactorType>();
     }

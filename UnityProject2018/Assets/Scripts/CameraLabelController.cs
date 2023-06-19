@@ -11,6 +11,22 @@ public class CameraLabelController : MonoBehaviour
     private float maxDistance = 35f;
     private float minDistance = 4f;
 
+    private float _fontSizeMultiplier = 1f;
+
+    public float FontSizeMultipler
+    {
+        get
+        {
+            {
+                return _fontSizeMultiplier;
+            }
+        }
+        set
+        {
+            _fontSizeMultiplier = value;
+        }
+    }
+
 
     private void Awake()
     {
@@ -32,8 +48,8 @@ public class CameraLabelController : MonoBehaviour
     {
         float distance = Vector3.Distance(position, Camera.main.transform.position);
 
-            if (distance >= maxDistance)
-                return 0.2f;
+        if (distance >= maxDistance)
+            return 0.2f;
 
 
         return 1 - (distance / maxDistance);

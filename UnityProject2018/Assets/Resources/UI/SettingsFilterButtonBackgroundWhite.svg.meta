@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2325c1ac911095441982d3b617bdee00
+guid: 44bf0dcca52fdca42a39e93140b17ea9
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,16 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: divider_small
+      name: 
       originalName: 
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       alignment: 0
-      border: {x: 64, y: 0, z: 64, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 68
-      spriteID: 3c71f51b071a1d7438375b65e7e2d043
+        width: 0
+        height: 0
+      spriteID: bfae945488bf5d745aa602e0ecd27eef
     PhysicsOutlines: []
