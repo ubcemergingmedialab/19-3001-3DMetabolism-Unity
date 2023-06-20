@@ -247,7 +247,8 @@ public class MouseOrbit : MonoBehaviour
         {
             RaycastResult curRaysastResult = raycastResults[index];
             if (curRaysastResult.gameObject.name.Contains("Menu") || curRaysastResult.gameObject.name.Contains("EdgeUI") 
-                || curRaysastResult.gameObject.name.Contains("PathwayUI") || curRaysastResult.gameObject.name.Contains("NodeUI"))
+                || curRaysastResult.gameObject.name.Contains("PathwayUI") || curRaysastResult.gameObject.name.Contains("NodeUI") 
+                || curRaysastResult.gameObject.name.Contains("SearchResultButton") || curRaysastResult.gameObject.name.Contains("SearchContent"))
                 return true;
         }
         return false;

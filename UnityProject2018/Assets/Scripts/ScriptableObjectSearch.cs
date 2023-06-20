@@ -51,21 +51,21 @@ public class ScriptableObjectSearch : MonoBehaviour
 
             if (obj.GetType() == typeof(EdgeSO))
             {
-                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform);
+                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Reaction";
 
             }
             else if (obj.GetType() == typeof(NodeSO))
             {
-                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform);
+                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Metabolite";
 
             }
             else if (obj.GetType() == typeof(PathwaySO))
             {
-                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform);
+                GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Pathway";
 

@@ -23,10 +23,10 @@ public class SearchResultButtonFactory : MonoBehaviour
         _instance = this;
 
     }
-    public GameObject GenerateButton(Transform ParentTramsform)
+    public GameObject GenerateButton(Transform ParentTramsform, ScriptableObject obj)
     {
         GameObject generated = Instantiate(resultButtonPrefab, ParentTramsform);
-
+        generated.GetComponent<SearchResultButtonLogic>().ElementSO = (GenericSO) obj;
         return generated;
     }
 
