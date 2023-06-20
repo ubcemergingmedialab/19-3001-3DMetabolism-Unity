@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ScriptableObjectSearch : MonoBehaviour
 {
@@ -79,6 +80,10 @@ public class ScriptableObjectSearch : MonoBehaviour
 
     public void deleteSearchResult()
     {
+        if (Camera.main.GetComponent<MouseOrbit>().IsPointerOverUI()) // if over UI, dont delete
+        {
+            return;
+        }
         foreach (Transform child in parentTransform)
         {
             Destroy(child.gameObject);
