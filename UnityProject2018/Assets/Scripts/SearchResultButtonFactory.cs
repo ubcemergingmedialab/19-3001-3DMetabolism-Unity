@@ -26,7 +26,7 @@ public class SearchResultButtonFactory : MonoBehaviour
     public GameObject GenerateButton(Transform ParentTramsform, ScriptableObject obj)
     {
         GameObject generated = Instantiate(resultButtonPrefab, ParentTramsform);
-        generated.GetComponent<SearchResultButtonLogic>().ElementSO = (GenericSO) obj;
+        generated.GetComponent<SearchResultButtonLogic>().elementSO = (GenericSO) obj;
         return generated;
     }
 

@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// This class takes care of the general search through Scriptable objects (ie Node, Edge, Pathway)
+/// </summary>
 public class ScriptableObjectSearch : MonoBehaviour
 {
 
@@ -14,15 +17,41 @@ public class ScriptableObjectSearch : MonoBehaviour
     public Transform parentTransform;
 
 
+    private static ScriptableObjectSearch _instance;
+    public static ScriptableObjectSearch Instance
+    {
+        get { return _instance; }
+    }
+    // Use this for initialization
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+
+
+    }
+
+    /// <summary>
+    /// Add all NodeSO,EdgeSO, and PathwaySOs in to Searchable objescts
+    /// </summary>
     void Start()
     {
         searchableObjects = new HashSet<GenericSO>();
         searchableObjects.UnionWith(StatusController.Instance.activePathways);
         searchableObjects.UnionWith(StatusController.Instance.AllNodeSOs);
         searchableObjects.UnionWith(StatusController.Instance.AllEdgeSOs);
-        Debug.Log("Count "+ searchableObjects.Count);
+        //Debug.Log("Count "+ searchableObjects.Count);
     }
 
+    /// <summary>
+    /// Trigger the general search if there is an input in the input box
+    /// </summary>
     public void TriggerSearch()
     {
         string searchInput = userInputField.GetComponent<TMP_InputField>().text;
@@ -34,6 +63,11 @@ public class ScriptableObjectSearch : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Search through the searchable objects, hashset, if the lable of the objects contain the inpuit, generate the buttons for them based on the type of the SO they are
+    /// </summary>
+    /// <param name="userInput"></param>
+    /// <returns> a traversable Enumerable of GenereicSO</returns>
     public IEnumerable<GenericSO> SearchScriptableObjects(string userInput)
     {
         string input = userInput.ToLower();
@@ -68,22 +102,37 @@ public class ScriptableObjectSearch : MonoBehaviour
                 GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Pathway";
+                //PathwayUIOnClick compUI = newButton.AddComponent<PathwayUIOnClick>();
+                //compUI.dataSO = new Card();
+                //compUI.so = (PathwaySO)obj;
 
             }
 
         }
 
-
-
         return searchResults;
     }
 
-    public void deleteSearchResult()
+    /// <summary>
+    /// if mouse in not over UI, delete the search result buttons
+    /// </summary>
+    public void deleteSearchResultOutOfUI()
     {
         if (Camera.main.GetComponent<MouseOrbit>().IsPointerOverUI()) // if over UI, dont delete
         {
             return;
         }
+        foreach (Transform child in parentTransform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+/// <summary>
+/// Delete the searchbuttons
+/// </summary>
+    public void DeleteSearchResult()
+    {
         foreach (Transform child in parentTransform)
         {
             Destroy(child.gameObject);

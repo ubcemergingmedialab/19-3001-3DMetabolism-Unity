@@ -174,7 +174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1100, y: -567}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 340, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8824966624012466676
@@ -258,7 +258,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8495772767188832151}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8020875758610259662}
+        m_TargetAssemblyTypeName: SearchResultButtonLogic, Assembly-CSharp
+        m_MethodName: ClickAndFocus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8020875758610259662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd66dd7b4dedf74f85628c82644499b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elementSO: {fileID: 0}
+  pathwayCardSO: {fileID: 11400000, guid: 530438a822e1cc54cb35ad2acc8fb7f4, type: 2}
 --- !u!1 &3488477034905136546
 GameObject:
   m_ObjectHideFlags: 0
