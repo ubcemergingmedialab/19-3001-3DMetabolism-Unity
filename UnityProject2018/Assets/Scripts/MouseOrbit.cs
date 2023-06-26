@@ -52,6 +52,8 @@ public class MouseOrbit : MonoBehaviour
     private bool _isDragging = false;
     private bool _isRotating = false;
 
+    public bool cameraLocked = false;
+
 
     float x = 0.0f;
     float y = 0.0f;
@@ -96,6 +98,8 @@ public class MouseOrbit : MonoBehaviour
 
     void LateUpdate()
     { 
+        if (cameraLocked) { return; }
+
         if (!_canOrbit)
             return;
 
@@ -267,5 +271,10 @@ public class MouseOrbit : MonoBehaviour
     public bool IsPointerOverUI()
     {
         return IsPointerOverNamedUIElements();
+    }
+
+    public void ToggleCameraLock(bool state)
+    {
+        cameraLocked = state;
     }
 }

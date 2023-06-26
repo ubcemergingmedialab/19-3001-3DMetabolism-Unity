@@ -14,20 +14,27 @@ public class ShowTextOnHover : MonoBehaviour
     {
         if (text == null)
         {
-            text = transform.Find("Label").GetComponent<TextMeshPro>();
+            if (GetComponent<EdgeDataDisplay>())
+            {
+                
+            }
+            else if (transform.Find("Label").GetComponent<TextMeshPro>())
+                text = transform.Find("Label").GetComponent<TextMeshPro>();
+
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseEnter()
     {
+        Debug.Log("Entered");
         // update original color, change color to show text
-        if(text != null)
+        if (text != null)
         {
             originalColor = text.color;
             isShowingText = true;
@@ -38,7 +45,7 @@ public class ShowTextOnHover : MonoBehaviour
     private void OnMouseExit()
     {
         // change color back to original
-        if(text != null)
+        if (text != null)
         {
             isShowingText = false;
             text.color = originalColor;

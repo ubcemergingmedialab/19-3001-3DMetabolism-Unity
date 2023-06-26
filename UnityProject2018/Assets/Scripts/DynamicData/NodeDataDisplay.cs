@@ -110,12 +110,12 @@ public class NodeDataDisplay : MonoBehaviour
             {
                 distanceToCameraMultiplier = 1;
                 labelText.alpha = distanceToCameraMultiplier;
-                labelText.fontSize = 36.0f * distanceToCameraMultiplier;
+                labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
             }
             else
             {
                 labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
-                labelText.fontSize = 32.0f * distanceToCameraMultiplier;
+                labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
             }
 
 
