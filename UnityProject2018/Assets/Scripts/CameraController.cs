@@ -22,8 +22,9 @@ public class CameraController : MonoBehaviour
         {
             StopCoroutine(moveCameraRoutine);
         }
-        Bounds targetBounds = GetAggregateBounds();
-        Vector3 targetPosition = CalculateTargetPosition(targetBounds, 1.1f);
+        Bounds targetBounds = GetHighlightedAggregateBounds();
+        Vector3 targetPosition = CalculateTargetPosition(targetBounds,1.1f);
+
         moveCameraRoutine = MoveCameraCoroutine(targetPosition);
         StartCoroutine(moveCameraRoutine);
         Camera.main.GetComponent<MouseOrbit>().ChangeTargetBounds(targetBounds); // set the rotating axis of the camera around the target
@@ -52,6 +53,26 @@ public class CameraController : MonoBehaviour
         StartCoroutine(moveCameraRoutine);
         Camera.main.GetComponent<MouseOrbit>().ChangeTargetBounds(ElementRenderer.bounds);
 
+    }
+
+    /// <summary>
+    /// move the camera on the given pathway
+    /// </summary>
+    /// <param name="pathway"></param>
+    public void MoveCameraToPathway(PathwaySO pathway)
+    {
+        if (_autoCameraLock) { return; } // if the camera like is true, automatic camera movement is disabled
+        if (moveCameraRoutine != null)
+        {
+            StopCoroutine(moveCameraRoutine);
+        }
+        Bounds targetBounds = GetPathwayAggregateBounds(pathway);
+
+
+        Vector3 targetPosition = CalculateTargetPosition(targetBounds, 1.1f);
+        moveCameraRoutine = MoveCameraCoroutine(targetPosition);
+        StartCoroutine(moveCameraRoutine);
+        Camera.main.GetComponent<MouseOrbit>().ChangeTargetBounds(targetBounds); // set the rotating axis of the camera around the target
     }
 
     // coroutine that Lerps the camera onto the target position
@@ -97,11 +118,50 @@ public class CameraController : MonoBehaviour
 
 
     // returns the aggreagate of the bounds of the highlighted pathways given by highlightservice. if no pathway highlighted, it gives the defaultCneter
-    private Bounds GetAggregateBounds()
+    private Bounds GetHighlightedAggregateBounds()
     {
         Bounds bounds;
 
         List<Bounds> boundsList = HighlightService.Instance.GetHighlightedBounds();
+        if (boundsList.Count == 0)
+        {
+            Debug.Log(" no PW highlighted defaulting to defaultCenter");
+            bounds = defaultCenter.bounds;
+        }
+        else
+        {
+            bounds = BoundsEncapsulate(boundsList);
+        }
+
+        return bounds;
+    }
+
+    /// <summary>
+    /// returns the aggregate bounds of all the nodes and edges in the pathway by searching for all the components with their tag
+    /// </summary>
+    /// <param name="pathway"></param>
+    /// <returns></returns>
+    private Bounds GetPathwayAggregateBounds(PathwaySO pathway)
+    {
+        Bounds bounds;
+
+        List<Bounds> boundsList = new List<Bounds>();
+
+        foreach(NodeSO nodeSO in pathway.nodes)
+        {
+            foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
+            {
+                boundsList.Add(node.transform.parent.GetComponent<MeshRenderer>().bounds);
+            }
+        }
+        foreach (EdgeSO edgeSO in pathway.edges)
+        {
+            foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
+            {
+                boundsList.Add(edge.transform.parent.GetComponent<MeshRenderer>().bounds);
+            }
+        }
+
         if (boundsList.Count == 0)
         {
             Debug.Log(" no PW highlighted defaulting to defaultCenter");

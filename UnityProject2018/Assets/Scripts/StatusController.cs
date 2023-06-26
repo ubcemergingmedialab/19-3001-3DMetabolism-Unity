@@ -32,7 +32,7 @@ public class StatusController : MonoBehaviour
 
     public ConnectionsSO globalPathway;
 
-    //temp nodes edge list for testing
+    // nodes edge list
     public List<EdgeSO> AllEdgeSOs;
     public List<NodeSO> AllNodeSOs;
 
@@ -78,6 +78,7 @@ public class StatusController : MonoBehaviour
             //add pathway to highlight, not from search function
             AddPathwayToHighlight(pathwaySO, false);
         }
+        FillItemReferenceList();
     }
 
     public void ResetSearchPathwayHighlights()
