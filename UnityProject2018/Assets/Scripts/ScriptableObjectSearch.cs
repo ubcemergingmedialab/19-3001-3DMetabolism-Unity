@@ -46,7 +46,6 @@ public class ScriptableObjectSearch : MonoBehaviour
         searchableObjects.UnionWith(StatusController.Instance.activePathways);
         searchableObjects.UnionWith(StatusController.Instance.AllNodeSOs);
         searchableObjects.UnionWith(StatusController.Instance.AllEdgeSOs);
-        //Debug.Log("Count "+ searchableObjects.Count);
     }
 
     /// <summary>
@@ -59,8 +58,6 @@ public class ScriptableObjectSearch : MonoBehaviour
         {
             SearchScriptableObjects(searchInput);   // trigger search
         }
-        
-        
     }
 
     /// <summary>
@@ -102,9 +99,6 @@ public class ScriptableObjectSearch : MonoBehaviour
                 GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Pathway";
-                //PathwayUIOnClick compUI = newButton.AddComponent<PathwayUIOnClick>();
-                //compUI.dataSO = new Card();
-                //compUI.so = (PathwaySO)obj;
 
             }
 

@@ -62,11 +62,13 @@ public class SearchResultButtonLogic : MonoBehaviour
         else if (elementSO.GetType() == typeof(PathwaySO))
         {
             this.UpdatePathwayUI();
+            Camera.main.GetComponent<CameraController>().MoveCameraToPathway((PathwaySO)elementSO);
         }
 
         ScriptableObjectSearch.Instance.DeleteSearchResult();
     }
 
+    // in order to trigger the pathway side card if the user looks up pathway
     public void UpdatePathwayUI()
     {
         //Stops all animations.
@@ -79,7 +81,6 @@ public class SearchResultButtonLogic : MonoBehaviour
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.PathwayUI, false);
         else Debug.Log("Error in calling PathwayUI list");
 
-        //Update strategy here.  We only want to show the relevent text labels from search.
     }
 
 }
