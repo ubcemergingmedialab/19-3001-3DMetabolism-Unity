@@ -250,20 +250,27 @@ public class MouseOrbit : MonoBehaviour
         for (int index = 0; index < raycastResults.Count; index++)
         {
             RaycastResult curRaysastResult = raycastResults[index];
-            if (curRaysastResult.gameObject.name.Contains("Menu") || curRaysastResult.gameObject.name.Contains("EdgeUI") || curRaysastResult.gameObject.name.Contains("PathwayUI") || curRaysastResult.gameObject.name.Contains("NodeUI"))
+            if (curRaysastResult.gameObject.name.Contains("Menu") || curRaysastResult.gameObject.name.Contains("EdgeUI") 
+                || curRaysastResult.gameObject.name.Contains("PathwayUI") || curRaysastResult.gameObject.name.Contains("NodeUI") 
+                || curRaysastResult.gameObject.name.Contains("SearchResultButton") || curRaysastResult.gameObject.name.Contains("SearchContent"))
                 return true;
         }
         return false;
     }
 
     // Gets all event system raycast results of current mouse or touch position.
-    static List<RaycastResult> GetEventSystemRaycastResults()
+    public static List<RaycastResult> GetEventSystemRaycastResults()
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current);
         eventData.position = Input.mousePosition;
-        List<RaycastResult> raysastResults = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventData, raysastResults);
-        return raysastResults;
+        List<RaycastResult> raycastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, raycastResults);
+        return raycastResults;
+    }
+
+    public bool IsPointerOverUI()
+    {
+        return IsPointerOverNamedUIElements();
     }
 
     public void ToggleCameraLock(bool state)

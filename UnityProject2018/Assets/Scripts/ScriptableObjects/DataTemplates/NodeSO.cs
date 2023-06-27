@@ -6,14 +6,15 @@ using UnityEngine;
 /// ScriptableObject for Nodes
 /// </summary>
 [CreateAssetMenu(fileName = "New Node", menuName = "Node")]
-public class NodeSO : ScriptableObject
+[System.Serializable]
+public class NodeSO : GenericSO
 {
- public string Label;
+    // public string Label;
     public Vector3 Position;
-    public string QID;
+    // public string QID;
     public Quaternion Rotation;
     [TextArea(10, 100)]
-    public string Description;
+    // public string Description;
     public string EnzymeRequired;
     public string MolecularFormula;
     [TextArea(10, 100)]

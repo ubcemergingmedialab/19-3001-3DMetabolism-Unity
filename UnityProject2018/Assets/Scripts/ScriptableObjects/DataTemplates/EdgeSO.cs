@@ -11,12 +11,13 @@ using UnityEngine;
 /// ScriptableObject for Edges
 /// </summary>
 [CreateAssetMenu(fileName = "New Edge", menuName = "Edge")]
-public class EdgeSO : ScriptableObject
+[System.Serializable]
+public class EdgeSO : GenericSO
 {
-     public string Label;
+//    public string Label;
     public Vector3 Position;
-    public string QID;
-    public string Description;
+//    public string QID;
+//    public string Description;
     public string Enzyme;
     public string EnzymeClass;
     public string Cofactors;
