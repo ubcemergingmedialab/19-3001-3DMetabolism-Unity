@@ -40,6 +40,7 @@ public class ShowTextOnHover : MonoBehaviour
             isShowingText = true;
             text.color = new Color(1, 1, 1, 1);
         }
+        this.transform.GetComponentInParent<Outline>().enabled = true;
     }
 
     private void OnMouseExit()
@@ -50,6 +51,7 @@ public class ShowTextOnHover : MonoBehaviour
             isShowingText = false;
             text.color = originalColor;
         }
+        this.transform.GetComponentInParent<Outline>().enabled = false;
     }
 
 }

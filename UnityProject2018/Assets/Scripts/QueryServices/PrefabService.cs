@@ -45,10 +45,13 @@ public class PrefabService : MonoBehaviour
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
                 // Debug.Log("Attached node " + nodeName);
             }
+            AttachOutlineScript(obj);
         } else {
             Debug.LogWarning("Node scriptable object not connected to prefab: " + nodeName);
         }
     }
+
+
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
@@ -64,9 +67,28 @@ public class PrefabService : MonoBehaviour
                     // Instantiate edge label on top of the edge
                     obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
                 }
+                AttachOutlineScript(obj.transform.parent.gameObject);
             } else {
                 Debug.LogError("Edge scriptable object not connected to prefab :" + edgeName);
             }
         }
+    }
+
+    /// <summary>
+    /// Attaches the Outline script that is from unity asset store to the gameobject
+    /// </summary>
+    /// <param name="obj"></param>
+    public void AttachOutlineScript(GameObject obj)
+    {
+        // assign outline shader here
+        Outline objOutline = obj.AddComponent<Outline>();
+
+        if (objOutline != null)
+        {
+            objOutline.OutlineMode = Outline.Mode.OutlineAll;
+            objOutline.OutlineWidth = 3;
+            objOutline.enabled = false;
+        }
+        
     }
 }
