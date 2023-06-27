@@ -15,6 +15,7 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public PathwaySO pathwaySO;
     public Card dataSO;
+    public GameObject pathwayLabelObject;
 
     Image image;
 
@@ -28,6 +29,7 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
             UpdateUI();
             ButtonFactory.Instance.UpdateAllButtonOnClick();
         });
+
     }
 
 
@@ -44,7 +46,8 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
         else Debug.Log("Error in calling PathwayUI list");
 
         //Update strategy here.  We only want to show the relevent text labels from search.
-        NodeTextDisplay.Instance.ChangeFilterValue(0);
+        // Commented out for simplified enum general settings
+        //NodeTextDisplay.Instance.ChangeFilterValue(0);
     }
 
     void AlertHighlightSystem(PathwaySO pathway)
@@ -125,5 +128,18 @@ public class PathwayButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerE
     public void OnPointerExit(PointerEventData eventData)
     {
         OnHoverExitColourChange(FindPathwayState(pathwaySO));
+    }
+
+    public void GetPathwayLabelObject(GameObject pathwayLabelsObject)
+    {
+        if (pathwayLabelsObject.transform.Find(pathwaySO.Label))
+        {
+            pathwayLabelObject = pathwayLabelsObject.transform.Find(pathwaySO.Label).gameObject;
+            pathwayLabelObject.GetComponent<PathwayDataDisplay>().pathwaySO = pathwaySO;
+        }
+        else
+        {
+            Debug.Log("Couldn't find appropriate pathway label for pathway: " + pathwaySO.Label);
+        }
     }
 }

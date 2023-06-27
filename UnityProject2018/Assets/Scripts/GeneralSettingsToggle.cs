@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GeneralSettingsToggle : MonoBehaviour
 {
-    public SettingsType settingType = SettingsType.metabolite;
-    public SettingsValue settingValue = SettingsValue.none;    
+    public SettingsCategory category = SettingsCategory.metabolite;
+    public SettingsType type = SettingsType.all;
 
     public Color activeColor = new Color(83f / 255f, 109f / 255f, 254f / 255f, 1f);
     public Color inactiveColor = new Color(83f / 255f, 109f / 255f, 254f / 255f, 0f);
@@ -14,10 +14,13 @@ public class GeneralSettingsToggle : MonoBehaviour
 
     public virtual void Clicked()
     {
+        bool toggleState = GetComponent<Toggle>().isOn;
         if (!GeneralSettingsManager.Instance.overridingToggles)
-            GeneralSettingsManager.Instance.ChangeSetting(settingType, settingValue);
+        {            
+            GeneralSettingsManager.Instance.ChangeSetting(category, type, toggleState);
+        }
 
-        UpdateBackground(GetComponent<Toggle>().isOn);
+        UpdateBackground(toggleState);
     }
 
 

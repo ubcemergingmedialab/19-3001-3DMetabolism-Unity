@@ -15,10 +15,12 @@ public class EdgeDataDisplay : MonoBehaviour
 
     public GameObject edgeLabelObject;
 
+    bool isHidden = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,7 +45,8 @@ public class EdgeDataDisplay : MonoBehaviour
         DisplayData.EnergyRequired = edgeData.EnergyRequired;
         DisplayData.Pubchemlink = edgeData.Pubchemlink;
         DisplayData.Regulation = edgeData.Regulation;
-        if(displayPartner) {
+        if (displayPartner)
+        {
             Debug.Log("edge has partner");
             DisplayData.AuxLabel = partnerData.Label;
             DisplayData.AuxQID = partnerData.QID;
@@ -61,11 +64,11 @@ public class EdgeDataDisplay : MonoBehaviour
     {
         GameObject edgeLabelPrefab = Resources.Load<GameObject>("Prefabs/EdgeLabel");
 
-        if (edgeLabelPrefab != null )
+        if (edgeLabelPrefab != null)
         {
             //GameObject instantiatedLabel = Instantiate(edgeLabelPrefab, transform, false);
             GameObject instantiatedLabel = Instantiate(edgeLabelPrefab, parent.transform);
-            instantiatedLabel.transform.position = transform.position;            
+            instantiatedLabel.transform.position = transform.position;
 
             instantiatedLabel.GetComponent<TextMeshPro>().text = edgeData.Enzyme;
             edgeLabelObject = instantiatedLabel;
@@ -91,25 +94,25 @@ public class EdgeDataDisplay : MonoBehaviour
     /// </summary>
     private void MaintainLabelText()
     {
-        switch (NodeTextDisplay.Instance.activeStrategyEnum)
-        {
-            case TextDisplayStrategyEnum.HighlightedPathwaysStrategy:
-                HighlightPathway.HighlightState highlightState = StatusController.Instance.ElementCheckState(GetComponent<HighlightHandler>());
-                if (highlightState != HighlightPathway.HighlightState.Highlighted)
-                    return;
-                break;
-            case TextDisplayStrategyEnum.AccentedPathwaysStrategy:
-                HighlightPathway.HighlightState accentedState = StatusController.Instance.ElementCheckState(GetComponent<HighlightHandler>());
-                if (accentedState != HighlightPathway.HighlightState.Accented)
-                    return;
-                break;
-            case TextDisplayStrategyEnum.AllTextStrategy:
-                break;
-            case TextDisplayStrategyEnum.NoTextStrategy:
-                return;
-            default:
-                break;
-        }
+        //switch (NodeTextDisplay.Instance.activeStrategyEnum)
+        //{
+        //    case TextDisplayStrategyEnum.HighlightedPathwaysStrategy:
+        //        HighlightPathway.HighlightState highlightState = StatusController.Instance.ElementCheckState(GetComponent<HighlightHandler>());
+        //        if (highlightState != HighlightPathway.HighlightState.Highlighted)
+        //            return;
+        //        break;
+        //    case TextDisplayStrategyEnum.AccentedPathwaysStrategy:
+        //        HighlightPathway.HighlightState accentedState = StatusController.Instance.ElementCheckState(GetComponent<HighlightHandler>());
+        //        if (accentedState != HighlightPathway.HighlightState.Accented)
+        //            return;
+        //        break;
+        //    case TextDisplayStrategyEnum.AllTextStrategy:
+        //        break;
+        //    case TextDisplayStrategyEnum.NoTextStrategy:
+        //        return;
+        //    default:
+        //        break;
+        //}
 
         // Check if text is currently showing from hovering mouse over object
         if (GetComponent<ShowTextOnHover>())
@@ -124,24 +127,44 @@ public class EdgeDataDisplay : MonoBehaviour
 
         if (edgeData != null)
         {
-
-            // Calculate multiplier based on object distance to main camera
-            float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
-
-            // Perform fontsize and transparency calculations
-            if (MouseOrbit.Instance.targetInFocus == gameObject)
+            if (!isHidden)
             {
-                distanceToCameraMultiplier = 1;
-                edgeLabelObject.GetComponent<TextMeshPro>().alpha = distanceToCameraMultiplier;
-                edgeLabelObject.GetComponent<TextMeshPro>().fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
-            }
-            else
-            {
-                edgeLabelObject.GetComponent<TextMeshPro>().alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
-                edgeLabelObject.GetComponent<TextMeshPro>().fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                // Calculate multiplier based on object distance to main camera
+                float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
+
+                // Perform fontsize and transparency calculations
+                if (MouseOrbit.Instance.targetInFocus == gameObject)
+                {
+                    distanceToCameraMultiplier = 1;
+                    edgeLabelObject.GetComponent<TextMeshPro>().alpha = distanceToCameraMultiplier;
+                    edgeLabelObject.GetComponent<TextMeshPro>().fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                }
+                else
+                {
+                    edgeLabelObject.GetComponent<TextMeshPro>().alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
+                    edgeLabelObject.GetComponent<TextMeshPro>().fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                }
             }
 
 
         }
+    }
+
+    public void TransparentText()
+    {
+        if (edgeLabelObject != null)
+        {
+            edgeLabelObject.GetComponent<TextMeshPro>().alpha = 0.0f;
+        }
+
+        isHidden = true;
+    }
+
+    public void OpaqueText()
+    {
+        //if (edgeLabelObject != null)
+        //    edgeLabelObject.GetComponent<TextMeshPro>().alpha = 1.0f;
+
+        isHidden = false;
     }
 }
