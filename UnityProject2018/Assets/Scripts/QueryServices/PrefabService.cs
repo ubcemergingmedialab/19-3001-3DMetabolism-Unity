@@ -45,7 +45,7 @@ public class PrefabService : MonoBehaviour
                 obj.GetComponentInChildren<NodeDataDisplay>().nodeData = node;
                 // Debug.Log("Attached node " + nodeName);
             }
-            //AttachOutlineScript(obj);
+            AttachOutlineScript(obj);
         } else {
             Debug.LogWarning("Node scriptable object not connected to prefab: " + nodeName);
         }
@@ -67,7 +67,7 @@ public class PrefabService : MonoBehaviour
                     // Instantiate edge label on top of the edge
                     obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
                 }
-                //AttachOutlineScript(obj.transform.parent.gameObject);
+                AttachOutlineScript(obj.transform.parent.gameObject);
             } else {
                 Debug.LogError("Edge scriptable object not connected to prefab :" + edgeName);
             }
@@ -90,5 +90,17 @@ public class PrefabService : MonoBehaviour
             objOutline.enabled = false;
         }
         
+    }
+
+    /// <summary>
+    /// disables all Outline components in the game
+    /// </summary>
+    public void DisableAllOutline()
+    {
+        Outline[] listOfOutline = Object.FindObjectsOfType<Outline>();
+        foreach (Outline outline in listOfOutline)
+        {
+            outline.enabled = false;
+        }
     }
 }

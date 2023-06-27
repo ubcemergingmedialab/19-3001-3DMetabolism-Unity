@@ -19,6 +19,7 @@ public class SearchResultButtonLogic : MonoBehaviour
     /// </summary>
     public void ClickAndFocus()
     {
+        PrefabService prefabService = GameObject.Find("PrefabService").GetComponent<PrefabService>();
         if (elementSO.GetType() == typeof(EdgeSO))
         {
             
@@ -30,6 +31,10 @@ public class SearchResultButtonLogic : MonoBehaviour
                     if (edgeDD.edgeData.QID == elementSO.QID)
                     {
                         edgeDD.UpdateScriptableObject(); // set the side card
+
+                        prefabService.DisableAllOutline(); // turn off all outlines
+                        edgeDD.GetComponentInParent<Outline>().enabled = true; // enable new outline
+
                         if (!Camera.main.GetComponent<CameraController>().GetAutoLock())
                         {
                             Camera.main.GetComponent<CameraController>().MoveCameraToParentElement(edgeDD.transform);  // move the camera on to the edge
@@ -50,6 +55,9 @@ public class SearchResultButtonLogic : MonoBehaviour
                     if (nodeDD.nodeData.QID == elementSO.QID)
                     {
                         nodeDD.UpdateScriptableObject(); // set the side card
+                        prefabService.DisableAllOutline(); // turn off all outlines
+                        nodeDD.GetComponentInParent<Outline>().enabled = true;
+
                         if (!Camera.main.GetComponent<CameraController>().GetAutoLock())
                         {
                             Camera.main.GetComponent<CameraController>().MoveCameraToParentElement(nodeDD.transform);  // move the camera on to the edge
