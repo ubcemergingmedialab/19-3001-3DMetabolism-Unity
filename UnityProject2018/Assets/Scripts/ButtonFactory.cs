@@ -24,6 +24,8 @@ public class ButtonFactory : MonoBehaviour
     public List<PathwaySO> ActivePathways;
     public GameObject buttonPrefab;
 
+    public GameObject pathwayLabelsObject;
+
     // Determines the placement of buttons.
     // X value should remain constant, Y value should differ by the offset
     // at every button generation
@@ -44,6 +46,8 @@ public class ButtonFactory : MonoBehaviour
             return;
         }
         _instance = this;
+
+
 
     }
 
@@ -69,6 +73,7 @@ public class ButtonFactory : MonoBehaviour
         SetButtonTextFromPathway(pathway, generated);
         generated.GetComponent<PathwayButtonLogic>().pathwaySO = pathway;
         generated.GetComponent<PathwayButtonLogic>().dataSO = dataSO;
+        generated.GetComponent<PathwayButtonLogic>().GetPathwayLabelObject(pathwayLabelsObject);
         return generated;
     }
 

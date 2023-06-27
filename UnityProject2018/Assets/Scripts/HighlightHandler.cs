@@ -98,36 +98,39 @@ public class HighlightHandler : MonoBehaviour
         if (currentState == HighlightPathway.HighlightState.Default)                                        // if Default state
         {
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", defaultColor);                // change the color
-            if (GetComponent<NodeDataDisplay>() != null)
-            {
-                NodeTextDisplay.Instance.UpdateTextDisplay();                                       // change the text color
-            }
-            parent.localScale = defaultScale;
+            //if (GetComponent<NodeDataDisplay>() != null)
+            //{
+            //    NodeTextDisplay.Instance.UpdateTextDisplay();                                       // change the text color
+            //}
+            //parent.localScale = defaultScale;
             DeactivateArrows();
         }
         else if (currentState == HighlightPathway.HighlightState.Highlighted)                               // if Highlight state
         {
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", highlightColor);
-            if (GetComponent<NodeDataDisplay>() != null)
-            {
-                NodeTextDisplay.Instance.UpdateTextDisplay();
-            }
-            parent.localScale = defaultScale;
+            //if (GetComponent<NodeDataDisplay>() != null)
+            //{
+            //    NodeTextDisplay.Instance.UpdateTextDisplay();
+            //}
+            //parent.localScale = defaultScale;
             DeactivateArrows();
         }
         else if (currentState == HighlightPathway.HighlightState.Accented)                                  // if Accent state
         {
             parent.GetComponent<Renderer>().material.SetColor("_WiggleColor", accentColor);
-            if (GetComponent<NodeDataDisplay>() != null)                                                    // text color is already set when highlighted
-            {
-                NodeTextDisplay.Instance.UpdateTextDisplay();
-            }
-            parent.localScale = accentScale;
+            //if (GetComponent<NodeDataDisplay>() != null)                                                    // text color is already set when highlighted
+            //{
+            //    NodeTextDisplay.Instance.UpdateTextDisplay();
+            //}
+            //parent.localScale = accentScale;
             ActivateArrows();
         }
         if(animatorComponent != null)
         {
             animatorComponent.WriteDefaultValues();
         }
+
+
+        GeneralSettingsManager.Instance.UpdateLabelFilter();
     }
 }

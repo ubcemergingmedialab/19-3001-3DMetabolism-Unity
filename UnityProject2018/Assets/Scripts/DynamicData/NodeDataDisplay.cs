@@ -7,7 +7,7 @@ using static NodeTextDisplay;
 /// <summary>
 /// Manages the text labelling of nodes/metabolites as well as updates the nodeSO attached to sidecard UI to contain data from the currently selected node.
 /// </summary>
-[ExecuteAlways]
+//[ExecuteAlways]
 public class NodeDataDisplay : MonoBehaviour
 {
     public NodeSO nodeData;
@@ -15,6 +15,8 @@ public class NodeDataDisplay : MonoBehaviour
     public Card DisplayData;
 
     private List<string> blackListedList;
+
+    private bool isHidden = false;
 
     void Start()
     {
@@ -44,6 +46,24 @@ public class NodeDataDisplay : MonoBehaviour
             labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
             //Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
             //labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
+
+            bool blackListedCharsFound = false;
+
+            foreach (string blackListedChar in blackListedList)
+            {
+                if (nodeData.Label.Contains(blackListedChar))
+                {
+                    blackListedCharsFound = true;
+                    labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
+                }
+            }
+
+            //if we found a blacklisted char, we don't need to render labelText again
+            if (!blackListedCharsFound)
+            {
+                labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            }
+
         }
     }
 
@@ -83,39 +103,25 @@ public class NodeDataDisplay : MonoBehaviour
                     return;
             }
         }
-        bool blackListedCharsFound = false;
         if (nodeData != null)
         {
-            foreach (string blackListedChar in blackListedList)
+            if (!isHidden)
             {
-                if (nodeData.Label.Contains(blackListedChar))
+                // Calculate multiplier based on object distance to main camera
+                float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
+
+                // Perform fontsize and transparency calculations
+                if (MouseOrbit.Instance.targetInFocus == gameObject)
                 {
-                    blackListedCharsFound = true;
-                    labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
+                    distanceToCameraMultiplier = 1;
+                    labelText.alpha = distanceToCameraMultiplier;
+                    labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
                 }
-            }
-
-            //if we found a blacklisted char, we don't need to render labelText again
-            if (!blackListedCharsFound)
-            {
-                labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
-            }
-
-
-            // Calculate multiplier based on object distance to main camera
-            float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
-
-            // Perform fontsize and transparency calculations
-            if (MouseOrbit.Instance.targetInFocus == gameObject)
-            {
-                distanceToCameraMultiplier = 1;
-                labelText.alpha = distanceToCameraMultiplier;
-                labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
-            }
-            else
-            {
-                labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
-                labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                else
+                {
+                    labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
+                    labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                }
             }
 
 
@@ -128,15 +134,17 @@ public class NodeDataDisplay : MonoBehaviour
         Color tempColor = textMesh.color;
         tempColor.a = 0.0f;
         textMesh.color = tempColor;
+        isHidden = true;
     }
 
     public void OpaqueText()
     {
 
-        TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
-        Color tempColor = textMesh.color;
-        tempColor.a = 1f;
-        textMesh.color = tempColor;
+        //TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
+        //Color tempColor = textMesh.color;
+        //tempColor.a = 1f;
+        //textMesh.color = tempColor;
+        isHidden = false;
     }
 
     public void DisableText()

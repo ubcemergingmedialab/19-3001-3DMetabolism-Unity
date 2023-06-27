@@ -75,7 +75,7 @@ public class NodeTextDisplay : MonoBehaviour
         } else {
             ChangeStrategy(filterValue);
         }
-        UpdateToggleDisplay();
+        //UpdateToggleDisplay();
     }
     public void ChangeFilterValue(int value) {
         filterValue = value;
@@ -86,8 +86,8 @@ public class NodeTextDisplay : MonoBehaviour
         }
     }
 
-    private void UpdateToggleDisplay()
-    {
-        toggle.isOn = allValue;
-    }
+    //private void UpdateToggleDisplay()
+    //{
+    //    toggle.isOn = allValue;
+    //}
 }

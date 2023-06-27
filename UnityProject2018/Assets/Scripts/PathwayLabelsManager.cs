@@ -12,16 +12,29 @@ using UnityEngine;
 public class PathwayLabelsManager : MonoBehaviour
 {
 
-    List<TextMeshPro> pathwayLabels;
+    private static PathwayLabelsManager _instance;
+    public static PathwayLabelsManager Instance { get { return _instance; } }
+
+    List<PathwayDataDisplay> pathways;
+
+    public List<PathwayDataDisplay> Pathways
+    {
+        get { return pathways; }
+    }
 
     float startFadeDistance = 24f; // At which distance to the camera should a label start fading
     float maxFadeDistance = 15f; // At which distance to the camera should a label be completely gone
 
     private void Awake()
     {
+        _instance = this;
+    }
+
+    private void Start()
+    {
         // Grab all child pathway labels
-        pathwayLabels = new List<TextMeshPro>();
-        pathwayLabels = GetComponentsInChildren<TextMeshPro>().ToList();
+        pathways = new List<PathwayDataDisplay>();
+        pathways = GetComponentsInChildren<PathwayDataDisplay>().ToList();
 
 
     }
@@ -29,11 +42,13 @@ public class PathwayLabelsManager : MonoBehaviour
     private void Update()
     {       
         // Calculate the alpha for every pathway label here
-        for (int i = 0; i < pathwayLabels.Count; i++)
+        for (int i = 0; i < pathways.Count; i++)
         {
+            if (pathways[i].isHidden)
+                continue;
             float alphaValue = 1;
 
-            float distanceToCamera = Vector3.Distance(pathwayLabels[i].transform.position + new Vector3(0, 0, -5), Camera.main.transform.position);
+            float distanceToCamera = Vector3.Distance(pathways[i].transform.position + new Vector3(0, 0, -5), Camera.main.transform.position);
 
             if (distanceToCamera < maxFadeDistance)
                 alphaValue = 0f;
@@ -44,7 +59,7 @@ public class PathwayLabelsManager : MonoBehaviour
                 alphaValue = ((distanceToCamera - maxFadeDistance) / maxFadeDistance);
             }
 
-            pathwayLabels[i].alpha = alphaValue;
+            pathways[i].label.alpha = alphaValue;
         }
 
 
