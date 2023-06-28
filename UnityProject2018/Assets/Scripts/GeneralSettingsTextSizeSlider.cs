@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class GeneralSettingsTextSizeSlider : MonoBehaviour
 {
-
-    public void UpdateTextSize()
+    
+    public void UpdateMetabolitesTextSize()
     {
-        MouseOrbit.Instance.cameraLabelController.FontSizeMultiplier = GetComponent<Slider>().value / 100f;
+        MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier = GetComponent<Slider>().value / 100f;
+    }
+    public void UpdateReactionsTextSize()
+    {
+        MouseOrbit.Instance.cameraLabelController.ReactionsFontSizeMultiplier = GetComponent<Slider>().value / 100f;
     }
 }

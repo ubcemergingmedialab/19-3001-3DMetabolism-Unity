@@ -23,6 +23,9 @@ public class NodeDataDisplay : MonoBehaviour
     {
         //Gets a list of strings that we don't want to show in labels
         blackListedList = Constants.GetBlackListedLabels();
+
+        // Forcing Label text to align to middle instead of top
+        labelText.verticalAlignment = VerticalAlignmentOptions.Middle;
     }
 
     private void Start()
@@ -120,12 +123,12 @@ public class NodeDataDisplay : MonoBehaviour
                 {
                     distanceToCameraMultiplier = 1;
                     labelText.alpha = distanceToCameraMultiplier;
-                    labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultiplier;
+                    labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
                 }
                 else
                 {
                     labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
-                    labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultiplier;
+                    labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
                 }
             }
 

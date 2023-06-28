@@ -11,19 +11,34 @@ public class CameraLabelController : MonoBehaviour
     private float maxDistance = 35f;
     private float minDistance = 4f;
 
-    private float _fontSizeMultiplier = 1f;
+    private float _metabolitesFontSizeMultiplier = 1f;
+    private float _reactionsFontSizeMultiplier = 1f;
 
-    public float FontSizeMultiplier
+    public float MetabolitesFontSizeMultiplier
     {
         get
         {
             {
-                return _fontSizeMultiplier;
+                return _metabolitesFontSizeMultiplier;
             }
         }
         set
         {
-            _fontSizeMultiplier = value;
+            _metabolitesFontSizeMultiplier = value;
+        }
+    }
+
+    public float ReactionsFontSizeMultiplier
+    {
+        get
+        {
+            {
+                return _reactionsFontSizeMultiplier;
+            }
+        }
+        set
+        {
+            _reactionsFontSizeMultiplier = value;
         }
     }
 
