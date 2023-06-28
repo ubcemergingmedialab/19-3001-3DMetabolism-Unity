@@ -78,13 +78,13 @@ public class ScriptableObjectSearch : MonoBehaviour
         foreach (var obj in searchResults)
         {
             Debug.Log("<srch result> " + obj.Label);
-
-
+            
             if (obj.GetType() == typeof(EdgeSO))
             {
                 GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Reaction";
+                //SetSearchCategoryForButton(newButton, obj);
 
             }
             else if (obj.GetType() == typeof(NodeSO))
@@ -92,6 +92,7 @@ public class ScriptableObjectSearch : MonoBehaviour
                 GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Metabolite";
+                SetSearchCategoryForButton(newButton, obj);
 
             }
             else if (obj.GetType() == typeof(PathwaySO))
@@ -99,8 +100,11 @@ public class ScriptableObjectSearch : MonoBehaviour
                 GameObject newButton = resultGenerator.GetComponent<SearchResultButtonFactory>().GenerateButton(parentTransform, obj);
                 newButton.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
                 newButton.transform.Find("Type (TMP)").GetComponent<TMP_Text>().text = "Pathway";
+                //SetSearchCategoryForButton(newButton, obj);
 
             }
+
+            
 
         }
 
@@ -130,6 +134,18 @@ public class ScriptableObjectSearch : MonoBehaviour
         foreach (Transform child in parentTransform)
         {
             Destroy(child.gameObject);
+        }
+    }
+
+    void SetSearchCategoryForButton(GameObject buttonObject, GenericSO obj)
+    {
+        if (obj.searchCategory > searchCategory.standard)
+        {
+            buttonObject.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label + "(" + obj.searchCategory.ToString() + ")";
+        }
+        else
+        {
+            buttonObject.transform.Find("Name (TMP)").GetComponent<TMP_Text>().text = obj.Label;
         }
     }
 

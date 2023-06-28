@@ -17,8 +17,9 @@ public class PathwayUIElement : UIElement
 
         // Update Edge UI Element
         Debug.Log("Updating Pathway UI");
+        CompoundControllerCamera.Instance.ResetCameraPosition();
 
-       LabelText.text = ((Card)DataReference).Label;
+        LabelText.text = ((Card)DataReference).Label;
        DescriptionText.text = ((Card)DataReference).Description;
        QIDText.text = ((Card)DataReference).QID;
   
@@ -29,6 +30,7 @@ public class PathwayUIElement : UIElement
 /// </summary>
 /// <param name="hasPartner"> indicates if the pathway has a partner</param>
     override public void UpdateUI(bool hasPartner) {
+        CompoundControllerCamera.Instance.ResetCameraPosition();
         // not implemented, follow pattern if second metabolite card needed
         Debug.Log("Update UI called with boolean on PathwayUIElement, not implemented");
     }

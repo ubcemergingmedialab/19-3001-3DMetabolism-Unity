@@ -38,7 +38,7 @@ public class PrefabService : MonoBehaviour
     }
  
     public void FindNodeSOGameObject(NodeSO node) {
-        string nodeName = node.Label; 
+        string nodeName = node.name; 
         GameObject obj =  GameObject.Find(nodeName);
         if (obj != null) {
             if(obj.GetComponentInChildren<NodeDataDisplay>().nodeData == null) {

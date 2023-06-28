@@ -30,6 +30,8 @@ public class NodeUIElement : UIElement
         //Update Node UI
         Debug.Log("Updating Node UI");
 
+        CompoundControllerCamera.Instance.ResetCameraPosition();
+
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;

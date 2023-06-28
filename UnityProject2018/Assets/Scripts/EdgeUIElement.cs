@@ -27,6 +27,7 @@ public class EdgeUIElement : UIElement
     {
         // Update Edge UI Element
         Debug.Log("Updating Edge UI");
+        CompoundControllerCamera.Instance.ResetCameraPosition();
 
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
@@ -48,6 +49,7 @@ public class EdgeUIElement : UIElement
     {
         // Update Edge UI Element
         Debug.Log("Updating Edge UI");
+        CompoundControllerCamera.Instance.ResetCameraPosition();
 
         LabelText.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;

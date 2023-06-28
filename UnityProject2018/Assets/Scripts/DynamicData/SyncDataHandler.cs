@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
 using System.Xml;
+using System;
 
 public class SyncDataHandler : MonoBehaviour
 {

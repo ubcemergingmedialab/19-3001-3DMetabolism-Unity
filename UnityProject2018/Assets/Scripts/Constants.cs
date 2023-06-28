@@ -23,13 +23,13 @@ public class Constants : MonoBehaviour
     //DEFAULT COLORS
     //...label starting colors
 
-    void Awake()
-    {
-        InitializeBlacklist();
-    }
+    //void Awake()
+    //{
+    //    InitializeBlacklist();
+    //}
 
     //This list represents the characters we want to remove from the Node labels displayed in the model.
-    private void InitializeBlacklist()
+    private static void InitializeBlacklist()
     {
         blackListedList = new List<string>();
         blackListedList.Add("(cytosol)");
@@ -38,6 +38,8 @@ public class Constants : MonoBehaviour
 
     public static List<string> GetBlackListedLabels()
     {
+        if (blackListedList == null)
+            InitializeBlacklist();
         return blackListedList;
     }
 

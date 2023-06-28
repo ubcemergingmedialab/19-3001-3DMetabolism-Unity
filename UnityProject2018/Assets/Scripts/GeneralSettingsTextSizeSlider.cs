@@ -8,6 +8,6 @@ public class GeneralSettingsTextSizeSlider : MonoBehaviour
 
     public void UpdateTextSize()
     {
-        MouseOrbit.Instance.cameraLabelController.FontSizeMultipler = GetComponent<Slider>().value / 100f;
+        MouseOrbit.Instance.cameraLabelController.FontSizeMultiplier = GetComponent<Slider>().value / 100f;
     }
 }

@@ -45,6 +45,8 @@ public class CompoundController : MonoBehaviour
 
         GameObject bondObj = (GameObject)Resources.Load("Prefabs/bond" + bondType);
 
+        Debug.Log("Creating Bond Type: " + bondType);
+
         // If we don't have a bondObj from Resources, use bondMissing instead. This is red by default, to indicate it's a missing element. Maybe use Unity pink instead?
         if (bondObj == null)
         {
@@ -62,13 +64,14 @@ public class CompoundController : MonoBehaviour
     // Follow Object.Instantiate() format as closely as possible.
     public IEnumerator loadCompound(Vector3 compoundPosition = default(Vector3), Quaternion compoundRotation = default(Quaternion), Transform compoundParent = null) {
         //if there are any, delete children before adding another compound
-
-        yield return new WaitForEndOfFrame(); // patch for an error on start
-
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
         }
+
+        yield return new WaitForEndOfFrame(); // patch for an error on start
+
+        
 
         // This solves the issue of the CID being incorrect when loading the compound
         CID = int.Parse(((Card)DataReference).CID);

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,7 +32,20 @@ public class NodeSO : GenericSO
     /// </summary>
     public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc, string charge, string pubchem, string cid) {
         this.name = name;
+
         this.Label = name;
+
+        foreach (string blackListedChar in Constants.GetBlackListedLabels())
+        {
+            if (name.Contains(blackListedChar))
+            {
+                searchCategory tempSearchCategory = searchCategory.standard;
+                Enum.TryParse(blackListedChar.Replace("(", "").Replace(")", ""), out tempSearchCategory);
+                searchCategory = tempSearchCategory;
+                this.Label = name.Replace(blackListedChar, "");                
+            }
+        }
+
         this.QID = newQID;
         this.Description = desc;
         this.MolecularFormula = moleForm;

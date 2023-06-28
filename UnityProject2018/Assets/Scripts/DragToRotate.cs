@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 //using static UnityEditor.Experimental.GraphView.GraphView;
-
+/// <summary>
+/// This is attached to the Compound Controller Image on the side card.
+/// The name suggests it's just for controlling rotation and dragging, 
+/// but this class also controls the zoom, panning and other functionality needed for the Compound.
+/// </summary>
 public class DragToRotate : MonoBehaviour
 {
     Vector3 mPrevPos = Vector3.zero;
@@ -46,12 +50,30 @@ public class DragToRotate : MonoBehaviour
                 }
             }
         }
+        // Checking for scroll wheel push. This will mimic the controls for the big model, and allow user to move the compound in the side card.
+        else if (Input.GetMouseButtonDown(2))
+        {
+            if (IsPointerOverCompoundControllerImage(GetEventSystemRaycastResults()))
+            {
+                CompoundControllerCamera.Instance.ToggleDrag(true);
+            }
+        }
+        if (Input.GetMouseButtonUp(2))
+        {
+            CompoundControllerCamera.Instance.ToggleDrag(false);
+        }
+        // Zoom camera using mouse scroll wheel
+        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scrollWheel != 0 && IsPointerOverCompoundControllerImage(GetEventSystemRaycastResults()))
+        {
+            CompoundControllerCamera.Instance.Zoom(scrollWheel);    
+            
+        }
 
         if (isDragging)
         {
             mPosDelta = Input.mousePosition - mPrevPos;
-
-
 
             float horizontalRotation = -mPosDelta.x;
             float verticalRotation = mPosDelta.y;

@@ -13,7 +13,7 @@ public class CameraLabelController : MonoBehaviour
 
     private float _fontSizeMultiplier = 1f;
 
-    public float FontSizeMultipler
+    public float FontSizeMultiplier
     {
         get
         {

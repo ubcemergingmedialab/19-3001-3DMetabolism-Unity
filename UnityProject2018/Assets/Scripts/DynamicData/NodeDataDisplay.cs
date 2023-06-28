@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,13 +19,13 @@ public class NodeDataDisplay : MonoBehaviour
 
     private bool isHidden = false;
 
-    void Start()
+    void Awake()
     {
         //Gets a list of strings that we don't want to show in labels
         blackListedList = Constants.GetBlackListedLabels();
     }
 
-    private void OnEnable()
+    private void Start()
     {
         InitializeLabelText();
     }
@@ -43,17 +44,21 @@ public class NodeDataDisplay : MonoBehaviour
         if (nodeData != null)
         {
             Vector3 localPosition = labelText.transform.localPosition;
-            labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+            //labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
             //Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
             //labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
 
             bool blackListedCharsFound = false;
 
-            foreach (string blackListedChar in blackListedList)
+            foreach (string blackListedChar in Constants.GetBlackListedLabels())
             {
                 if (nodeData.Label.Contains(blackListedChar))
                 {
                     blackListedCharsFound = true;
+                    searchCategory searchCategory = searchCategory.standard;
+                    Enum.TryParse(blackListedChar.Replace("(", "").Replace(")", ""), out searchCategory);
+                    nodeData.searchCategory = searchCategory;
+                    nodeData.Label = nodeData.Label.Replace(blackListedChar, "");
                     labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
                 }
             }
@@ -115,12 +120,12 @@ public class NodeDataDisplay : MonoBehaviour
                 {
                     distanceToCameraMultiplier = 1;
                     labelText.alpha = distanceToCameraMultiplier;
-                    labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                    labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultiplier;
                 }
                 else
                 {
                     labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
-                    labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultipler;
+                    labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.FontSizeMultiplier;
                 }
             }
 
