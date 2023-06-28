@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -71,6 +72,23 @@ public class EdgeDataDisplay : MonoBehaviour
             instantiatedLabel.transform.position = transform.position;
 
             instantiatedLabel.GetComponent<TextMeshPro>().text = edgeData.Enzyme;
+
+            bool blackListedCharsFound = false;
+
+            foreach (string blackListedChar in Constants.GetBlackListedLabels())
+            {
+                if (edgeData.Enzyme.Contains(blackListedChar))
+                {
+                    blackListedCharsFound = true;
+                    searchCategory searchCategory = searchCategory.standard;
+                    Enum.TryParse(blackListedChar.Replace("(", "").Replace(")", ""), out searchCategory);
+                    edgeData.searchCategory = searchCategory;
+                    edgeData.Enzyme = edgeData.Enzyme.Replace(blackListedChar, "");
+                    instantiatedLabel.GetComponent<TextMeshPro>().SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + edgeData.Enzyme.Replace(blackListedChar, "") + "</font></mark>");
+                }
+            }
+
+
             edgeLabelObject = instantiatedLabel;
 
             if (!GetComponent<ShowTextOnHover>())
