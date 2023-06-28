@@ -86,7 +86,7 @@ public class UIPresenter : MonoBehaviour
         foreach(KeyValuePair<UIList, UIElement> entry in AvailableElements) {
             entry.Value.gameObject.SetActive(false);
         }
-
+        GameObject.Find("PrefabService").GetComponent<PrefabService>().DisableAllOutline();
     }
 
 }
