@@ -70,6 +70,8 @@ public class SearchResultButtonLogic : MonoBehaviour
         else if (elementSO.GetType() == typeof(PathwaySO))
         {
             this.UpdatePathwayUI();
+            prefabService.DisableAllOutline(); // turn off all outlines
+            OutlineAllPathwayComponent((PathwaySO)elementSO);
             Camera.main.GetComponent<CameraController>().MoveCameraToPathway((PathwaySO)elementSO);
         }
 
@@ -89,6 +91,25 @@ public class SearchResultButtonLogic : MonoBehaviour
             UIPresenter.Instance.NotifyUIUpdate(UIPresenter.UIList.PathwayUI, false);
         else Debug.Log("Error in calling PathwayUI list");
 
+    }
+
+    public void OutlineAllPathwayComponent(PathwaySO pathwaySO)
+    {
+        foreach (NodeSO nodeSO in pathwaySO.nodes)
+        {
+            foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
+            {
+                node.GetComponentInParent<Outline>().enabled = true;
+            }
+
+        }
+        foreach (EdgeSO edgeSO in pathwaySO.edges)
+        {
+            foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
+            {
+                edge.GetComponentInParent<Outline>().enabled = true;
+            }
+        }
     }
 
 }
