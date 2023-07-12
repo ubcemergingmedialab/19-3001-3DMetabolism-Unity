@@ -27,6 +27,9 @@ public class EdgeSO : GenericSO
 
     public List<NodeSO> reactants;
     public List<NodeSO> products;
+
+    public List<Cofactor> cofactors; // to avoid duplicates
+
     public bool bidirectional;
 
     
@@ -53,6 +56,9 @@ public class EdgeSO : GenericSO
         this.bidirectional = bidirectionality;
         this.reactants = new List<NodeSO>();
         this.products = new List<NodeSO>();
+
+        this.cofactors = new List<Cofactor>();
+
         this.EnzymeClass = enzymeclass;
         this.Cofactors = cofactors;
         this.EnergyRequired = energyreq;
@@ -81,6 +87,13 @@ public class EdgeSO : GenericSO
             }
         }
         this.products.Add(node);
+    }
+
+
+    // add cofactor
+    public void AddCofactor(Cofactor cofactor)
+    {
+        cofactors.Add(cofactor);
     }
 
     public override bool Equals(object obj)
