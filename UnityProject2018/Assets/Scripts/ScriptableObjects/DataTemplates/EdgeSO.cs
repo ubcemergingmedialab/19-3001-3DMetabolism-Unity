@@ -90,10 +90,20 @@ public class EdgeSO : GenericSO
     }
 
 
-    // add cofactor
+    // add cofactor if not in the list
     public void AddCofactor(Cofactor cofactor)
     {
+        foreach (Cofactor temp in this.cofactors)
+        {
+            if (temp.label == cofactor.label && temp.isReactant == cofactor.isReactant)
+            {
+                return;
+            }
+        }
+
         cofactors.Add(cofactor);
+        
+        
     }
 
     public override bool Equals(object obj)

@@ -21,7 +21,7 @@ public class WikibaseBinding
     public WikibaseBindingElement pathwayDesc;
     public WikibaseBindingElement edgeDesc;
     public WikibaseBindingElement edgeEnzymeTypeLabel;
-    public WikibaseBindingElement edgeCofactorsLabel;
+    public WikibaseBindingElement cofactorLabel;
     public WikibaseBindingElement edgeEnergyReqLabel;
     public WikibaseBindingElement edgePubchem;
     public WikibaseBindingElement edgeRegulation;
@@ -37,6 +37,8 @@ public class WikibaseBinding
     public WikibaseBindingElement isReactant;
     public WikibaseBindingElement isProduct;
     public WikibaseBindingElement isEnzyme;
+    public WikibaseBindingElement isCofactorReactant;
+    public WikibaseBindingElement isCofactorProduct;
 
     public WikibaseBindingElement edgeQID;
     public WikibaseBindingElement metaboliteQID;

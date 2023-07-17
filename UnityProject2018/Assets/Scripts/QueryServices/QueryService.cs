@@ -6,50 +6,50 @@ using System.IO;
 using UnityEngine.Networking;
 
 
-public class QueryService : MonoBehaviour 
+public class QueryService : MonoBehaviour
 {
 
-static Dictionary<string,EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
-static Dictionary<string,NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
-public static Dictionary<string,PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
-static ConnectionsSO globalPathway;
+    static Dictionary<string, EdgeSO> EdgeSOs = new Dictionary<string, EdgeSO>();
+    static Dictionary<string, NodeSO> NodeSOs = new Dictionary<string, NodeSO>();
+    public static Dictionary<string, PathwaySO> PathwaySOs = new Dictionary<string, PathwaySO>();
+    static ConnectionsSO globalPathway;
 
-public TextAsset queryxml;
+    public TextAsset queryxml;
 
-static string ResourceFolderPath = "Assets/Resources/Data/";
-static string JsonFileDestination = "Assets/Resources/Data/query.xml";
-// static string JsonFileDestination = "query.xml";
+    static string ResourceFolderPath = "Assets/Resources/Data/";
+    static string JsonFileDestination = "Assets/Resources/Data/query.xml";
+    // static string JsonFileDestination = "query.xml";
 
 
-/*
-    1-  serialize the json
-    2- create SOs
-    3- add pathways to pathway list
-    4- connect the SOs to prefabs
-    */
-void Awake() {
+    /*
+        1-  serialize the json
+        2- create SOs
+        3- add pathways to pathway list
+        4- connect the SOs to prefabs
+        */
+    void Awake() {
         SerializeAndCreate();
         PathwaysToActive();
-        AttachScriptableObjectToPrefab();      
-}
+        AttachScriptableObjectToPrefab();
+    }
 
-void OnApplicationQuit(){
-    ClearQueryData();
-}
-
-
-
-// make the query URI ready and pass it to GetRequest(uri)
-public void RunQuery(string WQSLink , string raw){
-    string queryReady = UnityWebRequest.EscapeURL(raw);
-    StartCoroutine(GetRequest(WQSLink + queryReady));
-    
-}  
+    void OnApplicationQuit() {
+        ClearQueryData();
+    }
 
 
 
-// request the query and save and parse the json file
-IEnumerator GetRequest(string uri)
+    // make the query URI ready and pass it to GetRequest(uri)
+    public void RunQuery(string WQSLink, string raw) {
+        string queryReady = UnityWebRequest.EscapeURL(raw);
+        StartCoroutine(GetRequest(WQSLink + queryReady));
+
+    }
+
+
+
+    // request the query and save and parse the json file
+    IEnumerator GetRequest(string uri)
     {
         using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
         {
@@ -70,8 +70,8 @@ IEnumerator GetRequest(string uri)
         }
     }
 
-// write the json file as a xml to be parsed
-static void WriteString(string str)
+    // write the json file as a xml to be parsed
+    static void WriteString(string str)
     {
         FileStream filestream = new FileStream(JsonFileDestination, FileMode.Create);
         StreamWriter writer = new StreamWriter(filestream);
@@ -79,79 +79,83 @@ static void WriteString(string str)
         writer.Close();
     }
 
-// initiate the scriptable object creating after serialization 
-void SerializeAndCreate()
-{   
-    // FileStream fileStream = new FileStream(JsonFileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-    // var streamReader = new StreamReader(fileStream);
-    // string xmlToString = streamReader.ReadToEnd();
+    // initiate the scriptable object creating after serialization 
+    void SerializeAndCreate()
+    {
+        // FileStream fileStream = new FileStream(JsonFileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        // var streamReader = new StreamReader(fileStream);
+        // string xmlToString = streamReader.ReadToEnd();
 
-    string xmlToString = queryxml.text;
-    
-    WikibaseResult result = JsonUtility.FromJson<WikibaseResult>(xmlToString);
+        string xmlToString = queryxml.text;
 
-    globalPathway = ScriptableObject.CreateInstance<ConnectionsSO>();
-    foreach( WikibaseBinding item in result.results.bindings){
-                NodeSOInit(item);
-            }
-}
+        WikibaseResult result = JsonUtility.FromJson<WikibaseResult>(xmlToString);
+
+        globalPathway = ScriptableObject.CreateInstance<ConnectionsSO>();
+        foreach (WikibaseBinding item in result.results.bindings) {
+            NodeSOInit(item);
+        }
+    }
 
 
 
-// fill active pathways in statuscontroller after querying 
-void PathwaysToActive(){
-    FillPathwayList(); //TODO: list usage seems to be unused, added for testing MockSearch()
-    GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
-    foreach(KeyValuePair<string,PathwaySO> pair in PathwaySOs)
+    // fill active pathways in statuscontroller after querying 
+    void PathwaysToActive() {
+        FillPathwayList(); //TODO: list usage seems to be unused, added for testing MockSearch()
+        GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Clear();
+        foreach (KeyValuePair<string, PathwaySO> pair in PathwaySOs)
         {
             GameObject.Find("StatusController").GetComponent<StatusController>().activePathways.Add(pair.Value);
 
         }
-    GameObject.Find("StatusController").GetComponent<StatusController>().globalPathway = globalPathway;
-}
-
-
-// call prefabassigment to attach scriptable object to prefabs
-void AttachScriptableObjectToPrefab(){
-    GameObject.Find("PrefabService").GetComponent<PrefabService>().PrefabAssignment();
-}
-
-
-public void FillPathwayList(){
-    foreach (KeyValuePair<string, PathwaySO> item in PathwaySOs)
-    {
-        item.Value.FillLists();
+        GameObject.Find("StatusController").GetComponent<StatusController>().globalPathway = globalPathway;
     }
-}
 
-// create an EdgeSo instance from the text given in the query Json , unless the edge already exists
-public void EdgeSOInit(WikibaseBinding item){
-    if (!(EdgeSOs.ContainsKey(item.edgeLabel.value))){
-        EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
-        bool direction = false;
-          
-        if(item.isBidirectional.value == "true"){
-            direction = true;
+
+    // call prefabassigment to attach scriptable object to prefabs
+    void AttachScriptableObjectToPrefab() {
+        GameObject.Find("PrefabService").GetComponent<PrefabService>().PrefabAssignment();
+    }
+
+
+    public void FillPathwayList() {
+        foreach (KeyValuePair<string, PathwaySO> item in PathwaySOs)
+        {
+            item.Value.FillLists();
         }
-        // Debug.Log(item.isBidirectional.value + " direction var = " + direction);
-        edge.init(item.edgeLabel.value,item.edgeQID.value,item.edgeDesc.value,item.enzymeLabel.value,item.edgeEnzymeTypeLabel.value, item.edgeCofactorsLabel.value, item.edgeEnergyReqLabel.value, item.edgePubchem.value, item.edgeRegulation.value, direction);
-        string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
-        //AssetDatabase.CreateAsset(edge,newPath);
-        EdgeSOs.Add(item.edgeLabel.value,edge);
-        // Debug.Log(item.enzymeLabel.value + " edge added");
     }
-}
+
+    // create an EdgeSo instance from the text given in the query Json , unless the edge already exists
+    public void EdgeSOInit(WikibaseBinding item) {
+        if (!(EdgeSOs.ContainsKey(item.edgeLabel.value))) {
+            EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
+            bool direction = false;
+
+            if (item.isBidirectional.value == "true") {
+                direction = true;
+            }
+
+            edge.init(item.edgeLabel.value, item.edgeQID.value, item.edgeDesc.value, item.enzymeLabel.value, item.edgeEnzymeTypeLabel.value, item.edgeCofactorsLabel.value, item.edgeEnergyReqLabel.value, item.edgePubchem.value, item.edgeRegulation.value, direction);
+
+            string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
+            //AssetDatabase.CreateAsset(edge,newPath);
+            EdgeSOs.Add(item.edgeLabel.value, edge);
+
+        }
+    }
+
 
 
 
 // TODO: update init to fit new pathway logic
 // create NodeSO from the Json Query if the node doesnt exists. Add the node to reactant ror products of the edge its invloved in.
-// in case the edge doesnt exists, call EdgeSOInit to create the edge. 
+// in case the edge doesnt exists, call EdgeSOInit to create the edge.
+// add cofactors to the edge
 public void NodeSOInit(WikibaseBinding item){
 
     NodeSO currentNode;
     EdgeSO currentEdge;
     PathwaySO currentPathway;
+    Cofactor currentCofactor;
 
 
     if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
@@ -176,6 +180,25 @@ public void NodeSOInit(WikibaseBinding item){
     }else if(item.isReactant.value == "true"){
         currentEdge.AddReactant(currentNode);   
     }
+    // make cofactor 
+    if (item.isCofactorProduct.value == "true")
+    {
+        currentCofactor = new Cofactor(item.cofactorLabel.value, false);
+    }
+    else if (item.isCofactorReactant.value == "true")
+    {
+        currentCofactor = new Cofactor(item.cofactorLabel.value, true);
+    }
+    else
+    {
+        currentCofactor = null;
+    }
+    // add cofactor
+    if (currentCofactor != null)
+    {
+        currentEdge.AddCofactor(currentCofactor);
+    }
+        
     
     if (!(PathwaySOs.TryGetValue(item.pathwayLabel.value, out currentPathway))){
         PathwaySOInit(item);

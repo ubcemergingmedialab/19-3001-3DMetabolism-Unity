@@ -18,8 +18,8 @@ public class QueryCustomEditor : EditorWindow
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
         "?edgeLabel ?metaboliteLabel ?enzymeLabel ?isBidirectional " +
         "?metaboliteMoleFormula ?metaboliteIUPAC ?metaboliteStrucDesc ?metaboliteCharge ?metabolitePubchem ?metaboliteCID" +
-        "?edgeEnzymeTypeLabel ?edgeCofactorsLabel ?edgeEnergyReqLabel ?edgePubchem ?edgeRegulation " +
-        "?isReactant ?isProduct ?isEnzyme "+
+        "?edgeEnzymeTypeLabel ?cofactorLabel ?edgeEnergyReqLabel ?edgePubchem ?edgeRegulation " +
+        "?isReactant ?isProduct ?isEnzyme ?isCofactorReactant ?isCofactorProduct " +
         "?pathwayDesc ?edgeDesc ?metaboliteDesc where { ";
     public static string queryRawSecond = " p:P4 ?edgeStatement." +
         "?pathway schema:description ?pathwayDesc."+
@@ -58,8 +58,8 @@ public class QueryCustomEditor : EditorWindow
         "(strafter(?prefixedMetabolite,\":\") as ?metaboliteQID) " +
         "?edgeLabel ?metaboliteLabel ?enzymeLabel ?isBidirectional " +
         "?metaboliteMoleFormula ?metaboliteIUPAC ?metaboliteStrucDesc ?metaboliteCharge ?metabolitePubchem " +
-        "?edgeEnzymeTypeLabel ?edgeCofactorsLabel ?edgeEnergyReq ?edgePubchem ?edgeRegulation " +
-        "?isReactant ?isProduct ?isEnzyme "+
+        "?edgeEnzymeTypeLabel ?cofactorLabel ?edgeEnergyReq ?edgePubchem ?edgeRegulation " +
+        "?isReactant ?isProduct ?isEnzyme ?isCofactorReactant ?isCofactorProduct" +
         "?pathwayDesc ?edgeDesc ?metaboliteDesc where {" +
         "?pathway p:P4 ?edgeStatement." +
         "?pathway schema:description ?pathwayDesc."+
@@ -67,6 +67,7 @@ public class QueryCustomEditor : EditorWindow
         "?edge p:P4 ?statement." +
         "?edge schema:description ?edgeDesc." +
         "?edge p:P4 ?enzymeStatement." +
+        "?edge p:P22 ?cofactorStatement." +
         "?enzymeStatement ps:P4 ?enzyme." +
         "?statement ps:P4 ?metabolite." +
         "?metabolite schema:description ?metaboliteDesc." +
@@ -82,6 +83,10 @@ public class QueryCustomEditor : EditorWindow
         "?edge wdt:P13 ?edgeEnergyReq." + //new
         "?edge wdt:P45 ?edgePubchem." + //new
         "?edge wdt:P43 ?edgeRegulation." + //new
+        "?cofactorStatement ps:P22 ?cofactor." +//new
+         "OPTIONAL {?cofactorStatement(pq:P31|pq:P32) ?edge. " +//new
+         "BIND(EXISTS {?cofactorStatement pq:P31? edge} as ? isCofactorReactant) " +//new
+         "BIND(EXISTS {?cofactorStatement pq:P32? edge} as ? isCofactorProduct) } " +//new
         "BIND(REPLACE(STR(?pathway), STR(foaf:), \"foaf:\") AS ?prefixedPathway) " +
         "BIND(replace(str(?edge), str(foaf:), \"foaf:\") as ?prefixedEdge)" +
         "BIND(replace(str(?metabolite), str(foaf:), \"foaf:\") as ?prefixedMetabolite)" +
@@ -90,7 +95,7 @@ public class QueryCustomEditor : EditorWindow
         "BIND ( EXISTS { ?statement pq:P32 ?edge. } as ?isProduct )" +
         "SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n }" ;
 
-    [MenuItem("Window/QueryService")]
+    [MenuItem("Window/QueryServiceEditor")]
     public static void ShowWindow ()
     {
         GetWindow<QueryCustomEditor>("Query Service");
@@ -123,7 +128,7 @@ public class QueryCustomEditor : EditorWindow
 
         if (GUILayout.Button("run query"))
         { 
-            string qRawFull = queryRawFirst + temp + queryRawSecond ;
+            // string qRawFull = queryRawFirst + temp + queryRawSecond ;
 
             GameObject.Find("QueryService").GetComponent<QueryService>().RunQuery(WQS,qRawFull);
             Debug.Log("RunQuery Complete");
