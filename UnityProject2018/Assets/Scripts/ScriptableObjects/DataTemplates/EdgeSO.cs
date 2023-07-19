@@ -20,7 +20,6 @@ public class EdgeSO : GenericSO
 //    public string Description;
     public string Enzyme;
     public string EnzymeClass;
-    public string Cofactors;
     public string EnergyRequired;
     public string Pubchemlink;
     public string Regulation;
@@ -46,7 +45,7 @@ public class EdgeSO : GenericSO
     /// <summary>
     /// Initialize EdgeSO with essential fields
     /// </summary>
-    public void init(string name, string newQID, string desc, string enzymeLabel, string enzymeclass, string cofactors, string energyreq, string pubchem, string regulation, bool bidirectionality = false){
+    public void init(string name, string newQID, string desc, string enzymeLabel, string enzymeclass, string energyreq, string pubchem, string regulation, bool bidirectionality = false){
 
         this.QID = newQID;
         this.name = enzymeLabel;
@@ -60,7 +59,6 @@ public class EdgeSO : GenericSO
         this.cofactors = new List<Cofactor>();
 
         this.EnzymeClass = enzymeclass;
-        this.Cofactors = cofactors;
         this.EnergyRequired = energyreq;
         this.Pubchemlink = pubchem;
         this.Regulation = regulation;

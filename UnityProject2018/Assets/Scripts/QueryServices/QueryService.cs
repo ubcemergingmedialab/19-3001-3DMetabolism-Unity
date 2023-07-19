@@ -126,15 +126,16 @@ public class QueryService : MonoBehaviour
 
     // create an EdgeSo instance from the text given in the query Json , unless the edge already exists
     public void EdgeSOInit(WikibaseBinding item) {
+        bool direction;
         if (!(EdgeSOs.ContainsKey(item.edgeLabel.value))) {
             EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
-            bool direction = false;
+            direction = false;
 
             if (item.isBidirectional.value == "true") {
                 direction = true;
             }
 
-            edge.init(item.edgeLabel.value, item.edgeQID.value, item.edgeDesc.value, item.enzymeLabel.value, item.edgeEnzymeTypeLabel.value, item.edgeCofactorsLabel.value, item.edgeEnergyReqLabel.value, item.edgePubchem.value, item.edgeRegulation.value, direction);
+            edge.init(item.edgeLabel.value, item.edgeQID.value, item.edgeDesc.value, item.enzymeLabel.value, item.edgeEnzymeTypeLabel.value, item.edgeEnergyReqLabel.value, item.edgePubchem.value, item.edgeRegulation.value, direction);
 
             string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
             //AssetDatabase.CreateAsset(edge,newPath);

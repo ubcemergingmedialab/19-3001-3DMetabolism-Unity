@@ -42,7 +42,7 @@ public class EdgeDataDisplay : MonoBehaviour
         DisplayData.Description = edgeData.Description;
         DisplayData.EnzymeClass = edgeData.EnzymeClass;
         DisplayData.Enzyme = edgeData.Enzyme;
-        DisplayData.Cofactors = edgeData.Cofactors;
+        //DisplayData.Cofactors = edgeData.Cofactors;
         DisplayData.EnergyRequired = edgeData.EnergyRequired;
         DisplayData.Pubchemlink = edgeData.Pubchemlink;
         DisplayData.Regulation = edgeData.Regulation;
@@ -53,7 +53,7 @@ public class EdgeDataDisplay : MonoBehaviour
             DisplayData.AuxQID = partnerData.QID;
             DisplayData.AuxDescription = partnerData.Description;
             DisplayData.AuxEnzymeClass = partnerData.EnzymeClass;
-            DisplayData.AuxCofactors = partnerData.Cofactors;
+            //DisplayData.AuxCofactors = partnerData.Cofactors;
             DisplayData.AuxEnergyRequired = partnerData.EnergyRequired;
             DisplayData.AuxPubchemlink = partnerData.Pubchemlink;
             DisplayData.AuxRegulation = partnerData.Regulation;
