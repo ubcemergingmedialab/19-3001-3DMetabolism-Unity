@@ -55,9 +55,9 @@ public class PrefabService : MonoBehaviour
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
-        GameObject[] objs = GameObject.FindGameObjectsWithTag(edgeName); 
-        foreach (GameObject obj in objs) 
-        {    
+        GameObject obj = GameObject.Find(edgeName); 
+//        foreach (GameObject obj in objs) 
+//        {    
             if (obj != null) {
                 if(obj.GetComponentInChildren<EdgeDataDisplay>().edgeData == null) {
                     
@@ -67,11 +67,11 @@ public class PrefabService : MonoBehaviour
                     // Instantiate edge label on top of the edge
                     obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
                 }
-                AttachOutlineScript(obj.transform.parent.gameObject);
+                AttachOutlineScript(obj.transform.gameObject);
             } else {
                 Debug.LogError("Edge scriptable object not connected to prefab :" + edgeName);
             }
-        }
+//        }
     }
 
     /// <summary>

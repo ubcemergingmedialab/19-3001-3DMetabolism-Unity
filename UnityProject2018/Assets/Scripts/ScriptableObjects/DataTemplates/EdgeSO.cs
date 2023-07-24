@@ -27,7 +27,7 @@ public class EdgeSO : GenericSO
     public List<NodeSO> reactants;
     public List<NodeSO> products;
 
-    public List<Cofactor> cofactors; // to avoid duplicates
+    public List<Cofactor> cofactors;
 
     public bool bidirectional;
 
@@ -37,7 +37,6 @@ public class EdgeSO : GenericSO
     public string AuxQID;
     public string AuxDescription;
     public string AuxEnzymeClass;
-    public string AuxCofactors;
     public string AuxEnergyRequired;
     public string AuxPubchemlink;
     public string AuxRegulation;

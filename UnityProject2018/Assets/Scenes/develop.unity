@@ -14402,7 +14402,7 @@ Transform:
   m_GameObject: {fileID: 570849195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06420567, y: 0.06420567, z: 0.06420567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 988872253906518422}
@@ -14777,7 +14777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.7247}
+  m_AnchoredPosition: {x: 0, y: 484.72485}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -41762,7 +41762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1674814836
 Transform:
   m_ObjectHideFlags: 0
@@ -57503,6 +57503,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 74174290493249814, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aspartate aminotransferase (cytosol)
+      objectReference: {fileID: 0}
     - target: {fileID: 77841547012800468, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -57542,6 +57547,11 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 105431340028599169, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ornithine-citruline antiporter
       objectReference: {fileID: 0}
     - target: {fileID: 112793135035102488, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -57628,6 +57638,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 178887100229895518, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glycogen synthase
+      objectReference: {fileID: 0}
     - target: {fileID: 194760868814278817, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -57647,6 +57662,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 211743360875245556, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: ornithine transcarbamoylase
+      objectReference: {fileID: 0}
+    - target: {fileID: 211743360875245556, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ornithine transcarbamoylase
       objectReference: {fileID: 0}
     - target: {fileID: 217108345660460814, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -57905,6 +57930,21 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 302503691344740643, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 15.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 302503691344740643, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 18.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 302503691344740643, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 5.05
+      objectReference: {fileID: 0}
     - target: {fileID: 318947264041592161, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -58070,10 +58110,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 489439836799406629, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphopentose epimerase
+      objectReference: {fileID: 0}
     - target: {fileID: 490338486820015788, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 492280715157447065, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fructose-1,6-bisphosphatase
       objectReference: {fileID: 0}
     - target: {fileID: 500712565785255688, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -58210,11 +58260,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 553605355396803141, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: succinate dehydrogenase
+      objectReference: {fileID: 0}
     - target: {fileID: 562145972993478063, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 563650424406877661, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: citrate lyase
+      objectReference: {fileID: 0}
     - target: {fileID: 583022434707760810, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -60844,6 +60904,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 741078270190787334, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphopentose isomerase
+      objectReference: {fileID: 0}
     - target: {fileID: 745729097586509422, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
@@ -61010,6 +61075,11 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 794896313169355129, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP reductase
+      objectReference: {fileID: 0}
     - target: {fileID: 808688677824588868, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -61105,6 +61175,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.42358887
       objectReference: {fileID: 0}
+    - target: {fileID: 820362800747568584, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: glutaminase
+      objectReference: {fileID: 0}
+    - target: {fileID: 820362800747568584, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glutaminase
+      objectReference: {fileID: 0}
     - target: {fileID: 823788131965565412, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -61160,6 +61240,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.4234607
       objectReference: {fileID: 0}
+    - target: {fileID: 844234574409342011, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: maleylacetoacetate
+      objectReference: {fileID: 0}
     - target: {fileID: 880214954362548962, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -61194,6 +61279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 890472216206110285, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: carbamoyl phosphate synthetase I
       objectReference: {fileID: 0}
     - target: {fileID: 908112964267918559, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -61259,6 +61349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.70707446
+      objectReference: {fileID: 0}
+    - target: {fileID: 942063895600004477, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: pyruvate carboxylase
       objectReference: {fileID: 0}
     - target: {fileID: 943220577006406646, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -61425,6 +61520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029634019670266120, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: maleyloacetate isomerase
       objectReference: {fileID: 0}
     - target: {fileID: 1030482553918718588, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -62253,6 +62353,16 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1217989518801137752, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237375297785352104, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -149.49
+      objectReference: {fileID: 0}
     - target: {fileID: 1278285416549484073, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -62660,6 +62770,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1364852884879176850, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: complex III
+      objectReference: {fileID: 0}
     - target: {fileID: 1366022593618777904, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -62811,6 +62926,16 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1470510565297098950, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480210416393019376, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoglycerate mutase
+      objectReference: {fileID: 0}
     - target: {fileID: 1490896833165370862, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_fontSize
@@ -62967,6 +63092,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1510888692458360428, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: HMG-CoA lyase
+      objectReference: {fileID: 0}
     - target: {fileID: 1515652220892036664, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -63037,6 +63167,16 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1575696655764950808, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: triose phosphate isomerase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575696655764950808, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: triose phosphate isomerase
+      objectReference: {fileID: 0}
     - target: {fileID: 1577183039388093558, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -63081,6 +63221,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.51850015
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598299422074521146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.267577
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598299422074521146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 26.486698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598299422074521146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 8.148176
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598299422074521146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 1.1491475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598299422074521146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 4.058584
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598299422074521146, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.38978478
       objectReference: {fileID: 0}
     - target: {fileID: 1613659821899761668, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -65638,6 +65808,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1827214517434643834, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glucose-6-phosphatase
+      objectReference: {fileID: 0}
     - target: {fileID: 1850920821495218587, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -65778,6 +65953,16 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1919398839734746558, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: transketolase (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919398839734746558, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 1922521444271301274, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -65817,6 +66002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.6502459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938398239906497651, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fumarase (cytosol)
       objectReference: {fileID: 0}
     - target: {fileID: 1943417022545499982, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -65939,6 +66129,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 2031802078942283191, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: HMG CoA synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031802078942283191, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: HMG CoA Synthase
+      objectReference: {fileID: 0}
     - target: {fileID: 2032929683963314760, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -65953,6 +66153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070649511649942053, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fumarase (mitochondrion)
       objectReference: {fileID: 0}
     - target: {fileID: 2072838580280413166, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -65984,6 +66189,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 2113304058592761362, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: isocitrate dehydrogenase
+      objectReference: {fileID: 0}
     - target: {fileID: 2118947522574876524, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -66539,6 +66749,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 2317531578168398230, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: p-hydroxyphenylpyruvate dioxygenase
+      objectReference: {fileID: 0}
     - target: {fileID: 2322875221643677601, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -66794,6 +67009,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 2472253394038318823, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: alanine aminotransferase
+      objectReference: {fileID: 0}
     - target: {fileID: 2480285507095124075, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -66843,6 +67063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523015061009981222, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aspartate-glutamate transporter
       objectReference: {fileID: 0}
     - target: {fileID: 2536779891918314884, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -66949,6 +67174,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 2652614473573479890, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Synthetase
+      objectReference: {fileID: 0}
     - target: {fileID: 2663224044575094037, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_fontSize
@@ -67080,10 +67310,25 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2721059833405803055, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphohexose isomerase
+      objectReference: {fileID: 0}
     - target: {fileID: 2723116286269463361, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734943277908331578, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734943277908331578, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glutamate dehydrogenase
       objectReference: {fileID: 0}
     - target: {fileID: 2737539012757885559, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -67163,10 +67408,25 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.7057354
       objectReference: {fileID: 0}
+    - target: {fileID: 2774118517862016249, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: aldolase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774118517862016249, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aldolase
+      objectReference: {fileID: 0}
     - target: {fileID: 2776074028659635991, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804550758506298909, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: thioesterase
       objectReference: {fileID: 0}
     - target: {fileID: 2826871921329495059, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -67217,6 +67477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853117247549719269, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: D-beta-hydroxybutyrate dehydrogenase
       objectReference: {fileID: 0}
     - target: {fileID: 2863823652276905079, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -67347,6 +67612,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940287170185288849, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: arginase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940287170185288849, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: arginase
       objectReference: {fileID: 0}
     - target: {fileID: 2961743131558795067, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -67791,6 +68066,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.53151536
       objectReference: {fileID: 0}
+    - target: {fileID: 3099283415588711113, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 1,3-bisphosphoglycerate
+      objectReference: {fileID: 0}
     - target: {fileID: 3105484612239629630, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -67846,6 +68126,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3139207811047552195, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoenolpyruvate carboxykinase (mitochondrion)
+      objectReference: {fileID: 0}
     - target: {fileID: 3146818063968153960, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -67870,6 +68155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.55613065
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151431898456181714, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glycerol-3-phosphate dehydrogenase (cytosol)
       objectReference: {fileID: 0}
     - target: {fileID: 3161488398543074620, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -67905,6 +68195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161488741825843322, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: complex IV
       objectReference: {fileID: 0}
     - target: {fileID: 3176932929939490746, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -68046,6 +68341,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3291021548926121288, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glycerol-3-phosphate dehydrogenase
+      objectReference: {fileID: 0}
     - target: {fileID: 3291344298158212471, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -68096,6 +68396,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 3319343826912753660, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: acetoacetate decarboxylase
+      objectReference: {fileID: 0}
     - target: {fileID: 3334536343564740495, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -68366,6 +68671,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3439897857921907184, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: lactate dehydrogenase
+      objectReference: {fileID: 0}
     - target: {fileID: 3449993849060219484, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -68580,6 +68890,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612894506882074984, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: transketolase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612894506882074984, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transketolase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627760991777677358, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: fumarylacetoacetase
       objectReference: {fileID: 0}
     - target: {fileID: 3630583421359478731, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -68926,6 +69251,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a69396fa118adca4ca8d11338f3e29ac, type: 2}
+    - target: {fileID: 3887416907876832057, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: citrate synthase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887416907876832057, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: citrate synthase
+      objectReference: {fileID: 0}
     - target: {fileID: 3904996201172459790, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -69046,6 +69381,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 4066449509252795696, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
+      objectReference: {fileID: 0}
     - target: {fileID: 4088694787035505222, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Enabled
@@ -69146,6 +69486,36 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 4143889129525150515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 12.010725
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143889129525150515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 9.893936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143889129525150515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 8.797336
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143889129525150515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.7740913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143889129525150515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.9469678
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143889129525150515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.42042303
+      objectReference: {fileID: 0}
     - target: {fileID: 4148774941979975825, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -69196,6 +69566,16 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4183561592057836880, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hydroxyacyl-CoA Dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199866827279195006, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aspartate aminotransferase (mitochondrion)
+      objectReference: {fileID: 0}
     - target: {fileID: 4203461954983354043, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -69230,6 +69610,11 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216538465690660623, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glucose-6-phosphate dehydrogenase
       objectReference: {fileID: 0}
     - target: {fileID: 4261112575250222783, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -69602,6 +69987,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4450491945636222844, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine-Acyl-Carnitine Cotransporter (membrane)
+      objectReference: {fileID: 0}
     - target: {fileID: 4471050038292212623, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -69737,6 +70127,16 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524456919705994548, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: argininosuccinase
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524456919705994548, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: argininosuccinase
       objectReference: {fileID: 0}
     - target: {fileID: 4528066994139060706, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -69993,6 +70393,16 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 4664157808292466488, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: malate dehydrogenase (cytosol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697551401367165801, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: succinyl CoA synthetase
+      objectReference: {fileID: 0}
     - target: {fileID: 4701643220698653837, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
@@ -70007,6 +70417,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738154242711840372, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: "debranching enzyme ( \u03B1-1,6-glucosidase)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738154242711840372, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: debranching enzyme (specifically, alpha-1,6-glucosidase)
       objectReference: {fileID: 0}
     - target: {fileID: 4744505678099343010, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -70057,6 +70477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780268135508195482, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: hexokinase
       objectReference: {fileID: 0}
     - target: {fileID: 4781635113131969152, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -70258,6 +70683,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4909281410812040508, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: malate dehydrogenase (mitochondrion)
+      objectReference: {fileID: 0}
     - target: {fileID: 4913536884848877395, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -70433,6 +70863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_enableWordWrapping
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979330257760411824, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoenolpyruvate carboxykinase (cytosol)
       objectReference: {fileID: 0}
     - target: {fileID: 4988298364312499349, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -70734,6 +71169,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5129459115002201224, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine Acyltransferase 1 (CPT1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5143952945356577611, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
@@ -70743,6 +71183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168421511760289847, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: pyruvate kinase
       objectReference: {fileID: 0}
     - target: {fileID: 5172495430938529817, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -71041,6 +71486,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5358154412634120685, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6-phosphogluconate
+      objectReference: {fileID: 0}
     - target: {fileID: 5385149508060030435, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -71085,6 +71535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.50086236
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399215312556629632, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphofructokinase-1
       objectReference: {fileID: 0}
     - target: {fileID: 5419263276553431678, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -71146,6 +71601,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 5488917335711504637, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Acetyltransferase (Thiolase)
+      objectReference: {fileID: 0}
     - target: {fileID: 5489118324739272322, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -71461,6 +71921,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.4979253
       objectReference: {fileID: 0}
+    - target: {fileID: 5743203416735306008, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6-phosphoglucono-delta-lactone
+      objectReference: {fileID: 0}
     - target: {fileID: 5746598614321285400, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -71495,6 +71960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748197879526589268, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Acyl-CoA Dehydrogenase
       objectReference: {fileID: 0}
     - target: {fileID: 5751234043508108555, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -71601,6 +72071,21 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 5819539991191944075, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819539991191944075, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819539991191944075, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5823076639205428262, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -73584,6 +74069,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6231013779329412002, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: aconitase
+      objectReference: {fileID: 0}
     - target: {fileID: 6241929845282013483, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -73624,6 +74114,36 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 6254337408630185245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 13.442806
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254337408630185245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 14.508366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254337408630185245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 7.6542234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254337408630185245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.12019252
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254337408630185245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.36521244
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254337408630185245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.2625128
+      objectReference: {fileID: 0}
     - target: {fileID: 6257555347678775256, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -73669,10 +74189,25 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.7049312
       objectReference: {fileID: 0}
+    - target: {fileID: 6265449743809162154, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: glutamate dehydrogenase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265449743809162154, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glutamate dehydrogenase
+      objectReference: {fileID: 0}
     - target: {fileID: 6287970757814747292, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316229168717227886, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: complex II
       objectReference: {fileID: 0}
     - target: {fileID: 6317375306526516064, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -73763,6 +74298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367163036695449173, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6-phosphogluconate dehydrogenase
       objectReference: {fileID: 0}
     - target: {fileID: 6377316374611847879, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -74055,11 +74595,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 6533046695431405245, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: enoyl-ACP reductase
+      objectReference: {fileID: 0}
     - target: {fileID: 6545640391322557324, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 6546749375878417167, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carnitine Acyltransferase 2 (CPT2) (membrane)
+      objectReference: {fileID: 0}
     - target: {fileID: 6553286935028005494, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -74160,11 +74710,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6677050033031020514, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-hydroxyacyl-ACP dehydratase
+      objectReference: {fileID: 0}
     - target: {fileID: 6693672284876175675, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 6699477839214788463, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phenylalanine hydroxylase
+      objectReference: {fileID: 0}
     - target: {fileID: 6712263690791797277, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Mesh
@@ -74351,6 +74911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815294102739766824, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: ATP-synthase
       objectReference: {fileID: 0}
     - target: {fileID: 6823869610117814451, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -74704,6 +75269,31 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 7176762230548381942, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.573542
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176762230548381942, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 26.366566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176762230548381942, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000029027865
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176762230548381942, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.54271615
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176762230548381942, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 1.9167634
+      objectReference: {fileID: 0}
     - target: {fileID: 7184991982989075792, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -74980,6 +75570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.001883961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277150945123486605, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: complex I
       objectReference: {fileID: 0}
     - target: {fileID: 7294034023413803552, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -75579,6 +76174,36 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7447559466970283155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 11.576959
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447559466970283155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 11.549198
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447559466970283155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 14.733715
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447559466970283155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.055477165
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447559466970283155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 4.7745895
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447559466970283155, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.15694429
+      objectReference: {fileID: 0}
     - target: {fileID: 7448785701149548660, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -75845,6 +76470,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 7610905923949332152, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: homogentisate 1,2-dioxygenase
+      objectReference: {fileID: 0}
     - target: {fileID: 7615814856855294577, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -75854,6 +76484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620528028908793106, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoglucose mutase
       objectReference: {fileID: 0}
     - target: {fileID: 7627184977205190984, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -75880,6 +76515,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0000002518614
       objectReference: {fileID: 0}
+    - target: {fileID: 7632728487070331517, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 16.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632728487070331517, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 20.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632728487070331517, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 6.04
+      objectReference: {fileID: 0}
     - target: {fileID: 7654977827915645258, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -75904,6 +76554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677446893996921981, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enoyl-CoA Hydratase
       objectReference: {fileID: 0}
     - target: {fileID: 7692108455722897934, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -79436,6 +80091,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7852531592741670186, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: thiolase II
+      objectReference: {fileID: 0}
     - target: {fileID: 7857791160011057635, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -79490,6 +80150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926704853129118769, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: phosphoglycerate kinase
       objectReference: {fileID: 0}
     - target: {fileID: 7935859025707256585, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -79727,6 +80392,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 8079999658665562402, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 14.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079999658665562402, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 18.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079999658665562402, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 6.76
+      objectReference: {fileID: 0}
     - target: {fileID: 8081264545021728401, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -79757,6 +80437,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 8091346173309726568, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 2-phosphoglycerate
+      objectReference: {fileID: 0}
     - target: {fileID: 8091967498267133312, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -79781,6 +80466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153964749755424594, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
       objectReference: {fileID: 0}
     - target: {fileID: 8155893066388252469, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -79853,6 +80543,11 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8179291022662847566, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: glycogen phosphorylase
+      objectReference: {fileID: 0}
     - target: {fileID: 8187990048437636260, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -79913,6 +80608,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 8218099313193927272, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: transaldolase
+      objectReference: {fileID: 0}
     - target: {fileID: 8219785887406104606, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -79972,6 +80672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.7069022
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295877754171372289, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: malate-alpha-ketoglutarate transporter
       objectReference: {fileID: 0}
     - target: {fileID: 8302539373953330581, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -80510,6 +81215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490857735449903729, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: UDP-glucose pyrophosphorylase
       objectReference: {fileID: 0}
     - target: {fileID: 8500900355939905614, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -81176,6 +81886,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 8507091036249143122, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: enolase
+      objectReference: {fileID: 0}
     - target: {fileID: 8507283708194250413, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -81220,6 +81935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.7071066
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552564507061003533, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: acetyl-CoA carboxylase
       objectReference: {fileID: 0}
     - target: {fileID: 8561375702678740548, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -82797,6 +83517,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8606886505540936507, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: mitochondrial pyruvate carrier
+      objectReference: {fileID: 0}
     - target: {fileID: 8618265218966330185, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -83293,6 +84018,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 8981874620446407270, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: gluconolactonase
+      objectReference: {fileID: 0}
     - target: {fileID: 8994813654721471899, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_TagString
@@ -83312,6 +84042,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025600124035130989, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052860927191749818, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: argininosuccinate synthetase
       objectReference: {fileID: 0}
     - target: {fileID: 9062273126351431915, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -83357,6 +84097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096677329611403887, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: 3-phosphoglycerate
       objectReference: {fileID: 0}
     - target: {fileID: 9111460598346571883, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -83448,11 +84193,36 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 9170938475450849262, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 14.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170938475450849262, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 18.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170938475450849262, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 7.58
+      objectReference: {fileID: 0}
     - target: {fileID: 9175754831563120507, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
+    - target: {fileID: 9184562418754686888, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: pyruvate dehydrogenase complex
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186607249341194755, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: tyrosine aminotransferase
+      objectReference: {fileID: 0}
     - target: {fileID: 9191817784738892211, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w

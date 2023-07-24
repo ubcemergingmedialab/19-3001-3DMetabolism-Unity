@@ -151,13 +151,11 @@ public class StatusController : MonoBehaviour
 
         foreach (NodeSO nodeSO in listOfNodes)
         {                                                                 // For every nodeSO in this pathway
-            GameObject[] nodes = GameObject.FindGameObjectsWithTag(nodeSO.name);
+            GameObject node = GameObject.Find(nodeSO.name);
 
-            foreach (GameObject node in nodes)
-            {
                 if (node != null)
                 {
-                    HighlightHandler hl = node.GetComponent<HighlightHandler>();                                // find the nodes handler
+                    HighlightHandler hl = node.GetComponentInChildren<HighlightHandler>();                                // find the nodes handler
                     if (hl == null)
                     {
                         Debug.LogError("StatusController :higlightHandler is null ");
@@ -173,18 +171,17 @@ public class StatusController : MonoBehaviour
                         elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });                // Make a new list if node is not yet in the Dictionary 
                     }
                 }
-            }
+            
         }
 
         foreach (EdgeSO edgeSO in listOfEdges)
         {                                                             // For every edge in this pathway (same proccess as nodes)
-            GameObject[] edges = GameObject.FindGameObjectsWithTag(edgeSO.name);
+            GameObject edge = GameObject.Find(edgeSO.name);
 
-            foreach (GameObject edge in edges)
-            {
+
                 if (edge != null)
                 {
-                    HighlightHandler hl = edge.GetComponent<HighlightHandler>();
+                    HighlightHandler hl = edge.GetComponentInChildren<HighlightHandler>();
                     List<HighlightPathway> sharingPathways;
 
                     if (elementToPathways.TryGetValue(hl, out sharingPathways))
@@ -196,7 +193,7 @@ public class StatusController : MonoBehaviour
                         elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });
                     }
                 }
-            }
+            
         }
         inputPathway.FillLists();
     }
