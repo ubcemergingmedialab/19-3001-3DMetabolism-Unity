@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using JetBrains.Annotations;
 
 public class PrefabService : MonoBehaviour
 {
@@ -55,23 +56,55 @@ public class PrefabService : MonoBehaviour
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
         string edgeName = edge.name; 
-        GameObject obj = GameObject.Find(edgeName); 
-//        foreach (GameObject obj in objs) 
-//        {    
-            if (obj != null) {
-                if(obj.GetComponentInChildren<EdgeDataDisplay>().edgeData == null) {
-                    
-                    // Assign Edge data to Edge gameobject
-                    obj.GetComponentInChildren<EdgeDataDisplay>().edgeData = edge;
+        GameObject obj = GameObject.Find(edgeName);
 
-                    // Instantiate edge label on top of the edge
-                    obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
-                }
-                AttachOutlineScript(obj.transform.gameObject);
-            } else {
-                Debug.LogError("Edge scriptable object not connected to prefab :" + edgeName);
+        int sharedEdgeEnzymes = 0;
+
+        if (obj == null)
+        {
+            int maxIterations = 10;
+
+            for (int i = 1; i < maxIterations; i++)
+            {
+                if (GameObject.Find(edgeName + ".00" + i.ToString()))
+                    sharedEdgeEnzymes = i;
             }
+        }
+
+        if (sharedEdgeEnzymes > 0)
+        {
+            for (int i = 1; i < sharedEdgeEnzymes + 1; i++)
+            {
+                obj = GameObject.Find(edgeName + ".00" + i.ToString());
+                AssignEdgeData(obj, edge);
+            }
+        }
+        else
+        {
+            AssignEdgeData(obj, edge);
+        }
 //        }
+    }
+
+    void AssignEdgeData(GameObject obj, EdgeSO edge)
+    {
+        if (obj != null)
+        {
+            if (obj.GetComponentInChildren<EdgeDataDisplay>().edgeData == null)
+            {
+
+                // Assign Edge data to Edge gameobject
+                obj.GetComponentInChildren<EdgeDataDisplay>().edgeData = edge;
+
+                // Instantiate edge label on top of the edge
+                obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
+            }
+            AttachOutlineScript(obj.transform.gameObject);
+        }
+        else
+        {
+            Debug.LogError("Edge scriptable object not connected to prefab :" + edge.name);
+        }
     }
 
     /// <summary>

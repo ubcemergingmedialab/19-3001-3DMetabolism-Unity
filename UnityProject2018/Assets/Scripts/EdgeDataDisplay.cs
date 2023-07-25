@@ -97,6 +97,10 @@ public class EdgeDataDisplay : MonoBehaviour
                 gameObject.GetComponent<ShowTextOnHover>().text = instantiatedLabel.GetComponent<TextMeshPro>();
             }
 
+            GetComponent<BoxCollider>().enabled = false;
+            gameObject.AddComponent<MeshCollider>();
+            GetComponent<MeshCollider>().sharedMesh = GetComponentInParent<MeshFilter>().sharedMesh;
+
         }
 
         else
