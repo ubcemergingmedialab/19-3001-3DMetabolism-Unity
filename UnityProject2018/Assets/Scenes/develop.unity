@@ -14777,7 +14777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.72485}
+  m_AnchoredPosition: {x: 0, y: 484.72476}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -69989,6 +69989,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450491945636222844, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
+      propertyPath: m_Name
+      value: carnitine-acyl-carnitine cotransporter (membrane)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450491945636222844, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
       propertyPath: m_TagString
       value: Carnitine-Acyl-Carnitine Cotransporter (membrane)
       objectReference: {fileID: 0}
@@ -70421,7 +70426,7 @@ PrefabInstance:
     - target: {fileID: 4738154242711840372, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Name
-      value: "debranching enzyme ( \u03B1-1,6-glucosidase)"
+      value: "debranching enzyme (\u03B1-1,6-glucosidase)"
       objectReference: {fileID: 0}
     - target: {fileID: 4738154242711840372, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -71603,6 +71608,11 @@ PrefabInstance:
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 5488917335711504637, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
+      propertyPath: m_Name
+      value: acyl-CoA acetyltransferase (thiolase)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488917335711504637, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
       propertyPath: m_TagString
       value: Acyl-CoA Acetyltransferase (Thiolase)
       objectReference: {fileID: 0}
@@ -71920,6 +71930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.4979253
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743203416735306008, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: 6-phosphoglucono-D-lactone
       objectReference: {fileID: 0}
     - target: {fileID: 5743203416735306008, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -80672,6 +80687,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.7069022
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295877754171372289, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: "malate-\u03B1-ketoglutarate transporter"
       objectReference: {fileID: 0}
     - target: {fileID: 8295877754171372289, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
