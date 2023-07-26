@@ -25,9 +25,9 @@ public class MouseOrbit : MonoBehaviour
     public float yMinLimit = -20f;
     public float yMaxLimit = 80f;
 
-    public float dragSpeed = 1f;
-    public float rotationSpeed = 5f;
-    public float zoomSpeed = 100f;
+    public float dragSpeed = 10f;
+    public float rotationSpeed = 50f;
+    public float zoomSpeed = 1000f;
     public float distanceMin = .5f;
     public float distanceMax = 35f;
 
