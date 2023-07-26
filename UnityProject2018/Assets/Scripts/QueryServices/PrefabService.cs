@@ -83,7 +83,6 @@ public class PrefabService : MonoBehaviour
         {
             AssignEdgeData(obj, edge);
         }
-//        }
     }
 
     void AssignEdgeData(GameObject obj, EdgeSO edge)

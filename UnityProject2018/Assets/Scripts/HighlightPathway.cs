@@ -69,18 +69,15 @@ public class HighlightPathway
     {
         foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
         {
-            foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-            {
-                node.GetComponent<HighlightHandler>().UpdateHighlight();
-            }
+            GameObject node = GameObject.Find(nodeSO.name);
+            node.GetComponentInChildren<HighlightHandler>().UpdateHighlight();
+            
 
         }
         foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
         {
-            foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-            {
-                edge.GetComponent<HighlightHandler>().UpdateHighlight();
-            }
+            GameObject edge = GameObject.Find(edgeSO.name);
+            edge.GetComponentInChildren<HighlightHandler>().UpdateHighlight();
         }
         
     }
