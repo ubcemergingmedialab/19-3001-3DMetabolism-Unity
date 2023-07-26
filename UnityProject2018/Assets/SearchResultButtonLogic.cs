@@ -97,18 +97,14 @@ public class SearchResultButtonLogic : MonoBehaviour
     {
         foreach (NodeSO nodeSO in pathwaySO.nodes)
         {
-            foreach (GameObject node in GameObject.FindGameObjectsWithTag(nodeSO.name))
-            {
-                node.GetComponentInParent<Outline>().enabled = true;
-            }
+            GameObject node = GameObject.Find(nodeSO.name);
+            node.GetComponentInParent<Outline>().enabled = true;
 
         }
         foreach (EdgeSO edgeSO in pathwaySO.edges)
         {
-            foreach (GameObject edge in GameObject.FindGameObjectsWithTag(edgeSO.name))
-            {
-                edge.GetComponentInParent<Outline>().enabled = true;
-            }
+            GameObject edge = GameObject.Find(edgeSO.name);
+            edge.GetComponentInParent<Outline>().enabled = true;
         }
     }
 
