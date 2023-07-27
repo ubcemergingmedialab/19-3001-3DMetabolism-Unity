@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -106,6 +106,116 @@ public class EdgeDataDisplay : MonoBehaviour
         else
         {
             Debug.Log("Missing edgelabel prefab");
+        }
+
+    }
+
+    public void InstantiateCofactors()
+    {      
+
+        for (int i = 0; i < edgeData.cofactors.Count; i++)
+        {
+            GameObject cofactorPrefab = Resources.Load<GameObject>("Prefabs/Cofactor");
+            GameObject instantiatedcofactor = Instantiate(cofactorPrefab);
+
+            instantiatedcofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
+            instantiatedcofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>");
+
+            instantiatedcofactor.GetComponent<CofactorLabel>().edgeObject = gameObject;
+            instantiatedcofactor.GetComponent<CofactorLabel>().edgeDataDisplay = this;
+
+            ReparentCofactor(instantiatedcofactor, edgeData.cofactors[i].isReactant);
+            
+        }
+
+        if (edgeData.bidirectional)
+        {
+            for (int i = 0; i < edgeData.cofactors.Count; i++)
+            {
+                GameObject cofactorPrefab = Resources.Load<GameObject>("Prefabs/Cofactor");
+                GameObject instantiatedcofactor = Instantiate(cofactorPrefab);
+
+                instantiatedcofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
+                instantiatedcofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>");
+                
+                instantiatedcofactor.GetComponent<CofactorLabel>().edgeObject = gameObject;
+                instantiatedcofactor.GetComponent<CofactorLabel>().edgeDataDisplay = this;
+
+                ReparentCofactor(instantiatedcofactor, edgeData.cofactors[i].isReactant, true);
+
+
+            }
+        }
+
+    }
+
+    void ReparentCofactor(GameObject cofactor, bool isReactant, bool bidirectional = false)
+    {
+        Transform parent = transform;
+        Transform biparent = transform;
+
+        if (bidirectional)
+        {
+            if (isReactant)
+            {
+                if (bidirectional)
+                {
+                    parent = transform.parent.Find("Reactant.B");
+                }
+                else
+                {
+                    parent = transform.parent.Find("Reactant.A");
+                }
+            }
+            else
+            {
+                if (bidirectional)
+                {
+                    parent = transform.parent.Find("Product.B");
+                }
+                else
+                {
+                    parent = transform.parent.Find("Product.A");
+                }
+            }
+        }
+        else
+        {
+            if (isReactant)
+            {
+                for (int i = 0; i < transform.parent.childCount; i++)
+                {
+                    if (transform.parent.GetChild(i).name.Contains("Reactant"))
+                        parent = transform.parent.GetChild(i);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < transform.parent.childCount; i++)
+                {
+                    if (transform.parent.GetChild(i).name.Contains("Product"))
+                        parent = transform.parent.GetChild(i);
+                }
+            }
+        }
+        if (parent != null)
+        {
+            GameObject cofactorParent = Resources.Load<GameObject>("Prefabs/CofactorParent");
+            GameObject instantiatedCofactorParent = Instantiate(cofactorParent);
+
+            instantiatedCofactorParent.transform.SetParent(CofactorLabelsManager.Instance.gameObject.transform, true);
+            instantiatedCofactorParent.transform.position = parent.position;
+
+            cofactorParent.GetComponent<CofactorParent>().parentID = parent.name;// cofactor.GetComponent<CofactorLabel>().edgeDataDisplay
+            cofactorParent.GetComponent<CofactorParent>().edgeDataDisplay = cofactor.GetComponent<CofactorLabel>().edgeDataDisplay;
+            CofactorLabelsManager.Instance.AddCofactorParent(cofactorParent.GetComponent<CofactorParent>());
+
+            cofactor.transform.SetParent(instantiatedCofactorParent.transform, false);
+            cofactor.transform.localPosition = Vector3.zero;
+        }
+        else
+        {
+            Debug.Log("Couldn't find a parent for Cofactor: " + cofactor.GetComponent<CofactorLabel>().edgeDataDisplay.edgeData.Enzyme);
         }
     }
 

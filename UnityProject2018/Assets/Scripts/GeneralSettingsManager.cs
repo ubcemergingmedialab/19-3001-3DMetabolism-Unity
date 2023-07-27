@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ using static NodeTextDisplay;
 public enum SettingsCategory { metabolite, reaction, pathway, cofactor, cofactorPart }
 public enum SettingsType { all, highlight, accent }
 public enum SettingsValue { on, off }
-public enum CofactorType { atp, adp, nadpos, nadh, h2o, co2, fad, fadh, p1, amp }
+public enum CofactorType { atp, adp, nadpos, nadh, h2o, co2, fad, fadh, p1, amp, gdp, gtp,  }
 
 public class GeneralSettingsManager : MonoBehaviour
 {
@@ -267,6 +267,81 @@ public class GeneralSettingsManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public Color GetCofactorColor(string cofactorLabel)
+    {
+        CofactorType cofactorType;
+
+        string fixedCofactorLabel = cofactorLabel.Replace("⁺", "pos").Replace("₂", "2");
+
+        if (fixedCofactorLabel.Contains("NAD"))
+            fixedCofactorLabel = "nadh";
+        if (fixedCofactorLabel.Contains("phosphate"))
+            fixedCofactorLabel = "p1";
+        if (fixedCofactorLabel.Contains("FADH"))
+            fixedCofactorLabel = "FAD";
+
+        if (Enum.TryParse<CofactorType>(fixedCofactorLabel, true, out cofactorType))
+        {
+
+        }
+        else
+        {
+            Debug.Log("Could not get cofactor color from cofactor label: " + cofactorLabel);
+        }
+
+        
+
+        Color newColor = Color.white;
+        switch (cofactorType)
+        {
+            case CofactorType.atp:
+                newColor = GetColorFromHex("#E9E29C");
+                break;
+            case CofactorType.adp:
+                newColor = GetColorFromHex("#E9E29C");
+                break;
+            case CofactorType.nadpos:
+                newColor = GetColorFromHex("#9CCB86");
+                break;
+            case CofactorType.nadh:
+                newColor = GetColorFromHex("#9CCB86");
+                break;
+            case CofactorType.h2o:
+                newColor = GetColorFromHex("#6BF5F5");
+                break;
+            case CofactorType.co2:
+                newColor = GetColorFromHex("#E4F1F7");
+                break;
+            case CofactorType.fad:
+                newColor = GetColorFromHex("#F2ACCA");
+                break;
+            case CofactorType.fadh:
+                newColor = GetColorFromHex("#F2ACCA");
+                break;
+            case CofactorType.p1:
+                newColor = GetColorFromHex("#EEB479");
+                break;
+            case CofactorType.amp:
+                newColor = GetColorFromHex("#FFCA65");
+                break;
+        }
+
+        return newColor;
+    }
+
+    Color GetColorFromHex(string hex)
+    {
+        Color color = Color.white; // Default color if the conversion fails
+
+        if (ColorUtility.TryParseHtmlString(hex, out color))
+        {
+            return color;
+        }
+
+        Debug.LogWarning("Invalid hex color code: " + hex);
+        return color;
     }
 
 }
