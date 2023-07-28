@@ -127,6 +127,7 @@ public class EdgeDataDisplay : MonoBehaviour
             cofactorLabel.edgeDataDisplay = this;
             cofactorLabel.cofactor = edgeData.cofactors[i];
 
+            // If edge is bidirectional, generate inverse cofactors as well
             if (edgeData.bidirectional)
             {
                 GameObject otherCofactor = Instantiate(cofactorPrefab);
@@ -148,24 +149,6 @@ public class EdgeDataDisplay : MonoBehaviour
 
         }
 
-        //if (edgeData.bidirectional)
-        //{
-        //    for (int i = 0; i < edgeData.cofactors.Count; i++)
-        //    {
-        //        GameObject cofactorPrefab = Resources.Load<GameObject>("Prefabs/Cofactor");
-        //        GameObject instantiatedcofactor = Instantiate(cofactorPrefab);
-
-        //        instantiatedcofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
-        //        instantiatedcofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
-
-        //        instantiatedcofactor.GetComponent<CofactorLabel>().edgeObject = gameObject;
-        //        instantiatedcofactor.GetComponent<CofactorLabel>().edgeDataDisplay = this;
-
-        //        ReparentCofactor(instantiatedcofactor, edgeData.cofactors[i].isReactant, true);
-
-
-        //    }
-        //}
 
     }
 
@@ -211,7 +194,7 @@ public class EdgeDataDisplay : MonoBehaviour
                 instantiatedCofactorParent.transform.position = parentLocation.position;
 
                 CofactorParent cofactorParentComponent = instantiatedCofactorParent.GetComponent<CofactorParent>();
-                cofactorParentComponent.parentLocationName = parentLocation.name;// cofactor.GetComponent<CofactorLabel>().edgeDataDisplay
+                cofactorParentComponent.parentLocationName = parentLocation.name;
                 cofactorParentComponent.parentObject = parentLocation.gameObject;
                 cofactorParentComponent.edgeDataDisplay = cofactorLabel.edgeDataDisplay;
                 cofactorParentComponent.isReactant = cofactor.isReactant;
@@ -239,7 +222,7 @@ public class EdgeDataDisplay : MonoBehaviour
 
         string nameToSearchFor = "Product";
 
-        if (cofactor.isReactant && !secondDirection)
+        if (cofactor.isReactant)
             nameToSearchFor = "Reactant";
 
         // If first direction, grab first product/reactant location object
@@ -257,6 +240,11 @@ public class EdgeDataDisplay : MonoBehaviour
         }
         else // If second direction, grab last product/reactant location object
         {
+            if (cofactor.isReactant)
+                nameToSearchFor = "Product";
+            else
+                nameToSearchFor = "Reactant";
+
             Transform lastTransformFound = transform;
             for (int i = 0; i < transform.parent.childCount; i++)
             {
