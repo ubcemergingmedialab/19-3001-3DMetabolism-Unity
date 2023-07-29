@@ -32,10 +32,24 @@ public class CofactorLabelsManager : MonoBehaviour
         cofactorLabels = new List<CofactorLabel>();
     }
 
+
     public void AddCofactorParent(CofactorParent parent)
     {
         if (!cofactorParents.Contains(parent))
+        {
             cofactorParents.Add(parent);
+        }
+    }
+
+    public void AddCofactorLabel(CofactorLabel label)
+    {
+        if (!cofactorLabels.Contains(label))
+        {
+            cofactorLabels.Add(label);
+
+            Debug.Log("Fixing cofactorlabel: " + label + " cofactortype: ");
+            Debug.Log(GeneralSettingsManager.Instance.GetCofactorTypeFromLabel(label.cofactor.label));
+        }
     }
 
 

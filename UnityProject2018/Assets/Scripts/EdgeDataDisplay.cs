@@ -208,6 +208,7 @@ public class EdgeDataDisplay : MonoBehaviour
 
 
             cofactorObject.transform.localPosition = cofactorLocalPosition;
+            CofactorLabelsManager.Instance.AddCofactorLabel(cofactorLabel);
         }
         else
         {

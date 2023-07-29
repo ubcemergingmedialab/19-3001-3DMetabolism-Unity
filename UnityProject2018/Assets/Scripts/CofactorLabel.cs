@@ -8,4 +8,18 @@ public class CofactorLabel : MonoBehaviour
     public Cofactor cofactor;
     public EdgeDataDisplay edgeDataDisplay;
     public CofactorParent cofactorParent;
+    private CofactorType cofactorType;
+    private bool cofactorTypeInitialized = false;
+
+    public CofactorType GetCofactorType()
+    {
+        if (!cofactorTypeInitialized)
+        {
+            cofactorType = GeneralSettingsManager.Instance.GetCofactorTypeFromLabel(cofactor.label);
+        }
+
+        return cofactorType;
+
+    }
+
 }
