@@ -100,7 +100,7 @@ public class PrefabService : MonoBehaviour
                 obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
 
                 // Instantiate Cofactors
-                obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateCofactors();
+                //obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateCofactors();
 
             }
             AttachOutlineScript(obj.transform.gameObject);
