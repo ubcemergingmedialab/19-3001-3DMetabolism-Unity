@@ -14777,7 +14777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.7243}
+  m_AnchoredPosition: {x: 0, y: 481.67014}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -63207,6 +63207,16 @@ PrefabInstance:
       objectReference: {fileID: 534669904}
     - target: {fileID: 1434346898866591111, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434346898866591111, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434346898866591111, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.070065066
       objectReference: {fileID: 0}
@@ -72287,6 +72297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111410172553438515, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: "\u03B2-hydroxyacyl-CoA"
       objectReference: {fileID: 0}
     - target: {fileID: 5118617384733577168, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
