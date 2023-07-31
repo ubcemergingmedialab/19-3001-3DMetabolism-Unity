@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ using static NodeTextDisplay;
 public enum SettingsCategory { metabolite, reaction, pathway, cofactor, cofactorPart }
 public enum SettingsType { all, highlight, accent }
 public enum SettingsValue { on, off }
-public enum CofactorType { atp, adp, nadpos, nadh, h2o, co2, fad, fadh, p1, amp }
+public enum CofactorType { atp, adp, nadpos, nadh, h2o, co2, fad, fadh, pi, amp, gdp, gtp, nadppos, nadph, fadh2 }
 
 public class GeneralSettingsManager : MonoBehaviour
 {
@@ -39,6 +39,16 @@ public class GeneralSettingsManager : MonoBehaviour
     [HideInInspector]    public bool overridingToggles = false;
 
     List<GeneralSettingsToggle> generalSettingsToggles;
+
+
+    //Debugging
+    List<string> unparsableCofactorLabels = new List<string>();
+
+
+    private void Start()
+    {
+        Debug.Log("Let's see");
+    }
 
     private static GeneralSettingsManager _instance;
     public static GeneralSettingsManager Instance
@@ -267,6 +277,165 @@ public class GeneralSettingsManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public Color GetCofactorColor(string cofactorLabel)
+    {
+        CofactorType cofactorType;
+
+        string fixedCofactorLabel = cofactorLabel.Replace("⁺", "pos").Replace("₂", "2");
+
+        if (fixedCofactorLabel.Contains("NAD"))
+            fixedCofactorLabel = "nadh";
+        if (fixedCofactorLabel.Contains("phosphate"))
+            fixedCofactorLabel = "p1";
+        if (fixedCofactorLabel.Contains("FADH"))
+            fixedCofactorLabel = "FAD";
+
+        if (Enum.TryParse<CofactorType>(fixedCofactorLabel, true, out cofactorType))
+        {
+
+        }
+        else
+        {
+            Debug.Log("Could not get cofactor color from cofactor label: " + cofactorLabel);
+        }
+
+        
+
+        Color newColor = Color.white;
+        switch (cofactorType)
+        {
+            case CofactorType.atp:
+                newColor = GetColorFromHex("#E9E29C");
+                break;
+            case CofactorType.adp:
+                newColor = GetColorFromHex("#E9E29C");
+                break;
+            case CofactorType.nadpos:
+                newColor = GetColorFromHex("#9CCB86");
+                break;
+            case CofactorType.nadh:
+                newColor = GetColorFromHex("#9CCB86");
+                break;
+            case CofactorType.h2o:
+                newColor = GetColorFromHex("#6BF5F5");
+                break;
+            case CofactorType.co2:
+                newColor = GetColorFromHex("#E4F1F7");
+                break;
+            case CofactorType.fad:
+                newColor = GetColorFromHex("#F2ACCA");
+                break;
+            case CofactorType.fadh:
+                newColor = GetColorFromHex("#F2ACCA");
+                break;
+            case CofactorType.pi:
+                newColor = GetColorFromHex("#EEB479");
+                break;
+            case CofactorType.amp:
+                newColor = GetColorFromHex("#FFCA65");
+                break;
+            case CofactorType.gdp:
+                newColor = GetColorFromHex("#E9E29C");
+                break;
+            case CofactorType.gtp:
+                newColor = GetColorFromHex("#E9E29C");
+                break;
+            case CofactorType.nadppos:
+                newColor = GetColorFromHex("#9CCB86");
+                break;
+            case CofactorType.nadph:
+                newColor = GetColorFromHex("#9CCB86");
+                break;
+            case CofactorType.fadh2:
+                newColor = GetColorFromHex("#F2ACCA");
+                break;
+        }
+
+        return newColor;
+    }
+
+    public CofactorType GetCofactorTypeFromLabel(string label)
+    {
+        CofactorType cofactorType = CofactorType.amp;
+
+        string replacedSupSubCharacters = label.Replace("⁺", "+").Replace("₂", "2").Replace("inorganic phosphate", "pi").Replace("₄", "4");
+
+        switch (replacedSupSubCharacters.ToLower())
+        {
+            case "atp":
+                return CofactorType.atp;
+            case "adp":
+                return CofactorType.adp;
+            case "nadpos":
+                return CofactorType.nadpos;
+            case "nadh":
+                return CofactorType.nadh;
+            case "h2o":
+                return CofactorType.h2o;
+            case "co2":
+                return CofactorType.co2;
+            case "fad":
+                return CofactorType.fad;
+            case "fadh":
+                return CofactorType.fadh;
+            case "pi":
+                return CofactorType.pi;
+            case "amp":
+                return CofactorType.amp;
+            case "gtp":
+                return CofactorType.gtp;
+            case "inorganic phosphate":
+                return CofactorType.pi;
+            case "gdp":
+                return CofactorType.gdp;
+            case "nad+":
+                return CofactorType.nadpos;
+            case "nadp+":
+                return CofactorType.nadppos;
+            case "nadph":
+                return CofactorType.nadph;
+            case "fadh2":
+                return CofactorType.fadh2;
+
+
+            default:
+                {                    
+                    Debug.Log("Couldn't parse cofactorType: " + label);
+
+                    if (!unparsableCofactorLabels.Contains(label))
+                        unparsableCofactorLabels.Add(label);
+
+                    return cofactorType;
+                }
+        }
+
+
+        return cofactorType;
+
+    }
+
+    public string FixCofactorLabelForParsing(string label)
+    {
+        string returnString = label;
+
+        returnString.Replace("", "");
+
+        return returnString;
+    }
+
+    Color GetColorFromHex(string hex)
+    {
+        Color color = Color.white; // Default color if the conversion fails
+
+        if (ColorUtility.TryParseHtmlString(hex, out color))
+        {
+            return color;
+        }
+
+        Debug.LogWarning("Invalid hex color code: " + hex);
+        return color;
     }
 
 }

@@ -36,6 +36,7 @@ public class PrefabService : MonoBehaviour
                 // }
             }
         }
+
     }
  
     public void FindNodeSOGameObject(NodeSO node) {
@@ -97,6 +98,10 @@ public class PrefabService : MonoBehaviour
 
                 // Instantiate edge label on top of the edge
                 obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateEdgeLabel(edgeLabelsObject);
+
+                // Instantiate Cofactors
+                obj.GetComponentInChildren<EdgeDataDisplay>().InstantiateCofactors();
+
             }
             AttachOutlineScript(obj.transform.gameObject);
         }
@@ -112,6 +117,8 @@ public class PrefabService : MonoBehaviour
     /// <param name="obj"></param>
     public void AttachOutlineScript(GameObject obj)
     {
+        if (obj.GetComponent<Outline>())
+            return;
         // assign outline shader here
         Outline objOutline = obj.AddComponent<Outline>();
 

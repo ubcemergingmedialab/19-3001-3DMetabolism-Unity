@@ -17,7 +17,7 @@ public class NodeUIElement : UIElement
     public TextMeshProUGUI MolecularFormulaText;
     public Text IUPACNamesText;
     public Text StructuralDescriptionText;
-    public Text PubchemlinkText;
+    public TextMeshProUGUI PubchemlinkText;
     public GameObject LinkButton;
 
 /// <summary>
@@ -36,14 +36,14 @@ public class NodeUIElement : UIElement
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
         ChargeText.text = ((Card)DataReference).Charge;
-        PubchemlinkText.text = ((Card)DataReference).Pubchemlink;
+        PubchemlinkText.text = "<link=\"Link\">" + ((Card)DataReference).Pubchemlink + "</link>";
         MolecularFormulaText.text = ((Card)DataReference).MolecularFormula;
         IUPACNamesText.text = ((Card)DataReference).IUPACNames;
         StructuralDescriptionText.text = ((Card)DataReference).StructuralDescription;
-        if (((Card)DataReference).link != null && ((Card)DataReference).link.Length > 0)
+        if (((Card)DataReference).Pubchemlink != null && ((Card)DataReference).Pubchemlink.Length > 0)
         {
             Debug.Log("updating link");
-            LinkButton.GetComponent<OpenLink>().url = ((Card)DataReference).link;
+            LinkButton.GetComponent<OpenLink>().url = ((Card)DataReference).Pubchemlink;
         }
     }
 

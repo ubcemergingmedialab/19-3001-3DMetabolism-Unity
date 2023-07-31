@@ -32,7 +32,7 @@ public class ShowTextOnHover : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Debug.Log("Entered");
+        //Debug.Log("Entered");
         // update original color, change color to show text
         if (text != null)
         {

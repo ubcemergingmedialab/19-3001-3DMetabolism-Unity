@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -99,6 +99,7 @@ public class EdgeDataDisplay : MonoBehaviour
 
             GetComponent<BoxCollider>().enabled = false;
             gameObject.AddComponent<MeshCollider>();
+            GetComponent<MeshCollider>().convex = true;
             GetComponent<MeshCollider>().sharedMesh = GetComponentInParent<MeshFilter>().sharedMesh;
 
         }
@@ -107,6 +108,168 @@ public class EdgeDataDisplay : MonoBehaviour
         {
             Debug.Log("Missing edgelabel prefab");
         }
+
+    }
+
+    public void InstantiateCofactors()
+    {
+
+        for (int i = 0; i < edgeData.cofactors.Count; i++)
+        {
+            GameObject cofactorPrefab = Resources.Load<GameObject>("Prefabs/Cofactor");
+            GameObject instantiatedcofactor = Instantiate(cofactorPrefab);
+
+            instantiatedcofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
+            instantiatedcofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
+
+            CofactorLabel cofactorLabel = instantiatedcofactor.GetComponent<CofactorLabel>();
+            cofactorLabel.edgeObject = gameObject;
+            cofactorLabel.edgeDataDisplay = this;
+            cofactorLabel.cofactor = edgeData.cofactors[i];
+
+            // If edge is bidirectional, generate inverse cofactors as well
+            if (edgeData.bidirectional)
+            {
+                GameObject otherCofactor = Instantiate(cofactorPrefab);
+                otherCofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
+                otherCofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
+
+
+                CofactorLabel otherCofactorLabel = otherCofactor.GetComponent<CofactorLabel>();
+                otherCofactorLabel.edgeObject = gameObject;
+                otherCofactorLabel.edgeDataDisplay = this;
+                otherCofactorLabel.cofactor = edgeData.cofactors[i];
+
+                ReparentCofactorLabel(otherCofactor, true);
+            }
+
+            ReparentCofactorLabel(instantiatedcofactor, false);
+
+
+
+        }
+
+
+    }
+
+    void ReparentCofactorLabel(GameObject cofactorObject, bool secondDirection = false)
+    {
+        Transform parentLocation = transform;
+
+        CofactorLabel cofactorLabel = cofactorObject.GetComponent<CofactorLabel>();
+        Cofactor cofactor = cofactorLabel.GetComponent<CofactorLabel>().cofactor;
+
+        if (FindCofactorLocationObject(cofactor, secondDirection, out parentLocation))
+        {
+            // Success
+        }
+        else
+        {
+            Debug.Log("No cofactor parent object found for cofactor: " + cofactor.label);
+            return;
+        }
+
+        if (parentLocation != null)
+        {
+
+            Vector3 cofactorLocalPosition = Vector3.zero;
+
+            // check if existing CofactorParent exists
+            if (CofactorLabelsManager.Instance.CofactorParents.Exists(x => x.edgeDataDisplay == this && x.isReactant == cofactor.isReactant && x.secondDirection == secondDirection))
+            {
+                CofactorParent existingParent = CofactorLabelsManager.Instance.CofactorParents.Find(x => x.edgeDataDisplay == this && x.isReactant == cofactor.isReactant && x.secondDirection == secondDirection);
+
+                if (!existingParent.cofactorLabels.Contains(cofactorLabel))
+                    existingParent.cofactorLabels.Add(cofactorLabel);
+                cofactorLocalPosition = existingParent.GetCofactorLabelLocalPosition(cofactorLabel);
+                cofactorObject.transform.SetParent(existingParent.gameObject.transform, false);
+            }
+            else
+            {
+
+                GameObject cofactorParent = Resources.Load<GameObject>("Prefabs/CofactorParent");
+                GameObject instantiatedCofactorParent = Instantiate(cofactorParent);
+
+                instantiatedCofactorParent.transform.SetParent(CofactorLabelsManager.Instance.gameObject.transform, true);
+                instantiatedCofactorParent.transform.position = parentLocation.position;
+
+                CofactorParent cofactorParentComponent = instantiatedCofactorParent.GetComponent<CofactorParent>();
+                cofactorParentComponent.parentLocationName = parentLocation.name;
+                cofactorParentComponent.parentObject = parentLocation.gameObject;
+                cofactorParentComponent.edgeDataDisplay = cofactorLabel.edgeDataDisplay;
+                cofactorParentComponent.isReactant = cofactor.isReactant;
+                cofactorParentComponent.secondDirection = secondDirection;
+
+                CofactorLabelsManager.Instance.AddCofactorParent(instantiatedCofactorParent.GetComponent<CofactorParent>());
+                cofactorObject.transform.SetParent(instantiatedCofactorParent.transform, false);
+
+                cofactorParentComponent.InitializeArrow();
+            }
+
+
+            cofactorObject.transform.localPosition = cofactorLocalPosition;
+            CofactorLabelsManager.Instance.AddCofactorLabel(cofactorLabel);
+        }
+        else
+        {
+            Debug.Log("Couldn't find a parent for Cofactor: " + cofactorLabel.edgeDataDisplay.edgeData.Enzyme);
+        }
+    }
+
+    bool FindCofactorLocationObject(Cofactor cofactor, bool secondDirection, out Transform locationTransform)
+    {
+
+        bool parentFound = false;
+
+        string nameToSearchFor = "Product";
+
+        if (cofactor.isReactant)
+            nameToSearchFor = "Reactant";
+
+        // If first direction, grab first product/reactant location object
+        if (!secondDirection)
+        {
+            for (int i = 0; i < transform.parent.childCount; i++)
+            {
+                if (transform.parent.GetChild(i).name.Contains(nameToSearchFor))
+                {
+                    parentFound = true;
+                    locationTransform = transform.parent.GetChild(i).transform;
+                    return parentFound;
+                }
+            }
+        }
+        else // If second direction, grab last product/reactant location object
+        {
+            if (cofactor.isReactant)
+                nameToSearchFor = "Product";
+            else
+                nameToSearchFor = "Reactant";
+
+            Transform lastTransformFound = transform;
+            for (int i = 0; i < transform.parent.childCount; i++)
+            {
+                if (transform.parent.GetChild(i).name.Contains(nameToSearchFor))
+                {
+                    parentFound = true;
+                    lastTransformFound = transform.parent.GetChild(i).transform;
+                }
+            }
+
+            if (parentFound)
+            {
+                locationTransform = lastTransformFound;
+                return parentFound;
+            }
+            else
+            {
+                locationTransform = null;
+                return parentFound;
+            }
+        }
+
+        locationTransform = null;
+        return parentFound;
     }
 
     // Copied directly from nodedatadisplay

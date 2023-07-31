@@ -33,6 +33,7 @@ public class QueryService : MonoBehaviour
         AttachScriptableObjectToPrefab();
     }
 
+
     void OnApplicationQuit() {
         ClearQueryData();
     }
