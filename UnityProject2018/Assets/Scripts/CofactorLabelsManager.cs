@@ -47,8 +47,8 @@ public class CofactorLabelsManager : MonoBehaviour
         {
             cofactorLabels.Add(label);
 
-            Debug.Log("Fixing cofactorlabel: " + label + " cofactortype: ");
-            Debug.Log(GeneralSettingsManager.Instance.GetCofactorTypeFromLabel(label.cofactor.label));
+            //Debug.Log("Fixing cofactorlabel: " + label + " cofactortype: ");
+            //Debug.Log(GeneralSettingsManager.Instance.GetCofactorTypeFromLabel(label.cofactor.label));
         }
     }
 

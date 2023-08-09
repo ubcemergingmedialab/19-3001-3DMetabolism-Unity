@@ -21,7 +21,7 @@ public class EdgeDataDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        InstantiateCofactors();
     }
 
     // Update is called once per frame
@@ -113,40 +113,46 @@ public class EdgeDataDisplay : MonoBehaviour
 
     public void InstantiateCofactors()
     {
-
-        for (int i = 0; i < edgeData.cofactors.Count; i++)
+        try
         {
-            GameObject cofactorPrefab = Resources.Load<GameObject>("Prefabs/Cofactor");
-            GameObject instantiatedcofactor = Instantiate(cofactorPrefab);
-
-            instantiatedcofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
-            instantiatedcofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
-
-            CofactorLabel cofactorLabel = instantiatedcofactor.GetComponent<CofactorLabel>();
-            cofactorLabel.edgeObject = gameObject;
-            cofactorLabel.edgeDataDisplay = this;
-            cofactorLabel.cofactor = edgeData.cofactors[i];
-
-            // If edge is bidirectional, generate inverse cofactors as well
-            if (edgeData.bidirectional)
+            for (int i = 0; i < edgeData.cofactors.Count; i++)
             {
-                GameObject otherCofactor = Instantiate(cofactorPrefab);
-                otherCofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
-                otherCofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
+                GameObject cofactorPrefab = Resources.Load<GameObject>("Prefabs/Cofactor");
+                GameObject instantiatedcofactor = Instantiate(cofactorPrefab);
+
+                instantiatedcofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
+                instantiatedcofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
+
+                CofactorLabel cofactorLabel = instantiatedcofactor.GetComponent<CofactorLabel>();
+                cofactorLabel.edgeObject = gameObject;
+                cofactorLabel.edgeDataDisplay = this;
+                cofactorLabel.cofactor = edgeData.cofactors[i];
+
+                // If edge is bidirectional, generate inverse cofactors as well
+                if (edgeData.bidirectional)
+                {
+                    GameObject otherCofactor = Instantiate(cofactorPrefab);
+                    otherCofactor.GetComponent<SpriteRenderer>().color = GeneralSettingsManager.Instance.GetCofactorColor(edgeData.cofactors[i].label);
+                    otherCofactor.GetComponentInChildren<TextMeshPro>().text = edgeData.cofactors[i].label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>");
 
 
-                CofactorLabel otherCofactorLabel = otherCofactor.GetComponent<CofactorLabel>();
-                otherCofactorLabel.edgeObject = gameObject;
-                otherCofactorLabel.edgeDataDisplay = this;
-                otherCofactorLabel.cofactor = edgeData.cofactors[i];
+                    CofactorLabel otherCofactorLabel = otherCofactor.GetComponent<CofactorLabel>();
+                    otherCofactorLabel.edgeObject = gameObject;
+                    otherCofactorLabel.edgeDataDisplay = this;
+                    otherCofactorLabel.cofactor = edgeData.cofactors[i];
 
-                ReparentCofactorLabel(otherCofactor, true);
+                    ReparentCofactorLabel(otherCofactor, true);
+                }
+
+                ReparentCofactorLabel(instantiatedcofactor, false);
+
+
+
             }
-
-            ReparentCofactorLabel(instantiatedcofactor, false);
-
-
-
+        }
+        catch 
+        {
+            Debug.LogWarning("No edgedata found for edge: " + transform.parent.gameObject.name);
         }
 
 
