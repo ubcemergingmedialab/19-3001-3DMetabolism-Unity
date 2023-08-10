@@ -14,7 +14,7 @@ using static NodeTextDisplay;
 public enum SettingsCategory { metabolite, reaction, pathway, cofactor, cofactorPart }
 public enum SettingsType { all, highlight, accent }
 public enum SettingsValue { on, off }
-public enum CofactorType { atp, adp, nadpos, nadh, h2o, co2, fad, fadh, pi, amp, gdp, gtp, nadppos, nadph, fadh2 }
+public enum CofactorType { atp, adp, nadpos, nadh, h2o, co2, fad, fadh, pi, amp, gdp, gtp, nadppos, nadph, fadh2, hpos, o2 }
 
 public class GeneralSettingsManager : MonoBehaviour
 {
@@ -120,6 +120,13 @@ public class GeneralSettingsManager : MonoBehaviour
                 enabledCofactorTypes.Remove(type);
         }
 
+        CofactorLabelsManager.Instance.ToggleCofactorFilter(enabledCofactorTypes);
+
+    }
+
+    public void UpdateCofactorFilter()
+    {
+        CofactorLabelsManager.Instance.ToggleCofactorFilter(enabledCofactorTypes);
     }
 
     public void UpdateLabelFilter()
@@ -184,6 +191,7 @@ public class GeneralSettingsManager : MonoBehaviour
 
 
     }
+
 
     void DisableSettingsToggle(GeneralSettingsToggle toggle)
     {
@@ -288,7 +296,7 @@ public class GeneralSettingsManager : MonoBehaviour
         if (fixedCofactorLabel.Contains("NAD"))
             fixedCofactorLabel = "nadh";
         if (fixedCofactorLabel.Contains("phosphate"))
-            fixedCofactorLabel = "p1";
+            fixedCofactorLabel = "pi";
         if (fixedCofactorLabel.Contains("FADH"))
             fixedCofactorLabel = "FAD";
 
@@ -351,6 +359,9 @@ public class GeneralSettingsManager : MonoBehaviour
             case CofactorType.fadh2:
                 newColor = GetColorFromHex("#F2ACCA");
                 break;
+            case CofactorType.hpos:
+                newColor = GetColorFromHex("#EFA8A8");
+                break;
         }
 
         return newColor;
@@ -398,6 +409,10 @@ public class GeneralSettingsManager : MonoBehaviour
                 return CofactorType.nadph;
             case "fadh2":
                 return CofactorType.fadh2;
+            case "hpos":
+                return CofactorType.hpos;
+            case "o2":
+                return CofactorType.o2;
 
 
             default:

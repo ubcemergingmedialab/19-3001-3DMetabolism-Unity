@@ -13,7 +13,12 @@ using UnityEngine;
 public class AnimationControllerComponent : MonoBehaviour
 {
     public List<AnimationDescription> animations;
-    public float waitTime = 1f;
+    private List<ScriptedAnimation> scriptedAnimations;
+
+    public Material scriptedAnimationMaterial;
+
+
+    public float waitTime = 0.75f;
     public float resetTime = 0.1f;
     public int timesToPulseStartAndEndNodes = 1;
     public AnimationDescription resetAnimation;
@@ -75,15 +80,23 @@ public class AnimationControllerComponent : MonoBehaviour
                     GameObject curGO = GameObject.Find(name);
                     if (curGO != null)
                     {
-                        Animator gameObjectAnimator = curGO.GetComponent<Animator>();
-                        if (gameObjectAnimator != null)
+                        ScriptedAnimation curSA = curGO.GetComponent<ScriptedAnimation>();
+
+                        if (curSA != null)
                         {
-                            gameObjectAnimator.Play("Reset");
+                            curSA.StopAnimating();
                         }
+
+                        //Animator gameObjectAnimator = curGO.GetComponent<Animator>();
+                        //if (gameObjectAnimator != null)
+                        //{
+                        //    gameObjectAnimator.Play("Reset");
+                        //}
                     }
                 }
             }
             animations.Clear();
+            scriptedAnimations.Clear();
         }
     }
 
@@ -121,22 +134,23 @@ public class AnimationControllerComponent : MonoBehaviour
     /// <param name="list">list of ordered scriptable objects to be animated
     public void AnimateSearchResults(List<ScriptableObject> list)
     {
-        StopAllAnimations();
+        StopAllAnimations(); // Stop animations differently later
+
 
         //'Pulse' the starting and end nodes 'x' times.
-        for (int i = 0; i < timesToPulseStartAndEndNodes; i++)
-        {
-            AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
-            ad.AnimatedObjects = new List<string>();
-            ad.TriggerToSet = new List<string>();
+        //for (int i = 0; i < timesToPulseStartAndEndNodes; i++)
+        //{
+        //    AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+        //    ad.AnimatedObjects = new List<string>();
+        //    ad.TriggerToSet = new List<string>();
 
-            ScriptableObject startNodeSO = list[0];
-            ScriptableObject endNodeSO = list[list.Count - 1];
+        //    ScriptableObject startNodeSO = list[0];
+        //    ScriptableObject endNodeSO = list[list.Count - 1];
 
-            AddNodeToAnimationDescription(ad, startNodeSO, "Flash");
-            AddNodeToAnimationDescription(ad, endNodeSO, "Flash");
-            animations.Add(ad);
-        }
+        //    AddNodeToAnimationDescription(ad, startNodeSO, "Flash");
+        //    AddNodeToAnimationDescription(ad, endNodeSO, "Flash");
+        //    animations.Add(ad);
+        //}
 
         //Go through each node and edge and pulse 1x
         foreach (ScriptableObject so in list)
@@ -159,10 +173,12 @@ public class AnimationControllerComponent : MonoBehaviour
                 Debug.LogWarning("We cannot add a SO that is neither a node or a edge");
             }
 
+            
+
             //add it
             animations.Add(ad);
         }
-        
+                
         //Start the animation
         animationRoutine = StartCoroutine("PlayAnimations");
     }
@@ -173,20 +189,56 @@ public class AnimationControllerComponent : MonoBehaviour
     /// </summary>
     private IEnumerator PlayAnimations()
     {
-        foreach (AnimationDescription animation in animations)
+        // Find all objects
+
+        scriptedAnimations = new List<ScriptedAnimation>();
+
+        for (int i = 0; i < animations.Count; i++)
         {
-            Dictionary<string, string> animationDefinition;
-            animationDefinition = DefineAnimation(animation);
-            AnimateGameObject(animationDefinition);
-            if (presenter != null)
+            for (int j = 0; j < animations[i].AnimatedObjects.Count; j++)
             {
-                presenter.HighlightStep(int.Parse(animation.name));
+                GameObject g = GameObject.Find(animations[i].AnimatedObjects[j]);
+
+                if (g != null)
+                {
+                    ScriptedAnimation newAnimation = g.AddComponent<ScriptedAnimation>();
+                    newAnimation.delay = ((i + 1) * waitTime);
+                    newAnimation.scriptedAnimationMaterial = scriptedAnimationMaterial;
+                    scriptedAnimations.Add(newAnimation);
+                    
+                }
+
             }
-            yield return new WaitForSeconds(waitTime);
-            ResetGameObject(animationDefinition);
         }
-        yield return new WaitForSeconds(waitTime);
-        animationRoutine = StartCoroutine("PlayAnimations");
+
+        for (int i = 0; i < scriptedAnimations.Count; i++)
+        {
+            scriptedAnimations[i].StartAnimating();
+            //scriptedAnimations[i].gameObject.GetComponent<ScriptedAnimation>().StartCoroutine(scriptedAnimations[i].StartAnimating());
+            //scriptedAnimations[i].ChangeColorByForce();
+        }
+
+        yield return new WaitForSeconds(10);
+
+        //foreach (AnimationDescription animation in animations)
+        //{
+        //    foreach(string s in animation.AnimatedObjects)
+        //    {
+
+        //    }
+
+        //    Dictionary<string, string> animationDefinition;
+        //    animationDefinition = DefineAnimation(animation);
+        //    AnimateGameObject(animationDefinition);
+        //    if (presenter != null)
+        //    {
+        //        presenter.HighlightStep(int.Parse(animation.name));
+        //    }
+        //    yield return new WaitForSeconds(waitTime);
+        //    ResetGameObject(animationDefinition);
+        //}
+        //yield return new WaitForSeconds(waitTime);
+        //animationRoutine = StartCoroutine("PlayAnimations");
     }
 
     /// <summary>

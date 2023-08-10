@@ -11,11 +11,20 @@ public class CofactorLabel : MonoBehaviour
     private CofactorType cofactorType;
     private bool cofactorTypeInitialized = false;
 
+    public CofactorType CofactorType
+    {
+        get 
+        {
+            return GetCofactorType();
+        }
+    }
+
     public CofactorType GetCofactorType()
     {
         if (!cofactorTypeInitialized)
         {
             cofactorType = GeneralSettingsManager.Instance.GetCofactorTypeFromLabel(cofactor.label);
+            cofactorTypeInitialized = true;
         }
 
         return cofactorType;

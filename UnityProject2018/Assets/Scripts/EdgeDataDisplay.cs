@@ -22,6 +22,7 @@ public class EdgeDataDisplay : MonoBehaviour
     void Start()
     {
         InstantiateCofactors();
+        CofactorLabelsManager.Instance.ToggleCofactorFilter();
     }
 
     // Update is called once per frame
@@ -210,9 +211,10 @@ public class EdgeDataDisplay : MonoBehaviour
                 cofactorObject.transform.SetParent(instantiatedCofactorParent.transform, false);
 
                 cofactorParentComponent.InitializeArrow();
+                cofactorParentComponent.cofactorLabels.Add(cofactorLabel);
             }
 
-
+            
             cofactorObject.transform.localPosition = cofactorLocalPosition;
             CofactorLabelsManager.Instance.AddCofactorLabel(cofactorLabel);
         }

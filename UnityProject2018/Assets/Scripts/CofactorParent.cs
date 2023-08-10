@@ -128,6 +128,10 @@ public class CofactorParent : MonoBehaviour
         }
     }
 
+    public void ToggleArrow(bool toggle)
+    {
+        arrow.SetActive(toggle);
+    }
 
     /// <summary>
     /// Grabbing the closest point to the edge mesh.
