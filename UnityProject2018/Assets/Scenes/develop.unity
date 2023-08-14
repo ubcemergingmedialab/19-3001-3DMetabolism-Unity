@@ -11291,6 +11291,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1861046109520246124, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: dd6bc7632a4c0d74eb35d4aa10d1a924,
+        type: 3}
+    - target: {fileID: 1861046109520246124, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 1
       objectReference: {fileID: 0}
@@ -11317,32 +11323,48 @@ PrefabInstance:
     - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 56
+      value: 34.6008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00017226
+      value: 1.699815
       objectReference: {fileID: 0}
     - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 6.200012
+      value: -156
       objectReference: {fileID: 0}
     - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16.75
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 8564208900124055579, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_Text
       value: 'Reaction - ID:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564208900124055579, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b0e2fb06ea8829945a209d4487bc8b48,
+        type: 3}
+    - target: {fileID: 8564208900124055579, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109515043260276806, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
@@ -14812,7 +14834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.72507}
+  m_AnchoredPosition: {x: 0, y: 484.72458}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -21112,8 +21134,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reaction Equation||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b, type: 2}
+  m_sharedMaterial: {fileID: -3912155166583744976, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21131,7 +21154,7 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
+  m_StyleSheet: {fileID: 11400000, guid: f952c082cb03451daed3ee968ac6c63e, type: 2}
   m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
@@ -37742,8 +37765,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Charge (1)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b, type: 2}
+  m_sharedMaterial: {fileID: -3912155166583744976, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -54898,11 +54922,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 56
       objectReference: {fileID: 0}
-    - target: {fileID: 1274335102665175223, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -24
-      objectReference: {fileID: 0}
     - target: {fileID: 1861046109520246124, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
       propertyPath: m_FontData.m_Font
@@ -54923,6 +54942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -203.8
       objectReference: {fileID: 0}
     - target: {fileID: 8000140521736377392, guid: 69bb1078ff9b8934fb91b80d8ecfbc5a,
         type: 3}
@@ -77364,6 +77388,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7195101260461835935, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: ATP synthase
+      objectReference: {fileID: 0}
     - target: {fileID: 7199431552750367960, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_fontSize
@@ -86472,6 +86501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: 3-phosphoglycerate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100089407751959973, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: ornithine-citrulline antiporter
       objectReference: {fileID: 0}
     - target: {fileID: 9108474664880879319, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
