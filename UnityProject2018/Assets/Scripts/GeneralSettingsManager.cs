@@ -21,6 +21,7 @@ public class GeneralSettingsManager : MonoBehaviour
     List<NodeDataDisplay> nodes;// = FindObjectsOfType<NodeDataDisplay>();
     List<EdgeDataDisplay> edges;// = FindObjectsOfType<EdgeDataDisplay>();
     List<PathwayDataDisplay> pathways;
+    
 
     [HideInInspector]    public SettingsType metaboliteSettingsType = SettingsType.all;
     [HideInInspector]    public bool metaboliteSettingsState = true;
@@ -107,6 +108,12 @@ public class GeneralSettingsManager : MonoBehaviour
 
     }
 
+    public void InitializeEnabledCofactor(CofactorType type)
+    {
+        if (!enabledCofactorTypes.Contains(type))
+            enabledCofactorTypes.Add(type);
+    }
+
     public void ToggleCofactor(CofactorType type, bool enabled)
     {
         if (enabled)
@@ -185,6 +192,7 @@ public class GeneralSettingsManager : MonoBehaviour
         ToggleNodeLabels();
         ToggleEdgeLabels();
         TogglePathwayLabels();
+        ToggleCofactorLabels();
 
         overridingToggles = false;
 
@@ -268,7 +276,7 @@ public class GeneralSettingsManager : MonoBehaviour
             else
             {
                 HighlightPathway.HighlightState pathwayState = StatusController.Instance.PathwayCheckState(pathways[i].pathwaySO);
-                if (reactionSettingsState)
+                if (pathwaySettingsState)
                 {
                     if ((int)pathwayState >= (int)pathwaySettingsType)
                     {
@@ -285,6 +293,10 @@ public class GeneralSettingsManager : MonoBehaviour
                 }
             }
         }
+    }
+    void ToggleCofactorLabels()
+    {
+        UpdateCofactorFilter();
     }
 
     public Color GetCofactorColor(string cofactorLabel)

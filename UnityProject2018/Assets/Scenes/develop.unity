@@ -1325,7 +1325,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &34310250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10609,7 +10609,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &450108566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14834,7 +14834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.72443}
+  m_AnchoredPosition: {x: 0, y: 484.72507}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -15565,7 +15565,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &606522968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17150,7 +17150,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &682245988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21134,9 +21134,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reaction Equation||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b, type: 2}
-  m_sharedMaterial: {fileID: -3912155166583744976, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34396,7 +34395,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &1353919173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37765,9 +37764,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Charge (1)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b, type: 2}
-  m_sharedMaterial: {fileID: -3912155166583744976, guid: cfe05dfa8e9c8dd47a8437eedebc1f6b,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42213,7 +42211,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &1677252835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42721,7 +42719,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &1707289693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51804,7 +51802,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &2043192189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52231,7 +52229,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &2067397326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52418,7 +52416,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &2071736099
 MonoBehaviour:
   m_ObjectHideFlags: 0

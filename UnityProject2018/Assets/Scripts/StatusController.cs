@@ -153,25 +153,25 @@ public class StatusController : MonoBehaviour
         {                                                                 // For every nodeSO in this pathway
             GameObject node = GameObject.Find(nodeSO.name);
 
-                if (node != null)
+            if (node != null)
+            {
+                HighlightHandler hl = node.GetComponentInChildren<HighlightHandler>();                                // find the nodes handler
+                if (hl == null)
                 {
-                    HighlightHandler hl = node.GetComponentInChildren<HighlightHandler>();                                // find the nodes handler
-                    if (hl == null)
-                    {
-                        Debug.LogError("StatusController :higlightHandler is null ");
-                    }
-                    List<HighlightPathway> sharingPathways;
-
-                    if (elementToPathways.TryGetValue(hl, out sharingPathways))
-                    {                                // Find node in elementToPathways
-                        sharingPathways.Add(highlightPathway);                                                  // add the highlightPathway to the element's list of hpw
-                    }
-                    else
-                    {
-                        elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });                // Make a new list if node is not yet in the Dictionary 
-                    }
+                    Debug.LogError("StatusController :higlightHandler is null ");
                 }
-            
+                List<HighlightPathway> sharingPathways;
+
+                if (elementToPathways.TryGetValue(hl, out sharingPathways))
+                {                                // Find node in elementToPathways
+                    sharingPathways.Add(highlightPathway);                                                  // add the highlightPathway to the element's list of hpw
+                }
+                else
+                {
+                    elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });                // Make a new list if node is not yet in the Dictionary 
+                }
+            }
+
         }
 
         foreach (EdgeSO edgeSO in listOfEdges)
@@ -179,9 +179,39 @@ public class StatusController : MonoBehaviour
             GameObject edge = GameObject.Find(edgeSO.name);
 
 
-                if (edge != null)
+            if (edge != null)
+            {
+                HighlightHandler hl = edge.GetComponentInChildren<HighlightHandler>();
+                List<HighlightPathway> sharingPathways;
+
+                if (elementToPathways.TryGetValue(hl, out sharingPathways))
                 {
-                    HighlightHandler hl = edge.GetComponentInChildren<HighlightHandler>();
+                    sharingPathways.Add(highlightPathway);
+                }
+                else
+                {
+                    elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });
+                }
+            }
+            else
+            {
+                // Check if Edge parts exist
+                int checkForEdgeGameObjectsCount = 9;
+
+
+                List<GameObject> edgeParts = new List<GameObject>();
+
+
+                for (int i = 0; i < checkForEdgeGameObjectsCount; i++)
+                {
+                    GameObject edgePart = GameObject.Find(edgeSO.name + ".00" + i.ToString());
+                    if (edgePart != null)
+                        edgeParts.Add(edgePart);
+                }
+
+                for (int i = 0; i < edgeParts.Count; i++)
+                {
+                    HighlightHandler hl = edgeParts[i].GetComponentInChildren<HighlightHandler>();
                     List<HighlightPathway> sharingPathways;
 
                     if (elementToPathways.TryGetValue(hl, out sharingPathways))
@@ -192,8 +222,11 @@ public class StatusController : MonoBehaviour
                     {
                         elementToPathways.Add(hl, new List<HighlightPathway> { highlightPathway });
                     }
+
+                    //edgeParts[i].GetComponentInChildren<HighlightHandler>().UpdateHighlight();
                 }
-            
+            }
+
         }
         inputPathway.FillLists();
     }
@@ -308,7 +341,7 @@ public class StatusController : MonoBehaviour
         }
         else
         {
-            //Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }

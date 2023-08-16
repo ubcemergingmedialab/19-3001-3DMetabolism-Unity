@@ -52,6 +52,9 @@ public class CofactorLabelsManager : MonoBehaviour
 
     public void ToggleCofactorFilter(List<CofactorType> enabledCofactorTypes = null)
     {
+        SettingsType cofactorSettingsType = GeneralSettingsManager.Instance.cofactorSettingsType;
+        bool cofactorSettingsState = GeneralSettingsManager.Instance.cofactorSettingsState;
+
         if (enabledCofactorTypes == null)
             enabledCofactorTypes = new List<CofactorType>();
             
@@ -59,7 +62,10 @@ public class CofactorLabelsManager : MonoBehaviour
         {
             for (int j = 0; j < cofactorParents[i].cofactorLabels.Count; j++)
             {
-                cofactorParents[i].cofactorLabels[j].gameObject.SetActive(enabledCofactorTypes.Contains(cofactorParents[i].cofactorLabels[j].CofactorType));                
+                if ((int)StatusController.Instance.ElementCheckState(cofactorParents[i].edgeDataDisplay.GetComponent<HighlightHandler>()) >= (int)cofactorSettingsType && cofactorSettingsState) //.hig HighlightService.Instance.. cofactorParents[i].cofactorLabels[j].edgeDataDisplay.)
+                    cofactorParents[i].cofactorLabels[j].gameObject.SetActive(enabledCofactorTypes.Contains(cofactorParents[i].cofactorLabels[j].CofactorType));
+                else
+                    cofactorParents[i].cofactorLabels[j].gameObject.SetActive(false);
             }
 
             // Toggle the arrow on or off depending on active cofactors

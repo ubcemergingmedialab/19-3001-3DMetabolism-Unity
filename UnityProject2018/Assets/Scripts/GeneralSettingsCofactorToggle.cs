@@ -11,6 +11,12 @@ public class GeneralSettingsCofactorToggle : MonoBehaviour
     public Color activeColor = new Color(83f / 255f, 109f / 255f, 254f / 255f, 1f);
     public Color inactiveColor = new Color(83f / 255f, 109f / 255f, 254f / 255f, 0f);
 
+    private void Start()
+    {
+        UpdateBackground(GetComponent<Toggle>().isOn);
+        Clicked();
+    }
+
     public void Clicked()
     {      
         GeneralSettingsManager.Instance.ToggleCofactor(CofactorType, GetComponent<Toggle>().isOn);

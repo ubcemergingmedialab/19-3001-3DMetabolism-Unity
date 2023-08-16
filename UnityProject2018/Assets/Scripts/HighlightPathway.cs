@@ -88,7 +88,26 @@ public class HighlightPathway
             }
             else
             {
-                Debug.LogError("cant find game object for edge: " + edgeSO.name + " in pathway: " + pathwayToHighlight.Label);
+                //Debug.LogError("cant find game object for edge: " + edgeSO.name + " in pathway: " + pathwayToHighlight.Label);
+
+                // Check if edge is made of multiple GameObjects
+
+                int checkForEdgeGameObjectsCount = 9;
+
+                List<GameObject> edgeParts = new List<GameObject>();
+
+                for (int i = 0; i < checkForEdgeGameObjectsCount; i++)
+                {
+                    GameObject edgePart = GameObject.Find(edgeSO.name + ".00" + i.ToString());
+                    if (edgePart != null)
+                        edgeParts.Add(edgePart);
+                }
+
+                for (int i = 0; i < edgeParts.Count; i++)
+                {
+                    edgeParts[i].GetComponentInChildren<HighlightHandler>().UpdateHighlight();
+                }
+
             }
             
             
