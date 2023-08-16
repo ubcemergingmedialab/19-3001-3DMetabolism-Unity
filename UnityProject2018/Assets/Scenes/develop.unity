@@ -14834,7 +14834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.72458}
+  m_AnchoredPosition: {x: 0, y: 484.72443}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -21513,7 +21513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962fa2a411ea99a4a87248dfc679bdfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  queryxml: {fileID: 4900000, guid: 378b5f4f46f59d446babd6d2d77483de, type: 3}
+  queryxml: {fileID: 4900000, guid: 7360ab41b5944cf4dba35f3e66b52a72, type: 3}
 --- !u!1 &862713694
 GameObject:
   m_ObjectHideFlags: 0
@@ -41377,21 +41377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f84730ce11444496cf696ef6a97d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePathways:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  activePathways: []
   globalPathway: {fileID: 0}
   AllEdgeSOs: []
   AllNodeSOs: []
@@ -67868,6 +67854,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.70465726
       objectReference: {fileID: 0}
+    - target: {fileID: 2547494337552871748, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
+      objectReference: {fileID: 0}
     - target: {fileID: 2558253597268587857, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -68501,6 +68492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938034345894722732, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Name
+      value: tricarboxylate transport protein
       objectReference: {fileID: 0}
     - target: {fileID: 2940287170185288849, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -69314,6 +69310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.68840146
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290372773131532527, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
       objectReference: {fileID: 0}
     - target: {fileID: 3291021548926121288, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -73159,6 +73160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505184506240292837, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: B-ketoacyl-ACP synthase
       objectReference: {fileID: 0}
     - target: {fileID: 5520363488918095555, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
@@ -78447,6 +78453,16 @@ PrefabInstance:
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541467026833837940, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541467026833837940, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7549670807542938172, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}

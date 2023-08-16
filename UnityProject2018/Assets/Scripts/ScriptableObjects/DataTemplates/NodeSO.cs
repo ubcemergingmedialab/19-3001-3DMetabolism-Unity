@@ -27,11 +27,16 @@ public class NodeSO : GenericSO
     public string link;
     public string CID;
 
+    public string originalName;
+
     /// <summary>
     /// Initialize NodeSO with essential fields
     /// </summary>
     public void init(string name, string newQID, string desc, string moleForm, string IUPAC, string StrucDesc, string charge, string pubchem, string cid) {
+
+      
         this.name = name;
+        originalName = name;
 
         this.Label = name;
 

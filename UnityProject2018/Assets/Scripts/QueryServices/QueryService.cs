@@ -159,22 +159,20 @@ public void NodeSOInit(WikibaseBinding item){
     PathwaySO currentPathway;
     Cofactor currentCofactor;
 
-
-    if (!(NodeSOs.ContainsKey(item.metaboliteLabel.value))){
-        
-        string newPath = ResourceFolderPath + "NodeSO/" +item.metaboliteLabel.value + ".asset";
+    if (!(NodeSOs.TryGetValue(item.metaboliteLabel.value, out currentNode))) 
+        {
+        string newPath = ResourceFolderPath + "NodeSO/" + item.metaboliteLabel.value + ".asset";
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
-        currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value,item.metaboliteDesc.value,item.metaboliteMoleFormula.value,item.metaboliteIUPAC.value,item.metaboliteStrucDesc.value,item.metaboliteCharge.value,item.metabolitePubchem.value, item.metaboliteCID.value);
-        NodeSOs.Add(item.metaboliteLabel.value,currentNode);
+        currentNode.init(item.metaboliteLabel.value, item.metaboliteQID.value, item.metaboliteDesc.value, item.metaboliteMoleFormula.value, item.metaboliteIUPAC.value, item.metaboliteStrucDesc.value, item.metaboliteCharge.value, item.metabolitePubchem.value, item.metaboliteCID.value);
+        NodeSOs.Add(item.metaboliteLabel.value, currentNode);
         //AssetDatabase.CreateAsset(currentNode,newPath);
-    }else{
-        NodeSOs.TryGetValue(item.metaboliteLabel.value, out currentNode);
-    }
+        }
+
 
     // Creating the edge and adding the node as product/reactant
     if (!(EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge))){
-        EdgeSOInit(item);
-        EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
+    EdgeSOInit(item);
+    EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
     }
     
     if(item.isProduct.value == "true"){  

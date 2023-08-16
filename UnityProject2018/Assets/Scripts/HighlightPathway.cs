@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -69,16 +69,32 @@ public class HighlightPathway
     {
         foreach (NodeSO nodeSO in pathwayToHighlight.nodes)
         {
-            GameObject node = GameObject.Find(nodeSO.name);
-            node.GetComponentInChildren<HighlightHandler>().UpdateHighlight();
-            
-
+            GameObject node = GameObject.Find(nodeSO.originalName);
+            if (node != null)
+            {
+                node.GetComponentInChildren<HighlightHandler>().UpdateHighlight();
+            }
+            else
+            {
+                Debug.LogError("cant find game object for node: " + nodeSO.name + " in pathway: " + pathwayToHighlight.Label);
+            }
         }
         foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
         {
             GameObject edge = GameObject.Find(edgeSO.name);
-            edge.GetComponentInChildren<HighlightHandler>().UpdateHighlight();
+            if (edge != null)
+            {
+                edge.GetComponentInChildren<HighlightHandler>().UpdateHighlight();
+            }
+            else
+            {
+                Debug.LogError("cant find game object for edge: " + edgeSO.name + " in pathway: " + pathwayToHighlight.Label);
+            }
+            
+            
+           
         }
+
         
     }
 
