@@ -153,6 +153,14 @@ public class CofactorParent : MonoBehaviour
         return closestPoint;
     }
 
+    public void ToggleChildren(bool state)
+    {
+        for (int i = 0; i < cofactorLabels.Count; i++)
+        {
+            cofactorLabels[i].gameObject.SetActive(false);
+        }
+    }
+
 }
 
 

@@ -16,6 +16,8 @@ public class EdgeDataDisplay : MonoBehaviour
 
     public GameObject edgeLabelObject;
 
+    public List<CofactorParent> cofactorParents;
+
     bool isHidden = false;
 
     // Start is called before the first frame update
@@ -188,8 +190,11 @@ public class EdgeDataDisplay : MonoBehaviour
 
                 if (!existingParent.cofactorLabels.Contains(cofactorLabel))
                     existingParent.cofactorLabels.Add(cofactorLabel);
+
                 cofactorLocalPosition = existingParent.GetCofactorLabelLocalPosition(cofactorLabel);
                 cofactorObject.transform.SetParent(existingParent.gameObject.transform, false);
+
+                cofactorParents.Add(existingParent);
             }
             else
             {
@@ -212,6 +217,8 @@ public class EdgeDataDisplay : MonoBehaviour
 
                 cofactorParentComponent.InitializeArrow();
                 cofactorParentComponent.cofactorLabels.Add(cofactorLabel);
+
+                cofactorParents.Add(cofactorParentComponent);
             }
 
             

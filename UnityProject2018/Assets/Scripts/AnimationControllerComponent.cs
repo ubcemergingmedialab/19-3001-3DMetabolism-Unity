@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 2023-2-15
@@ -18,7 +20,7 @@ public class AnimationControllerComponent : MonoBehaviour
     public Material scriptedAnimationMaterial;
 
 
-    public float waitTime = 0.75f;
+    public float waitTime = 0.25f;
     public float resetTime = 0.1f;
     public int timesToPulseStartAndEndNodes = 1;
     public AnimationDescription resetAnimation;
@@ -80,18 +82,12 @@ public class AnimationControllerComponent : MonoBehaviour
                     GameObject curGO = GameObject.Find(name);
                     if (curGO != null)
                     {
-                        ScriptedAnimation curSA = curGO.GetComponent<ScriptedAnimation>();
+                        ScriptedAnimation[] allScriptedAnimations = curGO.GetComponentsInChildren<ScriptedAnimation>();
 
-                        if (curSA != null)
+                        for (int i = 0; i < allScriptedAnimations.Length; i++)
                         {
-                            curSA.StopAnimating();
+                            allScriptedAnimations[i].StopAnimating();
                         }
-
-                        //Animator gameObjectAnimator = curGO.GetComponent<Animator>();
-                        //if (gameObjectAnimator != null)
-                        //{
-                        //    gameObjectAnimator.Play("Reset");
-                        //}
                     }
                 }
             }
@@ -202,7 +198,8 @@ public class AnimationControllerComponent : MonoBehaviour
                 if (g != null)
                 {
                     ScriptedAnimation newAnimation = g.AddComponent<ScriptedAnimation>();
-                    newAnimation.delay = ((i + 1) * waitTime);
+                    newAnimation.delay = ((i) + waitTime);
+                    newAnimation.InitializeScriptedAnimation();
                     newAnimation.scriptedAnimationMaterial = scriptedAnimationMaterial;
                     scriptedAnimations.Add(newAnimation);
                     
@@ -218,7 +215,8 @@ public class AnimationControllerComponent : MonoBehaviour
             //scriptedAnimations[i].ChangeColorByForce();
         }
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForEndOfFrame();
+        //yield return new WaitForSeconds(10);
 
         //foreach (AnimationDescription animation in animations)
         //{
