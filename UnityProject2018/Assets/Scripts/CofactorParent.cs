@@ -42,7 +42,7 @@ public class CofactorParent : MonoBehaviour
 
         if (edgeDataDisplay.GetComponent<MeshCollider>())
         {
-            Vector3 meshPosition = GetClosestPointToMesh(transform, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
+            Vector3 meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
 
 
             // Getting normalized direction between this and the closest point on the mesh
@@ -77,7 +77,7 @@ public class CofactorParent : MonoBehaviour
 
         arrow = instantiatedArrow;
 
-        Vector3 meshPosition = GetClosestPointToMesh(transform, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
+        Vector3 meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
         directionToMesh = (meshPosition - transform.position).normalized;
 
         // This needs to be more precise
@@ -123,7 +123,7 @@ public class CofactorParent : MonoBehaviour
     {
         if (edgeDataDisplay.GetComponent<MeshCollider>())
         {
-            Vector3 meshPosition = GetClosestPointToMesh(transform, edgeDataDisplay.GetComponentInParent<MeshCollider>().gameObject);
+            Vector3 meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
             arrowPosition = (transform.position + meshPosition) / 2f;
         }
     }
@@ -158,20 +158,21 @@ public class CofactorParent : MonoBehaviour
         return closestPoint;
     }
 
-    Vector3 GetClosestPointToMesh(Transform transform, GameObject targetMeshObject)
+    Vector3 GetClosestPointToMesh(Transform transform, MeshFilter meshFilter)
     {
-        MeshCollider meshCollider = targetMeshObject.GetComponent<MeshCollider>();
-        if (meshCollider == null)
-        {
-            Debug.LogError("Target GameObject does not have a MeshCollider component.");
-            return Vector3.zero;
-        }
+        
+        //MeshCollider meshCollider = targetMeshObject.GetComponent<MeshCollider>();
+        //if (meshCollider == null)
+        //{
+        //    Debug.LogError("Target GameObject does not have a MeshCollider component.");
+        //    return Vector3.zero;
+        //}
 
         // This method only works on convex mesh colliders.
         // We need it to work with non-convex mesh colliders, as Unity's convex colliders aren't precise enough and blocks part of the model.
         // Vector3 closestPoint = meshCollider.ClosestPoint(point);
 
-        Vector3 closestPoint = EMLMeshMath.GetClosestPoint(transform, meshCollider.sharedMesh);// targetMeshObject.GetComponent<MeshFilter>());
+        Vector3 closestPoint = EMLMeshMath.GetClosestPoint(transform, meshFilter);// targetMeshObject.GetComponent<MeshFilter>());
 
         return closestPoint;
     }

@@ -7,11 +7,11 @@ public static class EMLMeshMath
     //public Transform targetObject;
     //public MeshFilter meshFilter;
 
-    public static Vector3 GetClosestPoint(Transform targetObject, Mesh mesh)
+    public static Vector3 GetClosestPoint(Transform targetObject, MeshFilter meshFilter)
     {
-        if (mesh != null && targetObject != null)
+        if (meshFilter != null && targetObject != null)
         {
-            //Mesh mesh = meshFilter.sharedMesh;
+            Mesh mesh = meshFilter.sharedMesh;
             Vector3 closestPoint = Vector3.zero;
             float closestDistanceSqr = float.MaxValue;
 
@@ -34,7 +34,7 @@ public static class EMLMeshMath
                 }
             }
 
-            Debug.DrawLine(targetObject.position, closestPoint, Color.red);
+            Debug.DrawLine(targetObject.position, closestPoint, Color.red, 1000f);
 
             return closestPoint;
         }
