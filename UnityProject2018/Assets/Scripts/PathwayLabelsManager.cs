@@ -22,8 +22,8 @@ public class PathwayLabelsManager : MonoBehaviour
         get { return pathways; }
     }
 
-    float startFadeDistance = 24f; // At which distance to the camera should a label start fading
-    float maxFadeDistance = 15f; // At which distance to the camera should a label be completely gone
+    float startFadeDistance = 300f; // At which distance to the camera should a label start fading
+    float maxFadeDistance = 200f; // At which distance to the camera should a label be completely gone
 
     private void Awake()
     {
@@ -48,7 +48,8 @@ public class PathwayLabelsManager : MonoBehaviour
                 continue;
             float alphaValue = 1;
 
-            float distanceToCamera = Vector3.Distance(pathways[i].transform.position + new Vector3(0, 0, -5), Camera.main.transform.position);
+            //float distanceToCamera = Vector3.Distance(pathways[i].transform.position + new Vector3(0, 0, -5), Camera.main.transform.position);
+            float distanceToCamera = Vector3.Distance(pathways[i].transform.position, Camera.main.transform.position);
 
             if (distanceToCamera < maxFadeDistance)
                 alphaValue = 0f;
@@ -56,7 +57,8 @@ public class PathwayLabelsManager : MonoBehaviour
                 alphaValue = 1f;
             else
             {
-                alphaValue = ((distanceToCamera - maxFadeDistance) / maxFadeDistance);
+                alphaValue = (distanceToCamera - maxFadeDistance) / 100f;
+                //alphaValue = ((distanceToCamera - maxFadeDistance) / maxFadeDistance);
             }
 
             pathways[i].label.alpha = alphaValue;
