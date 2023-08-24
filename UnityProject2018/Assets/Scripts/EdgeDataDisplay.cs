@@ -102,7 +102,7 @@ public class EdgeDataDisplay : MonoBehaviour
 
             GetComponent<BoxCollider>().enabled = false;
             gameObject.AddComponent<MeshCollider>();
-            GetComponent<MeshCollider>().convex = true;
+            //GetComponent<MeshCollider>().convex = true;
             GetComponent<MeshCollider>().sharedMesh = GetComponentInParent<MeshFilter>().sharedMesh;
 
         }
