@@ -8,8 +8,8 @@ public class CameraLabelController : MonoBehaviour
 
     private List<GameObject> _allLabels;
 
-    private float maxDistance = 35f;
-    private float minDistance = 4f;
+    private float maxDistance = 400f;
+    //private float minDistance = 200f;
 
     private float _metabolitesFontSizeMultiplier = 1f;
     private float _reactionsFontSizeMultiplier = 1f;

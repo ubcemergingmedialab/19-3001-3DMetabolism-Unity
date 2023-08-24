@@ -63,6 +63,7 @@ public class NodeDataDisplay : MonoBehaviour
                     nodeData.searchCategory = searchCategory;
                     nodeData.Label = nodeData.Label.Replace(blackListedChar, "");
                     labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
+                    
                 }
             }
 
@@ -71,6 +72,9 @@ public class NodeDataDisplay : MonoBehaviour
             {
                 labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
             }
+
+            labelText.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            labelText.enableWordWrapping = false;
 
         }
     }
@@ -108,7 +112,11 @@ public class NodeDataDisplay : MonoBehaviour
             {
                 // If text is showing and this target is not the main focus right now, return
                 if (MouseOrbit.Instance.targetInFocus != gameObject)
+                {
+                    labelText.alpha = 1;
+                    labelText.fontSize = 36.0f * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
                     return;
+                }
             }
         }
         if (nodeData != null)
@@ -127,8 +135,8 @@ public class NodeDataDisplay : MonoBehaviour
                 }
                 else
                 {
-                    labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.7f);
-                    labelText.fontSize = 32.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
+                    labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.8f);
+                    labelText.fontSize = 30.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
                 }
             }
 
