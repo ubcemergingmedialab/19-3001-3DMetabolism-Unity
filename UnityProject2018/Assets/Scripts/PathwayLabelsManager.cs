@@ -58,7 +58,6 @@ public class PathwayLabelsManager : MonoBehaviour
             else
             {
                 alphaValue = (distanceToCamera - maxFadeDistance) / 100f;
-                //alphaValue = ((distanceToCamera - maxFadeDistance) / maxFadeDistance);
             }
 
             pathways[i].label.alpha = alphaValue;
