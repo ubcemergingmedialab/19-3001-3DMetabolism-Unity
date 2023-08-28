@@ -56,7 +56,7 @@ public class PrefabService : MonoBehaviour
 
 
     public void FindEdgeSOGameObject(EdgeSO edge) {
-        string edgeName = edge.name; 
+        string edgeName = edge.name;
         GameObject obj = GameObject.Find(edgeName);
 
         int sharedEdgeEnzymes = 0;

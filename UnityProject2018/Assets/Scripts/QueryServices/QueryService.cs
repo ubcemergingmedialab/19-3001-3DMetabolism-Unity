@@ -128,7 +128,7 @@ public class QueryService : MonoBehaviour
     // create an EdgeSo instance from the text given in the query Json , unless the edge already exists
     public void EdgeSOInit(WikibaseBinding item) {
         bool direction;
-        if (!(EdgeSOs.ContainsKey(item.edgeLabel.value))) {
+        if (!(EdgeSOs.ContainsKey(item.enzymeLabel.value))) {
             EdgeSO edge = ScriptableObject.CreateInstance<EdgeSO>();
             direction = false;
 
@@ -140,7 +140,7 @@ public class QueryService : MonoBehaviour
 
             string newPath = ResourceFolderPath + "EdgeSO/" + item.enzymeLabel.value + ".asset";
             //AssetDatabase.CreateAsset(edge,newPath);
-            EdgeSOs.Add(item.edgeLabel.value, edge);
+            EdgeSOs.Add(item.enzymeLabel.value, edge);
 
         }
     }
@@ -168,11 +168,11 @@ public void NodeSOInit(WikibaseBinding item){
         //AssetDatabase.CreateAsset(currentNode,newPath);
         }
 
-
-    // Creating the edge and adding the node as product/reactant
-    if (!(EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge))){
+        // Creating the edge and adding the node as product/reactant
+        if (!(EdgeSOs.TryGetValue(item.enzymeLabel.value, out currentEdge))){
+   
     EdgeSOInit(item);
-    EdgeSOs.TryGetValue(item.edgeLabel.value, out currentEdge);
+    EdgeSOs.TryGetValue(item.enzymeLabel.value, out currentEdge);
     }
     
     if(item.isProduct.value == "true"){  
