@@ -199,6 +199,13 @@ public void NodeSOInit(WikibaseBinding item){
         currentEdge.AddCofactor(currentCofactor);
     }
         
+    if (item.pathwayLabel.value == "Fatty Acid Synthesis")
+        {
+            if (item.metaboliteLabel.value == "malate")
+            {
+
+            }
+        }
     
     if (!(PathwaySOs.TryGetValue(item.pathwayLabel.value, out currentPathway))){
         PathwaySOInit(item);

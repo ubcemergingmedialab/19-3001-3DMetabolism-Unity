@@ -81,6 +81,10 @@ public class HighlightPathway
         }
         foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
         {
+            if (edgeSO.name == "carnitine-acyl-carnitine cotransporter (membrane)")
+            {
+
+            }
             GameObject edge = GameObject.Find(edgeSO.name);
             if (edge != null)
             {
