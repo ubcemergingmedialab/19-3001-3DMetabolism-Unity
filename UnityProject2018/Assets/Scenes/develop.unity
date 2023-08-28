@@ -15080,7 +15080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.72498}
+  m_AnchoredPosition: {x: 0, y: 484.725}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -68649,6 +68649,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: aspartate-glutamate transporter
       objectReference: {fileID: 0}
+    - target: {fileID: 2528152230675664361, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
     - target: {fileID: 2536779891918314884, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -70106,6 +70111,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3263024523645609637, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
     - target: {fileID: 3274139770177499063, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -71076,6 +71086,11 @@ PrefabInstance:
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3858738499559487025, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
     - target: {fileID: 3862005383073448102, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: doubleClickUnityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -71862,6 +71877,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 4371252560457915561, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
     - target: {fileID: 4377334728463420208, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -73545,6 +73565,11 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5180861693721653241, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
     - target: {fileID: 5186536866208554907, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: cameraToLookAt
@@ -87148,6 +87173,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a69396fa118adca4ca8d11338f3e29ac, type: 2}
+    - target: {fileID: 8899370205390464660, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b53f157e93fda04281ecc91c4ac3928, type: 2}
     - target: {fileID: 8908555338362973572, guid: 9c8d71f1682391f4a99ca2aca8e32f92,
         type: 3}
       propertyPath: m_Name
