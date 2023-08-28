@@ -58,7 +58,6 @@ public class ScriptedAnimation : MonoBehaviour
     {
         scriptedAnimationMaterial = new Material(scriptedAnimationMaterial);
         scriptedAnimationMaterial.color = initialColor = _originalMaterial.GetColor("_WiggleColor");
-        //initialColor = _originalMaterial.GetColor("_WiggleColor");
         _meshRenderer.material = scriptedAnimationMaterial;
 
         animationRoutine = StartCoroutine(AnimationCoroutine());

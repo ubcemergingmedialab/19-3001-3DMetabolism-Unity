@@ -153,7 +153,7 @@ public class EdgeDataDisplay : MonoBehaviour
 
             }
         }
-        catch 
+        catch
         {
             Debug.LogWarning("No edgedata found for edge: " + transform.parent.gameObject.name);
         }
@@ -221,7 +221,7 @@ public class EdgeDataDisplay : MonoBehaviour
                 cofactorParents.Add(cofactorParentComponent);
             }
 
-            
+
             cofactorObject.transform.localPosition = cofactorLocalPosition;
             CofactorLabelsManager.Instance.AddCofactorLabel(cofactorLabel);
         }
@@ -321,7 +321,11 @@ public class EdgeDataDisplay : MonoBehaviour
             {
                 // If text is showing and this target is not the main focus right now, return
                 if (MouseOrbit.Instance.targetInFocus != gameObject)
+                {
+                    edgeLabelObject.GetComponent<TextMeshPro>().alpha = 1;
+                    edgeLabelObject.GetComponent<TextMeshPro>().fontSize = 36.0f * MouseOrbit.Instance.cameraLabelController.ReactionsFontSizeMultiplier;
                     return;
+                }
             }
         }
 

@@ -41,19 +41,19 @@ public class UIPresenter : MonoBehaviour
     void Start()
     {
         AvailableElements = new Dictionary<UIList, UIElement>();
-        if(NodeUIElement != null)
+        if (NodeUIElement != null)
         {
             AvailableElements.Add(UIList.NodeUI, NodeUIElement);
         }
-        if(EdgeUIElement != null)
+        if (EdgeUIElement != null)
         {
             AvailableElements.Add(UIList.EdgeUI, EdgeUIElement);
         }
-        if(PathwayUIElement != null)
+        if (PathwayUIElement != null)
         {
             AvailableElements.Add(UIList.PathwayUI, PathwayUIElement);
         }
-        if(Panel != null)
+        if (Panel != null)
         {
             ClosePanel();
         }
@@ -62,12 +62,15 @@ public class UIPresenter : MonoBehaviour
     public void NotifyUIUpdate(UIList el, bool displayPartner = false)
     {
         UIElement element;
-        if(AvailableElements.TryGetValue(el, out element))
+        if (AvailableElements.TryGetValue(el, out element))
         {
             ClosePanel();
-            if(displayPartner) {
+            if (displayPartner)
+            {
                 element.UpdateUI(true);
-            } else {
+            }
+            else
+            {
                 element.UpdateUI();
             }
             OpenPanel(element);
@@ -76,17 +79,26 @@ public class UIPresenter : MonoBehaviour
 
     public void OpenPanel(UIElement element)
     {
-        if(element != null) {
+        if (element != null)
+        {
             element.gameObject.SetActive(true);
         }
 
     }
-    public void ClosePanel()
+    public void ClosePanel(bool clearMouseTargetInFocus = false)
     {
-        foreach(KeyValuePair<UIList, UIElement> entry in AvailableElements) {
+        foreach (KeyValuePair<UIList, UIElement> entry in AvailableElements)
+        {
             entry.Value.gameObject.SetActive(false);
         }
+
+        if (clearMouseTargetInFocus)
+        {
+            MouseOrbit.Instance.targetInFocus = null;
+        }
+
         GameObject.Find("PrefabService").GetComponent<PrefabService>().DisableAllOutline();
     }
+
 
 }

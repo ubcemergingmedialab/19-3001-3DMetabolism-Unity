@@ -87,7 +87,7 @@ public class ButtonFactory : MonoBehaviour
 
     private GameObject GenerateButtonAndSetPosition()
     {
-        GameObject generated = Instantiate(buttonPrefab, transform);
+        GameObject generated = Instantiate(buttonPrefab, transform.parent);
         RectTransform rect = generated.GetComponent<RectTransform>();
         rect.anchoredPosition = new Vector3(buttonX, buttonY, 0);
         return generated;
