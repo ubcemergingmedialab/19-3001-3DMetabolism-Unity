@@ -77,7 +77,17 @@ public class CofactorParent : MonoBehaviour
 
         arrow = instantiatedArrow;
 
-        Vector3 meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
+        Vector3 meshPosition = new Vector3(0, 0, 0);
+
+        if (edgeDataDisplay.GetComponent<MeshCollider>())
+        {
+            meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
+        }
+        else
+        {
+            meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponents<BoxCollider>());
+        }
+
         directionToMesh = (meshPosition - transform.position).normalized;
 
         // This needs to be more precise
@@ -156,6 +166,35 @@ public class CofactorParent : MonoBehaviour
         
         
         return closestPoint;
+    }
+
+    Vector3 GetClosestPointToMesh(Vector3 point, BoxCollider[] boxColliders)
+    {
+        if (boxColliders.Length == 0)
+        {
+            Debug.LogError("Target GameObject does not have a BoxCollider component.");
+            return Vector3.zero;
+        }
+
+        // This method only works on convex mesh colliders.
+        // We need it to work with non-convex mesh colliders, as Unity's convex colliders aren't precise enough and blocks part of the model.
+
+        Vector3 closestPoint = new Vector3(0, 0, 0);
+
+        for (int i = 0; i < boxColliders.Length; i++)
+        {
+            Vector3 closestPointOnBoxCollider = boxColliders[i].ClosestPoint(point);
+
+            if (closestPoint == Vector3.zero || Vector3.Distance(closestPointOnBoxCollider, point) < Vector3.Distance(closestPoint, point))
+            {
+                closestPoint = closestPointOnBoxCollider;
+            }
+
+        }
+
+        return closestPoint;
+
+        
     }
 
     Vector3 GetClosestPointToMesh(Transform transform, MeshFilter meshFilter)

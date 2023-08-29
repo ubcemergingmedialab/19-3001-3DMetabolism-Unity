@@ -4,8 +4,6 @@ using UnityEngine;
 
 public static class EMLMeshMath
 {
-    //public Transform targetObject;
-    //public MeshFilter meshFilter;
 
     public static Vector3 GetClosestPoint(Transform targetObject, MeshFilter meshFilter)
     {

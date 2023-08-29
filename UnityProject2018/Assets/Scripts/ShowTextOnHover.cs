@@ -9,6 +9,10 @@ public class ShowTextOnHover : MonoBehaviour
     public TextMeshPro text;
     public bool isShowingText = false;
     private Color originalColor;
+
+
+    bool useAsPseudoButton = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,42 +20,89 @@ public class ShowTextOnHover : MonoBehaviour
         {
             if (GetComponent<EdgeDataDisplay>())
             {
-                
+
             }
-            else if (transform.Find("Label").GetComponent<TextMeshPro>())
-                text = transform.Find("Label").GetComponent<TextMeshPro>();
+            else if (transform.Find("Label"))
+            {
+                if (transform.Find("Label").GetComponent<TextMeshPro>())
+                    text = transform.Find("Label").GetComponent<TextMeshPro>();
+            }
+            // Edge case for when a model doesn't have a convex collider that works.
+            // This shouldn't happen, as the convex colliders should be included in the model.
+            // They're not included yet, so this is a workaround.
+            // This makes sure a child object with a collider can still be used to interact with the edge.
+            else if (GetComponentInParent<EdgeDataDisplay>())
+            {
+                text = GetComponentInParent<EdgeDataDisplay>().edgeLabelObject.GetComponent<TextMeshPro>();
+                useAsPseudoButton = true;
+            }
 
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnMouseEnter()
     {
         //Debug.Log("Entered");
-        // update original color, change color to show text
-        if (text != null)
+
+        // Workaround for edges
+        if (useAsPseudoButton)
         {
-            originalColor = text.color;
-            isShowingText = true;
-            text.color = new Color(1, 1, 1, 1);
+            transform.parent.GetComponent<ShowTextOnHover>().WorkaroundMouseEnter();
         }
-        this.transform.GetComponentInParent<Outline>().enabled = true;
+        else
+        {
+            // update original color, change color to show text
+            if (text != null)
+            {
+                originalColor = text.color;
+                isShowingText = true;
+                text.color = new Color(1, 1, 1, 1);
+            }
+            this.transform.GetComponentInParent<Outline>().enabled = true;
+        }
     }
 
     private void OnMouseExit()
     {
-        // change color back to original
-        if (text != null)
+        if (useAsPseudoButton)
         {
-            isShowingText = false;
-            text.color = originalColor;
+            transform.parent.GetComponent<ShowTextOnHover>().WorkaroundMouseExit();
         }
-        this.transform.GetComponentInParent<Outline>().enabled = false;
+        else
+        {
+            // change color back to original
+            if (text != null)
+            {
+                isShowingText = false;
+                text.color = originalColor;
+            }
+            this.transform.GetComponentInParent<Outline>().enabled = false;
+        }
     }
+
+
+    #region workaround functionality
+    private void OnMouseUpAsButton()
+    {
+        if (useAsPseudoButton)
+        {
+            if (GetComponentInParent<EdgeDataDisplay>())
+            {
+                GetComponentInParent<EdgeDataDisplay>().UpdateScriptableObject();
+            }
+        }
+    }
+
+    public void WorkaroundMouseEnter()
+    {
+        OnMouseEnter();
+    }
+
+    public void WorkaroundMouseExit()
+    {
+        OnMouseExit();
+    }
+    #endregion
 
 }
