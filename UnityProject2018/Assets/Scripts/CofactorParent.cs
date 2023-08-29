@@ -131,10 +131,17 @@ public class CofactorParent : MonoBehaviour
 
     public void CalculateArrowPosition()
     {
+
+
         if (edgeDataDisplay.GetComponent<MeshCollider>())
         {
             Vector3 meshPosition = GetClosestPointToMesh(transform.position, edgeDataDisplay.GetComponent<MeshCollider>().gameObject);
             arrowPosition = (transform.position + meshPosition) / 2f;
+        }
+        else if (edgeDataDisplay.GetComponent<BoxCollider>())
+        {
+            BoxCollider[] boxColliders = edgeDataDisplay.GetComponentsInChildren<BoxCollider>();
+            arrowPosition = (transform.position + GetClosestPointToMesh(transform.position, boxColliders)) / 2;
         }
     }
 
@@ -163,8 +170,8 @@ public class CofactorParent : MonoBehaviour
         // We need it to work with non-convex mesh colliders, as Unity's convex colliders aren't precise enough and blocks part of the model.
         Vector3 closestPoint = meshCollider.ClosestPoint(point);
 
-        
-        
+
+
         return closestPoint;
     }
 
@@ -194,12 +201,12 @@ public class CofactorParent : MonoBehaviour
 
         return closestPoint;
 
-        
+
     }
 
     Vector3 GetClosestPointToMesh(Transform transform, MeshFilter meshFilter)
     {
-        
+
         //MeshCollider meshCollider = targetMeshObject.GetComponent<MeshCollider>();
         //if (meshCollider == null)
         //{
