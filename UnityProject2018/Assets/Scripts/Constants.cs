@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// This class is used to store default values for settings.  The purpose of placing the values in one class here is because it's easier to toggle them
@@ -27,7 +28,13 @@ public class Constants : MonoBehaviour
     //{
     //    InitializeBlacklist();
     //}
-
+    private void Start()
+    {
+        // setting the fonts for TMP in sidecard
+        //GameObject reactionLabel = GameObject.Find("Reaction Equation Value TMP");
+        //reactionLabel.GetComponent<TMP_Text>().font
+        //GameObject molecularFormula = GameObject.Find("Molecular Formula Value");
+    }
     //This list represents the characters we want to remove from the Node labels displayed in the model.
     private static void InitializeBlacklist()
     {
