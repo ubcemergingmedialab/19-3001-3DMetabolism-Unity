@@ -1266,6 +1266,7 @@ MonoBehaviour:
   CofactorType: 3
   activeColor: {r: 0.49803922, g: 0.972549, b: 0.6313726, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1139891724}
 --- !u!114 &34310249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5946,10 +5947,10 @@ RectTransform:
   m_Father: {fileID: 695460506}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 184.99931, y: 0}
-  m_SizeDelta: {x: 362, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.49999812, y: 0.49999803}
 --- !u!114 &242396500
 MonoBehaviour:
@@ -11106,6 +11107,7 @@ MonoBehaviour:
   CofactorType: 1
   activeColor: {r: 1, g: 0.9411765, b: 0.4117647, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1929907829}
 --- !u!114 &450108565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15579,7 +15581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484.72507}
+  m_AnchoredPosition: {x: 0, y: 484.72482}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &579262998
@@ -16251,6 +16253,7 @@ MonoBehaviour:
   CofactorType: 7
   activeColor: {r: 0.972549, g: 0.627451, b: 0.627451, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1296057909}
 --- !u!114 &606522967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17998,6 +18001,7 @@ MonoBehaviour:
   CofactorType: 9
   activeColor: {r: 1, g: 0.7921569, b: 0.39607844, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1143277969}
 --- !u!114 &682245987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23639,8 +23643,8 @@ RectTransform:
   m_Father: {fileID: 1721280695}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.029471815}
-  m_AnchorMax: {x: 1, y: 0.9705282}
+  m_AnchorMin: {x: 0, y: 0.029471816}
+  m_AnchorMax: {x: 1, y: 0.97052824}
   m_AnchoredPosition: {x: 0, y: 0.02746582}
   m_SizeDelta: {x: 20, y: 20.3165}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -27839,8 +27843,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 881954608}
   m_HandleRect: {fileID: 881954607}
   m_Direction: 2
-  m_Value: 0.5
-  m_Size: 0.9410564
+  m_Value: 0.50000054
+  m_Size: 0.94105643
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -36290,6 +36294,7 @@ MonoBehaviour:
   CofactorType: 0
   activeColor: {r: 1, g: 0.9411765, b: 0.4117647, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1402149337}
 --- !u!1 &1361768002
 GameObject:
   m_ObjectHideFlags: 0
@@ -44207,6 +44212,7 @@ MonoBehaviour:
   CofactorType: 6
   activeColor: {r: 0.972549, g: 0.627451, b: 0.627451, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1975926444}
 --- !u!114 &1677252834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44752,6 +44758,7 @@ MonoBehaviour:
   CofactorType: 8
   activeColor: {r: 1, g: 0.9411765, b: 0.4117647, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 2075595471}
 --- !u!114 &1707289692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48295,8 +48302,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 740546521}
   m_HandleRect: {fileID: 740546520}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -49275,8 +49282,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1805603471}
   m_HandleRect: {fileID: 1805603470}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -54217,6 +54224,7 @@ MonoBehaviour:
   CofactorType: 4
   activeColor: {r: 0.41960785, g: 0.9607843, b: 0.9607843, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 67571757}
 --- !u!114 &2043192188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54650,6 +54658,7 @@ MonoBehaviour:
   CofactorType: 2
   activeColor: {r: 0.49803922, g: 0.972549, b: 0.6313726, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1092775625}
 --- !u!114 &2067397325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54837,6 +54846,7 @@ MonoBehaviour:
   CofactorType: 5
   activeColor: {r: 1, g: 0.52156866, b: 0.98039216, a: 1}
   inactiveColor: {r: 0.3254902, g: 0.42745098, b: 0.99607843, a: 0}
+  text: {fileID: 1480131989}
 --- !u!114 &2071736098
 MonoBehaviour:
   m_ObjectHideFlags: 0
