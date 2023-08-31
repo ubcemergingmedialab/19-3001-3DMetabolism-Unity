@@ -105,6 +105,12 @@ public class CompoundController : MonoBehaviour
         // Parse JSON
         var compound = JSON.Parse(compoundJSON);
 
+
+        if (compound["PC_Compounds"][0]["atoms"]["aid"].Count == 0)
+        {
+            Debug.Log("No 3D compound found");
+        }
+
         // Instantiate Atoms
         for (int i=0; i< compound["PC_Compounds"][0]["atoms"]["aid"].Count; i++)
         {
