@@ -98,6 +98,14 @@ public class StatusController : MonoBehaviour
         }
     }
 
+    public void ResetSelectedPathways()
+    {
+        for (int i = 0; i < activePathways.Count; i++)
+        {
+            SetPathwayState(activePathways[i], HighlightPathway.HighlightState.Default);
+        }
+    }
+
     /// <summary>
     /// - instantiates a highlightPathway instance per a PathwaySO and links them in the highlightByPathwaySO Dictionary
     /// - keeps a list of all HighlightPathway instances
@@ -341,7 +349,7 @@ public class StatusController : MonoBehaviour
         }
         else
         {
-            Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
+            //Debug.Log("StatusController.ElementCheckState : no pathwaylist are to be found on the elementToPathways Dictionary (NULL access)");
         }
         return tempState;
     }

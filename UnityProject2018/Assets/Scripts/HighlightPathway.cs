@@ -76,7 +76,7 @@ public class HighlightPathway
             }
             else
             {
-                Debug.LogError("cant find game object for node: " + nodeSO.name + " in pathway: " + pathwayToHighlight.Label);
+                Debug.Log("cant find game object for node: " + nodeSO.name + " in pathway: " + pathwayToHighlight.Label);
             }
         }
         foreach (EdgeSO edgeSO in pathwayToHighlight.edges)
