@@ -18,6 +18,9 @@ public class MakeItButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MouseOrbit.Instance.IsPointerOverNamedUIElements())
+            return;
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0))

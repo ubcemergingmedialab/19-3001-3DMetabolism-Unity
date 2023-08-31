@@ -44,6 +44,8 @@ public class ShowTextOnHover : MonoBehaviour
     private void OnMouseEnter()
     {
         //Debug.Log("Entered");
+        if (MouseOrbit.Instance.IsPointerOverNamedUIElements())
+            return;
 
         // Workaround for edges
         if (useAsPseudoButton)
@@ -85,6 +87,9 @@ public class ShowTextOnHover : MonoBehaviour
     #region workaround functionality
     private void OnMouseUpAsButton()
     {
+        if (MouseOrbit.Instance.IsPointerOverNamedUIElements())
+            return;
+
         if (useAsPseudoButton)
         {
             if (GetComponentInParent<EdgeDataDisplay>())

@@ -243,7 +243,7 @@ public class MouseOrbit : MonoBehaviour
     /// </summary>
     /// <param name="raycastResults"></param>
     /// <returns></returns>
-    private bool IsPointerOverNamedUIElements()
+    public bool IsPointerOverNamedUIElements()
     {
         List<RaycastResult> raycastResults = GetEventSystemRaycastResults();
         //"Compound Controller Image"
