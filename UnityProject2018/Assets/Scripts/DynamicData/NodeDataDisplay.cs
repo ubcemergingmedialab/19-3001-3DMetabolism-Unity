@@ -132,6 +132,7 @@ public class NodeDataDisplay : MonoBehaviour
                     distanceToCameraMultiplier = 1;
                     labelText.alpha = distanceToCameraMultiplier;
                     labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
+                    transform.GetComponentInParent<Outline>().enabled = true;
                 }
                 else
                 {

@@ -351,6 +351,7 @@ public class EdgeDataDisplay : MonoBehaviour
                     distanceToCameraMultiplier = 1;
                     edgeLabelObject.GetComponent<TextMeshPro>().alpha = distanceToCameraMultiplier;
                     edgeLabelObject.GetComponent<TextMeshPro>().fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.ReactionsFontSizeMultiplier;
+                    transform.GetComponentInParent<Outline>().enabled = true;
                 }
                 else
                 {
