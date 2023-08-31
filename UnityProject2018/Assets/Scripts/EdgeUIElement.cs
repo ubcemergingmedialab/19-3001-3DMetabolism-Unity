@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -29,7 +29,7 @@ public class EdgeUIElement : UIElement
         Debug.Log("Updating Edge UI");
         CompoundControllerCamera.Instance.ResetCameraPosition();
 
-        LabelText.text = ((Card)DataReference).Label;
+        LabelText.text = ((Card)DataReference).Label.Replace("⁺", "<sup>+</sup>");
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
         EnzymeClassText.text = ((Card)DataReference).EnzymeClass;

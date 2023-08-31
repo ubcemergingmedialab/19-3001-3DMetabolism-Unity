@@ -35,6 +35,7 @@ public class UIPresenter : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+
     }
 
     // Start is called before the first frame update 

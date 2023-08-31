@@ -121,6 +121,8 @@ public class ScriptedAnimation : MonoBehaviour
 
         elapsedTime = 0.0f;
 
+        // effect
+
         for (int i = 0; i < clonedCofactors.Count; i++)
         {
             ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
