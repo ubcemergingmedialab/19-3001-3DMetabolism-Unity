@@ -10,6 +10,13 @@ public class CofactorLabelsManager : MonoBehaviour
     List<CofactorParent> cofactorParents;
     List<CofactorLabel> cofactorLabels;
 
+    private float distanceBetweenLabels = 3f;
+
+    public float GetDistanceBetweenCofactorLabels
+    {
+        get { return distanceBetweenLabels; }
+    }
+
     public static CofactorLabelsManager Instance
     {
         get
@@ -57,7 +64,7 @@ public class CofactorLabelsManager : MonoBehaviour
 
         if (enabledCofactorTypes == null)
             enabledCofactorTypes = new List<CofactorType>();
-            
+
         for (int i = 0; i < cofactorParents.Count; i++)
         {
             for (int j = 0; j < cofactorParents[i].cofactorLabels.Count; j++)
@@ -70,7 +77,7 @@ public class CofactorLabelsManager : MonoBehaviour
 
             // Toggle the arrow on or off depending on active cofactors
             cofactorParents[i].ToggleArrow(CountActiveChildren(cofactorParents[i].gameObject) != 0);
-            
+
 
         }
     }

@@ -20,11 +20,12 @@ public class CofactorParent : MonoBehaviour
 
     private bool arrowInitialized = false;
 
-    private float distanceBetweenLabels = 3f;
+    private float distanceBetweenLabels;
 
     public CofactorParent()
     {
         cofactorLabels = new List<CofactorLabel>();
+        distanceBetweenLabels = CofactorLabelsManager.Instance.GetDistanceBetweenCofactorLabels;
     }
 
 

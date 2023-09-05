@@ -203,7 +203,7 @@ public class EdgeDataDisplay : MonoBehaviour
                 cofactorLocalPosition = existingParent.GetCofactorLabelLocalPosition(cofactorLabel);
                 cofactorObject.transform.SetParent(existingParent.gameObject.transform, false);
 
-                cofactorParents.Add(existingParent);
+                //cofactorParents.Add(existingParent);
             }
             else
             {

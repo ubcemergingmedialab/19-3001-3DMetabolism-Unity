@@ -15,7 +15,8 @@ public class ScriptedAnimation : MonoBehaviour
 
     private Color initialColor;
 
-    private float animationDuration = 2f;
+    private float animationDuration = 2f; // Not including animation mid effect
+    private float animationEffectDuration = 0.5f;
 
     private bool _hasCofactors = false;
 
@@ -76,6 +77,7 @@ public class ScriptedAnimation : MonoBehaviour
         List<Vector3> clonedCofactorLabelStartPositions = new List<Vector3>();
 
         clonedCofactors = new List<GameObject>();
+
         // If edge has cofactors, clone them and use the clones for animations
         if (_hasCofactors)
         {
@@ -91,27 +93,40 @@ public class ScriptedAnimation : MonoBehaviour
                 clonedCofactor.SetActive(false);
                 
 
-                cofactorParents[i].ToggleChildren(false);
 
+            }
+
+            for (int i = 0; i < cofactorParents.Count; i++)
+            {
+                cofactorParents[i].ToggleChildren(false);
             }
         }
 
+        List<GameObject> cofactorsToAnimate = new List<GameObject>();
+        List<Vector3> cofactorsToAnimateStartPosition = new List<Vector3>(); 
 
+        // Toggle cofactors on/off depending on reaction/product
         for (int i = 0; i < clonedCofactors.Count; i++)
         {
             ToggleCofactorType(clonedCofactors[i], cofactorLabels[i].cofactor.isReactant);
+            if (clonedCofactors[i].gameObject.activeInHierarchy)
+            {
+                cofactorsToAnimate.Add(clonedCofactors[i]);
+                cofactorsToAnimateStartPosition.Add(clonedCofactorLabelStartPositions[i]);
+            }
         }
 
 
         while (elapsedTime < halfDuration)
         {
+
             float normalizedTime = elapsedTime / halfDuration;
             Color lerpedColor = Color.Lerp(initialColor, targetColor, normalizedTime);
             _meshRenderer.material.color = lerpedColor;
 
-            for (int i = 0; i < clonedCofactors.Count; i++)
-            {                
-                clonedCofactors[i].transform.position = Vector3.Lerp(clonedCofactorLabelStartPositions[i], edgeDataDisplay.transform.position, normalizedTime);
+            for (int i = 0; i < cofactorsToAnimate.Count; i++)
+            {
+                cofactorsToAnimate[i].transform.position = Vector3.Lerp(cofactorsToAnimateStartPosition[i], edgeDataDisplay.transform.position, normalizedTime);
             }
 
 
@@ -121,11 +136,37 @@ public class ScriptedAnimation : MonoBehaviour
 
         elapsedTime = 0.0f;
 
-        // effect
+        // Add effect here to visualize cofactor change
+
+        //while (elapsedTime < animationEffectDuration)
+        //{
+        //    float normalizedTime = elapsedTime / halfDuration;
+        //    //Color lerpedColor = Color.Lerp(targetColor, initialColor, normalizedTime);
+        //    //_meshRenderer.material.color = lerpedColor;
+
+        //    for (int i = clonedCofactors.Count; i > 0; i--)
+        //    {
+
+        //        clonedCofactors[i - 1].transform.position = Vector3.Lerp(edgeDataDisplay.transform.position, clonedCofactorLabelStartPositions[i - 1], normalizedTime);
+        //    }
+
+        //    elapsedTime += Time.deltaTime;
+        //    yield return null;
+        //}
+
+        //elapsedTime = 0.0f;
+
+        cofactorsToAnimate = new List<GameObject>();
+        cofactorsToAnimateStartPosition = new List<Vector3>();
 
         for (int i = 0; i < clonedCofactors.Count; i++)
         {
             ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
+            if (clonedCofactors[i].gameObject.activeInHierarchy)
+            {
+                cofactorsToAnimate.Add(clonedCofactors[i]);
+                cofactorsToAnimateStartPosition.Add(clonedCofactorLabelStartPositions[i]);
+            }
         }
 
         while (elapsedTime < halfDuration)
@@ -134,10 +175,10 @@ public class ScriptedAnimation : MonoBehaviour
             Color lerpedColor = Color.Lerp(targetColor, initialColor, normalizedTime);
             _meshRenderer.material.color = lerpedColor;
 
-            for (int i = 0; i < clonedCofactors.Count; i++)
+            for (int i = 0; i < cofactorsToAnimate.Count; i++)
             {
 
-                clonedCofactors[i].transform.position = Vector3.Lerp(edgeDataDisplay.transform.position, clonedCofactorLabelStartPositions[i], normalizedTime);
+                cofactorsToAnimate[i].transform.position = Vector3.Lerp(edgeDataDisplay.transform.position, cofactorsToAnimateStartPosition[i], normalizedTime);
             }
 
             elapsedTime += Time.deltaTime;
