@@ -151,7 +151,7 @@ public class EdgeDataDisplay : MonoBehaviour
                     CofactorLabel otherCofactorLabel = otherCofactor.GetComponent<CofactorLabel>();
                     otherCofactorLabel.edgeObject = gameObject;
                     otherCofactorLabel.edgeDataDisplay = this;
-                    otherCofactorLabel.cofactor = edgeData.cofactors[i];
+                    otherCofactorLabel.cofactor = new Cofactor(edgeData.cofactors[i].label, edgeData.cofactors[i].isReactant);
 
                     ReparentCofactorLabel(otherCofactor, true);
                 }
@@ -177,6 +177,7 @@ public class EdgeDataDisplay : MonoBehaviour
         CofactorLabel cofactorLabel = cofactorObject.GetComponent<CofactorLabel>();
         Cofactor cofactor = cofactorLabel.GetComponent<CofactorLabel>().cofactor;
 
+
         if (FindCofactorLocationObject(cofactor, secondDirection, out parentLocation))
         {
             // Success
@@ -195,6 +196,7 @@ public class EdgeDataDisplay : MonoBehaviour
             // check if existing CofactorParent exists
             if (CofactorLabelsManager.Instance.CofactorParents.Exists(x => x.edgeDataDisplay == this && x.isReactant == cofactor.isReactant && x.secondDirection == secondDirection))
             {
+
                 CofactorParent existingParent = CofactorLabelsManager.Instance.CofactorParents.Find(x => x.edgeDataDisplay == this && x.isReactant == cofactor.isReactant && x.secondDirection == secondDirection);
 
                 if (!existingParent.cofactorLabels.Contains(cofactorLabel))
@@ -203,7 +205,6 @@ public class EdgeDataDisplay : MonoBehaviour
                 cofactorLocalPosition = existingParent.GetCofactorLabelLocalPosition(cofactorLabel);
                 cofactorObject.transform.SetParent(existingParent.gameObject.transform, false);
 
-                //cofactorParents.Add(existingParent);
             }
             else
             {
@@ -214,6 +215,7 @@ public class EdgeDataDisplay : MonoBehaviour
                 instantiatedCofactorParent.transform.SetParent(CofactorLabelsManager.Instance.gameObject.transform, true);
                 instantiatedCofactorParent.transform.position = parentLocation.position;
 
+
                 CofactorParent cofactorParentComponent = instantiatedCofactorParent.GetComponent<CofactorParent>();
                 cofactorParentComponent.parentLocationName = parentLocation.name;
                 cofactorParentComponent.parentObject = parentLocation.gameObject;
@@ -221,10 +223,11 @@ public class EdgeDataDisplay : MonoBehaviour
                 cofactorParentComponent.isReactant = cofactor.isReactant;
                 cofactorParentComponent.secondDirection = secondDirection;
 
+
                 CofactorLabelsManager.Instance.AddCofactorParent(instantiatedCofactorParent.GetComponent<CofactorParent>());
                 cofactorObject.transform.SetParent(instantiatedCofactorParent.transform, false);
 
-                cofactorParentComponent.InitializeArrow();
+                cofactorParentComponent.InitializeArrow(secondDirection);
                 cofactorParentComponent.cofactorLabels.Add(cofactorLabel);
 
                 cofactorParents.Add(cofactorParentComponent);

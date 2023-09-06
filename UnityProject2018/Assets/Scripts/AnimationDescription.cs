@@ -7,4 +7,6 @@ public class AnimationDescription : ScriptableObject
     // Assuming that the index of the object and their animations are the same
     public List<string> AnimatedObjects;
     public List<string> TriggerToSet;
+    public bool fromReactant; // used for figuring out cofactor animations
+    public bool biDirectional;
 }

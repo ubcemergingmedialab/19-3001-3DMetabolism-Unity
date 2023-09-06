@@ -62,7 +62,7 @@ public class CofactorParent : MonoBehaviour
 
     }
 
-    public void InitializeArrow()
+    public void InitializeArrow(bool secondDirection)
     {
         if (arrowInitialized)
             return;
@@ -91,42 +91,24 @@ public class CofactorParent : MonoBehaviour
 
         directionToMesh = (meshPosition - transform.position).normalized;
 
-        // This needs to be more precise
-        // We need to cover the edge edge cases for diagonal edges
-
-        // Reactant first -> going into the edge
-        Quaternion up = Quaternion.Euler(new Vector3(90, 90, 0));
-        Quaternion down = Quaternion.Euler(new Vector3(90, 270, 0));
-        Quaternion left = Quaternion.Euler(new Vector3(90, 180, 0));
-        Quaternion right = Quaternion.Euler(new Vector3(90, 0, 0));
-
-        // Products after -> coming out of the edge
-        if (!isReactant)
+        if (isReactant && !secondDirection)
         {
-            up = Quaternion.Euler(new Vector3(90, 270, 0));
-            down = Quaternion.Euler(new Vector3(90, 90, 0));
-            left = Quaternion.Euler(new Vector3(90, 0, 0));
-            right = Quaternion.Euler(new Vector3(90, 180, 0));
+            instantiatedArrow.transform.LookAt(meshPosition, Vector3.forward);
         }
-
-        if (directionToMesh.y < -0.5f) // Check if arrow should point up
+        else if (!isReactant && !secondDirection)
         {
-            instantiatedArrow.transform.GetChild(0).localRotation = up;
+            instantiatedArrow.transform.LookAt(parentObject.transform, Vector3.forward);
         }
-        else if (directionToMesh.y > 0.5f) // Check if arrow should point down
+        else if (isReactant && secondDirection)
         {
-            instantiatedArrow.transform.GetChild(0).localRotation = down;
-        }
-        else if (directionToMesh.x > 0.5f) // Left or Right
-        {
-            instantiatedArrow.transform.GetChild(0).localRotation = left;
+            instantiatedArrow.transform.LookAt(parentObject.transform, Vector3.forward);
         }
         else
         {
-            instantiatedArrow.transform.GetChild(0).localRotation = right;
+            instantiatedArrow.transform.LookAt(meshPosition, Vector3.forward);
         }
 
-
+            instantiatedArrow.transform.GetChild(0).transform.localRotation = Quaternion.Euler(new Vector3(90, 90, 0));
 
     }
 

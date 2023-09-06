@@ -27,6 +27,9 @@ public class ScriptedAnimation : MonoBehaviour
     private List<GameObject> clonedCofactors;
     private EdgeDataDisplay edgeDataDisplay;
 
+    public bool fromReactant = false;
+    public bool biDirectional = false;
+
     // Still gotta check for bidirectional. Right now this will only work one way for cofactors.
 
     public void InitializeScriptedAnimation()
@@ -108,7 +111,19 @@ public class ScriptedAnimation : MonoBehaviour
         // Toggle cofactors on/off depending on reaction/product
         for (int i = 0; i < clonedCofactors.Count; i++)
         {
-            ToggleCofactorType(clonedCofactors[i], cofactorLabels[i].cofactor.isReactant);
+            if (!biDirectional)
+            {
+                ToggleCofactorType(clonedCofactors[i], cofactorLabels[i].cofactor.isReactant);
+            }
+            else if (biDirectional && fromReactant)
+            {
+                ToggleCofactorType(clonedCofactors[i], cofactorLabels[i].cofactor.isReactant);
+            }
+            else
+            {
+                ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
+            }
+            
             if (clonedCofactors[i].gameObject.activeInHierarchy)
             {
                 cofactorsToAnimate.Add(clonedCofactors[i]);
@@ -159,15 +174,38 @@ public class ScriptedAnimation : MonoBehaviour
         cofactorsToAnimate = new List<GameObject>();
         cofactorsToAnimateStartPosition = new List<Vector3>();
 
+        // Toggle cofactors on/off depending on reaction/product
         for (int i = 0; i < clonedCofactors.Count; i++)
         {
-            ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
+            if (!biDirectional)
+            {
+                ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
+            }
+            else if (biDirectional && fromReactant)
+            {
+                ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
+            }
+            else
+            {
+                ToggleCofactorType(clonedCofactors[i], cofactorLabels[i].cofactor.isReactant);
+            }
+
             if (clonedCofactors[i].gameObject.activeInHierarchy)
             {
                 cofactorsToAnimate.Add(clonedCofactors[i]);
                 cofactorsToAnimateStartPosition.Add(clonedCofactorLabelStartPositions[i]);
             }
         }
+
+        //for (int i = 0; i < clonedCofactors.Count; i++)
+        //{
+        //    ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
+        //    if (clonedCofactors[i].gameObject.activeInHierarchy)
+        //    {
+        //        cofactorsToAnimate.Add(clonedCofactors[i]);
+        //        cofactorsToAnimateStartPosition.Add(clonedCofactorLabelStartPositions[i]);
+        //    }
+        //}
 
         while (elapsedTime < halfDuration)
         {

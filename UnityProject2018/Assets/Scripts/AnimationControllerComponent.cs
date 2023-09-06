@@ -149,31 +149,65 @@ public class AnimationControllerComponent : MonoBehaviour
         //}
 
         //Go through each node and edge and pulse 1x
-        foreach (ScriptableObject so in list)
+        for (int i = 0; i < list.Count; i++)
         {
             AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
             ad.AnimatedObjects = new List<string>();
             ad.TriggerToSet = new List<string>();
 
             //add this node to the pathway if it is a node
-            if (so.GetType() == typeof(NodeSO))
+            if (list[i].GetType() == typeof(NodeSO))
             {
-                AddNodeToAnimationDescription(ad, so, "Pulse");
+                AddNodeToAnimationDescription(ad, list[i], "Pulse");
             }
-            else if (so.GetType() == typeof(EdgeSO))
+            else if (list[i].GetType() == typeof(EdgeSO))
             {
-                AddEdgeToAnimationDescription(ad, so, "Pulse");
+                AddEdgeToAnimationDescription(ad, list[i], "Pulse");
+                if (i > 0)
+                {
+                    if (list[i - 1].GetType() == typeof(NodeSO))
+                    {
+                        ad.fromReactant = ((EdgeSO)list[i]).reactants.Contains(list[i - 1]);
+                        ad.biDirectional = ((EdgeSO)list[i]).bidirectional;
+                    }
+                }
             }
             else
             {
                 Debug.LogWarning("We cannot add a SO that is neither a node or a edge");
             }
 
-            
+
+
 
             //add it
             animations.Add(ad);
         }
+        //foreach (ScriptableObject so in list)
+        //{
+        //    AnimationDescription ad = ScriptableObject.CreateInstance<AnimationDescription>();
+        //    ad.AnimatedObjects = new List<string>();
+        //    ad.TriggerToSet = new List<string>();
+
+        //    //add this node to the pathway if it is a node
+        //    if (so.GetType() == typeof(NodeSO))
+        //    {
+        //        AddNodeToAnimationDescription(ad, so, "Pulse");
+        //    }
+        //    else if (so.GetType() == typeof(EdgeSO))
+        //    {
+        //        AddEdgeToAnimationDescription(ad, so, "Pulse");
+        //    }
+        //    else
+        //    {
+        //        Debug.LogWarning("We cannot add a SO that is neither a node or a edge");
+        //    }
+
+            
+
+        //    //add it
+        //    animations.Add(ad);
+        //}
                 
         //Start the animation
         animationRoutine = StartCoroutine("PlayAnimations");
@@ -199,6 +233,8 @@ public class AnimationControllerComponent : MonoBehaviour
                 {
                     ScriptedAnimation newAnimation = g.AddComponent<ScriptedAnimation>();
                     newAnimation.delay = ((i) + waitTime);
+                    newAnimation.biDirectional = animations[i].biDirectional;
+                    newAnimation.fromReactant = animations[i].fromReactant;
                     newAnimation.InitializeScriptedAnimation();
                     newAnimation.scriptedAnimationMaterial = scriptedAnimationMaterial;
                     scriptedAnimations.Add(newAnimation);
