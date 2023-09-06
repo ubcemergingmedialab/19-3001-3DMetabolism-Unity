@@ -49,7 +49,23 @@ public class ScriptedAnimation : MonoBehaviour
 
                 for (int i = 0; i < cofactorParents.Count; i++)
                 {
-                    cofactorLabels.AddRange(cofactorParents[i].cofactorLabels);
+                    if (!biDirectional)
+                    {
+                        cofactorLabels.AddRange(cofactorParents[i].cofactorLabels);
+                    }
+                    else if (biDirectional && fromReactant)
+                    {
+                        if (!cofactorParents[i].secondDirection)
+                            cofactorLabels.AddRange(cofactorParents[i].cofactorLabels);
+                    }
+                    else if (biDirectional && !fromReactant)
+                    {
+                        if (cofactorParents[i].secondDirection)
+                            cofactorLabels.AddRange(cofactorParents[i].cofactorLabels);
+                    }
+
+                    //cofactorParents[i].ToggleArrow(false);
+
                 }
 
             }
@@ -94,7 +110,7 @@ public class ScriptedAnimation : MonoBehaviour
 
                 // Enable cofactor if it's a reactant
                 clonedCofactor.SetActive(false);
-                
+
 
 
             }
@@ -106,7 +122,7 @@ public class ScriptedAnimation : MonoBehaviour
         }
 
         List<GameObject> cofactorsToAnimate = new List<GameObject>();
-        List<Vector3> cofactorsToAnimateStartPosition = new List<Vector3>(); 
+        List<Vector3> cofactorsToAnimateStartPosition = new List<Vector3>();
 
         // Toggle cofactors on/off depending on reaction/product
         for (int i = 0; i < clonedCofactors.Count; i++)
@@ -123,7 +139,7 @@ public class ScriptedAnimation : MonoBehaviour
             {
                 ToggleCofactorType(clonedCofactors[i], !cofactorLabels[i].cofactor.isReactant);
             }
-            
+
             if (clonedCofactors[i].gameObject.activeInHierarchy)
             {
                 cofactorsToAnimate.Add(clonedCofactors[i]);

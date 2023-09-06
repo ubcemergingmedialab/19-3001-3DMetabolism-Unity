@@ -247,8 +247,6 @@ public class AnimationControllerComponent : MonoBehaviour
         for (int i = 0; i < scriptedAnimations.Count; i++)
         {
             scriptedAnimations[i].StartAnimating();
-            //scriptedAnimations[i].gameObject.GetComponent<ScriptedAnimation>().StartCoroutine(scriptedAnimations[i].StartAnimating());
-            //scriptedAnimations[i].ChangeColorByForce();
         }
 
         yield return new WaitForEndOfFrame();

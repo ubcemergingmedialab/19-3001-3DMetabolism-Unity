@@ -15,7 +15,7 @@ public class CofactorParent : MonoBehaviour
 
     private GameObject arrow;
     public Vector3 arrowPosition;
-
+    public Vector3 meshPosition;
     private Vector3 directionToMesh;
 
     private bool arrowInitialized = false;
@@ -78,7 +78,7 @@ public class CofactorParent : MonoBehaviour
 
         arrow = instantiatedArrow;
 
-        Vector3 meshPosition = new Vector3(0, 0, 0);
+        meshPosition = new Vector3(0, 0, 0);
 
         if (edgeDataDisplay.GetComponent<MeshCollider>())
         {
