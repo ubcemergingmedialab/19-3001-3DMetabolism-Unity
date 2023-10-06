@@ -10,6 +10,7 @@ using TMPro;
 public class NodeUIElement : UIElement
 {
     public Text LabelText;
+    public TextMeshProUGUI LabelTextTMP;
     public Text DescriptionText;
 
     public Text QIDText;
@@ -33,12 +34,11 @@ public class NodeUIElement : UIElement
         CompoundControllerCamera.Instance.ResetCameraPosition();
 
         LabelText.text = ((Card)DataReference).Label;
+        LabelTextTMP.text = ((Card)DataReference).Label;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
         ChargeText.text = ((Card)DataReference).Charge;
         PubchemlinkText.text = "<link=\"Link\">" + ((Card)DataReference).Pubchemlink + "</link>";
-        //string reformattedMolecularFormular = ((Card)DataReference).MolecularFormula.Replace("?", "<sup>+</sup>").Replace("?", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("?", "<sub>4</sub>").Replace("?", "<sup>-</sup>");
-        //MolecularFormulaText.text = reformattedMolecularFormular;// ((Card)DataReference).MolecularFormula.Replace("?", "<sup>+</sup>").Replace("?", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("?", "<sub>4</sub>").Replace("?", "<sup>-</sup>");
         MolecularFormulaText.text = ((Card)DataReference).MolecularFormula;
         IUPACNamesText.text = ((Card)DataReference).IUPACNames;
         StructuralDescriptionText.text = ((Card)DataReference).StructuralDescription;

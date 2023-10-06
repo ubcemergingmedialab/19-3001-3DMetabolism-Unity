@@ -29,6 +29,7 @@ public class NodeSO : GenericSO
     public string CID;
 
     public string originalName;
+    public string labelReadable;
 
     /// <summary>
     /// Initialize NodeSO with essential fields
@@ -51,6 +52,8 @@ public class NodeSO : GenericSO
                 this.Label = name.Replace(blackListedChar, "");                
             }
         }
+
+        this.labelReadable = ReplaceMissingCharacters(this.Label);
 
         this.QID = newQID;
         this.Description = desc;

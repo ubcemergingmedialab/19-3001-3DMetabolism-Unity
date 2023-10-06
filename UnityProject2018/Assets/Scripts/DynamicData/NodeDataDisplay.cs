@@ -62,15 +62,17 @@ public class NodeDataDisplay : MonoBehaviour
                     Enum.TryParse(blackListedChar.Replace("(", "").Replace(")", ""), out searchCategory);
                     nodeData.searchCategory = searchCategory;
                     nodeData.Label = nodeData.Label.Replace(blackListedChar, "");
-                    labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
-                    
+                    //labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
+                    labelText.SetText(nodeData.Label.Replace(blackListedChar, ""));
+
                 }
             }
 
             //if we found a blacklisted char, we don't need to render labelText again
             if (!blackListedCharsFound)
             {
-                labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + GeneralSettingsManager.Instance.ReplaceMissingCharacters(nodeData.Label) + "</font></mark>");
+                //labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + GeneralSettingsManager.Instance.ReplaceMissingCharacters(nodeData.Label) + "</font></mark>");
+                labelText.SetText(GeneralSettingsManager.Instance.ReplaceMissingCharacters(nodeData.Label));
                 //labelText.SetText(nodeData.Label);
             }
 
@@ -174,7 +176,7 @@ public class NodeDataDisplay : MonoBehaviour
     {
 
         MouseOrbit.Instance.targetInFocus = gameObject;
-        DisplayData.Label = nodeData.Label;//.Replace("?", "<sup>+</sup>").Replace("?", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("?", "<sub>4</sub>").Replace("?", "<sup>-</sup>"); ; ;
+        DisplayData.Label = nodeData.labelReadable;
         DisplayData.QID = nodeData.QID;
         DisplayData.Description = nodeData.Description;
         DisplayData.Charge = nodeData.Charge;

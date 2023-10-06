@@ -67,6 +67,9 @@ public class ShowTextOnHover : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if (MouseOrbit.Instance.IsPointerOverNamedUIElements())
+            return;
+
         if (useAsPseudoButton)
         {
             transform.parent.GetComponent<ShowTextOnHover>().WorkaroundMouseExit();
