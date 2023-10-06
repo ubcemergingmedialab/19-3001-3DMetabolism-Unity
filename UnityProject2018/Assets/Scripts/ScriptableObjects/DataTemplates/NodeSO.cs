@@ -18,6 +18,7 @@ public class NodeSO : GenericSO
     // public string Description;
     public string EnzymeRequired;
     public string MolecularFormula;
+    public string MolecularFormulaReadable;
     [TextArea(10, 100)]
     public string IUPACNames;
     [TextArea(10, 100)]
@@ -54,6 +55,7 @@ public class NodeSO : GenericSO
         this.QID = newQID;
         this.Description = desc;
         this.MolecularFormula = moleForm;
+        MolecularFormulaReadable = ReplaceMissingCharacters(moleForm);
         this.IUPACNames = IUPAC;
         this.StructuralDescription = StrucDesc;
         this.Charge = charge;
@@ -83,5 +85,6 @@ public class NodeSO : GenericSO
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(QID);
         return hashCode;
     }
+        
 
 }

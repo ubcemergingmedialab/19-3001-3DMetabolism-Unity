@@ -33,6 +33,7 @@ public class CardDisplay : MonoBehaviour {
         EnergyRequiredText.text = card.EnergyRequired;
         PubchemlinkText.text = card.Pubchemlink;
         RegulationText.text = card.Regulation;
+        //MolecularFormulaText.text = card.MolecularFormula;
         MolecularFormulaText.text = card.MolecularFormula;
         IUPACNamesText.text = card.IUPACNames;
         StructuralDescriptionText.text = card.StructuralDescription;

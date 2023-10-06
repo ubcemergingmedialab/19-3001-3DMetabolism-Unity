@@ -29,7 +29,7 @@ public class EdgeUIElement : UIElement
         Debug.Log("Updating Edge UI");
         CompoundControllerCamera.Instance.ResetCameraPosition();
 
-        LabelText.text = ((Card)DataReference).Label.Replace("⁺", "<sup>+</sup>");
+        LabelText.text = ((Card)DataReference).Label.Replace("⁺", "<sup>+</sup>").Replace("₂", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("₄", "<sub>4</sub>").Replace("⁻", "<sup>-</sup>").Replace("₂", ""); ;
         DescriptionText.text = ((Card)DataReference).Description;
         QIDText.text = ((Card)DataReference).QID;
         EnzymeClassText.text = ((Card)DataReference).EnzymeClass;

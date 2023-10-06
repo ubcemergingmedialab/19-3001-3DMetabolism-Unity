@@ -37,6 +37,8 @@ public class NodeUIElement : UIElement
         QIDText.text = ((Card)DataReference).QID;
         ChargeText.text = ((Card)DataReference).Charge;
         PubchemlinkText.text = "<link=\"Link\">" + ((Card)DataReference).Pubchemlink + "</link>";
+        //string reformattedMolecularFormular = ((Card)DataReference).MolecularFormula.Replace("?", "<sup>+</sup>").Replace("?", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("?", "<sub>4</sub>").Replace("?", "<sup>-</sup>");
+        //MolecularFormulaText.text = reformattedMolecularFormular;// ((Card)DataReference).MolecularFormula.Replace("?", "<sup>+</sup>").Replace("?", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("?", "<sub>4</sub>").Replace("?", "<sup>-</sup>");
         MolecularFormulaText.text = ((Card)DataReference).MolecularFormula;
         IUPACNamesText.text = ((Card)DataReference).IUPACNames;
         StructuralDescriptionText.text = ((Card)DataReference).StructuralDescription;

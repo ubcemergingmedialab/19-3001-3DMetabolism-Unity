@@ -70,7 +70,8 @@ public class NodeDataDisplay : MonoBehaviour
             //if we found a blacklisted char, we don't need to render labelText again
             if (!blackListedCharsFound)
             {
-                labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
+                labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + GeneralSettingsManager.Instance.ReplaceMissingCharacters(nodeData.Label) + "</font></mark>");
+                //labelText.SetText(nodeData.Label);
             }
 
             labelText.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
@@ -173,11 +174,12 @@ public class NodeDataDisplay : MonoBehaviour
     {
 
         MouseOrbit.Instance.targetInFocus = gameObject;
-        DisplayData.Label = nodeData.Label;
+        DisplayData.Label = nodeData.Label;//.Replace("?", "<sup>+</sup>").Replace("?", "<sub>2</sub>").Replace("inorganic phosphate", "P<sub>i</sub>").Replace("?", "<sub>4</sub>").Replace("?", "<sup>-</sup>"); ; ;
         DisplayData.QID = nodeData.QID;
         DisplayData.Description = nodeData.Description;
         DisplayData.Charge = nodeData.Charge;
-        DisplayData.MolecularFormula = nodeData.MolecularFormula;
+        //DisplayData.MolecularFormula = nodeData.MolecularFormula;
+        DisplayData.MolecularFormula = nodeData.MolecularFormulaReadable;
         DisplayData.IUPACNames = nodeData.IUPACNames;
         DisplayData.Pubchemlink = nodeData.Pubchemlink;
         DisplayData.StructuralDescription = nodeData.StructuralDescription;
