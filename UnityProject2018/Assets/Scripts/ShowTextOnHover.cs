@@ -41,7 +41,7 @@ public class ShowTextOnHover : MonoBehaviour
     }
 
 
-    private void OnMouseEnter()
+    private void OnMouseOver()
     {
         //Debug.Log("Entered");
         if (MouseOrbit.Instance.IsPointerOverNamedUIElements())
@@ -50,7 +50,7 @@ public class ShowTextOnHover : MonoBehaviour
         // Workaround for edges
         if (useAsPseudoButton)
         {
-            transform.parent.GetComponent<ShowTextOnHover>().WorkaroundMouseEnter();
+            transform.parent.GetComponent<ShowTextOnHover>().WorkaroundMouseOver();
         }
         else
         {
@@ -68,7 +68,11 @@ public class ShowTextOnHover : MonoBehaviour
     private void OnMouseExit()
     {
         if (MouseOrbit.Instance.IsPointerOverNamedUIElements())
+        {
+            this.transform.GetComponentInParent<Outline>().enabled = false;
+            isShowingText = false;
             return;
+        }
 
         if (useAsPseudoButton)
         {
@@ -80,6 +84,7 @@ public class ShowTextOnHover : MonoBehaviour
             if (text != null)
             {
                 isShowingText = false;
+                if (originalColor.r > 0)
                 text.color = originalColor;
             }
             this.transform.GetComponentInParent<Outline>().enabled = false;
@@ -102,9 +107,9 @@ public class ShowTextOnHover : MonoBehaviour
         }
     }
 
-    public void WorkaroundMouseEnter()
+    public void WorkaroundMouseOver()
     {
-        OnMouseEnter();
+        OnMouseOver();
     }
 
     public void WorkaroundMouseExit()
