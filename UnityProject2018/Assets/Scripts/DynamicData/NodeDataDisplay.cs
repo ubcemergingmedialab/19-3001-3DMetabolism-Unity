@@ -47,9 +47,6 @@ public class NodeDataDisplay : MonoBehaviour
         if (nodeData != null)
         {
             Vector3 localPosition = labelText.transform.localPosition;
-            //labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label + "</font></mark>");
-            //Debug.Log("<mark=#000000aa>" + nodeData.Label + "</mark>");
-            //labelText.transform.localPosition = localPosition + (nodeData.Position / 10);
 
             bool blackListedCharsFound = false;
 
@@ -62,7 +59,6 @@ public class NodeDataDisplay : MonoBehaviour
                     Enum.TryParse(blackListedChar.Replace("(", "").Replace(")", ""), out searchCategory);
                     nodeData.searchCategory = searchCategory;
                     nodeData.Label = nodeData.Label.Replace(blackListedChar, "");
-                    //labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + nodeData.Label.Replace(blackListedChar, "") + "</font></mark>");
                     labelText.SetText(nodeData.Label.Replace(blackListedChar, ""));
 
                 }
@@ -71,13 +67,12 @@ public class NodeDataDisplay : MonoBehaviour
             //if we found a blacklisted char, we don't need to render labelText again
             if (!blackListedCharsFound)
             {
-                //labelText.SetText("<mark=#00000000><font=\"LiberationSans SDF\">" + GeneralSettingsManager.Instance.ReplaceMissingCharacters(nodeData.Label) + "</font></mark>");
                 labelText.SetText(GeneralSettingsManager.Instance.ReplaceMissingCharacters(nodeData.Label));
-                //labelText.SetText(nodeData.Label);
             }
 
             labelText.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
             labelText.enableWordWrapping = false;
+            gameObject.GetComponent<ShowTextOnHover>().originalColor = labelText.color;
 
         }
     }
@@ -111,6 +106,7 @@ public class NodeDataDisplay : MonoBehaviour
         // Check if text is currently showing from hovering mouse over object
         if (GetComponent<ShowTextOnHover>())
         {
+            
             if (GetComponent<ShowTextOnHover>().isShowingText)
             {
                 // If text is showing and this target is not the main focus right now, return
@@ -124,27 +120,26 @@ public class NodeDataDisplay : MonoBehaviour
         }
         if (nodeData != null)
         {
-            if (!isHidden)
+            // Calculate multiplier based on object distance to main camera
+            float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
+            if (MouseOrbit.Instance.targetInFocus == gameObject)
             {
-                // Calculate multiplier based on object distance to main camera
-                float distanceToCameraMultiplier = MouseOrbit.Instance.cameraLabelController.GetAlphaValue(transform.position);
-
-                // Perform fontsize and transparency calculations
-                if (MouseOrbit.Instance.targetInFocus == gameObject)
-                {
                     distanceToCameraMultiplier = 1;
                     labelText.alpha = distanceToCameraMultiplier;
                     labelText.fontSize = 36.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
                     transform.GetComponentInParent<Outline>().enabled = true;
-                }
-                else
-                {
+            }
+            else
+            {
+                if (!isHidden) {
                     labelText.alpha = Mathf.Clamp(distanceToCameraMultiplier, 0.2f, 0.8f);
                     labelText.fontSize = 30.0f * distanceToCameraMultiplier * MouseOrbit.Instance.cameraLabelController.MetabolitesFontSizeMultiplier;
                 }
+                else
+                {
+                    TransparentText();
+                }
             }
-
-
         }
     }
 
@@ -155,16 +150,18 @@ public class NodeDataDisplay : MonoBehaviour
         tempColor.a = 0.0f;
         textMesh.color = tempColor;
         isHidden = true;
+        gameObject.GetComponent<ShowTextOnHover>().originalColor = tempColor;
     }
 
     public void OpaqueText()
     {
 
-        //TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
-        //Color tempColor = textMesh.color;
-        //tempColor.a = 1f;
-        //textMesh.color = tempColor;
+        TextMeshPro textMesh = transform.Find("Label").GetComponent<TextMeshPro>();
+        Color tempColor = textMesh.color;
+        tempColor.a = 1f;
+        textMesh.color = tempColor;
         isHidden = false;
+        gameObject.GetComponent<ShowTextOnHover>().originalColor = tempColor;
     }
 
     public void DisableText()

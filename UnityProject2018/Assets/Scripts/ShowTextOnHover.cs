@@ -8,7 +8,7 @@ public class ShowTextOnHover : MonoBehaviour
 
     public TextMeshPro text;
     public bool isShowingText = false;
-    private Color originalColor;
+    public Color originalColor;
 
 
     bool useAsPseudoButton = false;
@@ -57,7 +57,7 @@ public class ShowTextOnHover : MonoBehaviour
             // update original color, change color to show text
             if (text != null)
             {
-                originalColor = text.color;
+                //originalColor = text.color;
                 isShowingText = true;
                 text.color = new Color(1, 1, 1, 1);
             }
@@ -84,8 +84,8 @@ public class ShowTextOnHover : MonoBehaviour
             if (text != null)
             {
                 isShowingText = false;
-                if (originalColor.r > 0)
                 text.color = originalColor;
+                    
             }
             this.transform.GetComponentInParent<Outline>().enabled = false;
         }

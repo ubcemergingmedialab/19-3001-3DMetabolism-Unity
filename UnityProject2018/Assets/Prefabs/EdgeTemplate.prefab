@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5382134497700781995}
   - component: {fileID: 586630631075282642}
   - component: {fileID: 4780491277411635742}
-  - component: {fileID: 2461582242315158035}
+  - component: {fileID: 17193556704960779}
   - component: {fileID: 5151315444551485208}
+  - component: {fileID: 2461582242315158035}
   m_Layer: 0
   m_Name: EdgeTemplate
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MonoBehaviour:
   partnerData: {fileID: 0}
   DisplayData: {fileID: 11400000, guid: e36f392e84671cc409441dfbc2295b25, type: 2}
   edgeLabelObject: {fileID: 0}
+  cofactorParents: []
 --- !u!114 &4780491277411635742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,19 +71,21 @@ MonoBehaviour:
   bidirectional: 0
   upArrow: {fileID: 0}
   downArrow: {fileID: 0}
---- !u!65 &2461582242315158035
-BoxCollider:
+--- !u!114 &17193556704960779
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5035214683094356989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af84c12707632e043aa5a51ef52c82de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  isShowingText: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &5151315444551485208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +113,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &2461582242315158035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035214683094356989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
