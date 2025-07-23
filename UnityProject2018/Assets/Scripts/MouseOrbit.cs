@@ -97,39 +97,48 @@ public class MouseOrbit : MonoBehaviour
 
 
     void LateUpdate()
-    { 
+    {
+        bool isShiftHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        bool isLeftClick = Input.GetMouseButton(0);
+        bool isLeftClickUp = Input.GetMouseButtonUp(0);
+        bool isShiftPan = isShiftHeld && isLeftClick;
+
         if (cameraLocked) { return; }
 
         if (!_canOrbit)
             return;
 
-        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(2))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(2)) {
             if (IsPointerOverNamedUIElements())
             {
                 _clickedOnUIFirst = true;
                 return;
             }
+        }
 
-        // check if the scroll wheel is pressed to drag
-        else if (Input.GetMouseButtonDown(2))
+        if (isShiftPan && !_isDragging)
         {
             _isDragging = true;
             prevMousePos = Input.mousePosition;
         }
 
-        if (Input.GetMouseButtonUp(2))
+
+        // --- Stop dragging ---
+       
+        if (!isShiftHeld || isLeftClickUp)
         {
-            _isDragging = false;
+             _isDragging = false;
+    
         }
 
         // Check if left mouse button is held down
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isShiftHeld)
         {
             _isRotating = true;
             prevMousePosY = Input.mousePosition;
             prevMousePosX = Input.mousePosition;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (isLeftClickUp)
         {
             _isRotating = false;
         }
