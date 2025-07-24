@@ -96,9 +96,11 @@ public class UIPresenter : MonoBehaviour
         if (clearMouseTargetInFocus)
         {
             MouseOrbit.Instance.targetInFocus = null;
+            GameObject.Find("MainCamera").GetComponent<CameraController>().MoveCameraToHighlightedTarget();
         }
 
         GameObject.Find("PrefabService").GetComponent<PrefabService>().DisableAllOutline();
+        
     }
 
 
