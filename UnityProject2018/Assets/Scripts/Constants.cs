@@ -41,6 +41,9 @@ public class Constants : MonoBehaviour
         blackListedList = new List<string>();
         blackListedList.Add("(cytosol)");
         blackListedList.Add("(mitochondrion)");
+        blackListedList.Add("(C16 fatty acid)");
+        blackListedList.Add("(membrane)");
+        blackListedList.Add("fatty acyl-coenzyme A");
     }
 
     public static List<string> GetBlackListedLabels()
