@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.IO;
 using UnityEngine.Networking;
 
@@ -30,7 +32,9 @@ public void EdgeSOInit(WikibaseBinding item){
         Debug.Log(item.isBidirectional.value + " direction var = " + direction);
         edge.init(item.edgeLabel.value,item.edgeQID.value,direction);
         string newPath = ResourceFolderPath + item.enzymeLabel.value + ".asset";
+#if UNITY_EDITOR
         AssetDatabase.CreateAsset(edge,newPath);
+#endif
         EdgeSOs.Add(item.edgeLabel.value,edge);
         Debug.Log("edge added");
     }
@@ -47,7 +51,9 @@ public void NodeSOInit(WikibaseBinding item){
         currentNode = ScriptableObject.CreateInstance<NodeSO>();
         currentNode.init(item.metaboliteLabel.value,item.metaboliteQID.value);
         NodeSOs.Add(item.metaboliteLabel.value,currentNode);
+#if UNITY_EDITOR
         AssetDatabase.CreateAsset(currentNode,newPath);
+#endif
     }else{
         NodeSOs.TryGetValue(item.metaboliteLabel.value, out currentNode);
     }
